@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>394e2d439c6b75dada94e45cd6f95963</doi_batch_id>
+    <timestamp>20180621133241</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>http://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>06</month>
+          <year>2018</year>
+        </publication_date>
+        <journal_volume>
+          <volume>1</volume>
+        </journal_volume>
+        <issue>1</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Pynamical: Model and visualize discrete nonlinear dynamical systems, chaos, and fractals</title>
+        </titles>
+        <contributors><person_name sequence="first" contributor_role="author"><given_name>Geoff</given_name><surname>Boeing</surname><ORCID>http://orcid.org/0000-0003-1851-6411</ORCID></person_name></contributors>
+        <publication_date>
+          <month>06</month>
+          <day>21</day>
+          <year>2018</year>
+        </publication_date>
+        <pages>
+          <first_page>15</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00015</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">http://dx.doi.org/10.5281/zenodo.1294299</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/15</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00015</doi>
+          <resource>http://jose.theoj.org/papers/10.21105/jose.00015</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">http://www.theoj.org/jose-papers/jose.00015/10.21105.jose.00015.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list><citation key="ref1"><doi>10.1016/0167-2789(83)90112-4</doi></citation><citation key="ref2"><doi>10.1038/261459a0</doi></citation><citation key="ref3"><unstructured_citation>New%20York,%20NY, The%20Fractal%20Geometry%20of%20Nature, 978-0-7167-1186-5, Macmillan, Mandelbrot,%20Benoit%20B., 1983</unstructured_citation></citation><citation key="ref4"><doi>10.1126/science.156.3775.636</doi></citation><citation key="ref5"><doi>10.1103/PhysRevLett.45.712</doi></citation><citation key="ref6"><unstructured_citation>Boulder,%20CO, 2nd, Nonlinear%20Dynamics%20and%20Chaos, 978-0-8133-4910-7, Nonlinear%20Dynamics%20and%20Chaos, English, Westview%20Press, Strogatz,%20Steven%20H., jul, 2014, 7</unstructured_citation></citation><citation key="ref7"><doi>10.1057/palgrave.ivs.9500082</doi></citation><citation key="ref8"><unstructured_citation>New%20Delhi,%20India, An%20Introduction%20to%20Dynamical%20Systems%20and%20Chaos, 978-81-322-2556-0, Springer%20India, Layek,%20G.%20C., 2015</unstructured_citation></citation><citation key="ref9"><doi>10.1142/S0218127415300116</doi></citation><citation key="ref10"><doi>10.1063/1.4927643</doi></citation><citation key="ref11"><doi>10.1126/science.238.4827.632</doi></citation><citation key="ref12"><doi>10.1063/1.4917289</doi></citation><citation key="ref13"><doi>10.3390/systems4040037</doi></citation><citation key="ref14"><unstructured_citation>New%20York,%20NY, Mathematical%20Chaos%20and%20Strange%20Attractors, Metamagical%20Themas:%20Questing%20for%20the%20Essence%20of%20Mind%20and%20Pattern, Basic%20Books, Hofstadter,%20Douglas%20R., 1985, 364%E2%80%93395</unstructured_citation></citation><citation key="ref15"><doi>10.1109/ICCSA.2008.7</doi></citation></citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
