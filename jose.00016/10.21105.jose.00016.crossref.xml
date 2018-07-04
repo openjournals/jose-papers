@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
   <head>
-    <doi_batch_id>9b0aec0f0b68fa9ecc8a1cb737f2efe1</doi_batch_id>
-    <timestamp>20180704140730</timestamp>
+    <doi_batch_id>28e5f2913359c20a0735c26e21e42f23</doi_batch_id>
+    <timestamp>20180704152943</timestamp>
     <depositor>
       <depositor_name>JOSS Admin</depositor_name>
       <email_address>admin@theoj.org</email_address>
@@ -12,7 +12,7 @@
   <body>
     <journal>
       <journal_metadata>
-        <full_title>Journal of Open Source Education"</full_title>
+        <full_title>Journal of Open Source Education</full_title>
         <abbrev_title>JOSE</abbrev_title>
         <issn media_type="electronic">2577-3569</issn>
         <doi_data>
