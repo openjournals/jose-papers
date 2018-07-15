@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>3f6cd067aef03f1a0cd7b7a2726112f9</doi_batch_id>
+    <timestamp>20180715191002</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>http://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>07</month>
+          <year>2018</year>
+        </publication_date>
+        <journal_volume>
+          <volume>1</volume>
+        </journal_volume>
+        <issue>2</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>pylj: A teaching tool for classical atomistic simulation</title>
+        </titles>
+        <contributors><person_name sequence="first" contributor_role="author"><given_name>Andrew</given_name><surname>R. McCluskey</surname><ORCID>http://orcid.org/0000-0003-3381-5911</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>Benjamin</given_name><surname>J. Morgan</surname><ORCID>http://orcid.org/0000-0002-3056-8233</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>Karen</given_name><surname>J. Edler</surname><ORCID>http://orcid.org/0000-0001-5822-0127</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>Stephen</given_name><surname>C. Parker</surname><ORCID>http://orcid.org/0000-0003-3804-0975</ORCID></person_name></contributors>
+        <publication_date>
+          <month>07</month>
+          <day>15</day>
+          <year>2018</year>
+        </publication_date>
+        <pages>
+          <first_page>19</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00019</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">https://doi.org/10.5281/zenodo.1312617</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/19</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00019</doi>
+          <resource>http://jose.theoj.org/papers/10.21105/jose.00019</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">http://www.theoj.org/jose-papers/jose.00019/10.21105.jose.00019.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list><citation key="ref1"><doi>10.1016/B978-012267351-1/50005-5</doi></citation><citation key="ref2"><doi>10.1016/B978-012267351-1/50006-7</doi></citation><citation key="ref3"><doi>10.3233/978-1-61499-649-1-87</doi></citation><citation key="ref4"><doi>10.1109/MCSE.2007.55</doi></citation><citation key="ref5"><doi>10.1098/rspa.1924.0082</doi></citation><citation key="ref6"><doi>10.6084/m9.figshare.6571583.v1</doi></citation><citation key="ref7"><doi>https://doi.org/10.1016/0010-4655(95)00042-E</doi></citation><citation key="ref8"><doi>10.1080/08927020290018769</doi></citation><citation key="ref9"><doi>https://doi.org/10.1006/jcph.1995.1039</doi></citation></citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
