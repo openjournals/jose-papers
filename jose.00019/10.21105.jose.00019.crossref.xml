@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
   <head>
-    <doi_batch_id>3f6cd067aef03f1a0cd7b7a2726112f9</doi_batch_id>
-    <timestamp>20180715191002</timestamp>
+    <doi_batch_id>ddb714a31da40b31632f0b8920303b8a</doi_batch_id>
+    <timestamp>20180716085437</timestamp>
     <depositor>
       <depositor_name>JOSS Admin</depositor_name>
       <email_address>admin@theoj.org</email_address>
@@ -37,7 +37,7 @@
         <contributors><person_name sequence="first" contributor_role="author"><given_name>Andrew</given_name><surname>R. McCluskey</surname><ORCID>http://orcid.org/0000-0003-3381-5911</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>Benjamin</given_name><surname>J. Morgan</surname><ORCID>http://orcid.org/0000-0002-3056-8233</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>Karen</given_name><surname>J. Edler</surname><ORCID>http://orcid.org/0000-0001-5822-0127</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>Stephen</given_name><surname>C. Parker</surname><ORCID>http://orcid.org/0000-0003-3804-0975</ORCID></person_name></contributors>
         <publication_date>
           <month>07</month>
-          <day>15</day>
+          <day>16</day>
           <year>2018</year>
         </publication_date>
         <pages>
@@ -70,7 +70,7 @@
             </item>
           </collection>
         </doi_data>
-        <citation_list><citation key="ref1"><doi>10.1016/B978-012267351-1/50005-5</doi></citation><citation key="ref2"><doi>10.1016/B978-012267351-1/50006-7</doi></citation><citation key="ref3"><doi>10.3233/978-1-61499-649-1-87</doi></citation><citation key="ref4"><doi>10.1109/MCSE.2007.55</doi></citation><citation key="ref5"><doi>10.1098/rspa.1924.0082</doi></citation><citation key="ref6"><doi>10.6084/m9.figshare.6571583.v1</doi></citation><citation key="ref7"><doi>https://doi.org/10.1016/0010-4655(95)00042-E</doi></citation><citation key="ref8"><doi>10.1080/08927020290018769</doi></citation><citation key="ref9"><doi>https://doi.org/10.1006/jcph.1995.1039</doi></citation></citation_list>
+        <citation_list><citation key="ref1"><doi>10.1016/B978-012267351-1/50005-5</doi></citation><citation key="ref2"><doi>10.1016/B978-012267351-1/50006-7</doi></citation><citation key="ref3"><doi>10.3233/978-1-61499-649-1-87</doi></citation><citation key="ref4"><doi>10.1109/MCSE.2007.55</doi></citation><citation key="ref5"><doi>10.1098/rspa.1924.0082</doi></citation><citation key="ref6"><doi>10.6084/m9.figshare.6571583.v1</doi></citation><citation key="ref7"><doi>10.1016/0010-4655(95)00042-E</doi></citation><citation key="ref8"><doi>10.1080/08927020290018769</doi></citation><citation key="ref9"><doi>10.1006/jcph.1995.1039</doi></citation></citation_list>
       </journal_article>
     </journal>
   </body>
