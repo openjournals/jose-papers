@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>90c1860fbf48a77aa3400682274333b7</doi_batch_id>
+    <timestamp>20181002140906</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>http://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2018</year>
+        </publication_date>
+        <journal_volume>
+          <volume>1</volume>
+        </journal_volume>
+        <issue>5</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>An Introduction to Applied Bioinformatics: a free, open, and interactive text.</title>
+        </titles>
+        <contributors><person_name sequence="first" contributor_role="author"><given_name>Evan</given_name><surname>Bolyen</surname><ORCID>http://orcid.org/0000-0002-5362-6782</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>Jai</given_name><surname>Ram Rideout</surname></person_name><person_name sequence="additional" contributor_role="author"><given_name>John</given_name><surname>Chase</surname></person_name><person_name sequence="additional" contributor_role="author"><given_name>T.</given_name><surname>Anders Pitman</surname></person_name><person_name sequence="additional" contributor_role="author"><given_name>Arron</given_name><surname>Shiffer</surname></person_name><person_name sequence="additional" contributor_role="author"><given_name>Willow</given_name><surname>Mercurio</surname></person_name><person_name sequence="additional" contributor_role="author"><given_name>Matthew</given_name><surname>R Dillon</surname><ORCID>http://orcid.org/0000-0002-7713-1952</ORCID></person_name><person_name sequence="additional" contributor_role="author"><given_name>J</given_name><surname>Gregory Caporaso</surname><ORCID>http://orcid.org/0000-0002-8865-1670</ORCID></person_name></contributors>
+        <publication_date>
+          <month>10</month>
+          <day>02</day>
+          <year>2018</year>
+        </publication_date>
+        <pages>
+          <first_page>27</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00027</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">https://doi.org/10.5281/zenodo.1442796</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/27</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00027</doi>
+          <resource>http://jose.theoj.org/papers/10.21105/jose.00027</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">http://www.theoj.org/jose-papers/jose.00027/10.21105.jose.00027.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list><citation key="ref1"><unstructured_citation>Practical%20Computing%20for%20Biologists, Dunn,%20Casey%20and%20Haddock,%20Steven%20HD, Increasingly,%20scientists%20find%20themselves%20facing%20exponentially%20larger%20data%20sets%20and%20analyses%20without%20suitable%20tools%20to%20deal%20with%20them.%20Many%20biologists%20end%20up%20using%20spreadsheet%20programs%20for%20most%20of%20their%20data-processing%20tasks%20and%20spend%20hours%20clicking%20around%20or%20copying%20and%20pasting,%20and%20then%20repeating%20the%20process%20for%20other%20data%20files.%20Practical%20Computing%20for%20Biologists%20shows%20you%20how%20to%20use%20many%20freely%20available%20computing%20tools%20to%20work%20more%20powerfully%20and%20effectively.%20The%20book%20was%20born%20out%20of%20the%20authors%E2%80%99%20own%20experience%20in%20developing%20tools%20for%20their%20research%20and%20helping%20other%20biologists%20with%20their%20computational%20problems.%20Although%20many%20of%20the%20techniques%20are%20relevant%20to%20molecular%20bioinformatics,%20the%20motivation%20for%20the%20book%20is%20much%20broader,%20focusing%20on%20topics%20and%20techniques%20that%20are%20applicable%20to%20a%20range%20of%20scientific%20endeavors.%20Twenty-two%20chapters%20organized%20into%20six%20parts%20address%20these%20topics%20and%20more:%20Searching%20with%20regular%20expressions%20The%20Unix%20command%20line%20Python%20programming%20and%20debugging%20Creating%20and%20editing%20graphics%20Databases%20Performing%20analyses%20on%20remote%20servers%20Working%20with%20electronics%20While%20most%20of%20the%20concepts%20and%20examples%20apply%20to%20any%20operating%20system,%20the%20main%20narrative%20focuses%20on%20Mac%20OS%20X.%20Where%20there%20are%20differences%20for%20Windows%20and%20Linux%20users,%20parallel%20instructions%20are%20provided%20in%20the%20margin%20and%20in%20an%20appendix.%20The%20book%20is%20designed%20to%20be%20used%20as%20a%20self-guided%20resource%20for%20researchers,%20a%20companion%20book%20in%20a%20course,%20or%20as%20a%20primary%20textbook.%20Practical%20Computing%20for%20Biologists%20will%20free%20you%20from%20the%20most%20frustrating%20and%20time-consuming%20aspects%20of%20data%20processing%20so%20you%20can%20focus%20on%20the%20pleasures%20of%20scientific%20inquiry., Sinauer%20Associates,%20Inc., First%20edition, nov, 2010, http://practicalcomputing.org/, 11</unstructured_citation></citation><citation key="ref2"><doi>10.12688/F1000RESEARCH.3-62.V2</doi></citation><citation key="ref3"><doi>10.1371/journal.pcbi.1003662</doi></citation><citation key="ref4"><unstructured_citation>Inferring%20Phylogenies, Felsenstein,%20Joseph, Phylogenies%20(evolutionary%20trees)%20are%20basic%20to%20thinking%20about%20and%20analyzing%20differences%20between%20species.%20Statistical,%20computational,%20and%20algorithmic%20work%20on%20them%20has%20been%20ongoing%20for%20four%20decades,%20with%20great%20advances%20in%20understanding.%20Yet%20no%20book%20has%20summarized%20this%20work%20until%20now.%20Inferring%20Phylogenies%20explains%20clearly%20the%20assumptions%20and%20logic%20of%20making%20inferences%20about%20phylogenies,%20and%20using%20them%20to%20make%20inferences%20about%20evolutionary%20processes.%20It%20is%20an%20essential%20text%20and%20reference%20for%20anyone%20who%20wants%20to%20understand%20how%20phylogenies%20are%20reconstructed%20and%20how%20they%20are%20used.%20As%20phylogenies%20are%20inferred%20with%20various%20kinds%20of%20data,%20this%20book%20concentrates%20on%20some%20of%20the%20central%20ones:%20discretely%20coded%20characters,%20molecular%20sequences,%20gene%20frequencies,%20and%20quantitative%20traits.%20Also%20covered%20are%20restriction%20sites,%20RAPDs,%20and%20microsatellites.%20Inferring%20Phylogenies%20is%20intended%20for%20graduate-level%20courses,%20assuming%20some%20knowledge%20of%20statistics,%20mathematics%20(calculus%20and%20fundamental%20matrix%20algebra),%20molecular%20sequences,%20and%20quantitative%20genetics., Sinauer%20Associates, Second%20edition, sep, 2003, 9</unstructured_citation></citation><citation key="ref5"><unstructured_citation>Biological%20Sequence%20Analysis:%20Probabilistic%20Models%20of%20Proteins%20and%20Nucleic%20Acids, Durbin,%20Richard%20and%20Eddy,%20Sean%20R%20and%20Krogh,%20Anders%20and%20Mitchison,%20Graeme, Probablistic%20models%20are%20becoming%20increasingly%20important%20in%20analyzing%20the%20huge%20amount%20of%20data%20being%20produced%20by%20large-scale%20DNA-sequencing%20efforts%20such%20as%20the%20Human%20Genome%20Project.%20For%20example,%20hidden%20Markov%20models%20are%20used%20for%20analyzing%20biological%20sequences,%20linguistic-grammar-based%20probabilistic%20models%20for%20identifying%20RNA%20secondary%20structure,%20and%20probabilistic%20evolutionary%20models%20for%20inferring%20phylogenies%20of%20sequences%20from%20different%20organisms.%20This%20book%20gives%20a%20unified,%20up-to-date%20and%20self-contained%20account,%20with%20a%20Bayesian%20slant,%20of%20such%20methods,%20and%20more%20generally%20to%20probabilistic%20methods%20of%20sequence%20analysis.%20Written%20by%20an%20interdisciplinary%20team%20of%20authors,%20it%20is%20accessible%20to%20molecular%20biologists,%20computer%20scientists,%20and%20mathematicians%20with%20no%20formal%20knowledge%20of%20the%20other%20fields,%20and%20at%20the%20same%20time%20presents%20the%20state%20of%20the%20art%20in%20this%20new%20and%20important%20field., Cambridge%20University%20Press, First%20edition, may, 1998, 5</unstructured_citation></citation><citation key="ref6"><doi>10.1371/journal.pcbi.1002632</doi></citation></citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
