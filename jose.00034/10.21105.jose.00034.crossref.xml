@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
   <head>
-    <doi_batch_id>2767199c44de5c06cb3f5a9259ab08b7</doi_batch_id>
-    <timestamp>20190114214403</timestamp>
+    <doi_batch_id>f76363f469ef75064b4d9e8d234b40ba</doi_batch_id>
+    <timestamp>20190115124445</timestamp>
     <depositor>
       <depositor_name>JOSS Admin</depositor_name>
       <email_address>admin@theoj.org</email_address>
@@ -17,7 +17,7 @@
         <issn media_type="electronic">2577-3569</issn>
         <doi_data>
           <doi>10.21105/jose</doi>
-          <resource>https://jose.theoj.org</resource>
+          <resource>http://jose.theoj.org</resource>
         </doi_data>
       </journal_metadata>
       <journal_issue>
@@ -28,7 +28,7 @@
         <journal_volume>
           <volume>2</volume>
         </journal_volume>
-        <issue>11</issue>
+        <issue>8</issue>
       </journal_issue>
       <journal_article publication_type="full_text">
         <titles>
@@ -41,14 +41,14 @@
             <ORCID>http://orcid.org/0000-0002-5895-163X</ORCID>
           </person_name>
           <person_name sequence="additional" contributor_role="author">
-            <given_name>Jae</given_name>
+            <given_name>Jae-Eun</given_name>
             <surname>Namkoong</surname>
             <ORCID>http://orcid.org/0000-0002-8133-5317</ORCID>
           </person_name>
         </contributors>
         <publication_date>
           <month>01</month>
-          <day>14</day>
+          <day>15</day>
           <year>2019</year>
         </publication_date>
         <pages>
@@ -74,10 +74,10 @@
         </rel:program>
         <doi_data>
           <doi>10.21105/jose.00034</doi>
-          <resource>https://jose.theoj.org/papers/10.21105/jose.00034</resource>
+          <resource>http://jose.theoj.org/papers/10.21105/jose.00034</resource>
           <collection property="text-mining">
             <item>
-              <resource mime_type="application/pdf">http://www.theoj.org/openjournals/jose-papers/jose.00034/10.21105.jose.00034.pdf</resource>
+              <resource mime_type="application/pdf">http://www.theoj.org/jose-papers/jose.00034/10.21105.jose.00034.pdf</resource>
             </item>
           </collection>
         </doi_data>
