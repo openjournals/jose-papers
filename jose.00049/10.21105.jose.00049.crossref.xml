@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>afd8325c90c17da51be98281119e57f6</doi_batch_id>
+    <timestamp>20190606165951</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>06</month>
+          <year>2019</year>
+        </publication_date>
+        <journal_volume>
+          <volume>2</volume>
+        </journal_volume>
+        <issue>16</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>A graduate student-led participatory live-coding quantitative methods course in R: Experiences on initiating, developing, and teaching</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Luke</given_name>
+            <surname>Johnston</surname>
+            <ORCID>http://orcid.org/0000-0003-4169-2616</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Madeleine</given_name>
+            <surname>Bonsma-Fisher</surname>
+            <ORCID>http://orcid.org/0000-0002-5813-4664</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Joel</given_name>
+            <surname>Ostblom</surname>
+            <ORCID>http://orcid.org/0000-0003-0051-3239</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ahmed</given_name>
+            <surname>Hasan</surname>
+            <ORCID>http://orcid.org/0000-0003-0002-8399</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>James</given_name>
+            <surname>Santangelo</surname>
+            <ORCID>http://orcid.org/0000-0002-5921-2548</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lindsay</given_name>
+            <surname>Coome</surname>
+            <ORCID>http://orcid.org/0000-0001-8126-3571</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lina</given_name>
+            <surname>Tran</surname>
+            <ORCID>http://orcid.org/0000-0003-3504-4524</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Elliott</given_name>
+            <surname>De Andrade</surname>
+            <ORCID>http://orcid.org/0000-0001-7310-8942</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sara</given_name>
+            <surname>Mahallati</surname>
+            <ORCID>http://orcid.org/0000-0002-6765-0898</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>06</month>
+          <day>06</day>
+          <year>2019</year>
+        </publication_date>
+        <pages>
+          <first_page>49</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00049</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">https://doi.org/10.5281/zenodo.3240508</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/49</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00049</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00049</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">http://www.theoj.org/openjournals/jose-papers/jose.00049/10.21105.jose.00049.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1145/3059009.3059035</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.1145/2445196.2445388</doi>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Leipzig, Teaching tech together: how to design and deliver lessons that work and build a teaching community around them, 978-0-9881137-0-1, Teaching tech together, en, Amazon Distribution GmbH, Wilson, Greg, 2018, http://teachtogether.tech/</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <doi>10.7771/1541-5015.1046</doi>
+          </citation>
+          <citation key="ref5">
+            <unstructured_citation>Project-based learning: A bridge just far enough, 39, Copyright E L Kurdyla Publishing LLC Dec 2011, 14811782, https://search.proquest.com/docview/915254354/abstract/707DEDB5F1E145E5PQ/1, [...] well-executed PBL emphasizes a carefully planned assessment that incorporates formative feedback, detailed rubrics, and multiple evaluations of content and skills. [...] PBL can be defined as an extended learning process that uses inquiry and challenge to stimulate the groivth and mastery of skills. [...] PBL refocuses education on the student, not the curriculum-a shift mandated by the global world, which rewards intangible assets such as drive, passion, creativity, empathy, and resiliency., English, 2, 2018-12-21, Teacher Librarian; Bowie, Markham, Thom, dec, 2011, Advantages, Core curriculum, Design, Education, Methods, Teaching, Young adults, 38&#x2013;42, 12</unstructured_citation>
+          </citation>
+          <citation key="ref6">
+            <doi>10.1192/bjp.bp.106.029678</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.1109/MCSE.2006.122</doi>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>tidyverse: Easily install and load the &#x2019;Tidyverse&#x2019;, Wickham, Hadley, 2017, R package version 1.2.1, https://CRAN.R-project.org/package=tidyverse</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>R: A language and environment for statistical computing, R Core Team, R Foundation for Statistical Computing, Vienna, Austria, 2018, https://www.R-project.org/</unstructured_citation>
+          </citation>
+          <citation key="ref10">
+            <doi>10.5281/zenodo.569338</doi>
+          </citation>
+          <citation key="ref11">
+            <doi>10.18637/jss.v067.i01</doi>
+          </citation>
+          <citation key="ref12">
+            <doi>10.18637/jss.v082.i13</doi>
+          </citation>
+          <citation key="ref13">
+            <unstructured_citation>rmarkdown: Dynamic documents for R, Allaire, JJ and Xie, Yihui and McPherson, Jonathan and Luraschi, Javier and Ushey, Kevin and Atkins, Aron and Wickham, Hadley and Cheng, Joe and Chang, Winston and Iannone, Richard, 2018, R package version 1.11, https://rmarkdown.rstudio.com</unstructured_citation>
+          </citation>
+          <citation key="ref14">
+            <doi>10.18637/jss.v045.i03</doi>
+          </citation>
+          <citation key="ref15">
+            <doi>10.1002/bimj.200810425</doi>
+          </citation>
+          <citation key="ref16">
+            <unstructured_citation>psych: Procedures for psychological, psychometric, and personality research, Revelle, William, Northwestern University, Evanston, IL, USA, 2018, R package version 1.8.10, https://CRAN.R-project.org/package=psych</unstructured_citation>
+          </citation>
+          <citation key="ref17">
+            <unstructured_citation>An R companion to applied regression, 2, Fox, John and Weisberg, Sanford, 2011, Sage, Thousand Oaks, CA, USA, https://socialsciences.mcmaster.ca/jfox/Books/Companion-2E</unstructured_citation>
+          </citation>
+          <citation key="ref18">
+            <doi>10.18637/jss.v021.i12</doi>
+          </citation>
+          <citation key="ref19">
+            <doi>10.18637/jss.v040.i01</doi>
+          </citation>
+          <citation key="ref20">
+            <unstructured_citation>MuMIn: Multi-model inference, Barto&#x144;, Kamil, 2018, R package version 1.42.1, https://CRAN.R-project.org/package=MuMIn</unstructured_citation>
+          </citation>
+          <citation key="ref21">
+            <doi>10.18637/jss.v033.i09</doi>
+          </citation>
+          <citation key="ref22">
+            <unstructured_citation>knitr: A general-purpose package for dynamic report generation in R, Xie, Yihui, 2018, R package version 1.21, https://yihui.name/knitr/</unstructured_citation>
+          </citation>
+          <citation key="ref23">
+            <doi>10.5281/zenodo.16522</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
