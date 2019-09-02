@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>ce32522833f66b0c6feca1ec45385b3f</doi_batch_id>
+    <timestamp>20190902184908</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>09</month>
+          <year>2019</year>
+        </publication_date>
+        <journal_volume>
+          <volume>2</volume>
+        </journal_volume>
+        <issue>19</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>BeamBending: a teaching aid for 1-D shear force and bending moment diagrams</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Alfredo</given_name>
+            <surname>Carella</surname>
+            <ORCID>http://orcid.org/0000-0001-8340-3427</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>09</month>
+          <day>02</day>
+          <year>2019</year>
+        </publication_date>
+        <pages>
+          <first_page>65</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00065</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">https://doi.org/10.5281/zenodo.3383748</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/65</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00065</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00065</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">http://www.theoj.org/openjournals/jose-papers/jose.00065/10.21105.jose.00065.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Konstruksjonsmekanikk - Del I: Likevektsl&#xE6;re, Fagbokforlaget, 2015, Bell, Kolbein, 978-82-450-1685-7</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <unstructured_citation>Statics and Mechanics of Materials, McGraw-Hill Education, 2017, Beer, Ferdinand and Russell Johnston, E. and Dewolf, John T. and Mazurek, David, Second Edition, 978-0-07-339816-7</unstructured_citation>
+          </citation>
+          <citation key="ref3">
+            <doi>10.1109/MCSE.2007.55</doi>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>A guide to NumPy, Oliphant, Travis E, 1, 2006, Trelgol Publishing USA</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <doi>10.7717/peerj-cs.103</doi>
+          </citation>
+          <citation key="ref6">
+            <unstructured_citation>Beam Guru, 2019, \urlhttp://beamguru.com, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+          <citation key="ref7">
+            <unstructured_citation>Structural Beam Deflection and Stress Calculators, 2019, \urlhttps://www.amesweb.info/StructuralBeamDeflection/BeamDeflectionCalculators.aspx, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>SkyCiv Beam, 2017, \urlhttps://skyciv.com/structural-software/beam-analysis-software/, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>MechaniCalc, 2019, \urlhttps://mechanicalc.com/calculators/beam-analysis/, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+          <citation key="ref10">
+            <unstructured_citation>Engineers Edge, 2019, \urlhttps://www.engineersedge.com/, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+          <citation key="ref11">
+            <unstructured_citation>WebStructural, 2019, \urlhttps://webstructural.com/shear-and-moment-diagram.html, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+          <citation key="ref12">
+            <unstructured_citation>Beam Calculator Online, 2019, \urlhttp://rascheta.net/beamuk/, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+          <citation key="ref13">
+            <unstructured_citation>Steel Beam Calculator, 2019, \urlhttps://www.steelbeamcalculator.com/, Accessed on 2019-08-22</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
