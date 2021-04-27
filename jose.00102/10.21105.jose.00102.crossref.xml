@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>71efce30de3c25a97c229128b42014ac</doi_batch_id>
+    <timestamp>20210427173528</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>04</month>
+          <year>2021</year>
+        </publication_date>
+        <journal_volume>
+          <volume>4</volume>
+        </journal_volume>
+        <issue>38</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>StarBLAST: a scalable BLAST+ solution for the classroom</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Michele</given_name>
+            <surname>Cosi</surname>
+            <ORCID>http://orcid.org/0000-0001-7609-1939</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>J.j.</given_name>
+            <surname>Forstedt</surname>
+            <ORCID>http://orcid.org/0000-0003-4484-0127</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Emmanuel</given_name>
+            <surname>Gonzalez</surname>
+            <ORCID>http://orcid.org/0000-0002-3021-9842</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Zhuoyun</given_name>
+            <surname>Xu</surname>
+            <ORCID>http://orcid.org/0000-0002-6322-3012</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sateesh</given_name>
+            <surname>Peri</surname>
+            <ORCID>http://orcid.org/0000-0002-9879-9070</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Reetu</given_name>
+            <surname>Tuteja</surname>
+            <ORCID>http://orcid.org/0000-0001-7628-4108</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Kai</given_name>
+            <surname>Blumberg</surname>
+            <ORCID>http://orcid.org/0000-0002-3410-4655</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Tanner</given_name>
+            <surname>Campbell</surname>
+            <ORCID>http://orcid.org/0000-0001-9418-1663</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Nirav</given_name>
+            <surname>Merchant</surname>
+            <ORCID>http://orcid.org/0000-0002-1988-8180</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Eric</given_name>
+            <surname>Lyons</surname>
+            <ORCID>http://orcid.org/0000-0002-3348-8845</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>04</month>
+          <day>27</day>
+          <year>2021</year>
+        </publication_date>
+        <pages>
+          <first_page>102</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00102</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.4688218”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/102</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00102</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00102</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00102.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Madden, Thomas L., McEntyre J, Ostell J, editors. The NCBI Handbook. Bethesda (MD): National Center for Biotechnology Information (US), 16, 1–15, The BLAST Sequence Analysis Tool [Updated 2003 Aug 13], https://unmc.edu/bsbc/docs/NCBI_blast.pdf, 2002</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <doi>10.1371/journal.pcbi.1002243</doi>
+          </citation>
+          <citation key="ref3">
+            <doi>10.1187/09-11-0087</doi>
+          </citation>
+          <citation key="ref4">
+            <doi>10.1093/nar/gkn201</doi>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1093/molbev/msz185</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.1186/1471-2105-10-421</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.1145/2443416.2443417</doi>
+          </citation>
+          <citation key="ref8">
+            <doi>10.12688/f1000research.8935.1</doi>
+          </citation>
+          <citation key="ref9">
+            <doi>10.1371/journal.pbio.1002342</doi>
+          </citation>
+          <citation key="ref10">
+            <doi>10.1145/2792745.2792774</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
