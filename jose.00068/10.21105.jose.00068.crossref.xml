@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>66833fde70613caf7fed0e4aaa07a765</doi_batch_id>
+    <timestamp>20210826205400</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2021</year>
+        </publication_date>
+        <journal_volume>
+          <volume>4</volume>
+        </journal_volume>
+        <issue>42</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>FAIR_Bioinfo: a turnkey training course and protocol for reproducible computational biology</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Thomas</given_name>
+            <surname>Denecker</surname>
+            <ORCID>http://orcid.org/0000-0003-1421-7641</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Claire</given_name>
+            <surname>Toffano-Nioche</surname>
+            <ORCID>http://orcid.org/0000-0003-4134-6844</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>26</day>
+          <year>2021</year>
+        </publication_date>
+        <pages>
+          <first_page>68</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00068</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.5105349”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/68</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00068</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00068</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00068.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Repeatability and Benefaction in Computer Systems Research — A Study and a Modest Proposal, We describe a study into the extent to which Computer Systems researchers share their code and data and the extent to which such code builds. Starting with 601 papers from ACM conferences and journals, we examine 402 papers whose results were backed by code. For 32.3% of these papers we were able to obtain the code and build it within 30 minutes; for 48.3% of the papers we managed to build the code, but it may have required extra effort; for 54.0% of the papers either we managed to build the code or the authors stated the code would build with reasonable effort. We also propose a novel sharing specification scheme that requires researchers to specify the level of sharing that reviewers and readers can assume from a paper., Warren, Alex, 2015, Aclarubicin, Hardware description language, Paper, Repeatability, Specification</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <unstructured_citation>1,500 scientists lift the lid on reproducibility : Nature News &amp; Comment, https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970, 2019-06-12, Baker, Monya, may, 2016, 5</unstructured_citation>
+          </citation>
+          <citation key="ref3">
+            <doi>10.1016/j.cels.2018.03.014</doi>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>The FAIR Guiding Principles for scientific data management and stewardship, 3, https://doi.org/10.1038/sdata.2016.18, Scientific Data, Wilkinson, Mark D. and Dumontier, Michel and Aalbersberg, IJsbrand Jan and Appleton, Gabrielle and Axton, Myles and Baak, Arie and Blomberg, Niklas and Boiten, Jan-Willem and da Silva Santos, Luiz Bonino and Bourne, Philip E. and Bouwman, Jildau and Brookes, Anthony J. and Clark, Tim and Crosas, Mercè and Dillo, Ingrid and Dumon, Olivier and Edmunds, Scott and Evelo, Chris T. and Finkers, Richard and Gonzalez-Beltran, Alejandra and Gray, Alasdair J.G. and Groth, Paul and Goble, Carole and Grethe, Jeffrey S. and Heringa, Jaap and ’t Hoen, Peter A.C and Hooft, Rob and Kuhn, Tobias and Kok, Ruben and Kok, Joost and Lusher, Scott J. and Martone, Maryann E. and Mons, Albert and Packer, Abel L. and Persson, Bengt and Rocca-Serra, Philippe and Roos, Marco and van Schaik, Rene and Sansone, Susanna-Assunta and Schultes, Erik and Sengstag, Thierry and Slater, Ted and Strawn, George and Swertz, Morris A. and Thompson, Mark and van der Lei, Johan and van Mulligen, Erik and Velterop, Jan and Waagmeester, Andra and Wittenburg, Peter and Wolstencroft, Katherine and Zhao, Jun and Mons, Barend, mar, 2016, 160018, 3</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <doi>10.6084/m9.figshare.8950505.v1</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
