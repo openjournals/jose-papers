@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>bfa311bf5cd4ac1ac0d5484c8a57766f</doi_batch_id>
+    <timestamp>20211227221657</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>12</month>
+          <year>2021</year>
+        </publication_date>
+        <journal_volume>
+          <volume>4</volume>
+        </journal_volume>
+        <issue>46</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Virtual training on virtual environments: an online open-source introduction to conda</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Marisa</given_name>
+            <surname>Lim</surname>
+            <ORCID>http://orcid.org/0000-0003-2097-8818</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Abhijna</given_name>
+            <surname>Parigi</surname>
+            <ORCID>http://orcid.org/0000-0002-5861-3737</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Saranya</given_name>
+            <surname>Canchi</surname>
+            <ORCID>http://orcid.org/0000-0002-9404-7162</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jose</given_name>
+            <surname>Sanchez</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jeremy</given_name>
+            <surname>Walter</surname>
+            <ORCID>http://orcid.org/0000-0001-7074-9760</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Amanda</given_name>
+            <surname>Charbonneau</surname>
+            <ORCID>http://orcid.org/0000-0001-7376-7702</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>C.</given_name>
+            <surname>Brown</surname>
+            <ORCID>http://orcid.org/0000-0001-6001-2677</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>12</month>
+          <day>27</day>
+          <year>2021</year>
+        </publication_date>
+        <pages>
+          <first_page>130</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00130</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.5773212”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/130</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00130</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00130</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00130.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1038/sdata.2016.18</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.25080/Majora-4af1f417-011</doi>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Proceedings paper, 2019, The Pangeo Big Data Ecosystem and its use at CNES, , , , , , Eynard-Bontemps, Guillaume and Abernathey, Ryan and Hamman, Joseph and Ponte, Aurelien and Rath, Willi, https://archimer.ifremer.fr/doc/00503/61441/, , FRANCE, USA, GERMANY, &lt;p&gt;Pangeo[1] is a community-driven effort for open-source big data initially focused on the Earth System Sciences. One of its primary goals is to enable scientists in analyzing petascale datasets both on classical high-performance computing (HPC) and on public cloud infrastructure. In only a few years, Pangeo has grown into a very productive community collaborating on the development of open-source analysis tools for science. It provides a set of example deployments based on open-source Scientific Python packages like Jupyter[2], Dask[3], and Xarray[4] that bring together scientists and developer with their actual use-cases. In this paper, we first describe Pangeo ecosystem and community. We then present its impact on the work of scientists from CNES on the HPC deployment there. We conclude with a future outlook for Pangeo in this agency and beyond.&lt;/p&gt;, </unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>RStudio: Integrated Development Environment for R, RStudio Team, RStudio, Inc., Boston, MA, 2019, http://www.rstudio.com/</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
