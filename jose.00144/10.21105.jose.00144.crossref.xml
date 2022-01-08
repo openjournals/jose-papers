@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>6b9273d3a549d98c13f85907eeb2b177</doi_batch_id>
+    <timestamp>20220108165419</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>01</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>47</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Developing and deploying an integrated workshop curriculum teaching computational skills for reproducible research</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Zena</given_name>
+            <surname>Lapp</surname>
+            <ORCID>http://orcid.org/0000-0003-4674-2176</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Kelly</given_name>
+            <surname>Sovacool</surname>
+            <ORCID>http://orcid.org/0000-0003-3283-829X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Nick</given_name>
+            <surname>Lesniak</surname>
+            <ORCID>http://orcid.org/0000-0001-9359-5194</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Dana</given_name>
+            <surname>King</surname>
+            <ORCID>http://orcid.org/0000-0003-4635-5272</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Catherine</given_name>
+            <surname>Barnier</surname>
+            <ORCID>http://orcid.org/0000-0001-7074-4011</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Matthew</given_name>
+            <surname>Flickinger</surname>
+            <ORCID>http://orcid.org/0000-0002-8528-8925</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jule</given_name>
+            <surname>Krüger</surname>
+            <ORCID>http://orcid.org/0000-0002-2814-137X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Courtney</given_name>
+            <surname>Armour</surname>
+            <ORCID>http://orcid.org/0000-0002-5250-1224</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Maya</given_name>
+            <surname>Lapp</surname>
+            <ORCID>http://orcid.org/0000-0002-8249-1186</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jason</given_name>
+            <surname>Tallant</surname>
+            <ORCID>http://orcid.org/0000-0003-4790-8772</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Rucheng</given_name>
+            <surname>Diao</surname>
+            <ORCID>http://orcid.org/0000-0002-2932-6755</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Morgan</given_name>
+            <surname>Oneka</surname>
+            <ORCID>http://orcid.org/0000-0002-9672-0445</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sarah</given_name>
+            <surname>Tomkovich</surname>
+            <ORCID>http://orcid.org/0000-0003-1638-5307</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jacqueline</given_name>
+            <surname>Anderson</surname>
+            <ORCID>http://orcid.org/0000-0003-1398-5980</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sarah</given_name>
+            <surname>Lucas</surname>
+            <ORCID>http://orcid.org/0000-0003-1676-5801</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Patrick</given_name>
+            <surname>Schloss</surname>
+            <ORCID>http://orcid.org/0000-0002-6935-4275</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>01</month>
+          <day>08</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>144</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00144</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.5812479”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/144</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00144</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00144</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00144.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Responding to Your Learners, Becker, Erin, 2016, sep, Data Carpentry is a lesson program of The Carpentries that develops and provides data skills training to researchers., https://datacarpentry.org/blog/2016/09/formative-assessment, Data Carpentry, en, 9</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <unstructured_citation>Online Workshop Logistics and Screen Layouts, Chen, Daniel, 2020, jun, Online workshop logistics and how learners would set up their screens if they only had a single monitor., https://carpentries.org/blog/2020/06/online-workshop-logistics-and_screen-layouts/, The Carpentries, en, 6</unstructured_citation>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Teach the Tidyverse to Beginners, Robinson, David, 2017, jul, A few years ago, I wrote a post Don’t teach built-in plotting to beginners (teach ggplot2). I argued that ggplot2 was not an advanced approach meant for experts, but rather a suitable introduction to data visualization., http://varianceexplained.org/r/teach-tidyverse/, Variance Explained, en, 7</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>The Carpentries Handbook, The Carpentries, 2018, https://docs.carpentries.org/index.html</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <unstructured_citation>Live Coding Is a Skill, The Carpentries, 2018, https://carpentries.github.io/instructor-training/14-live/#sticky-notes, Instructor Training, en</unstructured_citation>
+          </citation>
+          <citation key="ref6">
+            <doi>10.21105/joss.01686</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.12688/f1000research.3-62.v2</doi>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>R Markdown: The Definitive Guide, R Markdown, Xie, Yihui and Allaire, J. J. and Grolemund, Garrett, 2018, Taylor &amp; Francis, CRC Press, R Markdown: The Definitive Guide is the first official book authored by the core R Markdown developers that provides a comprehensive and accurate reference to the R Markdown ecosystem. With R Markdown, you can easily create reproducible data analysis reports, presentations, dashboards, interactive applications, books, dissertations, websites, and journal articles, while enjoying the simplicity of Markdown and the great power of R and other languages. In this book, you will learn Basics: Syntax of Markdown and R code chunks, how to generate figures and tables, and how to use other computing languages Built-in output formats of R Markdown: PDF/HTML/Word/RTF/Markdown documents and ioslides/Slidy/Beamer/PowerPoint presentations Extensions and applications: Dashboards, Tufte handouts, xaringan/reveal.js presentations, websites, books, journal articles, and interactive tutorials Advanced topics: Parameterized reports, HTML widgets, document templates, custom output formats, and Shiny documents. Yihui Xie is a software engineer at RStudio. He has authored and co-authored several R packages, including knitr, rmarkdown, bookdown, blogdown, shiny, xaringan, and animation. He has published three other books, Dynamic Documents with R and knitr, bookdown: Authoring Books and Technical Documents with R Markdown, and blogdown: Creating Websites with R Markdown. J.J. Allaire is the founder of RStudio and the creator of the RStudio IDE. He is an author of several packages in the R Markdown ecosystem including rmarkdown, flexdashboard, learnr, and radix. Garrett Grolemund is the co-author of R for Data Science and author of Hands-On Programming with R. He wrote the lubridate R package and works for RStudio as an advocate who trains engineers to do data science with R and the Tidyverse., 978-1-138-35933-8, English</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
