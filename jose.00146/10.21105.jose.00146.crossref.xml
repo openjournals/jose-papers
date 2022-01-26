@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>c9913cff65e67d67045af7e24894a741</doi_batch_id>
+    <timestamp>20220126220657</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>01</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>47</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Computational models of human social behavior and neuroscience: An open educational course and Jupyter Book to advance computational training</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Shawn</given_name>
+            <surname>Rhoads</surname>
+            <ORCID>http://orcid.org/0000-0003-1350-9458</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lin</given_name>
+            <surname>Gan</surname>
+            <ORCID>http://orcid.org/0000-0002-7775-2118</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>01</month>
+          <day>26</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>146</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00146</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.5907205”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/146</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00146</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00146</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00146.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1111/tops.12404</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.1177/1745691620970585</doi>
+          </citation>
+          <citation key="ref3">
+            <doi>10.7554/eLife.49547</doi>
+          </citation>
+          <citation key="ref4">
+            <doi>10.1093/scan/nsaa040</doi>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1093/scan/nsaa089</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.1016/j.tics.2017.03.011</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.1016/j.neuron.2021.04.001</doi>
+          </citation>
+          <citation key="ref8">
+            <doi>10.1016/j.tics.2021.03.018</doi>
+          </citation>
+          <citation key="ref9">
+            <doi>10.1371/journal.pone.0244974</doi>
+          </citation>
+          <citation key="ref10">
+            <doi>10.1038/s41592-019-0686-2</doi>
+          </citation>
+          <citation key="ref11">
+            <doi>10.1038/s41586-020-2649-2</doi>
+          </citation>
+          <citation key="ref12">
+            <doi>10.1109/MCSE.2007.55</doi>
+          </citation>
+          <citation key="ref13">
+            <doi>10.5281/zenodo.3509134</doi>
+          </citation>
+          <citation key="ref14">
+            <doi>10.1073/pnas.1603198113</doi>
+          </citation>
+          <citation key="ref15">
+            <doi>10.3758/s13428-018-01193-y</doi>
+          </citation>
+          <citation key="ref16">
+            <doi>10.5281/zenodo.2561065</doi>
+          </citation>
+          <citation key="ref17">
+            <doi>10.1016/j.neuron.2013.10.038</doi>
+          </citation>
+          <citation key="ref18">
+            <doi>10.1002/9781119159193.ch17</doi>
+          </citation>
+          <citation key="ref19">
+            <doi>10.1186/s13742-016-0121-x</doi>
+          </citation>
+          <citation key="ref20">
+            <doi>10.5281/zenodo.3909717</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
