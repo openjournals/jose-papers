@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>2838461654ddf517be6687f1ec0dfa16</doi_batch_id>
+    <timestamp>20220313215544</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>03</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>49</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>An Open-Source Active Learning Curriculum for Data Science in Engineering</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Zachary</given_name>
+            <surname>del Rosario</surname>
+            <ORCID>http://orcid.org/0000-0003-4676-1692</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>03</month>
+          <day>13</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>117</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00117</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.6314141”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/117</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00117</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00117</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00117.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1073/pnas.1319030111</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.21105/joss.01686</doi>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>R for Data Science, Grolemund, Garrett and Wickham, Hadley, 2018, https://r4ds.had.co.nz/</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <doi>10.18260/1-2–22585</doi>
+          </citation>
+          <citation key="ref5">
+            <unstructured_citation>Small teaching: Everyday lessons from the science of learning, Lang, James M, 2016, John Wiley &amp; Sons</unstructured_citation>
+          </citation>
+          <citation key="ref6">
+            <unstructured_citation>StatQuest, Starmer, Josh, https://www.youtube.com/user/joshstarmer, Accessed: 2020-10-21</unstructured_citation>
+          </citation>
+          <citation key="ref7">
+            <unstructured_citation>Data Challenge Lab Open Content, Stanford Data Lab, https://dcl-docs.stanford.edu/home/, Accessed: 2020-10-21</unstructured_citation>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>broom: Convert Statistical Objects into Tidy Tibbles, Robinson, David and Hayes, Alex and Couch, Simon, 2020, R package version 0.7.0, https://CRAN.R-project.org/package=broom</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>curl: A Modern and Flexible Web Client for R, Ooms, Jeroen, 2019, R package version 4.3, https://CRAN.R-project.org/package=curl</unstructured_citation>
+          </citation>
+          <citation key="ref10">
+            <doi>10.18637/jss.v064.i04</doi>
+          </citation>
+          <citation key="ref11">
+            <unstructured_citation>gapminder: Data from Gapminder, Bryan, Jennifer, 2017, R package version 0.3.0, https://CRAN.R-project.org/package=gapminder</unstructured_citation>
+          </citation>
+          <citation key="ref12">
+            <unstructured_citation>ggrepel: Automatically Position Non-Overlapping Text Labels with gplot2’, Slowikowski, Kamil, 2020, R package version 0.8.2, https://CRAN.R-project.org/package=ggrepel</unstructured_citation>
+          </citation>
+          <citation key="ref13">
+            <unstructured_citation>googlesheets4: Access Google Sheets using the Sheets API V4, Bryan, Jennifer, 2020, R package version 0.2.0, https://CRAN.R-project.org/package=googlesheets4</unstructured_citation>
+          </citation>
+          <citation key="ref14">
+            <unstructured_citation>nycflights13: Flights that Departed NYC in 2013, Wickham, Hadley, 2019, R package version 1.0.1, https://CRAN.R-project.org/package=nycflights13</unstructured_citation>
+          </citation>
+          <citation key="ref15">
+            <unstructured_citation>mvtnorm: Multivariate Normal and t Distributions, Genz, Alan and Bretz, Frank and Miwa, Tetsuhisa and Mi, Xuefei and Leisch, Friedrich and Scheipl, Fabian and Hothorn, Torsten, 2020, R package version 1.1-1, https://CRAN.R-project.org/package=mvtnorm</unstructured_citation>
+          </citation>
+          <citation key="ref16">
+            <unstructured_citation>viridis: Default Color Maps from ’matplotlib’, Garnier, Simon, 2018, R package version 0.5.1, https://CRAN.R-project.org/package=viridis</unstructured_citation>
+          </citation>
+          <citation key="ref17">
+            <unstructured_citation>modelr: Modelling Functions that Work with the Pipe, Wickham, Hadley, 2020, R package version 0.1.8, https://CRAN.R-project.org/package=modelr</unstructured_citation>
+          </citation>
+          <citation key="ref18">
+            <unstructured_citation>A Qualitative Study of Engineering Students’ Reasoning About Statistical Variability, Aggarwal, Riya and Flynn, Mira and Daitzman, Sam and Lam, Diane and del Rosario, Zachary Riggins, 2021 Fall ASEE Middle Atlantic Section Meeting, 2021</unstructured_citation>
+          </citation>
+          <citation key="ref19">
+            <unstructured_citation>Computational and Inferential Thinking: The Foundations of Data Science, Adhikari, Ani and DeNero, John and Wagner, David, 2021, https://inferentialthinking.com/chapters/intro.html</unstructured_citation>
+          </citation>
+          <citation key="ref20">
+            <unstructured_citation>Data Science: A First Introduction, Timbers, Tiffany-Anne and Campbell, Trevor and Lee, Melissa, 2021, https://ubc-dsci.github.io/introduction-to-datascience/</unstructured_citation>
+          </citation>
+          <citation key="ref21">
+            <doi>10.2307/1403699</doi>
+          </citation>
+          <citation key="ref22">
+            <unstructured_citation>Exploratory data analysis, Tukey, John W., 2, 1977, Reading, Mass.</unstructured_citation>
+          </citation>
+          <citation key="ref23">
+            <doi>10.2307/1403333</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
