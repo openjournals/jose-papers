@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>b4815607cd12d4d9b6eef78d037d1764</doi_batch_id>
+    <timestamp>20220325011823</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>03</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>49</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Neuromatch Academy: a 3-week, online summer school in computational neuroscience</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Bernard</given_name>
+            <surname>’t&amp;amp;nbsp;Hart</surname>
+            <ORCID>http://orcid.org/0000-0002-0045-3769</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Titipat</given_name>
+            <surname>Achakulvisut</surname>
+            <ORCID>http://orcid.org/0000-0002-2124-2979</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ayoade</given_name>
+            <surname>Adeyemi</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Athena</given_name>
+            <surname>Akrami</surname>
+            <ORCID>http://orcid.org/0000-0001-5711-0903</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Bradly</given_name>
+            <surname>Alicea</surname>
+            <ORCID>http://orcid.org/0000-0003-3869-3175</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Alicia</given_name>
+            <surname>Alonso-Andres</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Diego</given_name>
+            <surname>Alzate-Correa</surname>
+            <ORCID>http://orcid.org/0000-0001-5750-0207</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Arash</given_name>
+            <surname>Ash</surname>
+            <ORCID>http://orcid.org/0000-0002-5567-0613</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jesus</given_name>
+            <surname>Ballesteros</surname>
+            <ORCID>http://orcid.org/0000-0003-2162-5117</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Aishwarya</given_name>
+            <surname>Balwani</surname>
+            <ORCID>http://orcid.org/0000-0002-9234-1632</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Eleanor</given_name>
+            <surname>Batty</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ulrik</given_name>
+            <surname>Beierholm</surname>
+            <ORCID>http://orcid.org/0000-0002-7296-7996</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ari</given_name>
+            <surname>Benjamin</surname>
+            <ORCID>http://orcid.org/0000-0001-9241-9615</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Upinder</given_name>
+            <surname>Bhalla</surname>
+            <ORCID>http://orcid.org/0000-0003-1722-5188</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Gunnar</given_name>
+            <surname>Blohm</surname>
+            <ORCID>http://orcid.org/0000-0002-2297-3271</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Joachim</given_name>
+            <surname>Blohm</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Kathryn</given_name>
+            <surname>Bonnen</surname>
+            <ORCID>http://orcid.org/0000-0002-9210-8275</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Marco</given_name>
+            <surname>Brigham</surname>
+            <ORCID>http://orcid.org/0000-0001-5271-808X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Bingni</given_name>
+            <surname>Brunton</surname>
+            <ORCID>http://orcid.org/0000-0002-4831-3466</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>John</given_name>
+            <surname>Butler</surname>
+            <ORCID>http://orcid.org/0000-0001-5567-8634</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Brandon</given_name>
+            <surname>Caie</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>N</given_name>
+            <surname>Gajic</surname>
+            <ORCID>http://orcid.org/0000-0003-3593-5773</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sharbatanu</given_name>
+            <surname>Chatterjee</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Spyridon</given_name>
+            <surname>Chavlis</surname>
+            <ORCID>http://orcid.org/0000-0002-1046-1201</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ruidong</given_name>
+            <surname>Chen</surname>
+            <ORCID>http://orcid.org/0000-0003-0163-979X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>You</given_name>
+            <surname>Cheng</surname>
+            <ORCID>http://orcid.org/0000-0002-3141-0104</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>H.m.</given_name>
+            <surname>Chow</surname>
+            <ORCID>http://orcid.org/0000-0001-6294-1189</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Raymond</given_name>
+            <surname>Chua</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Yunwei</given_name>
+            <surname>Dai</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Isaac</given_name>
+            <surname>David</surname>
+            <ORCID>http://orcid.org/0000-0001-7786-6257</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Eric</given_name>
+            <surname>DeWitt</surname>
+            <ORCID>http://orcid.org/0000-0001-9182-8257</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Julien</given_name>
+            <surname>Denis</surname>
+            <ORCID>http://orcid.org/0000-0002-0537-6483</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Alish</given_name>
+            <surname>Dipani</surname>
+            <ORCID>http://orcid.org/0000-0002-9201-1369</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Arianna</given_name>
+            <surname>Dorschel</surname>
+            <ORCID>http://orcid.org/0000-0003-4148-1878</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jan</given_name>
+            <surname>Drugowitsch</surname>
+            <ORCID>http://orcid.org/0000-0002-7846-0408</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Kshitij</given_name>
+            <surname>Dwivedi</surname>
+            <ORCID>http://orcid.org/0000-0001-6442-7140</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sean</given_name>
+            <surname>Escola</surname>
+            <ORCID>http://orcid.org/0000-0003-0645-1964</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Haoxue</given_name>
+            <surname>Fan</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Roozbeh</given_name>
+            <surname>Farhoodi</surname>
+            <ORCID>http://orcid.org/0000-0003-3374-4041</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Yicheng</given_name>
+            <surname>Fei</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Pierre-Étienne</given_name>
+            <surname>Fiquet</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lorenzo</given_name>
+            <surname>Fontolan</surname>
+            <ORCID>http://orcid.org/0000-0002-1566-6636</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jeremy</given_name>
+            <surname>Forest</surname>
+            <ORCID>http://orcid.org/0000-0002-8486-5559</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Yuki</given_name>
+            <surname>Fujishima</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Byron</given_name>
+            <surname>Galbraith</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Mario</given_name>
+            <surname>Galdamez</surname>
+            <ORCID>http://orcid.org/0000-0002-1626-4823</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Richard</given_name>
+            <surname>Gao</surname>
+            <ORCID>http://orcid.org/0000-0001-5916-6433</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Julijana</given_name>
+            <surname>Gjorgjieva</surname>
+            <ORCID>http://orcid.org/0000-0001-7118-4079</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Alexander</given_name>
+            <surname>Gonzalez</surname>
+            <ORCID>http://orcid.org/0000-0002-7328-9533</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Qinglong</given_name>
+            <surname>Gu</surname>
+            <ORCID>http://orcid.org/0000-0001-8878-4716</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Yueqi</given_name>
+            <surname>Guo</surname>
+            <ORCID>http://orcid.org/0000-0002-2731-1058</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ziyi</given_name>
+            <surname>Guo</surname>
+            <ORCID>http://orcid.org/0000-0002-0841-2654</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Pankaj</given_name>
+            <surname>Gupta</surname>
+            <ORCID>http://orcid.org/0000-0001-6814-2812</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Busra</given_name>
+            <surname>Gurbuz</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Caroline</given_name>
+            <surname>Haimerl</surname>
+            <ORCID>http://orcid.org/0000-0003-4964-8003</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jordan</given_name>
+            <surname>Harrod</surname>
+            <ORCID>http://orcid.org/0000-0003-3162-2112</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Alexandre</given_name>
+            <surname>Hyafil</surname>
+            <ORCID>http://orcid.org/0000-0002-0566-651X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Martin</given_name>
+            <surname>Irani</surname>
+            <ORCID>http://orcid.org/0000-0002-4724-2248</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Daniel</given_name>
+            <surname>Jacobson</surname>
+            <ORCID>http://orcid.org/0000-0003-0887-4960</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Michelle</given_name>
+            <surname>Johnson</surname>
+            <ORCID>http://orcid.org/0000-0002-7964-0304</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ilenna</given_name>
+            <surname>Jones</surname>
+            <ORCID>http://orcid.org/0000-0002-2169-2195</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Gili</given_name>
+            <surname>Karni</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Robert</given_name>
+            <surname>Kass</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Hyosub</given_name>
+            <surname>Kim</surname>
+            <ORCID>http://orcid.org/0000-0003-0109-593X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Andreas</given_name>
+            <surname>Kist</surname>
+            <ORCID>http://orcid.org/0000-0003-3643-7776</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Randal</given_name>
+            <surname>Koene</surname>
+            <ORCID>http://orcid.org/0000-0001-8316-5326</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Konrad</given_name>
+            <surname>Kording</surname>
+            <ORCID>http://orcid.org/0000-0001-8408-4499</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Matthew</given_name>
+            <surname>Krause</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Arvind</given_name>
+            <surname>Kumar</surname>
+            <ORCID>http://orcid.org/0000-0002-8044-9195</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Norma</given_name>
+            <surname>Kühn</surname>
+            <ORCID>http://orcid.org/0000-0001-8371-2166</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ray</given_name>
+            <surname>Lc</surname>
+            <ORCID>http://orcid.org/0000-0001-7310-8790</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Matthew</given_name>
+            <surname>Laporte</surname>
+            <ORCID>http://orcid.org/0000-0002-2643-657X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Junseok</given_name>
+            <surname>Lee</surname>
+            <ORCID>http://orcid.org/0000-0002-8622-6259</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Songting</given_name>
+            <surname>Li</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sikun</given_name>
+            <surname>Lin</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Yang</given_name>
+            <surname>Lin</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Shuze</given_name>
+            <surname>Liu</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Tony</given_name>
+            <surname>Liu</surname>
+            <ORCID>http://orcid.org/0000-0002-3707-3989</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jesse</given_name>
+            <surname>Livezey</surname>
+            <ORCID>http://orcid.org/0000-0003-0494-8758</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Linlin</given_name>
+            <surname>Lu</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jakob</given_name>
+            <surname>Macke</surname>
+            <ORCID>http://orcid.org/0000-0001-5154-8912</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Kelly</given_name>
+            <surname>Mahaffy</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>A</given_name>
+            <surname>Martins</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Nicolás</given_name>
+            <surname>Martorell</surname>
+            <ORCID>http://orcid.org/0000-0003-1778-7738</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Manolo</given_name>
+            <surname>Martínez</surname>
+            <ORCID>http://orcid.org/0000-0002-6194-7121</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Marcelo</given_name>
+            <surname>Mattar</surname>
+            <ORCID>http://orcid.org/0000-0003-3303-2490</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jorge</given_name>
+            <surname>Menendez</surname>
+            <ORCID>http://orcid.org/0000-0002-5005-8791</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Kenneth</given_name>
+            <surname>Miller</surname>
+            <ORCID>http://orcid.org/0000-0002-1433-0647</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Patrick</given_name>
+            <surname>Mineault</surname>
+            <ORCID>http://orcid.org/0000-0001-5519-842X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Nosratullah</given_name>
+            <surname>Mohammadi</surname>
+            <ORCID>http://orcid.org/0000-0003-4214-2173</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Yalda</given_name>
+            <surname>Mohsenzadeh</surname>
+            <ORCID>http://orcid.org/0000-0001-8525-957X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Elenor</given_name>
+            <surname>Morgenroth</surname>
+            <ORCID>http://orcid.org/0000-0002-1386-6642</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Taha</given_name>
+            <surname>Morshedzadeh</surname>
+            <ORCID>http://orcid.org/0000-0002-0205-7647</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Alice</given_name>
+            <surname>Mosberger</surname>
+            <ORCID>http://orcid.org/0000-0003-1114-1469</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Madhuvanthi</given_name>
+            <surname>Muliya</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Marieke</given_name>
+            <surname>Mur</surname>
+            <ORCID>http://orcid.org/0000-0003-1749-9058</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>John</given_name>
+            <surname>Murray</surname>
+            <ORCID>http://orcid.org/0000-0003-4115-8181</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Yashas</given_name>
+            <surname>Nd</surname>
+            <ORCID>http://orcid.org/0000-0003-0834-2542</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Richard</given_name>
+            <surname>Naud</surname>
+            <ORCID>http://orcid.org/0000-0001-7383-3095</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Prakriti</given_name>
+            <surname>Nayak</surname>
+            <ORCID>http://orcid.org/0000-0003-1356-0712</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Anushka</given_name>
+            <surname>Oak</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Itzel</given_name>
+            <surname>Castillo</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Seyedmehdi</given_name>
+            <surname>Orouji</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jorge</given_name>
+            <surname>Otero-Millan</surname>
+            <ORCID>http://orcid.org/0000-0002-9789-8392</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Marius</given_name>
+            <surname>Pachitariu</surname>
+            <ORCID>http://orcid.org/0000-0001-7106-814X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Biraj</given_name>
+            <surname>Pandey</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Renato</given_name>
+            <surname>Paredes</surname>
+            <ORCID>http://orcid.org/0000-0002-8261-3331</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jesse</given_name>
+            <surname>Parent</surname>
+            <ORCID>http://orcid.org/0000-0002-6979-1520</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Il</given_name>
+            <surname>Park</surname>
+            <ORCID>http://orcid.org/0000-0002-4255-7750</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Megan</given_name>
+            <surname>Peters</surname>
+            <ORCID>http://orcid.org/0000-0002-0248-0816</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Xaq</given_name>
+            <surname>Pitkow</surname>
+            <ORCID>http://orcid.org/0000-0001-6376-329X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Panayiota</given_name>
+            <surname>Poirazi</surname>
+            <ORCID>http://orcid.org/0000-0001-6152-595X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Haroon</given_name>
+            <surname>Popal</surname>
+            <ORCID>http://orcid.org/0000-0002-4508-5218</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sandhya</given_name>
+            <surname>Prabhakaran</surname>
+            <ORCID>http://orcid.org/0000-0002-9537-507X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Tian</given_name>
+            <surname>Qiu</surname>
+            <ORCID>http://orcid.org/0000-0002-0323-8298</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Srinidhi</given_name>
+            <surname>Ragunathan</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Raul</given_name>
+            <surname>Rodriguez-Cruces</surname>
+            <ORCID>http://orcid.org/0000-0002-2917-1212</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>David</given_name>
+            <surname>Rolnick</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ashish</given_name>
+            <surname>Sahoo</surname>
+            <ORCID>http://orcid.org/0000-0003-1815-6655</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Saeed</given_name>
+            <surname>Salehinajafabadi</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Cristina</given_name>
+            <surname>Savin</surname>
+            <ORCID>http://orcid.org/0000-0002-3414-8244</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Shreya</given_name>
+            <surname>Saxena</surname>
+            <ORCID>http://orcid.org/0000-0003-4655-7050</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Paul</given_name>
+            <surname>Schrater</surname>
+            <ORCID>http://orcid.org/0000-0001-7853-8984</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Karen</given_name>
+            <surname>Schroeder</surname>
+            <ORCID>http://orcid.org/0000-0003-3149-4659</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Alice</given_name>
+            <surname>Schwarze</surname>
+            <ORCID>http://orcid.org/0000-0002-9146-8068</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Madineh</given_name>
+            <surname>Sedigh-Sarvestani</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>K</given_name>
+            <surname>Sekhar</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Reza</given_name>
+            <surname>Shadmehr</surname>
+            <ORCID>http://orcid.org/0000-0002-7686-2569</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Maryam</given_name>
+            <surname>Shanechi</surname>
+            <ORCID>http://orcid.org/0000-0002-0544-7720</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Siddhant</given_name>
+            <surname>Sharma</surname>
+            <ORCID>http://orcid.org/0000-0003-1768-1802</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Eric</given_name>
+            <surname>Shea-Brown</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Krishna</given_name>
+            <surname>Shenoy</surname>
+            <ORCID>http://orcid.org/0000-0003-1534-9240</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Carolina</given_name>
+            <surname>Shimabukuro</surname>
+            <ORCID>http://orcid.org/0000-0001-5669-4097</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sergey</given_name>
+            <surname>Shuvaev</surname>
+            <ORCID>http://orcid.org/0000-0001-5215-8019</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Man</given_name>
+            <surname>Sin</surname>
+            <ORCID>http://orcid.org/0000-0002-4889-1397</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Maurice</given_name>
+            <surname>Smith</surname>
+            <ORCID>http://orcid.org/0000-0003-4214-1277</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Nicholas</given_name>
+            <surname>Steinmetz</surname>
+            <ORCID>http://orcid.org/0000-0001-7029-2908</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Karolina</given_name>
+            <surname>Stosio</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Elizabeth</given_name>
+            <surname>Straley</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Gabrielle</given_name>
+            <surname>Strandquist</surname>
+            <ORCID>http://orcid.org/0000-0002-8345-6905</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Carsen</given_name>
+            <surname>Stringer</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Rimjhim</given_name>
+            <surname>Tomar</surname>
+            <ORCID>http://orcid.org/0000-0003-1528-976X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ngoc</given_name>
+            <surname>Tran</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sofia</given_name>
+            <surname>Triantafillou</surname>
+            <ORCID>http://orcid.org/0000-0002-2535-0432</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lawrence</given_name>
+            <surname>Udeigwe</surname>
+            <ORCID>http://orcid.org/0000-0002-7627-4820</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Davide</given_name>
+            <surname>Valeriani</surname>
+            <ORCID>http://orcid.org/0000-0001-9866-0063</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Vincent</given_name>
+            <surname>Valton</surname>
+            <ORCID>http://orcid.org/0000-0002-2508-6731</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Maryam</given_name>
+            <surname>Vaziri-Pashkam</surname>
+            <ORCID>http://orcid.org/0000-0003-1830-2501</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Peter</given_name>
+            <surname>Vincent</surname>
+            <ORCID>http://orcid.org/0000-0002-2641-1874</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Gal</given_name>
+            <surname>Vishne</surname>
+            <ORCID>http://orcid.org/0000-0001-7906-2543</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Pascal</given_name>
+            <surname>Wallisch</surname>
+            <ORCID>http://orcid.org/0000-0001-6047-349X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Peiyuan</given_name>
+            <surname>Wang</surname>
+            <ORCID>http://orcid.org/0000-0003-2289-1660</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Claire</given_name>
+            <surname>Ward</surname>
+            <ORCID>http://orcid.org/0000-0002-1486-4403</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Michael</given_name>
+            <surname>Waskom</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Kunlin</given_name>
+            <surname>Wei</surname>
+            <ORCID>http://orcid.org/0000-0001-5098-3808</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Anqi</given_name>
+            <surname>Wu</surname>
+            <ORCID>http://orcid.org/0000-0002-7866-9455</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Zhengwei</given_name>
+            <surname>Wu</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Brad</given_name>
+            <surname>Wyble</surname>
+            <ORCID>http://orcid.org/0000-0002-9984-3037</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lei</given_name>
+            <surname>Zhang</surname>
+            <ORCID>http://orcid.org/0000-0002-9586-595X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Daniel</given_name>
+            <surname>Zysman</surname>
+            <ORCID>http://orcid.org/0000-0002-5924-1154</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Federico</given_name>
+            <surname>Uquillas</surname>
+            <ORCID>http://orcid.org/0000-0001-9078-9452</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Tara</given_name>
+            <surname>van Viegen</surname>
+            <ORCID>http://orcid.org/0000-0001-6109-1004</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>03</month>
+          <day>25</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>118</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00118</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.17605/OSF.IO/CFN4U”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/118</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00118</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00118</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00118.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1016/j.tics.2021.03.018</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.1016/j.cell.2021.03.042</doi>
+          </citation>
+          <citation key="ref3">
+            <doi>10.1126/science.aav7893</doi>
+          </citation>
+          <citation key="ref4">
+            <doi>10.1038/s41586-019-1787-x</doi>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1038/nature06713</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.1016/j.neuroimage.2013.05.041</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.7554/eLife.63711</doi>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>Neuromatch Academy: The Story, Medium, https://link.medium.com/L8pc9olr8jb, Blohm, Gunnar, 2021, jun, 6</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>neuromatch: Algorithms to match scientists, Achakulvisut, Titipat and Ruangrong, Tulakan and Acuna, Daniel Ernesto and Wyble, Brad and Goodman, Dan and Kording, Konrad, © 2020 eLife Sciences Publications Limited. This article is distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use and redistribution provided that the original author and source are credited., neuromatch, https://elifesciences.org/labs/5ed408f4/neuromatch-algorithms-to-match-scientists, 2021-10-06, eLife, may, 2020, 5</unstructured_citation>
+          </citation>
+          <citation key="ref10">
+            <doi>10.1016/j.neuron.2021.07.021</doi>
+          </citation>
+          <citation key="ref11">
+            <doi>10.1016/S1474-4422(21)00074-0</doi>
+          </citation>
+          <citation key="ref12">
+            <doi>10.1016/j.neuroimage.2013.05.033</doi>
+          </citation>
+          <citation key="ref13">
+            <doi>10.1167/18.13.23</doi>
+          </citation>
+          <citation key="ref14">
+            <doi>10.1016/j.neuron.2009.09.006</doi>
+          </citation>
+          <citation key="ref15">
+            <doi>10.3389/neuro.06.004.2008</doi>
+          </citation>
+          <citation key="ref16">
+            <doi>10.1073/pnas.1618228114</doi>
+          </citation>
+          <citation key="ref17">
+            <doi>10.1038/nn.3635</doi>
+          </citation>
+          <citation key="ref18">
+            <doi>10.1152/jn.00113.2017</doi>
+          </citation>
+          <citation key="ref19">
+            <doi>10.1152/jn.00131.2015</doi>
+          </citation>
+          <citation key="ref20">
+            <doi>10.1371/journal.pcbi.1004660</doi>
+          </citation>
+          <citation key="ref21">
+            <doi>10.1523/JNEUROSCI.5506-08.2009</doi>
+          </citation>
+          <citation key="ref22">
+            <doi>10.1371/journal.pcbi.1002655</doi>
+          </citation>
+          <citation key="ref23">
+            <doi>10.1088/1741-2560/4/3/012</doi>
+          </citation>
+          <citation key="ref24">
+            <doi>10.1088/1741-2560/5/1/008</doi>
+          </citation>
+          <citation key="ref25">
+            <doi>10.1073/pnas.0913697107</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
