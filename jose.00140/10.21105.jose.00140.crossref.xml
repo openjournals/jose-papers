@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>708f3366d89bf679d2f0bde432873bc2</doi_batch_id>
+    <timestamp>20220331203347</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>03</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>49</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Interactive Bin Packing: A Java Application for Learning Constructive Heuristics for Combinatorial Optimization</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Vincent</given_name>
+            <surname>Cicirello</surname>
+            <ORCID>http://orcid.org/0000-0003-1072-8559</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>03</month>
+          <day>31</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>140</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00140</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.6402123”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/140</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00140</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00140</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00140.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Garey, Michael R. and Johnson, David S., Computers and Intractability: A Guide to the Theory of NP-Completeness, W. H. Freeman, 1979, 0716710455</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <doi>10.1109/ICPP.1999.797428</doi>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Bin packing and machine scheduling, Malkevitch, Joseph, Feature column from the AMS: Monthly essays on mathematical topics, 2004, jun, http://www.ams.org/publicoutreach/feature-column/fcarc-packings1, 6</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>Bin packing, Malkevitch, Joseph, Feature column from the AMS: Monthly essays on mathematical topics, 2004, may, http://www.ams.org/publicoutreach/feature-column/fcarc-bins1, 5</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1007/s11276-005-5266-y</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.1145/1508865.1508951</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.1145/1047344.1047409</doi>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>Cicirello, Vincent A., A CS Unplugged Activity for the Online Classroom, 2013, 28, 6, Journal of Computing Sciences in Colleges, jun, 162–168, https://dl.acm.org/doi/abs/10.5555/2460156.2460187, 6</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>Cicirello, Vincent A., Collective Bin Packing: An Active Learning Exercise, 2009, 24, 6, Journal of Computing Sciences in Colleges, jun, 117–123, https://dl.acm.org/doi/abs/10.5555/1529995.1530020, 6</unstructured_citation>
+          </citation>
+          <citation key="ref10">
+            <unstructured_citation>Cicirello, Vincent A., An Interdisciplinary Course on Artificial Intelligence Designed for a Liberal Arts Curriculum, 2008, 23, 3, Journal of Computing Sciences in Colleges, jan, 120–127, https://dl.acm.org/doi/abs/10.5555/1295109.1295137, 1</unstructured_citation>
+          </citation>
+          <citation key="ref11">
+            <unstructured_citation>Online Calculator: Bin Packing Problem, PlanetCalc, https://planetcalc.com/917/, 2021, Accessed: 2021-12-22</unstructured_citation>
+          </citation>
+          <citation key="ref12">
+            <unstructured_citation>Heuristics for 1D and 2D bin packing, Černohorská, Veronika, http://www.binpacking.4fan.cz/, 2015, Czech Technical University in Prague. Accessed: 2021-12-22</unstructured_citation>
+          </citation>
+          <citation key="ref13">
+            <unstructured_citation>OR-Tools: The Bin Packing Problem, Google Developers, https://developers.google.com/optimization/bin/bin_packing, 2021, aug, Accessed: 2021-12-22, 8</unstructured_citation>
+          </citation>
+          <citation key="ref14">
+            <doi>10.1145/3017680.3017762</doi>
+          </citation>
+          <citation key="ref15">
+            <doi>10.1145/3017680.3017728</doi>
+          </citation>
+          <citation key="ref16">
+            <doi>10.1145/3159450.3159602</doi>
+          </citation>
+          <citation key="ref17">
+            <doi>10.1145/3287324.3287480</doi>
+          </citation>
+          <citation key="ref18">
+            <doi>10.1145/3017680.3017793</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
