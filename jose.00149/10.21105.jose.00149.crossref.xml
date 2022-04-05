@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>c17dd0d3faef6a463d72c8e4acd46bf2</doi_batch_id>
+    <timestamp>20220405201806</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>04</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>50</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>EPIDEMIC: Epidemiology Educational Code</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Bruna</given_name>
+            <surname>Pavlack</surname>
+            <ORCID>http://orcid.org/0000-0002-6807-0916</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Malú</given_name>
+            <surname>Grave</surname>
+            <ORCID>http://orcid.org/0000-0002-7697-0658</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Eber</given_name>
+            <surname>Dantas</surname>
+            <ORCID>http://orcid.org/0000-0003-2693-0719</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Julio</given_name>
+            <surname>Basilio</surname>
+            <ORCID>http://orcid.org/0000-0003-1040-735X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Leonardo</given_name>
+            <surname>de la Roca</surname>
+            <ORCID>http://orcid.org/0000-0003-2896-228X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>João</given_name>
+            <surname>Norenberg</surname>
+            <ORCID>http://orcid.org/0000-0003-3558-4053</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Michel</given_name>
+            <surname>Tosin</surname>
+            <ORCID>http://orcid.org/0000-0002-0112-553X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lucas</given_name>
+            <surname>Chaves</surname>
+            <ORCID>http://orcid.org/0000-0003-4567-2006</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Diego</given_name>
+            <surname>Matos</surname>
+            <ORCID>http://orcid.org/0000-0002-6711-8500</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Marcos</given_name>
+            <surname>Issa</surname>
+            <ORCID>http://orcid.org/0000-0002-2811-4929</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Roberto</given_name>
+            <surname>Luo</surname>
+            <ORCID>http://orcid.org/0000-0002-3822-4945</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Amanda</given_name>
+            <surname>Guyt</surname>
+            <ORCID>http://orcid.org/0000-0001-8575-3594</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Luthiana</given_name>
+            <surname>Soares</surname>
+            <ORCID>http://orcid.org/0000-0001-5314-0881</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Rodrigo</given_name>
+            <surname>Burgos</surname>
+            <ORCID>http://orcid.org/0000-0003-0326-395X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Lisandro</given_name>
+            <surname>Lovisolo</surname>
+            <ORCID>http://orcid.org/0000-0002-7404-9371</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Americo</given_name>
+            <surname>Cunha</surname>
+            <ORCID>http://orcid.org/0000-0002-8342-0363</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>04</month>
+          <day>05</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>149</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00149</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.5930686”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/149</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00149</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00149</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00149.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Abdulrahman, I., SimCOVID: Open-Source Simulation Programs for the COVID-19 Outbreak, 2020, https://doi.org/10.1101/2020.04.13.20063354, 2021-02-07</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <unstructured_citation>Adhikari, R. and Bolitho, A. and Caballero, F. and Cates, M. E. and Dolezal, J. and Ekeh, T. and Guioth, J. and Jack, R. L. and Kappler, J. and Kikuchi, L. and Kobayashi, H. and Li, Y. I. and Peterson, J. D. and Pietzonka, P. and Remez, B. and Rohrbach, P. B. and Singh, R. and Turk, G., Inference, prediction and optimization of non-pharmaceutical interventions using compartment models: the PyRoss library, arXiv: 2005.09625, 2020, https://arxiv.org/abs/2005.09625, 2021-02-07</unstructured_citation>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Chatterjee, N., Towards Data Science, Transparency, Reproducibility, and Validity of COVID-19 Projection Models, 2020, https://towardsdatascience.com/transparency-reproducibility-and-validity-of-covid-19-projection-models-78592e029f28, 2020-05-04</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>COVID-19: Observatório Fluminense, 2020, https://www.covid19rj.org, 2020-08-30</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <unstructured_citation>Dantas, E. and Tosin, M. and Cunha Jr, A., Calibration of a SEIR–SEI epidemic model to describe the Zika virus outbreak in Brazil, Applied Mathematics and Computation, 338, 249 - 259, 2018, https://doi.org/10.1016/j.amc.2018.06.024, 2021-02-07</unstructured_citation>
+          </citation>
+          <citation key="ref6">
+            <unstructured_citation>Hladish, T. and Melamud, E. and Barrera, L. and Galvani, A. and Meyers, L., EpiFire: An open source C++ library and application for contact network epidemiology, BMC Bioinformatics, 13, 76, 2012, https://doi.org/10.1186/1471-2105-13-76, 2021-02-07</unstructured_citation>
+          </citation>
+          <citation key="ref7">
+            <unstructured_citation>Marathe, M. V. and Ramakrishnan, N., Recent Advances in Computational Epidemiology, IEEE Intelligent Systems, 28, 96-101, 2013, https://doi.org/10.1109/MIS.2013.114, 2021-02-07</unstructured_citation>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>Morrison, R. E. and Cunha Jr, A., Embedded model discrepancy: a case study of Zika modeling, Chaos: An Interdisciplinary Journal of Nonlinear Science, 2020, 30, 051103, https://doi.org/10.1063/5.0005204, 2021-02-07</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>Tameru, B. and Nganwa, D. and Bogale, A. and Robnett, V. and Habtemariam, T., The Role of Computational Epidemiology and Risk Analysis in the Fight Against HIV/AIDS, Journal of AIDS &amp; Clinical Research, 36, 2012, https://doi.org/10.4172/2155-6113.1000e107, 2021-02-07</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
