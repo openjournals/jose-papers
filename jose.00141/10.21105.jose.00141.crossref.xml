@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>b65314d80a99cf12842d3dee2da2f53b</doi_batch_id>
+    <timestamp>20220413112412</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>04</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>50</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>An Applied Geographic Information Systems and Science Course in R</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Andrew</given_name>
+            <surname>MacLachlan</surname>
+            <ORCID>http://orcid.org/0000-0003-0356-1623</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Adam</given_name>
+            <surname>Dennett</surname>
+            <ORCID>http://orcid.org/0000-0001-8036-0185</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>04</month>
+          <day>13</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>141</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00141</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.6375745”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/141</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00141</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00141</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00141.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.21105/jose.00042</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.1016/0034-4257(82)90043-8</doi>
+          </citation>
+          <citation key="ref3">
+            <doi>10.1016/B978-008044910-4.00447-8</doi>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>Cosh, Georgie, GLA Housing and Land, :C:/Users/Andy/Downloads/housing_research_note_4-_short-term_and_holiday_letting_in_london.pdf:pdf, GLA Housing and Land Short-term and holiday letting in London, 2020</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1080/10618600.2017.1384734</doi>
+          </citation>
+          <citation key="ref6">
+            <unstructured_citation>The asymptotic behaviour of the residual life time at time t is investigated (for t rightarrow infty). We derive weak limit laws and their domains of attraction and treat rates of convergence and moment convergence. The presentation exploits the close similarity with extreme value theory., New York, NY, Efron, B, Breakthroughs in statistics, :C:/Users/Andy/Downloads/euclid.aos.1176344552.pdf:pdf, 0091-1798, 5, 569–593, Springer, Bootstrap methods: another look at the jackknife, http://projecteuclid.org/euclid.aop/1176996548, 2, 1988</unstructured_citation>
+          </citation>
+          <citation key="ref7">
+            <doi>10.1016/B978-044452701-1.00067-3</doi>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>London, Fung, Dilly, 2nd, :C:/Users/Andy/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Fung - 2017 - UCL Connected Curriculum.pdf:pdf, UCL Press, UCL Connected Curriculum, 2017</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>Glassdoor, Glassdoor, 50 Best Jobs in America for 2019, https://www.glassdoor.co.uk/List/Best-Jobs-in-America-LST_KQ0,20.htm, 2020-04-07, 2020</unstructured_citation>
+          </citation>
+          <citation key="ref10">
+            <unstructured_citation>Grolemund, Garrett. and Wickham, Hadley., O’Reilly, R for Data Science, 2017</unstructured_citation>
+          </citation>
+          <citation key="ref11">
+            <doi>10.1080/22797254.2018.1474494</doi>
+          </citation>
+          <citation key="ref12">
+            <doi>10.1002/9781118944707.ch10</doi>
+          </citation>
+          <citation key="ref13">
+            <unstructured_citation>New York, Kwan, Anna, The Routledge International Handbook of Higher Education, Tight, Malcolm and Mok, Ka Ho and Huisman, Jeroen and Morphew, Christopher, Taylor &amp; Francis, Problem-based Learning, 2009</unstructured_citation>
+          </citation>
+          <citation key="ref14">
+            <doi>10.1016/j.isprsjprs.2015.10.012</doi>
+          </citation>
+          <citation key="ref15">
+            <doi>10.1201/9780203730058</doi>
+          </citation>
+          <citation key="ref16">
+            <unstructured_citation>Pattabiraman, Kumaresh, LinkedIn official blog, LinkedIn’s Most Promising Jobs of 2019, https://blog.linkedin.com/2019/january/10/linkedins-most-promising-jobs-of-2019, 2020-04-07, 2019</unstructured_citation>
+          </citation>
+          <citation key="ref17">
+            <unstructured_citation>The Universities and Colleges Admissions Service, UCAS Postgraduate courses, https://digital.ucas.com/coursedisplay/results/providers?studyYear=2019&amp;destination=Postgraduate&amp;postcodeDistanceSystem=imperial&amp;pageNumber=1&amp;sort=MostRelevant&amp;searchTerm=data science, 2020-04-07, 2020</unstructured_citation>
+          </citation>
+          <citation key="ref18">
+            <unstructured_citation>Four years ago, in the shadow of Colorado’s Pike’s Peak, veteran Woodland Park High School chemistry teachers Jonathan Bergmann and Aaron Sams stumbled onto an idea. Struggling to find the time to reteach lessons for absent students, they plunked down $50, bought software that allowed them to record and annotate lessons, and posted them online. Absent students appreciated the opportunity to see what they missed. But, surprisingly, so did students who hadn’t missed class. They, too, used the online material, mostly to review and reinforce classroom lessons. And, soon, Bergmann and Sams realized they had the opportunity to radically rethink how they used class time. It’s called “the flipped classroom.” While there is no one model, the core idea is to flip the common instructional approach: With teacher-created videos and interactive lessons, instruction that used to occur in class is now accessed at home, in advance of class. Class becomes the place to work through problems, advance concepts, and engage in collaborative learning. Most importantly, all aspects of instruction can be rethought to best maximize the scarcest learning resource—time. Flipped classroom teachers almost universally agree that it’s not the instructional videos on their own, but how they are integrated into an overall approach, that makes the difference. In his classes, Bergmann says, students can’t just “watch the video and be done with it.” He checks their notes and requires each student to come to class with a question. And, while he says it takes a little while for students to get used to the system, as the year progresses he sees them asking better questions and thinking more deeply about the content. After flipping his classroom, Bergmann says he can more easily query individual students, probe for misconceptions around scientific concepts, and clear up incorrect notions., Tucker, Bill, :C:/Users/Andy/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Tucker - 2012 - The flipped classroom Online instruction at home frees class time for learning.pdf:pdf, 15399664, 15399664, Education Next, p. 82–83, 1237826701, The flipped classroom: Online instruction at home frees class time for learning, 12, 2012</unstructured_citation>
+          </citation>
+          <citation key="ref19">
+            <unstructured_citation>Xie, Yihui, CRC Press, Bookdown: Authoring books and technical documents with R markdown, 2016</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
