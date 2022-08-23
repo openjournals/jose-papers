@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>579aa8556ef6d3882ef7cc066b989523</doi_batch_id>
+    <timestamp>20220823011600</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>54</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Reproducible Data Science with Python: An Open Learning Resource</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Valentin</given_name>
+            <surname>Danchev</surname>
+            <ORCID>http://orcid.org/0000-0002-7563-0168</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>23</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>156</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00156</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.6895578”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/156</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00156</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00156</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00156.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1162/99608f92.cb0fa8d2</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.17226/25104</doi>
+          </citation>
+          <citation key="ref3">
+            <doi>10.1145/3408877.3432586</doi>
+          </citation>
+          <citation key="ref4">
+            <doi>10.5281/zenodo.3233853</doi>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1371/journal.pcbi.1008770</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.3233/978-1-61499-649-1-87</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.1038/d41586-018-07196-1</doi>
+          </citation>
+          <citation key="ref8">
+            <unstructured_citation>Principles and Techniques of Data Science, 2021, Lau, Sam and Gonzalez, Joey and Nolan, Deb, http://www.textbook.ds100.org</unstructured_citation>
+          </citation>
+          <citation key="ref9">
+            <doi>10.1080/09332480.2019.1579578</doi>
+          </citation>
+          <citation key="ref10">
+            <unstructured_citation>Exploring Network Structure, Dynamics, and Function using NetworkX, Hagberg, Aric A. and Schult, Daniel A. and Swart, Pieter J., http://conference.scipy.org/proceedings/SciPy2008/paper_2, Proceedings of the 7th Python in Science Conference (SciPy 2008), 11-15, Pasadena, CA, United States, 2008, Varoquaux, Gael and Vaught, Travis and Millman, Jarrod</unstructured_citation>
+          </citation>
+          <citation key="ref11">
+            <doi>10.48550/arXiv.1201.0490</doi>
+          </citation>
+          <citation key="ref12">
+            <doi>10.25080/Majora-92bf1922-00a</doi>
+          </citation>
+          <citation key="ref13">
+            <doi>10.21105/joss.03021</doi>
+          </citation>
+          <citation key="ref14">
+            <doi>10.25080/Majora-92bf1922-011</doi>
+          </citation>
+          <citation key="ref15">
+            <doi>10.18148/srm/2020.v14i2.7746</doi>
+          </citation>
+          <citation key="ref16">
+            <doi>10.48550/arXiv.2004.04145</doi>
+          </citation>
+          <citation key="ref17">
+            <doi>10.1093/comjnl/27.2.97</doi>
+          </citation>
+          <citation key="ref18">
+            <doi>10.1371/journal.pcbi.1007007</doi>
+          </citation>
+          <citation key="ref19">
+            <unstructured_citation>We Downloaded 10,000,000 Jupyter Notebooks from GitHub — This is What we Learned, https://blog.jetbrains.com/datalore/2020/12/17/we-downloaded-10-000-000-jupyter-notebooks-from-github&amp;-this-is-what-we-learned/, The JetBrains Datalore Blog, Guzharina, Alena, 2020, dec, 12</unstructured_citation>
+          </citation>
+          <citation key="ref20">
+            <doi>10.25080/Majora-4af1f417-011</doi>
+          </citation>
+          <citation key="ref21">
+            <doi>10.1201/9781003080978</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
