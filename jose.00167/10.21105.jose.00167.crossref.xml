@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>84a5d57be10ec29363ee56f6eca09365</doi_batch_id>
+    <timestamp>20220826111150</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>54</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>A virtual training module for introducing the use of Amazon Web Services</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Abhijna</given_name>
+            <surname>Parigi</surname>
+            <ORCID>http://orcid.org/0000-0003-2097-8818</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Marisa</given_name>
+            <surname>Lim</surname>
+            <ORCID>http://orcid.org/0000-0002-5861-3737</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Saranya</given_name>
+            <surname>Canchi</surname>
+            <ORCID>http://orcid.org/0000-0002-9404-7162</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jose</given_name>
+            <surname>Sanchez</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jeremy</given_name>
+            <surname>Walter</surname>
+            <ORCID>http://orcid.org/0000-0001-7074-9760</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Rayna</given_name>
+            <surname>Harris</surname>
+            <ORCID>http://orcid.org/0000-0002-7943-5650</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Amanda</given_name>
+            <surname>Charbonneau</surname>
+            <ORCID>http://orcid.org/0000-0001-7376-7702</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>C.</given_name>
+            <surname>Brown</surname>
+            <ORCID>http://orcid.org/0000-0001-6001-2677</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>26</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>167</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00167</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.6816045”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/167</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00167</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00167</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00167.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list/>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
