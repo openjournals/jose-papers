@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>efa0fd57cb8c462076338ee80fdf77ca</doi_batch_id>
+    <timestamp>20221021211915</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>56</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>What and How of Machine Learning Transparency:
+Building Bespoke Explainability Tools with
+Interoperable Algorithmic Components</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Kacper</given_name>
+            <surname>Sokol</surname>
+            <ORCID>http://orcid.org/0000-0002-9869-5896</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Alexander</given_name>
+            <surname>Hepburn</surname>
+            <ORCID>http://orcid.org/0000-0002-2674-1478</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Raul</given_name>
+            <surname>Santos-Rodriguez</surname>
+            <ORCID>http://orcid.org/0000-0001-9576-3905</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Peter</given_name>
+            <surname>Flach</surname>
+            <ORCID>http://orcid.org/0000-0001-6857-5810</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>10</month>
+          <day>21</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>175</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00175</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.7229153”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/175</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00175</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00175</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00175.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1145/2939672.2939778</doi>
+          </citation>
+          <citation key="ref2">
+            <doi>10.48550/arXiv.1710.09412</doi>
+          </citation>
+          <citation key="ref3">
+            <doi>10.48550/arXiv.1910.13016</doi>
+          </citation>
+          <citation key="ref4">
+            <doi>10.1016/j.simpa.2022.100406</doi>
+          </citation>
+          <citation key="ref5">
+            <doi>10.21105/joss.01904</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.48550/arXiv.2005.01427</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.48550/arXiv.2008.07007</doi>
+          </citation>
+          <citation key="ref8">
+            <doi>10.48550/arXiv.2112.14466</doi>
+          </citation>
+          <citation key="ref9">
+            <doi>10.1023/A:1010933404324</doi>
+          </citation>
+          <citation key="ref10">
+            <doi>10.1080/10618600.2014.907095</doi>
+          </citation>
+          <citation key="ref11">
+            <doi>10.1214/aos/1013203451</doi>
+          </citation>
+          <citation key="ref12">
+            <doi>10.48550/arXiv.2107.06639</doi>
+          </citation>
+          <citation key="ref13">
+            <doi>10.1038/s42256-019-0048-x</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
