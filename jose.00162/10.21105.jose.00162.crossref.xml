@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>e41f4c7702fb42a300a858434095a9b2</doi_batch_id>
+    <timestamp>20221214154720</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>12</month>
+          <year>2022</year>
+        </publication_date>
+        <journal_volume>
+          <volume>5</volume>
+        </journal_volume>
+        <issue>58</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>An Active Learning Laboratory Manual for Teaching a Contemporary Undergraduate Operating System Course</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Saverio</given_name>
+            <surname>Perugini</surname>
+            <ORCID>http://orcid.org/0000-0002-1736-4009</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Zhongmei</given_name>
+            <surname>Yao</surname>
+            <ORCID>http://orcid.org/0000-0002-8055-7110</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Phu</given_name>
+            <surname>Phung</surname>
+            <ORCID>http://orcid.org/0000-0002-4674-1184</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Andrew</given_name>
+            <surname>Rettig</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Adam</given_name>
+            <surname>Bryant</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Rusty</given_name>
+            <surname>Baldwin</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>David</given_name>
+            <surname>Wright</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>John</given_name>
+            <surname>Gallagher</surname>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>12</month>
+          <day>14</day>
+          <year>2022</year>
+        </publication_date>
+        <pages>
+          <first_page>162</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00162</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.7200056”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/162</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00162</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00162</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00162.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Perugini, S. and Wright, D.J., Developing a Contemporary Operating Systems Course, Journal of Computing Sciences in Colleges, 34, 1, 2018, Consortium for Computing Sciences in Colleges; ACM Digital Library, 155–158, Conference Tutorial [Extended Abstract].</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <unstructured_citation>Buck, J.W. and Perugini, S., An Interactive, Graphical CPU Scheduling Simulator for Teaching Operating Systems, Cornell University Library: Computing Research Repository (CoRR), arXiv:1812.05160 [cs.OH], Available at http://arxiv.org/abs/1812.05160, https://doi.org/10.48550/arXiv.1812.05160, 2019</unstructured_citation>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Buck, J.W. and Perugini, S., An Interactive, Graphical CPU Scheduling Simulator for Teaching Operating Systems, Journal of Computing Sciences in Colleges, 35, 5, 76–87, 2019, Consortium for Computing Sciences in Colleges; ACM Digital Library, https://dl.acm.org/doi/abs/10.5555/3381613.3381622</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>Perugini, S. and Wright, D.J., Concurrent programming with the Actor model in Elixir, Journal of Computing Sciences in Colleges, 35, 5, 108–111, 2019, Consortium for Computing Sciences in Colleges; ACM Digital Library, Conference Tutorial [Extended Abstract]., https://dl.acm.org/doi/abs/10.5555/3381613.3381626</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1109/MSP.2011.139</doi>
+          </citation>
+          <citation key="ref6">
+            <unstructured_citation>Silberschatz, A. and Galvin, P.B. and Gagne, G., Operating system concepts, 2018, Tenth, John Wiley and Sons, Inc., Hoboken, NJ</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
