@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>845e828afc2c9762a024ea7ecca5332e</doi_batch_id>
+    <timestamp>20230208154642</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>02</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>60</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>LTPy - Learning tool for Python on Atmospheric Composition</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Julia</given_name>
+            <surname>Wagemann</surname>
+            <ORCID>http://orcid.org/0000-0002-3075-2559</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Sabrina</given_name>
+            <surname>Szeto</surname>
+            <ORCID>http://orcid.org/0000-0002-3050-837X</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Simone</given_name>
+            <surname>Mantovani</surname>
+            <ORCID>http://orcid.org/0000-0003-3979-3645</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Federico</given_name>
+            <surname>Fierli</surname>
+            <ORCID>http://orcid.org/0000-0001-9975-2883</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>02</month>
+          <day>08</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>172</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00172</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.7463072”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/172</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00172</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00172</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00172.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>European Commission, Copernicus, 2022, https://defence-industry-space.ec.europa.eu/eu-space-policy/copernicus_en</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <doi>10.2873/011961</doi>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Hebden, S., Plans for a new wave of European satellites, 2020, https://futureearth.org/wp-content/uploads/2020/01/issuebrief_04_03.pdf</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>European Organisation for the Exploitation of Meteorological Satellites, Meteosat series | EUMETSAT, 2022, https://www.eumetsat.int/our-satellites/meteosat-series?sjid=future</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <doi>10.1080/17538947.2019.1585976</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.1126/science.1197869</doi>
+          </citation>
+          <citation key="ref7">
+            <doi>10.1016/j.rse.2019.02.016</doi>
+          </citation>
+          <citation key="ref8">
+            <doi>10.3390/rs14143359</doi>
+          </citation>
+          <citation key="ref9">
+            <doi>10.1016/j.cageo.2021.104916</doi>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
