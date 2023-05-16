@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>86e15cb758d9bf4802492150b20b0f80</doi_batch_id>
+    <timestamp>20230516082913</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>05</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>63</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>From Maps to Models - Tutorials for structural geological modeling using GemPy and GemGIS</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Alexander</given_name>
+            <surname>Jüstel</surname>
+            <ORCID>http://orcid.org/0000-0003-0980-7479</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Miguel</given_name>
+            <surname>de la Varga</surname>
+            <ORCID>http://orcid.org/0000-0001-6941-2685</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Nils</given_name>
+            <surname>Chudalla</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Jan</given_name>
+            <surname>Wagner</surname>
+            <ORCID>http://orcid.org/0009-0007-7673-8334</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Stefan</given_name>
+            <surname>Back</surname>
+            <ORCID>http://orcid.org/0000-0003-3134-3367</ORCID>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Florian</given_name>
+            <surname>Wellmann</surname>
+            <ORCID>http://orcid.org/0000-0003-2552-1876</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>05</month>
+          <day>16</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>185</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00185</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.7938495”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/185</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00185</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00185</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00185.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list/>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
