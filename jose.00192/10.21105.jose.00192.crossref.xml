@@ -2,7 +2,7 @@
 <doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
   <head>
     <doi_batch_id>7703c3a02350884750da236929ee9abe</doi_batch_id>
-    <timestamp>20230520214147</timestamp>
+    <timestamp>20230521214147</timestamp>
     <depositor>
       <depositor_name>JOSS Admin</depositor_name>
       <email_address>admin@theoj.org</email_address>
@@ -63,7 +63,7 @@
           <person_name sequence="additional" contributor_role="author">
             <given_name>Antonia</given_name>
             <surname>Mey</surname>
-            <ORCID>http://orcid.org/0000-0001-5911-0472</ORCID>
+            <ORCID>http://orcid.org/0000-0001-7512-5252</ORCID>
           </person_name>
           <person_name sequence="additional" contributor_role="author">
             <given_name>Hannah</given_name>
