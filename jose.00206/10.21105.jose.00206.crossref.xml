@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>e43f304c8ad08f7ade049cbe58f20ce9</doi_batch_id>
+    <timestamp>20230525172600</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>05</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>63</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Manim Slides: A Python package for presenting Manim content anywhere</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Jérome</given_name>
+            <surname>Eertmans</surname>
+            <ORCID>http://orcid.org/0000-0002-5579-5360</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>05</month>
+          <day>25</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>206</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00206</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.7971361”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/206</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00206</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00206</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00206.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <unstructured_citation>Sanderson, Grant, Q&amp;A with Grant Sanderson (3blue1brown), 2018, YouTube, https://www.youtube.com/watch?v=Qe6o9j4IjTo&amp;ab_channel=3Blue1Brown</unstructured_citation>
+          </citation>
+          <citation key="ref2">
+            <unstructured_citation>Hattab, Hakim El, The HTML Presentation Framework, 2022, GitHub, GitHub repository, https://github.com/hakimel/reveal.js</unstructured_citation>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Galatolo, Federico, Tool for live presentations using manim, 2021, GitHub, GitHub repository, https://github.com/galatolofederico/manim-presentation</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>Sanderson, Grant, Animation engine for explanatory math videos, 2022, GitHub, GitHub repository, https://github.com/3b1b/manim</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <unstructured_citation>Besch, Christopher, Web Presenter for Mathematical Animations using Manim, 2022, GitHub, GitHub repository, https://github.com/ManimCommunity/manim_editor</unstructured_citation>
+          </citation>
+          <citation key="ref6">
+            <unstructured_citation>The Manim Community Developers, MIT, dec, Manim – Mathematical Animation Framework, https://www.manim.community/, v0.17.2, 2022, 12</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
