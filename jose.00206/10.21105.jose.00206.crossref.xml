@@ -6,8 +6,8 @@
            version="5.3.1"
            xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
   <head>
-    <doi_batch_id>20230808T104417-eab657c634cec7fc3f6ff640dcdaa85de9771be1</doi_batch_id>
-    <timestamp>20230808104417</timestamp>
+    <doi_batch_id>20230808T113246-eab657c634cec7fc3f6ff640dcdaa85de9771be1</doi_batch_id>
+    <timestamp>20230808113246</timestamp>
     <depositor>
       <depositor_name>JOSS Admin</depositor_name>
       <email_address>admin@theoj.org</email_address>
@@ -22,7 +22,7 @@
         <issn media_type="electronic">2577-3569</issn>
         <doi_data>
           <doi>10.21105/jose</doi>
-          <resource>https://jose.theoj.org/</resource>
+          <resource>https://jose.theoj.org</resource>
         </doi_data>
       </journal_metadata>
       <journal_issue>
@@ -75,10 +75,10 @@ content anywhere</title>
         </rel:program>
         <doi_data>
           <doi>10.21105/jose.00206</doi>
-          <resource>https://joss.theoj.org/papers/10.21105/jose.00206</resource>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00206</resource>
           <collection property="text-mining">
             <item>
-              <resource mime_type="application/pdf">https://joss.theoj.org/papers/10.21105/jose.00206.pdf</resource>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00206.pdf</resource>
             </item>
           </collection>
         </doi_data>
