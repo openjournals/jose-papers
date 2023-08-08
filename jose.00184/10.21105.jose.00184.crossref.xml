@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20230808T122549-69cfceff997395ecee9e471a491967fd142e78d9</doi_batch_id>
+    <timestamp>20230808122549</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>66</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>The Data Behind Dark Matter: Exploring Galactic
+Rotation</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>A. N.</given_name>
+            <surname>Villano</surname>
+            <ORCID>https://orcid.org/0000-0002-3893-7259</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Kitty C.</given_name>
+            <surname>Harris</surname>
+            <ORCID>https://orcid.org/0000-0001-5406-8367</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Judit</given_name>
+            <surname>Bergfalk</surname>
+            <ORCID>https://orcid.org/0000-0003-1662-0768</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Raphael</given_name>
+            <surname>Hatami</surname>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Francis</given_name>
+            <surname>Vititoe</surname>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Julia</given_name>
+            <surname>Johnston</surname>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>08</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>184</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00184</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.7951874</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/184</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00184</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00184</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00184.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Rubin1978">
+            <article_title>Extended rotation curves of high-luminosity
+spiral galaxies. IV. Systematic dynamical properties, Sa -&gt;
+Sc.</article_title>
+            <author>Rubin</author>
+            <volume>225</volume>
+            <doi>10.1086/182804</doi>
+            <cYear>1978</cYear>
+            <unstructured_citation>Rubin, V. C., Ford, Jr., W. K., &amp;
+Thonnard, N. (1978). Extended rotation curves of high-luminosity spiral
+galaxies. IV. Systematic dynamical properties, Sa -&gt; Sc. 225,
+L107–L111. https://doi.org/10.1086/182804</unstructured_citation>
+          </citation>
+          <citation key="Loizides2016">
+            <article_title>Jupyter notebooks - a publishing format for
+reproducible computational workflows</article_title>
+            <author>Kluyver</author>
+            <journal_title>Positioning and power in academic publishing:
+Players, agents and agendas</journal_title>
+            <cYear>2016</cYear>
+            <unstructured_citation>Kluyver, T., Ragan-Kelley, B., Pérez,
+F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J.,
+Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., Willing, C.,
+&amp; team, J. development. (2016). Jupyter notebooks - a publishing
+format for reproducible computational workflows. In F. Loizides &amp; B.
+Scmidt (Eds.), Positioning and power in academic publishing: Players,
+agents and agendas (pp. 87–90). IOS Press.
+https://eprints.soton.ac.uk/403913/</unstructured_citation>
+          </citation>
+          <citation key="Jimenez2003">
+            <article_title>Dark halo properties from rotation
+curves</article_title>
+            <author>Jimenez</author>
+            <journal_title>Monthly Notices of the Royal Astronomical
+Society</journal_title>
+            <issue>1</issue>
+            <volume>339</volume>
+            <doi>10.1046/j.1365-8711.2003.06165.x</doi>
+            <issn>0035-8711</issn>
+            <cYear>2003</cYear>
+            <unstructured_citation>Jimenez, R., Verde, L., &amp; Oh, S.
+P. (2003). Dark halo properties from rotation curves. Monthly Notices of
+the Royal Astronomical Society, 339(1), 243–259.
+https://doi.org/10.1046/j.1365-8711.2003.06165.x</unstructured_citation>
+          </citation>
+          <citation key="Sparc2016">
+            <article_title>SPARC: Mass models for 175 disk galaxies with
+SPITZER photometry and accurate rotation curves</article_title>
+            <author>Lelli</author>
+            <journal_title>The Astronomical Journal</journal_title>
+            <issue>6</issue>
+            <volume>152</volume>
+            <doi>10.3847/0004-6256/152/6/157</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Lelli, F., McGaugh, S. S., &amp;
+Schombert, J. M. (2016). SPARC: Mass models for 175 disk galaxies with
+SPITZER photometry and accurate rotation curves. The Astronomical
+Journal, 152(6), 157.
+https://doi.org/10.3847/0004-6256/152/6/157</unstructured_citation>
+          </citation>
+          <citation key="Newville2021">
+            <article_title>Lmfit/lmfit-py: 1.0.3</article_title>
+            <author>Newville</author>
+            <doi>10.5281/zenodo.5570790</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Newville, M., Otten, R., Nelson, A.,
+Ingargiola, A., Stensitzki, T., Allan, D., Fox, A., Carter, F., Michał,
+Osborn, R., Pustakhod, D., lneuhaus, Weigand, S., Glenn, Deil, C., Mark,
+Hansen, A. L. R., Pasquevich, G., Foks, L., … Persaud, A. (2021).
+Lmfit/lmfit-py: 1.0.3 (Version 1.0.3). Zenodo.
+https://doi.org/10.5281/zenodo.5570790</unstructured_citation>
+          </citation>
+          <citation key="Megaparsec">
+            <article_title>Megaparsec: cosmos</article_title>
+            <author>Technology</author>
+            <unstructured_citation>Technology, S. U. of. (n.d.).
+Megaparsec: cosmos.
+https://astronomy.swin.edu.au/cosmos/m/megaparsec</unstructured_citation>
+          </citation>
+          <citation key="Skyview1998">
+            <article_title>SKYVIEW:The Multi-Wavelength Sky on the
+Internet</article_title>
+            <author>McGlynn</author>
+            <journal_title>New horizons from multi-wavelength sky
+surveys</journal_title>
+            <volume>179</volume>
+            <cYear>1998</cYear>
+            <unstructured_citation>McGlynn, T., Scollick, K., &amp;
+White, N. (1998). SKYVIEW:The Multi-Wavelength Sky on the Internet. In
+B. J. McLean, D. A. Golombek, J. J. E. Hayes, &amp; H. E. Payne (Eds.),
+New horizons from multi-wavelength sky surveys (Vol. 179, p.
+465).</unstructured_citation>
+          </citation>
+          <citation key="Casertano1983">
+            <article_title>Rotation curve of the edge-on spiral galaxy
+NGC 5907: disc and halo masses</article_title>
+            <author>Casertano</author>
+            <journal_title>Monthly Notices of the Royal Astronomical
+Society</journal_title>
+            <issue>3</issue>
+            <volume>203</volume>
+            <doi>10.1093/mnras/203.3.735</doi>
+            <issn>0035-8711</issn>
+            <cYear>1983</cYear>
+            <unstructured_citation>Casertano, S. (1983). Rotation curve
+of the edge-on spiral galaxy NGC 5907: disc and halo masses. Monthly
+Notices of the Royal Astronomical Society, 203(3), 735–747.
+https://doi.org/10.1093/mnras/203.3.735</unstructured_citation>
+          </citation>
+          <citation key="Datathief2006">
+            <article_title>Software. DataThief</article_title>
+            <author>Tummers</author>
+            <volume>NA</volume>
+            <cYear>2006</cYear>
+            <unstructured_citation>Tummers, B. (2006). Software.
+DataThief: Vol. NA. https://datathief.org</unstructured_citation>
+          </citation>
+          <citation key="Fraternali2011">
+            <article_title>A tale of two galaxies: Light and mass in
+NGC 891 and NGC 7814</article_title>
+            <author>Fraternali, F.</author>
+            <journal_title>A&amp;A</journal_title>
+            <volume>531</volume>
+            <doi>10.1051/0004-6361/201116634</doi>
+            <cYear>2011</cYear>
+            <unstructured_citation>Fraternali, F., Sancisi, R., &amp;
+Kamphuis, P. (2011). A tale of two galaxies: Light and mass in NGC 891
+and NGC 7814. A&amp;A, 531, A64.
+https://doi.org/10.1051/0004-6361/201116634</unstructured_citation>
+          </citation>
+          <citation key="Gipsy1992">
+            <article_title>GIPSY, the GRONINGEN image processing
+system</article_title>
+            <author>Kapteyn Astronomical Institute</author>
+            <cYear>1992</cYear>
+            <unstructured_citation>Kapteyn Astronomical Institute.
+(1992). GIPSY, the GRONINGEN image processing system.
+https://www.astro.rug.nl/\~gipsy/</unstructured_citation>
+          </citation>
+          <citation key="Noordermeer2008">
+            <article_title>The rotation curves of flattened Sérsic
+bulges</article_title>
+            <author>Noordermeer</author>
+            <journal_title>Monthly Notices of the Royal Astronomical
+Society</journal_title>
+            <issue>3</issue>
+            <volume>385</volume>
+            <doi>10.1111/j.1365-2966.2008.12837.x</doi>
+            <issn>0035-8711</issn>
+            <cYear>2008</cYear>
+            <unstructured_citation>Noordermeer, E. (2008). The rotation
+curves of flattened Sérsic bulges. Monthly Notices of the Royal
+Astronomical Society, 385(3), 1359–1364.
+https://doi.org/10.1111/j.1365-2966.2008.12837.x</unstructured_citation>
+          </citation>
+          <citation key="NoordermeerHulst2007">
+            <article_title>The stellar mass distribution in early-type
+disc galaxies: surface photometry and bulge–disc
+decompositions</article_title>
+            <author>Noordermeer</author>
+            <journal_title>Monthly Notices of the Royal Astronomical
+Society</journal_title>
+            <issue>4</issue>
+            <volume>376</volume>
+            <doi>10.1111/j.1365-2966.2007.11532.x</doi>
+            <issn>0035-8711</issn>
+            <cYear>2007</cYear>
+            <unstructured_citation>Noordermeer, E., &amp; Van Der Hulst,
+J. M. (2007). The stellar mass distribution in early-type disc galaxies:
+surface photometry and bulge–disc decompositions. Monthly Notices of the
+Royal Astronomical Society, 376(4), 1480–1512.
+https://doi.org/10.1111/j.1365-2966.2007.11532.x</unstructured_citation>
+          </citation>
+          <citation key="Taylor1996">
+            <volume_title>An introduction to error analysis: The study
+of uncertainties in physical measurements</volume_title>
+            <author>Taylor</author>
+            <isbn>093570275X</isbn>
+            <cYear>1996</cYear>
+            <unstructured_citation>Taylor, J. R. (1996). An introduction
+to error analysis: The study of uncertainties in physical measurements
+(2 Sub). University Science Books.
+ISBN: 093570275X</unstructured_citation>
+          </citation>
+          <citation key="ScientificAmerican2008">
+            <article_title>The smallest known black hole</article_title>
+            <journal_title>Scientific American</journal_title>
+            <cYear>2008</cYear>
+            <unstructured_citation>The smallest known black hole.
+(2008). In Scientific American. Springer Nature.
+http://www.scientificamerican.com/gallery/the-smallest-known-black-hole</unstructured_citation>
+          </citation>
+          <citation key="Richards2015">
+            <article_title>Baryonic distributions in the dark matter
+halo of NGC 5005</article_title>
+            <author>Richards</author>
+            <journal_title>Monthly Notices of the Royal Astronomical
+Society</journal_title>
+            <issue>4</issue>
+            <volume>449</volume>
+            <doi>10.1093/mnras/stv568</doi>
+            <issn>0035-8711</issn>
+            <cYear>2015</cYear>
+            <unstructured_citation>Richards, E. E., Zee, L. van, Barnes,
+K. L., Staudaher, S., Dale, D. A., Braun, T. T., Wavle, D. C., Calzetti,
+D., Dalcanton, J. J., Bullock, J. S., &amp; Chandar, R. (2015). Baryonic
+distributions in the dark matter halo of NGC 5005. Monthly Notices of
+the Royal Astronomical Society, 449(4), 3981–3996.
+https://doi.org/10.1093/mnras/stv568</unstructured_citation>
+          </citation>
+          <citation key="Zeropoint2015">
+            <article_title>IAU 2015 Resolution B2 on Recommended Zero
+Points for the Absolute and Apparent Bolometric Magnitude
+Scales</article_title>
+            <author>Mamajek</author>
+            <journal_title>arXiv e-prints</journal_title>
+            <cYear>2015</cYear>
+            <unstructured_citation>Mamajek, E. E., Torres, G., Prsa, A.,
+Harmanec, P., Asplund, M., Bennett, P. D., Capitaine, N.,
+Christensen-Dalsgaard, J., Depagne, E., Folkner, W. M., Haberreiter, M.,
+Hekker, S., Hilton, J. L., Kostov, V., Kurtz, D. W., Laskar, J., Mason,
+B. D., Milone, E. F., Montgomery, M. M., … Stewart, S. G. (2015). IAU
+2015 Resolution B2 on Recommended Zero Points for the Absolute and
+Apparent Bolometric Magnitude Scales. arXiv e-Prints, arXiv:1510.06262.
+https://arxiv.org/abs/1510.06262</unstructured_citation>
+          </citation>
+          <citation key="Graham2001">
+            <article_title>An investigation into the prominence of
+spiral galaxy bulges</article_title>
+            <author>Graham</author>
+            <journal_title>The Astronomical Journal</journal_title>
+            <issue>2</issue>
+            <volume>121</volume>
+            <doi>10.1086/318767</doi>
+            <cYear>2001</cYear>
+            <unstructured_citation>Graham, A. W. (2001). An
+investigation into the prominence of spiral galaxy bulges. The
+Astronomical Journal, 121(2), 820–840.
+https://doi.org/10.1086/318767</unstructured_citation>
+          </citation>
+          <citation key="Carroll2006">
+            <volume_title>An introduction to modern
+astrophysics</volume_title>
+            <author>Carroll</author>
+            <cYear>2006</cYear>
+            <unstructured_citation>Carroll, B. W., &amp; Ostlie, D. A.
+(2006). An introduction to modern astrophysics. Cambridge University
+Press.</unstructured_citation>
+          </citation>
+          <citation key="NASA_planets2021">
+            <article_title>Planetary fact sheet</article_title>
+            <author>Williams</author>
+            <journal_title>NASA</journal_title>
+            <cYear>2021</cYear>
+            <unstructured_citation>Williams, D. (2021, December).
+Planetary fact sheet. NASA.
+https://nssdc.gsfc.nasa.gov/planetary/factsheet/</unstructured_citation>
+          </citation>
+          <citation key="DataScienceSymposium2021">
+            <article_title>Data science symposium: The data behind dark
+matter: Exploring galactic rotation</article_title>
+            <author>Villano</author>
+            <cYear>2021</cYear>
+            <unstructured_citation>Villano, A. N., Bergfalk, J., Hatami,
+R., Harris, K., Vititoe, F., &amp; Johnston, J. (2021). Data science
+symposium: The data behind dark matter: Exploring galactic rotation. The
+University of Colorado Denver.
+https://datascience.ucdenver.edu/events/symposium/research-session-talks</unstructured_citation>
+          </citation>
+          <citation key="Karukes2015">
+            <article_title>The dark matter distribution in the spiral
+NGC 3198 out to 0.22 rvir</article_title>
+            <author>Karukes, E. V.</author>
+            <journal_title>A&amp;A</journal_title>
+            <volume>578</volume>
+            <doi>10.1051/0004-6361/201425339</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>Karukes, E. V., Salucci, P., &amp;
+Gentile, G. (2015). The dark matter distribution in the spiral NGC 3198
+out to 0.22 rvir. A&amp;A, 578, A13.
+https://doi.org/10.1051/0004-6361/201425339</unstructured_citation>
+          </citation>
+          <citation key="Epinat2008">
+            <article_title>GHASP: an H\alpha kinematic survey of spiral
+and irregular galaxies – VI. New H\alpha data cubes for 108
+galaxies</article_title>
+            <author>Epinat</author>
+            <journal_title>Monthly Notices of the Royal Astronomical
+Society</journal_title>
+            <issue>2</issue>
+            <volume>388</volume>
+            <doi>10.1111/j.1365-2966.2008.13422.x</doi>
+            <issn>0035-8711</issn>
+            <cYear>2008</cYear>
+            <unstructured_citation>Epinat, B., Amram, P., Marcelin, M.,
+Balkowski, C., Daigle, O., Hernandez, O., Chemin, L., Carignan, C.,
+Gach, J.-L., &amp; Balard, P. (2008). GHASP: an H\alpha kinematic survey
+of spiral and irregular galaxies – VI. New H\alpha data cubes for 108
+galaxies. Monthly Notices of the Royal Astronomical Society, 388(2),
+500–550.
+https://doi.org/10.1111/j.1365-2966.2008.13422.x</unstructured_citation>
+          </citation>
+          <citation key="de_Naray2006">
+            <article_title>High-resolution optical velocity fields of 11
+low surface brightness galaxies</article_title>
+            <author>Naray</author>
+            <journal_title>The Astrophysical Journal Supplement
+Series</journal_title>
+            <issue>2</issue>
+            <volume>165</volume>
+            <doi>10.1086/505345</doi>
+            <cYear>2006</cYear>
+            <unstructured_citation>Naray, R. K. de, McGaugh, S. S.,
+Blok, W. J. G. de, &amp; Bosma, A. (2006). High-resolution optical
+velocity fields of 11 low surface brightness galaxies. The Astrophysical
+Journal Supplement Series, 165(2), 461–479.
+https://doi.org/10.1086/505345</unstructured_citation>
+          </citation>
+          <citation key="de_Naray2008">
+            <article_title>Mass models for low surface brightness
+galaxies with high-resolution optical velocity fields</article_title>
+            <author>Naray</author>
+            <journal_title>The Astrophysical Journal</journal_title>
+            <issue>2</issue>
+            <volume>676</volume>
+            <doi>10.1086/527543</doi>
+            <cYear>2008</cYear>
+            <unstructured_citation>Naray, R. K. de, McGaugh, S. S.,
+&amp; Blok, W. J. G. de. (2008). Mass models for low surface brightness
+galaxies with high-resolution optical velocity fields. The Astrophysical
+Journal, 676(2), 920–943.
+https://doi.org/10.1086/527543</unstructured_citation>
+          </citation>
+          <citation key="Villano2022">
+            <article_title>The Data Behind Dark Matter: Exploring
+Galactic Rotation [Code, v1.0.1]</article_title>
+            <author>Villano</author>
+            <doi>10.5281/zenodo.6588350</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Villano, A. N., Bergfalk, J., Hatami,
+R., Harris, K., Vititoe, Francis, &amp; Johnston, J. (2022). The Data
+Behind Dark Matter: Exploring Galactic Rotation [Code, v1.0.1] (Version
+v1.0.2). The code can be found under
+https://github.com/villano-lab/galactic-spin-W1/. Zenodo.
+https://doi.org/10.5281/zenodo.6588350</unstructured_citation>
+          </citation>
+          <citation key="RaCAS2020">
+            <article_title>Visualizing the evidence for dark
+matter</article_title>
+            <author>Harris</author>
+            <cYear>2020</cYear>
+            <unstructured_citation>Harris, K., Bergfalk, J., &amp;
+Hatami, R. (2020). Visualizing the evidence for dark matter. The
+University of Colorado Denver.
+https://sites.google.com/view/racas2020/natural-physical-sciences/n15-harris-hatami-bergfalk?authuser=0</unstructured_citation>
+          </citation>
+          <citation key="RaCAS2021">
+            <article_title>Could black holes explain dark
+matter?</article_title>
+            <author>Harris</author>
+            <cYear>2021</cYear>
+            <unstructured_citation>Harris, K., Bergfalk, J., Vititoe,
+F., &amp; Hatami, R. (2021). Could black holes explain dark matter? The
+University of Colorado Denver.
+https://symposium.foragerone.com/2021-racas/presentations/26710</unstructured_citation>
+          </citation>
+          <citation key="RaCAS2022">
+            <article_title>Dark matter workshop</article_title>
+            <author>Harris</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>Harris, K., Bergfalk, J., Vititoe,
+F., Hatami, R., &amp; Johnston, J. (2022). Dark matter workshop. The
+University of Colorado Denver.
+https://www.ucdenver.edu/sites/research-day/event-details#ac-special-session-2-dark-matter-workshop-0</unstructured_citation>
+          </citation>
+          <citation key="Binder">
+            <article_title>Binder 2.0 - Reproducible, interactive,
+sharable environments for science at scale</article_title>
+            <author>Jupyter</author>
+            <journal_title>Proceedings of the 17th Python in Science
+Conference</journal_title>
+            <doi>10.25080/Majora-4af1f417-011</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Jupyter, Project, Bussonnier,
+Matthias, Forde, Jessica, Freeman, Jeremy, Granger, Brian, Head, Tim,
+Holdgraf, Chris, Kelley, Kyle, Nalvarte, Gladys, Osheroff, Andrew,
+Pacer, M., Panda, Yuvi, Perez, Fernando, Ragan-Kelley, Benjamin, &amp;
+Willing, Carol. (2018). Binder 2.0 - Reproducible, interactive, sharable
+environments for science at scale. In Fatih Akici, David Lippa, Dillon
+Niederhut, &amp; M. Pacer (Eds.), Proceedings of the 17th Python in
+Science Conference (pp. 113–120).
+https://doi.org/10.25080/Majora-4af1f417-011</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
