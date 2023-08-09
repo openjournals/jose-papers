@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">205</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00205</article-id>
+<title-group>
+<article-title>Planet_LB: Lattice-Boltzmann solutions for planetary
+geodynamics problems</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6034-1881</contrib-id>
+<name>
+<surname>O’Neill</surname>
+<given-names>Craig J</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>School of Earth and Atmospheric Science, Queensland
+University of Technology</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-03-07">
+<day>7</day>
+<month>3</month>
+<year>2023</year>
+</pub-date>
+<volume>6</volume>
+<issue>66</issue>
+<fpage>205</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>geodynamics</kwd>
+<kwd>subduction</kwd>
+<kwd>geology</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Geodynamics involves the application of static and dynamic analysis
+  techniques to geological problems, generally using a continuum
+  approach. Modern geodynamics codes face challenges of small-scale
+  resolution of geological features, non-linear rheologies of
+  geomaterials, and problem dimensionality
+  (<xref alt="Moresi et al., 2007" rid="ref-MoresiU003A2007" ref-type="bibr">Moresi
+  et al., 2007</xref>). Generally, these codes are optimised to run
+  high-performance computing environments and have both significant
+  computing overheads and steep learning curves for initiates or
+  students.</p>
+  <p>However, a subset of problems directly relevant to geology may be
+  approached by basic advection-diffusion solvers, particularly in 2D
+  (Figure 1). Such problems include basic heat diffusion from an initial
+  condition (eg. igneous intrusion), advection of heat in a known or
+  prescribed flow field (eg. subduction zones, Figure 2), or the
+  development of a flow field given appropriate system boundary
+  conditions (eg. convection, groundwater flow)
+  (<xref alt="Fowler, 2005" rid="ref-FowlerU003A2005" ref-type="bibr">Fowler,
+  2005</xref>;
+  <xref alt="Turcotte &amp; Schubert, 2002" rid="ref-TurcotteU003A2002" ref-type="bibr">Turcotte
+  &amp; Schubert, 2002</xref>). These problems are often of direct
+  relevance to geologists, both academically and in industry, but also
+  lay the foundations for geodynamic understanding in teaching
+  environments.</p>
+  <fig>
+    <caption><p>Figure 1. Simulation of a cooling crustal thrust
+    structure</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="media/Figure1.png" />
+  </fig>
+  <p><italic>Figure 1. Simulation of a cooling crustal thrust structure.
+  Contours and colorfield represent temperature (in
+  celsius).</italic></p>
+  <p><monospace>Planet_LB</monospace> introduces D1Q2 and D2Q9
+  Lattice-Boltzmann solvers for the solution of basic planetary
+  geodynamics problems
+  (<xref alt="Mohamad, 2019" rid="ref-MohamadU003A2019" ref-type="bibr">Mohamad,
+  2019</xref>). The functionality is packaged to take the complexity of
+  the solution step out of the basic geodynamic exercise, operating as a
+  gateway code to the world of Earth-science simulation and
+  modelling.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>The pedagogy of geodynamics teaching may be considered as two
+  end-members: i) approaching problems of crustal and lithosphere
+  dynamics from a conceptual or mathematical approach, often tied with
+  observational data, or ii) approaching geodynamics from the
+  computational simulation of crust-mantle processes. The clear
+  advantages of the latter approach include quantification of the
+  problem, visualisation of the processes involved, and a predictive
+  framework for assessing Earth observations. The main drawback of the
+  approach is that open-source geodynamic tools are designed for
+  high-performance computing environments, generally using low-level
+  codes like C or Fortran, and often require a high level of
+  computational proficiency from the student. This can be challenging
+  for Earth Science majors.</p>
+  <p>The goal of <monospace>Planet_LB</monospace> is to bridge the
+  accessibility gap in geodynamics tools both for the classroom and for
+  non-numerical geoscientists. It can be run in an existing Python
+  environment (eg. Anaconda) and requires minimal dependencies beyond
+  basic scientific and numerical Python libraries. It is available for
+  installation via pip. Very few existing geodynamic codes utilise
+  Lattice-Boltzmann methods (the majority implementing finite element
+  (eg. Moresi et al.
+  (<xref alt="2007" rid="ref-MoresiU003A2007" ref-type="bibr">2007</xref>)),
+  finite volume or finite difference methods), and thus
+  <monospace>Planet_LB</monospace> fills an important instructional gap
+  in demonstrating the application of Lattice-Boltzmann approaches to
+  geoscience problems.</p>
+  <p>A large number of worked Jupyter notebooks are provided, which
+  provide solutions to a number of classic geodynamical problems. The
+  problems introduced in the notebooks include 1D time-dependent thermal
+  modelling and oceanic geotherms, 2D thermal modelling of thrusted
+  continental crust (Figure 1), the thermal decay of an intruded granite
+  body, forced 2D cavity-driven lid flow, and simulating the thermal
+  structure of a subduction zone (Figure 2). Both 1D oceanic geotherms,
+  and 2D lid-driven cavity flow, have analytical solutions and are used
+  as benchmarks for the routines. The notebooks are intended to both a)
+  provide clear templates to obtain quantitative thermal or dynamic
+  information from common 1D or 2D geodynamic problems, and b) provide a
+  verbose introduction to the numeric expression of geodynamic problems,
+  and develop student’s capacity in modelling and simulation.</p>
+  <fig>
+    <caption><p>Figure 2. Example of a modelled subduction
+    zone</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="media/Figure2.png" />
+  </fig>
+  <p><italic>Figure 2. Example of a modelled subduction zone. Contours
+  and colorfield represent temperature (in celsius).</italic></p>
+</sec>
+<sec id="functionality-and-usage">
+  <title>Functionality and Usage</title>
+  <p>The basic Lattice Boltzmann approach involves a statistical
+  mechanics approach to molecular distributions, where the Boltzmann
+  transport equation is solved using discrete ‘collision’ and
+  ‘streaming’ steps (eg. see d’Humieres
+  (<xref alt="1992" rid="ref-dhumieresU003A1992" ref-type="bibr">1992</xref>),
+  Chen &amp; Doolen
+  (<xref alt="1998" rid="ref-chenU003A1998" ref-type="bibr">1998</xref>),
+  Guo et al.
+  (<xref alt="2000" rid="ref-guoU003A2000" ref-type="bibr">2000</xref>),
+  Dong et al.
+  (<xref alt="2008" rid="ref-dongU003A2008" ref-type="bibr">2008</xref>)).
+  We use the Bhatnagar, Gross, and Krook (BGK) approximation for the
+  collision operator (see
+  (<xref alt="Mohamad, 2019" rid="ref-MohamadU003A2019" ref-type="bibr">Mohamad,
+  2019</xref>)), and under this approximation, the discrete form of the
+  equation under one dimension is:</p>
+  <p><disp-formula><alternatives>
+  <tex-math><![CDATA[ f_i(r+c_i \Delta t, t + \Delta t) = f_i(r,t) + (\Delta t/{\tau})[f^{eq}_i(r,t) - f_i(r,t)]]]></tex-math>
+  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>r</mml:mi><mml:mo>+</mml:mo><mml:msub><mml:mi>c</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mi>Δ</mml:mi><mml:mi>t</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mi>Δ</mml:mi><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>r</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>Δ</mml:mi><mml:mi>t</mml:mi><mml:mi>/</mml:mi><mml:mi>τ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msubsup><mml:mi>f</mml:mi><mml:mi>i</mml:mi><mml:mrow><mml:mi>e</mml:mi><mml:mi>q</mml:mi></mml:mrow></mml:msubsup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>r</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>r</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+  <p>The underlying grid is structured as shown in Figure 3, and the
+  node numbering scheme is used both in the collision operator step
+  (each node is weighted differently relative to the cell centre) and in
+  the streaming step with advects the underlying distribution function,
+  subject to boundary conditions. For full details of Lattice-Boltzmann
+  implementation, see Mohamad
+  (<xref alt="2019" rid="ref-MohamadU003A2019" ref-type="bibr">2019</xref>).</p>
+  <p><inline-graphic mimetype="image" mime-subtype="png" xlink:href="media/D1Q2_D2Q9.png">
+    <alt-text>Figure 3. Examples of LB grid structure and node
+    numbering</alt-text>
+  </inline-graphic> <italic>Figure 3. Examples of the LB grid structure
+  and node numbering</italic></p>
+  <p>As noted, the library can be installed via pip
+  (<monospace>pip install planet_LB</monospace>), and extensive examples
+  of usage are found in the associated Jupyter notebooks on GitHub. The
+  code itself develops a Lattice-Boltzmann data structure which contains
+  the details of the simulation parameters, grid, initial conditions,
+  and boundary conditions, and this may be iteratively sent to an
+  appropriate solver (D2Q9, or D1Q2, for either diffusion, advection, or
+  some combination of these depending on the geodynamic problem),
+  allowing the time-evolution of a simulation to be tracked. As the
+  future system state depends on its current state, system information
+  is updated and iteratively solved within a loop of small timesteps,
+  defined by flow stability conditions (further details of the
+  time-stepping are developed in the file
+  <monospace>thrust_fault.ipynb</monospace>).</p>
+  <p>The GitHub project implements a continuous integration approach to
+  code development, with small benchmark problems executed as test suits
+  on Linux instances on GitHub (utilising a Ubuntu instance with linting
+  via Flake8, and pytest).</p>
+  <p>The teaching experience of the code has been that it has lowered
+  the threshold to quantitative geodynamics, in both keeping the
+  mechanics of solvers under the hood and focussing on relevant
+  geodynamic factors to the problem at hand (eg. experimenting with
+  plate age and thermal structure of subducting slabs, rather than
+  spending time developing/learning solutions to the diffusion
+  equation). The readability of the front-end Python code, and the
+  ability to extensively document Jupyter notebooks, have likewise
+  enabled 3rd-year Earth science majors to focus on the geodynamics of
+  these systems, rather than spending excessive time on development or
+  numerical underpinnings.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>CO acknowledges the extremely helpful reviews from A/Prof Juan F.
+  Paniagua-Arroyave and Dr Ben Mathers, as well as editorial guidance
+  from Dr Nicolás Guarín-Zapata. He also thanks the 3rd year geodynamic
+  cohorts he has inflicted python on over the years.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <ref id="ref-TurcotteU003A2002">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Turcotte</surname><given-names>DL</given-names></name>
+        <name><surname>Schubert</surname><given-names>G</given-names></name>
+      </person-group>
+      <source>Geodynamics</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <year iso-8601-date="2002">2002</year>
+      <pub-id pub-id-type="doi">10.1017/CBO9780511807442</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-MohamadU003A2019">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Mohamad</surname><given-names>A. A.</given-names></name>
+      </person-group>
+      <source>Lattice Boltzmann Method: Fundamentals and Engineering Applications with Computer Codes</source>
+      <publisher-name>Springer London</publisher-name>
+      <publisher-loc>London</publisher-loc>
+      <year iso-8601-date="2019">2019</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-03-07">2023</year><month>03</month><day>07</day></date-in-citation>
+      <isbn>978-1-4471-7423-3</isbn>
+      <uri>http://link.springer.com/10.1007/978-1-4471-7423-3</uri>
+      <pub-id pub-id-type="doi">10.1007/978-1-4471-7423-3</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-MoresiU003A2007">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Moresi</surname><given-names>L.</given-names></name>
+        <name><surname>Quenette</surname><given-names>S.</given-names></name>
+        <name><surname>Lemiale</surname><given-names>V.</given-names></name>
+        <name><surname>Mériaux</surname><given-names>C.</given-names></name>
+        <name><surname>Appelbe</surname><given-names>B.</given-names></name>
+        <name><surname>Mühlhaus</surname><given-names>H.-B.</given-names></name>
+      </person-group>
+      <article-title>Computational approaches to studying non-linear dynamics of the crust and mantle</article-title>
+      <source>Physics of the Earth and Planetary Interiors</source>
+      <year iso-8601-date="2007-08">2007</year><month>08</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-03-07">2023</year><month>03</month><day>07</day></date-in-citation>
+      <volume>163</volume>
+      <issue>1-4</issue>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S0031920107001446</uri>
+      <pub-id pub-id-type="doi">10.1016/j.pepi.2007.06.009</pub-id>
+      <fpage>69</fpage>
+      <lpage>82</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-FowlerU003A2005">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Fowler</surname><given-names>C. M. R.</given-names></name>
+      </person-group>
+      <source>The solid earth: An introduction to global geophysics</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <publisher-loc>Cambridge, UK</publisher-loc>
+      <year iso-8601-date="2005">2005</year>
+      <edition>Second edition</edition>
+      <isbn>0-521-81066-3</isbn>
+    </element-citation>
+  </ref>
+  <ref id="ref-chenU003A1998">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Chen</surname><given-names>Shiyi</given-names></name>
+        <name><surname>Doolen</surname><given-names>Gary D.</given-names></name>
+      </person-group>
+      <article-title>Lattice Boltzmann Method for Fluid Flow</article-title>
+      <source>Annual Review of Fluid Mechanics</source>
+      <year iso-8601-date="1998-01">1998</year><month>01</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-06-26">2023</year><month>06</month><day>26</day></date-in-citation>
+      <volume>30</volume>
+      <issue>1</issue>
+      <issn>0066-4189</issn>
+      <uri>https://www.annualreviews.org/doi/10.1146/annurev.fluid.30.1.329</uri>
+      <pub-id pub-id-type="doi">10.1146/annurev.fluid.30.1.329</pub-id>
+      <fpage>329</fpage>
+      <lpage>364</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dongU003A2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dong</surname><given-names>Yu-Hong</given-names></name>
+        <name><surname>Sagaut</surname><given-names>Pierre</given-names></name>
+        <name><surname>Marie</surname><given-names>Simon</given-names></name>
+      </person-group>
+      <article-title>Inertial consistent subgrid model for large-eddy simulation based on the lattice Boltzmann method</article-title>
+      <source>Physics of Fluids</source>
+      <year iso-8601-date="2008-03">2008</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-06-26">2023</year><month>06</month><day>26</day></date-in-citation>
+      <volume>20</volume>
+      <issue>3</issue>
+      <issn>1070-6631</issn>
+      <uri>https://pubs.aip.org/aip/pof/article/865171</uri>
+      <pub-id pub-id-type="doi">10.1063/1.2842379</pub-id>
+      <fpage>035104</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-guoU003A2000">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Guo</surname><given-names>Zhaoli</given-names></name>
+        <name><surname>Shi</surname><given-names>Baochang</given-names></name>
+        <name><surname>Wang</surname><given-names>Nengchao</given-names></name>
+      </person-group>
+      <article-title>Lattice BGK Model for Incompressible Navier–Stokes Equation</article-title>
+      <source>Journal of Computational Physics</source>
+      <year iso-8601-date="2000-11">2000</year><month>11</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-06-26">2023</year><month>06</month><day>26</day></date-in-citation>
+      <volume>165</volume>
+      <issue>1</issue>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S0021999100966166</uri>
+      <pub-id pub-id-type="doi">10.1006/jcph.2000.6616</pub-id>
+      <fpage>288</fpage>
+      <lpage>306</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dhumieresU003A1992">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>d’ Humieres</surname><given-names>D</given-names></name>
+      </person-group>
+      <article-title>Generalized Lattice Boltzmann Equations</article-title>
+      <source>Rarefied Gas Dynamics: Theory and Simulations</source>
+      <year iso-8601-date="1992">1992</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-08-01">2023</year><month>08</month><day>01</day></date-in-citation>
+      <volume>159</volume>
+      <uri>https://arc.aiaa.org/doi/10.2514/5.9781600866319.0450.0458</uri>
+      <pub-id pub-id-type="doi">10.2514/5.9781600866319.0450.0458</pub-id>
+      <fpage>450</fpage>
+      <lpage>458</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
