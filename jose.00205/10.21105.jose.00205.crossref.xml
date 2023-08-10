@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20230810T131659-ada4d838e67404f4b9b47e53f9917419f65132ee</doi_batch_id>
+    <timestamp>20230810131659</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>66</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Planet_LB: Lattice-Boltzmann solutions for planetary
+geodynamics problems</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Craig J</given_name>
+            <surname>O’Neill</surname>
+            <ORCID>https://orcid.org/0000-0002-6034-1881</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>10</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>205</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00205</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.8226562</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/205</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00205</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00205</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00205.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Turcotte:2002">
+            <volume_title>Geodynamics</volume_title>
+            <author>Turcotte</author>
+            <doi>10.1017/CBO9780511807442</doi>
+            <cYear>2002</cYear>
+            <unstructured_citation>Turcotte, D., &amp; Schubert, G.
+(2002). Geodynamics. Cambridge University Press.
+https://doi.org/10.1017/CBO9780511807442</unstructured_citation>
+          </citation>
+          <citation key="Mohamad:2019">
+            <volume_title>Lattice Boltzmann Method: Fundamentals and
+Engineering Applications with Computer Codes</volume_title>
+            <author>Mohamad</author>
+            <doi>10.1007/978-1-4471-7423-3</doi>
+            <isbn>978-1-4471-7423-3</isbn>
+            <cYear>2019</cYear>
+            <unstructured_citation>Mohamad, A. A. (2019). Lattice
+Boltzmann Method: Fundamentals and Engineering Applications with
+Computer Codes. Springer London.
+https://doi.org/10.1007/978-1-4471-7423-3</unstructured_citation>
+          </citation>
+          <citation key="Moresi:2007">
+            <article_title>Computational approaches to studying
+non-linear dynamics of the crust and mantle</article_title>
+            <author>Moresi</author>
+            <journal_title>Physics of the Earth and Planetary
+Interiors</journal_title>
+            <issue>1-4</issue>
+            <volume>163</volume>
+            <doi>10.1016/j.pepi.2007.06.009</doi>
+            <cYear>2007</cYear>
+            <unstructured_citation>Moresi, L., Quenette, S., Lemiale,
+V., Mériaux, C., Appelbe, B., &amp; Mühlhaus, H.-B. (2007).
+Computational approaches to studying non-linear dynamics of the crust
+and mantle. Physics of the Earth and Planetary Interiors, 163(1-4),
+69–82.
+https://doi.org/10.1016/j.pepi.2007.06.009</unstructured_citation>
+          </citation>
+          <citation key="Fowler:2005">
+            <volume_title>The solid earth: An introduction to global
+geophysics</volume_title>
+            <author>Fowler</author>
+            <isbn>0-521-81066-3</isbn>
+            <cYear>2005</cYear>
+            <unstructured_citation>Fowler, C. M. R. (2005). The solid
+earth: An introduction to global geophysics (Second edition). Cambridge
+University Press. ISBN: 0-521-81066-3</unstructured_citation>
+          </citation>
+          <citation key="chen:1998">
+            <article_title>Lattice Boltzmann Method for Fluid
+Flow</article_title>
+            <author>Chen</author>
+            <journal_title>Annual Review of Fluid
+Mechanics</journal_title>
+            <issue>1</issue>
+            <volume>30</volume>
+            <doi>10.1146/annurev.fluid.30.1.329</doi>
+            <issn>0066-4189</issn>
+            <cYear>1998</cYear>
+            <unstructured_citation>Chen, S., &amp; Doolen, G. D. (1998).
+Lattice Boltzmann Method for Fluid Flow. Annual Review of Fluid
+Mechanics, 30(1), 329–364.
+https://doi.org/10.1146/annurev.fluid.30.1.329</unstructured_citation>
+          </citation>
+          <citation key="dong:2008">
+            <article_title>Inertial consistent subgrid model for
+large-eddy simulation based on the lattice Boltzmann
+method</article_title>
+            <author>Dong</author>
+            <journal_title>Physics of Fluids</journal_title>
+            <issue>3</issue>
+            <volume>20</volume>
+            <doi>10.1063/1.2842379</doi>
+            <issn>1070-6631</issn>
+            <cYear>2008</cYear>
+            <unstructured_citation>Dong, Y.-H., Sagaut, P., &amp; Marie,
+S. (2008). Inertial consistent subgrid model for large-eddy simulation
+based on the lattice Boltzmann method. Physics of Fluids, 20(3), 035104.
+https://doi.org/10.1063/1.2842379</unstructured_citation>
+          </citation>
+          <citation key="guo:2000">
+            <article_title>Lattice BGK Model for Incompressible
+Navier–Stokes Equation</article_title>
+            <author>Guo</author>
+            <journal_title>Journal of Computational
+Physics</journal_title>
+            <issue>1</issue>
+            <volume>165</volume>
+            <doi>10.1006/jcph.2000.6616</doi>
+            <cYear>2000</cYear>
+            <unstructured_citation>Guo, Z., Shi, B., &amp; Wang, N.
+(2000). Lattice BGK Model for Incompressible Navier–Stokes Equation.
+Journal of Computational Physics, 165(1), 288–306.
+https://doi.org/10.1006/jcph.2000.6616</unstructured_citation>
+          </citation>
+          <citation key="dhumieres:1992">
+            <article_title>Generalized Lattice Boltzmann
+Equations</article_title>
+            <author>d’Humieres</author>
+            <journal_title>Rarefied Gas Dynamics: Theory and
+Simulations</journal_title>
+            <volume>159</volume>
+            <doi>10.2514/5.9781600866319.0450.0458</doi>
+            <cYear>1992</cYear>
+            <unstructured_citation>d’Humieres, D. (1992). Generalized
+Lattice Boltzmann Equations. In Rarefied Gas Dynamics: Theory and
+Simulations (Vol. 159, pp. 450–458).
+https://doi.org/10.2514/5.9781600866319.0450.0458</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
