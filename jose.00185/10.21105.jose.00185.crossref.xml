@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20230815T153044-b253d154f61dd325a0f403c32afe1af133ad6380</doi_batch_id>
+    <timestamp>20230815153044</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>66</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>From Maps to Models - Tutorials for structural
+geological modeling using GemPy and GemGIS</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Alexander</given_name>
+            <surname>Jüstel</surname>
+            <ORCID>https://orcid.org/0000-0003-0980-7479</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Miguel</given_name>
+            <surname>de la Varga</surname>
+            <ORCID>https://orcid.org/0000-0001-6941-2685</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Nils</given_name>
+            <surname>Chudalla</surname>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Jan David</given_name>
+            <surname>Wagner</surname>
+            <ORCID>https://orcid.org/0009-0007-7673-8334</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Stefan</given_name>
+            <surname>Back</surname>
+            <ORCID>https://orcid.org/0000-0003-3134-3367</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Florian</given_name>
+            <surname>Wellmann</surname>
+            <ORCID>https://orcid.org/0000-0003-2552-1876</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>15</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>185</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00185</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi"></rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/185</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00185</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00185</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00185.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="geopandas">
+            <article_title>GeoPandas</article_title>
+            <author>Jordahl</author>
+            <doi>10.5281/zenodo.4569086</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Jordahl, K., Bossche, J. V. den,
+Fleischmann, M., &amp; et al. (2021). GeoPandas (Version v0.9.0).
+Zenodo. https://doi.org/10.5281/zenodo.4569086</unstructured_citation>
+          </citation>
+          <citation key="gempy">
+            <article_title>GemPy 1.0: Open-source stochastic geological
+modeling and inversion</article_title>
+            <author>Varga</author>
+            <journal_title>Geoscientific Model
+Development</journal_title>
+            <doi>10.5194/gmd-12-1-2019</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Varga, M. de la, Schaaf, A., &amp;
+Wellmann, F. (2019). GemPy 1.0: Open-source stochastic geological
+modeling and inversion. Geoscientific Model Development, 1–32.
+https://doi.org/10.5194/gmd-12-1-2019</unstructured_citation>
+          </citation>
+          <citation key="pyvista">
+            <article_title>PyVista: 3D plotting and mesh analysis
+through a streamlined interface for the Visualization Toolkit
+(VTK)</article_title>
+            <author>Sullivan</author>
+            <journal_title>Journal of Open Source
+Software</journal_title>
+            <issue>37</issue>
+            <volume>4</volume>
+            <doi>10.21105/joss.01450</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Sullivan, C. B., &amp; Kaszynski, A.
+(2019). PyVista: 3D plotting and mesh analysis through a streamlined
+interface for the Visualization Toolkit (VTK). Journal of Open Source
+Software, 4(37), 1450.
+https://doi.org/10.21105/joss.01450</unstructured_citation>
+          </citation>
+          <citation key="pandas">
+            <article_title>Pandas</article_title>
+            <author>The pandas development team</author>
+            <doi>10.5281/zenodo.4572994</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>The pandas development team. (2021).
+Pandas (Version v1.2.3). Zenodo.
+https://doi.org/10.5281/zenodo.4572994</unstructured_citation>
+          </citation>
+          <citation key="matplotlib">
+            <article_title>Matplotlib: A 2D graphics
+environment</article_title>
+            <author>Hunter</author>
+            <journal_title>Computing in Science &amp;
+Engineering</journal_title>
+            <issue>3</issue>
+            <volume>9</volume>
+            <doi>10.1109/MCSE.2007.55</doi>
+            <cYear>2007</cYear>
+            <unstructured_citation>Hunter, J. D. (2007). Matplotlib: A
+2D graphics environment. Computing in Science &amp; Engineering, 9(3),
+90–95. https://doi.org/10.1109/MCSE.2007.55</unstructured_citation>
+          </citation>
+          <citation key="geomodeller">
+            <article_title>Geological modelling from field data and
+geological knowledge: Part i. Modelling method coupling 3D
+potential-field interpolation and geological rules</article_title>
+            <author>Calcagno</author>
+            <journal_title>Physics of the Earth and Planetary
+Interiors</journal_title>
+            <issue>1</issue>
+            <volume>171</volume>
+            <doi>10.1016/j.pepi.2008.06.013</doi>
+            <issn>0031-9201</issn>
+            <cYear>2008</cYear>
+            <unstructured_citation>Calcagno, P., Chilès, J. P.,
+Courrioux, G., &amp; Guillen, A. (2008). Geological modelling from field
+data and geological knowledge: Part i. Modelling method coupling 3D
+potential-field interpolation and geological rules. Physics of the Earth
+and Planetary Interiors, 171(1), 147–157.
+https://doi.org/10.1016/j.pepi.2008.06.013</unstructured_citation>
+          </citation>
+          <citation key="gocad">
+            <article_title>GOCAD: A Computer Aided Design Program for
+Geological Applications</article_title>
+            <author>Mallet</author>
+            <journal_title>Three-dimensional modeling with geoscientific
+information systems</journal_title>
+            <doi>10.1007/978-94-011-2556-7_11</doi>
+            <isbn>978-94-011-2556-7</isbn>
+            <cYear>1992</cYear>
+            <unstructured_citation>Mallet, J. L. (1992). GOCAD: A
+Computer Aided Design Program for Geological Applications. In A. K.
+Turner (Ed.), Three-dimensional modeling with geoscientific information
+systems (pp. 123–141). Springer Netherlands.
+https://doi.org/10.1007/978-94-011-2556-7_11</unstructured_citation>
+          </citation>
+          <citation key="Wellmann2022">
+            <article_title>Open AR-Sandbox: A haptic interface for
+geoscience education and outreach</article_title>
+            <author>Wellmann</author>
+            <journal_title>Geosphere</journal_title>
+            <issue>2</issue>
+            <volume>18</volume>
+            <doi>10.1130/GES02455.1</doi>
+            <issn>1553-040X</issn>
+            <cYear>2022</cYear>
+            <unstructured_citation>Wellmann, F., Virgo, S., Escallon,
+D., Varga, M. de la, Jüstel, A., Wagner, F. M., Kowalski, J., Zhao, H.,
+Fehling, R., &amp; Chen, Q. (2022). Open AR-Sandbox: A haptic interface
+for geoscience education and outreach. Geosphere, 18(2), 732–749.
+https://doi.org/10.1130/GES02455.1</unstructured_citation>
+          </citation>
+          <citation key="Lajaunie1997">
+            <article_title>Foliation fields and 3D cartography in
+geology: Principles of a method based on potential
+interpolation</article_title>
+            <author>Lajaunie</author>
+            <journal_title>Mathematical Geology</journal_title>
+            <issue>4</issue>
+            <volume>29</volume>
+            <doi>10.1007/BF02775087</doi>
+            <cYear>1997</cYear>
+            <unstructured_citation>Lajaunie, C., Courrioux, G., &amp;
+Manuel, L. (1997). Foliation fields and 3D cartography in geology:
+Principles of a method based on potential interpolation. Mathematical
+Geology, 29(4), 571–584.
+https://doi.org/10.1007/BF02775087</unstructured_citation>
+          </citation>
+          <citation key="bennison">
+            <volume_title>An Introduction to Geological Structures and
+Maps</volume_title>
+            <author>Bennison</author>
+            <doi>10.1007/978-1-4615-9630-1</doi>
+            <isbn>978-1-4615-9630-1</isbn>
+            <cYear>1990</cYear>
+            <unstructured_citation>Bennison, G. M. (1990). An
+Introduction to Geological Structures and Maps (pp. 1–70). Springer New
+York, NY.
+https://doi.org/10.1007/978-1-4615-9630-1</unstructured_citation>
+          </citation>
+          <citation key="powell">
+            <volume_title>Interpretation geologischer Strukturen durch
+Karten - Eine praktische Anleitung mit Aufgaben und
+Lösungen</volume_title>
+            <author>Powell</author>
+            <isbn>978-3-540-58607-4</isbn>
+            <cYear>1995</cYear>
+            <unstructured_citation>Powell, D. (1995). Interpretation
+geologischer Strukturen durch Karten - Eine praktische Anleitung mit
+Aufgaben und Lösungen (pp. 1–216). Springer-Verlag Berlin Heidelberg.
+ISBN: 978-3-540-58607-4</unstructured_citation>
+          </citation>
+          <citation key="gemgis">
+            <article_title>GemGIS - Spatial Data Processing for
+Geomodeling</article_title>
+            <author>Jüstel</author>
+            <journal_title>Journal of Open Source
+Software</journal_title>
+            <issue>73</issue>
+            <volume>7</volume>
+            <doi>10.21105/joss.03709</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Jüstel, A., Correira, A. E., Pischke,
+M., Varga, M. de la, &amp; Wellmann, F. (2022). GemGIS - Spatial Data
+Processing for Geomodeling. Journal of Open Source Software, 7(73),
+3709. https://doi.org/10.21105/joss.03709</unstructured_citation>
+          </citation>
+          <citation key="QGIS_software">
+            <volume_title>QGIS Geographic Information
+system</volume_title>
+            <author>QGIS Development Team</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>QGIS Development Team. (2022). QGIS
+Geographic Information system. QGIS Association.
+https://www.qgis.org</unstructured_citation>
+          </citation>
+          <citation key="Blender">
+            <volume_title>Blender - a 3D modelling and rendering
+package</volume_title>
+            <author>Blender Online Community</author>
+            <cYear>2018</cYear>
+            <unstructured_citation>Blender Online Community. (2018).
+Blender - a 3D modelling and rendering package. Blender Foundation.
+http://www.blender.org</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
