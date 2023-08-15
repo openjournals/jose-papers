@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">185</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00185</article-id>
+<title-group>
+<article-title>From Maps to Models - Tutorials for structural geological
+modeling using GemPy and GemGIS</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0980-7479</contrib-id>
+<name>
+<surname>Jüstel</surname>
+<given-names>Alexander</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-6941-2685</contrib-id>
+<name>
+<surname>de la Varga</surname>
+<given-names>Miguel</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Chudalla</surname>
+<given-names>Nils</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0007-7673-8334</contrib-id>
+<name>
+<surname>Wagner</surname>
+<given-names>Jan David</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-3134-3367</contrib-id>
+<name>
+<surname>Back</surname>
+<given-names>Stefan</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-2552-1876</contrib-id>
+<name>
+<surname>Wellmann</surname>
+<given-names>Florian</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Fraunhofer IEG, Fraunhofer Research Institution for Energy
+Infrastructures and Geothermal Systems IEG, Kockerellstraße 17, 52062
+Aachen, Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>RWTH Aachen University, Geological Institute, Wüllnerstraße
+2, 52062 Aachen, Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Terranigma Solutions GmbH, Laurentiusstraße 59, 52072
+Aachen, Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>RWTH Aachen University, Institute for Computational
+Geoscience, Geothermics and Reservoir Geophysics, Mathieustraße 30,
+52074 Aachen, Germany</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<volume>6</volume>
+<issue>66</issue>
+<fpage>185</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>geology</kwd>
+<kwd>geographic</kwd>
+<kwd>structural geology</kwd>
+<kwd>GIS</kwd>
+<kwd>spatial data</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The geological map-to-model tutorials presented enable users of the
+  <bold>GemPy</bold> and <bold>GemGIS</bold> Python libraries and
+  associated packages to create structural geological models from
+  scratch using input data for conceptual models but also more
+  sophisticated models representing possible real-world examples.
+  Textbook geological maps and cross sections (e.g.,
+  <xref alt="Bennison, 1990" rid="ref-bennison" ref-type="bibr">Bennison,
+  1990</xref>;
+  <xref alt="Powell, 1995" rid="ref-powell" ref-type="bibr">Powell,
+  1995</xref>) are transformed into structural models serving as
+  teaching materials for undergraduate students in the field of Applied
+  Geosciences at RWTH Aachen University, Germany. Their purpose is to
+  enable students to not only think about geological problems in 2D (map
+  view) but also in 3D (current structure of the subsurface) and even 4D
+  (depositional, tectonic, and erosional events resulting in the current
+  structural framework). The purpose of creating these models is not to
+  substitute the necessary analog thinking of geoscientists but to aid
+  them in verifying their results, to advance 3D thinking skills, and to
+  introduce students to the world of data processing, data
+  visualization, data analysis, and structural geological modeling in
+  Python.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>The subsurface below our feet is utilized in many different ways.
+  We extract fresh water, thermal water, and fossil fuels from it. We
+  exploit the subsurface for its coal, minerals, and ores in open-pit
+  mines and underground mines. We store fluids and gases as well as
+  nuclear waste in the subsurface. But to do so, a concept of the
+  structure of the subsurface and its properties is needed to drill into
+  the right formation, to dig or drill into the right direction, to
+  ensure that none of the stored fluid escapes, and to ensure that no
+  contaminants leak into surrounding rocks.</p>
+  <p>Creating structural geological models not only in 1D boreholes or
+  2D cross-sections but also in 3D models is a first step to gain a
+  comprehensive knowledge of the subsurface. Apart from actually drawing
+  models, most efforts to create structural geological models in 3D are
+  built in and restricted to commercial software packages such as
+  GeoModeller
+  (<xref alt="Calcagno et al., 2008" rid="ref-geomodeller" ref-type="bibr">Calcagno
+  et al., 2008</xref>), Petrel, Move, GoCad
+  (<xref alt="Mallet, 1992" rid="ref-gocad" ref-type="bibr">Mallet,
+  1992</xref>), and others. The aim of <bold>GemPy</bold>
+  (<xref alt="Varga et al., 2019" rid="ref-gempy" ref-type="bibr">Varga
+  et al., 2019</xref>) and <bold>GemGIS</bold>
+  (<xref alt="Jüstel et al., 2022" rid="ref-gemgis" ref-type="bibr">Jüstel
+  et al., 2022</xref>) and associated open-source packages is to provide
+  open-source software tools to create 3D structural geological models
+  from maps, cross sections, borehole information, stratigraphic
+  boundaries at the surface and the subsurface, orientation measurements
+  of the stratigraphic units, mapped horizons from seismic data or
+  information inferred from other geophysical methods.
+  <bold>GemGIS</bold> further provides tools to process spatial data
+  independently of <bold>GemPy</bold> which extends the number of fields
+  in which the open-source package can be utilized.</p>
+  <p>The tutorial materials presented here are adopted from a mapping
+  class for undergraduate students majoring in Applied Geosciences at
+  RWTH Aachen University, Germany. There, the students work with
+  print-outs of these maps, millimeter paper, rulers, and pencils to
+  solve the different tasks of the various tutorials. The purpose of
+  this paper-based analog course is to develop the 3D geological
+  thinking of the students and to allow them to obtain a concept of the
+  structures in the subsurface through constructing and analyzing maps
+  and 2D cross-sections
+  (<xref alt="Bennison, 1990" rid="ref-bennison" ref-type="bibr">Bennison,
+  1990</xref>;
+  <xref alt="Powell, 1995" rid="ref-powell" ref-type="bibr">Powell,
+  1995</xref>). The tutorials presented here can be seen as the logical
+  continuation of the introductory mapping course. These tutorials
+  motivate students to dig deeper into the data or to confirm their
+  previous results. The barrier to utilize the Python language and
+  associated packages for processing and visualizing data is lowered by
+  the use of these tutorials. The usage of 3D structural models in
+  teaching has also been adapted to make use of AR-Sandboxes
+  (<xref alt="Wellmann et al., 2022" rid="ref-Wellmann2022" ref-type="bibr">Wellmann
+  et al., 2022</xref>). Here, models created through <bold>GemGIS</bold>
+  and <bold>GemPy</bold> can be recreated in the AR-Sandbox
+  <ext-link ext-link-type="uri" xlink:href="https://www.cg3.rwth-aachen.de/cms/cg3/Forschung/Forschungssoftware/~lljsr/Open-AR-Sandbox/">(augmented
+  reality Sandbox)</ext-link>. A generation of a modified map can then
+  be triggered by manual interaction with sand, hence changing the
+  topography of the model.</p>
+</sec>
+<sec id="resources">
+  <title>Resources</title>
+  <p>The following resources are provided before going through the
+  tutorials. It is recommended to use an
+  <ext-link ext-link-type="uri" xlink:href="https://www.anaconda.com/">Anaconda
+  Python distribution</ext-link> and
+  <ext-link ext-link-type="uri" xlink:href="https://jupyter.org/">Jupyter
+  Notebooks</ext-link> to access the tutorials. Both <bold>GemPy</bold>
+  and <bold>GemGIS</bold> have been developed in recent years at the
+  <ext-link ext-link-type="uri" xlink:href="https://www.cgre.rwth-aachen.de/">Department
+  for Computational Geosciences and Reservoir Engineering at RWTH Aachen
+  University, Germany</ext-link>. Both libraries are stored on GitHub
+  and have well-documented resources:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://github.com/cgre-aachen/gemgis_data">Tutorial
+      Repository</ext-link></p>
+    </list-item>
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://gemgis.readthedocs.io/">GemGIS
+      Documentation and Installation</ext-link></p>
+    </list-item>
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://github.com/cgre-aachen/gemgis">GemGIS
+      Repository</ext-link></p>
+    </list-item>
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://www.gempy.org">GemPy
+      Documentation and Installation</ext-link></p>
+    </list-item>
+    <list-item>
+      <p><ext-link ext-link-type="uri" xlink:href="https://github.com/cgre-aachen/gemgpy">GemPy
+      Repository</ext-link></p>
+    </list-item>
+  </list>
+</sec>
+<sec id="learning-objectives">
+  <title>Learning Objectives</title>
+  <p>Upon completion of the tutorials, the users will have learned
+  to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Create the necessary raw data for <bold>GemGIS</bold> and
+      <bold>GemPy</bold> using the open-source software QGIS
+      (<xref alt="QGIS Development Team, 2022" rid="ref-QGIS_software" ref-type="bibr">QGIS
+      Development Team, 2022</xref>)</p>
+    </list-item>
+    <list-item>
+      <p>Explore and manipulate the raw data using the Pandas
+      (<xref alt="The pandas development team, 2021" rid="ref-pandas" ref-type="bibr">The
+      pandas development team, 2021</xref>) and GeoPandas libraries
+      (<xref alt="Jordahl et al., 2021" rid="ref-geopandas" ref-type="bibr">Jordahl
+      et al., 2021</xref>)</p>
+    </list-item>
+    <list-item>
+      <p>Process the raw data using <bold>GemGIS</bold> to create input
+      data for <bold>GemPy</bold></p>
+    </list-item>
+    <list-item>
+      <p>Create the 3D structural model using <bold>GemPy</bold></p>
+    </list-item>
+    <list-item>
+      <p>Visualize the results using Matplotlib
+      (<xref alt="Hunter, 2007" rid="ref-matplotlib" ref-type="bibr">Hunter,
+      2007</xref>) and PyVista
+      (<xref alt="Sullivan &amp; Kaszynski, 2019" rid="ref-pyvista" ref-type="bibr">Sullivan
+      &amp; Kaszynski, 2019</xref>)</p>
+    </list-item>
+    <list-item>
+      <p>Perform post-processing tasks</p>
+    </list-item>
+    <list-item>
+      <p>Applying the different steps of the model building to the
+      user’s own maps and datasets.</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="contents-and-instructional-design">
+  <title>Contents and instructional design</title>
+  <p>The tutorials are organized in a modular fashion and consist of
+  seven units as shown below. For each model, all the input data and a
+  QGIS project are already shipped with the repository for users to
+  explore the original maps and to be able to reproduce the input data
+  for the structural modeling. With this material, the user will also
+  develop an awareness of how to process one’s own datasets for future
+  structural modeling. The notebooks also contain common post-processing
+  tasks on how to utilize the created structural geological models.</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Basic structural geological modeling with <bold>GemPy</bold> (4
+      notebooks)</p>
+    </list-item>
+    <list-item>
+      <p>Modeling planar dipping layers with <bold>GemGIS</bold> and
+      <bold>GemPy</bold> (3 notebooks)</p>
+    </list-item>
+    <list-item>
+      <p>Modeling folded layers with <bold>GemGIS</bold> and
+      <bold>GemPy</bold> (3 notebooks)</p>
+    </list-item>
+    <list-item>
+      <p>Modeling faulted layers with <bold>GemGIS</bold> and
+      <bold>GemPy</bold> (3 notebooks)</p>
+    </list-item>
+    <list-item>
+      <p>Modeling unconformable layers with <bold>GemGIS</bold> and
+      <bold>GemPy</bold> (3 notebooks)</p>
+    </list-item>
+    <list-item>
+      <p>Modeling combinded models with <bold>GemGIS</bold> and
+      <bold>GemPy</bold> (3 notebooks)</p>
+    </list-item>
+    <list-item>
+      <p>Modeling special cases with <bold>GemGIS</bold> and
+      <bold>GemPy</bold> (3 notebooks)</p>
+    </list-item>
+  </list>
+  <sec id="basic-structural-geological-modeling-with-gempy">
+    <title>Basic Structural Geological Modeling with GemPy</title>
+    <p><bold>GemPy</bold> is capable of modeling planar layers, folded
+    layers, faulted layers, truncated layers, and combinations of the
+    aforementioned structures. The required input data for building a
+    structural model in <bold>GemPy</bold> consists of locations for
+    stratigraphic boundaries encountered on the surface (outcrops, maps,
+    mines), or in the subsurface (boreholes, geological cross sections,
+    seismic data, or constraints from other geophysical methods) and
+    orientation measurements representing the dip and the azimuth of the
+    respective stratigraphic unit also measured on the surface or in the
+    subsurface. The input is loaded and assigned to different
+    interpolation fields, where each field represents conformal surfaces
+    that are modeled using one scalar field (implicit surface
+    representation approach
+    (<xref alt="Lajaunie et al., 1997" rid="ref-Lajaunie1997" ref-type="bibr">Lajaunie
+    et al., 1997</xref>)). Through the interaction of multiple scalar
+    fields, it is possible to represent non-conformal features,
+    unconformities, and the effect of faults. Each fault is attributed
+    to its own scalar field. The interpolation itself is performed
+    through a meshless interpolation algorithm, and a marching cube
+    algorithm is subsequently used to create PyVista meshes from the
+    interpolated fields for further visualization and
+    post-processing.</p>
+    <p>The first four notebooks illustrate how to create the different
+    structures that <bold>GemPy</bold> is capable of modeling (Fig.
+    <xref alt="[fig1]" rid="fig1">[fig1]</xref>):</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>Planar layers</p>
+      </list-item>
+      <list-item>
+        <p>Folded layers</p>
+      </list-item>
+      <list-item>
+        <p>Faulted layers</p>
+      </list-item>
+      <list-item>
+        <p>Truncated layers</p>
+      </list-item>
+    </list>
+    <fig>
+      <caption><p>Basic models representing planar layers, folded
+      layers, faulted layers, and truncated layers.
+      <styled-content id="fig1"></styled-content></p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="media/images/fig1.png" />
+    </fig>
+  </sec>
+  <sec id="model-building-using-teaching-materials">
+    <title>Model Building using teaching materials</title>
+    <p>In the section for the basic structural geological modeling,
+    models are presented where only one structural feature is present.
+    Later on in the tutorial, the models include combinations of
+    structural elements and therefore more complex models (Fig.
+    <xref alt="[fig3]" rid="fig3">[fig3]</xref>). In addition, a
+    topography is added to the models based on contour lines provided
+    with the geological maps
+    (<xref alt="Bennison, 1990" rid="ref-bennison" ref-type="bibr">Bennison,
+    1990</xref>;
+    <xref alt="Powell, 1995" rid="ref-powell" ref-type="bibr">Powell,
+    1995</xref>).</p>
+    <p>The biggest advantage of this tutorial is that the input data is
+    not provided as a CSV file but as Shape Files created by the user in
+    a GIS environment such as QGIS (Fig.
+    <xref alt="[fig2]" rid="fig2">[fig2]</xref>). Here, the user should
+    already be aware of which coordinate reference system the data is
+    provided in. Using a cartesian coordinate system is recommended for
+    the <bold>GemPy</bold> input data.</p>
+    <p>The very first step is to extract the maps from the teaching
+    materials, process them in an image editing software, and
+    georeference them using QGIS. The scale of the image must be
+    honored. Otherwise, calculated dipping angles will not correspond to
+    the original angles in the map. Then, the contour lines of the map
+    are digitized as LineStrings and the height information of each line
+    is stored in the attribute table. A digital elevation model is
+    calculated using <bold>GemGIS</bold> (Fig.
+    <xref alt="[fig3]" rid="fig3">[fig3]</xref>). The stratigraphic
+    boundaries are also digitized as LineStrings (Fig.
+    <xref alt="[fig3]" rid="fig3">[fig3]</xref>). The formation the
+    boundaries belong to is saved in the attribute table as well. The X
+    and Y information are extracted from the vertices. The Z information
+    is sampled from the digital elevation model at the respective
+    positions as these boundaries were recorded on the surface. The
+    orientations cannot be extracted from the maps directly. Here, we
+    make use of the fact that orientations (dip and azimuth) can be
+    calculated in <bold>GemGIS</bold> from a set of two parallel lines
+    (“strike-lines”) with given vertical distance and measured
+    horizontal distance connecting two outcropping points at the same
+    altitude at the surface each. All data sets/Shape-Files created in
+    QGIS are loaded using the GeoPandas library and processed using
+    <bold>GemGIS</bold> to generate the necessary input DataFrames and
+    the digital elevation model for <bold>GemPy</bold>.</p>
+    <fig>
+      <caption><p>Selection of Example Models.
+      <styled-content id="fig3"></styled-content></p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="media/images/fig2.png" />
+    </fig>
+    <p>Examples 1 to 3 (e.g. Fig.
+    <xref alt="[fig2]" rid="fig2">[fig2]</xref>) introduce planar
+    dipping layers with the topography created from contour lines,
+    orientations either provided or calculated from “strike-lines” and
+    custom cross-sections displaying a 2D view along a given transect.
+    Examples 4 to 12 present models with folded, faulted, and
+    unconformable layers. Notebooks 13 to 15 present combinations of
+    different structures and hence more complex models. Notebooks 16 to
+    18 introduce solutions to the so-called “three-point-problems” in
+    geology which can be solved with the help of <bold>GemGIS</bold>.
+    Additional models are provided to complement the tutorials if more
+    practice is needed.</p>
+    <fig>
+      <caption><p>Basic QGIS-GemGIS-GemPy workflow to create structural
+      geological models from map data.
+      <styled-content id="fig2"></styled-content></p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="media/images/fig3.png" />
+    </fig>
+  </sec>
+  <sec id="post-processing-of-models">
+    <title>Post-Processing of Models</title>
+    <p>Common post-processing tasks utilizing the structural geological
+    models are addressed at the end of several notebooks. These methods
+    include, but are not limited to:</p>
+    <sec id="creating-depth-maps-and-contour-lines-for-single-stratigraphic-boundaries">
+      <title>Creating depth maps and contour lines for single
+      stratigraphic boundaries</title>
+      <p><bold>GemGIS</bold> is capable of creating depth maps and
+      contour lines from <bold>GemPy</bold> meshes for further analysis
+      (Fig. <xref alt="[fig4]" rid="fig4">[fig4]</xref>). In addition,
+      these depth maps can be exported as ZMAP files for map
+      visualizations in QGIS.</p>
+      <fig>
+        <caption><p>Depth maps for unit A and unit B of example 5.
+        <styled-content id="fig4"></styled-content></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="media/images/fig4.png" />
+      </fig>
+    </sec>
+    <sec id="creating-virtual-boreholes-and-extracting-depths-of-intersected-stratigraphic-boundaries">
+      <title>Creating virtual boreholes and extracting depths of
+      intersected stratigraphic boundaries</title>
+      <p>A very simple well sampling tool has been implemented to
+      extract the intersected stratigraphic boundaries by an already
+      existing well or by a planned well trajectory to validate the
+      structural geological model or to propose a well prognosis,
+      respectively (Fig.
+      <xref alt="[fig5]" rid="fig5">[fig5]</xref>).</p>
+      <fig>
+        <caption><p>Units A and unit B intersected by an arbitrarily
+        deviated well.
+        <styled-content id="fig5"></styled-content></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="media/images/fig5.png" />
+      </fig>
+    </sec>
+  </sec>
+  <sec id="creating-ready-for-publishing-3d-models-with-blender">
+    <title>Creating ready-for publishing 3D models with Blender</title>
+    <p>To maximize the learning outcome, additional visualization
+    techniques can be accessed. The open-source 3D creation suite
+    Blender provides tools to model and edit meshes, to animate models,
+    and to render the final result (Fig.
+    <xref alt="[fig6]" rid="fig6">[fig6]</xref>). Ray tracing
+    technologies and complex shaders for materials allow the creation of
+    photorealistic renders of models
+    (<xref alt="Blender Online Community, 2018" rid="ref-Blender" ref-type="bibr">Blender
+    Online Community, 2018</xref>). This way, the lecturer is capable of
+    highlighting key aspects of geological models and producing
+    attractive figures or videos on a professional level.</p>
+    <fig>
+      <caption><p>Example 2 (see Fig.
+      <xref alt="[fig7]" rid="fig7">[fig7]</xref>) visualized in
+      Blender. <styled-content id="fig6"></styled-content></p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="media/images/fig6.png" />
+    </fig>
+    <sec id="transferring-the-models-to-an-ar-sandbox-using-open-ar-sandbox-augmented-reality-sandbox">
+      <title>Transferring the models to an AR-Sandbox using Open
+      AR-sandbox (augmented reality sandbox)</title>
+      <p>Structural geological models created with <bold>GemGIS</bold>
+      and <bold>GemPy</bold> can be transferred to an Open AR-Sandbox
+      (Fig. <xref alt="[fig7]" rid="fig7">[fig7]</xref>)
+      (<xref alt="Wellmann et al., 2022" rid="ref-Wellmann2022" ref-type="bibr">Wellmann
+      et al., 2022</xref>). After recreating the original topography,
+      the original structural model or the geological map will be
+      displayed, respectively. By modifying the sandbox topography, the
+      geological map being displayed will be updated accordingly.</p>
+      <fig>
+        <caption><p>Geological model representation using Open
+        AR-Sandbox
+        (<xref alt="Wellmann et al., 2022" rid="ref-Wellmann2022" ref-type="bibr">Wellmann
+        et al., 2022</xref>): (A) digitization in GIS
+        (<xref alt="Bennison, 1990" rid="ref-bennison" ref-type="bibr">Bennison,
+        1990</xref>). (B) Reconstruction of topography in AR-Sandbox.
+        (C) Generated 3-D model. (D) Geological map, calculated from 3-D
+        geomodel and topography, projected in AR-Sandbox, view similar
+        to the original map. (E) and (F): modified topographies and
+        updated geological map projections.
+        <styled-content id="fig7"></styled-content></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="media/images/fig7.png" />
+      </fig>
+    </sec>
+  </sec>
+</sec>
+<sec id="experience-of-use-in-teaching-and-learning-situations">
+  <title>Experience of use in teaching and learning situations</title>
+  <p>The tutorials are currently linked to two courses at RWTH Aachen
+  University, Germany, in two different undergraduate programs. These
+  are
+  <ext-link ext-link-type="uri" xlink:href="https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/Studiengaenge/Liste-Aktuelle-Studiengaenge/Studiengangbeschreibung/~bqxx/Angewandte-Geowissenschaften-B-Sc/?lidx=1">B.Sc.
+  Applied Geosciences</ext-link> and
+  <ext-link ext-link-type="uri" xlink:href="https://www.rwth-aachen.de/cms/root/studium/Vor-dem-Studium/Studiengaenge/Liste-Aktuelle-Studiengaenge/Studiengangbeschreibung/~bllm/Georessourcenmanagement-B-Sc/?lidx=1">B.Sc.
+  Georesources Management</ext-link>. The courses themselves are
+  “Geological methods and geological maps” and “Introduction to
+  geological maps”, respectively. Both courses are taught twice a week
+  for the entire semester for 1.5 h each with one teaching session and
+  one tutorial session with two instructors and a maximum of 30 students
+  with a total workload of 60 h or 30 h for the respective program. The
+  students have to construct one model per week and present it during
+  the tutorial session.</p>
+  <p>The tutorials can easily be taught by other teaching instructors to
+  their students. The requirements to do so include general knowledge of
+  the Python ecosystem including libraries like NumPy, Matplotlib,
+  Pandas, or GeoPandas. Furthermore, the instructor should be somewhat
+  familiar with the <bold>GemPy</bold> and <bold>GemGIS</bold> libraries
+  to be able to explain the different steps of the data processing
+  workflow and the structural modeling itself. Knowledge about the
+  implicit modeling theory <bold>GemPy</bold> builds upon is
+  helpful.</p>
+  <p>Structural geological models are the first models needed for
+  further modeling tasks or simulations in many different fields,
+  e.g. groundwater studies, geothermal exploration, oil and gas
+  exploration, mining, and geohazard assessments. Students being aware
+  of the possibility to create structural geological models for later
+  projects or thesis work with <bold>GemPy</bold> and
+  <bold>GemGIS</bold> are much more likely to engage in these kinds of
+  projects as they know how to create the first fundamental piece
+  necessary for a particular research question. Several bachelor and
+  master projects at RWTH Aachen University have therefore been
+  performed with the aid of these Python packages already.</p>
+  <p>GemGIS models are further used for newly implemented virtual
+  reality (VR) teaching applications for the previously mentioned
+  mapping class at the RWTH Aachen University. Utilizing these detailed
+  and accurate models, instructors can provide students with a more
+  immersive and engaging learning experience that goes beyond
+  traditional textbooks and lectures (Fig.
+  <xref alt="[fig8]" rid="fig8">[fig8]</xref>). GemGIS models can also
+  be easily manipulated and customized, allowing for interactive
+  exploration and experimentation that can enhance students’
+  understanding of geological concepts (Fig.
+  <xref alt="[fig8]" rid="fig8">[fig8]</xref>). For more information,
+  see:
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/cgre-aachen/XrGIS">XrGIS</ext-link>.</p>
+  <fig>
+    <caption><p>VR experience using XrGIS and GemGIS.
+    <styled-content id="fig8"></styled-content></p></caption>
+    <graphic mimetype="image" mime-subtype="jpeg" xlink:href="media/images/fig8.jpg" />
+  </fig>
+</sec>
+<sec id="credit-author-statement">
+  <title>CRediT author statement</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>AJ: Conceptualization of the tutorial series, Development of
+      the GemGIS Software, Creation of the tutorial models, Writing the
+      first version of the manuscript</p>
+    </list-item>
+    <list-item>
+      <p>MdlV: Software Development and Maintenance of the GemPy
+      Software,</p>
+    </list-item>
+    <list-item>
+      <p>NC: Review and editing of the manuscript, Blender
+      visualization</p>
+    </list-item>
+    <list-item>
+      <p>SB: Providing the resources (maps) for the tutorials as part of
+      his class at RWTH, Review of and editing the manuscript</p>
+    </list-item>
+    <list-item>
+      <p>FW: Review and editing of the manuscript, Supervision, and
+      Administration for the GemPy and GemGIS projects</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>All authors would like to thank the
+  <ext-link ext-link-type="uri" xlink:href="https://softwareunderground.org/">Software
+  Underground</ext-link> for providing a platform to interact with users
+  and to organize hackathons (Transform 2020/2021) to further develop
+  the open-source package. We also acknowledge contributions from, and
+  thank all our users for reporting bugs, raising issues, and suggesting
+  improvements to the APIs of <bold>GemGIS</bold> and
+  <bold>GemPy</bold>. We also thank the two reviewers of this
+  manuscript,
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/jwagemann">Julia
+  Wagemann</ext-link> and
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/BenjMy">Benjamin
+  Mary</ext-link>, for improving the manuscript and the quality of the
+  tutorials drastically.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <ref id="ref-geopandas">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Jordahl</surname><given-names>Kelsey</given-names></name>
+        <name><surname>Bossche</surname><given-names>Joris Van den</given-names></name>
+        <name><surname>Fleischmann</surname><given-names>Martin</given-names></name>
+        <string-name>et al.</string-name>
+      </person-group>
+      <article-title>GeoPandas</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://doi.org/10.5281/zenodo.4569086</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.4569086</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-gempy">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Varga</surname><given-names>Miguel de la</given-names></name>
+        <name><surname>Schaaf</surname><given-names>Alexander</given-names></name>
+        <name><surname>Wellmann</surname><given-names>Florian</given-names></name>
+      </person-group>
+      <article-title>GemPy 1.0: Open-source stochastic geological modeling and inversion</article-title>
+      <source>Geoscientific Model Development</source>
+      <year iso-8601-date="2019">2019</year>
+      <pub-id pub-id-type="doi">10.5194/gmd-12-1-2019</pub-id>
+      <fpage>1</fpage>
+      <lpage>32</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-pyvista">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sullivan</surname><given-names>C. Bane</given-names></name>
+        <name><surname>Kaszynski</surname><given-names>Alexander</given-names></name>
+      </person-group>
+      <article-title>PyVista: 3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)</article-title>
+      <source>Journal of Open Source Software</source>
+      <publisher-name>The Open Journal</publisher-name>
+      <year iso-8601-date="2019-05">2019</year><month>05</month>
+      <volume>4</volume>
+      <issue>37</issue>
+      <uri>https://doi.org/10.21105/joss.01450</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.01450</pub-id>
+      <fpage>1450</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-pandas">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>The pandas development team</string-name>
+      </person-group>
+      <article-title>Pandas</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://doi.org/10.5281/zenodo.4572994</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.4572994</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-matplotlib">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hunter</surname><given-names>J. D.</given-names></name>
+      </person-group>
+      <article-title>Matplotlib: A 2D graphics environment</article-title>
+      <source>Computing in Science &amp; Engineering</source>
+      <publisher-name>IEEE COMPUTER SOC</publisher-name>
+      <year iso-8601-date="2007">2007</year>
+      <volume>9</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1109/MCSE.2007.55</pub-id>
+      <fpage>90</fpage>
+      <lpage>95</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-geomodeller">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Calcagno</surname><given-names>P.</given-names></name>
+        <name><surname>Chilès</surname><given-names>J. P.</given-names></name>
+        <name><surname>Courrioux</surname><given-names>G.</given-names></name>
+        <name><surname>Guillen</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Geological modelling from field data and geological knowledge: Part i. Modelling method coupling 3D potential-field interpolation and geological rules</article-title>
+      <source>Physics of the Earth and Planetary Interiors</source>
+      <year iso-8601-date="2008">2008</year>
+      <volume>171</volume>
+      <issue>1</issue>
+      <issn>0031-9201</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0031920108001258</uri>
+      <pub-id pub-id-type="doi">10.1016/j.pepi.2008.06.013</pub-id>
+      <fpage>147</fpage>
+      <lpage>157</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gocad">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Mallet</surname><given-names>J. L.</given-names></name>
+      </person-group>
+      <article-title>GOCAD: A Computer Aided Design Program for Geological Applications</article-title>
+      <source>Three-dimensional modeling with geoscientific information systems</source>
+      <person-group person-group-type="editor">
+        <name><surname>Turner</surname><given-names>A. Keith</given-names></name>
+      </person-group>
+      <publisher-name>Springer Netherlands</publisher-name>
+      <publisher-loc>Dordrecht</publisher-loc>
+      <year iso-8601-date="1992">1992</year>
+      <isbn>978-94-011-2556-7</isbn>
+      <uri>https://doi.org/10.1007/978-94-011-2556-7_11</uri>
+      <pub-id pub-id-type="doi">10.1007/978-94-011-2556-7_11</pub-id>
+      <fpage>123</fpage>
+      <lpage>141</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Wellmann2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wellmann</surname><given-names>Florian</given-names></name>
+        <name><surname>Virgo</surname><given-names>Simon</given-names></name>
+        <name><surname>Escallon</surname><given-names>Daniel</given-names></name>
+        <name><surname>Varga</surname><given-names>Miguel de la</given-names></name>
+        <name><surname>Jüstel</surname><given-names>Alexander</given-names></name>
+        <name><surname>Wagner</surname><given-names>Florian M.</given-names></name>
+        <name><surname>Kowalski</surname><given-names>Julia</given-names></name>
+        <name><surname>Zhao</surname><given-names>Hu</given-names></name>
+        <name><surname>Fehling</surname><given-names>Robin</given-names></name>
+        <name><surname>Chen</surname><given-names>Qian</given-names></name>
+      </person-group>
+      <article-title>Open AR-Sandbox: A haptic interface for geoscience education and outreach</article-title>
+      <source>Geosphere</source>
+      <year iso-8601-date="2022-02">2022</year><month>02</month>
+      <volume>18</volume>
+      <issue>2</issue>
+      <issn>1553-040X</issn>
+      <uri>https://doi.org/10.1130/GES02455.1</uri>
+      <pub-id pub-id-type="doi">10.1130/GES02455.1</pub-id>
+      <fpage>732</fpage>
+      <lpage>749</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lajaunie1997">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lajaunie</surname><given-names>C.</given-names></name>
+        <name><surname>Courrioux</surname><given-names>G.</given-names></name>
+        <name><surname>Manuel</surname><given-names>L.</given-names></name>
+      </person-group>
+      <article-title>Foliation fields and 3D cartography in geology: Principles of a method based on potential interpolation</article-title>
+      <source>Mathematical Geology</source>
+      <year iso-8601-date="1997">1997</year>
+      <volume>29</volume>
+      <issue>4</issue>
+      <uri>https://doi.org/10.1007/BF02775087</uri>
+      <pub-id pub-id-type="doi">10.1007/BF02775087</pub-id>
+      <fpage>571</fpage>
+      <lpage>584</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-bennison">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Bennison</surname><given-names>G. M.</given-names></name>
+      </person-group>
+      <source>An Introduction to Geological Structures and Maps</source>
+      <publisher-name>Springer New York, NY</publisher-name>
+      <publisher-loc>New York</publisher-loc>
+      <year iso-8601-date="1990">1990</year>
+      <isbn>978-1-4615-9630-1</isbn>
+      <uri>https://doi.org/10.1007/978-1-4615-9630-1</uri>
+      <pub-id pub-id-type="doi">10.1007/978-1-4615-9630-1</pub-id>
+      <fpage>1</fpage>
+      <lpage>70</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-powell">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Powell</surname><given-names>D.</given-names></name>
+      </person-group>
+      <source>Interpretation geologischer Strukturen durch Karten - Eine praktische Anleitung mit Aufgaben und Lösungen</source>
+      <publisher-name>Springer-Verlag Berlin Heidelberg</publisher-name>
+      <publisher-loc>Berlin, Heidelberg</publisher-loc>
+      <year iso-8601-date="1995">1995</year>
+      <isbn>978-3-540-58607-4</isbn>
+      <fpage>1</fpage>
+      <lpage>216</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gemgis">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jüstel</surname><given-names>A.</given-names></name>
+        <name><surname>Correira</surname><given-names>A. Endlein</given-names></name>
+        <name><surname>Pischke</surname><given-names>M.</given-names></name>
+        <name><surname>Varga</surname><given-names>M. de la</given-names></name>
+        <name><surname>Wellmann</surname><given-names>F.</given-names></name>
+      </person-group>
+      <article-title>GemGIS - Spatial Data Processing for Geomodeling</article-title>
+      <source>Journal of Open Source Software</source>
+      <publisher-name>The Open Journal</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <volume>7</volume>
+      <issue>73</issue>
+      <uri>https://doi.org/10.21105/joss.03709</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.03709</pub-id>
+      <fpage>3709</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-QGIS_software">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <string-name>QGIS Development Team</string-name>
+      </person-group>
+      <source>QGIS Geographic Information system</source>
+      <publisher-name>QGIS Association</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://www.qgis.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Blender">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <string-name>Blender Online Community</string-name>
+      </person-group>
+      <source>Blender - a 3D modelling and rendering package</source>
+      <publisher-name>Blender Foundation</publisher-name>
+      <publisher-loc>Stichting Blender Foundation, Amsterdam</publisher-loc>
+      <year iso-8601-date="2018">2018</year>
+      <uri>http://www.blender.org</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
