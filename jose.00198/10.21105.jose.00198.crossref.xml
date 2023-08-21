@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20230821T175722-0aa6c65a8703e7826c4cda7370f290058450eb80</doi_batch_id>
+    <timestamp>20230821175722</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>66</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Ecological Forecasting and Dynamics: A graduate course
+on the fundamentals of time series and forecasting in ecology</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>S. K. Morgan</given_name>
+            <surname>Ernest</surname>
+            <ORCID>https://orcid.org/0000-0002-6026-8530</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Hao</given_name>
+            <surname>Ye</surname>
+            <ORCID>https://orcid.org/0000-0002-8630-1458</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Ethan P.</given_name>
+            <surname>White</surname>
+            <ORCID>https://orcid.org/0000-0001-6728-7745</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>21</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>198</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00198</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.8250308</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/198</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00198</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00198</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00198.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="archer2010">
+            <volume_title>Explicit instruction: Effective and efficient
+teaching</volume_title>
+            <author>Archer</author>
+            <cYear>2010</cYear>
+            <unstructured_citation>Archer, A. L., &amp; Hughes, C. A.
+(2010). Explicit instruction: Effective and efficient teaching. Guilford
+Publications.</unstructured_citation>
+          </citation>
+          <citation key="bada2015">
+            <article_title>Constructivism learning theory: A paradigm
+for teaching and learning</article_title>
+            <author>Bada</author>
+            <journal_title>Journal of Research &amp; Method in
+Education</journal_title>
+            <issue>6</issue>
+            <volume>5</volume>
+            <doi>10.9790/7388-05616670</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>Bada, S. O., &amp; Olusegun, S.
+(2015). Constructivism learning theory: A paradigm for teaching and
+learning. Journal of Research &amp; Method in Education, 5(6), 66–70.
+https://doi.org/10.9790/7388-05616670</unstructured_citation>
+          </citation>
+          <citation key="brewer2003">
+            <article_title>Training ecologists to think with uncertainty
+in mind</article_title>
+            <author>Brewer</author>
+            <journal_title>Ecology</journal_title>
+            <issue>6</issue>
+            <volume>84</volume>
+            <doi>10.1890/0012-9658(2003)084[1412:TETTWU]2.0.CO;2</doi>
+            <cYear>2003</cYear>
+            <unstructured_citation>Brewer, C. A., &amp; Gross, L. J.
+(2003). Training ecologists to think with uncertainty in mind. Ecology,
+84(6), 1412–1414.
+https://doi.org/10.1890/0012-9658(2003)084[1412:TETTWU]2.0.CO;2</unstructured_citation>
+          </citation>
+          <citation key="diaz2022">
+            <article_title>Maintenance of community function through
+compensation breaks down over time in a desert rodent
+community.</article_title>
+            <author>Diaz</author>
+            <journal_title>Ecology</journal_title>
+            <doi>10.1002/ecy.3709</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Diaz, R., &amp; Ernest, S. (2022).
+Maintenance of community function through compensation breaks down over
+time in a desert rodent community. Ecology, e3709–e3709.
+https://doi.org/10.1002/ecy.3709</unstructured_citation>
+          </citation>
+          <citation key="christensen2018">
+            <article_title>Long-term community change through multiple
+rapid transitions in a desert rodent community.</article_title>
+            <author>Christensen</author>
+            <journal_title>Ecology</journal_title>
+            <issue>7</issue>
+            <volume>99</volume>
+            <doi>10.1002/ecy.2373</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Christensen, E., Harris, D., &amp;
+Ernest, S. (2018). Long-term community change through multiple rapid
+transitions in a desert rodent community. Ecology, 99(7), 1523–1529.
+https://doi.org/10.1002/ecy.2373</unstructured_citation>
+          </citation>
+          <citation key="dietze2018">
+            <article_title>Iterative near-term ecological forecasting:
+Needs, opportunities, and challenges</article_title>
+            <author>Dietze</author>
+            <journal_title>Proceedings of the National Academy of
+Sciences</journal_title>
+            <issue>7</issue>
+            <volume>115</volume>
+            <doi>10.1073/pnas.1710231115</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Dietze, M. C., Fox, A., Beck-Johnson,
+L. M., Betancourt, J. L., Hooten, M. B., Jarnevich, C. S., Keitt, T. H.,
+Kenney, M. A., Laney, C. M., Larsen, L. G., &amp; others. (2018).
+Iterative near-term ecological forecasting: Needs, opportunities, and
+challenges. Proceedings of the National Academy of Sciences, 115(7),
+1424–1432.
+https://doi.org/10.1073/pnas.1710231115</unstructured_citation>
+          </citation>
+          <citation key="ernest2020">
+            <article_title>The portal project: A long-term study of a
+chihuahuan desert ecosystem</article_title>
+            <author>Ernest</author>
+            <journal_title>BioRxiv</journal_title>
+            <doi>10.1101/332783</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Ernest, S. M., Yenni, G. M.,
+Allington, G., Bledsoe, E. K., Christensen, E. M., Diaz, R. M., Geluso,
+K., Goheen, J. R., Guo, Q., Heske, E., &amp; others. (2020). The portal
+project: A long-term study of a chihuahuan desert ecosystem. BioRxiv,
+332783. https://doi.org/10.1101/332783</unstructured_citation>
+          </citation>
+          <citation key="hampton2017">
+            <article_title>Skills and knowledge for data-intensive
+environmental research</article_title>
+            <author>Hampton</author>
+            <journal_title>BioScience</journal_title>
+            <issue>6</issue>
+            <volume>67</volume>
+            <doi>10.1093/biosci/bix025</doi>
+            <cYear>2017</cYear>
+            <unstructured_citation>Hampton, S. E., Jones, M. B., Wasser,
+L. A., Schildhauer, M. P., Supp, S. R., Brun, J., Hernandez, R. R.,
+Boettiger, C., Collins, S. L., Gross, L. J., &amp; others. (2017).
+Skills and knowledge for data-intensive environmental research.
+BioScience, 67(6), 546–557.
+https://doi.org/10.1093/biosci/bix025</unstructured_citation>
+          </citation>
+          <citation key="harris2018">
+            <article_title>Forecasting biodiversity in breeding birds
+using best practices</article_title>
+            <author>Harris</author>
+            <journal_title>PeerJ</journal_title>
+            <volume>6</volume>
+            <doi>10.7717/peerj.4278</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Harris, D. J., Taylor, S. D., &amp;
+White, E. P. (2018). Forecasting biodiversity in breeding birds using
+best practices. PeerJ, 6, e4278.
+https://doi.org/10.7717/peerj.4278</unstructured_citation>
+          </citation>
+          <citation key="houlahan2017">
+            <article_title>The priority of prediction in ecological
+understanding</article_title>
+            <author>Houlahan</author>
+            <journal_title>Oikos</journal_title>
+            <issue>1</issue>
+            <volume>126</volume>
+            <doi>10.1111/oik.03726</doi>
+            <cYear>2017</cYear>
+            <unstructured_citation>Houlahan, J. E., McKinney, S. T.,
+Anderson, T. M., &amp; McGill, B. J. (2017). The priority of prediction
+in ecological understanding. Oikos, 126(1), 1–7.
+https://doi.org/10.1111/oik.03726</unstructured_citation>
+          </citation>
+          <citation key="rosenshine1987">
+            <article_title>Explicit teaching and teacher
+training</article_title>
+            <author>Rosenshine</author>
+            <journal_title>Journal of teacher education</journal_title>
+            <issue>3</issue>
+            <volume>38</volume>
+            <doi>10.1177/002248718703800308</doi>
+            <cYear>1987</cYear>
+            <unstructured_citation>Rosenshine, B. (1987). Explicit
+teaching and teacher training. Journal of Teacher Education, 38(3),
+34–36.
+https://doi.org/10.1177/002248718703800308</unstructured_citation>
+          </citation>
+          <citation key="simonis2021">
+            <article_title>Evaluating probabilistic ecological
+forecasts</article_title>
+            <author>Simonis</author>
+            <journal_title>Ecology</journal_title>
+            <issue>8</issue>
+            <volume>102</volume>
+            <doi>10.1002/ecy.3431</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Simonis, J. L., White, E. P., &amp;
+Ernest, S. M. (2021). Evaluating probabilistic ecological forecasts.
+Ecology, 102(8), e03431.
+https://doi.org/10.1002/ecy.3431</unstructured_citation>
+          </citation>
+          <citation key="teal2015">
+            <article_title>Data carpentry: Workshops to increase data
+literacy for researchers</article_title>
+            <author>Teal</author>
+            <journal_title>International Journal of Digital
+Curation</journal_title>
+            <volume>10</volume>
+            <doi>10.2218/ijdc.v10i1.351</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>Teal, T. K., Cranston, K. A., Lapp,
+H., White, E., Wilson, G., Ram, K., &amp; Pawlik, A. (2015). Data
+carpentry: Workshops to increase data literacy for researchers.
+International Journal of Digital Curation, 10, 135–143.
+https://doi.org/10.2218/ijdc.v10i1.351</unstructured_citation>
+          </citation>
+          <citation key="white2019">
+            <article_title>Developing an automated iterative near-term
+forecasting system for an ecological study</article_title>
+            <author>White</author>
+            <journal_title>Methods in Ecology and
+Evolution</journal_title>
+            <issue>3</issue>
+            <volume>10</volume>
+            <doi>10.1111/2041-210X.13104</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>White, E. P., Yenni, G. M., Taylor,
+S. D., Christensen, E. M., Bledsoe, E. K., Simonis, J. L., &amp; Ernest,
+S. M. (2019). Developing an automated iterative near-term forecasting
+system for an ecological study. Methods in Ecology and Evolution, 10(3),
+332–344. https://doi.org/10.1111/2041-210X.13104</unstructured_citation>
+          </citation>
+          <citation key="white2022">
+            <article_title>Data carpentry for biologists: A semester
+long data carpentry course using ecological and other biological
+examples</article_title>
+            <author>White</author>
+            <journal_title>Journal of Open Source
+Education</journal_title>
+            <issue>50</issue>
+            <volume>5</volume>
+            <doi>10.21105/jose.00139</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>White, E. P., Brym, Z. T., Marx, A.
+J., Riemer, K., Marconi, S., Harris, D. J., Cruz, V., &amp; Ernest, S.
+M. (2022). Data carpentry for biologists: A semester long data carpentry
+course using ecological and other biological examples. Journal of Open
+Source Education, 5(50), 139.
+https://doi.org/10.21105/jose.00139</unstructured_citation>
+          </citation>
+          <citation key="wilson2014">
+            <article_title>Software carpentry: Lessons
+learned</article_title>
+            <author>Wilson</author>
+            <journal_title>F1000Research</journal_title>
+            <volume>3</volume>
+            <doi>10.12688/f1000research.3-62.v2</doi>
+            <cYear>2014</cYear>
+            <unstructured_citation>Wilson, G. (2014). Software
+carpentry: Lessons learned. F1000Research, 3, 62.
+https://doi.org/10.12688/f1000research.3-62.v2</unstructured_citation>
+          </citation>
+          <citation key="wolkovich2014">
+            <article_title>Temporal ecology in the
+anthropocene</article_title>
+            <author>Wolkovich</author>
+            <journal_title>Ecology letters</journal_title>
+            <issue>11</issue>
+            <volume>17</volume>
+            <doi>10.1111/ele.12353</doi>
+            <cYear>2014</cYear>
+            <unstructured_citation>Wolkovich, E., Cook, B., McLauchlan,
+K., &amp; Davies, T. (2014). Temporal ecology in the anthropocene.
+Ecology Letters, 17(11), 1365–1379.
+https://doi.org/10.1111/ele.12353</unstructured_citation>
+          </citation>
+          <citation key="yenni2019">
+            <article_title>Developing a modern data workflow for
+regularly updated data</article_title>
+            <author>Yenni</author>
+            <journal_title>PLoS Biology</journal_title>
+            <issue>1</issue>
+            <volume>17</volume>
+            <doi>10.1371/journal.pbio.3000125</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Yenni, G. M., Christensen, E. M.,
+Bledsoe, E. K., Supp, S. R., Diaz, R. M., White, E. P., &amp; Ernest, S.
+M. (2019). Developing a modern data workflow for regularly updated data.
+PLoS Biology, 17(1), e3000125.
+https://doi.org/10.1371/journal.pbio.3000125</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
