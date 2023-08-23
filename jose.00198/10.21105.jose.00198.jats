@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">198</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00198</article-id>
+<title-group>
+<article-title>Ecological Forecasting and Dynamics: A graduate course on
+the fundamentals of time series and forecasting in
+ecology</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6026-8530</contrib-id>
+<name>
+<surname>Ernest</surname>
+<given-names>S. K. Morgan</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-8630-1458</contrib-id>
+<name>
+<surname>Ye</surname>
+<given-names>Hao</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-6728-7745</contrib-id>
+<name>
+<surname>White</surname>
+<given-names>Ethan P.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Department of Wildlife Ecology and Conservation, University
+of Florida</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Biodiversity Institute, University of Florida</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Informatics Institute, University of Florida</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Health Science Center Libraries, University of
+Florida</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-01-04">
+<day>4</day>
+<month>1</month>
+<year>2023</year>
+</pub-date>
+<volume>6</volume>
+<issue>66</issue>
+<fpage>198</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>biology</kwd>
+<kwd>forecasting</kwd>
+<kwd>ecological dynamics</kwd>
+<kwd>time series</kwd>
+<kwd>programming</kwd>
+<kwd>models</kwd>
+<kwd>uncertainty</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>‘Ecological Forecasting and Dynamics’ is a semester-long course to
+  introduce students to the fundamentals of ecological forecasting &amp;
+  dynamics. This course implements paper-based discussion to introduce
+  students to concepts and ideas and R-based tutorials for hands-on
+  application and training. The course material includes a reading list
+  with prompting questions for discussions, teachers notes for guiding
+  discussions, lecture notes for live coding demonstrations, and video
+  presentations of all R tutorials. This course material can be used
+  either as self-directed learning or as all or part of a college or
+  university course. Individual learners have access to all of the
+  necessary material - including discussion questions and instructor
+  notes - on the website. The course focuses on papers with an
+  open-access or free-to-read version where possible, though some
+  materials still rely on access to closed-access papers. The course is
+  structured around two sessions per week, with most weeks consisting of
+  a one hour paper discussion session and a 1-2 hour session focused on
+  applications in R. R tutorials use publicly available ecological
+  datasets to provide realistic applications. Because the material is
+  organized around content themes, instructors can modify and remix
+  materials based on their course goals and student levels of background
+  knowledge. These course materials have been taught for several years
+  at the authors’ university and have also generated significant online
+  engagement with course videos tens of thousands of times.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Ecological forecasting is an emerging field that aims to project
+  the current state of nature into uncertain futures. This goal of
+  understanding and modeling nature benefits from traditional ecological
+  approaches that assess processes by modeling known outcomes from
+  short-term experiments or historical data, but also involves unique
+  tools, methods, and ways of thinking
+  (<xref alt="Dietze et al., 2018" rid="ref-dietze2018" ref-type="bibr">Dietze
+  et al., 2018</xref>;
+  <xref alt="Houlahan et al., 2017" rid="ref-houlahan2017" ref-type="bibr">Houlahan
+  et al., 2017</xref>;
+  <xref alt="White et al., 2019" rid="ref-white2019" ref-type="bibr">White
+  et al., 2019</xref>). Many ecologists have limited exposure to all of
+  the core concepts necessary to engage in forecasting
+  (<xref alt="Brewer &amp; Gross, 2003" rid="ref-brewer2003" ref-type="bibr">Brewer
+  &amp; Gross, 2003</xref>;
+  <xref alt="Dietze et al., 2018" rid="ref-dietze2018" ref-type="bibr">Dietze
+  et al., 2018</xref>) including: 1) understanding of ecological
+  dynamics
+  (<xref alt="Wolkovich et al., 2014" rid="ref-wolkovich2014" ref-type="bibr">Wolkovich
+  et al., 2014</xref>); the iterative cycle of model fitting,
+  evaluation, and improvement
+  (<xref alt="Dietze et al., 2018" rid="ref-dietze2018" ref-type="bibr">Dietze
+  et al., 2018</xref>); and 3) assessing and communicating uncertainty
+  in forecasts
+  (<xref alt="Brewer &amp; Gross, 2003" rid="ref-brewer2003" ref-type="bibr">Brewer
+  &amp; Gross, 2003</xref>). Building a community of practice around
+  ecological forecasting requires courses that provide students with
+  foundational conceptual knowledge relevant to ecology in conjunction
+  with active training in methodologies and approaches
+  (<xref alt="Dietze et al., 2018" rid="ref-dietze2018" ref-type="bibr">Dietze
+  et al., 2018</xref>). However, ecological forecasting is still a small
+  field with few practitioners, creating a potential educational
+  bottleneck. The ‘Ecological Forecasting and Dynamics’ course provides
+  training in the fundamentals of ecological forecasting that will allow
+  students to engage critically with the field and provide tools for
+  students to deploy as they develop as forecasters. These materials can
+  be used by instructors as modifiable core materials for their own
+  courses or by individual students as an independent self-guided
+  course.</p>
+</sec>
+<sec id="audience">
+  <title>Audience</title>
+  <p>The material is designed to be accessible to graduate students and
+  advanced undergraduates. It assumes a basic ability to read and engage
+  with the primary scientific literature, but provides guidance for
+  engaging with each paper to help students who are learning how to do
+  this. It assumes a basic understanding of R, including loading tabular
+  data, working with variables, loading packages, and running functions.
+  Some experience with <monospace>dplyr</monospace> and
+  <monospace>ggplot2</monospace> is also helpful.</p>
+  <p>The discussion material is primarily designed to be used in a
+  classroom environment centered on group discussion, but guidance is
+  also provided for self-guided learners on how to engage with the
+  material. The R tutorials are designed to work both as a live coding
+  lecture in a classroom and as follow-along exercises for self-guided
+  learners.</p>
+  <p>Examples of folks who we are trying to help:</p>
+  <p>Maya: An advanced undergraduate in natural resources who wants to
+  understand what ecological forecasting is and how it might be applied
+  in conservation and management. Maya has used basic R in some of their
+  other courses and has just started reading the primary scientific
+  literature in a classroom context.</p>
+  <p>Juniper: A graduate student with a thesis related to how
+  populations change through time, but who doesn’t yet know how to model
+  time-series. Juniper wants to learn how to build and analyze
+  time-series models for their thesis projects and finds the idea of
+  forecasting interesting.</p>
+  <p>Jaylen: A professor who understands that ecological forecasting is
+  becoming important for students to learn and wants to develop either a
+  full course or a seminar on the topic. Jaylen understands the main
+  concepts, but doesn’t know what papers would be best for teaching and
+  doesn’t have the time to develop a bunch of R tutorials.</p>
+</sec>
+<sec id="features">
+  <title>Features</title>
+  <sec id="general-instructional-design">
+    <title>General instructional design</title>
+    <p>The course combines two key components for developing a community
+    of practice around ecological forecasting: 1) learning and engaging
+    with the background and current state of knowledge in the field; and
+    2) developing the quantitative tool set for using time-series data
+    to make and evaluate forecasts. A standard week in the course starts
+    with discussing a paper on the core topic being covered and ends
+    with an R tutorial demonstrating an application or implementation of
+    that topic.</p>
+    <p>For discussion sessions, students read a paper in advance and are
+    given a list of discussion questions to help them focus on key
+    aspects of the paper and prepare for group discussions. The
+    instructors then lead a group discussion on the paper, guiding the
+    students through the discussion questions and integrating
+    mini-lectures where appropriate to address common points of
+    confusion about the paper (e.g., walking through a complicated
+    modeling approach). A typical part of the discussion will involve
+    the students reflecting on how the concepts apply to questions or
+    systems they are familiar with. Based on Constructivism and other
+    learning theories, this step of integrating the material into their
+    existing knowledge will help students in constructing richer
+    cognitive maps that better support retention and application
+    (<xref alt="Bada &amp; Olusegun, 2015" rid="ref-bada2015" ref-type="bibr">Bada
+    &amp; Olusegun, 2015</xref>).</p>
+    <p>In the second session of the week a live-coding R tutorial is
+    presented on a topic related to the paper discussion. The R
+    tutorials are designed to build from zero knowledge of time-series
+    and forecasting in R. They assume that students have a working
+    version of R and RStudio and a small amount of experience with basic
+    R is beneficial for fully understanding all of the steps. However,
+    it is possible to follow and work with the tutorials with no R
+    background. The tutorials follow a general progression of:</p>
+    <list list-type="order">
+      <list-item>
+        <p>Loading time series data and performing basic data
+        transformations</p>
+      </list-item>
+      <list-item>
+        <p>Decomposing a time series into long-term trends and seasonal
+        patterns</p>
+      </list-item>
+      <list-item>
+        <p>Computing basic properties of time-series data to build basic
+        models</p>
+      </list-item>
+      <list-item>
+        <p>Using time-series models to make and evaluate forecasts</p>
+      </list-item>
+      <list-item>
+        <p>Exploring further applications of models in ecological
+        contexts (including species-distribution modeling and Bayesian
+        state space modeling)</p>
+      </list-item>
+    </list>
+    <p>R tutorials follow the principles of “explicit teaching” and
+    “scaffolding”, in combining active-learning with a gradual on ramp
+    for students
+    (<xref alt="Archer &amp; Hughes, 2010" rid="ref-archer2010" ref-type="bibr">Archer
+    &amp; Hughes, 2010</xref>;
+    <xref alt="Rosenshine, 1987" rid="ref-rosenshine1987" ref-type="bibr">Rosenshine,
+    1987</xref>). This approach has been described as “a systematic
+    method of teaching with emphasis on proceeding in small steps,
+    checking for student understanding, and achieving active and
+    successful participation by all students”
+    (<xref alt="Rosenshine, 1987, p. 34" rid="ref-rosenshine1987" ref-type="bibr">Rosenshine,
+    1987, p. 34</xref>). This is useful for teaching computational
+    skills to researchers because it allows students to gradually
+    develop comfort with quantitative material that can be intimidating
+    otherwise. As a result it has served as the foundation for
+    <ext-link ext-link-type="uri" xlink:href="https://carpentries.org/">The
+    Carpentries</ext-link> general approach to teaching computational
+    skills in workshops
+    (<xref alt="Teal et al., 2015" rid="ref-teal2015" ref-type="bibr">Teal
+    et al., 2015</xref>;
+    <xref alt="Wilson, 2014" rid="ref-wilson2014" ref-type="bibr">Wilson,
+    2014</xref>) and university classes
+    (<xref alt="White et al., 2022" rid="ref-white2022" ref-type="bibr">White
+    et al., 2022</xref>). The tutorials accomplish this by first
+    demonstrating a new approach using live-coding, then having the
+    students complete an exercise applying that approach to a different
+    dataset in class, and then discussing this exercise as a group.</p>
+  </sec>
+  <sec id="self-guided-online-learning">
+    <title>Self-guided online learning</title>
+    <p>All of the course materials are available online at
+    <ext-link ext-link-type="uri" xlink:href="https://course.naturecast.org">https://course.naturecast.org</ext-link>.
+    This includes links to the reading materials (papers), discussion
+    questions, instructor notes for guiding discussions, and both
+    written and video versions of R tutorials and associated student
+    exercises. The R tutorials are also available as a
+    <ext-link ext-link-type="uri" xlink:href="https://www.youtube.com/watch?v=Zr81Xn-sic4&amp;list=PLD8eCxFKntVETvfPd-diUORGYLAL6idBv">YouTube
+    playlist</ext-link>. To mirror the scaffolding approach used during
+    in-person R tutorials, video-based lessons are typically split into
+    a series of short videos with natural breakpoints for students to
+    conduct exercises. To support self-guided students the video lessons
+    review the expected output for each exercise at the beginning of the
+    next video (i.e. immediately after the pause wherein the student is
+    expected to complete the exercise). The
+    <ext-link ext-link-type="uri" xlink:href="https://course.naturecast.org/getting-started/">Getting
+    Started</ext-link> on the website introduces self-guided learners to
+    approaches for engaging in the material in a self-guided
+    context.</p>
+  </sec>
+  <sec id="reuse-and-remixing">
+    <title>Reuse and remixing</title>
+    <p>Individual components of the course (e.g., individual R
+    tutorials) and the course as a whole are designed to be reused in
+    other classroom environments. To allow instructors to customize
+    which material they use to suit their classroom, the course website
+    has a modular design that allows instructors to remix the lessons
+    into a different order or to add or remove lessons as desired. This
+    is accomplished through changes to the YAML markup in a single file
+    in the website contents. The modular structure of the website thus
+    allows other instructors to easily set up a version of the course
+    that works for their needs and those of their students. The
+    <ext-link ext-link-type="uri" xlink:href="https://course.naturecast.org/getting-started/">Getting
+    Started</ext-link> on the website introduces instructors to
+    different approaches to using the material in their own courses.</p>
+  </sec>
+  <sec id="course-infrastructure">
+    <title>Course infrastructure</title>
+    <p>The course website is built using the
+    <ext-link ext-link-type="uri" xlink:href="https://gohugo.io/">Hugo
+    static site generator</ext-link> with a customized version of the
+    <ext-link ext-link-type="uri" xlink:href="https://github.com/wowchemy/hugo-documentation-theme">Wowchemy
+    Documentation theme</ext-link>. The website and course materials are
+    developed as open source code and open educational resources on the
+    <ext-link ext-link-type="uri" xlink:href="https://github.com/weecology/forecasting-course">course’s
+    GitHub repository</ext-link>. The site is automatically rebuilt
+    following every change to the <monospace>main</monospace> branch
+    through the
+    <ext-link ext-link-type="uri" xlink:href="https://www.netlify.com/">Netlify</ext-link>
+    service. Materials are available for reuse under the following
+    licenses: CC-BY 4.0 license for written content and videos; MIT
+    license for R tutorial code; and Apache 2.0 for website code.</p>
+  </sec>
+</sec>
+<sec id="course-development-background">
+  <title>Course Development Background</title>
+  <p>The course was developed by Morgan Ernest and Ethan White at the
+  University of Florida to meet the need for more training in ecological
+  forecasting. The primary development has been supported by the
+  National Science Foundation and the Gordon and Betty Moore Foundation.
+  Hao Ye contributed lesson material on the use of Empirical Dynamic
+  Modeling for making ecological forecasts. The authors of this material
+  have extensive background in long-term data
+  (<xref alt="Ernest et al., 2020" rid="ref-ernest2020" ref-type="bibr">Ernest
+  et al., 2020</xref>;
+  <xref alt="Yenni et al., 2019" rid="ref-yenni2019" ref-type="bibr">Yenni
+  et al., 2019</xref>), time-series analysis
+  (<xref alt="Christensen et al., 2018" rid="ref-christensen2018" ref-type="bibr">Christensen
+  et al., 2018</xref>;
+  <xref alt="Diaz &amp; Ernest, 2022" rid="ref-diaz2022" ref-type="bibr">Diaz
+  &amp; Ernest, 2022</xref>), ecological forecasting
+  (<xref alt="Harris et al., 2018" rid="ref-harris2018" ref-type="bibr">Harris
+  et al., 2018</xref>;
+  <xref alt="Simonis et al., 2021" rid="ref-simonis2021" ref-type="bibr">Simonis
+  et al., 2021</xref>;
+  <xref alt="White et al., 2019" rid="ref-white2019" ref-type="bibr">White
+  et al., 2019</xref>), and teaching computational tools to scientists
+  (<xref alt="Hampton et al., 2017" rid="ref-hampton2017" ref-type="bibr">Hampton
+  et al., 2017</xref>;
+  <xref alt="White et al., 2022" rid="ref-white2022" ref-type="bibr">White
+  et al., 2022</xref>).</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>Work on this course was supported by the National Science
+  Foundation through grant 1929730 to S.K.M. Ernest and E.P. White, the
+  Gordon and Betty Moore Foundation’s Data-Driven Discovery Initiative
+  through grant GBMF4563 to E.P. White, and the University of Florida.
+  Thanks to Claire Williams and Kelley Graff for their work scheduling
+  and managing courses at UF and to Eric Hellgren for providing us the
+  time to make the course openly available. Also, many thanks to our
+  students over the last 7 years for their enthusiasm in learning about
+  ecological forecasting and openness in providing feedback that has
+  helped us improve the course with every iteration.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <ref id="ref-archer2010">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Archer</surname><given-names>Anita L</given-names></name>
+        <name><surname>Hughes</surname><given-names>Charles A</given-names></name>
+      </person-group>
+      <source>Explicit instruction: Effective and efficient teaching</source>
+      <publisher-name>Guilford Publications</publisher-name>
+      <year iso-8601-date="2010">2010</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-bada2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bada</surname><given-names>Steve Olusegun</given-names></name>
+        <name><surname>Olusegun</surname><given-names>Steve</given-names></name>
+      </person-group>
+      <article-title>Constructivism learning theory: A paradigm for teaching and learning</article-title>
+      <source>Journal of Research &amp; Method in Education</source>
+      <year iso-8601-date="2015">2015</year>
+      <volume>5</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.9790/7388-05616670</pub-id>
+      <fpage>66</fpage>
+      <lpage>70</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-brewer2003">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Brewer</surname><given-names>Carol A</given-names></name>
+        <name><surname>Gross</surname><given-names>Louis J</given-names></name>
+      </person-group>
+      <article-title>Training ecologists to think with uncertainty in mind</article-title>
+      <source>Ecology</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2003">2003</year>
+      <volume>84</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1890/0012-9658(2003)084[1412:TETTWU]2.0.CO;2</pub-id>
+      <fpage>1412</fpage>
+      <lpage>1414</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-diaz2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Diaz</surname><given-names>RM</given-names></name>
+        <name><surname>Ernest</surname><given-names>SKM</given-names></name>
+      </person-group>
+      <article-title>Maintenance of community function through compensation breaks down over time in a desert rodent community.</article-title>
+      <source>Ecology</source>
+      <year iso-8601-date="2022">2022</year>
+      <pub-id pub-id-type="doi">10.1002/ecy.3709</pub-id>
+      <fpage>e3709</fpage>
+      <lpage>e3709</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-christensen2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Christensen</surname><given-names>EM</given-names></name>
+        <name><surname>Harris</surname><given-names>DJ</given-names></name>
+        <name><surname>Ernest</surname><given-names>SKM</given-names></name>
+      </person-group>
+      <article-title>Long-term community change through multiple rapid transitions in a desert rodent community.</article-title>
+      <source>Ecology</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>99</volume>
+      <issue>7</issue>
+      <pub-id pub-id-type="doi">10.1002/ecy.2373</pub-id>
+      <fpage>1523</fpage>
+      <lpage>1529</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dietze2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dietze</surname><given-names>Michael C</given-names></name>
+        <name><surname>Fox</surname><given-names>Andrew</given-names></name>
+        <name><surname>Beck-Johnson</surname><given-names>Lindsay M</given-names></name>
+        <name><surname>Betancourt</surname><given-names>Julio L</given-names></name>
+        <name><surname>Hooten</surname><given-names>Mevin B</given-names></name>
+        <name><surname>Jarnevich</surname><given-names>Catherine S</given-names></name>
+        <name><surname>Keitt</surname><given-names>Timothy H</given-names></name>
+        <name><surname>Kenney</surname><given-names>Melissa A</given-names></name>
+        <name><surname>Laney</surname><given-names>Christine M</given-names></name>
+        <name><surname>Larsen</surname><given-names>Laurel G</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Iterative near-term ecological forecasting: Needs, opportunities, and challenges</article-title>
+      <source>Proceedings of the National Academy of Sciences</source>
+      <publisher-name>National Acad Sciences</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <volume>115</volume>
+      <issue>7</issue>
+      <pub-id pub-id-type="doi">10.1073/pnas.1710231115</pub-id>
+      <fpage>1424</fpage>
+      <lpage>1432</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ernest2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ernest</surname><given-names>SK Morgan</given-names></name>
+        <name><surname>Yenni</surname><given-names>Glenda M</given-names></name>
+        <name><surname>Allington</surname><given-names>Ginger</given-names></name>
+        <name><surname>Bledsoe</surname><given-names>Ellen K</given-names></name>
+        <name><surname>Christensen</surname><given-names>Erica M</given-names></name>
+        <name><surname>Diaz</surname><given-names>Renata M</given-names></name>
+        <name><surname>Geluso</surname><given-names>Keith</given-names></name>
+        <name><surname>Goheen</surname><given-names>Jacob R</given-names></name>
+        <name><surname>Guo</surname><given-names>Qinfeng</given-names></name>
+        <name><surname>Heske</surname><given-names>Edward</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>The portal project: A long-term study of a chihuahuan desert ecosystem</article-title>
+      <source>BioRxiv</source>
+      <publisher-name>Cold Spring Harbor Laboratory</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <pub-id pub-id-type="doi">10.1101/332783</pub-id>
+      <fpage>332783</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hampton2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hampton</surname><given-names>Stephanie E</given-names></name>
+        <name><surname>Jones</surname><given-names>Matthew B</given-names></name>
+        <name><surname>Wasser</surname><given-names>Leah A</given-names></name>
+        <name><surname>Schildhauer</surname><given-names>Mark P</given-names></name>
+        <name><surname>Supp</surname><given-names>Sarah R</given-names></name>
+        <name><surname>Brun</surname><given-names>Julien</given-names></name>
+        <name><surname>Hernandez</surname><given-names>Rebecca R</given-names></name>
+        <name><surname>Boettiger</surname><given-names>Carl</given-names></name>
+        <name><surname>Collins</surname><given-names>Scott L</given-names></name>
+        <name><surname>Gross</surname><given-names>Louis J</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Skills and knowledge for data-intensive environmental research</article-title>
+      <source>BioScience</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+      <volume>67</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1093/biosci/bix025</pub-id>
+      <fpage>546</fpage>
+      <lpage>557</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-harris2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Harris</surname><given-names>David J</given-names></name>
+        <name><surname>Taylor</surname><given-names>Shawn D</given-names></name>
+        <name><surname>White</surname><given-names>Ethan P</given-names></name>
+      </person-group>
+      <article-title>Forecasting biodiversity in breeding birds using best practices</article-title>
+      <source>PeerJ</source>
+      <publisher-name>PeerJ Inc.</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <volume>6</volume>
+      <pub-id pub-id-type="doi">10.7717/peerj.4278</pub-id>
+      <fpage>e4278</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-houlahan2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Houlahan</surname><given-names>Jeff E</given-names></name>
+        <name><surname>McKinney</surname><given-names>Shawn T</given-names></name>
+        <name><surname>Anderson</surname><given-names>T Michael</given-names></name>
+        <name><surname>McGill</surname><given-names>Brian J</given-names></name>
+      </person-group>
+      <article-title>The priority of prediction in ecological understanding</article-title>
+      <source>Oikos</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+      <volume>126</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1111/oik.03726</pub-id>
+      <fpage>1</fpage>
+      <lpage>7</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-rosenshine1987">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rosenshine</surname><given-names>Barak</given-names></name>
+      </person-group>
+      <article-title>Explicit teaching and teacher training</article-title>
+      <source>Journal of teacher education</source>
+      <publisher-name>Sage Publications Sage CA: Thousand Oaks, CA</publisher-name>
+      <year iso-8601-date="1987">1987</year>
+      <volume>38</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1177/002248718703800308</pub-id>
+      <fpage>34</fpage>
+      <lpage>36</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-simonis2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Simonis</surname><given-names>Juniper L</given-names></name>
+        <name><surname>White</surname><given-names>Ethan P</given-names></name>
+        <name><surname>Ernest</surname><given-names>SK Morgan</given-names></name>
+      </person-group>
+      <article-title>Evaluating probabilistic ecological forecasts</article-title>
+      <source>Ecology</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>102</volume>
+      <issue>8</issue>
+      <pub-id pub-id-type="doi">10.1002/ecy.3431</pub-id>
+      <fpage>e03431</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-teal2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Teal</surname><given-names>Tracy K</given-names></name>
+        <name><surname>Cranston</surname><given-names>Karen A</given-names></name>
+        <name><surname>Lapp</surname><given-names>Hilmar</given-names></name>
+        <name><surname>White</surname><given-names>Ethan</given-names></name>
+        <name><surname>Wilson</surname><given-names>Greg</given-names></name>
+        <name><surname>Ram</surname><given-names>Karthik</given-names></name>
+        <name><surname>Pawlik</surname><given-names>Aleksandra</given-names></name>
+      </person-group>
+      <article-title>Data carpentry: Workshops to increase data literacy for researchers</article-title>
+      <source>International Journal of Digital Curation</source>
+      <year iso-8601-date="2015">2015</year>
+      <volume>10</volume>
+      <pub-id pub-id-type="doi">10.2218/ijdc.v10i1.351</pub-id>
+      <fpage>135</fpage>
+      <lpage>143</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-white2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>White</surname><given-names>Ethan P</given-names></name>
+        <name><surname>Yenni</surname><given-names>Glenda M</given-names></name>
+        <name><surname>Taylor</surname><given-names>Shawn D</given-names></name>
+        <name><surname>Christensen</surname><given-names>Erica M</given-names></name>
+        <name><surname>Bledsoe</surname><given-names>Ellen K</given-names></name>
+        <name><surname>Simonis</surname><given-names>Juniper L</given-names></name>
+        <name><surname>Ernest</surname><given-names>SK Morgan</given-names></name>
+      </person-group>
+      <article-title>Developing an automated iterative near-term forecasting system for an ecological study</article-title>
+      <source>Methods in Ecology and Evolution</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>10</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1111/2041-210X.13104</pub-id>
+      <fpage>332</fpage>
+      <lpage>344</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-white2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>White</surname><given-names>Ethan P</given-names></name>
+        <name><surname>Brym</surname><given-names>Zachary T</given-names></name>
+        <name><surname>Marx</surname><given-names>Andrew J</given-names></name>
+        <name><surname>Riemer</surname><given-names>Kristina</given-names></name>
+        <name><surname>Marconi</surname><given-names>Sergio</given-names></name>
+        <name><surname>Harris</surname><given-names>David J</given-names></name>
+        <name><surname>Cruz</surname><given-names>Virnaliz</given-names></name>
+        <name><surname>Ernest</surname><given-names>SK Morgan</given-names></name>
+      </person-group>
+      <article-title>Data carpentry for biologists: A semester long data carpentry course using ecological and other biological examples</article-title>
+      <source>Journal of Open Source Education</source>
+      <year iso-8601-date="2022">2022</year>
+      <volume>5</volume>
+      <issue>50</issue>
+      <pub-id pub-id-type="doi">10.21105/jose.00139</pub-id>
+      <fpage>139</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-wilson2014">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wilson</surname><given-names>Greg</given-names></name>
+      </person-group>
+      <article-title>Software carpentry: Lessons learned</article-title>
+      <source>F1000Research</source>
+      <publisher-name>Faculty of 1000 Ltd</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <volume>3</volume>
+      <pub-id pub-id-type="doi">10.12688/f1000research.3-62.v2</pub-id>
+      <fpage>62</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-wolkovich2014">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wolkovich</surname><given-names>EM</given-names></name>
+        <name><surname>Cook</surname><given-names>BI</given-names></name>
+        <name><surname>McLauchlan</surname><given-names>KK</given-names></name>
+        <name><surname>Davies</surname><given-names>TJ</given-names></name>
+      </person-group>
+      <article-title>Temporal ecology in the anthropocene</article-title>
+      <source>Ecology letters</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <volume>17</volume>
+      <issue>11</issue>
+      <pub-id pub-id-type="doi">10.1111/ele.12353</pub-id>
+      <fpage>1365</fpage>
+      <lpage>1379</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-yenni2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Yenni</surname><given-names>Glenda M</given-names></name>
+        <name><surname>Christensen</surname><given-names>Erica M</given-names></name>
+        <name><surname>Bledsoe</surname><given-names>Ellen K</given-names></name>
+        <name><surname>Supp</surname><given-names>Sarah R</given-names></name>
+        <name><surname>Diaz</surname><given-names>Renata M</given-names></name>
+        <name><surname>White</surname><given-names>Ethan P</given-names></name>
+        <name><surname>Ernest</surname><given-names>SK Morgan</given-names></name>
+      </person-group>
+      <article-title>Developing a modern data workflow for regularly updated data</article-title>
+      <source>PLoS Biology</source>
+      <publisher-name>Public Library of Science San Francisco, CA USA</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>17</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1371/journal.pbio.3000125</pub-id>
+      <fpage>e3000125</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
