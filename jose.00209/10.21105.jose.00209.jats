@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">209</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00209</article-id>
+<title-group>
+<article-title>A Data Carpentry- Style Metagenomics
+Workshop</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Zirión-Martínez</surname>
+<given-names>Claudia</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Garfias-Gallegos</surname>
+<given-names>Diego</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Arellano-Fernandez</surname>
+<given-names>Tania Vanessa</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Espinosa-Jaime</surname>
+<given-names>Aarón</given-names>
+</name>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Bustos-Díaz</surname>
+<given-names>Edder D</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Lovaco-Flores</surname>
+<given-names>José Abel</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Tejero-Gómez</surname>
+<given-names>Luis Gerardo</given-names>
+</name>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Avelar-Rivas</surname>
+<given-names>J Abraham</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1697-3862</contrib-id>
+<name>
+<surname>Sélem-Mojica</surname>
+<given-names>Nelly</given-names>
+</name>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Laboratorio de Genómica Ecológica y Evolutiva, Langebio,
+Cinvestav, México.</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Laboratorio de Evolución de la Diversidad Metabólica,
+Langebio, Cinvestav, México.</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Laboratorio de Sistemas Genéticos, Langebio, Cinvestav,
+México.</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>BetterLab - C3. Irapuato, México.</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>Centro de Ciencias Matemáticas. UNAM, México.</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-6">
+<institution-wrap>
+<institution>Escuela Nacional de Estudios Superiores, Unidad León, UNAM,
+México.</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2021-07-08">
+<day>8</day>
+<month>7</month>
+<year>2021</year>
+</pub-date>
+<volume>6</volume>
+<issue>67</issue>
+<fpage>209</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Shotgun Metagenomics</kwd>
+<kwd>bash</kwd>
+<kwd>R</kwd>
+<kwd>data processing</kwd>
+<kwd>visualization</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Metagenomic analyses aim to explore the genomic diversity of
+  communities in specific habitats by processing their DNA sequencing
+  data. This analysis is achieved with specialized bioinformatics tools,
+  which often require previous coding experience. Furthermore, beginners
+  can struggle to build a pipeline from raw data to valuable biological
+  insights.
+  <ext-link ext-link-type="uri" xlink:href="https://carpentries.org">The
+  Carpentries</ext-link> hosts open lessons used worldwide to analyze
+  specialized datasets for beginners, including
+  <ext-link ext-link-type="uri" xlink:href="https://datacarpentry.org/genomics-workshop/">a
+  Data Carpentry curriculum for individuals working with genomics
+  sequencing data</ext-link>. However, a lesson addressing the specific
+  challenges associated with metagenomics data and analyses was missing.
+  We created a complete Metagenomics curriculum in
+  <ext-link ext-link-type="uri" xlink:href="https://carpentries-incubator.org">The
+  Carpentries Incubator</ext-link>, adapting and expanding on the Data
+  Carpentry genomics curriculum. The curriculum provides an introduction
+  to programming, teaching learners to access and handle metagenomics
+  data, and to run commands with the software needed for completing
+  metagenomics analyses. Content and exercises have been improved based
+  on experience gathered in teaching the curriculum in three 16-hour
+  online workshops. We expect to continue to enhance this lesson, which
+  we hope is helpful as a teaching resource for new instructors in the
+  field, and as a guide for newcomers wishing to perform metagenomic
+  analyses from scratch.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Bioinformatic tools are now essential to our understanding of
+  biological systems. Open lessons for general-purpose coding languages
+  and specialized topics such as genomics, ecology, and even
+  metagenomics are already available
+  (<xref alt="Darling et al., 2019" rid="ref-darling_dataU003A2019" ref-type="bibr">Darling
+  et al., 2019</xref>),
+  (<xref alt="Lessons, n.d." rid="ref-noauthor_lessons_nodate" ref-type="bibr"><italic>Lessons</italic>,
+  n.d.</xref>),
+  (<xref alt="Kruchten, 2020" rid="ref-kruchten_curricularU003A2020-1" ref-type="bibr">Kruchten,
+  2020</xref>). Nevertheless, a complete guide for shotgun metagenomics,
+  assuming no prior knowledge of coding and provided hardware and
+  software solutions, was missing. We introduce a curriculum to fill
+  this gap, which teaches the skills required to conduct a comprehensive
+  metagenomics workflow with Bash and R programming in a pre-installed
+  remote server.</p>
+</sec>
+<sec id="content-and-learning-objectives">
+  <title>Content and Learning Objectives</title>
+  <p>The curriculum is comprised of four lessons (Fig 1). It assumes no
+  previous programming experience but expects that students understand
+  basic concepts of molecular biology and microbiology. The first two
+  lessons, introductions to project planning and organization and
+  programming in Bash respectively, are adapted from equivalent lessons
+  in the Data Carpentry Genomics curriculum
+  (<xref alt="Becker et al., 2019" rid="ref-becker_datacarpentrygenomics-workshopU003A2019" ref-type="bibr">Becker
+  et al., 2019</xref>). The third part includes a brief introduction to
+  R, and the fourth teaches a complete shotgun metagenomics workflow
+  using public data
+  (<xref alt="Okie et al., 2020" rid="ref-okie_genomicU003A2020" ref-type="bibr">Okie
+  et al., 2020</xref>).</p>
+  <fig>
+    <caption><p>Fig 1.</p></caption>
+    <graphic mimetype="image" mime-subtype="jpeg" xlink:href="media/fig_paper/JOSE_Fig1.jpg" />
+  </fig>
+  <p>Fig 1. The four lessons in the curriculum for a metagenomics
+  workshop.</p>
+</sec>
+<sec id="learning-objectives">
+  <title>Learning objectives</title>
+  <p>Project organization and management for metagenomics - Plan,
+  structure, organize, and document metagenomics data, metadata, and
+  bioinformatics workflow. - Access public data on the NCBI sequence
+  read archive (SRA) database.</p>
+  <p>Introduction to the command-line for metagenomics - Identify the
+  benefits of the command line. - Navigate the file system, create,
+  copy, move, and remove files and directories. - Work with files. -
+  Combine commands and automate repetitive tasks. - Make an organized
+  file structure for a bioinformatics project.</p>
+  <p>Introduction to R for metagenomics - Familiarize with RStudio and R
+  functionality. - Distinguish the different data types. - Create and
+  manipulate data frames. - Use and find help in R libraries.</p>
+  <p>Data processing and visualization for metagenomics - Explain the
+  structure and contents of the data and metadata used in these lessons.
+  - Assess the quality of sequencing data. - Trim and filter sequences
+  based on their quality. - Perform a metagenomic assembly. - Obtain
+  Metagenome-Assembled Genomes and check their quality. - Assign and
+  visualize a taxonomy of reads and contigs. - Explore the diversity in
+  a sample and calculate diversity estimates. - Discover more resources
+  for metagenomics projects.</p>
+</sec>
+<sec id="instructional-design">
+  <title>Instructional Design</title>
+  <p>The workshop includes 16 hours of content with live coding,
+  formative assessment practice, and other supportive elements. During
+  the development of the lessons, we considered three axes of teaching:
+  cloud setup, standardized episodes, and teaching strategies.</p>
+  <list list-type="order">
+    <list-item>
+      <p>Cloud setup: We set up remote machines to standardize the
+      learning environment and teaching experience. This setup lowers
+      entry barriers for students without experience in technical
+      installations and provides enough computing power regardless of
+      individual configuration. Students only need a computer with
+      internet access and a terminal program installed. We also enlist
+      the instructions for setting up the remote machines and an
+      alternative installation guide to be used by people who prefer to
+      follow the lessons on a different computer.</p>
+    </list-item>
+    <list-item>
+      <p>Standardized episodes: Following The Carpentries instructional
+      design, lessons consist of multiple short
+      <italic>episodes</italic> of content, each prefaced with the
+      questions to be answered and the learning objectives for that
+      section, and ending with concrete, clear messages of the learned
+      content.</p>
+    </list-item>
+    <list-item>
+      <p>Teaching strategies</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Live coding: Programming simultaneously with students gives
+          a practical coding experience with examples of mistakes
+          arising and being solved.</p>
+        </list-item>
+        <list-item>
+          <p>Exercises and discussion in small groups: Allows learners
+          to solve problems with peers and incentivizes participation
+          while applying what they learn to strengthen new knowledge and
+          skills. Regular breaks for exercises provide learners and
+          instructors with feedback about progress toward the learning
+          objectives.</p>
+        </list-item>
+        <list-item>
+          <p>Content review: At the end and beginning of each session,
+          we ask learners to revisit, list, and explain the content
+          taught in past lessons. We use a collaborative document where
+          simultaneous written and spoken review helps to reaffirm the
+          content.</p>
+        </list-item>
+      </list>
+    </list-item>
+  </list>
+</sec>
+<sec id="teaching-experience">
+  <title>Teaching Experience</title>
+  <p>Our teaching team includes undergraduate and graduate students,
+  postdocs, and professors, each with different perspectives that enrich
+  the discussion of the lesson. We found it adequate to have two
+  instructors for the online workshops, plus one helper for every five
+  students. We are pleased to have recruited new helpers from the
+  attendees of previous workshops, enlarging and further enriching our
+  teaching community. To promote an interactive learning experience, we
+  use a collaborative live document and small groups to do exercises and
+  discussions. In this way, there are fewer barriers to student’s
+  participation, and they gain practical experience of the different
+  solutions bioinformatic problems can have. We include bonus exercises
+  around the lessons that are not meant to be solved by all the learners
+  but are an opportunity for advanced participants to tackle more
+  challenging tasks. They help to leverage the background and learning
+  speed of the learners and provide opportunities to practice and
+  reinforce the content learned. Another strength of our workshop
+  structure is introducing programming languages followed by a practical
+  example of their usage, so the metagenomic analysis grows while the
+  coding skills learned become meaningful. The lessons are helpful even
+  if the student’s primary goal is to learn coding rather than
+  metagenomics. We ask the attendees to fill out surveys before, during,
+  and after the workshops to adapt our teaching strategies to the
+  current and future learning groups. With the results of these surveys,
+  we have been able to improve the curriculum’s content, explanations,
+  and exercises.</p>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the Project</title>
+  <p>The idea to create a lesson comprising all of the steps required to
+  process and analyze metagenomics data arose when one of the
+  development team wanted to learn how to understand metagenomics data
+  but found it overwhelming even to decide where to start. As someone
+  who already used and knew the advantages of the resources offered by
+  The Carpentries, she recognized the absence of a curriculum about
+  metagenomics on this platform. When she learned of The Carpentries
+  Incubator, she reached out to a fellow student who had experience on
+  the subject and started building the episodes. Other students in the
+  same institute, who were also working on metagenomics, started
+  contributing to the pipelines they were learning. Further team members
+  were recruited as helpers after attending a workshop and later began
+  collaborating to develop the episodes.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>Karina Enríquez Guillén and Rafael Pérez Estrada for testing and
+  improving the lesson content. Diana Oaxaca, Alejandro Pereira Santana,
+  Angélica Ruiz, Brian Bwanya, Ahmed Moustafa and Israel Pichardo, for
+  enriching content and teaching strategy. Angélica Cibrián-Jaramillo,
+  Francisco Barona-Gómez, and Harumi Shimada enabled and promoted the
+  delivery of these lessons among their communities. Developers of Data
+  Carpentry Genomics for their work and ideas. Toby Hodges and Erin
+  Becker for their technical support during the development and delivery
+  of the lessons. Students for their feedback and enthusiasm. We thank
+  UNAM for funding in proyecto PAPIME “Desarrollo de material didáctico
+  de Bioinformática con énfasis en metagenómica para las modalidades
+  presencial y virtual”</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <ref id="ref-darling_dataU003A2019">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Darling</surname><given-names>Aaron E</given-names></name>
+        <name><surname>DeMaere</surname><given-names>Matthew Z</given-names></name>
+        <name><surname>Gaio</surname><given-names>Daniela</given-names></name>
+        <name><surname>Anantanawat</surname><given-names>Kay</given-names></name>
+      </person-group>
+      <article-title>Data for the gene school: Metagenomics workshop</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2019-12-19">2019</year><month>12</month><day>19</day>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-07-19">2021</year><month>07</month><day>19</day></date-in-citation>
+      <uri>https://zenodo.org/record/3585993</uri>
+      <pub-id pub-id-type="doi">10.5281/ZENODO.3585993</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-okie_genomicU003A2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Okie</surname><given-names>Jordan G</given-names></name>
+        <name><surname>Poret-Peterson</surname><given-names>Amisha T</given-names></name>
+        <name><surname>Lee</surname><given-names>Zarraz MP</given-names></name>
+        <name><surname>Richter</surname><given-names>Alexander</given-names></name>
+        <name><surname>Alcaraz</surname><given-names>Luis D</given-names></name>
+        <name><surname>Eguiarte</surname><given-names>Luis E</given-names></name>
+        <name><surname>Siefert</surname><given-names>Janet L</given-names></name>
+        <name><surname>Souza</surname><given-names>Valeria</given-names></name>
+        <name><surname>Dupont</surname><given-names>Chris L</given-names></name>
+        <name><surname>Elser</surname><given-names>James J</given-names></name>
+      </person-group>
+      <article-title>Genomic adaptations in information processing underpin trophic strategy in a whole-ecosystem nutrient enrichment experiment</article-title>
+      <source>eLife</source>
+      <year iso-8601-date="2020-01-28">2020</year><month>01</month><day>28</day>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-07-19">2021</year><month>07</month><day>19</day></date-in-citation>
+      <volume>9</volume>
+      <issn>2050-084X</issn>
+      <uri>https://elifesciences.org/articles/49816</uri>
+      <pub-id pub-id-type="doi">10.7554/eLife.49816</pub-id>
+      <fpage>e49816</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-becker_datacarpentrygenomics-workshopU003A2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Becker</surname><given-names>Erin Alison</given-names></name>
+        <name><surname>Teal</surname><given-names>Tracy</given-names></name>
+        <name><surname>Michonneau</surname><given-names>François</given-names></name>
+        <name><surname>Sane</surname><given-names>Maneesha</given-names></name>
+        <name><surname>Reiter</surname><given-names>Taylor</given-names></name>
+        <name><surname>Williams</surname><given-names>Jason</given-names></name>
+        <name><surname>Charbonneau</surname><given-names>Amanda</given-names></name>
+        <name><surname>Kweskin</surname><given-names>Matthew</given-names></name>
+        <name><surname>Anwar</surname><given-names>Muhammad Zohaib</given-names></name>
+        <name><surname>Cadzow</surname><given-names>Murray</given-names></name>
+        <name><surname>Martinez</surname><given-names>Paula Andrea</given-names></name>
+      </person-group>
+      <article-title>Datacarpentry/genomics-workshop: Data carpentry: Genomics workshop overview, june 2019</article-title>
+      <year iso-8601-date="2019-06-28">2019</year><month>06</month><day>28</day>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-07-19">2021</year><month>07</month><day>19</day></date-in-citation>
+      <uri>https://zenodo.org/record/3260309</uri>
+      <pub-id pub-id-type="doi">10.5281/ZENODO.3260309</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_lessons_nodate">
+    <element-citation publication-type="webpage">
+      <article-title>Lessons</article-title>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-09-12">2021</year><month>09</month><day>12</day></date-in-citation>
+      <uri>https://datacarpentry.org/lessons/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-kruchten_curricularU003A2020-1">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kruchten</surname><given-names>Anne E.</given-names></name>
+      </person-group>
+      <article-title>A curricular bioinformatics approach to teaching undergraduates to analyze metagenomic datasets using r</article-title>
+      <source>Frontiers in Microbiology</source>
+      <year iso-8601-date="2020">2020</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2021-09-12">2021</year><month>09</month><day>12</day></date-in-citation>
+      <volume>11</volume>
+      <issn>1664-302X</issn>
+      <uri>https://www.frontiersin.org/article/10.3389/fmicb.2020.578600</uri>
+      <pub-id pub-id-type="doi">10.3389/fmicb.2020.578600</pub-id>
+      <fpage>2135</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
