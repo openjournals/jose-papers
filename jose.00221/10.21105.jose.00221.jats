@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">221</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00221</article-id>
+<title-group>
+<article-title>Check your outliers! An introduction to identifying
+statistical outliers in R with
+<italic>easystats</italic></article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-4315-6788</contrib-id>
+<name>
+<surname>Thériault</surname>
+<given-names>Rémi</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-4287-4801</contrib-id>
+<name>
+<surname>Ben-Shachar</surname>
+<given-names>Mattan S.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1995-6531</contrib-id>
+<name>
+<surname>Patil</surname>
+<given-names>Indrajeet</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-8895-3206</contrib-id>
+<name>
+<surname>Lüdecke</surname>
+<given-names>Daniel</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9560-6336</contrib-id>
+<name>
+<surname>Wiernik</surname>
+<given-names>Brenton M.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5375-9967</contrib-id>
+<name>
+<surname>Makowski</surname>
+<given-names>Dominique</given-names>
+</name>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Department of Psychology, Université du Québec à Montréal,
+Montréal, Québec, Canada</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Independent Researcher, Ramat Gan, Israel</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Center for Humans and Machines, Max Planck Institute for
+Human Development, Berlin, Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Institute of Medical Sociology, University Medical Center
+Hamburg-Eppendorf, Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>Independent Researcher, Tampa, FL, USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-6">
+<institution-wrap>
+<institution>School of Psychology, University of Sussex, Brighton,
+UK</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-06-07">
+<day>7</day>
+<month>6</month>
+<year>2023</year>
+</pub-date>
+<volume>6</volume>
+<issue>68</issue>
+<fpage>221</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>R</kwd>
+<kwd>univariate outliers</kwd>
+<kwd>multivariate outliers</kwd>
+<kwd>robust detection methods</kwd>
+<kwd>easystats</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Beyond the challenge of keeping up-to-date with current best
+  practices regarding the diagnosis and treatment of outliers, an
+  additional difficulty arises concerning the mathematical
+  implementation of the recommended methods. Here, we provide an
+  overview of current recommendations and best practices and demonstrate
+  how they can easily and conveniently be implemented in the R
+  statistical computing software, using the
+  <italic>{performance}</italic> package of the
+  <italic>easystats</italic> ecosystem. We cover univariate,
+  multivariate, and model-based statistical outlier detection methods,
+  their recommended threshold, standard output, and plotting methods. We
+  conclude by reviewing the different theoretical types of outliers,
+  whether to exclude or winsorize them, and the importance of
+  transparency.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Real-life data often contain observations that can be considered
+  <italic>abnormal</italic> when compared to the main population. The
+  cause of it can be hard to assess and the boundaries of “abnormal”,
+  difficult to define—they may belong to a different distribution
+  (originating from a different generative process) or simply be extreme
+  cases, statistically rare but not impossible.</p>
+  <p>Nonetheless, the improper handling of these outliers can
+  substantially affect statistical model estimations, biasing effect
+  estimations and weakening the models’ predictive performance. It is
+  thus essential to address this problem in a thoughtful manner. Yet,
+  despite the existence of established recommendations and guidelines,
+  many researchers still do not treat outliers in a consistent manner,
+  or do so using inappropriate strategies
+  (<xref alt="Leys et al., 2013" rid="ref-leys2013outliers" ref-type="bibr">Leys
+  et al., 2013</xref>;
+  <xref alt="Simmons et al., 2011" rid="ref-simmons2011false" ref-type="bibr">Simmons
+  et al., 2011</xref>).</p>
+  <p>One possible reason is that researchers are not aware of the
+  existing recommendations, or do not know how to implement them using
+  their analysis software. In this paper, we show how to follow current
+  best practices for automatic and reproducible statistical outlier
+  detection (SOD) using R and the <italic>{performance}</italic> package
+  (<xref alt="Lüdecke et al., 2021" rid="ref-ludecke2021performance" ref-type="bibr">Lüdecke
+  et al., 2021</xref>), which is part of the <italic>easystats</italic>
+  ecosystem of packages that build an R framework for easy statistical
+  modeling, visualization, and reporting
+  (<xref alt="Lüdecke et al., 2019/2023" rid="ref-easystatspackage" ref-type="bibr">Lüdecke
+  et al., 2019/2023</xref>). Installation instructions can be found on
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/easystats/performance">GitHub</ext-link>
+  or its
+  <ext-link ext-link-type="uri" xlink:href="https://easystats.github.io/performance/">website</ext-link>,
+  and its list of dependencies on
+  <ext-link ext-link-type="uri" xlink:href="https://cran.r-project.org/package=performance">CRAN</ext-link>.</p>
+  <p>The instructional materials that follow are aimed at an audience of
+  researchers who want to follow good practices, and are appropriate for
+  advanced undergraduate students, graduate students, professors, or
+  professionals having to deal with the nuances of outlier
+  treatment.</p>
+</sec>
+<sec id="identifying-outliers">
+  <title>Identifying Outliers</title>
+  <p>Although many researchers attempt to identify outliers with
+  measures based on the mean (e.g., <italic>z</italic> scores), those
+  methods are problematic because the mean and standard deviation
+  themselves are not robust to the influence of outliers and those
+  methods also assume normally distributed data (i.e., a Gaussian
+  distribution). Therefore, current guidelines recommend using robust
+  methods to identify outliers, such as those relying on the median as
+  opposed to the mean
+  (<xref alt="Leys et al., 2013" rid="ref-leys2013outliers" ref-type="bibr">Leys
+  et al., 2013</xref>,
+  <xref alt="2018" rid="ref-leys2018outliers" ref-type="bibr">2018</xref>,
+  <xref alt="2019" rid="ref-leys2019outliers" ref-type="bibr">2019</xref>).</p>
+  <p>Nonetheless, which exact outlier method to use depends on many
+  factors. In some cases, eye-gauging odd observations can be an
+  appropriate solution, though many researchers will favour algorithmic
+  solutions to detect potential outliers, for example, based on a
+  continuous value expressing the observation stands out from the
+  others.</p>
+  <p>One of the factors to consider when selecting an algorithmic
+  outlier detection method is the statistical test of interest.
+  Identifying observations the regression model does not fit well can
+  help find information relevant to our specific research context. This
+  approach, known as model-based outliers detection (as outliers are
+  extracted after the statistical model has been fit), can be contrasted
+  with distribution-based outliers detection, which is based on the
+  distance between an observation and the “center” of its population.
+  Various quantification strategies of this distance exist for the
+  latter, both univariate (involving only one variable at a time) or
+  multivariate (involving multiple variables).</p>
+  <p>When no method is readily available to detect model-based outliers,
+  such as for structural equation modelling (SEM), looking for
+  multivariate outliers may be of relevance. For simple tests
+  (<italic>t</italic> tests or correlations) that compare values of the
+  same variable, it can be appropriate to check for univariate outliers.
+  However, univariate methods can give false positives since
+  <italic>t</italic> tests and correlations, ultimately, are also
+  models/multivariable statistics. They are in this sense more limited,
+  but we show them nonetheless for educational purposes.</p>
+  <p>Importantly, whatever approach researchers choose remains a
+  subjective decision, which usage (and rationale) must be transparently
+  documented and reproducible
+  (<xref alt="Leys et al., 2019" rid="ref-leys2019outliers" ref-type="bibr">Leys
+  et al., 2019</xref>). Researchers should commit (ideally in a
+  preregistration) to an outlier treatment method before collecting the
+  data. They should report in the paper their decisions and details of
+  their methods, as well as any deviation from their original plan.
+  These transparency practices can help reduce false positives due to
+  excessive researchers’ degrees of freedom (i.e., choice flexibility
+  throughout the analysis). In the following section, we will go through
+  each of the mentioned methods and provide examples on how to implement
+  them with R.</p>
+  <sec id="univariate-outliers">
+    <title>Univariate Outliers</title>
+    <p>Researchers frequently attempt to identify outliers using
+    measures of deviation from the center of a variable’s distribution.
+    One of the most popular such procedure is the <italic>z</italic>
+    score transformation, which computes the distance in standard
+    deviation (SD) from the mean. However, as mentioned earlier, this
+    popular method is not robust. Therefore, for univariate outliers, it
+    is recommended to use the median along with the Median Absolute
+    Deviation (MAD), which are more robust than the interquartile range
+    or the mean and its standard deviation
+    (<xref alt="Leys et al., 2013" rid="ref-leys2013outliers" ref-type="bibr">Leys
+    et al., 2013</xref>,
+    <xref alt="2019" rid="ref-leys2019outliers" ref-type="bibr">2019</xref>).</p>
+    <p>Researchers can identify outliers based on robust (i.e.,
+    MAD-based) <italic>z</italic> scores using the
+    <monospace>check_outliers()</monospace> function of the
+    <italic>{performance}</italic> package, by specifying
+    <monospace>method = &quot;zscore_robust&quot;</monospace>.<xref ref-type="fn" rid="fn1">1</xref>
+    Although Leys et al.
+    (<xref alt="2013" rid="ref-leys2013outliers" ref-type="bibr">2013</xref>)
+    suggest a default threshold of 2.5 and Leys et al.
+    (<xref alt="2019" rid="ref-leys2019outliers" ref-type="bibr">2019</xref>)
+    a threshold of 3, <italic>{performance}</italic> uses by default a
+    less conservative threshold of
+    ~3.29.<xref ref-type="fn" rid="fn2">2</xref> That is, data points
+    will be flagged as outliers if they go beyond +/- ~3.29 MAD. Users
+    can adjust this threshold using the <monospace>threshold</monospace>
+    argument.</p>
+    <p>Below we provide example code using the
+    <monospace>mtcars</monospace> dataset, which was extracted from the
+    1974 <italic>Motor Trend</italic> US magazine. The dataset contains
+    fuel consumption and 10 characteristics of automobile design and
+    performance for 32 different car models (see
+    <monospace>?mtcars</monospace> for details). We chose this dataset
+    because it is accessible from base R and familiar to many R users.
+    We might want to conduct specific statistical analyses on this data
+    set, say, <italic>t</italic> tests or structural equation modelling,
+    but first, we want to check for outliers that may influence those
+    test results.</p>
+    <p>Because the automobile names are stored as column names in
+    <monospace>mtcars</monospace>, we first have to convert them to an
+    ID column to benefit from the
+    <monospace>check_outliers()</monospace> ID argument. Furthermore, we
+    only really need a couple columns for this demonstration, so we
+    choose the first four (<monospace>mpg</monospace> = Miles/(US)
+    gallon; <monospace>cyl</monospace> = Number of cylinders;
+    <monospace>disp</monospace> = Displacement;
+    <monospace>hp</monospace> = Gross horsepower). Finally, because
+    there are no outliers in this dataset, we add two artificial
+    outliers before running our function.</p>
+    <code language="r script">library(performance)
+
+# Create some artificial outliers and an ID column
+data &lt;- rbind(mtcars[1:4], 42, 55)
+data &lt;- cbind(car = row.names(data), data)
+
+outliers &lt;- check_outliers(data, method = &quot;zscore_robust&quot;, ID = &quot;car&quot;)
+outliers</code>
+    <preformat>#&gt; 2 outliers detected: cases 33, 34.
+#&gt; - Based on the following method and threshold: zscore_robust (3.291).
+#&gt; - For variables: mpg, cyl, disp, hp.
+#&gt; 
+#&gt; -----------------------------------------------------------------------------
+#&gt;  
+#&gt; The following observations were considered outliers for two or more
+#&gt;   variables by at least one of the selected methods:
+#&gt; 
+#&gt;   Row car n_Zscore_robust
+#&gt; 1  33  33               2
+#&gt; 2  34  34               2
+#&gt; 
+#&gt; -----------------------------------------------------------------------------
+#&gt; Outliers per variable (zscore_robust): 
+#&gt; 
+#&gt; $mpg
+#&gt;    Row car Distance_Zscore_robust
+#&gt; 33  33  33               3.709699
+#&gt; 34  34  34               5.848328
+#&gt; 
+#&gt; $cyl
+#&gt;    Row car Distance_Zscore_robust
+#&gt; 33  33  33               12.14083
+#&gt; 34  34  34               16.52502</preformat>
+    <p>What we see is that <monospace>check_outliers()</monospace> with
+    the robust <italic>z</italic> score method detected two outliers:
+    cases 33 and 34, which were the observations we added ourselves.
+    They were flagged for two variables specifically:
+    <monospace>mpg</monospace> (Miles/(US) gallon) and
+    <monospace>cyl</monospace> (Number of cylinders), and the output
+    provides their exact <italic>z</italic> score for those
+    variables.</p>
+    <p>We describe how to deal with those cases in more details later in
+    the paper, but should we want to exclude these detected outliers
+    from the main dataset, we can extract row numbers using
+    <monospace>which()</monospace> on the output object, which can then
+    be used for indexing:</p>
+    <code language="r script">which(outliers)</code>
+    <preformat>#&gt; [1] 33 34</preformat>
+    <code language="r script">data_clean &lt;- data[-which(outliers), ]</code>
+    <p>Other univariate methods are available, such as using the
+    interquartile range (IQR), or based on different intervals, such as
+    the Highest Density Interval (HDI) or the Bias Corrected and
+    Accelerated Interval (BCI). These methods are documented and
+    described in the function’s
+    <ext-link ext-link-type="uri" xlink:href="https://easystats.github.io/performance/reference/check_outliers.html">help
+    page</ext-link>.</p>
+  </sec>
+  <sec id="multivariate-outliers">
+    <title>Multivariate Outliers</title>
+    <p>Univariate outliers can be useful when the focus is on a
+    particular variable, for instance the reaction time, as extreme
+    values might be indicative of inattention or non-task-related
+    behavior<xref ref-type="fn" rid="fn3">3</xref>.</p>
+    <p>However, in many scenarios, variables of a data set are not
+    independent, and an abnormal observation will impact multiple
+    dimensions. For instance, a participant giving random answers to a
+    questionnaire. In this case, computing the <italic>z</italic> score
+    for each of the questions might not lead to satisfactory results.
+    Instead, one might want to look at these variables together.</p>
+    <p>One common approach for this is to compute multivariate distance
+    metrics such as the Mahalanobis distance. Although the Mahalanobis
+    distance is very popular, just like the regular <italic>z</italic>
+    scores method, it is not robust and is heavily influenced by the
+    outliers themselves. Therefore, for multivariate outliers, it is
+    recommended to use the Minimum Covariance Determinant, a robust
+    version of the Mahalanobis distance (MCD,
+    <xref alt="Leys et al., 2018" rid="ref-leys2018outliers" ref-type="bibr">Leys
+    et al., 2018</xref>,
+    <xref alt="2019" rid="ref-leys2019outliers" ref-type="bibr">2019</xref>).</p>
+    <p>In <italic>{performance}</italic>’s
+    <monospace>check_outliers()</monospace>, one can use this approach
+    with
+    <monospace>method = &quot;mcd&quot;</monospace>.<xref ref-type="fn" rid="fn4">4</xref></p>
+    <code language="r script">outliers &lt;- check_outliers(data, method = &quot;mcd&quot;)
+outliers</code>
+    <preformat>#&gt; 9 outliers detected: cases 7, 15, 16, 17, 24, 29, 31, 33, 34.
+#&gt; - Based on the following method and threshold: mcd (20).
+#&gt; - For variables: mpg, cyl, disp, hp.</preformat>
+    <p>Here, we detected 9 multivariate outliers (i.e,. when looking at
+    all variables of our dataset together).</p>
+    <p>Other multivariate methods are available, such as another type of
+    robust Mahalanobis distance that in this case relies on an
+    orthogonalized Gnanadesikan-Kettenring pairwise estimator
+    (<xref alt="Gnanadesikan &amp; Kettenring, 1972" rid="ref-gnanadesikan1972robust" ref-type="bibr">Gnanadesikan
+    &amp; Kettenring, 1972</xref>). These methods are documented and
+    described in the function’s
+    <ext-link ext-link-type="uri" xlink:href="https://easystats.github.io/performance/reference/check_outliers.html">help
+    page</ext-link>.</p>
+  </sec>
+  <sec id="model-based-outliers">
+    <title>Model-Based Outliers</title>
+    <p>Working with regression models creates the possibility of using
+    model-based SOD methods. These methods rely on the concept of
+    <italic>leverage</italic>, that is, how much influence a given
+    observation can have on the model estimates. If few observations
+    have a relatively strong leverage/influence on the model, one can
+    suspect that the model’s estimates are biased by these observations,
+    in which case flagging them as outliers could prove helpful (see
+    next section, “Handling Outliers”).</p>
+    <p>In {performance}, two such model-based SOD methods are currently
+    available: Cook’s distance, for regular regression models, and
+    Pareto, for Bayesian models. As such,
+    <monospace>check_outliers()</monospace> can be applied directly on
+    regression model objects, by simply specifying
+    <monospace>method = &quot;cook&quot;</monospace> (or
+    <monospace>method = &quot;pareto&quot;</monospace> for Bayesian
+    models).<xref ref-type="fn" rid="fn5">5</xref></p>
+    <p>Currently, most lm models are supported (with the exception of
+    <monospace>glmmTMB</monospace>, <monospace>lmrob</monospace>, and
+    <monospace>glmrob</monospace> models), as long as they are supported
+    by the underlying functions
+    <monospace>stats::cooks.distance()</monospace> (or
+    <monospace>loo::pareto_k_values()</monospace>) and
+    <monospace>insight::get_data()</monospace> (for a full list of the
+    225 models currently supported by the <monospace>insight</monospace>
+    package, see
+    https://easystats.github.io/insight/#list-of-supported-models-by-class).
+    Also note that although <monospace>check_outliers()</monospace>
+    supports the pipe operators (<monospace>|&gt;</monospace> or
+    <monospace>%&gt;%</monospace>), it does not support
+    <monospace>tidymodels</monospace> at this time. We show a demo
+    below.</p>
+    <code language="r script">model &lt;- lm(disp ~ mpg * disp, data = data)
+outliers &lt;- check_outliers(model, method = &quot;cook&quot;)
+outliers</code>
+    <preformat>#&gt; 1 outlier detected: case 34.
+#&gt; - Based on the following method and threshold: cook (0.708).
+#&gt; - For variable: (Whole model).</preformat>
+    <p>Using the model-based outlier detection method, we identified a
+    single outlier.</p>
+    <p>Table 1 below summarizes which methods to use in which cases, and
+    with what threshold. The recommended thresholds are the default
+    thresholds.</p>
+    <sec id="table-1">
+      <title>Table 1</title>
+      <p><italic>Summary of Statistical Outlier Detection Methods
+      Recommendations</italic></p>
+      <graphic mimetype="image" mime-subtype="jpeg" xlink:href="media/table1.jpg" />
+      <p>All <monospace>check_outliers()</monospace> output objects
+      possess a <monospace>plot()</monospace> method, meaning it is also
+      possible to visualize the outliers using the generic
+      <monospace>plot()</monospace> function on the resulting outlier
+      object after loading the {see} package (Figure 1).</p>
+      <code language="r script">plot(outliers)</code>
+      <fig id="figU003Amodel_fig">
+        <caption><p>Visual depiction of outliers based on Cook’s
+        distance (leverage and standardized residuals), based on the
+        fitted model.</p></caption>
+        <graphic mimetype="application" mime-subtype="pdf" xlink:href="media/paper_files/figure-latex/model_fig-1.pdf" />
+      </fig>
+    </sec>
+  </sec>
+  <sec id="cooks-distance-vs.-mcd">
+    <title>Cook’s Distance vs. MCD</title>
+    <p>Leys et al.
+    (<xref alt="2018" rid="ref-leys2018outliers" ref-type="bibr">2018</xref>)
+    report a preference for the MCD method over Cook’s distance. This is
+    because Cook’s distance removes one observation at a time and checks
+    its corresponding influence on the model each time
+    (<xref alt="Cook, 1977" rid="ref-cook1977detection" ref-type="bibr">Cook,
+    1977</xref>), and flags any observation that has a large influence.
+    In the view of these authors, when there are several outliers, the
+    process of removing a single outlier at a time is problematic as the
+    model remains “contaminated” or influenced by other possible
+    outliers in the model, rendering this method suboptimal in the
+    presence of multiple outliers.</p>
+    <p>However, distribution-based approaches are not a silver bullet
+    either, and there are cases where the usage of methods agnostic to
+    theoretical and statistical models of interest might be problematic.
+    For example, a very tall person would be expected to also be much
+    heavier than average, but that would still fit with the expected
+    association between height and weight (i.e., it would be in line
+    with a model such as <monospace>weight ~ height</monospace>). In
+    contrast, using multivariate outlier detection methods there may
+    flag this person as being an outlier—being unusual on two variables,
+    height and weight—even though the pattern fits perfectly with our
+    predictions.</p>
+    <p>Finally, unusual observations happen naturally: extreme
+    observations are expected even when taken from a normal
+    distribution. While statistical models can integrate this
+    “expectation”, multivariate outlier methods might be too
+    conservative, flagging too many observations despite belonging to
+    the right generative process. For these reasons, we believe that
+    model-based methods are still preferable to the MCD when using
+    supported regression models. Additionally, if the presence of
+    multiple outliers is a significant concern, regression methods that
+    are more robust to outliers should be considered—like
+    <italic>t</italic> regression or quantile regression—as they render
+    their precise identification less critical
+    (<xref alt="McElreath, 2020" rid="ref-mcelreath2020statistical" ref-type="bibr">McElreath,
+    2020</xref>).</p>
+  </sec>
+  <sec id="composite-outlier-score">
+    <title>Composite Outlier Score</title>
+    <p>The <italic>{performance}</italic> package also offers an
+    alternative, consensus-based approach that combines several methods,
+    based on the assumption that different methods provide different
+    angles of looking at a given problem. By applying a variety of
+    methods, one can hope to “triangulate” the true outliers (those
+    consistently flagged by multiple methods) and thus attempt to
+    minimize false positives.</p>
+    <p>In practice, this approach computes a composite outlier score,
+    formed of the average of the binary (0 or 1) classification results
+    of each method. It represents the probability that each observation
+    is classified as an outlier by at least one method. The default
+    decision rule classifies rows with composite outlier scores superior
+    or equal to 0.5 as outlier observations (i.e., that were classified
+    as outliers by at least half of the methods). In
+    <italic>{performance}</italic>’s
+    <monospace>check_outliers()</monospace>, one can use this approach
+    by including all desired methods in the corresponding argument.</p>
+    <code language="r script">outliers &lt;- check_outliers(model, method = c(&quot;zscore_robust&quot;, &quot;mcd&quot;, &quot;cook&quot;))
+which(outliers)</code>
+    <preformat>#&gt; [1] 33 34</preformat>
+    <p>Outliers (counts or per variables) for individual methods can
+    then be obtained through attributes. For example:</p>
+    <code language="r script">attributes(outliers)$outlier_var$zscore_robust</code>
+    <preformat>#&gt; $mpg
+#&gt;    Row Distance_Zscore_robust
+#&gt; 33  33               3.709699
+#&gt; 34  34               5.848328</preformat>
+    <p>An example sentence for reporting the usage of the composite
+    method could be:</p>
+    <disp-quote>
+      <p>Based on a composite outlier score (see the ‘check_outliers()’
+      function in the ‘performance’ R package,
+      <xref alt="Lüdecke et al., 2021" rid="ref-ludecke2021performance" ref-type="bibr">Lüdecke
+      et al., 2021</xref>) obtained via the joint application of
+      multiple outliers detection algorithms ((a) median absolute
+      deviation (MAD)-based robust <italic>z</italic> scores,
+      <xref alt="Leys et al., 2013" rid="ref-leys2013outliers" ref-type="bibr">Leys
+      et al., 2013</xref>; (b) Mahalanobis minimum covariance
+      determinant (MCD),
+      <xref alt="Leys et al., 2019" rid="ref-leys2019outliers" ref-type="bibr">Leys
+      et al., 2019</xref>; and (c) Cook’s distance,
+      <xref alt="Cook, 1977" rid="ref-cook1977detection" ref-type="bibr">Cook,
+      1977</xref>), we excluded two participants that were classified as
+      outliers by at least half of the methods used.</p>
+    </disp-quote>
+  </sec>
+</sec>
+<sec id="handling-outliers">
+  <title>Handling Outliers</title>
+  <p>The above section demonstrated how to identify outliers using the
+  <monospace>check_outliers()</monospace> function in the
+  <italic>{performance}</italic> package. But what should we do with
+  these outliers once identified? Although it is common to automatically
+  discard any observation that has been marked as “an outlier” as if it
+  might infect the rest of the data with its statistical ailment, we
+  believe that the use of SOD methods is but one step in the
+  get-to-know-your-data pipeline; a researcher or analyst’s
+  <italic>domain knowledge</italic> must be involved in the decision of
+  how to deal with observations marked as outliers by means of SOD.
+  Indeed, automatic tools can help detect outliers, but they are nowhere
+  near perfect. Although they can be useful to flag suspect data, they
+  can have misses and false alarms, and they cannot replace human eyes
+  and proper vigilance from the researcher. If you do end up manually
+  inspecting your data for outliers, it can be helpful to think of
+  outliers as belonging to different types of outliers, or categories,
+  which can help decide what to do with a given outlier.</p>
+  <sec id="error-interesting-and-random-outliers">
+    <title>Error, Interesting, and Random Outliers</title>
+    <p>Leys et al.
+    (<xref alt="2019" rid="ref-leys2019outliers" ref-type="bibr">2019</xref>)
+    distinguish between error outliers, interesting outliers, and random
+    outliers. <italic>Error outliers</italic> are likely due to human
+    error and should be corrected before data analysis or outright
+    removed since they are invalid observations. <italic>Interesting
+    outliers</italic> are not due to technical error and may be of
+    theoretical interest; it might thus be relevant to investigate them
+    further even though they should be removed from the current analysis
+    of interest. <italic>Random outliers</italic> are assumed to be due
+    to chance alone and to belong to the correct distribution and,
+    therefore, should be retained.</p>
+    <p>It is recommended to <italic>keep</italic> observations which are
+    expected to be part of the distribution of interest, even if they
+    are outliers
+    (<xref alt="Leys et al., 2019" rid="ref-leys2019outliers" ref-type="bibr">Leys
+    et al., 2019</xref>). However, if it is suspected that the outliers
+    belong to an alternative distribution, then those observations could
+    have a large impact on the results and call into question their
+    robustness, especially if significance is conditional on their
+    inclusion, so should be removed.</p>
+    <p>We should also keep in mind that there might be error outliers
+    that are not detected by statistical tools, but should nonetheless
+    be found and removed. For example, if we are studying the effects of
+    X on Y among teenagers and we have one observation from a
+    20-year-old, this observation might not be a <italic>statistical
+    outlier</italic>, but it is an outlier in the
+    <italic>context</italic> of our research, and should be discarded.
+    We could call these observations <italic>undetected</italic> error
+    outliers, in the sense that although they do not statistically stand
+    out, they do not belong to the theoretical or empirical distribution
+    of interest (e.g., teenagers). In this way, we should not blindly
+    rely on statistical outlier detection methods; doing our due
+    diligence to investigate undetected error outliers relative to our
+    specific research question is also essential for valid
+    inferences.</p>
+  </sec>
+  <sec id="winsorization">
+    <title>Winsorization</title>
+    <p><italic>Removing</italic> outliers can in this case be a valid
+    strategy, and ideally one would report results with and without
+    outliers to see the extent of their impact on results. This approach
+    however can reduce statistical power. Therefore, some propose a
+    <italic>recoding</italic> approach, namely, winsorization: bringing
+    outliers back within acceptable limits (e.g., 3 MADs,
+    <xref alt="Tukey &amp; McLaughlin, 1963" rid="ref-tukey1963less" ref-type="bibr">Tukey
+    &amp; McLaughlin, 1963</xref>). However, if possible, it is
+    recommended to collect enough data so that even after removing
+    outliers, there is still sufficient statistical power without having
+    to resort to winsorization
+    (<xref alt="Leys et al., 2019" rid="ref-leys2019outliers" ref-type="bibr">Leys
+    et al., 2019</xref>).</p>
+    <p>The <italic>easystats</italic> ecosystem makes it easy to
+    incorporate this step into your workflow through the
+    <monospace>winsorize()</monospace> function of
+    <italic>{datawizard}</italic>, a lightweight R package to facilitate
+    data wrangling and statistical transformations
+    (<xref alt="Patil et al., 2022" rid="ref-patil2022datawizard" ref-type="bibr">Patil
+    et al., 2022</xref>). This procedure will bring back univariate
+    outliers within the limits of ‘acceptable’ values, based either on
+    the percentile, the <italic>z</italic> score, or its robust
+    alternative based on the MAD.</p>
+  </sec>
+  <sec id="the-importance-of-transparency">
+    <title>The Importance of Transparency</title>
+    <p>Finally, it is a critical part of a sound outlier treatment that
+    regardless of which SOD method used, it should be reported in a
+    reproducible manner. Ideally, the handling of outliers should be
+    specified <italic>a priori</italic> with as much detail as possible,
+    and preregistered, to limit researchers’ degrees of freedom and
+    therefore risks of false positives
+    (<xref alt="Leys et al., 2019" rid="ref-leys2019outliers" ref-type="bibr">Leys
+    et al., 2019</xref>). This is especially true given that interesting
+    outliers and random outliers are often times hard to distinguish in
+    practice. Thus, researchers should always prioritize transparency
+    and report all of the following information: (a) how many outliers
+    were identified (including percentage); (b) according to which
+    method and criteria, (c) using which function of which R package (if
+    applicable), and (d) how they were handled (excluded or winsorized,
+    if the latter, using what threshold). If at all possible, (e) the
+    corresponding code script along with the data should be shared on a
+    public repository like the Open Science Framework (OSF), so that the
+    exclusion criteria can be reproduced precisely.</p>
+  </sec>
+</sec>
+</body>
+<back>
+<ref-list>
+  <ref id="ref-leys2019outliers">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Leys</surname><given-names>Christophe</given-names></name>
+        <name><surname>Delacre</surname><given-names>Marie</given-names></name>
+        <name><surname>Mora</surname><given-names>Youri L.</given-names></name>
+        <name><surname>Lakens</surname><given-names>Daniël</given-names></name>
+        <name><surname>Ley</surname><given-names>Christophe</given-names></name>
+      </person-group>
+      <article-title>How to classify, detect, and manage univariate and multivariate outliers, with emphasis on pre-registration</article-title>
+      <source>International Review of Social Psychology</source>
+      <year iso-8601-date="2019">2019</year>
+      <pub-id pub-id-type="doi">10.5334/irsp.289</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-leys2013outliers">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Leys</surname><given-names>Christophe</given-names></name>
+        <name><surname>Ley</surname><given-names>Christophe</given-names></name>
+        <name><surname>Klein</surname><given-names>Olivier</given-names></name>
+        <name><surname>Bernard</surname><given-names>Philippe</given-names></name>
+        <name><surname>Licata</surname><given-names>Laurent</given-names></name>
+      </person-group>
+      <article-title>Detecting outliers: Do not use standard deviation around the mean, use absolute deviation around the median</article-title>
+      <source>Journal of Experimental Social Psychology</source>
+      <year iso-8601-date="2013">2013</year>
+      <volume>49</volume>
+      <issue>4</issue>
+      <uri>https://doi.org/10.1016/j.jesp.2013.03.013</uri>
+      <pub-id pub-id-type="doi">10.1016/j.jesp.2013.03.013</pub-id>
+      <fpage>764</fpage>
+      <lpage>766</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-leys2018outliers">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Leys</surname><given-names>Christophe</given-names></name>
+        <name><surname>Klein</surname><given-names>Olivier</given-names></name>
+        <name><surname>Dominicy</surname><given-names>Yves</given-names></name>
+        <name><surname>Ley</surname><given-names>Christophe</given-names></name>
+      </person-group>
+      <article-title>Detecting multivariate outliers: Use a robust variant of the mahalanobis distance</article-title>
+      <source>Journal of Experimental Social Psychology</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>74</volume>
+      <issn>0022-1031</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0022103117302123</uri>
+      <pub-id pub-id-type="doi">10.1016/j.jesp.2017.09.011</pub-id>
+      <fpage>150</fpage>
+      <lpage>156</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-simmons2011false">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Simmons</surname><given-names>Joseph P.</given-names></name>
+        <name><surname>Nelson</surname><given-names>Leif D.</given-names></name>
+        <name><surname>Simonsohn</surname><given-names>Uri</given-names></name>
+      </person-group>
+      <article-title>False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant</article-title>
+      <source>Psychological Science</source>
+      <year iso-8601-date="2011">2011</year>
+      <volume>22</volume>
+      <issue>11</issue>
+      <uri>https://doi.org/10.1177/0956797611417632</uri>
+      <pub-id pub-id-type="doi">10.1177/0956797611417632</pub-id>
+      <fpage>1359</fpage>
+      <lpage>1366</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-easystatspackage">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Lüdecke</surname><given-names>Daniel</given-names></name>
+        <name><surname>Makowski</surname><given-names>Dominique</given-names></name>
+        <name><surname>Ben-Shachar</surname><given-names>Mattan S.</given-names></name>
+        <name><surname>Patil</surname><given-names>Indrajeet</given-names></name>
+        <name><surname>Wiernik</surname><given-names>Brenton M.</given-names></name>
+        <name><surname>Bacher</surname><given-names>Etienne</given-names></name>
+        <name><surname>Thériault</surname><given-names>Rémi</given-names></name>
+      </person-group>
+      <article-title>easystats: Streamline model interpretation, visualization, and reporting</article-title>
+      <year iso-8601-date="2023-02-04">2023</year><month>02</month><day>04</day>
+      <uri>https://easystats.github.io/easystats/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-ludecke2021performance">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lüdecke</surname><given-names>Daniel</given-names></name>
+        <name><surname>Ben-Shachar</surname><given-names>Mattan S.</given-names></name>
+        <name><surname>Patil</surname><given-names>Indrajeet</given-names></name>
+        <name><surname>Waggoner</surname><given-names>Philip</given-names></name>
+        <name><surname>Makowski</surname><given-names>Dominique</given-names></name>
+      </person-group>
+      <article-title>performance: An R package for assessment, comparison and testing of statistical models</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>6</volume>
+      <issue>60</issue>
+      <uri>https://doi.org/10.21105/joss.03139</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.03139</pub-id>
+      <fpage>3139</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-patil2022datawizard">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Patil</surname><given-names>Indrajeet</given-names></name>
+        <name><surname>Makowski</surname><given-names>Dominique</given-names></name>
+        <name><surname>Ben-Shachar</surname><given-names>Mattan S.</given-names></name>
+        <name><surname>Wiernik</surname><given-names>Brenton M.</given-names></name>
+        <name><surname>Bacher</surname><given-names>Etienne</given-names></name>
+        <name><surname>Lüdecke</surname><given-names>Daniel</given-names></name>
+      </person-group>
+      <article-title>datawizard: An R package for easy data preparation and statistical transformations</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2022">2022</year>
+      <volume>7</volume>
+      <issue>78</issue>
+      <pub-id pub-id-type="doi">10.21105/joss.04684</pub-id>
+      <fpage>4684</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-cook1977detection">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cook</surname><given-names>R. Dennis</given-names></name>
+      </person-group>
+      <article-title>Detection of influential observation in linear regression</article-title>
+      <source>Technometrics</source>
+      <publisher-name>Taylor &amp; Francis</publisher-name>
+      <year iso-8601-date="1977">1977</year>
+      <volume>19</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1080/00401706.1977.10489493</pub-id>
+      <fpage>15</fpage>
+      <lpage>18</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gnanadesikan1972robust">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gnanadesikan</surname><given-names>R.</given-names></name>
+        <name><surname>Kettenring</surname><given-names>J. R</given-names></name>
+      </person-group>
+      <article-title>Robust estimates, residuals, and outlier detection with multiresponse data</article-title>
+      <source>Biometrics</source>
+      <year iso-8601-date="1972">1972</year>
+      <pub-id pub-id-type="doi">10.2307/2528963</pub-id>
+      <fpage>81</fpage>
+      <lpage>124</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tukey1963less">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tukey</surname><given-names>John W</given-names></name>
+        <name><surname>McLaughlin</surname><given-names>Donald H</given-names></name>
+      </person-group>
+      <article-title>Less vulnerable confidence and significance procedures for location based on a single sample: Trimming/winsorization 1</article-title>
+      <source>Sankhyā: The Indian Journal of Statistics, Series A</source>
+      <publisher-name>JSTOR</publisher-name>
+      <year iso-8601-date="1963">1963</year>
+      <fpage>331</fpage>
+      <lpage>352</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-van1995statistical">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Van Zandt</surname><given-names>Trisha</given-names></name>
+        <name><surname>Ratcliff</surname><given-names>Roger</given-names></name>
+      </person-group>
+      <article-title>Statistical mimicking of reaction time data: Single-process models, parameter variability, and mixtures</article-title>
+      <source>Psychonomic Bulletin &amp; Review</source>
+      <publisher-name>Springer</publisher-name>
+      <year iso-8601-date="1995">1995</year>
+      <volume>2</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.3758/BF03214411</pub-id>
+      <fpage>20</fpage>
+      <lpage>54</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ratcliff1993methods">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ratcliff</surname><given-names>Roger</given-names></name>
+      </person-group>
+      <article-title>Methods for dealing with reaction time outliers.</article-title>
+      <source>Psychological bulletin</source>
+      <publisher-name>American Psychological Association</publisher-name>
+      <year iso-8601-date="1993">1993</year>
+      <volume>114</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1037/0033-2909.114.3.510</pub-id>
+      <fpage>510</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-mcelreath2020statistical">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>McElreath</surname><given-names>Richard</given-names></name>
+      </person-group>
+      <source>Statistical rethinking: A bayesian course with examples in R and stan</source>
+      <publisher-name>CRC press</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+    </element-citation>
+  </ref>
+</ref-list>
+<fn-group>
+  <fn id="fn1">
+    <label>1</label><p>Note that <monospace>check_outliers()</monospace>
+    only checks numeric variables.</p>
+  </fn>
+  <fn id="fn2">
+    <label>2</label><p>3.29 is an approximation of the two-tailed
+    critical value for <italic>p</italic> &lt; .001, obtained through
+    <monospace>qnorm(p = 1 - 0.001 / 2)</monospace>. We chose this
+    threshold for consistency with the thresholds of all our other
+    methods.</p>
+  </fn>
+  <fn id="fn3">
+    <label>3</label><p> Note that they might not be the optimal way of
+    treating reaction time outliers
+    (<xref alt="Ratcliff, 1993" rid="ref-ratcliff1993methods" ref-type="bibr">Ratcliff,
+    1993</xref>;
+    <xref alt="Van Zandt &amp; Ratcliff, 1995" rid="ref-van1995statistical" ref-type="bibr">Van
+    Zandt &amp; Ratcliff, 1995</xref>)</p>
+  </fn>
+  <fn id="fn4">
+    <label>4</label><p>Our default threshold for the MCD method is
+    defined by
+    <monospace>stats::qchisq(p = 1 - 0.001, df = ncol(x))</monospace>,
+    which again is an approximation of the critical value for
+    <italic>p</italic> &lt; .001 consistent with the thresholds of our
+    other methods.</p>
+  </fn>
+  <fn id="fn5">
+    <label>5</label><p>Our default threshold for the Cook method is
+    defined by
+    <monospace>stats::qf(0.5, ncol(x), nrow(x) - ncol(x))</monospace>,
+    which again is an approximation of the critical value for
+    <italic>p</italic> &lt; .001 consistent with the thresholds of our
+    other methods.</p>
+  </fn>
+</fn-group>
+</back>
+</article>
