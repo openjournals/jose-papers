@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20231005T190030-81319fcdb4fca5f2e713bd4e27069e66f1179f3c</doi_batch_id>
+    <timestamp>20231005190030</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>68</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Check your outliers! An introduction to identifying
+statistical outliers in R with easystats</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Rémi</given_name>
+            <surname>Thériault</surname>
+            <ORCID>https://orcid.org/0000-0003-4315-6788</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Mattan S.</given_name>
+            <surname>Ben-Shachar</surname>
+            <ORCID>https://orcid.org/0000-0002-4287-4801</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Indrajeet</given_name>
+            <surname>Patil</surname>
+            <ORCID>https://orcid.org/0000-0003-1995-6531</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Daniel</given_name>
+            <surname>Lüdecke</surname>
+            <ORCID>https://orcid.org/0000-0002-8895-3206</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Brenton M.</given_name>
+            <surname>Wiernik</surname>
+            <ORCID>https://orcid.org/0000-0001-9560-6336</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Dominique</given_name>
+            <surname>Makowski</surname>
+            <ORCID>https://orcid.org/0000-0001-5375-9967</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>10</month>
+          <day>05</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>221</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00221</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.8411009</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/221</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00221</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00221</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00221.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="leys2019outliers">
+            <article_title>How to classify, detect, and manage
+univariate and multivariate outliers, with emphasis on
+pre-registration</article_title>
+            <author>Leys</author>
+            <journal_title>International Review of Social
+Psychology</journal_title>
+            <doi>10.5334/irsp.289</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Leys, C., Delacre, M., Mora, Y. L.,
+Lakens, D., &amp; Ley, C. (2019). How to classify, detect, and manage
+univariate and multivariate outliers, with emphasis on pre-registration.
+International Review of Social Psychology.
+https://doi.org/10.5334/irsp.289</unstructured_citation>
+          </citation>
+          <citation key="leys2013outliers">
+            <article_title>Detecting outliers: Do not use standard
+deviation around the mean, use absolute deviation around the
+median</article_title>
+            <author>Leys</author>
+            <journal_title>Journal of Experimental Social
+Psychology</journal_title>
+            <issue>4</issue>
+            <volume>49</volume>
+            <doi>10.1016/j.jesp.2013.03.013</doi>
+            <cYear>2013</cYear>
+            <unstructured_citation>Leys, C., Ley, C., Klein, O.,
+Bernard, P., &amp; Licata, L. (2013). Detecting outliers: Do not use
+standard deviation around the mean, use absolute deviation around the
+median. Journal of Experimental Social Psychology, 49(4), 764–766.
+https://doi.org/10.1016/j.jesp.2013.03.013</unstructured_citation>
+          </citation>
+          <citation key="leys2018outliers">
+            <article_title>Detecting multivariate outliers: Use a robust
+variant of the mahalanobis distance</article_title>
+            <author>Leys</author>
+            <journal_title>Journal of Experimental Social
+Psychology</journal_title>
+            <volume>74</volume>
+            <doi>10.1016/j.jesp.2017.09.011</doi>
+            <issn>0022-1031</issn>
+            <cYear>2018</cYear>
+            <unstructured_citation>Leys, C., Klein, O., Dominicy, Y.,
+&amp; Ley, C. (2018). Detecting multivariate outliers: Use a robust
+variant of the mahalanobis distance. Journal of Experimental Social
+Psychology, 74, 150–156.
+https://doi.org/10.1016/j.jesp.2017.09.011</unstructured_citation>
+          </citation>
+          <citation key="simmons2011false">
+            <article_title>False-positive psychology: Undisclosed
+flexibility in data collection and analysis allows presenting anything
+as significant</article_title>
+            <author>Simmons</author>
+            <journal_title>Psychological Science</journal_title>
+            <issue>11</issue>
+            <volume>22</volume>
+            <doi>10.1177/0956797611417632</doi>
+            <cYear>2011</cYear>
+            <unstructured_citation>Simmons, J. P., Nelson, L. D., &amp;
+Simonsohn, U. (2011). False-positive psychology: Undisclosed flexibility
+in data collection and analysis allows presenting anything as
+significant. Psychological Science, 22(11), 1359–1366.
+https://doi.org/10.1177/0956797611417632</unstructured_citation>
+          </citation>
+          <citation key="easystatspackage">
+            <article_title>easystats: Streamline model interpretation,
+visualization, and reporting</article_title>
+            <author>Lüdecke</author>
+            <cYear>2023</cYear>
+            <unstructured_citation>Lüdecke, D., Makowski, D.,
+Ben-Shachar, M. S., Patil, I., Wiernik, B. M., Bacher, E., &amp;
+Thériault, R. (2023). easystats: Streamline model interpretation,
+visualization, and reporting. https://easystats.github.io/easystats/
+(Original work published 2019)</unstructured_citation>
+          </citation>
+          <citation key="ludecke2021performance">
+            <article_title>performance: An R package for assessment,
+comparison and testing of statistical models</article_title>
+            <author>Lüdecke</author>
+            <journal_title>Journal of Open Source
+Software</journal_title>
+            <issue>60</issue>
+            <volume>6</volume>
+            <doi>10.21105/joss.03139</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Lüdecke, D., Ben-Shachar, M. S.,
+Patil, I., Waggoner, P., &amp; Makowski, D. (2021). performance: An R
+package for assessment, comparison and testing of statistical models.
+Journal of Open Source Software, 6(60), 3139.
+https://doi.org/10.21105/joss.03139</unstructured_citation>
+          </citation>
+          <citation key="patil2022datawizard">
+            <article_title>datawizard: An R package for easy data
+preparation and statistical transformations</article_title>
+            <author>Patil</author>
+            <journal_title>Journal of Open Source
+Software</journal_title>
+            <issue>78</issue>
+            <volume>7</volume>
+            <doi>10.21105/joss.04684</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Patil, I., Makowski, D., Ben-Shachar,
+M. S., Wiernik, B. M., Bacher, E., &amp; Lüdecke, D. (2022). datawizard:
+An R package for easy data preparation and statistical transformations.
+Journal of Open Source Software, 7(78), 4684.
+https://doi.org/10.21105/joss.04684</unstructured_citation>
+          </citation>
+          <citation key="cook1977detection">
+            <article_title>Detection of influential observation in
+linear regression</article_title>
+            <author>Cook</author>
+            <journal_title>Technometrics</journal_title>
+            <issue>1</issue>
+            <volume>19</volume>
+            <doi>10.1080/00401706.1977.10489493</doi>
+            <cYear>1977</cYear>
+            <unstructured_citation>Cook, R. D. (1977). Detection of
+influential observation in linear regression. Technometrics, 19(1),
+15–18.
+https://doi.org/10.1080/00401706.1977.10489493</unstructured_citation>
+          </citation>
+          <citation key="gnanadesikan1972robust">
+            <article_title>Robust estimates, residuals, and outlier
+detection with multiresponse data</article_title>
+            <author>Gnanadesikan</author>
+            <journal_title>Biometrics</journal_title>
+            <doi>10.2307/2528963</doi>
+            <cYear>1972</cYear>
+            <unstructured_citation>Gnanadesikan, R., &amp; Kettenring,
+J. R. (1972). Robust estimates, residuals, and outlier detection with
+multiresponse data. Biometrics, 81–124.
+https://doi.org/10.2307/2528963</unstructured_citation>
+          </citation>
+          <citation key="tukey1963less">
+            <article_title>Less vulnerable confidence and significance
+procedures for location based on a single sample: Trimming/winsorization
+1</article_title>
+            <author>Tukey</author>
+            <journal_title>Sankhyā: The Indian Journal of Statistics,
+Series A</journal_title>
+            <cYear>1963</cYear>
+            <unstructured_citation>Tukey, J. W., &amp; McLaughlin, D. H.
+(1963). Less vulnerable confidence and significance procedures for
+location based on a single sample: Trimming/winsorization 1. Sankhyā:
+The Indian Journal of Statistics, Series A,
+331–352.</unstructured_citation>
+          </citation>
+          <citation key="van1995statistical">
+            <article_title>Statistical mimicking of reaction time data:
+Single-process models, parameter variability, and
+mixtures</article_title>
+            <author>Van Zandt</author>
+            <journal_title>Psychonomic Bulletin &amp;
+Review</journal_title>
+            <issue>1</issue>
+            <volume>2</volume>
+            <doi>10.3758/BF03214411</doi>
+            <cYear>1995</cYear>
+            <unstructured_citation>Van Zandt, T., &amp; Ratcliff, R.
+(1995). Statistical mimicking of reaction time data: Single-process
+models, parameter variability, and mixtures. Psychonomic Bulletin &amp;
+Review, 2(1), 20–54.
+https://doi.org/10.3758/BF03214411</unstructured_citation>
+          </citation>
+          <citation key="ratcliff1993methods">
+            <article_title>Methods for dealing with reaction time
+outliers.</article_title>
+            <author>Ratcliff</author>
+            <journal_title>Psychological bulletin</journal_title>
+            <issue>3</issue>
+            <volume>114</volume>
+            <doi>10.1037/0033-2909.114.3.510</doi>
+            <cYear>1993</cYear>
+            <unstructured_citation>Ratcliff, R. (1993). Methods for
+dealing with reaction time outliers. Psychological Bulletin, 114(3),
+510. https://doi.org/10.1037/0033-2909.114.3.510</unstructured_citation>
+          </citation>
+          <citation key="mcelreath2020statistical">
+            <volume_title>Statistical rethinking: A bayesian course with
+examples in R and stan</volume_title>
+            <author>McElreath</author>
+            <cYear>2020</cYear>
+            <unstructured_citation>McElreath, R. (2020). Statistical
+rethinking: A bayesian course with examples in R and stan. CRC
+press.</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
