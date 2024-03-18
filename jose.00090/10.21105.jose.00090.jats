@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">90</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00090</article-id>
+<title-group>
+<article-title>A practical guide to climate econometrics: Navigating key
+decision points in weather and climate data analysis</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-8514-4748</contrib-id>
+<name>
+<surname>Rising</surname>
+<given-names>James A.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6475-1052</contrib-id>
+<name>
+<surname>Hussain</surname>
+<given-names>Azhar</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-8309-7124</contrib-id>
+<name>
+<surname>Schwarzwald</surname>
+<given-names>Kevin</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1991-0533</contrib-id>
+<name>
+<surname>Trisovic</surname>
+<given-names>Ana</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Grantham Research Institute, London School of
+Economics</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Department of Economics, London School of
+Economics</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Department of Earth and Environmental Sciences, Columbia
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>The Institute for Quantitative Social Science, Harvard
+University</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2020-03-01">
+<day>1</day>
+<month>3</month>
+<year>2020</year>
+</pub-date>
+<volume>7</volume>
+<issue>73</issue>
+<fpage>90</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>climate change</kwd>
+<kwd>econometrics</kwd>
+<kwd>tutorial</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The use of econometrics to study how social, economic, and
+  biophysical systems respond to weather has started a torrent of new
+  research
+  (<xref alt="Carleton &amp; Hsiang, 2016" rid="ref-carleton2016social" ref-type="bibr">Carleton
+  &amp; Hsiang, 2016</xref>). It is allowing researchers to better
+  understand the impacts of climate change, disaster risk and responses,
+  resource management, human behavior, and sustainable development.</p>
+  <p>The research often features weather regression modeling and
+  analyzing socioeconomic outcomes as they vary over time. The
+  researchers need to collect, integrate, and analyze many different
+  datasets such as historical climate data, future climate models, GIS
+  information, and administrative data, in order to obtain meaningful
+  and comprehensive results. While the challenges of climate
+  econometrics are similar across all problems, the appropriate use of
+  data, its integration and aggregation is unique to each research
+  question, thereby presenting a stumbling block to early-career
+  researchers. No single sequence of steps can be widely applied for
+  resolving these issues. Similarly, software aimed at facilitating
+  steps in this process needs to be fully understood and operated with
+  care.</p>
+  <p>In light of this, we present a new tutorial that offers
+  step-by-step guidance on carrying out a climate econometric analysis.
+  Moreover, it features reusable code snippets in multiple programming
+  languages and points to several pre-existing packages while providing
+  some introductory comments on their appropriate use. The tutorial is
+  structured into the following sections:</p>
+  <list list-type="order">
+    <list-item>
+      <p>Introduction: explains the prerequisites, introduces
+      definitions and conventions, and recommends relevant
+      literature.</p>
+    </list-item>
+    <list-item>
+      <p>Using weather and climate data: introduces the data and its
+      attributes, the NetCDF file format, supported programming
+      languages, and common limitations of the data.</p>
+    </list-item>
+    <list-item>
+      <p>Developing a reduced-form specification: provides a number of
+      considerations before starting an analysis, such as choosing
+      weather variables, functions for creating a model, and caveats
+      when working with spatial and temporal processes.</p>
+    </list-item>
+    <list-item>
+      <p>Weighting schemes: explains the importance of weighting schemes
+      and how to work with them based on their file formats and
+      origins.</p>
+    </list-item>
+    <list-item>
+      <p>Generating geographical unit data: introduces geographic
+      information systems, shapefiles, and how to work with them
+      effectively.</p>
+    </list-item>
+    <list-item>
+      <p>Suggestions for work organization: presents recommendations for
+      organizing research, including naming conventions, version
+      control, and automation, which can improve researchers’
+      productivity and research reproducibility.</p>
+    </list-item>
+    <list-item>
+      <p>Contributions: introduces the current tutorial contributors and
+      invites authors to contribute more information.</p>
+    </list-item>
+  </list>
+  <p>The audiences for this tutorial are researchers and students
+  trained in econometrics and experienced in at least one scientific
+  programming language, such as Stata, R, Matlab, Julia, or Python. In
+  addition to its use in a teaching event or for self-study, this
+  tutorial can also be used as a reference manual, as each of its topics
+  and lessons can be comprehended independently.</p>
+  <p>Over the past year, the tutorial has been actively used by
+  Ph.D. and Master’s students at the London School of Economics, and it
+  has been highlighted at multiple workshops. Several independent
+  research projects have been developed by following the steps of the
+  tutorial, which provides additional evidence for the success of its
+  learning objectives.</p>
+  <p>In this rapidly evolving and interdisciplinary field, our tutorial
+  is free and open-source. It is implemented as a
+  <ext-link ext-link-type="uri" xlink:href="https://jupyterbook.org/intro">JupyterBook</ext-link>
+  and available online through
+  <ext-link ext-link-type="uri" xlink:href="https://pages.github.com">Github
+  Pages</ext-link> at
+  <ext-link ext-link-type="uri" xlink:href="https://climateestimate.net/getting-started.html">climateestimate.net</ext-link>.
+  Its implementation also features a deployment workflow through
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/features/actions">GitHub
+  Actions</ext-link>, meaning that every time there is an update to the
+  <monospace>master</monospace> branch, the action will automatically
+  build a new JupyterBook and update the tutorial website within
+  minutes. As a result, contributors can change the tutorial content in
+  markdown files without worrying about updating it on the web.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>The existing academic work provides overviews of climate science
+  for econometricians
+  (<xref alt="Hsiang &amp; Kopp, 2018" rid="ref-hsiang2018economist" ref-type="bibr">Hsiang
+  &amp; Kopp, 2018</xref>) and the theoretical backing of these methods
+  (<xref alt="Hsiang, 2016" rid="ref-hsiang2016climate" ref-type="bibr">Hsiang,
+  2016</xref>). However, information that focuses on analysis methods is
+  still lacking, and new resources are needed to offer practical help to
+  researchers. For example, several steps in the research process can be
+  challenging to students and social science researchers because of the
+  unfamiliarity of weather data
+  (<xref alt="Nissan et al., 2019" rid="ref-nissan2019use" ref-type="bibr">Nissan
+  et al., 2019</xref>). As a result, some of the most common mistakes
+  are:</p>
+  <list list-type="order">
+    <list-item>
+      <p>Choosing inappropriate weather variables (e.g., variables with
+      poor observational records, or statistics of variables that do not
+      reflect the analyzed socioeconomic relationship) or
+      underestimating the uncertainty of weather data products,
+      especially those relating to hydrological variables such as
+      rainfall.</p>
+    </list-item>
+    <list-item>
+      <p>Mismatching gridded weather data to non-gridded socioeconomic
+      data and failing to choose a weighting scheme that reflects the
+      underlying biophysical processes.</p>
+    </list-item>
+    <list-item>
+      <p>Selecting regression specifications that miss or misrepresent
+      key features of the socioeconomic relationship, such as
+      nonlinearity and local scale interactions.</p>
+    </list-item>
+  </list>
+  <p>Our climate econometrics tutorial aims to fill the identified
+  knowledge gaps by providing detailed and accessible guidelines on each
+  step in the research process, from data collection and analysis
+  design, to the plotting of results. Unlike traditional single-example
+  tutorials, our approach is to inform each of the myriad
+  decision-points necessary to perform weather regression-based research
+  for a new problem. These decision-points include:</p>
+  <list list-type="order">
+    <list-item>
+      <p>The selection of relevant weather variables and data sources,
+      given their unique strengths and weaknesses.</p>
+    </list-item>
+    <list-item>
+      <p>How gridded weather data should be related to
+      regionally-defined socioeconomic data.</p>
+    </list-item>
+    <list-item>
+      <p>The different modeling decisions necessary to relate
+      socioeconomic outcomes to weather variables through a regression
+      specification.</p>
+    </list-item>
+  </list>
+  <p>The proper interpretation, use, and projection of this form of
+  econometric result introduces additional decision-points
+  (<xref alt="Ciscar et al., 2019" rid="ref-ciscar2019assessing" ref-type="bibr">Ciscar
+  et al., 2019</xref>), which will be discussed in future work on the
+  tutorial. Other planned extensions of the tutorial will offer guidance
+  on developing academically interesting and policy-relevant research
+  questions, producing engaging visual displays, and ensuring that
+  research results can be updated as new data becomes available.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>The authors would like to acknowledge contributions from Manuel
+  Linsenmeier. A. Trisovic is funded by the Alfred P. Sloan Foundation
+  (grant number P-2020-13988).</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <ref id="ref-carleton2016social">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Carleton</surname><given-names>Tamma A</given-names></name>
+        <name><surname>Hsiang</surname><given-names>Solomon M</given-names></name>
+      </person-group>
+      <article-title>Social and economic impacts of climate</article-title>
+      <source>Science</source>
+      <publisher-name>American Association for the Advancement of Science</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <volume>353</volume>
+      <issue>6304</issue>
+      <pub-id pub-id-type="doi">10.1126/science.aad9837</pub-id>
+      <fpage>aad9837</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hsiang2018economist">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hsiang</surname><given-names>Solomon</given-names></name>
+        <name><surname>Kopp</surname><given-names>Robert E</given-names></name>
+      </person-group>
+      <article-title>An economist’s guide to climate change science</article-title>
+      <source>Journal of Economic Perspectives</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>32</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.3386/w25189</pub-id>
+      <fpage>3</fpage>
+      <lpage>32</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hsiang2016climate">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hsiang</surname><given-names>Solomon</given-names></name>
+      </person-group>
+      <article-title>Climate econometrics</article-title>
+      <source>Annual Review of Resource Economics</source>
+      <publisher-name>Annual Reviews</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <volume>8</volume>
+      <pub-id pub-id-type="doi">10.3386/w22181</pub-id>
+      <fpage>43</fpage>
+      <lpage>75</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ciscar2019assessing">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ciscar</surname><given-names>Juan-Carlos</given-names></name>
+        <name><surname>Rising</surname><given-names>James</given-names></name>
+        <name><surname>Kopp</surname><given-names>Robert E</given-names></name>
+        <name><surname>Feyen</surname><given-names>Luc</given-names></name>
+      </person-group>
+      <article-title>Assessing future climate change impacts in the EU and the USA: Insights and lessons from two continental-scale projects</article-title>
+      <source>Environmental Research Letters</source>
+      <publisher-name>IOP Publishing</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>14</volume>
+      <issue>8</issue>
+      <pub-id pub-id-type="doi">10.1088/1748-9326/ab281e</pub-id>
+      <fpage>084010</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-nissan2019use">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Nissan</surname><given-names>Hannah</given-names></name>
+        <name><surname>Goddard</surname><given-names>Lisa</given-names></name>
+        <name><surname>Perez</surname><given-names>Erin Coughlan de</given-names></name>
+        <name><surname>Furlow</surname><given-names>John</given-names></name>
+        <name><surname>Baethgen</surname><given-names>Walter</given-names></name>
+        <name><surname>Thomson</surname><given-names>Madeleine C</given-names></name>
+        <name><surname>Mason</surname><given-names>Simon J</given-names></name>
+      </person-group>
+      <article-title>On the use and misuse of climate change projections in international development</article-title>
+      <source>Wiley Interdisciplinary Reviews: Climate Change</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>10</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1002/wcc.579</pub-id>
+      <fpage>e579</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
