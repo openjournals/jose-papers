@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20240318T174346-a7d35ebb7f6515e95ed84aa3ac2ab6436f09f580</doi_batch_id>
+    <timestamp>20240318174346</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>03</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>73</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>A practical guide to climate econometrics: Navigating
+key decision points in weather and climate data analysis</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>James A.</given_name>
+            <surname>Rising</surname>
+            <ORCID>https://orcid.org/0000-0001-8514-4748</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Azhar</given_name>
+            <surname>Hussain</surname>
+            <ORCID>https://orcid.org/0000-0002-6475-1052</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Kevin</given_name>
+            <surname>Schwarzwald</surname>
+            <ORCID>https://orcid.org/0000-0001-8309-7124</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Ana</given_name>
+            <surname>Trisovic</surname>
+            <ORCID>https://orcid.org/0000-0003-1991-0533</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>03</month>
+          <day>18</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>90</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00090</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.10833818</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/90</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00090</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00090</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00090.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="carleton2016social">
+            <article_title>Social and economic impacts of
+climate</article_title>
+            <author>Carleton</author>
+            <journal_title>Science</journal_title>
+            <issue>6304</issue>
+            <volume>353</volume>
+            <doi>10.1126/science.aad9837</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Carleton, T. A., &amp; Hsiang, S. M.
+(2016). Social and economic impacts of climate. Science, 353(6304),
+aad9837. https://doi.org/10.1126/science.aad9837</unstructured_citation>
+          </citation>
+          <citation key="hsiang2018economist">
+            <article_title>An economist’s guide to climate change
+science</article_title>
+            <author>Hsiang</author>
+            <journal_title>Journal of Economic
+Perspectives</journal_title>
+            <issue>4</issue>
+            <volume>32</volume>
+            <doi>10.3386/w25189</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Hsiang, S., &amp; Kopp, R. E. (2018).
+An economist’s guide to climate change science. Journal of Economic
+Perspectives, 32(4), 3–32.
+https://doi.org/10.3386/w25189</unstructured_citation>
+          </citation>
+          <citation key="hsiang2016climate">
+            <article_title>Climate econometrics</article_title>
+            <author>Hsiang</author>
+            <journal_title>Annual Review of Resource
+Economics</journal_title>
+            <volume>8</volume>
+            <doi>10.3386/w22181</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Hsiang, S. (2016). Climate
+econometrics. Annual Review of Resource Economics, 8, 43–75.
+https://doi.org/10.3386/w22181</unstructured_citation>
+          </citation>
+          <citation key="ciscar2019assessing">
+            <article_title>Assessing future climate change impacts in
+the EU and the USA: Insights and lessons from two continental-scale
+projects</article_title>
+            <author>Ciscar</author>
+            <journal_title>Environmental Research
+Letters</journal_title>
+            <issue>8</issue>
+            <volume>14</volume>
+            <doi>10.1088/1748-9326/ab281e</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Ciscar, J.-C., Rising, J., Kopp, R.
+E., &amp; Feyen, L. (2019). Assessing future climate change impacts in
+the EU and the USA: Insights and lessons from two continental-scale
+projects. Environmental Research Letters, 14(8), 084010.
+https://doi.org/10.1088/1748-9326/ab281e</unstructured_citation>
+          </citation>
+          <citation key="nissan2019use">
+            <article_title>On the use and misuse of climate change
+projections in international development</article_title>
+            <author>Nissan</author>
+            <journal_title>Wiley Interdisciplinary Reviews: Climate
+Change</journal_title>
+            <issue>3</issue>
+            <volume>10</volume>
+            <doi>10.1002/wcc.579</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Nissan, H., Goddard, L., Perez, E. C.
+de, Furlow, J., Baethgen, W., Thomson, M. C., &amp; Mason, S. J. (2019).
+On the use and misuse of climate change projections in international
+development. Wiley Interdisciplinary Reviews: Climate Change, 10(3),
+e579. https://doi.org/10.1002/wcc.579</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
