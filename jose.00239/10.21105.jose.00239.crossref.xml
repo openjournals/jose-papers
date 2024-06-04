@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20240604191343-f85459cebe5cbb4d919e8e410196a9bddae149d5</doi_batch_id>
+    <timestamp>20240604191343</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>06</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>76</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Practical machine learning with PyTorch</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Jack</given_name>
+            <surname>Atkinson</surname>
+            <ORCID>https://orcid.org/0000-0001-5001-4812</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Jim</given_name>
+            <surname>Denholm</surname>
+            <ORCID>https://orcid.org/0000-0002-2389-3134</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>06</month>
+          <day>04</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>239</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00239</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.11401113</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/239</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00239</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00239</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00239.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="paszke2019pytorch">
+            <article_title>Pytorch: An imperative style,
+high-performance deep learning library</article_title>
+            <author>Paszke</author>
+            <journal_title>Advances in neural information processing
+systems</journal_title>
+            <volume>32</volume>
+            <cYear>2019</cYear>
+            <unstructured_citation>Paszke, A., Gross, S., Massa, F.,
+Lerer, A., Bradbury, J., Chanan, G., Killeen, T., Lin, Z., Gimelshein,
+N., Antiga, L., &amp; others. (2019). Pytorch: An imperative style,
+high-performance deep learning library. Advances in Neural Information
+Processing Systems, 32.</unstructured_citation>
+          </citation>
+          <citation key="barba2019teaching">
+            <volume_title>Teaching and learning with
+jupyter</volume_title>
+            <author>Barba</author>
+            <cYear>2019</cYear>
+            <unstructured_citation>Barba, L. A., Barker, L. J., Blank,
+D. S., Brown, J., Downey, A. B., George, T., Heagy, L. J., Mandli, K.
+T., Moore, J. K., Lippert, D., &amp; others. (2019). Teaching and
+learning with jupyter.
+https://jupyter4edu.github.io/jupyter-edu-book/</unstructured_citation>
+          </citation>
+          <citation key="carleo2019machine">
+            <article_title>Machine learning and the physical
+sciences</article_title>
+            <author>Carleo</author>
+            <journal_title>Reviews of Modern Physics</journal_title>
+            <issue>4</issue>
+            <volume>91</volume>
+            <doi>10.1103/RevModPhys.91.045002</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Carleo, G., Cirac, I., Cranmer, K.,
+Daudet, L., Schuld, M., Tishby, N., Vogt-Maranto, L., &amp; Zdeborová,
+L. (2019). Machine learning and the physical sciences. Reviews of Modern
+Physics, 91(4).
+https://doi.org/10.1103/RevModPhys.91.045002</unstructured_citation>
+          </citation>
+          <citation key="palmerpenguins">
+            <article_title>palmerpenguins: Palmer Archipelago
+(Antarctica) penguin data</article_title>
+            <author>Horst</author>
+            <doi>10.5281/zenodo.3960218</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Horst, A. M., Hill, A. P., &amp;
+Gorman, K. B. (2020). palmerpenguins: Palmer Archipelago (Antarctica)
+penguin data.
+https://doi.org/10.5281/zenodo.3960218</unstructured_citation>
+          </citation>
+          <citation key="kashinath2021physics">
+            <article_title>Physics-informed machine learning: Case
+studies for weather and climate modelling</article_title>
+            <author>Kashinath</author>
+            <journal_title>Philosophical Transactions of the Royal
+Society A</journal_title>
+            <volume>379</volume>
+            <doi>10.1098/rsta.2020.0093</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Kashinath, K., Mustafa, M., Albert,
+A., Wu, J., Jiang, C., Esmaeilzadeh, S., Azizzadenesheli, K., Wang, R.,
+Chattopadhyay, A., Singh, A., &amp; others. (2021). Physics-informed
+machine learning: Case studies for weather and climate modelling.
+Philosophical Transactions of the Royal Society A, 379, 20200093.
+https://doi.org/10.1098/rsta.2020.0093</unstructured_citation>
+          </citation>
+          <citation key="gefen2021ai">
+            <article_title>AI for digital humanities and computational
+social sciences</article_title>
+            <author>Gefen</author>
+            <journal_title>Reflections on Artificial Intelligence for
+Humanity</journal_title>
+            <doi>10.1007/978-3-030-69128-8_12</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Gefen, A., Saint-Raymond, L., &amp;
+Venturini, T. (2021). AI for digital humanities and computational social
+sciences. Reflections on Artificial Intelligence for Humanity, 191–202.
+https://doi.org/10.1007/978-3-030-69128-8_12</unstructured_citation>
+          </citation>
+          <citation key="lecun1998mnist">
+            <article_title>The MNIST database of handwritten
+digits</article_title>
+            <author>LeCun</author>
+            <cYear>1998</cYear>
+            <unstructured_citation>LeCun, Y. (1998). The MNIST database
+of handwritten digits.
+http://yann.lecun.com/exdb/mnist/</unstructured_citation>
+          </citation>
+          <citation key="Allaire_Quarto_2022">
+            <article_title>Quarto</article_title>
+            <author>Allaire</author>
+            <doi>10.5281/zenodo.5960048</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Allaire, J. J., Teague, C.,
+Scheidegger, C., Xie, Y., &amp; Dervieux, C. (2022). Quarto (Version
+1.2). https://doi.org/10.5281/zenodo.5960048</unstructured_citation>
+          </citation>
+          <citation key="torchtools">
+            <article_title>TorchTools</article_title>
+            <author>Denholm</author>
+            <cYear>2023</cYear>
+            <unstructured_citation>Denholm, J. (2023). TorchTools.
+https://github.com/jdenholm/TorchTools</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
