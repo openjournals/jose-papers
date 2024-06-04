@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">239</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00239</article-id>
+<title-group>
+<article-title>Practical machine learning with PyTorch</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5001-4812</contrib-id>
+<name>
+<surname>Atkinson</surname>
+<given-names>Jack</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="corresp" rid="cor-1"><sup>*</sup></xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-2389-3134</contrib-id>
+<name>
+<surname>Denholm</surname>
+<given-names>Jim</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Institute of Computing for Climate Science, University of
+Cambridge, UK</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<author-notes>
+<corresp id="cor-1">* E-mail: <email></email></corresp>
+</author-notes>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-10-22">
+<day>22</day>
+<month>10</month>
+<year>2023</year>
+</pub-date>
+<volume>7</volume>
+<issue>76</issue>
+<fpage>239</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>PyTorch</kwd>
+<kwd>machine learning</kwd>
+<kwd>Jupyter notebook</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>In the last decade machine learning (ML) and deep learning
+  (DL)<xref ref-type="fn" rid="fn1">1</xref> have revolutionised many
+  fields within science, industry, and beyond. Researchers across
+  domains from the physical sciences to the digital humanities are
+  increasingly looking to leverage these tools in their research. Many
+  will be experts within their own domains, but will not have received
+  any training in machine learning.</p>
+  <p>We have developed, and delivered, a set of materials entitled
+  <italic>Practical machine learning with PyTorch</italic>, designed to
+  teach participants how to <italic>actually</italic> write and run ML
+  code in a <italic>hands-on</italic> fashion whilst also illustrating
+  important design considerations.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>With the explosion of ML and DL there have been several promising
+  opportunities to apply these techniques in research. There are notable
+  applications across many fields from the physical sciences
+  (<xref alt="Carleo et al., 2019" rid="ref-carleo2019machine" ref-type="bibr">Carleo
+  et al., 2019</xref>), climate science
+  (<xref alt="Kashinath et al., 2021" rid="ref-kashinath2021physics" ref-type="bibr">Kashinath
+  et al., 2021</xref>), to the digital humanities
+  (<xref alt="Gefen et al., 2021" rid="ref-gefen2021ai" ref-type="bibr">Gefen
+  et al., 2021</xref>).</p>
+  <p>Whilst there exist many examples of ML code online, it is often in
+  the form of complete codes to be downloaded, read, and run by the
+  user. These are often missing any discussion of theory, the
+  development process, or alternative approaches beyond the scope of the
+  specific example. In contrast, much theoretical ML material addresses
+  high-level concepts without discussing coding considerations or
+  details of how to actually use popular frameworks to implement the
+  models.</p>
+  <p>Many know how ML works in an abstract sense, but will be unfamiliar
+  with lower-level practicalities such as image transforms and other
+  preprocessing techniques required to present data to neural networks.
+  They can describe how something works, but would have no idea where to
+  start if asked to do it. Such practical aspects are ideally learnt
+  through trial-and-error and hands-on experience.</p>
+  <p>Many machine learning frameworks are accessed using a Python
+  framework. One such commonly used framework is
+  <ext-link ext-link-type="uri" xlink:href="https://pytorch.org/">PyTorch</ext-link>
+  (<xref alt="Paszke et al., 2019" rid="ref-paszke2019pytorch" ref-type="bibr">Paszke
+  et al., 2019</xref>). Researchers are likely to have experience
+  writing Python code, but not PyTorch.</p>
+</sec>
+<sec id="learning-objectives">
+  <title>Learning objectives</title>
+  <p>The key learning objective from this workshop could be simply
+  summarised as:
+  <italic>“Provide participants with the ability to develop ML models in
+  PyTorch”</italic>.</p>
+  <p>However, there are a few subtleties that we wish to highlight. We
+  go beyond the ability to blindly run downloaded code to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>provide an understanding of the structure of a PyTorch model
+      and ML pipeline,</p>
+    </list-item>
+    <list-item>
+      <p>introduce the different functionalities PyTorch might
+      provide,</p>
+    </list-item>
+    <list-item>
+      <p>encourage good research software engineering (RSE) practice,
+      and</p>
+    </list-item>
+    <list-item>
+      <p>exercise careful consideration and understanding of data used
+      for training ML models.</p>
+    </list-item>
+  </list>
+  <p>With regards to specific ML content we cover:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>using ML for both classification and regression,</p>
+    </list-item>
+    <list-item>
+      <p>artificial neural networks (ANNs) and convolutional neural
+      networks (CNNs), and</p>
+    </list-item>
+    <list-item>
+      <p>treatment of both tabular and image data.</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="teaching-materials">
+  <title>Teaching materials</title>
+  <p>All of the teaching materials for this course are available online
+  in a GitHub repository. In addition we have a
+  <ext-link ext-link-type="uri" xlink:href="https://cambridge-iccs.github.io/ml-training-material/">GitHub
+  pages site</ext-link> as a central resource to point participants
+  to.</p>
+  <sec id="slides">
+    <title>Slides</title>
+    <p>We have produced two slide decks for the course, both available
+    online and linked from both the repository and the GitHub pages
+    site. The slides are written in
+    <ext-link ext-link-type="uri" xlink:href="https://quarto.org/">Quarto</ext-link>
+    (<xref alt="Allaire et al., 2022" rid="ref-Allaire_Quarto_2022" ref-type="bibr">Allaire
+    et al., 2022</xref>) markdown and rendered as
+    <ext-link ext-link-type="uri" xlink:href="https://revealjs.com/">reveal.js</ext-link>
+    html. Source and instructions on how to render are included in the
+    repository should others wish to tailor them to their
+    specifications.</p>
+    <p>The
+    <ext-link ext-link-type="uri" xlink:href="https://cambridge-iccs.github.io/ml-training-material/slides.html">first
+    set of slides</ext-link> covers the machine learning content
+    introducing deep learning and neural networks through the concept of
+    optimisation and gradient descent which should be a familiar concept
+    to participants. They then cover the concept of convolutional layers
+    as a method to map and abstract image-like data for use in a neural
+    network.</p>
+    <p>The
+    <ext-link ext-link-type="uri" xlink:href="https://cambridge-iccs.github.io/ml-training-material/applications.html">second
+    set of slides</ext-link> contains a discussion of where machine
+    learning has been deployed in the field of climate science. This
+    includes domain-specific concepts to be aware of in data-preparation
+    and deployment.</p>
+    <p>To make the slides available online we use a
+    <ext-link ext-link-type="uri" xlink:href="https://docs.github.com/en/actions">GitHub
+    action</ext-link> on the repository to render the slides and publish
+    them to the GitHub pages site whenever there is a push to the main
+    branch.</p>
+  </sec>
+  <sec id="exercises-jupyter-notebooks">
+    <title>Exercises (jupyter notebooks)</title>
+    <p>The main material is composed of four
+    <ext-link ext-link-type="uri" xlink:href="https://jupyter.org/">jupyter
+    notebooks</ext-link>, each containing a standalone exercise that
+    takes participants through the process of developing and training an
+    ML model, from data preparation and training to running inference.
+    Each exercise is broken down into a number of subtasks (jupyter
+    cells).</p>
+    <p>The code has been packaged using
+    <monospace>pyproject.toml</monospace>. This means that installation
+    for use in the workshop is simplified to cloning the material
+    repository and running:</p>
+    <preformat>python -m pip install .</preformat>
+    <p>We advise users do this from within a
+    <ext-link ext-link-type="uri" xlink:href="https://docs.python.org/3/library/venv.html">virtual
+    Python environment</ext-link>, instructions for which are provided
+    under ‘Installation and setup’. From there the jupyter notebook
+    exercises are activated from the command line with
+    <monospace>jupyter notebook</monospace>.</p>
+    <p>The first pair of exercises uses
+    <ext-link ext-link-type="uri" xlink:href="https://allisonhorst.github.io/palmerpenguins/">Palmer
+    Penguins</ext-link>
+    (<xref alt="Horst et al., 2020" rid="ref-palmerpenguins" ref-type="bibr">Horst
+    et al., 2020</xref>), a tabular dataset of penguin characteristics
+    designed for exploration and visualisation. The source code
+    associated with the project provides the scaffold to create a torch
+    <monospace>Dataset</monospace> from this data. We do this to remove
+    the burden from participants allowing them to focus on learning the
+    key features of PyTorch in the early exercises. We review this code
+    during the workshop to understand its functionality and how data can
+    be prepared for use in training.</p>
+    <sec id="penguin-species-classification">
+      <title>1) Penguin Species Classification</title>
+      <p><italic>Classification of penguin species based on other
+      physical characteristics.</italic>
+      This exercise takes participants through the process of writing an
+      ANN. The tabular data from the <italic>palmer penguins</italic>
+      dataset is read in and transformed using idiomatic PyTorch
+      data-loading objects before creating dataloaders and introducing
+      the concepts of training and validation splits. As part of this
+      exercise we discuss how to prepare a dataset in terms of
+      identifying unsuitable characteristics that could introduce bias,
+      unintended behaviour, or spurious results in the learning process.
+      We also introduce one-hot-encoding as a method to balance loss
+      between different classes.
+      Data preparation is followed by creating a net from scratch,
+      introducing loss functions and optimisers, and writing a training
+      and validation loop. Finally, we proceed beyond simply training
+      the model, completing the exercise by inspecting metrics,
+      visualising results, and deploying the model to perform inference
+      in a practical manner – a step that is often missing from ML
+      tutorials.</p>
+    </sec>
+    <sec id="penguin-regression">
+      <title>2) Penguin Regression</title>
+      <p><italic>Prediction of penguin mass (regression) based on other
+      physical characteristics.</italic>
+      The second exercise is similar to the first, using an ANN to learn
+      from <italic>palmer penguins</italic> data, but focusses on
+      regression rather than classification. The procedure is largely
+      the same, with a discussion around how the relevant features of
+      the dataset are different to those selected in exercise 1. We
+      highlight how appropriate choice of loss (objective) function
+      allows us to leverage an identical architecture for a different
+      applications – binary-cross-entropy for classification and
+      mean-squared-error for regression. The TorchTools package
+      (<xref alt="Denholm, 2023" rid="ref-torchtools" ref-type="bibr">Denholm,
+      2023</xref>) is also introduced to simplify the process of
+      creating neural nets.</p>
+    </sec>
+    <sec id="mnist-classification">
+      <title>3) MNIST Classification</title>
+      <p><italic>Classifying handwritten digits from the MNIST database
+      (<xref alt="LeCun, 1998" rid="ref-lecun1998mnist" ref-type="bibr">LeCun,
+      1998</xref>) using a CNN.</italic>
+      MNIST digit classification is a popular choice for those learning
+      ML as it provides a tangible objective. In this exercise we deal
+      with image data, and how to represent them as a tensor, and cover
+      various pre-processing techniques and transforms that may be
+      applied. We also introduce
+      <ext-link ext-link-type="uri" xlink:href="https://pytorch.org/vision/stable/index.html">torchvision</ext-link>,
+      and the concepts of using public datasets from
+      <monospace>torchvision.datasets</monospace> and pre-trained models
+      from <monospace>torchvision.models</monospace>.</p>
+    </sec>
+    <sec id="ellipse-regression">
+      <title>4) Ellipse Regression</title>
+      <p><italic>Estimating the centroid of an ellipse (regression) from
+      an image using a CNN.</italic>
+      The final exercise uses a custom dataset generated for this
+      workshop. It consists of RGB images of ellipses along with
+      coordinates of the centre and the major and minor radii. A similar
+      process to all the other exercises is followed; preparing the
+      data, adapting a pretrained model, training, and evaluating. This
+      time there is less explicit guidance in the notebook as
+      participants are familiar with the process and are becoming
+      self-sufficcient.</p>
+      <p>Throughout the notebooks we provide specific links to the
+      <ext-link ext-link-type="uri" xlink:href="https://pytorch.org/docs/stable/index.html">PyTorch
+      documentation</ext-link> where relevant. This is done to show
+      participants where to find information to aid development and
+      debugging, and where they can explore other options (optimisers,
+      loss functions, transformations etc.) beyond those used in the
+      course.</p>
+      <p>We also provide the notebooks as
+      <ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/">Google
+      Colab</ext-link> instances allowing users to run the notebooks
+      entirely from within their browser. This also enables the code to
+      be run on a GPU (graphics processing unit) to speed up computation
+      in the more complex exercises. This is particularly useful as the
+      course is typically delivered to participants using laptops, most
+      of which will not have a GPU. The Colab notebooks are stored in an
+      adjacent branch of the repository, but can be launched through
+      links in the README or
+      website<xref ref-type="fn" rid="fn2">2</xref>.</p>
+    </sec>
+  </sec>
+  <sec id="solutions">
+    <title>Solutions</title>
+    <p>Worked solutions to all of the exercises are provided in the form
+    of completed notebooks including example output. These are available
+    both in the repository and also as Colab instances.</p>
+    <p>Whilst we discuss RSE principles during the course and provide
+    examples, there is often not time, nor is it conducive, to write
+    docstrings and apply type hints to every function as we write them.
+    The worked solutions are complete with
+    <ext-link ext-link-type="uri" xlink:href="https://peps.python.org/pep-0257/">docstrings</ext-link>
+    (<ext-link ext-link-type="uri" xlink:href="https://numpydoc.readthedocs.io/en/latest/format.html">NumPy
+    convention</ext-link>) and
+    <ext-link ext-link-type="uri" xlink:href="https://docs.python.org/3/library/typing.html">type-hints</ext-link>
+    (checked by
+    <ext-link ext-link-type="uri" xlink:href="https://mypy.readthedocs.io/en/stable/index.html">mypy</ext-link>).
+    In a similar manner, though we emphasise the importance of code
+    style and
+    <ext-link ext-link-type="uri" xlink:href="https://peps.python.org/pep-0008/">PEP8</ext-link>
+    during the course, we cannot guarantee that our, or the
+    participants’, code will be compliant. The worked solutions are
+    linted using
+    <ext-link ext-link-type="uri" xlink:href="https://pylint.readthedocs.io/en/latest/">pylint</ext-link>
+    and conform to the
+    <ext-link ext-link-type="uri" xlink:href="https://black.readthedocs.io/en/stable/index.html">black</ext-link>
+    code format, however, allowing introduction of these useful
+    tools.</p>
+  </sec>
+</sec>
+<sec id="content-delivery">
+  <title>Content Delivery</title>
+  <p>The course has been designed to be very flexible in terms of
+  delivery, allowing it to be adapted to and reused in various
+  setups.</p>
+  <p>The main aspect we wish to emphasise in delivery is teaching via
+  jupyter notebooks in a <italic>“code-along”</italic> fashion. This
+  helps with engagement, participation, and understanding
+  (<xref alt="Barba et al., 2019" rid="ref-barba2019teaching" ref-type="bibr">Barba
+  et al., 2019</xref>) and is essential, we feel, to having a
+  long-lasting benefit. This approach slows those leading the course
+  towards the rate at which the participants are working, and
+  illustrates through errors (whether intentional or not!) that even
+  experienced coders are human and make mistakes. Such errors can
+  illustrate common pitfalls and provide an opportunity to include the
+  teaching of debugging approaches. More generally this approach helps
+  emphasise RSE principles, as participants can see the live application
+  of these ideas in practise.</p>
+  <p>In terms of structure we suggest starting the lecture material on
+  ANNs followed by the first pair of exercises before returning to the
+  CNN lectures and then exercises 3 and 4. This allows the course to
+  conveniently be broken into two parts (ANNs and CNNs) as, say, morning
+  and afternoon or day 1 and day 2.</p>
+  <p>The lectures can vary in length depending on the prior experience
+  of the participants and we encourage active participation and
+  discussion. We suggest having a chalkboard on hand to expand on and
+  illustrate concepts such as optimisation, activation functions, matrix
+  algebra etc. Much like the code-along approach, this slows the
+  lecturer down to the pace of those taking notes and allows for
+  tailoring of the content to the participants.</p>
+  <p>Whilst the course can be delivered entirely as a code-along, we
+  have also taught exercises 3 and 4 as a “lab”, with participants
+  working individually or in small groups supported by floating
+  demonstrators. An advantage of this approach for the CNN exercises is
+  that it allows participants to explore a variety of PyTorch’s
+  features, e.g. different image transformations, for themselves.</p>
+  <p>We also believe that there is sufficient guidance in the notebooks
+  to follow the exercises alone, and we include a link to a recording of
+  the first workshop. This is, however, no substitute to in-person
+  delivery where participants can ask questions, and successive
+  workshops are continually improving.</p>
+</sec>
+<sec id="teaching-experience">
+  <title>Teaching experience</title>
+  <p>This project was originally designed to be taught at two climate
+  science summer schools. The first time delivered in two half-day
+  workshops, the second as a single one-day workshop. No plan survives
+  contact with the enemy, and we found is that it is not possible to
+  complete all of the material in single day. We chose to focus on
+  exercises 1 and 3, with exercises 2 and 4 being “homework”.</p>
+  <p>Perhaps the most notable improvement following delivery was the
+  addition of Colab instances of the notebooks. We found participants
+  had often not completed the setup instructions in advance and
+  subsequently experienced issues running on their local machines in the
+  workshop. Problems were often specific to the individual and ate up a
+  lot of time trying to understand polluted environments
+  (<ext-link ext-link-type="uri" xlink:href="https://xkcd.com/1987/">xkcd
+  1987</ext-link>), unfamiliar IDEs and operating systems etc. to ensure
+  everyone could participate. Participants who have not prepared and
+  experience issues are now asked to activate the Colab notebooks,
+  thereby not being left behind nor wasting the time of others.</p>
+  <p>Another useful lesson was that those with Apple Silicon machines
+  can use the
+  <ext-link ext-link-type="uri" xlink:href="https://pytorch.org/docs/stable/notes/mps.html">MPS
+  backend</ext-link> to accelerate training, and without this the CNN
+  exercises are prohibitively slow on these machines. As a result we
+  added MPS detection to the notebooks alongside CUDA.</p>
+  <p>We encourage participants to feed experiences back into the
+  project, either via a GitHub issue or pull request. This allows us to
+  continually learn from delivery and improve the material for future
+  participants, especially if making instructions clearer or providing
+  solutions to previously unencountered problems.</p>
+  <p>Finally we observe that the lecture on domain-specific applications
+  of ML was effective in tying the workshop together and encouraging
+  participants to consider how they might utilise ML in their own work.
+  This session was followed by good questions and discussion good and
+  illustrates how to apply what has been learnt along with domain
+  specific things to be aware of. We encourage anyone using this
+  material to tailor this final set of slides to their own domain.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>We thank anyone who has made a contribution to these materials,
+  however small, assisted in code review for us, or helped as
+  demonstrators on the course.</p>
+  <p>The
+  <ext-link ext-link-type="uri" xlink:href="https://iccs.cam.ac.uk/">Institute
+  of Computing for Climate Science</ext-link> received support through
+  <ext-link ext-link-type="uri" xlink:href="https://www.schmidtsciences.org/">Schmidt
+  Sciences</ext-link>.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-paszke2019pytorch">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Paszke</surname><given-names>Adam</given-names></name>
+        <name><surname>Gross</surname><given-names>Sam</given-names></name>
+        <name><surname>Massa</surname><given-names>Francisco</given-names></name>
+        <name><surname>Lerer</surname><given-names>Adam</given-names></name>
+        <name><surname>Bradbury</surname><given-names>James</given-names></name>
+        <name><surname>Chanan</surname><given-names>Gregory</given-names></name>
+        <name><surname>Killeen</surname><given-names>Trevor</given-names></name>
+        <name><surname>Lin</surname><given-names>Zeming</given-names></name>
+        <name><surname>Gimelshein</surname><given-names>Natalia</given-names></name>
+        <name><surname>Antiga</surname><given-names>Luca</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Pytorch: An imperative style, high-performance deep learning library</article-title>
+      <source>Advances in neural information processing systems</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>32</volume>
+    </element-citation>
+  </ref>
+  <ref id="ref-barba2019teaching">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Barba</surname><given-names>Lorena A</given-names></name>
+        <name><surname>Barker</surname><given-names>Lecia J</given-names></name>
+        <name><surname>Blank</surname><given-names>Douglas S</given-names></name>
+        <name><surname>Brown</surname><given-names>Jed</given-names></name>
+        <name><surname>Downey</surname><given-names>Allen B</given-names></name>
+        <name><surname>George</surname><given-names>Timothy</given-names></name>
+        <name><surname>Heagy</surname><given-names>Lindsey J</given-names></name>
+        <name><surname>Mandli</surname><given-names>Kyle T</given-names></name>
+        <name><surname>Moore</surname><given-names>Jason K</given-names></name>
+        <name><surname>Lippert</surname><given-names>David</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <source>Teaching and learning with jupyter</source>
+      <year iso-8601-date="2019">2019</year>
+      <uri>https://jupyter4edu.github.io/jupyter-edu-book/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-carleo2019machine">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Carleo</surname><given-names>Giuseppe</given-names></name>
+        <name><surname>Cirac</surname><given-names>Ignacio</given-names></name>
+        <name><surname>Cranmer</surname><given-names>Kyle</given-names></name>
+        <name><surname>Daudet</surname><given-names>Laurent</given-names></name>
+        <name><surname>Schuld</surname><given-names>Maria</given-names></name>
+        <name><surname>Tishby</surname><given-names>Naftali</given-names></name>
+        <name><surname>Vogt-Maranto</surname><given-names>Leslie</given-names></name>
+        <name><surname>Zdeborová</surname><given-names>Lenka</given-names></name>
+      </person-group>
+      <article-title>Machine learning and the physical sciences</article-title>
+      <source>Reviews of Modern Physics</source>
+      <publisher-name>APS</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>91</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1103/RevModPhys.91.045002</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-palmerpenguins">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Horst</surname><given-names>Allison Marie</given-names></name>
+        <name><surname>Hill</surname><given-names>Alison Presmanes</given-names></name>
+        <name><surname>Gorman</surname><given-names>Kristen B</given-names></name>
+      </person-group>
+      <article-title>palmerpenguins: Palmer Archipelago (Antarctica) penguin data</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://allisonhorst.github.io/palmerpenguins/</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.3960218</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-kashinath2021physics">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kashinath</surname><given-names>Karthik</given-names></name>
+        <name><surname>Mustafa</surname><given-names>M</given-names></name>
+        <name><surname>Albert</surname><given-names>Adrian</given-names></name>
+        <name><surname>Wu</surname><given-names>JL</given-names></name>
+        <name><surname>Jiang</surname><given-names>C</given-names></name>
+        <name><surname>Esmaeilzadeh</surname><given-names>Soheil</given-names></name>
+        <name><surname>Azizzadenesheli</surname><given-names>Kamyar</given-names></name>
+        <name><surname>Wang</surname><given-names>R</given-names></name>
+        <name><surname>Chattopadhyay</surname><given-names>A</given-names></name>
+        <name><surname>Singh</surname><given-names>A</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Physics-informed machine learning: Case studies for weather and climate modelling</article-title>
+      <source>Philosophical Transactions of the Royal Society A</source>
+      <publisher-name>The Royal Society Publishing</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>379</volume>
+      <pub-id pub-id-type="doi">10.1098/rsta.2020.0093</pub-id>
+      <fpage>20200093</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gefen2021ai">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gefen</surname><given-names>Alexandre</given-names></name>
+        <name><surname>Saint-Raymond</surname><given-names>Léa</given-names></name>
+        <name><surname>Venturini</surname><given-names>Tommaso</given-names></name>
+      </person-group>
+      <article-title>AI for digital humanities and computational social sciences</article-title>
+      <source>Reflections on Artificial Intelligence for Humanity</source>
+      <publisher-name>Springer</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <pub-id pub-id-type="doi">10.1007/978-3-030-69128-8_12</pub-id>
+      <fpage>191</fpage>
+      <lpage>202</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lecun1998mnist">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>LeCun</surname><given-names>Yann</given-names></name>
+      </person-group>
+      <article-title>The MNIST database of handwritten digits</article-title>
+      <year iso-8601-date="1998">1998</year>
+      <uri>http://yann.lecun.com/exdb/mnist/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Allaire_Quarto_2022">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Allaire</surname><given-names>J. J.</given-names></name>
+        <name><surname>Teague</surname><given-names>Charles</given-names></name>
+        <name><surname>Scheidegger</surname><given-names>Carlos</given-names></name>
+        <name><surname>Xie</surname><given-names>Yihui</given-names></name>
+        <name><surname>Dervieux</surname><given-names>Christophe</given-names></name>
+      </person-group>
+      <article-title>Quarto</article-title>
+      <year iso-8601-date="2022-01">2022</year><month>01</month>
+      <uri>https://github.com/quarto-dev/quarto-cli</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.5960048</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-torchtools">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Denholm</surname><given-names>James</given-names></name>
+      </person-group>
+      <article-title>TorchTools</article-title>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://github.com/jdenholm/TorchTools</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+<fn-group>
+  <fn id="fn1">
+    <label>1</label><p>We will use the term ML when talking about both
+    ML and DL in this article</p>
+  </fn>
+  <fn id="fn2">
+    <label>2</label><p>A google account is required.</p>
+  </fn>
+</fn-group>
+</back>
+</article>
