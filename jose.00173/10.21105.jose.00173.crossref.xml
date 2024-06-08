@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:rel="http://www.crossref.org/relations.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schemas/crossref4.4.0.xsd">
+  <head>
+    <doi_batch_id>b513ee412786cf46348ae8ba27a16cd2</doi_batch_id>
+    <timestamp>20230608143439</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>06</month>
+          <year>2023</year>
+        </publication_date>
+        <journal_volume>
+          <volume>6</volume>
+        </journal_volume>
+        <issue>64</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Spatial data analysis with R: wrangling, visualization and econometric models</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Jaime</given_name>
+            <surname>Prudencio-Vázquez</surname>
+            <ORCID>http://orcid.org/0000-0001-5866-1280</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>06</month>
+          <day>08</day>
+          <year>2023</year>
+        </publication_date>
+        <pages>
+          <first_page>173</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00173</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">“https://doi.org/10.5281/zenodo.7967543”</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/173</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00173</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00173</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00173.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ref1">
+            <doi>10.1007/978-3-642-23430-9</doi>
+          </citation>
+          <citation key="ref2">
+            <unstructured_citation>IMCO and COMCE and para la competitividad y la movilidad social, Inglés, Ciudad de México, Instituto Mexicano para la Competitividad, A.C., Inglés es posible Propuesta de una Agenda Nacional, https://imco.org.mx/wp-content/uploads/2015/04/2015_Documento_completo_Ingles_es_posible.pdf, 2015</unstructured_citation>
+          </citation>
+          <citation key="ref3">
+            <unstructured_citation>Fujita, Masahisa and Krugman, Paul and Venables, Anthony J., Barcelona, Ariel, Economia espacial : las ciudades, las regiones y el comercio internacional, 2000</unstructured_citation>
+          </citation>
+          <citation key="ref4">
+            <unstructured_citation>Croarkin, C and Tobias, P, Retrieved January, NIST/SEMATECH e-handbook of statistical methods, 1, 2014</unstructured_citation>
+          </citation>
+          <citation key="ref5">
+            <doi>10.18637/jss.v084.i06</doi>
+          </citation>
+          <citation key="ref6">
+            <doi>10.1111/gean.12319</doi>
+          </citation>
+          <citation key="ref7">
+            <unstructured_citation>rgeoda: R Library for Spatial Data Analysis, Li, Xun and Anselin, Luc, 2022, R package version 0.0.9, https://CRAN.R-project.org/package=rgeoda</unstructured_citation>
+          </citation>
+          <citation key="ref8">
+            <doi>10.3390/math9111276</doi>
+          </citation>
+          <citation key="ref9">
+            <unstructured_citation>Matt, EF Educación Internacional, sep, EF EPI 2019: El nivel de inglés en México sigue disminuyendo ‹ GO Blog | EF Blog Mexico, https://www.ef.com.mx/blog/language/nivel-de-ingles-en-mexico-sigue-disminuyendo/, 2020, 9</unstructured_citation>
+          </citation>
+          <citation key="ref10">
+            <unstructured_citation>R: A Language and Environment for Statistical Computing, R Core Team, R Foundation for Statistical Computing, Vienna, Austria, 2021, https://www.R-project.org/</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
