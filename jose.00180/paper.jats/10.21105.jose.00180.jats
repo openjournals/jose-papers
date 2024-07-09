@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">180</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00180</article-id>
+<title-group>
+<article-title>SNIK Graph—Visualizing Knowledge about Management of
+Hospital Information Systems</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7358-3217</contrib-id>
+<name>
+<surname>Höffner</surname>
+<given-names>Konrad</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="corresp" rid="cor-1"><sup>*</sup></xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5832-4890</contrib-id>
+<name>
+<surname>Pause</surname>
+<given-names>Thomas</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-7687-8544</contrib-id>
+<name>
+<surname>Jahn</surname>
+<given-names>Franziska</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0004-5081-9820</contrib-id>
+<name>
+<surname>Brunsch</surname>
+<given-names>Hannes Raphael</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Brakemeier</surname>
+<given-names>Anna</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0179-954X</contrib-id>
+<name>
+<surname>Winter</surname>
+<given-names>Alfred</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Institute for Medical Informatics, Statistics and
+Epidemiology, Medical Faculty, Leipzig University</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<author-notes>
+<corresp id="cor-1">* E-mail: <email></email></corresp>
+</author-notes>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-06-17">
+<day>17</day>
+<month>6</month>
+<year>2024</year>
+</pub-date>
+<volume>7</volume>
+<issue>77</issue>
+<fpage>180</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>JavaScript</kwd>
+<kwd>information management</kwd>
+<kwd>hospital information system</kwd>
+<kwd>visualization</kwd>
+<kwd>linked data</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Medical and health informatics integrates knowledge of business
+  information systems, computer science and medicine. As a comparatively
+  young research discipline, it lacks a uniform terminology, especially
+  for describing health information systems and their management.
+  Several textbooks provide different perspectives of the discipline but
+  the linear struture inherent in a book does not intuitively convey the
+  highly connected nature of the concepts of the domain. SNIK
+  (<xref alt="Höffner et al., 2017" rid="ref-sniktec" ref-type="bibr">Höffner
+  et al., 2017</xref>) is a semantic network of information management
+  in hospitals, which uses Semantic Web standards like RDF and OWL to
+  model and publish the knowledge of three textbooks
+  (<xref alt="Ammenwerth et al., 2014" rid="ref-ob" ref-type="bibr">Ammenwerth
+  et al., 2014</xref>;
+  <xref alt="Heinrich et al., 2014" rid="ref-he" ref-type="bibr">Heinrich
+  et al., 2014</xref>;
+  <xref alt="Winter et al., 2011" rid="ref-bb" ref-type="bibr">Winter et
+  al., 2011</xref>), the IT4IT
+  (<xref alt="The Open Group, 2017" rid="ref-it4it" ref-type="bibr">The
+  Open Group, 2017</xref>) standard and an interview with a hospital
+  CIO. Each of those sources is modelled according to the SNIK meta
+  model, which classifies each resource as being either a role, function
+  or entity type, see
+  <xref alt="[fig:metamodel]" rid="figU003Ametamodel">[fig:metamodel]</xref>.</p>
+  <fig>
+    <caption><p>The SNIK Meta
+    Model.<styled-content id="figU003Ametamodel"></styled-content></p></caption>
+    <graphic mimetype="application" mime-subtype="pdf" xlink:href="metamodel.pdf" />
+  </fig>
+  <p>SNIK Graph is a web-based interactive Linked Data graph
+  visualization of SNIK, which is based on Cytoscape.js
+  (<xref alt="Franz et al., 2015" rid="ref-cytoscapejs" ref-type="bibr">Franz
+  et al., 2015</xref>), a JavaScript graph visualization and analysis
+  library. An installation visualizing SNIK is published at
+  <ext-link ext-link-type="uri" xlink:href="https://www.snik.eu/graph">https://www.snik.eu/graph</ext-link>
+  and
+  <ext-link ext-link-type="uri" xlink:href="https://snikproject.github.io/graph">https://snikproject.github.io/graph</ext-link>,
+  but other ontologies and knowledge bases can be used as well. Due to
+  the large amount of resources, visualizing SNIK as a graph causes
+  overplotting as shown in
+  <xref alt="[fig:completegraph]" rid="figU003Acompletegraph">[fig:completegraph]</xref>.
+  SNIK Graph offers several options to select and layout subgraphs in
+  multiple views
+  (<xref alt="Pause, 2020" rid="ref-thomasba" ref-type="bibr">Pause,
+  2020</xref>), for example to show only a specific chapter of a book to
+  prepare a lecture about a specific topic.</p>
+  <fig>
+    <caption><p>Full view and subgraphs around <italic>information
+    management</italic>, <italic>systems</italic> and
+    <italic>project</italic>.<styled-content id="figU003Acompletegraph"></styled-content></p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="graph.png" />
+  </fig>
+  <p>A frequent question is, what a given role does and which
+  information is needed for those functions represented by the entity
+  types connected to those functions. This question is visually answered
+  by the <italic>class use</italic> feature, which arranges roles,
+  functions and entity types in concentric circles, see
+  <xref alt="[fig:roleuse]" rid="figU003Aroleuse">[fig:roleuse]</xref>.</p>
+  <fig>
+    <caption><p><italic>Class use</italic> of the Chief Information
+    Officer. Entity types omitted for
+    brevity.<styled-content id="figU003Aroleuse"></styled-content></p></caption>
+    <graphic mimetype="application" mime-subtype="pdf" xlink:href="roleuse-inner-dark.pdf" />
+  </fig>
+  <p>Users can also iteratively explore SNIK starting at a single class
+  using neighbourhood and path operations. Exploration using neighbours,
+  that is the successive uncovering of nodes adjacent to a starting node
+  given by a user, is a common feature of tools such as LodLive
+  (<xref alt="Camarda et al., 2012" rid="ref-lodlive" ref-type="bibr">Camarda
+  et al., 2012</xref>) and VizLOD
+  (<xref alt="Anutariya &amp; Dangol, 2018" rid="ref-vizlod" ref-type="bibr">Anutariya
+  &amp; Dangol, 2018</xref>). The directed and undirected
+  <italic>star</italic> operations show nodes in the direct
+  neighbourhood of selected nodes. The <italic>circle star</italic> also
+  rearranges the nodes using the force-directed layout locally on the
+  currently visible subgraph.
+  <xref alt="[fig:star]" rid="figU003Astar">[fig:star]</xref> shows a
+  mind map of a topic, created by an undirected star, which can be used
+  by a teacher to prepare a lecture about that topic.</p>
+  <fig>
+    <caption><p><italic>Star</italic> of the 3LGM²-S model for service
+    oriented
+    communication.<styled-content id="figU003Astar"></styled-content></p></caption>
+    <graphic mimetype="application" mime-subtype="pdf" xlink:href="star-dark.pdf" />
+  </fig>
+  <p>A <italic>spiderworm</italic> is a path from node A to node B
+  combined with a <italic>star</italic> of B.
+  <xref alt="[fig:spiderworm]" rid="figU003Aspiderworm">[fig:spiderworm]</xref>
+  shows how we use a spiderworm to teach a student how the new concept
+  “quality of data” is connected the already introduced concept “patient
+  identification number.”</p>
+  <fig>
+    <caption><p><italic>Spiderworm</italic> from <italic>Application
+    System</italic> to <italic>Application
+    Component</italic>.<styled-content id="figU003Aspiderworm"></styled-content></p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="spiderworm-crop.png" />
+  </fig>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>While students can access this knowledge in a structured way using
+  SNIK, this requires knowledge of Semantic Web technologies like SPARQL
+  queries. The main goal of SNIK Graph is to visualize SNIK to users
+  that may not have any Semantic Web experience. Graph-based
+  visualizations allow teachers to intuitively convey relationships
+  between a selection of those concepts and also allow students to
+  explore the domain on their own
+  (<xref alt="Jahn et al., 2016" rid="ref-ontologybased" ref-type="bibr">Jahn
+  et al., 2016</xref>). There are several existing graph-based Linked
+  Data visualizations
+  (<xref alt="Po et al., 2020" rid="ref-linkeddatavisualization" ref-type="bibr">Po
+  et al., 2020</xref>), which visualize RDF resources (classes or
+  instances) as nodes and their relationships as edges, but they do not
+  fit our requirements
+  (<xref alt="Schaaf et al., 2016" rid="ref-visualizationoflargeontologies" ref-type="bibr">Schaaf
+  et al., 2016</xref>).</p>
+</sec>
+<sec id="future-work">
+  <title>Future work</title>
+  <p>The single-thread paradigm of JavaScript seriously hinders
+  performance of CPU-bound applications like SNIK Graph on the more than
+  4000 resources of SNIK. While SNIK Graph does not require perfectly
+  smooth motion, and wild movements are not a common usage pattern,
+  stuttering is still frustrating to users especially on less performant
+  CPUs and browsers other than Chrome, which is contrary to our goal of
+  minimizing friction for users. Implementing an OpenGL-based renderer
+  for Cytoscape.js may dramatically increase render speed.</p>
+  <p>The search index is implemented using the Fuse.js
+  (<xref alt="Risk, 2021" rid="ref-fuse" ref-type="bibr">Risk,
+  2021</xref>) client-side library based on the Baeza-Yates–Gonnet
+  algorithm
+  (<xref alt="Baeza-Yates &amp; Gonnet, 1992" rid="ref-textsearching" ref-type="bibr">Baeza-Yates
+  &amp; Gonnet, 1992</xref>). This enables fuzzy search on any dataset
+  loaded via SPARQL endpoint without needing a backend search index like
+  Elasticsearch but requires waiting for index initialization on the
+  first search of each user session and is not fast enough for
+  autocompletion, even with debouncing and throttling. Adding a separate
+  search backend will provide much faster initialization and search.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>SNIK is supported by the DFG (German Research Foundation), grant
+  1605/7-1 and 1387/8-1.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-cytoscapejs">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Franz</surname><given-names>Max</given-names></name>
+        <name><surname>Lopes</surname><given-names>Christian T</given-names></name>
+        <name><surname>Huck</surname><given-names>Gerardo</given-names></name>
+        <name><surname>Dong</surname><given-names>Yue</given-names></name>
+        <name><surname>Sumer</surname><given-names>Onur</given-names></name>
+        <name><surname>Bader</surname><given-names>Gary D</given-names></name>
+      </person-group>
+      <article-title>Cytoscape.js: A graph theory library for visualisation and analysis</article-title>
+      <source>Bioinformatics</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2015">2015</year>
+      <volume>32</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.1093/bioinformatics/btv557</pub-id>
+      <fpage>309</fpage>
+      <lpage>311</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-textsearching">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Baeza-Yates</surname><given-names>Ricardo</given-names></name>
+        <name><surname>Gonnet</surname><given-names>Gaston H</given-names></name>
+      </person-group>
+      <article-title>A new approach to text searching</article-title>
+      <source>Communications of the ACM</source>
+      <publisher-name>ACM New York, NY, USA</publisher-name>
+      <year iso-8601-date="1992">1992</year>
+      <volume>35</volume>
+      <issue>10</issue>
+      <pub-id pub-id-type="doi">10.1145/75335.75352</pub-id>
+      <fpage>74</fpage>
+      <lpage>82</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-it4it">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <string-name>The Open Group</string-name>
+      </person-group>
+      <article-title>IT4IT™ reference architecture, version 2.1</article-title>
+      <source>The Open Group</source>
+      <year iso-8601-date="2017">2017</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-bb">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Winter</surname><given-names>Alfred</given-names></name>
+        <name><surname>Haux</surname><given-names>Reinhold</given-names></name>
+        <name><surname>Ammenwerth</surname><given-names>Elske</given-names></name>
+        <name><surname>Brigel</surname><given-names>Birgit</given-names></name>
+        <name><surname>Hellrung</surname><given-names>Nils</given-names></name>
+        <name><surname>Jahn</surname><given-names>Franziska</given-names></name>
+      </person-group>
+      <source>Health information systems: Architectures and strategies</source>
+      <publisher-name>Springer London</publisher-name>
+      <year iso-8601-date="2011">2011</year>
+      <isbn>9781849964418</isbn>
+    </element-citation>
+  </ref>
+  <ref id="ref-ob">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Ammenwerth</surname><given-names>Elske</given-names></name>
+        <name><surname>Haux</surname><given-names>Reinhold</given-names></name>
+        <name><surname>Knaup-Gregori</surname><given-names>Petra</given-names></name>
+        <name><surname>Winter</surname><given-names>Alfred</given-names></name>
+      </person-group>
+      <source>IT-Projektmanagement im Gesundheitswesen</source>
+      <publisher-name>Schattauer</publisher-name>
+      <publisher-loc>Stuttgart, Germany</publisher-loc>
+      <year iso-8601-date="2014">2014</year>
+      <edition>2</edition>
+      <isbn>9783794530717</isbn>
+    </element-citation>
+  </ref>
+  <ref id="ref-he">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Heinrich</surname><given-names>Lutz J</given-names></name>
+        <name><surname>Riedl</surname><given-names>René</given-names></name>
+        <name><surname>Stelzer</surname><given-names>Dirk</given-names></name>
+      </person-group>
+      <source>Informationsmanagement: Grundlagen, aufgaben, methoden</source>
+      <publisher-name>De Gruyter</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-sniktec">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Höffner</surname><given-names>Konrad</given-names></name>
+        <name><surname>Jahn</surname><given-names>Franziska</given-names></name>
+        <name><surname>Kücherer</surname><given-names>Christian</given-names></name>
+        <name><surname>Paech</surname><given-names>Barbara</given-names></name>
+        <name><surname>Brigel</surname><given-names>Schneider</given-names></name>
+        <name><surname>Schöbel</surname><given-names>Martin</given-names></name>
+        <name><surname>Stäubert</surname><given-names>Sebastian</given-names></name>
+        <name><surname>Winter</surname><given-names>Alfred</given-names></name>
+      </person-group>
+      <article-title>Technical Environment for Developing the SNIK Ontology of Information Management in Hospitals</article-title>
+      <source>Studies in Health Technology and Informatics</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>243</volume>
+      <fpage>122</fpage>
+      <lpage>126</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-visualizationoflargeontologies">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Schaaf</surname><given-names>Michael</given-names></name>
+        <name><surname>Jahn</surname><given-names>Franziska</given-names></name>
+        <name><surname>Tahar</surname><given-names>Kais</given-names></name>
+        <name><surname>Kücherer</surname><given-names>Christian</given-names></name>
+        <name><surname>Winter</surname><given-names>Alfred</given-names></name>
+        <name><surname>Paech</surname><given-names>Barbara</given-names></name>
+      </person-group>
+      <article-title>Visualization of large ontologies in university education from a tool point of view</article-title>
+      <source>MIE</source>
+      <year iso-8601-date="2016">2016</year>
+      <volume>228</volume>
+      <pub-id pub-id-type="doi">10.3233/978-1-61499-678-1-349</pub-id>
+      <fpage>349</fpage>
+      <lpage>353</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ontologybased">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Jahn</surname><given-names>Franziska</given-names></name>
+        <name><surname>Schaaf</surname><given-names>Michael</given-names></name>
+        <name><surname>Kahmann</surname><given-names>Christian</given-names></name>
+        <name><surname>Tahar</surname><given-names>Kais</given-names></name>
+        <name><surname>Kücherer</surname><given-names>Christian</given-names></name>
+        <name><surname>Paech</surname><given-names>Barbara</given-names></name>
+        <name><surname>Winter</surname><given-names>Alfred</given-names></name>
+      </person-group>
+      <article-title>An ontology-based scenario for teaching the management of health information systems</article-title>
+      <source>Studies in health technology and informatics</source>
+      <year iso-8601-date="2016">2016</year>
+      <volume>228</volume>
+      <fpage>359</fpage>
+      <lpage>363</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-linkeddatavisualization">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Po</surname><given-names>Laura</given-names></name>
+        <name><surname>Bikakis</surname><given-names>Nikos</given-names></name>
+        <name><surname>Desimoni</surname><given-names>Federico</given-names></name>
+        <name><surname>Papastefanatos</surname><given-names>George</given-names></name>
+      </person-group>
+      <source>Linked data visualization: Techniques, tools and big data</source>
+      <publisher-name>Morgan &amp; Claypool Publishers</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <isbn>9781681737256</isbn>
+      <fpage>1</fpage>
+      <lpage>157</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lodlive">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Camarda</surname><given-names>Diego Valerio</given-names></name>
+        <name><surname>Mazzini</surname><given-names>Silvia</given-names></name>
+        <name><surname>Antonuccio</surname><given-names>Alessandro</given-names></name>
+      </person-group>
+      <article-title>LodLive, exploring the web of data</article-title>
+      <source>Proceedings of the 8th international conference on semantic systems</source>
+      <publisher-name>Association for Computing Machinery</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+      <isbn>9781450311120</isbn>
+      <pub-id pub-id-type="doi">10.1145/2362499.2362532</pub-id>
+      <fpage>197</fpage>
+      <lpage>200</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-vizlod">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Anutariya</surname><given-names>C.</given-names></name>
+        <name><surname>Dangol</surname><given-names>R.</given-names></name>
+      </person-group>
+      <article-title>VizLOD: Schema extraction and visualization of linked open data</article-title>
+      <source>2018 15th international joint conference on computer science and software engineering (JCSSE)</source>
+      <year iso-8601-date="2018">2018</year>
+      <pub-id pub-id-type="doi">10.1109/jcsse.2018.8457325</pub-id>
+      <fpage>1</fpage>
+      <lpage>6</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-fuse">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Risk</surname><given-names>Kiro</given-names></name>
+      </person-group>
+      <article-title>Fuse.js: Lightweight fuzzy-search, in JavaScript</article-title>
+      <source>GitHub repository</source>
+      <publisher-name>GitHub</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://github.com/krisk/fuse</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-thomasba">
+    <element-citation publication-type="thesis">
+      <person-group person-group-type="author">
+        <name><surname>Pause</surname><given-names>Thomas</given-names></name>
+      </person-group>
+      <article-title>Organisation von Teilgraphen semantischer Netze zur ontologiegestützten Wissensvermittlung</article-title>
+      <publisher-name>Institute for Medical Informatics, Statistics and Epidemiology (IMISE)</publisher-name>
+      <publisher-loc>Leipzig, Germany</publisher-loc>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://www.snik.eu/public/bachelor-tp.pdf</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
