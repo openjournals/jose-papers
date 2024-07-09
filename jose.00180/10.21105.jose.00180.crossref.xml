@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20240709071517-cc434fdc838c31a0e9d552113b6be85a04cb470c</doi_batch_id>
+    <timestamp>20240709071517</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>07</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>77</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>SNIK Graph—Visualizing Knowledge about Management of
+Hospital Information Systems</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Konrad</given_name>
+            <surname>Höffner</surname>
+            <ORCID>https://orcid.org/0000-0001-7358-3217</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Thomas</given_name>
+            <surname>Pause</surname>
+            <ORCID>https://orcid.org/0000-0001-5832-4890</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Franziska</given_name>
+            <surname>Jahn</surname>
+            <ORCID>https://orcid.org/0000-0002-7687-8544</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Hannes Raphael</given_name>
+            <surname>Brunsch</surname>
+            <ORCID>https://orcid.org/0009-0004-5081-9820</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Anna</given_name>
+            <surname>Brakemeier</surname>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Alfred</given_name>
+            <surname>Winter</surname>
+            <ORCID>https://orcid.org/0000-0003-0179-954X</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>07</month>
+          <day>09</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>180</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00180</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.12094738</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/180</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00180</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00180</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00180.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="cytoscapejs">
+            <article_title>Cytoscape.js: A graph theory library for
+visualisation and analysis</article_title>
+            <author>Franz</author>
+            <journal_title>Bioinformatics</journal_title>
+            <issue>2</issue>
+            <volume>32</volume>
+            <doi>10.1093/bioinformatics/btv557</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>Franz, M., Lopes, C. T., Huck, G.,
+Dong, Y., Sumer, O., &amp; Bader, G. D. (2015). Cytoscape.js: A graph
+theory library for visualisation and analysis. Bioinformatics, 32(2),
+309–311.
+https://doi.org/10.1093/bioinformatics/btv557</unstructured_citation>
+          </citation>
+          <citation key="textsearching">
+            <article_title>A new approach to text
+searching</article_title>
+            <author>Baeza-Yates</author>
+            <journal_title>Communications of the ACM</journal_title>
+            <issue>10</issue>
+            <volume>35</volume>
+            <doi>10.1145/75335.75352</doi>
+            <cYear>1992</cYear>
+            <unstructured_citation>Baeza-Yates, R., &amp; Gonnet, G. H.
+(1992). A new approach to text searching. Communications of the ACM,
+35(10), 74–82.
+https://doi.org/10.1145/75335.75352</unstructured_citation>
+          </citation>
+          <citation key="it4it">
+            <article_title>IT4IT™ reference architecture, version
+2.1</article_title>
+            <author>The Open Group</author>
+            <journal_title>The Open Group</journal_title>
+            <cYear>2017</cYear>
+            <unstructured_citation>The Open Group. (2017). IT4IT™
+reference architecture, version 2.1. The Open
+Group.</unstructured_citation>
+          </citation>
+          <citation key="bb">
+            <volume_title>Health information systems: Architectures and
+strategies</volume_title>
+            <author>Winter</author>
+            <isbn>9781849964418</isbn>
+            <cYear>2011</cYear>
+            <unstructured_citation>Winter, A., Haux, R., Ammenwerth, E.,
+Brigel, B., Hellrung, N., &amp; Jahn, F. (2011). Health information
+systems: Architectures and strategies. Springer London.
+ISBN: 9781849964418</unstructured_citation>
+          </citation>
+          <citation key="ob">
+            <volume_title>IT-Projektmanagement im
+Gesundheitswesen</volume_title>
+            <author>Ammenwerth</author>
+            <isbn>9783794530717</isbn>
+            <cYear>2014</cYear>
+            <unstructured_citation>Ammenwerth, E., Haux, R.,
+Knaup-Gregori, P., &amp; Winter, A. (2014). IT-Projektmanagement im
+Gesundheitswesen (2nd ed.). Schattauer.
+ISBN: 9783794530717</unstructured_citation>
+          </citation>
+          <citation key="he">
+            <volume_title>Informationsmanagement: Grundlagen, aufgaben,
+methoden</volume_title>
+            <author>Heinrich</author>
+            <cYear>2014</cYear>
+            <unstructured_citation>Heinrich, L. J., Riedl, R., &amp;
+Stelzer, D. (2014). Informationsmanagement: Grundlagen, aufgaben,
+methoden. De Gruyter.</unstructured_citation>
+          </citation>
+          <citation key="sniktec">
+            <article_title>Technical Environment for Developing the SNIK
+Ontology of Information Management in Hospitals</article_title>
+            <author>Höffner</author>
+            <journal_title>Studies in Health Technology and
+Informatics</journal_title>
+            <volume>243</volume>
+            <cYear>2017</cYear>
+            <unstructured_citation>Höffner, K., Jahn, F., Kücherer, C.,
+Paech, B., Brigel, S., Schöbel, M., Stäubert, S., &amp; Winter, A.
+(2017). Technical Environment for Developing the SNIK Ontology of
+Information Management in Hospitals. Studies in Health Technology and
+Informatics, 243, 122–126.</unstructured_citation>
+          </citation>
+          <citation key="visualizationoflargeontologies">
+            <article_title>Visualization of large ontologies in
+university education from a tool point of view</article_title>
+            <author>Schaaf</author>
+            <journal_title>MIE</journal_title>
+            <volume>228</volume>
+            <doi>10.3233/978-1-61499-678-1-349</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Schaaf, M., Jahn, F., Tahar, K.,
+Kücherer, C., Winter, A., &amp; Paech, B. (2016). Visualization of large
+ontologies in university education from a tool point of view. MIE, 228,
+349–353.
+https://doi.org/10.3233/978-1-61499-678-1-349</unstructured_citation>
+          </citation>
+          <citation key="ontologybased">
+            <article_title>An ontology-based scenario for teaching the
+management of health information systems</article_title>
+            <author>Jahn</author>
+            <journal_title>Studies in health technology and
+informatics</journal_title>
+            <volume>228</volume>
+            <cYear>2016</cYear>
+            <unstructured_citation>Jahn, F., Schaaf, M., Kahmann, C.,
+Tahar, K., Kücherer, C., Paech, B., &amp; Winter, A. (2016). An
+ontology-based scenario for teaching the management of health
+information systems. Studies in Health Technology and Informatics, 228,
+359–363.</unstructured_citation>
+          </citation>
+          <citation key="linkeddatavisualization">
+            <volume_title>Linked data visualization: Techniques, tools
+and big data</volume_title>
+            <author>Po</author>
+            <isbn>9781681737256</isbn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Po, L., Bikakis, N., Desimoni, F.,
+&amp; Papastefanatos, G. (2020). Linked data visualization: Techniques,
+tools and big data (pp. 1–157). Morgan &amp; Claypool Publishers.
+ISBN: 9781681737256</unstructured_citation>
+          </citation>
+          <citation key="lodlive">
+            <article_title>LodLive, exploring the web of
+data</article_title>
+            <author>Camarda</author>
+            <journal_title>Proceedings of the 8th international
+conference on semantic systems</journal_title>
+            <doi>10.1145/2362499.2362532</doi>
+            <isbn>9781450311120</isbn>
+            <cYear>2012</cYear>
+            <unstructured_citation>Camarda, D. V., Mazzini, S., &amp;
+Antonuccio, A. (2012). LodLive, exploring the web of data. Proceedings
+of the 8th International Conference on Semantic Systems, 197–200.
+https://doi.org/10.1145/2362499.2362532</unstructured_citation>
+          </citation>
+          <citation key="vizlod">
+            <article_title>VizLOD: Schema extraction and visualization
+of linked open data</article_title>
+            <author>Anutariya</author>
+            <journal_title>2018 15th international joint conference on
+computer science and software engineering (JCSSE)</journal_title>
+            <doi>10.1109/jcsse.2018.8457325</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Anutariya, C., &amp; Dangol, R.
+(2018). VizLOD: Schema extraction and visualization of linked open data.
+2018 15th International Joint Conference on Computer Science and
+Software Engineering (JCSSE), 1–6.
+https://doi.org/10.1109/jcsse.2018.8457325</unstructured_citation>
+          </citation>
+          <citation key="fuse">
+            <article_title>Fuse.js: Lightweight fuzzy-search, in
+JavaScript</article_title>
+            <author>Risk</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2021</cYear>
+            <unstructured_citation>Risk, K. (2021). Fuse.js: Lightweight
+fuzzy-search, in JavaScript. In GitHub repository. GitHub.
+https://github.com/krisk/fuse</unstructured_citation>
+          </citation>
+          <citation key="thomasba">
+            <article_title>Organisation von Teilgraphen semantischer
+Netze zur ontologiegestützten Wissensvermittlung</article_title>
+            <author>Pause</author>
+            <cYear>2020</cYear>
+            <unstructured_citation>Pause, T. (2020). Organisation von
+Teilgraphen semantischer Netze zur ontologiegestützten
+Wissensvermittlung [Bachelor's Thesis, Institute for Medical
+Informatics, Statistics and Epidemiology (IMISE)].
+https://www.snik.eu/public/bachelor-tp.pdf</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
