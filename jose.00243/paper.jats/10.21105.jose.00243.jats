@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">243</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00243</article-id>
+<title-group>
+<article-title>The University of Toronto Climate Downscaling Workflow:
+Tools and Resources for Climate Change Impact Analysis</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-5758-2182</contrib-id>
+<name>
+<surname>Morris</surname>
+<given-names>Michael</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6404-4518</contrib-id>
+<name>
+<surname>Kushner</surname>
+<given-names>Paul J.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-4652-6310</contrib-id>
+<name>
+<surname>Smith</surname>
+<given-names>Karen L.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Department of Physics, University of Toronto</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Department of Physical and Environmental Sciences,
+University of Toronto Scarborough</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<volume>7</volume>
+<issue>77</issue>
+<fpage>243</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The University of Toronto Climate Downscaling Workflow (UTCDW) is a
+  resource designed to teach users how to produce their own
+  statistically downscaled climate projections for the purpose of
+  climate change impact analysis. The target audience includes graduate
+  students and practitioners in engineering, the physical, mathematical,
+  and computational sciences, who are interested in how their subject of
+  study is sensitive to climate change. The main component of the UTCDW
+  is a
+  <ext-link ext-link-type="uri" xlink:href="https://utcdw.physics.utoronto.ca/UTCDW_Guidebook/README.html">Jupyter
+  Book</ext-link> called the “UTCDW Guidebook”. The Guidebook introduces
+  users to basic climate science concepts and beginning-to-intermediate
+  concepts in the application of statistical climate downscaling. It
+  also works through the decisions that must be made when designing a
+  climate change impact study. Finally, it demonstrates how to download
+  climate data, do exploratory analysis and model validation, and
+  provides examples of end-to-end workflows for small climate
+  downscaling projects. The Guidebook was written for self-study by
+  members of the target audience, though it may be included as a part of
+  a course on climate change impact analysis for graduate students or
+  upper-year undergraduate students in the applied sciences. All of the
+  Guidebook source materials are accessible in the
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/mikemorris12/UTCDW_Guidebook">UTCDW_Guidebook
+  GitHub repository</ext-link>.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Important natural and human-designed systems are sensitive to
+  weather and climate conditions, and are therefore also sensitive to
+  the impacts of anthropogenic climate change. Experts in these fields
+  need to assess climate change risks, but unprocessed climate model
+  output such as those from the CMIP6
+  (<xref alt="Eyring et al., 2016" rid="ref-eyring2016" ref-type="bibr">Eyring
+  et al., 2016</xref>) archive is usually not fit for this purpose. Raw
+  climate model outputs do not directly correspond to useful metrics for
+  calculating loads and hazards, and are often not available on the
+  required spatial or temporal scales. <italic>Downscaling</italic>
+  refers to a set of procedures that adjust and map climate data to
+  variables, times, and locations, relevant for discipline-specific
+  applications. It involves physical reasoning and statistical
+  bias-correction of climate model output using observations and
+  analysis requirements for specific study domains. Unfortunately, there
+  is no single accepted standard for downscaling, only a range of
+  methods that are centred on the practice of different climate-service
+  providers. This makes it hard for new researchers to get started and
+  perform their own analysis, especially when existing downscaled data
+  products do not suit their needs. The UTCDW documents state-of-the-art
+  methods for statistical bias correction and downscaling and show users
+  how to implement them.</p>
+  <p>Other educational materials on climate change impact assessment are
+  available, but they are either limited regarding the complexity of the
+  methods
+  (<xref alt="Anderson &amp; Smith, 2021" rid="ref-anderson2021" ref-type="bibr">Anderson
+  &amp; Smith, 2021</xref>), lack code examples to help new users
+  actually work with the data
+  (<xref alt="Kotamarthi et al., 2021" rid="ref-kotamarthi2021" ref-type="bibr">Kotamarthi
+  et al., 2021</xref>), or are too advanced for a first introduction to
+  downscaling
+  (<xref alt="Maraun &amp; Widmann, 2018" rid="ref-maraun2018" ref-type="bibr">Maraun
+  &amp; Widmann, 2018</xref>). The UTCDW Guidebook fills this gap by
+  providing a basic introduction to concepts in climate science and
+  including worked examples and code for downscaling methods appropriate
+  for applications. This makes the UTCDW ideal for users who are new to
+  these concepts and wish to be able to start doing data analysis for
+  their impact study as quickly as possible.</p>
+</sec>
+<sec id="guidebook-content">
+  <title>Guidebook Content</title>
+  <p>The UTCDW Guidebook consists of six chapters. The first four
+  chapters introduce the reader the background knowledge required to
+  perform downscaling. Chapter 1 serves as an introduction, and guides
+  users in configuring their Python environment. Chapter 2 explains how
+  climate change projections are made and what their limitations are.
+  Chapter 3 demonstrates how to access observational, reanalysis, and
+  climate model data, and how to do exploratory analysis with
+  observational and raw climate model data. Chapter 4 contains
+  explanations of various methods of bias-correction and downscaling,
+  and examples of how to validate historical downscaled model output and
+  assess future projections. Python code for the downscaling methods is
+  provided, leveraging the utility of <monospace>xclim</monospace>
+  (<xref alt="Bourgault et al., 2023" rid="ref-bourgault2023" ref-type="bibr">Bourgault
+  et al., 2023</xref>) and the
+  <ext-link ext-link-type="uri" xlink:href="https://pangeo.io/packages.html">Pangeo</ext-link>
+  software ecosystem.</p>
+  <p>The next two chapters focus on applying the content of Chapters
+  1-4. Chapter 5 introduces the “Downscaling Workflow” part of the
+  UTCDW. This chapter unpacks the decisions that must be made when
+  designing a climate change impact study and breaks the analysis tasks
+  down into digestible steps. Chapter 6 contains examples of the
+  workflow. Each example demonstrates the process of stating a problem,
+  acquiring the necessary data, producing calibrated climate
+  projections, and quantifying uncertainty. The examples focus on
+  Canadian regions and observational data products, though we include
+  links to available observational and downscaled data products for
+  additional regions as well as global data. We welcome user submission
+  of additional worked examples to contribute to the gallery of examples
+  to be included on the website, or future versions of the UTCDW
+  Guidebook</p>
+  <p>The UTCDW also includes a
+  <ext-link ext-link-type="uri" xlink:href="https://utcdw.physics.utoronto.ca/">website</ext-link>
+  that contains a guided survey that helps a user design their climate
+  impact study and generates a flowchart that lays out the workflow. The
+  flowcharts are featured in the worked examples to explain the
+  procedure before conducting the analysis. We recommend that students
+  use them to explain their projects to their instructors and peers, or
+  even include them in publications produced using the Guidebook
+  methods.</p>
+</sec>
+<sec id="teaching-experience">
+  <title>Teaching Experience</title>
+  <p>The guidebook material has been used by students from three
+  cohorts: two undergraduate reading courses and two summer research
+  students. The progress of the students demonstrates the strength of
+  the Guidebook as a learning resource. They each started with little or
+  no background in climate science or Pangeo software, and by the end of
+  their terms they were able to independently conduct their own climate
+  change impact analysis projects. We also hosted a hackathon where 30
+  participants used the Guidebook and workflow to tackle climate change
+  impact challenges related to irrigation water demand, snowfall, and
+  extreme heat. Most participants came to the event with little
+  experience working with climate data and left having successfully
+  implemented the downscaling workflow, further proving that Guidebooks
+  meets its purpose as a learning resource.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We acknowledge Anson Cheung, Peikun Guo, Claire Pan, Cassandra
+  Chanen, and Lilian Chan for testing the UTCDW Guidebook content during
+  its development. We acknowledge funding from the University of
+  Toronto’s
+  <ext-link ext-link-type="uri" xlink:href="https://uoftcse.ca/">Centre
+  for Climate Science and Engineering</ext-link>,
+  <ext-link ext-link-type="uri" xlink:href="https://cpe.utoronto.ca/">Climate
+  Positive Energy Initiative</ext-link>, and
+  <ext-link ext-link-type="uri" xlink:href="https://datasciences.utoronto.ca/">Data
+  Sciences Institute</ext-link>.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-kotamarthi2021">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Kotamarthi</surname><given-names>Rao</given-names></name>
+        <name><surname>Hayhoe</surname><given-names>Katharine</given-names></name>
+        <name><surname>Mearns</surname><given-names>Linda O.</given-names></name>
+        <name><surname>Wuebbles</surname><given-names>Donald</given-names></name>
+        <name><surname>Jacobs</surname><given-names>Jennifer</given-names></name>
+        <name><surname>Jurado</surname><given-names>Jennifer</given-names></name>
+      </person-group>
+      <source>Downscaling Techniques for High-Resolution Climate Projections: From Global Change to Local Impacts</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <publisher-loc>Cambridge</publisher-loc>
+      <year iso-8601-date="2021">2021</year>
+      <isbn>978-1-108-47375-0</isbn>
+      <uri>https://www.cambridge.org/core/books/downscaling-techniques-for-highresolution-climate-projections/C261452F6DECC0372077B7533414CD95</uri>
+      <pub-id pub-id-type="doi">10.1017/9781108601269</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-anderson2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Anderson</surname><given-names>Conor I.</given-names></name>
+        <name><surname>Smith</surname><given-names>Karen L.</given-names></name>
+      </person-group>
+      <article-title>A narrative approach to building computational capacity for climate change impact assessment in professional master’s students</article-title>
+      <source>Journal of Open Source Education</source>
+      <year iso-8601-date="2021-12">2021</year><month>12</month>
+      <volume>4</volume>
+      <issue>46</issue>
+      <issn>2577-3569</issn>
+      <uri>https://jose.theoj.org/papers/10.21105/jose.00100</uri>
+      <pub-id pub-id-type="doi">10.21105/jose.00100</pub-id>
+      <fpage>100</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-maraun2018">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Maraun</surname><given-names>Douglas</given-names></name>
+        <name><surname>Widmann</surname><given-names>Martin</given-names></name>
+      </person-group>
+      <source>Statistical Downscaling and Bias Correction for Climate Research</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <publisher-loc>Cambridge</publisher-loc>
+      <year iso-8601-date="2018">2018</year>
+      <isbn>978-1-107-06605-2</isbn>
+      <uri>https://www.cambridge.org/core/books/statistical-downscaling-and-bias-correction-for-climate-research/4ED479BAA8309C7ECBE6136236E3960F</uri>
+      <pub-id pub-id-type="doi">10.1017/9781107588783</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-eyring2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Eyring</surname><given-names>Veronika</given-names></name>
+        <name><surname>Bony</surname><given-names>Sandrine</given-names></name>
+        <name><surname>Meehl</surname><given-names>Gerald A.</given-names></name>
+        <name><surname>Senior</surname><given-names>Catherine A.</given-names></name>
+        <name><surname>Stevens</surname><given-names>Bjorn</given-names></name>
+        <name><surname>Stouffer</surname><given-names>Ronald J.</given-names></name>
+        <name><surname>Taylor</surname><given-names>Karl E.</given-names></name>
+      </person-group>
+      <article-title>Overview of the Coupled Model Intercomparison Project Phase 6 (CMIP6) experimental design and organization</article-title>
+      <source>Geosci. Model Dev.</source>
+      <year iso-8601-date="2016-05">2016</year><month>05</month>
+      <volume>9</volume>
+      <issue>5</issue>
+      <issn>1991-9603</issn>
+      <uri>https://gmd.copernicus.org/articles/9/1937/2016/</uri>
+      <pub-id pub-id-type="doi">10.5194/gmd-9-1937-2016</pub-id>
+      <fpage>1937</fpage>
+      <lpage>1958</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-bourgault2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bourgault</surname><given-names>Pascal</given-names></name>
+        <name><surname>Huard</surname><given-names>David</given-names></name>
+        <name><surname>Smith</surname><given-names>Trevor James</given-names></name>
+        <name><surname>Logan</surname><given-names>Travis</given-names></name>
+        <name><surname>Aoun</surname><given-names>Abel</given-names></name>
+        <name><surname>Lavoie</surname><given-names>Juliette</given-names></name>
+        <name><surname>Dupuis</surname><given-names>Eric</given-names></name>
+        <name><surname>Rondeau-Genesse</surname><given-names>Gabriel</given-names></name>
+        <name><surname>Alegre</surname><given-names>Raquel</given-names></name>
+        <name><surname>Barnes</surname><given-names>Clair</given-names></name>
+        <name><surname>Laperriere</surname><given-names>Alexis Beaupre</given-names></name>
+        <name><surname>Biner</surname><given-names>Sebastien</given-names></name>
+        <name><surname>Caron</surname><given-names>David</given-names></name>
+        <name><surname>Ehbrecht</surname><given-names>Carsten</given-names></name>
+        <name><surname>Fyke</surname><given-names>Jeremy</given-names></name>
+        <name><surname>Keel</surname><given-names>Tom</given-names></name>
+        <name><surname>Labonte</surname><given-names>Marie-Pier</given-names></name>
+        <name><surname>Lierhammer</surname><given-names>Ludwig</given-names></name>
+        <name><surname>Low</surname><given-names>Jwen-Fai</given-names></name>
+        <name><surname>Quinn</surname><given-names>Jamie</given-names></name>
+        <name><surname>Roy</surname><given-names>Philippe</given-names></name>
+        <name><surname>Squire</surname><given-names>Dougie</given-names></name>
+        <name><surname>Stephens</surname><given-names>Ag</given-names></name>
+        <name><surname>Tanguy</surname><given-names>Maliko</given-names></name>
+        <name><surname>Whelan</surname><given-names>Christopher</given-names></name>
+      </person-group>
+      <article-title>Xclim: Xarray-based climate data analytics</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2023-05">2023</year><month>05</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-11-09">2023</year><month>11</month><day>09</day></date-in-citation>
+      <volume>8</volume>
+      <issue>85</issue>
+      <issn>2475-9066</issn>
+      <uri>https://joss.theoj.org/papers/10.21105/joss.05415</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.05415</pub-id>
+      <fpage>5415</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
