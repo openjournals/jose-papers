@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20240719194057-ab82f5fa65c8c52e26eb0cc0b4254bec27bea117</doi_batch_id>
+    <timestamp>20240719194057</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>07</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>77</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>The University of Toronto Climate Downscaling Workflow:
+Tools and Resources for Climate Change Impact Analysis</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Michael</given_name>
+            <surname>Morris</surname>
+            <ORCID>https://orcid.org/0000-0002-5758-2182</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Paul J.</given_name>
+            <surname>Kushner</surname>
+            <ORCID>https://orcid.org/0000-0002-6404-4518</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Karen L.</given_name>
+            <surname>Smith</surname>
+            <ORCID>https://orcid.org/0000-0002-4652-6310</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>07</month>
+          <day>19</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>243</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00243</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.12785645</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/243</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00243</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00243</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00243.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="kotamarthi2021">
+            <volume_title>Downscaling Techniques for High-Resolution
+Climate Projections: From Global Change to Local Impacts</volume_title>
+            <author>Kotamarthi</author>
+            <doi>10.1017/9781108601269</doi>
+            <isbn>978-1-108-47375-0</isbn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Kotamarthi, R., Hayhoe, K., Mearns,
+L. O., Wuebbles, D., Jacobs, J., &amp; Jurado, J. (2021). Downscaling
+Techniques for High-Resolution Climate Projections: From Global Change
+to Local Impacts. Cambridge University Press.
+https://doi.org/10.1017/9781108601269</unstructured_citation>
+          </citation>
+          <citation key="anderson2021">
+            <article_title>A narrative approach to building
+computational capacity for climate change impact assessment in
+professional master’s students</article_title>
+            <author>Anderson</author>
+            <journal_title>Journal of Open Source
+Education</journal_title>
+            <issue>46</issue>
+            <volume>4</volume>
+            <doi>10.21105/jose.00100</doi>
+            <issn>2577-3569</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Anderson, C. I., &amp; Smith, K. L.
+(2021). A narrative approach to building computational capacity for
+climate change impact assessment in professional master’s students.
+Journal of Open Source Education, 4(46), 100.
+https://doi.org/10.21105/jose.00100</unstructured_citation>
+          </citation>
+          <citation key="maraun2018">
+            <volume_title>Statistical Downscaling and Bias Correction
+for Climate Research</volume_title>
+            <author>Maraun</author>
+            <doi>10.1017/9781107588783</doi>
+            <isbn>978-1-107-06605-2</isbn>
+            <cYear>2018</cYear>
+            <unstructured_citation>Maraun, D., &amp; Widmann, M. (2018).
+Statistical Downscaling and Bias Correction for Climate Research.
+Cambridge University Press.
+https://doi.org/10.1017/9781107588783</unstructured_citation>
+          </citation>
+          <citation key="eyring2016">
+            <article_title>Overview of the Coupled Model Intercomparison
+Project Phase 6 (CMIP6) experimental design and
+organization</article_title>
+            <author>Eyring</author>
+            <journal_title>Geosci. Model Dev.</journal_title>
+            <issue>5</issue>
+            <volume>9</volume>
+            <doi>10.5194/gmd-9-1937-2016</doi>
+            <issn>1991-9603</issn>
+            <cYear>2016</cYear>
+            <unstructured_citation>Eyring, V., Bony, S., Meehl, G. A.,
+Senior, C. A., Stevens, B., Stouffer, R. J., &amp; Taylor, K. E. (2016).
+Overview of the Coupled Model Intercomparison Project Phase 6 (CMIP6)
+experimental design and organization. Geosci. Model Dev., 9(5),
+1937–1958.
+https://doi.org/10.5194/gmd-9-1937-2016</unstructured_citation>
+          </citation>
+          <citation key="bourgault2023">
+            <article_title>Xclim: Xarray-based climate data
+analytics</article_title>
+            <author>Bourgault</author>
+            <journal_title>Journal of Open Source
+Software</journal_title>
+            <issue>85</issue>
+            <volume>8</volume>
+            <doi>10.21105/joss.05415</doi>
+            <issn>2475-9066</issn>
+            <cYear>2023</cYear>
+            <unstructured_citation>Bourgault, P., Huard, D., Smith, T.
+J., Logan, T., Aoun, A., Lavoie, J., Dupuis, E., Rondeau-Genesse, G.,
+Alegre, R., Barnes, C., Laperriere, A. B., Biner, S., Caron, D.,
+Ehbrecht, C., Fyke, J., Keel, T., Labonte, M.-P., Lierhammer, L., Low,
+J.-F., … Whelan, C. (2023). Xclim: Xarray-based climate data analytics.
+Journal of Open Source Software, 8(85), 5415.
+https://doi.org/10.21105/joss.05415</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
