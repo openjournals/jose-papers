@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">241</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00241</article-id>
+<title-group>
+<article-title>Learning Machine Learning with Lorenz-96</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-6632-0187</contrib-id>
+<name>
+<surname>Balwada</surname>
+<given-names>Dhruv</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5999-4917</contrib-id>
+<name>
+<surname>Abernathey</surname>
+<given-names>Ryan</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9652-2991</contrib-id>
+<name>
+<surname>Acharya</surname>
+<given-names>Shantanu</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9413-1017</contrib-id>
+<name>
+<surname>Adcroft</surname>
+<given-names>Alistair</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-2168-0431</contrib-id>
+<name>
+<surname>Brener</surname>
+<given-names>Judith</given-names>
+</name>
+<xref ref-type="aff" rid="aff-12"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7561-5438</contrib-id>
+<name>
+<surname>Balaji</surname>
+<given-names>V</given-names>
+</name>
+<xref ref-type="aff" rid="aff-15"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1140-7415</contrib-id>
+<name>
+<surname>Bhouri</surname>
+<given-names>Mohamed Aziz</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-2847-1512</contrib-id>
+<name>
+<surname>Bruna</surname>
+<given-names>Joan</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-13"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-0063-1465</contrib-id>
+<name>
+<surname>Bushuk</surname>
+<given-names>Mitch</given-names>
+</name>
+<xref ref-type="aff" rid="aff-9"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-0472-7069</contrib-id>
+<name>
+<surname>Chapman</surname>
+<given-names>Will</given-names>
+</name>
+<xref ref-type="aff" rid="aff-12"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-2310-0480</contrib-id>
+<name>
+<surname>Connolly</surname>
+<given-names>Alex</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-1462-686X</contrib-id>
+<name>
+<surname>Deshayes</surname>
+<given-names>Julie</given-names>
+</name>
+<xref ref-type="aff" rid="aff-10"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7039-8606</contrib-id>
+<name>
+<surname>Fernandez-Granda</surname>
+<given-names>Carlos</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-13"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-0845-8345</contrib-id>
+<name>
+<surname>Gentine</surname>
+<given-names>Pierre</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+<xref ref-type="aff" rid="aff-14"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3271-2024</contrib-id>
+<name>
+<surname>Gorbunova</surname>
+<given-names>Anastasiia</given-names>
+</name>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-8176-1642</contrib-id>
+<name>
+<surname>Gregory</surname>
+<given-names>Will</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1571-4228</contrib-id>
+<name>
+<surname>Guillaumin</surname>
+<given-names>Arthur</given-names>
+</name>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0002-6966-588X</contrib-id>
+<name>
+<surname>Gupta</surname>
+<given-names>Shubham</given-names>
+</name>
+<xref ref-type="aff" rid="aff-8"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5621-8939</contrib-id>
+<name>
+<surname>Holland</surname>
+<given-names>Marika</given-names>
+</name>
+<xref ref-type="aff" rid="aff-12"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6739-0053</contrib-id>
+<name>
+<surname>Johnsson</surname>
+<given-names>J Emmanuel</given-names>
+</name>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6882-2938</contrib-id>
+<name>
+<surname>Sommer</surname>
+<given-names>Julien Le</given-names>
+</name>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Li</surname>
+<given-names>Ziwei</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3684-9634</contrib-id>
+<name>
+<surname>Loose</surname>
+<given-names>Nora</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-6532-0740</contrib-id>
+<name>
+<surname>Lu</surname>
+<given-names>Feiyu</given-names>
+</name>
+<xref ref-type="aff" rid="aff-9"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-6532-0740</contrib-id>
+<name>
+<surname>O’Gorman</surname>
+<given-names>Paul</given-names>
+</name>
+<xref ref-type="aff" rid="aff-11"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-2098-3457</contrib-id>
+<name>
+<surname>Perezhogin</surname>
+<given-names>Pavel</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9047-0767</contrib-id>
+<name>
+<surname>Reichl</surname>
+<given-names>Brandon</given-names>
+</name>
+<xref ref-type="aff" rid="aff-9"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-2368-6979</contrib-id>
+<name>
+<surname>Ross</surname>
+<given-names>Andrew</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9642-008X</contrib-id>
+<name>
+<surname>Sane</surname>
+<given-names>Aakash</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7441-4116</contrib-id>
+<name>
+<surname>Shamekh</surname>
+<given-names>Sara</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7730-1483</contrib-id>
+<name>
+<surname>Verma</surname>
+<given-names>Tarun</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7519-0118</contrib-id>
+<name>
+<surname>Yuval</surname>
+<given-names>Janni</given-names>
+</name>
+<xref ref-type="aff" rid="aff-11"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1703-4162</contrib-id>
+<name>
+<surname>Zampieri</surname>
+<given-names>Lorenzo</given-names>
+</name>
+<xref ref-type="aff" rid="aff-7"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-4278-9786</contrib-id>
+<name>
+<surname>Zhang</surname>
+<given-names>Cheng</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-8472-4828</contrib-id>
+<name>
+<surname>Zanna</surname>
+<given-names>Laure</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Lamont Doherty Earth Observatory, Columbia
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Courant Institute of Mathematical Sciences, New York
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Program in Atmospheric and Oceanic Sciences, Princeton
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Earth and Environmental Engineering, Columbia
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>Queen Mary University of London</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-6">
+<institution-wrap>
+<institution>Univ. Grenoble Alpes, CNRS, IRD, Grenoble INP, INRAE, IGE,
+38000 Grenoble, France</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-7">
+<institution-wrap>
+<institution>Ocean Modeling and Data Assimilation Division, Fondazione
+Centro Euro-Mediterraneo sui Cambiamenti Climatici - CMCC</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-8">
+<institution-wrap>
+<institution>Tandon School of Engineering, New York
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-9">
+<institution-wrap>
+<institution>NOAA Geophysical Fluid Dynamics Laboratory</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-10">
+<institution-wrap>
+<institution>Sorbonne Universités, LOCEAN Laboratory, Paris,
+France</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-11">
+<institution-wrap>
+<institution>Department of Earth, Atmospheric, and Planetary Sciences,
+Massachusetts Institute of Technology</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-12">
+<institution-wrap>
+<institution>National Center for Atmospheric Research</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-13">
+<institution-wrap>
+<institution>Center for Data Science, New York University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-14">
+<institution-wrap>
+<institution>Columbia Climate School, Columbia University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-15">
+<institution-wrap>
+<institution>Schmidt Futures</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-10-10">
+<day>10</day>
+<month>10</month>
+<year>2023</year>
+</pub-date>
+<volume>7</volume>
+<issue>78</issue>
+<fpage>241</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>Machine Learning</kwd>
+<kwd>Neural Networks</kwd>
+<kwd>Dynamical systems</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Machine learning (ML) is a rapidly growing field that is starting
+  to touch all aspects of our lives, and science is not immune to this.
+  In fact, recent work in the field of scientific ML, i.e. combining ML
+  and with conventional scientific problems, is leading to new
+  breakthroughs in notoriously hard problems, which might have seemed
+  too distant till a few years ago. One such age-old problem is that of
+  turbulence closures in fluid flows. This closure or parameterization
+  problem is particularly relevant for environmental fluids, which span
+  a large range of scales from the size of the planet down to
+  millimeters, and remains a big challenge in the way of improving
+  forecasts of weather and projections of climate.</p>
+  <p>The climate system is composed of many interacting components
+  (e.g., ocean, atmosphere, ice) and is described by complex nonlinear
+  equations. To simulate, understand, and predict climate, these
+  equations are solved numerically under a number of simplifications,
+  therefore leading to errors. The errors result from numerics used to
+  solve the equations and the lack of appropriate representations of
+  processes occurring below the resolution of the climate model grid
+  (i.e., sub-grid processes).</p>
+  <p>This book aims to conceptualize the problems associated with
+  climate models within a simple and computationally accessible
+  framework, and show how some basic ML methods can be used to approach
+  these problems. We will introduce the readers to climate modeling
+  using a simple tool, the Lorenz
+  (<xref alt="1995" rid="ref-Lorenz1995" ref-type="bibr">1995</xref>)
+  (L96) two-timescale model. We discuss the numerical aspects of the L96
+  model, the approximate representation of sub-grid processes (known as
+  parameterizations or closures), and simple data assimilation problems
+  (a data-model fusion method). We then use the L96 results to
+  demonstrate how to learn sub-grid parameterizations from data with ML,
+  and then test the parameterizations offline (apriori) and online
+  (aposteriori), with a focus on the interpretability of the results.
+  This book is written primarily for climate scientists and physicists,
+  who are looking for a gentle introduction to how they can incorporate
+  ML into their work. However, it may also help ML scientists learn
+  about the parameterization problem in a framework that is relatively
+  simple to understand and use.</p>
+  <p>The material in this Jupyter book is presented over five sections.
+  The first section, Lorenz 96 and General Circulations Models,
+  describes the Lorenz-96 model and how it can work as a simple analog
+  to much more complex general circulation models used for simulating
+  ocean and atmosphere dynamics. This section also introduces the
+  essence of the parameterization or closure problem. In the second
+  section, Neural Networks with Lorenz-96, we introduce the basics of
+  ML, how fully connected neural networks can be used to approach the
+  parameterization task, and how these neural networks can be optimized
+  and interpreted. No model, even the well parameterized ones, is
+  perfect, and the way we keep computer models close to reality is by
+  guiding them with the help of observational data. This task is
+  referred to as data assimilation, and is introduced in the third
+  section, Data Assimilation with Lorenz-96. Here, we use the L96 model
+  to quickly introduce the concepts from data assimilation, and show how
+  ML can be used to learn data assimilation increments to help reduce
+  model biases. While neural networks can be great functional
+  approximators, they are usually quite opaque, and it is hard to figure
+  out exactly what they have learnt. Equation discovery is a class of ML
+  techniques that tries to estimate the function in terms of an equation
+  rather than as a set of weights for a neural network. This approach
+  produces a result that is far more interpretable, and can potentially
+  even help discover novel physics. These techniques are presented in
+  the fourth section, Equation Discovery with Lorenz-96. Finally, we
+  describe a few more ML in section five, Other ML approaches for
+  Lorenz-96, with the acknowledgment that there are many more techniques
+  in the fast-growing ML and scientific ML literature and we have no
+  intention of providing a comprehensive summary of the field.</p>
+  <p>The book was created by and as part of M2LInES, an international
+  collaboration supported by Schmidt Futures, to improve climate models
+  with scientific ML. The original goal for these notebooks in this
+  Jupyter book was for our team to work together and learn from each
+  other; in particular, to get up to speed on the key scientific aspects
+  of our collaboration (parameterizations, ML, data assimilation,
+  uncertainty quantification) and to develop new ideas. This was done as
+  a series of tutorials, each of which was led by a few team members and
+  occurred with a frequency of roughly once every 2 weeks for about 6-7
+  months. This Jupyter book is a collection of the notebooks used during
+  these tutorials, which have only slightly been edited for continuity
+  and clarity. Ultimately, we are happy to share these resources with
+  the scientific community to introduce our research ideas and foster
+  the use of ML techniques for tackling climate science problems.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Parameterization of sub-grid processes is a major challenge in
+  climate modeling. The details of this problem may often be very
+  context dependent (Christensen &amp; Zanna
+  (<xref alt="2022" rid="ref-christensen2022parametrization" ref-type="bibr">2022</xref>)),
+  but much can be learned by addressing the issue in a general and
+  simpler sense. Also, a general approach allows non-domain experts,
+  e.g. ML researchers, to engage and contribute more meaningfully. This
+  JupyterBook aims to achieve this target with the help of a simple
+  dynamical system model - Lorenz 96, such that the reader is introduced
+  to the basic concepts with minimal superfluous complexity. It is
+  possible to extend the concepts that are presented here to other
+  dynamical systems, and even to more complex parameterization tasks
+  (some examples can be found at
+  https://m2lines.github.io/publications/), and we hope that researchers
+  and learners aiming to do this find the concepts presented here as a
+  useful stepping stone in this pursuit.</p>
+  <p>As described above, these notebooks were originally created to
+  introduce non-domain experts to ideas from the parameterization
+  aspects of climate modeling and how ML could be used to potentially
+  address these. Now they have been adapted to act as a pedagogical tool
+  for self-learning, be used as a reference manual, or for teaching some
+  modules in an introductory class on ML. The book is organized in
+  sections that are relatively independent; with the exception that the
+  first section provides a general overview to the parameterization
+  problem in climate models. Each notebook covers material that can be
+  discussed in roughly an hour-long lecture, and sections can be mixed
+  and matched or ordered as needed depending on the overall learning
+  objectives.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>This work is supported by the generosity of Eric and Wendy Schmidt
+  by recommendation of Schmidt Futures, as part of its Virtual Earth
+  System Research Institute (VESRI). MAB acknowledges support from
+  National Science Foundation’s AGS-PRF Fellowship Award
+  (AGS2218197).</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Lorenz1995">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lorenz</surname><given-names>E. N.</given-names></name>
+      </person-group>
+      <article-title>Predictability: A problem partly solved</article-title>
+      <source>Seminar on Predictability</source>
+      <publisher-name>ECMWF; ECMWF</publisher-name>
+      <publisher-loc>Shinfield Park, Reading</publisher-loc>
+      <year iso-8601-date="1995">1995</year>
+      <volume>1</volume>
+      <uri>https://www.ecmwf.int/node/10829</uri>
+      <pub-id pub-id-type="doi">10.1017/cbo9780511617652.004</pub-id>
+      <fpage>1</fpage>
+      <lpage>18</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-christensen2022parametrization">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Christensen</surname><given-names>Hannah</given-names></name>
+        <name><surname>Zanna</surname><given-names>Laure</given-names></name>
+      </person-group>
+      <article-title>Parametrization in weather and climate models</article-title>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <pub-id pub-id-type="doi">10.1093/acrefore/9780190228620.013.826</pub-id>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
