@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20240823143833-4ba62b54480eb7dc6d187bd0cbeac7be365a8c26</doi_batch_id>
+    <timestamp>20240823143833</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>08</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>78</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Learning Machine Learning with Lorenz-96</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Dhruv</given_name>
+            <surname>Balwada</surname>
+            <ORCID>https://orcid.org/0000-0001-6632-0187</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Ryan</given_name>
+            <surname>Abernathey</surname>
+            <ORCID>https://orcid.org/0000-0001-5999-4917</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Shantanu</given_name>
+            <surname>Acharya</surname>
+            <ORCID>https://orcid.org/0000-0002-9652-2991</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Alistair</given_name>
+            <surname>Adcroft</surname>
+            <ORCID>https://orcid.org/0000-0001-9413-1017</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Judith</given_name>
+            <surname>Brener</surname>
+            <ORCID>https://orcid.org/0000-0003-2168-0431</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>V</given_name>
+            <surname>Balaji</surname>
+            <ORCID>https://orcid.org/0000-0001-7561-5438</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Mohamed Aziz</given_name>
+            <surname>Bhouri</surname>
+            <ORCID>https://orcid.org/0000-0003-1140-7415</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Joan</given_name>
+            <surname>Bruna</surname>
+            <ORCID>https://orcid.org/0000-0002-2847-1512</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Mitch</given_name>
+            <surname>Bushuk</surname>
+            <ORCID>https://orcid.org/0000-0002-0063-1465</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Will</given_name>
+            <surname>Chapman</surname>
+            <ORCID>https://orcid.org/0000-0002-0472-7069</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Alex</given_name>
+            <surname>Connolly</surname>
+            <ORCID>https://orcid.org/0000-0002-2310-0480</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Julie</given_name>
+            <surname>Deshayes</surname>
+            <ORCID>https://orcid.org/0000-0002-1462-686X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Carlos</given_name>
+            <surname>Fernandez-Granda</surname>
+            <ORCID>https://orcid.org/0000-0001-7039-8606</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Pierre</given_name>
+            <surname>Gentine</surname>
+            <ORCID>https://orcid.org/0000-0002-0845-8345</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Anastasiia</given_name>
+            <surname>Gorbunova</surname>
+            <ORCID>https://orcid.org/0000-0002-3271-2024</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Will</given_name>
+            <surname>Gregory</surname>
+            <ORCID>https://orcid.org/0000-0001-8176-1642</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Arthur</given_name>
+            <surname>Guillaumin</surname>
+            <ORCID>https://orcid.org/0000-0003-1571-4228</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Shubham</given_name>
+            <surname>Gupta</surname>
+            <ORCID>https://orcid.org/0009-0002-6966-588X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Marika</given_name>
+            <surname>Holland</surname>
+            <ORCID>https://orcid.org/0000-0001-5621-8939</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>J Emmanuel</given_name>
+            <surname>Johnsson</surname>
+            <ORCID>https://orcid.org/0000-0002-6739-0053</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Julien Le</given_name>
+            <surname>Sommer</surname>
+            <ORCID>https://orcid.org/0000-0002-6882-2938</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Ziwei</given_name>
+            <surname>Li</surname>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Nora</given_name>
+            <surname>Loose</surname>
+            <ORCID>https://orcid.org/0000-0002-3684-9634</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Feiyu</given_name>
+            <surname>Lu</surname>
+            <ORCID>https://orcid.org/0000-0001-6532-0740</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Paul</given_name>
+            <surname>O’Gorman</surname>
+            <ORCID>https://orcid.org/0000-0001-6532-0740</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Pavel</given_name>
+            <surname>Perezhogin</surname>
+            <ORCID>https://orcid.org/0000-0003-2098-3457</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Brandon</given_name>
+            <surname>Reichl</surname>
+            <ORCID>https://orcid.org/0000-0001-9047-0767</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Andrew</given_name>
+            <surname>Ross</surname>
+            <ORCID>https://orcid.org/0000-0002-2368-6979</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Aakash</given_name>
+            <surname>Sane</surname>
+            <ORCID>https://orcid.org/0000-0002-9642-008X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Sara</given_name>
+            <surname>Shamekh</surname>
+            <ORCID>https://orcid.org/0000-0001-7441-4116</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Tarun</given_name>
+            <surname>Verma</surname>
+            <ORCID>https://orcid.org/0000-0001-7730-1483</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Janni</given_name>
+            <surname>Yuval</surname>
+            <ORCID>https://orcid.org/0000-0001-7519-0118</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Lorenzo</given_name>
+            <surname>Zampieri</surname>
+            <ORCID>https://orcid.org/0000-0003-1703-4162</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Cheng</given_name>
+            <surname>Zhang</surname>
+            <ORCID>https://orcid.org/0000-0003-4278-9786</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Laure</given_name>
+            <surname>Zanna</surname>
+            <ORCID>https://orcid.org/0000-0002-8472-4828</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>08</month>
+          <day>23</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>241</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00241</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.13357587</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/241</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00241</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00241</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00241.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Lorenz1995">
+            <article_title>Predictability: A problem partly
+solved</article_title>
+            <author>Lorenz</author>
+            <journal_title>Seminar on Predictability</journal_title>
+            <volume>1</volume>
+            <doi>10.1017/cbo9780511617652.004</doi>
+            <cYear>1995</cYear>
+            <unstructured_citation>Lorenz, E. N. (1995). Predictability:
+A problem partly solved. Seminar on Predictability, 1, 1–18.
+https://doi.org/10.1017/cbo9780511617652.004</unstructured_citation>
+          </citation>
+          <citation key="christensen2022parametrization">
+            <article_title>Parametrization in weather and climate
+models</article_title>
+            <author>Christensen</author>
+            <doi>10.1093/acrefore/9780190228620.013.826</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Christensen, H., &amp; Zanna, L.
+(2022). Parametrization in weather and climate models.
+https://doi.org/10.1093/acrefore/9780190228620.013.826</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
