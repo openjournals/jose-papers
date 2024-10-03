@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">240</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00240</article-id>
+<title-group>
+<article-title>Self-Guided Decision Support Groundwater Modelling with
+Python</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0891-3886</contrib-id>
+<name>
+<surname>Hugman</surname>
+<given-names>Rui T.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-4950-1469</contrib-id>
+<name>
+<surname>White</surname>
+<given-names>Jeremy T.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-7756-4651</contrib-id>
+<name>
+<surname>Fienen</surname>
+<given-names>Michael N.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-6311-8450</contrib-id>
+<name>
+<surname>Hemmings</surname>
+<given-names>Brioch</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-4455-8255</contrib-id>
+<name>
+<surname>Markovich</surname>
+<given-names>Katherine H.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>INTERA Geosciences, Perth, Western Australia,
+Australia</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>U.S. Geological Survey, Upper Midwest Water Science Center,
+Madison, WI USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Wairakei Research Centre, GNS Science, Taupō, New
+Zealand</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-09-20">
+<day>20</day>
+<month>9</month>
+<year>2023</year>
+</pub-date>
+<volume>7</volume>
+<issue>80</issue>
+<fpage>240</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>groundwater modelling</kwd>
+<kwd>environmental modelling</kwd>
+<kwd>decision-support</kwd>
+<kwd>uncertainty analysis</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/gmdsi/GMDSI_notebooks/tree/main">GMDSI
+  tutorial notebooks repository</ext-link> provides learners with a
+  comprehensive set of tutorials for self-guided training on
+  decision-support groundwater modelling using Python-based tools.
+  Although targeted at groundwater modelling, the tutorials are based
+  around model-agnostic tools and readily transferable to other
+  environmental modelling workflows. The tutorials are divided into
+  three parts. The first covers fundamental theoretical concepts. These
+  are intended as background reading for reference on an as-needed
+  basis. Tutorials in the second part introduce learners to some of the
+  core concepts of parameter estimation in a groundwater modelling
+  context, as well as provide a gentle introduction to the
+  <monospace>PEST</monospace>, <monospace>PEST++</monospace> and
+  <monospace>pyemu</monospace> software. Lastly, the third part
+  demonstrates how to implement highly parameterized applied
+  decision-support modelling workflows. The tutorials aim to provide
+  examples of both “how to use” the software as well as “how to think”
+  about using the software. A key advantage to using notebooks in this
+  context is that the workflows described run the same code as
+  practitioners would run on a large-scale real-world application. Using
+  a small synthetic model facilitates rapid progression through the
+  workflow.</p>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the Project</title>
+  <p>The Groundwater Modelling Decision Support Initiative
+  (<ext-link ext-link-type="uri" xlink:href="https://gmdsi.org">GMDSI</ext-link>)
+  is an industry-backed and industry-aligned initiative. Established in
+  mid-2019, its primary goal is to enhance the role of groundwater
+  modelling in groundwater management, regulatory processes, and
+  decision-making. GMDSI promotes the improved use of modelling in
+  decision support, with activities focused on industry engagement,
+  education, practical examples, research, and software development. It
+  also emphasizes the importance of tools for uncertainty quantification
+  (UQ) and parameter estimation (PE) in these processes.</p>
+  <p>The roots of the materials making up the tutorial notebooks were
+  from a traditional, week-long classroom course curriculum developed
+  for internal training at the US Geological Survey (USGS) by a subset
+  of the authors of this paper. After three iterations of teaching the
+  in-person class, the authors, with support from the GMDSI, endeavored
+  to build on the positive aspects of using Jupyter Notebooks and
+  explore alternative teaching environments. The first major change was
+  to add sufficient narration and explanation to the notebooks to
+  improve possibilities for self-study. The next change was to
+  reorganize the content from a strictly linear progression to a
+  three-part structure. This led to a hybrid model of self-study
+  accompanied by discussion and background lectures online.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Many groundwater modelers typically rely on Graphical User
+  Interfaces (GUIs) for their modelling needs. However, each GUI has its
+  unique characteristics and varying degrees of compatibility with
+  external software like PEST
+  (<xref alt="Doherty, 2015" rid="ref-pest" ref-type="bibr">Doherty,
+  2015</xref>) and PEST++
+  (<xref alt="Jeremy T. White et al., 2020" rid="ref-whitepestpp" ref-type="bibr">Jeremy
+  T. White et al., 2020</xref>). Creating educational materials for
+  these GUIs would necessitate tailoring content to each GUI’s specific
+  features, obtaining cooperation from the GUI developers themselves and
+  potentially lagging behind the latest developments. Many GUIs are
+  commercial products as well which limits accessibility.</p>
+  <p>Decision-support modelling often demands capabilities that surpass
+  what current GUIs can offer. Thus, the use of Python for environmental
+  modelling has increased in recent years, due to its open-source
+  nature, user-friendly syntax, and extensive scientific libraries.
+  Python-based tools have been developed to facilitate UQ and PE
+  analyses, such as pyemu
+  (<xref alt="Jeremy T. White et al., 2016b" rid="ref-White_A_python_framework_2016" ref-type="bibr">Jeremy
+  T. White et al., 2016b</xref>;
+  <xref alt="Jeremy T. White et al., 2021" rid="ref-white2021towards" ref-type="bibr">Jeremy
+  T. White et al., 2021</xref>). pyemu is a Python package that provides
+  a framework for implementing UQ and PE analyses with PEST and PEST++.
+  It offers a range of capabilities, including parameter estimation,
+  uncertainty analysis, and management optimization. Although initially
+  designed for groundwater modelling, pyemu’s methodologies are
+  versatile and can be applied to diverse numerical environmental
+  models, Anecdotally, we have seen that more modelers are turning to
+  Python packages like FloPy
+  (<xref alt="Bakker et al., 2016" rid="ref-flopy" ref-type="bibr">Bakker
+  et al., 2016</xref>) and pyemu
+  (<xref alt="Jeremy T. White et al., 2016a" rid="ref-whitepyemu" ref-type="bibr">Jeremy
+  T. White et al., 2016a</xref>) for model and PEST++ setup.
+  Unfortunately, the adoption of this approach is hindered by a steep
+  learning curve primarily due to the scarcity of user-friendly training
+  materials.</p>
+  <p>The GMDSI tutorial notebooks aim to address this gap by providing a
+  comprehensive, self-guided, and open-source resource for learning
+  decision-support modelling workflows with Python. They are designed to
+  be accessible to a broad audience, including students, researchers,
+  and practitioners who aim to undertake applied environmental
+  decision-support modelling.</p>
+</sec>
+<sec id="contents-and-instructional-design">
+  <title>Contents and Instructional Design</title>
+  <p>The tutorial notebooks are structured into three main parts:</p>
+  <sec id="part-0-introductory-background">
+    <title>Part 0: Introductory Background</title>
+    <p>Part 0 serves as the foundation, providing essential background
+    material. Each notebook in Part 0 is standalone and covers a unique
+    topic. These include:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>Introduction to a synthetic model known as the “Freyberg”
+        model
+        (<xref alt="Freyberg, 1988" rid="ref-freyberg" ref-type="bibr">Freyberg,
+        1988</xref>). This model is used as a consistent example
+        throughout the tutorial exercises, allowing learners to apply
+        concepts in a practical context.</p>
+      </list-item>
+      <list-item>
+        <p>An introduction to the <monospace>pyemu</monospace> Python
+        package that is used to complement and interface with
+        PEST/PEST++.</p>
+      </list-item>
+      <list-item>
+        <p>Explanation of fundamental mathematical concepts that are
+        relevant and will be encountered throughout the tutorial
+        notebooks.</p>
+      </list-item>
+    </list>
+    <p>Pre-requisites for Part 0 include a basic understanding of
+    Python, Jupyter Notebooks, and MODFLOW 6
+    (<xref alt="Langevin et al., 2022" rid="ref-Langevin_MODFLOW_6_Modular_2022" ref-type="bibr">Langevin
+    et al., 2022</xref>). Familiarity with git is a bonus but not
+    fundamental.</p>
+  </sec>
+  <sec id="part-1-introduction-to-pest-and-the-gauss-levenberg-marquardt-approach">
+    <title>Part 1: Introduction to <monospace>PEST</monospace> and the
+    Gauss-Levenberg Marquardt Approach</title>
+    <p>Part 1 focuses on the Gauss-Levenberg Marquardt (GLM) approach to
+    parameter estimation and associated uncertainty analysis in a
+    groundwater modelling context.</p>
+    <p>Part 1 is designed to be accessible without strict sequential
+    dependencies. Learners have the flexibility to explore its contents
+    in any order that suits their preferences or needs. These
+    include:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>Introduction to concepts such as non-uniqueness,
+        identifiability, and equifinality.</p>
+      </list-item>
+      <list-item>
+        <p>Introduction to the <monospace>PEST</monospace> control file
+        and the PEST/PEST++ interface.</p>
+      </list-item>
+      <list-item>
+        <p>Exploring the challenges of parameterization schemes on
+        predictive ability, as well as how to mitigate them.</p>
+      </list-item>
+      <list-item>
+        <p>Introducing first-order second-moment (FOSM) and prior Monte
+        Carlo uncertainty analysis approaches.</p>
+      </list-item>
+    </list>
+    <p>Pre-requisites for Part 1 include a basic understanding of
+    numerical groundwater modelling and familiarity with MODFLOW 6.
+    Familiarity with Python and Jupyter Notebooks is assumed.</p>
+  </sec>
+  <sec id="part-2-python-based-decision-support-modelling-workflows">
+    <title>Part 2: Python-based Decision-Support Modelling
+    Workflows</title>
+    <p>Part 2 expands on the foundational knowledge gained in Part 1 and
+    delves into advanced topics related to ensemble-based parameter
+    estimation, uncertainty analysis and optimization methods. These
+    advanced topics include management optimization and sequential data
+    assimilation and assume a highly parameterized approach, as
+    motivated in Part 1. Topics are laid out in manner that reflects
+    real-world workflows, with a focus on practical application of
+    concepts and problem solving.</p>
+    <p>Learners have the option to explore various sequences, in line
+    with real-world applied workflows, such as:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>Prior Monte Carlo analysis</p>
+      </list-item>
+      <list-item>
+        <p>Highly parameterized Gauss-Levenberg Marquardt history
+        matching and associated Data Worth analysis using First Order,
+        Second Moment (FOSM) technique,</p>
+      </list-item>
+      <list-item>
+        <p>Ensemble-based history matching and uncertainty analysis with
+        the iterative ensemble smoother approach as implemented in
+        <monospace>PEST++IES</monospace>,</p>
+      </list-item>
+      <list-item>
+        <p>Sequential data assimilation with
+        <monospace>PEST++DA</monospace>, and</p>
+      </list-item>
+      <list-item>
+        <p>Single-objective and multi-objective optimization under
+        uncertainty with <monospace>PEST++OPT</monospace> and
+        <monospace>PEST++MOU</monospace>.</p>
+      </list-item>
+    </list>
+    <p>Each of these sequences comprises multiple notebooks to be
+    executed in a specified order. They demonstrate how to execute the
+    workflow, interpret results, and apply the concepts to real-world
+    problems.</p>
+    <p>The flowchart below gives an example of a curated learning flow
+    for a common decision support modelling application. Over time,
+    referring back through Part 1 will provide a deeper understanding of
+    some concepts and techniques taken for granted in the highly
+    parameterized, largely ensemble-based approaches of Part 2.</p>
+    <fig>
+      <caption><p>Example notebook learning flow demonstrating a
+      comprehensive workflow for an applied, ensemble-based management
+      optimization
+      .<styled-content id="figU003Aflowchart"></styled-content></p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="../flowchart.png" />
+    </fig>
+    <p>Pre-requisites for Part 2 include a basic understanding of
+    PEST/PEST++ and the <monospace>PEST</monospace> interface, as well
+    as familiarity with the Freyberg model. Familiarity with Python and
+    Jupyter Notebooks is assumed.</p>
+  </sec>
+</sec>
+<sec id="experience-of-use-in-teaching-and-learning-situations">
+  <title>Experience of use in teaching and learning situations</title>
+  <p>The notebooks were employed during the
+  <ext-link ext-link-type="uri" xlink:href="https://gmdsi.org/blog/guided-self-study-course/">Applied
+  Decision Support Groundwater modelling With Python: A Guided
+  Self-Study Course</ext-link> hosted by GMDSI. This self-guided course
+  comprised 5 online sessions, each lasting 1 to 2 hours and focused on
+  the workflows of Part 2. During each session the instructors go
+  through a section of the tutorials and expand on some of the concepts.
+  Sessions were recorded and can be accessed
+  <ext-link ext-link-type="uri" xlink:href="https://www.youtube.com/playlist?list=PLH34FdA92dratOQVyYjURdFMOnO1ImmRV">on
+  the GMDSI YouTube channel</ext-link>. Beyond the live online sessions,
+  learners were encouraged to make use of the GitHub
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/gmdsi/GMDSI_notebooks/discussions">Discussions</ext-link>
+  feature to retain a search-engine findable record of common questions
+  that persist beyond the time frame of the course .</p>
+  <p>Feedback from the 65 students who participated in the course was
+  anecdotal but informative.
+  <xref alt="[fig:responses]" rid="figU003Aresponses">[fig:responses]</xref>
+  summarizes the responses by 34 respondents to four questions,
+  comprising 52%. The majority of respondents indicated a preference for
+  this hybrid self-guided/online instruction approach over an in-person
+  week-long intensive class.</p>
+  <p>Open-ended feedback from the participants was generally positive
+  and also included some constructive criticism. Participants
+  appreciated the opportunity to ask questions and several reported
+  hearing the discussion around other peoples’ questions as being
+  valuable and clarifying aspects of the material.</p>
+  <fig>
+    <caption><p>Summary of responses to post-course survey based on 34
+    responses. Panel A summarizes whether respondents would prefer an
+    intensive in-person workshop or this hybrid option. Panel B
+    summarizes how much of the notebooks respondents were able to
+    complete throughout the course. Panel C summarizes respondent
+    comfort level with <monospace>PEST++</monospace> before and after
+    the course. Panel D highlights individual changes in comfort level
+    reported due to the
+    course.<styled-content id="figU003Aresponses"></styled-content></p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="./responses.png" />
+  </fig>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>The tutorials were originally developed with support from the US
+  Geological Survey (USGS) and support from USGS continues through the
+  HyTest training project. Continued development and support is funded
+  by the Groundwater Modelling Decision Support Initiative (GMDSI).
+  GMDSI is jointly funded by BHP and Rio Tinto. We thank Dr. John
+  Doherty for his tireless and pioneering efforts starting
+  <monospace>PEST</monospace> and continuing to innovate and Dr. Randall
+  Hunt for his leadership in <monospace>PEST</monospace> and
+  <monospace>PEST++</monospace> applications and development and
+  contributions to the initial curriculum for this material and the
+  early version of the notebooks. We thank Kalle Jahn (USGS),
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/incsanchezro">Ines
+  Rodriguez</ext-link> and
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/codyalbertross">codyalbertross</ext-link>
+  who made reviews that improved this manuscript. Lastly, we thank users
+  and stress-testers for their valuable feedback and continued community
+  contributions to the repository.</p>
+</sec>
+<sec id="disclaimer">
+  <title>Disclaimer</title>
+  <p>Any use of trade, firm, or product names is for descriptive
+  purposes only and does not imply endorsement by the US Government.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-whitepestpp">
+    <element-citation publication-type="report">
+      <person-group person-group-type="author">
+        <name><surname>White</surname><given-names>Jeremy T</given-names></name>
+        <name><surname>Hunt</surname><given-names>Randall J</given-names></name>
+        <name><surname>Fienen</surname><given-names>Michael N</given-names></name>
+        <name><surname>Doherty</surname><given-names>John E</given-names></name>
+      </person-group>
+      <article-title>Approaches to highly parameterized inversion: PEST++ version 5, a software suite for parameter estimation, uncertainty analysis, management optimization and sensitivity analysis</article-title>
+      <publisher-name>US Geological Survey Techniques; Methods 7-C26</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <pub-id pub-id-type="doi">10.3133/tm7C26</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-whitepyemu">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>White</surname><given-names>Jeremy T</given-names></name>
+        <name><surname>Fienen</surname><given-names>Michael N</given-names></name>
+        <name><surname>Doherty</surname><given-names>John E</given-names></name>
+      </person-group>
+      <article-title>A python framework for environmental model uncertainty analysis</article-title>
+      <source>Environmental Modelling &amp; Software</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <volume>85</volume>
+      <pub-id pub-id-type="doi">10.1016/j.envsoft.2016.08.017</pub-id>
+      <fpage>217</fpage>
+      <lpage>228</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-White_A_python_framework_2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>White</surname><given-names>Jeremy T.</given-names></name>
+        <name><surname>Fienen</surname><given-names>Michael N.</given-names></name>
+        <name><surname>Doherty</surname><given-names>John E.</given-names></name>
+      </person-group>
+      <article-title>A python framework for environmental model uncertainty analysis</article-title>
+      <source>Environmental Modelling &amp; Software</source>
+      <year iso-8601-date="2016-11">2016</year><month>11</month>
+      <volume>85</volume>
+      <pub-id pub-id-type="doi">10.1016/j.envsoft.2016.08.017</pub-id>
+      <fpage>217</fpage>
+      <lpage>228</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-white2021towards">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>White</surname><given-names>Jeremy T</given-names></name>
+        <name><surname>Hemmings</surname><given-names>Brioch</given-names></name>
+        <name><surname>Fienen</surname><given-names>Michael N</given-names></name>
+        <name><surname>Knowling</surname><given-names>Matthew J</given-names></name>
+      </person-group>
+      <article-title>Towards improved environmental modeling outcomes: Enabling low-cost access to high-dimensional, geostatistical-based decision-support analyses</article-title>
+      <source>Environmental Modelling &amp; Software</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>139</volume>
+      <pub-id pub-id-type="doi">10.1016/j.envsoft.2021.105022</pub-id>
+      <fpage>105022</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Langevin_MODFLOW_6_Modular_2022">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Langevin</surname><given-names>Christian D.</given-names></name>
+        <name><surname>Hughes</surname><given-names>Joseph D.</given-names></name>
+        <name><surname>Provost</surname><given-names>Alden M.</given-names></name>
+        <name><surname>Russcher</surname><given-names>Martijn</given-names></name>
+        <name><surname>Niswonger</surname><given-names>Richard G.</given-names></name>
+        <name><surname>Panday</surname><given-names>Sorab</given-names></name>
+        <name><surname>Merrick</surname><given-names>Damian</given-names></name>
+        <name><surname>Morway</surname><given-names>Eric D.</given-names></name>
+        <name><surname>Reno</surname><given-names>Michael J.</given-names></name>
+        <name><surname>Bonelli</surname><given-names>Wesley P.</given-names></name>
+        <name><surname>Banta</surname><given-names>Edward R.</given-names></name>
+      </person-group>
+      <article-title>MODFLOW 6 Modular Hydrologic Model</article-title>
+      <year iso-8601-date="2022-12">2022</year><month>12</month>
+      <uri>https://github.com/MODFLOW-USGS/modflow6</uri>
+      <pub-id pub-id-type="doi">10.5066/F76Q1VQV</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-pest">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Doherty</surname><given-names>J.</given-names></name>
+      </person-group>
+      <article-title>PEST and Its Utility Support Software</article-title>
+      <year iso-8601-date="2015">2015</year>
+      <uri>https://pesthomepage.org/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-flopy">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bakker</surname><given-names>M.</given-names></name>
+        <name><surname>Post</surname><given-names>V.</given-names></name>
+        <name><surname>Langevin</surname><given-names>C. D.</given-names></name>
+        <name><surname>Hughes</surname><given-names>J. D.</given-names></name>
+        <name><surname>White</surname><given-names>J. T.</given-names></name>
+        <name><surname>Starn</surname><given-names>J. J.</given-names></name>
+        <name><surname>Fienen</surname><given-names>M. N.</given-names></name>
+      </person-group>
+      <article-title>Scripting MODFLOW model development using python and FloPy</article-title>
+      <source>Groundwater</source>
+      <year iso-8601-date="2016">2016</year>
+      <volume>54</volume>
+      <issue>5</issue>
+      <uri>https://ngwa.onlinelibrary.wiley.com/doi/abs/10.1111/gwat.12413</uri>
+      <pub-id pub-id-type="doi">10.1111/gwat.12413</pub-id>
+      <fpage>733</fpage>
+      <lpage>739</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-freyberg">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Freyberg</surname><given-names>David L.</given-names></name>
+      </person-group>
+      <article-title>AN EXERCISE IN GROUND-WATER MODEL CALIBRATION AND PREDICTION</article-title>
+      <source>Groundwater</source>
+      <year iso-8601-date="1988">1988</year>
+      <volume>26</volume>
+      <issue>3</issue>
+      <uri>https://ngwa.onlinelibrary.wiley.com/doi/abs/10.1111/j.1745-6584.1988.tb00399.x</uri>
+      <pub-id pub-id-type="doi">10.1111/j.1745-6584.1988.tb00399.x</pub-id>
+      <fpage>350</fpage>
+      <lpage>360</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>

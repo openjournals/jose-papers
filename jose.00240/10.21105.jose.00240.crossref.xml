@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20241003184328-5f77e1707cc0f9610f8d11180b9b39ade2e29e17</doi_batch_id>
+    <timestamp>20241003184328</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>80</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Self-Guided Decision Support Groundwater Modelling with
+Python</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Rui T.</given_name>
+            <surname>Hugman</surname>
+            <ORCID>https://orcid.org/0000-0003-0891-3886</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Jeremy T.</given_name>
+            <surname>White</surname>
+            <ORCID>https://orcid.org/0000-0002-4950-1469</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Michael N.</given_name>
+            <surname>Fienen</surname>
+            <ORCID>https://orcid.org/0000-0002-7756-4651</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Brioch</given_name>
+            <surname>Hemmings</surname>
+            <ORCID>https://orcid.org/0000-0001-6311-8450</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Katherine H.</given_name>
+            <surname>Markovich</surname>
+            <ORCID>https://orcid.org/0000-0002-4455-8255</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>10</month>
+          <day>03</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>240</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00240</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5066/P901F9G0</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/240</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00240</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00240</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00240.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="whitepestpp">
+            <article_title>Approaches to highly parameterized inversion:
+PEST++ version 5, a software suite for parameter estimation, uncertainty
+analysis, management optimization and sensitivity
+analysis</article_title>
+            <author>White</author>
+            <doi>10.3133/tm7C26</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>White, J. T., Hunt, R. J., Fienen, M.
+N., &amp; Doherty, J. E. (2020). Approaches to highly parameterized
+inversion: PEST++ version 5, a software suite for parameter estimation,
+uncertainty analysis, management optimization and sensitivity analysis.
+US Geological Survey Techniques; Methods 7-C26.
+https://doi.org/10.3133/tm7C26</unstructured_citation>
+          </citation>
+          <citation key="whitepyemu">
+            <article_title>A python framework for environmental model
+uncertainty analysis</article_title>
+            <author>White</author>
+            <journal_title>Environmental Modelling &amp;
+Software</journal_title>
+            <volume>85</volume>
+            <doi>10.1016/j.envsoft.2016.08.017</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>White, J. T., Fienen, M. N., &amp;
+Doherty, J. E. (2016). A python framework for environmental model
+uncertainty analysis. Environmental Modelling &amp; Software, 85,
+217–228.
+https://doi.org/10.1016/j.envsoft.2016.08.017</unstructured_citation>
+          </citation>
+          <citation key="White_A_python_framework_2016">
+            <article_title>A python framework for environmental model
+uncertainty analysis</article_title>
+            <author>White</author>
+            <journal_title>Environmental Modelling &amp;
+Software</journal_title>
+            <volume>85</volume>
+            <doi>10.1016/j.envsoft.2016.08.017</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>White, J. T., Fienen, M. N., &amp;
+Doherty, J. E. (2016). A python framework for environmental model
+uncertainty analysis. Environmental Modelling &amp; Software, 85,
+217–228.
+https://doi.org/10.1016/j.envsoft.2016.08.017</unstructured_citation>
+          </citation>
+          <citation key="white2021towards">
+            <article_title>Towards improved environmental modeling
+outcomes: Enabling low-cost access to high-dimensional,
+geostatistical-based decision-support analyses</article_title>
+            <author>White</author>
+            <journal_title>Environmental Modelling &amp;
+Software</journal_title>
+            <volume>139</volume>
+            <doi>10.1016/j.envsoft.2021.105022</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>White, J. T., Hemmings, B., Fienen,
+M. N., &amp; Knowling, M. J. (2021). Towards improved environmental
+modeling outcomes: Enabling low-cost access to high-dimensional,
+geostatistical-based decision-support analyses. Environmental Modelling
+&amp; Software, 139, 105022.
+https://doi.org/10.1016/j.envsoft.2021.105022</unstructured_citation>
+          </citation>
+          <citation key="Langevin_MODFLOW_6_Modular_2022">
+            <article_title>MODFLOW 6 Modular Hydrologic
+Model</article_title>
+            <author>Langevin</author>
+            <doi>10.5066/F76Q1VQV</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Langevin, C. D., Hughes, J. D.,
+Provost, A. M., Russcher, M., Niswonger, R. G., Panday, S., Merrick, D.,
+Morway, E. D., Reno, M. J., Bonelli, W. P., &amp; Banta, E. R. (2022).
+MODFLOW 6 Modular Hydrologic Model (Version 6.4.1).
+https://doi.org/10.5066/F76Q1VQV</unstructured_citation>
+          </citation>
+          <citation key="pest">
+            <article_title>PEST and Its Utility Support
+Software</article_title>
+            <author>Doherty</author>
+            <cYear>2015</cYear>
+            <unstructured_citation>Doherty, J. (2015). PEST and Its
+Utility Support Software.
+https://pesthomepage.org/</unstructured_citation>
+          </citation>
+          <citation key="flopy">
+            <article_title>Scripting MODFLOW model development using
+python and FloPy</article_title>
+            <author>Bakker</author>
+            <journal_title>Groundwater</journal_title>
+            <issue>5</issue>
+            <volume>54</volume>
+            <doi>10.1111/gwat.12413</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Bakker, M., Post, V., Langevin, C.
+D., Hughes, J. D., White, J. T., Starn, J. J., &amp; Fienen, M. N.
+(2016). Scripting MODFLOW model development using python and FloPy.
+Groundwater, 54(5), 733–739.
+https://doi.org/10.1111/gwat.12413</unstructured_citation>
+          </citation>
+          <citation key="freyberg">
+            <article_title>AN EXERCISE IN GROUND-WATER MODEL CALIBRATION
+AND PREDICTION</article_title>
+            <author>Freyberg</author>
+            <journal_title>Groundwater</journal_title>
+            <issue>3</issue>
+            <volume>26</volume>
+            <doi>10.1111/j.1745-6584.1988.tb00399.x</doi>
+            <cYear>1988</cYear>
+            <unstructured_citation>Freyberg, D. L. (1988). AN EXERCISE
+IN GROUND-WATER MODEL CALIBRATION AND PREDICTION. Groundwater, 26(3),
+350–360.
+https://doi.org/10.1111/j.1745-6584.1988.tb00399.x</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
