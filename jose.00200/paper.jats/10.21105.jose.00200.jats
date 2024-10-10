@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">200</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00200</article-id>
+<title-group>
+<article-title>Dust Aerosol Detection, Monitoring and
+Forecasting</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3075-2559</contrib-id>
+<name>
+<surname>Wagemann</surname>
+<given-names>Julia</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3050-837X</contrib-id>
+<name>
+<surname>Szeto</surname>
+<given-names>Sabrina H.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-3979-3645</contrib-id>
+<name>
+<surname>Mantovani</surname>
+<given-names>Simone</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9975-2883</contrib-id>
+<name>
+<surname>Fierli</surname>
+<given-names>Federico</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Julia Wagemann Consulting</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Sabrina Szeto Consulting</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Meteorological Environmental Earth Observation (MEEO)
+s.r.l.</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>European Organisation for the Exploitation of
+Meteorological Satellites (EUMETSAT)</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-07-25">
+<day>25</day>
+<month>7</month>
+<year>2024</year>
+</pub-date>
+<volume>7</volume>
+<issue>80</issue>
+<fpage>200</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>python</kwd>
+<kwd>jupyter notebooks</kwd>
+<kwd>copernicus</kwd>
+<kwd>dust</kwd>
+<kwd>open data</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The training course on ‘Dust Aerosol Detection, Monitoring and
+  Forecasting’ is a Python-based training that provides a hands-on
+  introduction to satellite-, ground- and model-based data used for dust
+  monitoring and forecasting. The course is organised in three main
+  chapters: (i) observations (satellite- and ground-based), (ii)
+  forecast models and a (iii) practical case study. It features twelve
+  different datasets derived from satellites, ground-based measurement
+  networks and forecast models. The course material is developed in the
+  form of well-described and modular Jupyter notebooks. In total, the
+  course consists of 17 notebooks; 12 data workflows and five practical
+  exercise notebooks.</p>
+  <p>The training course is available as a
+  <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/">JupyterBook</ext-link>.
+  In addition, an executable version of each notebook can be accessed
+  via a dedicated
+  <ext-link ext-link-type="uri" xlink:href="https://dust.ltpy.adamplatform.eu/">JupyterLab
+  training platform</ext-link>, which has the required programming
+  environment and data already preinstalled. Furthermore, the training
+  course is also available via a
+  <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/dust-monitoring">GitLab
+  repository</ext-link>.</p>
+  <p>The training material has been developed by the European
+  Organisation for the Exploitation of Meteorological Satellites
+  (EUMETSAT) and the Barcelona Supercomputing Centre (BCS-CNS), in
+  collaboration with Copernicus and ACTRIS, the Aerosol, Clouds and
+  Trace Gases Research Infrastructure.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Sand and dust storms are common meteorological hazards in arid and
+  semi-arid regions and are mostly caused by thunderstorms that increase
+  wind speed over a wide area. They mainly occur in the arid regions of
+  Northern Africa, the Arabian Peninsula, Central Asia and China
+  (<xref alt="World Meteorological Organization, 2022a" rid="ref-wmo1" ref-type="bibr">World
+  Meteorological Organization, 2022a</xref>). However, dust minerals can
+  also be transported over great distances, impacting not only areas
+  where they originate but also communities far from the source areas
+  (<xref alt="United Nations Convention to Combat Desertification, 2022" rid="ref-un" ref-type="bibr">United
+  Nations Convention to Combat Desertification, 2022</xref>). Every
+  year, around 2,000 million tons of dust enters the atmosphere and
+  particles affect climate, weather, atmospheric chemistry and
+  ecosystems. It is projected that sand and dust storms will increase in
+  number and intensity as a result of climate change and environmental
+  degradation
+  (<xref alt="Barcelona Supercomputing Center, 2022" rid="ref-bsc" ref-type="bibr">Barcelona
+  Supercomputing Center, 2022</xref>;
+  <xref alt="World Meteorological Organisation, 2021" rid="ref-wmo3" ref-type="bibr">World
+  Meteorological Organisation, 2021</xref>).</p>
+  <p>Sand and dust storms represent a serious hazard with multisectorial
+  effects at local, regional and global scales. Short term hazards
+  associated with sand and dust storms include crop damage, livestock
+  mortality, infrastructure damage, interruption of transport and air
+  and traffic accidents. Long term effects include chronic health
+  problems, soil erosion, reduced soil quality, soil pollution through
+  the deposition of pollutants and the disruption of global climate
+  regulation services
+  (<xref alt="United Nations Convention to Combat Desertification, 2022" rid="ref-un" ref-type="bibr">United
+  Nations Convention to Combat Desertification, 2022</xref>).</p>
+  <p>Hence, monitoring, forecasting and early warning systems for
+  airborne dust are crucial to evaluate impacts and to better guide
+  preparedness, adaptation and mitigation policies. Advances in
+  satellite and ground-based observations and computer modelling have
+  greatly enhanced the ability to issue early warnings in recent years
+  (<xref alt="World Meteorological Organisation, 2021" rid="ref-wmo3" ref-type="bibr">World
+  Meteorological Organisation, 2021</xref>). However, several leading
+  global organisations such as the UN Coalition to Combat Sand and Dust
+  Storms and the World Meteorological Organisation (WMO) have identified
+  the need for stronger efforts to facilitate information exchange, for
+  training and capacity-building and for advocacy and awareness raising
+  (<xref alt="United Nations Environment Management Group, 2018" rid="ref-unemg" ref-type="bibr">United
+  Nations Environment Management Group, 2018</xref>;
+  <xref alt="World Meteorological Organisation, 2022b" rid="ref-wmo2" ref-type="bibr">World
+  Meteorological Organisation, 2022b</xref>).</p>
+  <p>In order to facilitate raising awareness and training data users in
+  existing data products to monitor and forecast sand and dust storms,
+  the European Organisation for the Exploitation of Meteorological
+  Satellites (EUMETSAT) and the WMO Global Sand and Dust Storm Warning
+  Advisory and Assessment System (SDS-WAS), in collaboration with
+  Copernicus and the Aerosol, Clouds and Trace Gases Research
+  Infrastructures (ACTRIS), developed a modular training course on ‘Dust
+  Aerosol Detection, Monitoring and Forecasting’. The training course
+  aims to provide a practical introduction and overview of different
+  data products for dust monitoring and forecasting and is of interest
+  for dust service providers, researchers and data users alike.</p>
+</sec>
+<sec id="learning-objectives-and-how-to-access">
+  <title>Learning Objectives and How to Access</title>
+  <p>The overall learning objective of the course is to give an
+  introduction and overview of data that can be used and applied for
+  dust monitoring and forecasting. After completing the course, data
+  users will be able to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>find, access and download satellite-, model-based and
+      ground-based data products for dust monitoring and
+      forecasting,</p>
+    </list-item>
+    <list-item>
+      <p>use relevant Python packages to load, process and visualise
+      these data, and</p>
+    </list-item>
+    <list-item>
+      <p>assess advantages and limitations of each data product.</p>
+    </list-item>
+  </list>
+  <p>The entry point of the course is a
+  <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/">Jupyterbook</ext-link>,
+  which guides data users step-by-step through different thematic
+  chapters. Each chapter consists of an introduction, e.g. an
+  introduction to
+  <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/satellite.html">Remote
+  Sensing observations with satellites</ext-link>, as well as practical
+  data workflows. The practical data workflows are self-contained
+  Jupyter notebooks which provide an introduction to a specific dataset
+  and help data users to find, access, analyse and visualise the
+  dataset. At the beginning, each of these notebooks provide a general
+  introduction to the dataset combined with informational boxes about
+  ‘basic facts’ and information on ‘how to access the data’.</p>
+  <p>In addition to being a page in the Jupyter Book, the practical data
+  workflows are further hosted on a dedicated
+  <ext-link ext-link-type="uri" xlink:href="https://dust.ltpy.adamplatform.eu/">JupyterLab-based
+  training platform</ext-link>. Here, the notebooks are available as an
+  executable version, together with the required Python libraries and
+  data. First time data users are required to
+  <ext-link ext-link-type="uri" xlink:href="https://login.ltpy.adamplatform.eu/">register</ext-link>
+  for an account. Registration is free. Once registered, each executable
+  notebook can be opened via a direct link from the Jupyter Book, at the
+  top of each practical data workflow.</p>
+  <p>Finally, the Jupyter notebooks are also hosted and can be accessed
+  via a dedicated
+  <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/dust-monitoring">GitLab
+  repository</ext-link>, which allows data users to replicate the
+  content and programming environment locally. The repository contains
+  detailed instructions on how to reproduce the setup on a local
+  machine.</p>
+</sec>
+<sec id="course-content">
+  <title>Course Content</title>
+  <p>The course is organised in three main chapters: (i) observations
+  (satellite- and ground-based), (ii) forecast models and a (iii)
+  practical case study. The first two chapters provide an overview and
+  introduction to different types of data available for dust monitoring
+  and forecasting and serve as a basis for the third chapter. The third
+  chapter consists of guided exercises, where data users perform an
+  analysis of a real-world dust event with a problem-based learning
+  approach.</p>
+  <sec id="observations">
+    <title>Observations</title>
+    <p>This chapter provides an overview of nine different observation
+    data and is again subdivided in two distinct sections: (i)
+    <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/satellite.html">Remote
+    Sensing observations from satellites</ext-link> and (ii)
+    <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/ground_based.html">Ground-based
+    observations with remote and in-situ sensors</ext-link>.</p>
+    <sec id="remote-sensing-observations-from-satellites">
+      <title>Remote sensing observations from satellites</title>
+      <p>This
+      <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/satellite.html">chapter</ext-link>
+      introduces data users to the principles of remote sensing with
+      satellites and puts a specific focus on how dust and the amount of
+      aerosols in the atmosphere can be retrieved from satellites. Six
+      datasets from different satellite missions are introduced,
+      covering three different processing levels, from Level 1 to Level
+      3. Level 1 data are the observed top-of-atmosphere radiances
+      measured by satellites, Level 2 data are retrieved geophysical
+      products and Level 3 are geo-referenced gridded data, where
+      multiple measurements are averaged or accumulated over a grid
+      cell.</p>
+      <p>The following data are featured:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Level 1 data from two satellite instruments: (i) the
+          <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/msg_rgb.html">SEVIRI
+          instrument onboard the Meteosat Second Generation
+          satellites</ext-link> operated by EUMETSAT and (ii) the
+          <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/modis_rgb.html">MODIS
+          instrument onboard the Terra and Aqua satellites</ext-link>
+          operated by the National Aeronautical Space Agency (NASA).</p>
+        </list-item>
+        <list-item>
+          <p>Three Level 2 aerosol data products: (i) the
+          <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/sentinel5p_ai.html">Sentinel-5P
+          TROPOMI Aerosol Index product</ext-link> as part of
+          Copernicus, (ii) the
+          <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/modis_aerosol.html">MODIS
+          Aerosol product</ext-link> and (iii) the
+          <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/pmap_aod.html">Polar
+          Multi-Sensor Aerosol Optical Properties (PMAp)
+          product</ext-link>.</p>
+        </list-item>
+        <list-item>
+          <p>One Level 3 data product: the
+          <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/gome2_aai.html">Absorbing
+          Aerosol Index Level 3 product</ext-link> from the GOME-2
+          instrument onboard the three satellites Metop-A, -B and
+          -C.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="ground-based-observations-with-remote-and-in-situ-sensors">
+      <title>Ground-based observations with remote and in-situ
+      sensors</title>
+      <p>This
+      <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/ground_based.html">chapter</ext-link>
+      features three datasets:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/aeronet.html">AErosol
+          RObotic NETwork (AERONET) Aerosol Optical Depth</ext-link>
+          data,</p>
+        </list-item>
+        <list-item>
+          <p><ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/earlinet.html">Vertical
+          lidar backscatter profiles</ext-link> from the European
+          Aerosol Research Lidar Network (EARLINET), and</p>
+        </list-item>
+        <list-item>
+          <p><ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/eea_air_quality.html">Air
+          Quality measurements</ext-link> from the European Environment
+          Agency (EEA).</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="model-forecasts">
+    <title>Model forecasts</title>
+    <p>This chapter provides an
+    <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/model_intro.html">introduction
+    to dust forecast models</ext-link> and features three model forecast
+    products from two different forecasting models:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p><ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/cams_global.html">CAMS
+        Global atmospheric composition forecasts</ext-link></p>
+      </list-item>
+      <list-item>
+        <p><ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/cams_regional.html">CAMS
+        European Air Quality forecasts and analyses</ext-link>, and</p>
+      </list-item>
+      <list-item>
+        <p><ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/monarch_regional.html">SDS-WAS
+        regional dust forecasts</ext-link>.</p>
+      </list-item>
+    </list>
+    <p>The first two products are retrieved from the model operated by
+    the Copernicus Atmosphere Monitoring Service (CAMS). The SDS-WAS
+    regional dust forecasts are retrieved from the NMMB/MONARCH model,
+    which was developed by the Barcelona Supercomputing Center
+    (BSC-CNS), in collaboration with NOAA’s National Center for
+    Environmental Prediction (NCEP), NASA’s Goddard Institute for Space
+    Studies and the International Research Institute for Climate Society
+    (IRI).</p>
+  </sec>
+  <sec id="practical-case-study">
+    <title>Practical case study</title>
+    <p>This
+    <ext-link ext-link-type="uri" xlink:href="https://dust.trainhub.eumetsat.int/docs/exercises.html">chapter</ext-link>
+    gives data users a chance to reflect on the learned content and to
+    practically work with the data. In five exercises, data users will
+    be guided step-by-steph through the analysis of a real dust event
+    that took place over the Canary Islands in February 2020.</p>
+    <p>As a prerequisite, this chapter requires that data users go
+    through the data chapters in which the featured observation and
+    model forecast data were introduced before.</p>
+  </sec>
+</sec>
+<sec id="teaching-experience">
+  <title>Teaching Experience</title>
+  <p>The training material on ‘Dust Aerosol Detection, Monitoring and
+  Forecasting’ has been used for training events since autumn 2021. The
+  course is designed to equally accommodate self-paced learning and
+  instructor-led training sessions. So far, the material has been used
+  in two instructor-led week-long training schools and for several
+  shorter webinars about dust monitoring and forecasting. So far, around
+  500 training participants have been reached. The overall feedback to
+  the training is very positive. The training participants have shared
+  feedback that they appreciate the well-documented notebooks and the
+  practical case study in particular.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>The training course ‘Dust Aerosol Detection, Monitoring and
+  Forecasting’ has been developed by EUMETSAT, in collaboration with the
+  WMO Barcelona Dust Regional Center, which is operated by the Barcelona
+  Supercomputing Center (BCS) and AEMET, the State Meteorological Agency
+  of Spain. We further acknowledge the support of Copernicus and ACTRIS,
+  the Aerosol, Clouds and Trace Gases Research Infrastructure.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-wmo1">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>World Meteorological Organization</string-name>
+      </person-group>
+      <article-title>Sand and Dust Storms</article-title>
+      <uri>https://wmo.int/topics/sand-and-dust-storms</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-un">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>United Nations Convention to Combat Desertification</string-name>
+      </person-group>
+      <article-title>Sand and Dust Storms Compendium</article-title>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://www.unccd.int/sites/default/files/2022-05/1871_Book_SDS_%20Compendium_V1.pdf</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-unemg">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>United Nations Environment Management Group</string-name>
+      </person-group>
+      <article-title>UN Coalition to Combat Sand and Dust Storms</article-title>
+      <year iso-8601-date="2018">2018</year>
+      <uri>https://unemg.org/our-work/emerging-issues/sand-and-dust-storms/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-wmo2">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>World Meteorological Organisation</string-name>
+      </person-group>
+      <article-title>WMO Airborne Dust Bulletin - September 2022</article-title>
+      <uri>https://library.wmo.int/idurl/4/57570</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-wmo3">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>World Meteorological Organisation</string-name>
+      </person-group>
+      <article-title>WMO issues Airborne Dust Bulletin</article-title>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://wmo.int/media/news/wmo-issues-airborne-dust-bulletin</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-bsc">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Barcelona Supercomputing Center</string-name>
+      </person-group>
+      <article-title>inDust</article-title>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://cost-indust.eu/</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
