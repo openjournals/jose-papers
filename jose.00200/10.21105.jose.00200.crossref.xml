@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20241010152839-3451da7bdff4374cf10a23a6be73c5055cf1f999</doi_batch_id>
+    <timestamp>20241010152839</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>80</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Dust Aerosol Detection, Monitoring and
+Forecasting</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Julia</given_name>
+            <surname>Wagemann</surname>
+            <ORCID>https://orcid.org/0000-0002-3075-2559</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Sabrina H.</given_name>
+            <surname>Szeto</surname>
+            <ORCID>https://orcid.org/0000-0002-3050-837X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Simone</given_name>
+            <surname>Mantovani</surname>
+            <ORCID>https://orcid.org/0000-0003-3979-3645</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Federico</given_name>
+            <surname>Fierli</surname>
+            <ORCID>https://orcid.org/0000-0001-9975-2883</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>10</month>
+          <day>10</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>200</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00200</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.12807595</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/200</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00200</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00200</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00200.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="wmo1">
+            <article_title>Sand and Dust Storms</article_title>
+            <author>World Meteorological Organization</author>
+            <unstructured_citation>World Meteorological Organization.
+(2022a). Sand and Dust Storms.
+https://wmo.int/topics/sand-and-dust-storms</unstructured_citation>
+          </citation>
+          <citation key="un">
+            <article_title>Sand and Dust Storms
+Compendium</article_title>
+            <author>United Nations Convention to Combat
+Desertification</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>United Nations Convention to Combat
+Desertification. (2022). Sand and Dust Storms Compendium.
+https://www.unccd.int/sites/default/files/2022-05/1871_Book_SDS_%20Compendium_V1.pdf</unstructured_citation>
+          </citation>
+          <citation key="unemg">
+            <article_title>UN Coalition to Combat Sand and Dust
+Storms</article_title>
+            <author>United Nations Environment Management Group</author>
+            <cYear>2018</cYear>
+            <unstructured_citation>United Nations Environment Management
+Group. (2018). UN Coalition to Combat Sand and Dust Storms.
+https://unemg.org/our-work/emerging-issues/sand-and-dust-storms/</unstructured_citation>
+          </citation>
+          <citation key="wmo2">
+            <article_title>WMO Airborne Dust Bulletin - September
+2022</article_title>
+            <author>World Meteorological Organisation</author>
+            <unstructured_citation>World Meteorological Organisation.
+(2022b). WMO Airborne Dust Bulletin - September 2022.
+https://library.wmo.int/idurl/4/57570</unstructured_citation>
+          </citation>
+          <citation key="wmo3">
+            <article_title>WMO issues Airborne Dust
+Bulletin</article_title>
+            <author>World Meteorological Organisation</author>
+            <cYear>2021</cYear>
+            <unstructured_citation>World Meteorological Organisation.
+(2021). WMO issues Airborne Dust Bulletin.
+https://wmo.int/media/news/wmo-issues-airborne-dust-bulletin</unstructured_citation>
+          </citation>
+          <citation key="bsc">
+            <article_title>inDust</article_title>
+            <author>Barcelona Supercomputing Center</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>Barcelona Supercomputing Center.
+(2022). inDust. https://cost-indust.eu/</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
