@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">173</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00173</article-id>
+<title-group>
+<article-title>Spatial data analysis with R: wrangling, visualization
+and econometric models</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5866-1280</contrib-id>
+<name>
+<surname>Prudencio-Vázquez</surname>
+<given-names>Jaime A.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Economics Department, Universidad Autónoma Metropolitana,
+Unidad Azcapotzalco, CDMX, México.</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2022-03-01">
+<day>1</day>
+<month>3</month>
+<year>2022</year>
+</pub-date>
+<volume>7</volume>
+<issue>80</issue>
+<fpage>173</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>-R software -Rstats -regional science -data visualization -spatial
+autocorrelation -spatial econometrics</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Spatial Analysis with R: wrangling, visualization and econometric
+  models (Análisis Espacial con R: manejo, visualización y modelos
+  econométricos) is a
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/jaime-pru/Analisis-de-datos-espaciales">full
+  open course</ext-link> in Spanish for the analysis of spatial
+  information in R software. The course is intended for Spanish-speaking
+  economics undergraduate students interested in acquiring technical
+  skills for quantitative analysis required by the regional sciences
+  (<xref alt="Fischer &amp; Nijkamp, 2014" rid="ref-Fischer2014" ref-type="bibr">Fischer
+  &amp; Nijkamp, 2014</xref>) and the spatial approach to economics
+  (<xref alt="Fujita et al., 2000" rid="ref-Fujita2000" ref-type="bibr">Fujita
+  et al., 2000</xref>), but it could be useful for other students of
+  social sciences attracted by the topic.</p>
+  <p>The objective of the book is to guide the student, from a basic
+  practical approach, in the knowledge and handling of spatial
+  information exploration, analysis and modeling techniques through the
+  use of R
+  (<xref alt="R Core Team, 2021" rid="ref-RSoftware" ref-type="bibr">R
+  Core Team, 2021</xref>) and RStudio, which are, respectively, a
+  program computer science and programming language focused on
+  statistical analysis and information visualization, on the one hand,
+  and an integrated development environment (IDE), on the other.</p>
+  <p>The course is presented in the form of an electronic book and it is
+  structured in five chapters of gradual learning. In Chapter 1, the
+  basics of R and RStudio are introduced using the exploratory data
+  analysis approach
+  (<xref alt="Croarkin &amp; Tobias, 2014" rid="ref-HSM2014" ref-type="bibr">Croarkin
+  &amp; Tobias, 2014</xref>) not only with the basic R package, but also
+  with the popular set of tools provided by tidyverse
+  (<xref alt="Wickham et al., 2019" rid="ref-tidyverse" ref-type="bibr">Wickham
+  et al., 2019</xref>), that is, the student is completely introduced to
+  the use of the software to propose and solve questions related to the
+  information structure. Chapter 2 shows how to create various types of
+  choropleth maps and the enormous styling customization flexibility for
+  this purpose via the tmap
+  (<xref alt="Tennekes, 2018" rid="ref-tmap" ref-type="bibr">Tennekes,
+  2018</xref>) package. Chapter 3 presents how to carry out an
+  exploratory analysis of spatial data where the student will find how
+  to define the interrelationships that take place in space through the
+  construction of spatial weight matrices and she will learn about
+  spatial autocorrelation and its implications in the information
+  analysis, through various packages such as spdep
+  (<xref alt="Bivand, 2022" rid="ref-spdep" ref-type="bibr">Bivand,
+  2022</xref>) and rgeoda
+  (<xref alt="Li &amp; Anselin, 2022" rid="ref-rgeoda" ref-type="bibr">Li
+  &amp; Anselin, 2022</xref>). Meanwhile, in Chapter 4, a synthetic
+  review of simple regression models is presented, emphasizing the
+  autocorrelation problem that could occur when estimating a linear
+  model with spatial data. Finally, in Chapter 5, two of the different
+  spatial econometric modeling alternatives available in R it is shown,
+  with spatialreg
+  (<xref alt="Bivand et al., 2021" rid="ref-spatialreg" ref-type="bibr">Bivand
+  et al., 2021</xref>).</p>
+  <p>The logic of each chapter integrates three elements: i) explanation
+  of the fundamental concepts covered, ii) the use of real information
+  in the software that serves to illustrate the highlighted concepts,
+  iii) exercises proposed for the student to delve into the topics
+  exposed.</p>
+  <p>The examples and exercises presented in the course are based on a
+  database on the situation of the COVID19 pandemic between March and
+  September 2020 in the Metropolitan Zone of the Valley of Mexico (Zona
+  Metropolitana del Valle de México), the largest metropolitan area in
+  Mexico, composed by 76 local administrative units or municipalities
+  with more than 21 million inhabitants. In addition, the database used
+  provides information on the economic structure at the municipal level
+  and a set of variables of sociodemographic characteristics from the
+  population census.</p>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the project</title>
+  <p>The project arises and is fed by two academic experiences. The
+  first, which dates back to 2014, corresponds to my work as a teacher
+  of tools for spatial analysis through various introductory courses.
+  The second is a course on the use of R software that I taught in the
+  fall of 2020, from the Economics Department of the Autonomous
+  Metropolitan University (Universidad Autónoma Metropolitana Unidad
+  Azcapotzalco), based on Azcapotzalco, Mexico City.</p>
+  <p>As a result, multiple notes and materials were generated and
+  gradually incorporated into my teaching activity in the Spatial
+  Econometrics course, for which I have been responsible for more than 3
+  years. Spatial Econometrics is part of the academic offer of the
+  specialization line of the Degree in Economics called “Economics of
+  Innovation: firms, networks and territory”, of the aforementioned
+  university. I frequently found myself in need of generating materials
+  for teaching the contents of Spatial Econometrics. Thus, instead of
+  isolated and unstructured materials, I decided to compile and order
+  with a coherent expository logic and gradual learning the set of
+  materials worked up to now and that now make up this course.</p>
+  <p>Since January 2022, when the integrated version of this series of
+  materials was put into circulation in the form of an electronic book,
+  the Spatial Econometrics course has been taught continuously in
+  quarterly promotions to almost 50 students.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Regional sciences are characterized by their multidisciplinary
+  character and their solid quantitative support
+  (<xref alt="Fischer &amp; Nijkamp, 2014" rid="ref-Fischer2014" ref-type="bibr">Fischer
+  &amp; Nijkamp, 2014</xref>). Although it is true that in all economics
+  Majors we find a solid repertoire of quantitative instruments:
+  mathematics, statistics and, of course, econometrics, the necessary
+  tools for analyzing reality from a spatial and regional perspective
+  are still scarce within economics, particularly at the undergraduate
+  level.
+  <ext-link ext-link-type="uri" xlink:href="https://jaime-pru.github.io/Analisis-de-datos-espaciales/index.html">Analysis
+  of spatial data with R</ext-link> intends to be a contribution, albeit
+  minimal, to remedy this situation.</p>
+  <p>In addition, much of the literature on data management and analysis
+  of spatial information is still in a language other than Spanish,
+  mostly in English, which makes access to these tools difficult for
+  those who do not yet master the language. This becomes a barrier to
+  knowledge, notably in countries like Mexico where English proficiency
+  is still very low
+  (<xref alt="Inglés Es Posible. Propuesta de Una Agenda Nacional, 2015" rid="ref-IMCO2015" ref-type="bibr"><italic>Inglés
+  Es Posible. Propuesta de Una Agenda Nacional</italic>, 2015</xref>;
+  <xref alt="Matt, 2020" rid="ref-EF2020" ref-type="bibr">Matt,
+  2020</xref>). Thus, this material in Spanish becomes a gateway and
+  facilitates the learning process for the student interested in these
+  topics.</p>
+  <p>The book, focused on undergraduate students who are not specialists
+  in the subject, is intended to be an accessible material, because the
+  used language is didactic and as simple as possible, without losing
+  rigor.</p>
+  <p>As it is an introductory book, it recommends and invites the use of
+  multiple materials, both in Spanish and English, so that the student
+  deepens her own knowledge of spatial information management and the
+  computer platform in which it is carried out.</p>
+</sec>
+<sec id="suggestions-for-following-the-course">
+  <title>Suggestions for following the course</title>
+  <p>Each chapter contains both theoretical and practical elements
+  related to the treatment of spatial data in the context of economics.
+  These are illustrated through segments of R code that are explained in
+  their logic and structure so that the student can not only replicate
+  the results, but also understand what each piece of code does. In
+  addition, throughout each chapter, exercises are proposed to deepen,
+  as a challenge, the knowledge about the tools that are exposed, for
+  which the answers are not provided.</p>
+  <p>The suggested way to follow the course is through the sequence
+  proposed by the structure of the book, from chapter 1 to 5, since the
+  tools are exposed gradually, trying to ensure adequate assimilation.
+  However, if the student feels already comfortable with handling one
+  topic, she can move on to the next one without difficulty.</p>
+  <p>Experience in the use of this material indicates that it can be
+  covered in 5 or 6 weeks, spending between 4.5 and 5 hours per week of
+  study. Chapter 1 can be covered in approximately 4.5 hours, however if
+  the student is not familiar with R and RStudio it could take a bit
+  longer. The choropleth mapping section would be smoothly covered in
+  about 3 hours. Meanwhile, Chapter 3 on the exploratory analysis of
+  spatial data, one of the central parts of the book, may require at
+  least 6 hours of study. Chapter 4, dedicated to the elementary review
+  of linear regression, can be covered in 3 hours of study, since some
+  previous knowledge on the subject is assumed, however, more time could
+  be required if the student needs to review these topics in greater
+  depth. Finally, Chapter 5, also central to this material, would
+  require around 6 hours of study.</p>
+</sec>
+<sec id="contributions">
+  <title>Contributions</title>
+  <p>This book is, to some extent, an effort to compile and systematize
+  multiple materials that the active R community, interested in spatial
+  analysis in Mexico and the world, selflessly shares.</p>
+  <p>I believe that this is how knowledge should always be: free, open
+  and collaborative, like the software that is used here. Thus, this
+  project is a living one, in permanent construction and modification,
+  so all comments and observations will be welcome, both from the
+  students who have used it, and from the teachers who consider it
+  appropriate to include it in their reference materials.</p>
+  <p>A guide on how to contribute to this project can be found in the
+  GitHub repository at
+  https://github.com/jaime-pru/Analisis-de-datos-espaciales/blob/main/How_to_contribute.md.
+  Interested people can also contact directly via e-mail
+  (japv@azc.uam.mx) or even in social media on
+  <ext-link ext-link-type="uri" xlink:href="https://x.com/jaime_pru">X</ext-link>.
+  All comments are welcome.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>The author thanks Montserrat Romero Martínez (vmrm@azc.uam.mx) and
+  Alvaro Martínez Rodríguez (amr@azc.uam.mx), assistants in the
+  Productive Relations Area, who were respectively in charge of
+  reviewing Preliminary materials for this book and its edition for
+  publication online with Bookdown on GitHub.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Fischer2014">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Fischer</surname><given-names>Manfred M.</given-names></name>
+        <name><surname>Nijkamp</surname><given-names>Peter</given-names></name>
+      </person-group>
+      <source>Handbook of regional science</source>
+      <year iso-8601-date="2014">2014</year>
+      <pub-id pub-id-type="doi">10.1007/978-3-642-23430-9</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-IMCO2015">
+    <element-citation publication-type="report">
+      <article-title>Inglés es posible. Propuesta de una agenda nacional</article-title>
+      <publisher-name>Instituto Mexicano para la Competitividad, A.C.; Inglés para la competitividad y la movilidad social; Consejo Empresarial Mexicano de Comercio Exterior, Inversión y Tecnología</publisher-name>
+      <year iso-8601-date="2015">2015</year>
+      <uri>https://imco.org.mx/wp-content/uploads/2015/04/2015_Documento_completo_Ingles_es_posible.pdf</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Fujita2000">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Fujita</surname><given-names>Masahisa</given-names></name>
+        <name><surname>Krugman</surname><given-names>Paul</given-names></name>
+        <name><surname>Venables</surname><given-names>Anthony J.</given-names></name>
+      </person-group>
+      <source>Economia espacial : Las ciudades, las regiones y el comercio internacional</source>
+      <publisher-name>Ariel</publisher-name>
+      <year iso-8601-date="2000">2000</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-HSM2014">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Croarkin</surname><given-names>C</given-names></name>
+        <name><surname>Tobias</surname><given-names>P</given-names></name>
+      </person-group>
+      <source>Engineering statistics handbook: E-handbook of statistical methods</source>
+      <publisher-name>NIST/SEMATECH</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <pub-id pub-id-type="doi">10.18434/M32189</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-tidyverse">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wickham</surname><given-names>Hadley</given-names></name>
+        <name><surname>Averick</surname><given-names>Mara</given-names></name>
+        <name><surname>Bryan</surname><given-names>Jennifer</given-names></name>
+        <name><surname>Chang</surname><given-names>Winston</given-names></name>
+        <name><surname>McGowan</surname><given-names>Lucy D’Agostino</given-names></name>
+        <name><surname>François</surname><given-names>Romain</given-names></name>
+        <name><surname>Grolemund</surname><given-names>Garrett</given-names></name>
+        <name><surname>Hayes</surname><given-names>Alex</given-names></name>
+        <name><surname>Henry</surname><given-names>Lionel</given-names></name>
+        <name><surname>Hester</surname><given-names>Jim</given-names></name>
+        <name><surname>Kuhn</surname><given-names>Max</given-names></name>
+        <name><surname>Pedersen</surname><given-names>Thomas Lin</given-names></name>
+        <name><surname>Miller</surname><given-names>Evan</given-names></name>
+        <name><surname>Bache</surname><given-names>Stephan Milton</given-names></name>
+        <name><surname>Müller</surname><given-names>Kirill</given-names></name>
+        <name><surname>Ooms</surname><given-names>Jeroen</given-names></name>
+        <name><surname>Robinson</surname><given-names>David</given-names></name>
+        <name><surname>Seidel</surname><given-names>Dana Paige</given-names></name>
+        <name><surname>Spinu</surname><given-names>Vitalie</given-names></name>
+        <name><surname>Takahashi</surname><given-names>Kohske</given-names></name>
+        <name><surname>Vaughan</surname><given-names>Davis</given-names></name>
+        <name><surname>Wilke</surname><given-names>Claus</given-names></name>
+        <name><surname>Woo</surname><given-names>Kara</given-names></name>
+        <name><surname>Yutani</surname><given-names>Hiroaki</given-names></name>
+      </person-group>
+      <article-title>Welcome to the tidyverse</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>4</volume>
+      <issue>43</issue>
+      <pub-id pub-id-type="doi">10.21105/joss.01686</pub-id>
+      <fpage>1686</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tmap">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tennekes</surname><given-names>Martijn</given-names></name>
+      </person-group>
+      <article-title>tmap: Thematic maps in R</article-title>
+      <source>Journal of Statistical Software</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>84</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.18637/jss.v084.i06</pub-id>
+      <fpage>1</fpage>
+      <lpage>39</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-spdep">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bivand</surname><given-names>Roger</given-names></name>
+      </person-group>
+      <article-title>R packages for analyzing spatial data: A comparative case study with areal data</article-title>
+      <source>Geographical Analysis</source>
+      <year iso-8601-date="2022">2022</year>
+      <volume>54</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1111/gean.12319</pub-id>
+      <fpage>488</fpage>
+      <lpage>518</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-rgeoda">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Li</surname><given-names>Xun</given-names></name>
+        <name><surname>Anselin</surname><given-names>Luc</given-names></name>
+      </person-group>
+      <source>Rgeoda: R library for spatial data analysis</source>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://CRAN.R-project.org/package=rgeoda</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.rgeoda</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-spatialreg">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bivand</surname><given-names>Roger</given-names></name>
+        <name><surname>Millo</surname><given-names>Giovanni</given-names></name>
+        <name><surname>Piras</surname><given-names>Gianfranco</given-names></name>
+      </person-group>
+      <article-title>A review of software for spatial econometrics in R</article-title>
+      <source>Mathematics</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>9</volume>
+      <issue>11</issue>
+      <uri>https://www.mdpi.com/2227-7390/9/11/1276</uri>
+      <pub-id pub-id-type="doi">10.3390/math9111276</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-EF2020">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Matt</surname></name>
+      </person-group>
+      <article-title>EF EPI 2019: El nivel de inglés en méxico sigue disminuyendo ‹ GO blog | EF blog mexico</article-title>
+      <source>EF Educación Internacional</source>
+      <year iso-8601-date="2020-09">2020</year><month>09</month>
+      <uri>https://www.ef.com.mx/blog/language/nivel-de-ingles-en-mexico-sigue-disminuyendo/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-RSoftware">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <string-name>R Core Team</string-name>
+      </person-group>
+      <source>R: A language and environment for statistical computing</source>
+      <publisher-name>R Foundation for Statistical Computing</publisher-name>
+      <publisher-loc>Vienna, Austria</publisher-loc>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://www.R-project.org/</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
