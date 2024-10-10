@@ -58,8 +58,12 @@ a Creative Commons Attribution 4.0 International License (CC BY
 </license>
 </permissions>
 <kwd-group kwd-group-type="author">
-<kwd>-R software -Rstats -regional science -data visualization -spatial
-autocorrelation -spatial econometrics</kwd>
+<kwd>R software</kwd>
+<kwd>Rstats</kwd>
+<kwd>regional science</kwd>
+<kwd>data visualization</kwd>
+<kwd>spatial autocorrelation</kwd>
+<kwd>spatial econometrics&quot;</kwd>
 </kwd-group>
 </article-meta>
 </front>
