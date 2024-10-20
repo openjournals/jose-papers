@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">193</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00193</article-id>
+<title-group>
+<article-title>The Argo Online School: An e-learning tool to get started
+with Argo</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5781-9330</contrib-id>
+<name>
+<surname>González-Santana</surname>
+<given-names>Alberto</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-2404-5679</contrib-id>
+<name>
+<surname>Vélez-Belchí</surname>
+<given-names>Pedro</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Centro Oceanográfico de Canarias, Instituto Español de
+Oceanografía (IEO - CSIC)</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-14">
+<day>14</day>
+<month>10</month>
+<year>2024</year>
+</pub-date>
+<volume>7</volume>
+<issue>80</issue>
+<fpage>193</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Jupyter Notebooks</kwd>
+<kwd>Oceanography</kwd>
+<kwd>Operational oceanography</kwd>
+<kwd>Observing systems</kwd>
+<kwd>Robotics</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The <bold>Argo Online School (AoS)</bold> is a collection of
+  videos, animations and hands-on Python-driven Jupyter notebooks
+  designed to make the data accessible from more than 4,000 profiling
+  floats that constitute the Argo program. The Argo program samples, in
+  near real-time, the upper 2,000 meters of the ocean using a fleet of
+  floats that drift with the ocean currents. The AoS consists of 28
+  chapters about the Argo program and its data, organized into a total
+  of 3 lessons and 2 self-assessment sections:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Lesson 1 is intended to introduce the basics of Argo, its
+      objectives and key elements, such as the structure of the Argo
+      floats and their operation in the open ocean.</p>
+    </list-item>
+    <list-item>
+      <p>Lesson 2 focuses on the data coming from the Argo network, from
+      its organization to its accessibility. Data quality control is
+      also addressed through its two main modes: Real-Time and
+      Delayed-Mode.</p>
+    </list-item>
+    <list-item>
+      <p>Lesson 3 is the AoS hands-on component, and it requires basic
+      knowledge of Python. It provides a set of instructions for
+      preparing a Python environment in case the user wants to run the
+      Python Jupyter Notebooks on a local machine. This environment
+      already includes recommended packages. The walk-through of Lesson
+      3 shows how to work with the netCDF format, how to access and
+      process Argo data, and create visualizations to enhance
+      understanding of the information derived from Argo data.</p>
+    </list-item>
+  </list>
+  <p>The target audience of the AoS is high school, undergraduate or
+  early graduate students. The programming content in Lesson 3 offers an
+  ideal opportunity to support students pursuing a technical or science
+  curriculum. Lessons 1 and 2 form a closed module and can be used
+  independently by learners who wish to focus solely on Argo. It is
+  recommended not to skip any lesson in the AoS, as the content is
+  carefully structured from simpler to more complex concepts, providing
+  a progressive learning experience. Users have the opportunity to
+  self-assess their learning progress through the proposed interactive
+  self-assessments in the AoS.</p>
+  <p>The AoS has been designed to be expanded in the future to follow
+  the implementation of new features in the Argo program.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>Argo
+  (<xref alt="Riser et al., 2016" rid="ref-riser-2016" ref-type="bibr">Riser
+  et al., 2016</xref>;
+  <xref alt="Roemmich et al., 2019" rid="ref-roemmich-2019" ref-type="bibr">Roemmich
+  et al., 2019</xref>) is an international program that collects
+  information from inside the ocean using a fleet of floats that drift
+  with the ocean currents. The floats move up and down between the
+  surface and a mid-water level, measuring ocean variables, and spend
+  almost their entire lifespan below the surface. Since 2012, Argo has
+  collected over 100,000 oceanographic profiles per year and consists of
+  approximately 4,000 floats, making it the major component of the
+  <ext-link ext-link-type="uri" xlink:href="https://www.goosocean.org/">Global
+  Ocean Observing System</ext-link>.</p>
+  <p>Although data from Argo
+  (<xref alt="Argo, 2021" rid="ref-Argo2021" ref-type="bibr">Argo,
+  2021</xref>) is publicly and freely available, it represents a vast
+  dataset with thousands of files. The accompanying documentation can be
+  quite complex, as it must address the various models of floats and
+  sensors, as well as the traceability of quality control for all
+  measurements. The Argo community has always recognized the challenges
+  faced by new users in managing the complex and extensive datasets from
+  the network. In this context, the Argo Online School meets the need
+  for effective communication about the Argo program and how its
+  invaluable dataset can be utilized for various applications.</p>
+  <p>The Argo Online School leverages the potential of e-learning tools
+  to provide a variety of resources to users, thereby promoting and
+  enhancing access to and use of Argo data. In this way, the AoS is
+  defined as an e-learning tool that offers an interactive environment
+  similar to other established educational platforms. It is a tool with
+  significant educational potential that aims not only to demonstrate
+  the basic steps for using Argo data but also to empower users to
+  tackle future <italic>programming</italic> scenarios in their academic
+  and professional careers with confidence.</p>
+  <p>The AoS was presented at the
+  <ext-link ext-link-type="uri" xlink:href="https://bit.ly/3pUChmJ">2nd
+  Ocean Observers Workshop</ext-link> on November 20th, 2021 and at the
+  <ext-link ext-link-type="uri" xlink:href="https://bit.ly/3e39rLL">22nd
+  Argo Data Management Team meeting</ext-link> on December 10, 2021.</p>
+</sec>
+<sec id="notes-on-instructional-design">
+  <title>Notes on instructional design</title>
+  <p>The AoS aims to teach the fundamental concepts needed to understand
+  and use Argo data. It does not seek to cover every aspect of the Argo
+  program, as comprehensive documentation is available from the Argo
+  Data Management Team
+  (<ext-link ext-link-type="uri" xlink:href="http://www.argodatamgt.org/Documentation">http://www.argodatamgt.org/Documentation</ext-link>)
+  Wong Annie
+  (<xref alt="2022" rid="ref-ArgoQCManual2022" ref-type="bibr">2022</xref>)
+  for deeper learning. The AoS is also not library or Application
+  Programming Interface to ease Argo data access, as other initiatives
+  already fulfill that purpose, among others, <italic>Argopy</italic>, a
+  Python library for Argo data beginners and experts
+  (<xref alt="Maze &amp; Balem, 2020" rid="ref-Maze2020" ref-type="bibr">Maze
+  &amp; Balem, 2020</xref>) or <italic>ArgoVis</italic>, a web
+  application for fast delivery, visualization, and analysis of argo
+  Data
+  (<xref alt="Tucker et al., 2020" rid="ref-Argovis" ref-type="bibr">Tucker
+  et al., 2020</xref>).</p>
+  <p>The AoS is a set of videos and hands-on Python-driven Jupyter
+  notebooks, designed for high school, undergraduate or graduate
+  students in any discipline, and it offers:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>An overview of the Argo program and an assessment of the need
+      for Argo.</p>
+    </list-item>
+    <list-item>
+      <p>A description of how the Argo data is organized.</p>
+    </list-item>
+    <list-item>
+      <p>A description of how to access the Argo data.</p>
+    </list-item>
+    <list-item>
+      <p>A description of the main characteristics of the Argo data
+      format: the netCDF.</p>
+    </list-item>
+    <list-item>
+      <p>A review of the main characteristics of the quality controls
+      used: Real-Time and Delayed-Mode.</p>
+    </list-item>
+    <list-item>
+      <p>Step-by-step instructions on data access, processing, and
+      product generation, through the execution of commands based on the
+      programming language Python.</p>
+    </list-item>
+  </list>
+  <p>All content is divided into three lessons: 1. The Argo Program,
+  that describes the basic concepts of this ocean observing network; 2.
+  The Argo Data, that describes how the data is organized; and 3. Using
+  the Argo data, that takes the knowledge of the previous sections and
+  Python-driven Jupyter notebooks to teach how to use the data. Finally,
+  a quiz section is included for self-assessment.</p>
+  <p>Lessons 1 and 2 are designed for students with knowledge comparable
+  to that acquired in high school, this is, basic knowledge about the
+  relationships between the Earth’s processes, weather and climate; and
+  basic skills in interpreting maps, charts, and tables to organize and
+  analyze data</p>
+  <p>These lessons are aimed at users with minimal or no knowledge of
+  the Argo network, and they are a closed module and could be used by a
+  learner without using Lesson 3, assuming the goal is simply to learn
+  about Argo. Lessons 1 and 2 contain 32 short videos and 14 chapters
+  and require about 5 hours to completed. Lesson 3 is intended for
+  advanced users, as it requires basic programming skills in
+  Python.However, Lesson 3 follows a step by step approach, to
+  facilitate the transition of users coming from Lessons 1 and 2. The
+  basic recommendations and instructions for configuring the hands-on
+  section of the AoS are also provided, whether the users want to work
+  online or if they want to work on their local computer. Specific
+  python libraries and packages are recommended to guarantee the correct
+  functioning of the AoS. Lesson 3 contains 8 short videos and 14
+  chapters and requires about 10 hours to be completed, assuming basic
+  knowledge of Python.</p>
+  <p>The AoS has been developed using markdown, Python driven Jupyter
+  notebooks
+  (<xref alt="Kluyver et al., 2016" rid="ref-Kluyver2016jupyter" ref-type="bibr">Kluyver
+  et al., 2016</xref>) and Jupyter book
+  (<xref alt="Executable Books Community, 2020" rid="ref-JupyterBook2020" ref-type="bibr">Executable
+  Books Community, 2020</xref>), open source projects that allow editing
+  control in a clear and easy way, and also permits web-based
+  interactive development environments that contain code, visualizations
+  and texts. It is widely used for data science, and inspired by the
+  course
+  <ext-link ext-link-type="uri" xlink:href="https://earth-env-data-science.github.io/intro.html">An
+  Introduction to Earth and Environmental Data Science</ext-link>
+  (<xref alt="Ryan Abernathey &amp; Crone, 2021" rid="ref-Abernathey2021" ref-type="bibr">Ryan
+  Abernathey &amp; Crone, 2021</xref>).</p>
+  <p>The AoS is accessible through the Euro-Argo webpage
+  https://www.euro-argo.eu/argo-online-school, but all the content that
+  makes it up is hosted in a public GitHub repository.:
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/euroargodev/argoonlineschool">https://github.com/euroargodev/argoonlineschool</ext-link>.
+  As long as the Argo program continues to grow, the AoS will too. This
+  first version contains the basic content of Argo; subsequent versions
+  will showcase the newest aspects of the Argo network, such as
+  biochemical measurements, deep observations and more. Anyone
+  interested in helping to further develop the AoS may open an issue on
+  the public GitHub repository to begin organizing the update.</p>
+  <p>Given the structure of the AoS, it could be used for educational
+  purposes. For high school students, Lessons 1 and 2 could be a project
+  to identify scientific questions that ocean observations, like those
+  from Argo, may help address while developing essential know-how. For
+  students with a curriculum that includes programming in Python, other
+  projects could involve finding the seasonal change in surface
+  temperature at a specific ocean and comparing it with changes at 1,000
+  m or 2,000 m, or explaining the trajectory of a given float, which can
+  be quite challenging. Teachers are welcome to open an issue in the
+  github repository to get assistance in how to develop new
+  projects.</p>
+  <p>As part of the Argo community, the AoS follows the same philosophy
+  regarding data access. To ensure barrier-free learning, the
+  information and data provided in the AoS is open access to the public
+  and free of charge and therefore, no subscription is required</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>The AoS has been possible thanks to the collaboration of the
+  Euro-Argo members, the Argo Steering Team
+  (<ext-link ext-link-type="uri" xlink:href="https://argo.ucsd.edu">https://argo.ucsd.edu</ext-link>)
+  and has been funded by the European Union’s Horizon 2020 research and
+  innovation program under grant agreement Euro-Argo RISE 824131
+  (<ext-link ext-link-type="uri" xlink:href="https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022">https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022</ext-link>).</p>
+  <p>The audiovisual work has been recorded and edited by Rafael Méndez
+  Pérez
+  (<ext-link ext-link-type="uri" xlink:href="http://rafaelmendezp.com/">http://rafaelmendezp.com/</ext-link>)
+  while proofreading and english coaching support was provided by
+  Agustín Prunell-Friend. The self-assessment sections are based on John
+  M. Shea
+  (<xref alt="Smith et al., 2021" rid="ref-jmshea2021" ref-type="bibr">Smith
+  et al., 2021</xref>) software.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-ArgoManual2022">
+    <element-citation publication-type="report">
+      <person-group person-group-type="author">
+        <string-name>Argo data management Team</string-name>
+      </person-group>
+      <article-title>Argo user’s manual</article-title>
+      <person-group person-group-type="editor">
+        <name><surname>Ifremer</surname></name>
+      </person-group>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://doi.org/10.13155/29825</uri>
+      <pub-id pub-id-type="doi">10.13155/29825</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Abernathey2021">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Ryan Abernathey</surname><given-names>Kerry Key</given-names></name>
+        <name><surname>Crone</surname><given-names>Tim</given-names></name>
+      </person-group>
+      <article-title>An introduction to earth and environmental data science</article-title>
+      <source>GitHub repository</source>
+      <publisher-name>GitHub</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://github.com/earth-env-data-science/earth-env-data-science-book</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-jmshea2021">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Smith</surname><given-names>A. M.</given-names></name>
+        <name><surname>Thaney</surname><given-names>K.</given-names></name>
+        <name><surname>Hahnel</surname><given-names>M.</given-names></name>
+      </person-group>
+      <article-title>An interactive quiz generator for jupyter notebooks and jupyter book</article-title>
+      <source>GitHub repository</source>
+      <publisher-name>GitHub</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://github.com/jmshea/jupyterquiz</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Argo2021">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Argo</surname></name>
+      </person-group>
+      <article-title>Argo float data and metadata from global data assembly centre (argo GDAC)</article-title>
+      <publisher-name>SEANOE</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://doi.org/10.17882/42182</uri>
+      <pub-id pub-id-type="doi">10.17882/42182</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-JupyterBook2020">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>Executable Books Community</string-name>
+      </person-group>
+      <article-title>Jupyter book</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2020-02">2020</year><month>02</month>
+      <uri>https://doi.org/10.5281/zenodo.4539666</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.4539666</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-roemmich-2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Roemmich</surname><given-names>Dean</given-names></name>
+        <name><surname>Alford</surname><given-names>Matthew H.</given-names></name>
+        <name><surname>Claustre</surname><given-names>Hervé</given-names></name>
+        <name><surname>Johnson</surname><given-names>Kenneth</given-names></name>
+        <name><surname>King</surname><given-names>Brian</given-names></name>
+        <name><surname>Moum</surname><given-names>James</given-names></name>
+        <name><surname>Oke</surname><given-names>Peter</given-names></name>
+        <name><surname>Owens</surname><given-names>W. Brechner</given-names></name>
+        <name><surname>Pouliquen</surname><given-names>Sylvie</given-names></name>
+        <name><surname>Purkey</surname><given-names>Sarah</given-names></name>
+        <name><surname>Scanderbeg</surname><given-names>Megan</given-names></name>
+        <name><surname>Suga</surname><given-names>Toshio</given-names></name>
+        <name><surname>Wijffels</surname><given-names>Susan</given-names></name>
+        <name><surname>Zilberman</surname><given-names>Nathalie</given-names></name>
+        <name><surname>Bakker</surname><given-names>Dorothee</given-names></name>
+        <name><surname>Baringer</surname><given-names>Molly</given-names></name>
+        <name><surname>Belbeoch</surname><given-names>Mathieu</given-names></name>
+        <name><surname>Bittig</surname><given-names>Henry C.</given-names></name>
+        <name><surname>Boss</surname><given-names>Emmanuel</given-names></name>
+        <name><surname>Calil</surname><given-names>Paulo</given-names></name>
+        <name><surname>Carse</surname><given-names>Fiona</given-names></name>
+        <name><surname>Carval</surname><given-names>Thierry</given-names></name>
+        <name><surname>Chai</surname><given-names>Fei</given-names></name>
+        <name><surname>Conchubhair</surname><given-names>Diarmuid Ó.</given-names></name>
+        <name><surname>d’ Ortenzio</surname><given-names>Fabrizio</given-names></name>
+        <name><surname>Dall’Olmo</surname><given-names>Giorgio</given-names></name>
+        <name><surname>Desbruyeres</surname><given-names>Damien</given-names></name>
+        <name><surname>Fennel</surname><given-names>Katja</given-names></name>
+        <name><surname>Fer</surname><given-names>Ilker</given-names></name>
+        <name><surname>Ferrari</surname><given-names>Raffaele</given-names></name>
+        <name><surname>Forget</surname><given-names>Gael</given-names></name>
+        <name><surname>Freeland</surname><given-names>Howard</given-names></name>
+        <name><surname>Fujiki</surname><given-names>Tetsuichi</given-names></name>
+        <name><surname>Gehlen</surname><given-names>Marion</given-names></name>
+        <name><surname>Greenan</surname><given-names>Blair</given-names></name>
+        <name><surname>Hallberg</surname><given-names>Robert</given-names></name>
+        <name><surname>Hibiya</surname><given-names>Toshiyuki</given-names></name>
+        <name><surname>Hosoda</surname><given-names>Shigeki</given-names></name>
+        <name><surname>Jayne</surname><given-names>Steven</given-names></name>
+        <name><surname>Jochum</surname><given-names>Markus</given-names></name>
+        <name><surname>Johnson</surname><given-names>Gregory C.</given-names></name>
+        <name><surname>Kang</surname><given-names>KiRyong</given-names></name>
+        <name><surname>Kolodziejczyk</surname><given-names>Nicolas</given-names></name>
+        <name><surname>Körtzinger</surname><given-names>Arne</given-names></name>
+        <name><surname>Traon</surname><given-names>Pierre-Yves Le</given-names></name>
+        <name><surname>Lenn</surname><given-names>Yueng-Djern</given-names></name>
+        <name><surname>Maze</surname><given-names>Guillaume</given-names></name>
+        <name><surname>Mork</surname><given-names>Kjell Arne</given-names></name>
+        <name><surname>Morris</surname><given-names>Tamaryn</given-names></name>
+        <name><surname>Nagai</surname><given-names>Takeyoshi</given-names></name>
+        <name><surname>Nash</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Garabato</surname><given-names>Alberto Naveira</given-names></name>
+        <name><surname>Olsen</surname><given-names>Are</given-names></name>
+        <name><surname>Pattabhi</surname><given-names>Rama Rao</given-names></name>
+        <name><surname>Prakash</surname><given-names>Satya</given-names></name>
+        <name><surname>Riser</surname><given-names>Stephen</given-names></name>
+        <name><surname>Schmechtig</surname><given-names>Catherine</given-names></name>
+        <name><surname>Schmid</surname><given-names>Claudia</given-names></name>
+        <name><surname>Shroyer</surname><given-names>Emily</given-names></name>
+        <name><surname>Sterl</surname><given-names>Andreas</given-names></name>
+        <name><surname>Sutton</surname><given-names>Philip</given-names></name>
+        <name><surname>Talley</surname><given-names>Lynne</given-names></name>
+        <name><surname>Tanhua</surname><given-names>Toste</given-names></name>
+        <name><surname>Thierry</surname><given-names>Virginie</given-names></name>
+        <name><surname>Thomalla</surname><given-names>Sandy</given-names></name>
+        <name><surname>Toole</surname><given-names>John</given-names></name>
+        <name><surname>Troisi</surname><given-names>Ariel</given-names></name>
+        <name><surname>Trull</surname><given-names>Thomas W.</given-names></name>
+        <name><surname>Turton</surname><given-names>Jon</given-names></name>
+        <name><surname>Velez-Belchi</surname><given-names>Pedro Joaquin</given-names></name>
+        <name><surname>Walczowski</surname><given-names>Waldemar</given-names></name>
+        <name><surname>Wang</surname><given-names>Haili</given-names></name>
+        <name><surname>Wanninkhof</surname><given-names>Rik</given-names></name>
+        <name><surname>Waterhouse</surname><given-names>Amy F.</given-names></name>
+        <name><surname>Waterman</surname><given-names>Stephanie</given-names></name>
+        <name><surname>Watson</surname><given-names>Andrew</given-names></name>
+        <name><surname>Wilson</surname><given-names>Cara</given-names></name>
+        <name><surname>Wong</surname><given-names>Annie P. S.</given-names></name>
+        <name><surname>Xu</surname><given-names>Jianping</given-names></name>
+        <name><surname>Yasuda</surname><given-names>Ichiro</given-names></name>
+      </person-group>
+      <article-title>On the Future of Argo: A Global, Full-Depth, Multi-Disciplinary Array</article-title>
+      <source>Frontiers in Marine Science</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>6</volume>
+      <uri>https://www.frontiersin.org/article/10.3389/fmars.2019.00439</uri>
+      <pub-id pub-id-type="doi">10.3389/fmars.2019.00439</pub-id>
+      <fpage>439</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-riser-2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Riser</surname><given-names>Stephen C.</given-names></name>
+        <name><surname>Freeland</surname><given-names>Howard J.</given-names></name>
+        <name><surname>Roemmich</surname><given-names>Dean</given-names></name>
+        <name><surname>Wijffels</surname><given-names>Susan</given-names></name>
+        <name><surname>Troisi</surname><given-names>Ariel</given-names></name>
+        <name><surname>Belbeoch</surname><given-names>Mathieu</given-names></name>
+        <name><surname>Gilbert</surname><given-names>Denis</given-names></name>
+        <name><surname>Xu</surname><given-names>Jianping</given-names></name>
+        <name><surname>Pouliquen</surname><given-names>Sylvie</given-names></name>
+        <name><surname>Thresher</surname><given-names>Ann</given-names></name>
+        <name><surname>Le Traon</surname><given-names>Pierre-Yves</given-names></name>
+        <name><surname>Maze</surname><given-names>Guillaume</given-names></name>
+        <name><surname>Klein</surname><given-names>Birgit</given-names></name>
+        <name><surname>Ravichandran</surname><given-names>M.</given-names></name>
+        <name><surname>Grant</surname><given-names>Fiona</given-names></name>
+        <name><surname>Poulain</surname><given-names>Pierre-Marie</given-names></name>
+        <name><surname>Suga</surname><given-names>Toshio</given-names></name>
+        <name><surname>Lim</surname><given-names>Byunghwan</given-names></name>
+        <name><surname>Sterl</surname><given-names>Andreas</given-names></name>
+        <name><surname>Sutton</surname><given-names>Philip</given-names></name>
+        <name><surname>Mork</surname><given-names>Kjell-Arne</given-names></name>
+        <name><surname>Velez-Belchi</surname><given-names>Pedro Joaquin</given-names></name>
+        <name><surname>Ansorge</surname><given-names>Isabelle</given-names></name>
+        <name><surname>King</surname><given-names>Brian</given-names></name>
+        <name><surname>Turton</surname><given-names>Jon</given-names></name>
+        <name><surname>Baringer</surname><given-names>Molly</given-names></name>
+        <name><surname>Jayne</surname><given-names>Steven R.</given-names></name>
+      </person-group>
+      <article-title>Fifteen years of ocean observations with the global Argo array</article-title>
+      <source>Nature Clim. Change</source>
+      <year iso-8601-date="2016-02">2016</year><month>02</month>
+      <volume>6</volume>
+      <issue>2</issue>
+      <uri>http://dx.doi.org/10.1038/nclimate2872</uri>
+      <pub-id pub-id-type="doi">10.1038/nclimate2872</pub-id>
+      <fpage>145</fpage>
+      <lpage>153</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ArgoQCManual2022">
+    <element-citation publication-type="report">
+      <person-group person-group-type="author">
+        <name><surname>Wong Annie</surname><given-names>Carval Thierry</given-names><suffix>Keeley Robert</suffix></name>
+      </person-group>
+      <article-title>Argo quality control manual for CTD and trajectory data</article-title>
+      <publisher-name>Argo; Argo Data Management Team</publisher-name>
+      <year iso-8601-date="2022-01">2022</year><month>01</month>
+      <uri>https://doi.org/10.13155/33951</uri>
+      <pub-id pub-id-type="doi">10.13155/33951</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Argovis">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tucker</surname><given-names>Tyler</given-names></name>
+        <name><surname>Giglio</surname><given-names>Donata</given-names></name>
+        <name><surname>Scanderbeg</surname><given-names>Megan</given-names></name>
+        <name><surname>Shen</surname><given-names>Samuel S. P.</given-names></name>
+      </person-group>
+      <article-title>Argovis: A web application for fast delivery, visualization, and analysis of argo data</article-title>
+      <source>Journal of Atmospheric and Oceanic Technology</source>
+      <publisher-name>American Meteorological Society</publisher-name>
+      <publisher-loc>Boston MA, USA</publisher-loc>
+      <year iso-8601-date="2020">2020</year>
+      <volume>37</volume>
+      <issue>3</issue>
+      <uri>https://journals.ametsoc.org/view/journals/atot/37/3/JTECH-D-19-0041.1.xml</uri>
+      <pub-id pub-id-type="doi">10.1175/JTECH-D-19-0041.1</pub-id>
+      <fpage>401 </fpage>
+      <lpage> 416</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Kluyver2016jupyter">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Kluyver</surname><given-names>Thomas</given-names></name>
+        <name><surname>Ragan-Kelley</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Pérez</surname><given-names>Fernando</given-names></name>
+        <name><surname>Granger</surname><given-names>Brian</given-names></name>
+        <name><surname>Bussonnier</surname><given-names>Matthias</given-names></name>
+        <name><surname>Frederic</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Kelley</surname><given-names>Kyle</given-names></name>
+        <name><surname>Hamrick</surname><given-names>Jessica</given-names></name>
+        <name><surname>Grout</surname><given-names>Jason</given-names></name>
+        <name><surname>Corlay</surname><given-names>Sylvain</given-names></name>
+        <name><surname>Ivanov</surname><given-names>Paul</given-names></name>
+        <name><surname>Avila</surname><given-names>Damián</given-names></name>
+        <name><surname>Abdalla</surname><given-names>Safia</given-names></name>
+        <name><surname>Willing</surname><given-names>Carol</given-names></name>
+      </person-group>
+      <article-title>Jupyter notebooks – a publishing format for reproducible computational workflows</article-title>
+      <person-group person-group-type="editor">
+        <name><surname>Loizides</surname><given-names>F.</given-names></name>
+        <name><surname>Schmidt</surname><given-names>B.</given-names></name>
+      </person-group>
+      <publisher-name>IOS Press</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <pub-id pub-id-type="doi">10.3233/978-1-61499-649-1-87</pub-id>
+      <fpage>87 </fpage>
+      <lpage> 90</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Maze2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Maze</surname><given-names>Guillaume</given-names></name>
+        <name><surname>Balem</surname><given-names>Kevin</given-names></name>
+      </person-group>
+      <article-title>Argopy: A python library for argo ocean data analysis</article-title>
+      <source>Journal of Open Source Software</source>
+      <publisher-name>The Open Journal</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume>5</volume>
+      <issue>53</issue>
+      <uri>https://doi.org/10.21105/joss.02425</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.02425</pub-id>
+      <fpage>2425</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
