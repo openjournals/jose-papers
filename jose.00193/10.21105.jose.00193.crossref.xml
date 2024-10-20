@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20241020164424-e4323d3a669767cba07cee49a7b4d7b66422319a</doi_batch_id>
+    <timestamp>20241020164424</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>80</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>The Argo Online School: An e-learning tool to get
+started with Argo</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Alberto</given_name>
+            <surname>González-Santana</surname>
+            <ORCID>https://orcid.org/0000-0001-5781-9330</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Pedro</given_name>
+            <surname>Vélez-Belchí</surname>
+            <ORCID>https://orcid.org/0000-0003-2404-5679</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>10</month>
+          <day>20</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>193</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00193</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.13929139</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/193</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00193</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00193</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00193.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ArgoManual2022">
+            <article_title>Argo user’s manual</article_title>
+            <author>Argo data management Team</author>
+            <doi>10.13155/29825</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Argo data management Team. (2022).
+Argo user’s manual (Ifremer, Ed.) [Report].
+https://doi.org/10.13155/29825</unstructured_citation>
+          </citation>
+          <citation key="Abernathey2021">
+            <article_title>An introduction to earth and environmental
+data science</article_title>
+            <author>Ryan Abernathey</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2021</cYear>
+            <unstructured_citation>Ryan Abernathey, K. K., &amp; Crone,
+T. (2021). An introduction to earth and environmental data science. In
+GitHub repository. GitHub.
+https://github.com/earth-env-data-science/earth-env-data-science-book</unstructured_citation>
+          </citation>
+          <citation key="jmshea2021">
+            <article_title>An interactive quiz generator for jupyter
+notebooks and jupyter book</article_title>
+            <author>Smith</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2021</cYear>
+            <unstructured_citation>Smith, A. M., Thaney, K., &amp;
+Hahnel, M. (2021). An interactive quiz generator for jupyter notebooks
+and jupyter book. In GitHub repository. GitHub.
+https://github.com/jmshea/jupyterquiz</unstructured_citation>
+          </citation>
+          <citation key="Argo2021">
+            <article_title>Argo float data and metadata from global data
+assembly centre (argo GDAC)</article_title>
+            <author>Argo</author>
+            <doi>10.17882/42182</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Argo. (2021). Argo float data and
+metadata from global data assembly centre (argo GDAC). SEANOE.
+https://doi.org/10.17882/42182</unstructured_citation>
+          </citation>
+          <citation key="JupyterBook2020">
+            <article_title>Jupyter book</article_title>
+            <author>Executable Books Community</author>
+            <doi>10.5281/zenodo.4539666</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Executable Books Community. (2020).
+Jupyter book (Version v0.10). Zenodo.
+https://doi.org/10.5281/zenodo.4539666</unstructured_citation>
+          </citation>
+          <citation key="roemmich-2019">
+            <article_title>On the Future of Argo: A Global, Full-Depth,
+Multi-Disciplinary Array</article_title>
+            <author>Roemmich</author>
+            <journal_title>Frontiers in Marine Science</journal_title>
+            <volume>6</volume>
+            <doi>10.3389/fmars.2019.00439</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Roemmich, D., Alford, M. H.,
+Claustre, H., Johnson, K., King, B., Moum, J., Oke, P., Owens, W. B.,
+Pouliquen, S., Purkey, S., Scanderbeg, M., Suga, T., Wijffels, S.,
+Zilberman, N., Bakker, D., Baringer, M., Belbeoch, M., Bittig, H. C.,
+Boss, E., … Yasuda, I. (2019). On the Future of Argo: A Global,
+Full-Depth, Multi-Disciplinary Array. Frontiers in Marine Science, 6,
+439. https://doi.org/10.3389/fmars.2019.00439</unstructured_citation>
+          </citation>
+          <citation key="riser-2016">
+            <article_title>Fifteen years of ocean observations with the
+global Argo array</article_title>
+            <author>Riser</author>
+            <journal_title>Nature Clim. Change</journal_title>
+            <issue>2</issue>
+            <volume>6</volume>
+            <doi>10.1038/nclimate2872</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Riser, S. C., Freeland, H. J.,
+Roemmich, D., Wijffels, S., Troisi, A., Belbeoch, M., Gilbert, D., Xu,
+J., Pouliquen, S., Thresher, A., Le Traon, P.-Y., Maze, G., Klein, B.,
+Ravichandran, M., Grant, F., Poulain, P.-M., Suga, T., Lim, B., Sterl,
+A., … Jayne, S. R. (2016). Fifteen years of ocean observations with the
+global Argo array. Nature Clim. Change, 6(2), 145–153.
+https://doi.org/10.1038/nclimate2872</unstructured_citation>
+          </citation>
+          <citation key="ArgoQCManual2022">
+            <article_title>Argo quality control manual for CTD and
+trajectory data</article_title>
+            <author>Wong Annie</author>
+            <doi>10.13155/33951</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Wong Annie, C. T., Keeley Robert.
+(2022). Argo quality control manual for CTD and trajectory data. Argo;
+Argo Data Management Team.
+https://doi.org/10.13155/33951</unstructured_citation>
+          </citation>
+          <citation key="Argovis">
+            <article_title>Argovis: A web application for fast delivery,
+visualization, and analysis of argo data</article_title>
+            <author>Tucker</author>
+            <journal_title>Journal of Atmospheric and Oceanic
+Technology</journal_title>
+            <issue>3</issue>
+            <volume>37</volume>
+            <doi>10.1175/JTECH-D-19-0041.1</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Tucker, T., Giglio, D., Scanderbeg,
+M., &amp; Shen, S. S. P. (2020). Argovis: A web application for fast
+delivery, visualization, and analysis of argo data. Journal of
+Atmospheric and Oceanic Technology, 37(3), 401–416.
+https://doi.org/10.1175/JTECH-D-19-0041.1</unstructured_citation>
+          </citation>
+          <citation key="Kluyver2016jupyter">
+            <article_title>Jupyter notebooks – a publishing format for
+reproducible computational workflows</article_title>
+            <author>Kluyver</author>
+            <doi>10.3233/978-1-61499-649-1-87</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Kluyver, T., Ragan-Kelley, B., Pérez,
+F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J.,
+Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., &amp;
+Willing, C. (2016). Jupyter notebooks – a publishing format for
+reproducible computational workflows (F. Loizides &amp; B. Schmidt,
+Eds.; pp. 87–90). IOS Press.
+https://doi.org/10.3233/978-1-61499-649-1-87</unstructured_citation>
+          </citation>
+          <citation key="Maze2020">
+            <article_title>Argopy: A python library for argo ocean data
+analysis</article_title>
+            <author>Maze</author>
+            <journal_title>Journal of Open Source
+Software</journal_title>
+            <issue>53</issue>
+            <volume>5</volume>
+            <doi>10.21105/joss.02425</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Maze, G., &amp; Balem, K. (2020).
+Argopy: A python library for argo ocean data analysis. Journal of Open
+Source Software, 5(53), 2425.
+https://doi.org/10.21105/joss.02425</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
