@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">259</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00259</article-id>
+<title-group>
+<article-title>Can you predict the future? A tutorial for the National
+Ecological Observatory Network Ecological Forecasting
+Challenge</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-0483-4489</contrib-id>
+<name>
+<surname>Olsson</surname>
+<given-names>Freya</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-1642-628X</contrib-id>
+<name>
+<surname>Boettiger</surname>
+<given-names>Carl</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-8835-4476</contrib-id>
+<name>
+<surname>Carey</surname>
+<given-names>Cayelan C.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-3270-1330</contrib-id>
+<name>
+<surname>Lofton</surname>
+<given-names>Mary E.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1282-7825</contrib-id>
+<name>
+<surname>Thomas</surname>
+<given-names>R. Quinn</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Center for Ecosystem Forecasting, Virginia Tech,
+Blacksburg, Virginia, USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Department of Biological Sciences, Virginia Tech,
+Blacksburg, Virginia, USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Department of Environmental Science, Policy, and
+Management, University of California, Berkeley, Berkeley, California,
+USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Department of Forest Resources and Environmental
+Conservation, Virginia Tech, Blacksburg, Virginia, USA</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-28">
+<day>28</day>
+<month>2</month>
+<year>2024</year>
+</pub-date>
+<volume>7</volume>
+<issue>81</issue>
+<fpage>259</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2022</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>R</kwd>
+<kwd>tutorial</kwd>
+<kwd>forecasting</kwd>
+<kwd>NEON</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>This tutorial introduces participants to key concepts in ecological
+  forecasting and provides hands-on materials for submitting forecasts
+  to the National Ecological Observatory Network (NEON) Forecasting
+  Challenge (hereafter, Challenge), hosted by the Ecological Forecasting
+  Initiative Research Coordination Network. The tutorial has been
+  developed and used with &gt;300 participants and provides the
+  ecological understanding, workflows, and tools to enable ecologists
+  with minimal forecasting experience to participate in the Challenge
+  via a hands-on R-based tutorial. This tutorial introduces participants
+  to a near-term, iterative forecasting workflow that includes obtaining
+  observations from NEON, developing a simple forecasting model,
+  generating a forecast, and submitting the forecast to the Challenge,
+  as well as evaluating forecast performance once new observations
+  become available. The overarching aim of this tutorial is to lower the
+  barrier to ecological forecasting and empower participants to develop
+  their own ecological forecasts.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>Ecological forecasting is an emerging field that aims to improve
+  natural resource management and ecological understanding by providing
+  future predictions of the state of ecosystems
+  (<xref alt="Dietze, 2017" rid="ref-Dietze2017" ref-type="bibr">Dietze,
+  2017</xref>;
+  <xref alt="Lewis et al., 2023" rid="ref-Lewis2022" ref-type="bibr">Lewis
+  et al., 2023</xref>). Generating ecological forecasts requires a suite
+  of quantitative and computational skills, including accessing
+  real-time data, building ecological models, quantifying uncertainty
+  associated with predictions, generating forecasts, and updating models
+  with new observations as they become available
+  (<xref alt="Dietze, 2017" rid="ref-Dietze2017" ref-type="bibr">Dietze,
+  2017</xref>). While resources to educate ecologists on these skills,
+  individually, are available
+  (<xref alt="Ernest et al., 2023" rid="ref-Ernest2023" ref-type="bibr">Ernest
+  et al., 2023</xref>), there are few hands-on demonstrations of how to
+  implement a full workflow to generate a near-term forecast. In
+  response to this gap, we designed this tutorial for ecologists who are
+  interested in learning about ecological forecasting through hands-on
+  instruction but may not have prior experience in this domain. The
+  tutorial is also designed for individuals that are interested in
+  submitting forecasts to the Challenge but may not know how to start
+  generating forecasts. Altogether, this tutorial provides a framework
+  that can be modified to generate forecasts, thereby increasing
+  participation in the Challenge and expanding our understanding of
+  environmental predictability.</p>
+</sec>
+<sec id="background-and-development">
+  <title>Background and development</title>
+  <p>The NEON Forecasting Challenge aims to create a community of
+  practice that builds capacity for ecological forecasting by leveraging
+  recently-available NEON data
+  (<xref alt="Thomas et al., 2023" rid="ref-Thomas2023" ref-type="bibr">Thomas
+  et al., 2023</xref>). The Challenge revolves around five themes
+  (Aquatics, Terrestrial, Phenology, Beetles, Ticks) that span aquatic
+  and terrestrial systems, and population, community, and ecosystem
+  processes across 81 NEON sites across the U.S. The motivation of the
+  Challenge is for teams and individuals to forecast the conditions at
+  NEON sites before the data are collected. Challenge forecasts are
+  automatically evaluated against observations when they become
+  available. By collating forecasts from many different models and
+  sites, the Challenge organisers and participants aim to quantify how
+  ecological predictability varies over space and time.</p>
+  <p>This 90-minute tutorial was initially developed for a workshop at
+  the 2022 Global Lakes Ecological Observatory Network (GLEON)
+  All-Hands’ conference, which had participants with a range of
+  forecasting and coding experience. The GLEON workshop was given on the
+  first day of the five-day conference. This timing enabled forecasts
+  submitted at the workshop to be evaluated throughout the conference,
+  allowing participants to see near-real time forecast performance, and
+  for a “winner” to be declared on the final day. The tutorial has since
+  been taught in nine workshop/classroom settings (Table 1).</p>
+  <table-wrap>
+    <caption>
+      <p>Table 1 Implementation of the tutorial by the authors across a
+      range of settings. The participants in these workshops covered a
+      wide range of forecasting and coding experience.</p>
+    </caption>
+    <table>
+      <colgroup>
+        <col width="35%" />
+        <col width="25%" />
+        <col width="24%" />
+        <col width="14%" />
+      </colgroup>
+      <tbody>
+        <tr>
+          <td align="left"><bold>Name of meeting or group delivered
+          to</bold></td>
+          <td align="left"><bold>Approximate number of
+          participants</bold></td>
+          <td align="left"><bold>Modality</bold></td>
+          <td align="left"><bold>Challenge theme</bold></td>
+        </tr>
+        <tr>
+          <td align="left">GLEON* All-Hands conference</td>
+          <td align="left">50</td>
+          <td align="left">In-person</td>
+          <td align="left">Aquatics</td>
+        </tr>
+        <tr>
+          <td align="left">InventWater PhD training programme</td>
+          <td align="left">15</td>
+          <td align="left">Synchronous on-line</td>
+          <td align="left">Aquatics</td>
+        </tr>
+        <tr>
+          <td align="left">GLEON All-Hands’ Virtual conference</td>
+          <td align="left">70</td>
+          <td align="left">Asynchronous on-line (pre-recorded)</td>
+          <td align="left">Aquatics</td>
+        </tr>
+        <tr>
+          <td align="left">AEMON-J**/DSOS*** Hacking Limnology</td>
+          <td align="left">70</td>
+          <td align="left">Synchronous on-line</td>
+          <td align="left">Aquatics</td>
+        </tr>
+        <tr>
+          <td align="left"><p>Global Change Ecology Lab,</p>
+          <p>University of Edinburgh</p></td>
+          <td align="left">10</td>
+          <td align="left">Synchronous on-line</td>
+          <td align="left">Terrestrial</td>
+        </tr>
+        <tr>
+          <td align="left">NEON Technical Working Group on Ecological
+          Forecasting</td>
+          <td align="left">10</td>
+          <td align="left">Synchronous on-line</td>
+          <td align="left">Terrestrial</td>
+        </tr>
+        <tr>
+          <td align="left"><p>Ecological Society of America</p>
+          <p>conference</p></td>
+          <td align="left">50</td>
+          <td align="left">In-person</td>
+          <td align="left">Terrestrial</td>
+        </tr>
+        <tr>
+          <td align="left">Graduate environmental data science
+          class</td>
+          <td align="left">40</td>
+          <td align="left">In-person</td>
+          <td align="left">Terrestrial/Aquatics</td>
+        </tr>
+        <tr>
+          <td align="left">Ecological Forecasting Initiative
+          conference</td>
+          <td align="left">20</td>
+          <td align="left">In-person</td>
+          <td align="left">Aquatics</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+  <p><sup>*Global Lake Ecological Observatory Network; **Aquatic Ecosystem MOdeling Network - Junior; ***Data Science Open Science</sup></p>
+</sec>
+<sec id="audience">
+  <title>Audience</title>
+  <p>The audience for this tutorial includes individuals who: 1) want to
+  participate in the Challenge but are not sure how to start; 2) want a
+  ‘hands-on’ way to learn about ecological forecasting ; and/or 3) are
+  involved in the broader forecasting enterprise (e.g., researchers
+  collecting data used for forecasting) and want to submit forecasts
+  themselves. We encourage users to modify the tutorial as needed, as
+  all materials are open-source.</p>
+</sec>
+<sec id="features">
+  <title>Features</title>
+  <sec id="learning-objectives">
+    <title>Learning objectives</title>
+    <p>The overarching objectives of the tutorial are:</p>
+    <list list-type="order">
+      <list-item>
+        <p>Build an understanding of foundational ecological forecasting
+        concepts;</p>
+      </list-item>
+      <list-item>
+        <p>Apply forecasting concepts to submit a simple forecast to the
+        Challenge; and</p>
+      </list-item>
+      <list-item>
+        <p>Learn about additional forecasting resources.</p>
+      </list-item>
+    </list>
+    <p>These objectives can be adapted depending on the context of the
+    tutorial. If the participant/instructor’s goals are geared towards
+    understanding forecasting concepts then the emphasis of the
+    presentation and hands-on workshop can be modified accordingly.</p>
+  </sec>
+  <sec id="instructional-design">
+    <title>Instructional design</title>
+    <p>The R-based tutorial is in a public GitHub repository (Olsson et
+    al.
+    (<xref alt="2024" rid="ref-Olsson2023" ref-type="bibr">2024</xref>);
+    <ext-link ext-link-type="uri" xlink:href="https://github.com/eco4cast/NEON-forecast-challenge-workshop">https://github.com/eco4cast/NEON-forecast-challenge-workshop</ext-link>)
+    that includes an introductory presentation (Microsoft PowerPoint or
+    PDF format), Rmarkdown documents, rendered versions of the markdown
+    files (.md), as well as pre-tutorial instructions for participants.
+    The tutorial allows for both in-person and virtual participation
+    (Table 1) and can be completed synchronously in an instructor-led
+    workshop/course or asynchronously in a self-paced tutorial.</p>
+  </sec>
+  <sec id="the-tutorial">
+    <title>The tutorial</title>
+    <p>The tutorial is designed as a 90-minute, standalone session that
+    includes pre-tutorial materials, an introductory presentation (20-30
+    minutes), a guided demonstration of forecast code (30-40 minutes),
+    and discussion (20-30 minutes). If more time is available, the
+    tutorial has additional content that includes more advanced topics
+    (Figure 1). Details on each of these sections is detailed in the
+    workshop’s README.md at the workshop GitHub repository (Olsson et
+    al.
+    (<xref alt="2024" rid="ref-Olsson2023" ref-type="bibr">2024</xref>);
+    <ext-link ext-link-type="uri" xlink:href="https://github.com/eco4cast/NEON-forecast-challenge-workshop">https://github.com/eco4cast/NEON-forecast-challenge-workshop</ext-link>).</p>
+    <list list-type="order">
+      <list-item>
+        <p>Introductory presentation: introduces the participants to
+        forecasting concepts, the Challenge, NEON data, and tools that
+        will be used in the R coding portion of the tutorial. This
+        presentation can be tailored to the audience based on their
+        familiarity with forecasting concepts and NEON data (Figure
+        1).</p>
+      </list-item>
+      <list-item>
+        <p>Coding walk through: participants walk through a pre-written
+        Rmarkdown forecast workflow script. This code is written
+        primarily using <monospace>tidyverse</monospace> syntax to
+        optimise readability
+        (<xref alt="Wickham et al., 2019" rid="ref-Wickham2019" ref-type="bibr">Wickham
+        et al., 2019</xref>). The tutorial utilises the functions from
+        the <monospace>neon4cast</monospace> R package, developed by
+        Challenge organisers to ease access to weather covariate data
+        and simplify forecast submission (see
+        <ext-link ext-link-type="uri" xlink:href="https://github.com/eco4cast/neon4cast">https://github.com/eco4cast/neon4cast</ext-link>).</p>
+      </list-item>
+      <list-item>
+        <p>Open time for discussion: the remaining time can be used for
+        multiple purposes (detailed in the R markdown and README)
+        depending on the interests of the participants (e.g. debug code
+        issues, modify forecast models or form teams to submit
+        additional forecasts to the Challenge).</p>
+      </list-item>
+      <list-item>
+        <p>Optional extension: to extend the tutorial beyond 90 minutes
+        (Figure 1), we provide additional materials that show
+        participants how to automate forecast submission (directory
+        <monospace>Automate_Forecast</monospace>) and introduce
+        participants to forecast evaluation and synthesis (Thomas et al.
+        (<xref alt="2023" rid="ref-Thomas2023" ref-type="bibr">2023</xref>)).
+        These materials could also be used in a self-paced manner after
+        the workshop.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="reuse-implementation-and-modification">
+  <title>Reuse, implementation, and modification</title>
+  <p>The primary tutorial focuses on the Aquatics theme (specifically,
+  water temperature) of the Challenge as an example of how to generate a
+  forecast, though the tools and workflows are applicable to all
+  Challenge themes. For example, we adapted the materials to the
+  Terrestrial theme (see Table 1) based on the interests of the
+  participants and have further modified the materials for other
+  forecasting challenges.</p>
+  <p>Several lessons learned have emerged from earlier implementations
+  of the tutorial (Table 1). First, engagement in the Challenge
+  post-tutorial is best when there is an opportunity for follow-up
+  discussion, troubleshooting, and continuation of team collaboration
+  beyond 90 minutes. Second, we found that providing installation
+  instructions and preparatory material in advance promoted best
+  engagement during synchornous and in-person workshops. Third, the
+  introductory presentation can be adapted to meet the needs and
+  experience level of the participants (Table 1). Finally, the tutorial
+  requires a stable and relatively fast internet connection. We found
+  that slow internet speeds limited access to downloading weather
+  forecasts used to generate ecological forecasts. This issue can be
+  addressed by either having the rendered Rmarkdown document available
+  so that individuals can follow along even if connectivity becomes an
+  issue or providing access to remote computational environments.</p>
+  <fig>
+    <caption><p>Figure 1 Potential workshop/course structures using this
+    tutorial. The original 90-minute workshop setup is shown as the
+    “regular tutorial” which can be expanded and modified according to
+    the time available, the anticipated skills and background of the
+    participants and the goals of participation. The alternate modes of
+    delivery were delivered from administering the tutorial to audiences
+    of mixed coding and forecasting experience shown in Table 1.
+    <styled-content id="Figure_1"></styled-content></p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="Figure_1.png" />
+  </fig>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>This tutorial was supported by the National Science Foundation
+  through grants 1926050, 1926388, 1933016, and 2209866. We thank the
+  initial design teams, contributors and participants in the EFI-RCN
+  Challenge, and the many tutorial participants for their enthusiasm,
+  interest, and feedback that helped us iteratively improve the
+  materials (like our forecasts!).</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Olsson2023">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Olsson</surname><given-names>F.</given-names></name>
+        <name><surname>Thomas</surname><given-names>R. Q.</given-names></name>
+        <name><surname>Boettiger</surname><given-names>C.</given-names></name>
+        <name><surname>Lofton</surname><given-names>M. E.</given-names></name>
+      </person-group>
+      <article-title>OlssonF/NEON-forecast-challenge-workshop: EFI NEON Forecast Challenge Workshop</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2024">2024</year>
+      <pub-id pub-id-type="doi">10.5281/zenodo.8316965</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Thomas2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Thomas</surname><given-names>R. Q.</given-names></name>
+        <name><surname>Boettiger</surname><given-names>C.</given-names></name>
+        <name><surname>Carey</surname><given-names>C. C.</given-names></name>
+        <name><surname>Dietze</surname><given-names>M. C.</given-names></name>
+        <name><surname>Johnson</surname><given-names>L. R</given-names></name>
+        <name><surname>Kenney</surname><given-names>M. A</given-names></name>
+        <name><surname>McLachlan</surname><given-names>J. S</given-names></name>
+        <name><surname>Peters</surname><given-names>J. A.</given-names></name>
+        <name><surname>Sokol</surname><given-names>E. R</given-names></name>
+        <name><surname>Weltzin</surname><given-names>J. F.</given-names></name>
+        <name><surname>Willson</surname><given-names>A.</given-names></name>
+        <name><surname>Woelmer</surname><given-names>W. M.</given-names></name>
+      </person-group>
+      <article-title>The NEON Ecological Forecasting Challenge</article-title>
+      <source>Frontiers in Ecology and the Environment</source>
+      <year iso-8601-date="2023-04">2023</year><month>04</month>
+      <volume>21</volume>
+      <issue>3</issue>
+      <issn>1540-9295</issn>
+      <uri>https://esajournals.onlinelibrary.wiley.com/doi/10.1002/fee.2616</uri>
+      <pub-id pub-id-type="doi">10.1002/fee.2616</pub-id>
+      <fpage>112</fpage>
+      <lpage>113</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Wickham2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wickham</surname><given-names>H.</given-names></name>
+        <name><surname>Averick</surname><given-names>M.</given-names></name>
+        <name><surname>Bryan</surname><given-names>J.</given-names></name>
+        <name><surname>Chang</surname><given-names>W.</given-names></name>
+        <name><surname>McGowan</surname><given-names>L.</given-names></name>
+        <name><surname>François</surname><given-names>R.</given-names></name>
+        <name><surname>Grolemund</surname><given-names>G.</given-names></name>
+        <name><surname>Hayes</surname><given-names>A.</given-names></name>
+        <name><surname>Henry</surname><given-names>L.</given-names></name>
+        <name><surname>Hester</surname><given-names>J.</given-names></name>
+        <name><surname>Kuhn</surname><given-names>M.</given-names></name>
+        <name><surname>Pedersen</surname><given-names>T.</given-names></name>
+        <name><surname>Miller</surname><given-names>E.</given-names></name>
+        <name><surname>Bache</surname><given-names>S.</given-names></name>
+        <name><surname>Müller</surname><given-names>K.</given-names></name>
+        <name><surname>Ooms</surname><given-names>J.</given-names></name>
+        <name><surname>Robinson</surname><given-names>D.</given-names></name>
+        <name><surname>Seidel</surname><given-names>D.</given-names></name>
+        <name><surname>Spinu</surname><given-names>V.</given-names></name>
+        <name><surname>Takahashi</surname><given-names>K.</given-names></name>
+        <name><surname>Vaughan</surname><given-names>D.</given-names></name>
+        <name><surname>W.</surname><given-names>Claus</given-names></name>
+        <name><surname>Woo</surname><given-names>K.</given-names></name>
+        <name><surname>Yutani</surname><given-names>H.</given-names></name>
+      </person-group>
+      <article-title>Welcome to the Tidyverse</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2019-11">2019</year><month>11</month>
+      <volume>4</volume>
+      <issue>43</issue>
+      <issn>2475-9066</issn>
+      <uri>https://joss.theoj.org/papers/10.21105/joss.01686</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.01686</pub-id>
+      <fpage>1686</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lewis2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lewis</surname><given-names>A. S. L.</given-names></name>
+        <name><surname>Rollinson</surname><given-names>C. R.</given-names></name>
+        <name><surname>Allyn</surname><given-names>A. J.</given-names></name>
+        <name><surname>Ashander</surname><given-names>J.</given-names></name>
+        <name><surname>Brodie</surname><given-names>S.</given-names></name>
+        <name><surname>Brookson</surname><given-names>C. B.</given-names></name>
+        <name><surname>Collins</surname><given-names>E.</given-names></name>
+        <name><surname>Dietze</surname><given-names>M. C.</given-names></name>
+        <name><surname>Gallinat</surname><given-names>A. S.</given-names></name>
+        <name><surname>Juvigny-Khenafou</surname><given-names>N.</given-names></name>
+        <name><surname>Koren</surname><given-names>G.</given-names></name>
+        <name><surname>McGlinn</surname><given-names>D. J.</given-names></name>
+        <name><surname>Moustahfid</surname><given-names>H.</given-names></name>
+        <name><surname>Peters</surname><given-names>J. A.</given-names></name>
+        <name><surname>Record</surname><given-names>N. R.</given-names></name>
+        <name><surname>Robbins</surname><given-names>C. J.</given-names></name>
+        <name><surname>Tonkin</surname><given-names>J.</given-names></name>
+        <name><surname>Wardle</surname><given-names>G. M.</given-names></name>
+      </person-group>
+      <article-title>The power of forecasts to advance ecological theory</article-title>
+      <source>Methods in Ecology and Evolution</source>
+      <publisher-name>John Wiley &amp; Sons, Ltd</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <volume>14</volume>
+      <issue>3</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13955 https://onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13955 https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13955</uri>
+      <pub-id pub-id-type="doi">10.1111/2041-210X.13955</pub-id>
+      <fpage>746</fpage>
+      <lpage>756</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Dietze2017">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Dietze</surname><given-names>M. C.</given-names></name>
+      </person-group>
+      <source>Ecological Forecasting</source>
+      <publisher-name>Princeton University Press</publisher-name>
+      <publisher-loc>Princeton</publisher-loc>
+      <year iso-8601-date="2017-05">2017</year><month>05</month>
+      <isbn>9781400885459</isbn>
+      <uri>https://www.degruyter.com/document/doi/10.1515/9781400885459/html</uri>
+      <pub-id pub-id-type="doi">10.1515/9781400885459</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Ernest2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ernest</surname><given-names>S. K. Morgan</given-names></name>
+        <name><surname>Ye</surname><given-names>H.</given-names></name>
+        <name><surname>White</surname><given-names>E. P.</given-names></name>
+      </person-group>
+      <article-title>Ecological Forecasting and Dynamics: A graduate course on the fundamentals of time series and forecasting in ecology</article-title>
+      <source>Journal of Open Source Education</source>
+      <year iso-8601-date="2023-08">2023</year><month>08</month>
+      <volume>6</volume>
+      <issue>66</issue>
+      <issn>2577-3569</issn>
+      <uri>https://jose.theoj.org/papers/10.21105/jose.00198</uri>
+      <pub-id pub-id-type="doi">10.21105/jose.00198</pub-id>
+      <fpage>198</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
