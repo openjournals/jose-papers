@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20241111233938-8ab335f81c08fe580800107b24fe6e1dab058df6</doi_batch_id>
+    <timestamp>20241111233938</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>11</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>81</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>An R Companion for Introduction to Data Mining</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Michael</given_name>
+            <surname>Hahsler</surname>
+            <affiliations>
+              <institution><institution_name>Department of Computer Science, Southern Methodist University, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-2716-1405</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>11</month>
+          <day>11</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>223</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00223</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.6084/m9.figshare.26750404.v1</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/223</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00223</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00223</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00223.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Tan2018">
+            <volume_title>Introduction to data mining</volume_title>
+            <author>Tan</author>
+            <isbn>978-0133128901</isbn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Tan, P.-N., Steinbach, M. S.,
+Karpatne, A., &amp; Kumar, V. (2017). Introduction to data mining (2nd
+Edition). Pearson. ISBN: 978-0133128901</unstructured_citation>
+          </citation>
+          <citation key="arules2005">
+            <article_title>arules – A computational environment for
+mining association rules and frequent item sets</article_title>
+            <author>Hahsler</author>
+            <journal_title>Journal of Statistical
+Software</journal_title>
+            <issue>15</issue>
+            <volume>14</volume>
+            <doi>10.18637/jss.v014.i15</doi>
+            <issn>1548-7660</issn>
+            <cYear>2005</cYear>
+            <unstructured_citation>Hahsler, M., Grün, B., &amp; Hornik,
+K. (2005). arules – A computational environment for mining association
+rules and frequent item sets. Journal of Statistical Software, 14(15),
+1–25. https://doi.org/10.18637/jss.v014.i15</unstructured_citation>
+          </citation>
+          <citation key="tidyverse2019">
+            <article_title>Welcome to the tidyverse</article_title>
+            <author>Wickham</author>
+            <journal_title>Journal of Open Source
+Software</journal_title>
+            <issue>43</issue>
+            <volume>4</volume>
+            <doi>10.21105/joss.01686</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Wickham, H., Averick, M., Bryan, J.,
+Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A.,
+Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S.
+M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., …
+Yutani, H. (2019). Welcome to the tidyverse. Journal of Open Source
+Software, 4(43), 1686.
+https://doi.org/10.21105/joss.01686</unstructured_citation>
+          </citation>
+          <citation key="dbscan2019">
+            <article_title>dbscan: Fast density-based clustering with
+R</article_title>
+            <author>Hahsler</author>
+            <journal_title>Journal of Statistical
+Software</journal_title>
+            <issue>1</issue>
+            <volume>91</volume>
+            <doi>10.18637/jss.v091.i01</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Hahsler, M., Piekenbrock, M., &amp;
+Doran, D. (2019). dbscan: Fast density-based clustering with R. Journal
+of Statistical Software, 91(1), 1–30.
+https://doi.org/10.18637/jss.v091.i01</unstructured_citation>
+          </citation>
+          <citation key="seriation2008">
+            <article_title>Getting things in order: An introduction to
+the R package seriation</article_title>
+            <author>Hahsler</author>
+            <journal_title>Journal of Statistical
+Software</journal_title>
+            <issue>3</issue>
+            <volume>25</volume>
+            <doi>10.18637/jss.v025.i03</doi>
+            <issn>1548-7660</issn>
+            <cYear>2008</cYear>
+            <unstructured_citation>Hahsler, M., Hornik, K., &amp;
+Buchta, C. (2008). Getting things in order: An introduction to the R
+package seriation. Journal of Statistical Software, 25(3), 1–34.
+https://doi.org/10.18637/jss.v025.i03</unstructured_citation>
+          </citation>
+          <citation key="arulesViz2017">
+            <article_title>arulesViz: Interactive visualization of
+association rules with R</article_title>
+            <author>Hahsler</author>
+            <journal_title>R Journal</journal_title>
+            <issue>2</issue>
+            <volume>9</volume>
+            <doi>10.32614/RJ-2017-047</doi>
+            <issn>2073-4859</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Hahsler, M. (2017). arulesViz:
+Interactive visualization of association rules with R. R Journal, 9(2),
+163–175. https://doi.org/10.32614/RJ-2017-047</unstructured_citation>
+          </citation>
+          <citation key="caret2008">
+            <article_title>Building predictive models in R using the
+caret package</article_title>
+            <author>Kuhn</author>
+            <journal_title>Journal of Statistical
+Software</journal_title>
+            <issue>5</issue>
+            <volume>28</volume>
+            <doi>10.18637/jss.v028.i05</doi>
+            <cYear>2008</cYear>
+            <unstructured_citation>Kuhn, M. (2008). Building predictive
+models in R using the caret package. Journal of Statistical Software,
+28(5), 1–26.
+https://doi.org/10.18637/jss.v028.i05</unstructured_citation>
+          </citation>
+          <citation key="tidymodels2020">
+            <volume_title>Tidymodels: A collection of packages for
+modeling and machine learning using tidyverse principles.</volume_title>
+            <author>Kuhn</author>
+            <doi>10.32614/CRAN.package.tidymodels</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Kuhn, M., &amp; Wickham, H. (2020).
+Tidymodels: A collection of packages for modeling and machine learning
+using tidyverse principles.
+https://doi.org/10.32614/CRAN.package.tidymodels</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
