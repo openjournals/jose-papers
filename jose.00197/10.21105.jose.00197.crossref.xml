@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20241210124511-c78db22835d1e8ebfb372bc1e9fbf436089f0344</doi_batch_id>
+    <timestamp>20241210124511</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>12</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>82</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>FANGS - Fire Applications with Next-Generation Satellites</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Sabrina H.</given_name>
+            <surname>Szeto</surname>
+            <affiliations>
+              <institution><institution_name>Sabrina Szeto Consulting</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-3050-837X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Julia</given_name>
+            <surname>Wagemann</surname>
+            <affiliations>
+              <institution><institution_name>Julia Wagemann Consulting</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-3075-2559</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Simone</given_name>
+            <surname>Mantovani</surname>
+            <affiliations>
+              <institution><institution_name>Meteorological Environmental Earth Observation (MEEO) s.r.l.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3979-3645</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Federico</given_name>
+            <surname>Fierli</surname>
+            <affiliations>
+              <institution><institution_name>European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-9975-2883</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>12</month>
+          <day>10</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>197</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00197</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.13907115</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/197</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00197</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00197</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00197.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="eumetsat:2019">
+            <article_title>Meteosat third generation - the case for preparing national users</article_title>
+            <author>EUMETSAT</author>
+            <cYear>2019</cYear>
+            <unstructured_citation>EUMETSAT. (2019). Meteosat third generation - the case for preparing national users. https://www.eumetsat.int/media/43504</unstructured_citation>
+          </citation>
+          <citation key="ipcc:2019">
+            <article_title>Climate change and land: An IPCC special report on climate change, desertification, land degradation, sustainable land management, food security, and greenhouse gas fluxes in terrestrial ecosystems.</article_title>
+            <author>IPCC</author>
+            <cYear>2019</cYear>
+            <unstructured_citation>IPCC. (2019). Climate change and land: An IPCC special report on climate change, desertification, land degradation, sustainable land management, food security, and greenhouse gas fluxes in terrestrial ecosystems. https://www.ipcc.ch/site/assets/uploads/2019/11/SRCCL-Full-Report-Compiled-191128.pdf</unstructured_citation>
+          </citation>
+          <citation key="turco:2017">
+            <article_title>On the key role of droughts in the dynamics of summer fires in mediterranean europe</article_title>
+            <author>Turco</author>
+            <journal_title>Scientific Reports</journal_title>
+            <volume>7.1</volume>
+            <doi>10.1038/s41598-017-00116-9</doi>
+            <cYear>2017</cYear>
+            <unstructured_citation>Turco, M., Hardenberg, J. von, AghaKouchak, A., Llasat, M. C., Provenzale, A., &amp; Trigo, R. M. (2017). On the key role of droughts in the dynamics of summer fires in mediterranean europe. Scientific Reports, 7.1. https://doi.org/10.1038/s41598-017-00116-9</unstructured_citation>
+          </citation>
+          <citation key="wagemann:2022">
+            <article_title>LTPy - Learning tool for Python on Atmospheric Composition</article_title>
+            <author>Wagemann</author>
+            <doi>10.5281/zenodo.7463073</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Wagemann, J., Szeto, S. H., Mantovani, S., &amp; Fierli, F. (2022). LTPy - Learning tool for Python on Atmospheric Composition (Version 1.0). Zenodo. https://doi.org/10.5281/zenodo.7463073</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
