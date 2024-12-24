@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">197</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00197</article-id>
+<title-group>
+<article-title>FANGS - Fire Applications with Next-Generation
+Satellites</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3050-837X</contrib-id>
+<name>
+<surname>Szeto</surname>
+<given-names>Sabrina H.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3075-2559</contrib-id>
+<name>
+<surname>Wagemann</surname>
+<given-names>Julia</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-3979-3645</contrib-id>
+<name>
+<surname>Mantovani</surname>
+<given-names>Simone</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9975-2883</contrib-id>
+<name>
+<surname>Fierli</surname>
+<given-names>Federico</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Sabrina Szeto Consulting</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Julia Wagemann Consulting</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Meteorological Environmental Earth Observation (MEEO)
+s.r.l.</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>European Organisation for the Exploitation of
+Meteorological Satellites (EUMETSAT)</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2022-12-21">
+<day>21</day>
+<month>12</month>
+<year>2022</year>
+</pub-date>
+<volume>7</volume>
+<issue>82</issue>
+<fpage>197</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2024</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>python</kwd>
+<kwd>jupyter notebooks</kwd>
+<kwd>copernicus</kwd>
+<kwd>atmospheric composition</kwd>
+<kwd>wildfires</kwd>
+<kwd>open data</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The FANGS training course consists of Python-based training
+  material and application examples on detection and monitoring of the
+  fire life cycle. It is developed by the European Organisation for the
+  Exploitation of Meteorological Satellites (EUMETSAT). The developed
+  training material makes use of proxy and simulated data, including
+  data from precursor instruments of the Meteosat Third Generation (MTG)
+  and the EUMETSAT Polar System - Second Generation (EPS-SG) / Metop
+  Second Generation (Metop-SG) satellite missions. The training material
+  is developed in the form of modular Jupyter notebook case studies on
+  the 2020 wildfires in California, USA and the Mediterranean wildfires
+  in 2021. In total, 24 notebooks were developed comprising five
+  narrative notebooks and 19 workflow notebooks. These notebooks are
+  available on a
+  <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring">Gitlab
+  repository</ext-link> as well as on a dedicated
+  <ext-link ext-link-type="uri" xlink:href="https://fire.ltpy.adamplatform.eu/">JupyerLab
+  platform</ext-link>, where the notebooks can be executed. In addition,
+  an accompanying
+  <ext-link ext-link-type="uri" xlink:href="https://fire.trainhub.eumetsat.int/docs/index.html">Jupyter
+  Book</ext-link> is also available as an entrypoint to the
+  material.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>As climate models predict a growing intensity and frequency of
+  wildfire events in the future
+  (<xref alt="IPCC, 2019" rid="ref-ipccU003A2019" ref-type="bibr">IPCC,
+  2019</xref>), Earth Observation (EO) data from satellites are an
+  increasingly valuable source of information for wildfire monitoring,
+  particularly for regions with a Mediterranean climate which are
+  particularly susceptible to fires
+  (<xref alt="Turco et al., 2017" rid="ref-turcoU003A2017" ref-type="bibr">Turco
+  et al., 2017</xref>). In the near future, new instruments aboard
+  satellites from the MTG and Metop-SG missions will provide advanced
+  capabilities and valuable data for monitoring wildfires and their
+  impacts. Data users, for example researchers, emergency management
+  agencies and land managers among others, need to gain familiarity with
+  the upcoming data as well as their improved capabilities. While data
+  from these instruments are not yet available, proxy data from existing
+  and precursor instruments as well as simulated data, can be used for
+  training and preparing new data users. Proxy data refers to “data with
+  valid scientific content, to be used in early training on instrument
+  capabilities and application areas, for example in test beds. These
+  are real datasets from relevant existing precursor instruments
+  (<xref alt="EUMETSAT, 2019" rid="ref-eumetsatU003A2019" ref-type="bibr">EUMETSAT,
+  2019</xref>).”</p>
+  <p>In order to familiarise more data users with the upcoming datasets,
+  we developed a modular set of training materials for data users to
+  learn about the applications of the upcoming data from the MTG and
+  Metop-SG satellite missions.</p>
+</sec>
+<sec id="learning-objectives-and-instructional-design">
+  <title>Learning Objectives and Instructional Design</title>
+  <p>There are two main learning objectives of the FANGS training
+  course. Firstly, the training course introduces data users to upcoming
+  instruments aboard the MTG and Metop-SG satellites which are useful
+  for monitoring wildfires. Secondly, it provides step-by-step workflows
+  and examples for loading, processing and visualising proxy data and
+  other associated datasets in the context of actual wildfire events,
+  namely the Mediterranean wildfires in 2021 and the wildfires in
+  California, USA in 2020.</p>
+  <p>Each case study consists of two to six narrative notebooks
+  describing the wildfire event and how the upcoming MTG and EPS-SG
+  satellites will improve the capabilities to monitor the full fire life
+  cycle, together with figures comprising maps and animations of
+  satellite data products for each event. The narrative notebooks
+  highlight different parts of the fire life cycle - from pre-fire risk,
+  active burning and smoke transport to assessing post-fire impacts.
+  Each figure in the narrative notebooks is linked to a workflow
+  notebook showing how the proxy data from MTG and EPS-SG were loaded,
+  processed and visualised.</p>
+  <p>In order to cater to data users with different levels of Python
+  experience, we use several predefined functions that enable data users
+  to load, pre-process and visualise data easily
+  (<xref alt="Wagemann et al., 2022" rid="ref-wagemannU003A2022" ref-type="bibr">Wagemann
+  et al., 2022</xref>). For those who are new to Python, this enables
+  them to apply the functions directly by adding the required keyword
+  arguments. For those with more advanced knowledge, they can open the
+  functions notebook and modify the functions even further.</p>
+  <p>The training course has been developed to enable data users to dive
+  as deep as they want into the material. For data users who just want
+  to read through the case studies and look at the example figures, they
+  can access them through a
+  <ext-link ext-link-type="uri" xlink:href="https://fire.trainhub.eumetsat.int/docs/index.html">Jupyter
+  Book</ext-link> online. For those who want to execute the workflows,
+  the training course can also be accessed in an interactive
+  <ext-link ext-link-type="uri" xlink:href="https://fire.ltpy.adamplatform.eu/">JupyterLab
+  platform</ext-link>, where the required Python libraries and data are
+  pre-installed. Data users can also set-up the same environment on
+  their local machines by cloning the
+  <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring">GitLab
+  repository</ext-link> and using the environment.yml file provided to
+  install the required libraries.</p>
+</sec>
+<sec id="course-content">
+  <title>Course Content</title>
+  <p>The course comprises of two main case studies, each with multiple
+  parts that focus on different phases of the fire life cycle:</p>
+  <sec id="wildfires-in-california-usa-2020">
+    <title>Wildfires in California, USA 2020</title>
+    <p>This two-part case study introduces upcoming data products from
+    the MTG and Metop-SG satellite missions in the context of the 2020
+    August Complex fires which occurred in California, USA. The workflow
+    notebooks are in the folders
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/ca_part1_workflows">ca_part1_workflows</ext-link>
+    and
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/ca_part2_workflows">ca_part2_workflows</ext-link>.</p>
+    <p>Part One of the case study in
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/ca_part1_workflows">ca_part1_workflows</ext-link>
+    focuses on fire monitoring applications using data products from the
+    MTG mission. Part Two of the case study in
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/ca_part2_workflows">ca_part2_workflows</ext-link>
+    introduces users to new capabilities in monitoring smoke transport
+    using data products from the Metop-SG mission.</p>
+  </sec>
+  <sec id="mediterranean-fires-in-greece-and-italy-2021">
+    <title>Mediterranean fires in Greece and Italy, 2021</title>
+    <p>This three-part case study introduces upcoming data products from
+    the MTG and Metop-SG missions in the context of the summer wildfires
+    which occurred in southern Italy and Greece in early August 2021.
+    The workflow notebooks are in the folders
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/med_part1_workflows">med_part1_workflows</ext-link>,
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/med_part2_workflows">med_part2_workflows</ext-link>
+    and
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/med_part3_workflows">med_part3_workflows</ext-link>.</p>
+    <p>Part One of the case study in
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/med_part1_workflows">med_part1_workflows</ext-link>
+    introduces data users to forecasting the pre-fire risk using data
+    products whose capabilities will be improved through data from MTG
+    and Metop-SG. With a similar goal, Part Two of the case study in
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/med_part2_workflows">med_part2_workflows</ext-link>
+    focuses on monitoring the active fire phase of the fire life cycle.
+    Finally, Part Three of the case study in
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.eumetsat.int/eumetlab/atmosphere/fire-monitoring/-/tree/main/med_part3_workflows">med_part3_workflows</ext-link>
+    focuses on assessing post-fire impacts.</p>
+  </sec>
+</sec>
+<sec id="teaching-experience">
+  <title>Teaching Experience</title>
+  <p>The FANGS training course was completed in spring 2022. Since then,
+  the notebooks have been used in more than six
+  <ext-link ext-link-type="uri" xlink:href="https://training.eumetsat.int/">EUMETSAT
+  training activities</ext-link>, reaching over 450 people in 2022.
+  Examples of training activities include workshops at conferences and
+  online webinars with an instructor introducing the case studies and
+  workflows. The training course also allows for self-paced learning as
+  data users can choose what parts of the fire life cycle they wish to
+  focus on and how in-depth they want to go in terms of understanding
+  the workflows.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>FANGS has been supported by the Copernicus Programme through
+  EUMETSAT. We acknowledge contributions from Carla Barrosso (EUMETSAT)
+  and Stephan Bojinski (EUMETSAT).</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-eumetsatU003A2019">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>EUMETSAT</string-name>
+      </person-group>
+      <article-title>Meteosat third generation - the case for preparing national users</article-title>
+      <year iso-8601-date="2019-05">2019</year><month>05</month>
+      <uri>https://www.eumetsat.int/media/43504</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-ipccU003A2019">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>IPCC</string-name>
+      </person-group>
+      <article-title>Climate change and land: An IPCC special report on climate change, desertification, land degradation, sustainable land management, food security, and greenhouse gas fluxes in terrestrial ecosystems.</article-title>
+      <year iso-8601-date="2019">2019</year>
+      <uri>https://www.ipcc.ch/site/assets/uploads/2019/11/SRCCL-Full-Report-Compiled-191128.pdf</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-turcoU003A2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Turco</surname><given-names>M.</given-names></name>
+        <name><surname>Hardenberg</surname><given-names>J. von</given-names></name>
+        <name><surname>AghaKouchak</surname><given-names>A.</given-names></name>
+        <name><surname>Llasat</surname><given-names>M. C.</given-names></name>
+        <name><surname>Provenzale</surname><given-names>A.</given-names></name>
+        <name><surname>Trigo</surname><given-names>R. M.</given-names></name>
+      </person-group>
+      <article-title>On the key role of droughts in the dynamics of summer fires in mediterranean europe</article-title>
+      <source>Scientific Reports</source>
+      <year iso-8601-date="2017-03">2017</year><month>03</month>
+      <volume>7.1</volume>
+      <uri>https://www.nature.com/articles/s41598-017-00116-9</uri>
+      <pub-id pub-id-type="doi">10.1038/s41598-017-00116-9</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-wagemannU003A2022">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Wagemann</surname><given-names>Julia</given-names></name>
+        <name><surname>Szeto</surname><given-names>Sabrina H.</given-names></name>
+        <name><surname>Mantovani</surname><given-names>Simone</given-names></name>
+        <name><surname>Fierli</surname><given-names>Federico</given-names></name>
+      </person-group>
+      <article-title>LTPy - Learning tool for Python on Atmospheric Composition</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2022-12">2022</year><month>12</month>
+      <uri>https://doi.org/10.5281/zenodo.7463073</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.7463073</pub-id>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
