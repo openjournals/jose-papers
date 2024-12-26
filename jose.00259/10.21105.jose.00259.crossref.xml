@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20241226192545-00c4792550ef32360958f8d814aeb2aae3dffaa6</doi_batch_id>
+    <timestamp>20241226192545</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>12</month>
+          <year>2024</year>
+        </publication_date>
+        <journal_volume>
+          <volume>7</volume>
+        </journal_volume>
+        <issue>82</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Can you predict the future? A tutorial for the National Ecological Observatory Network Ecological Forecasting Challenge</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Freya</given_name>
+            <surname>Olsson</surname>
+            <affiliations>
+              <institution><institution_name>Center for Ecosystem Forecasting, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+              <institution><institution_name>Department of Biological Sciences, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-0483-4489</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Carl</given_name>
+            <surname>Boettiger</surname>
+            <affiliations>
+              <institution><institution_name>Department of Environmental Science, Policy, and Management, University of California, Berkeley, Berkeley, California, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-1642-628X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Cayelan C.</given_name>
+            <surname>Carey</surname>
+            <affiliations>
+              <institution><institution_name>Center for Ecosystem Forecasting, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+              <institution><institution_name>Department of Biological Sciences, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-8835-4476</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Mary E.</given_name>
+            <surname>Lofton</surname>
+            <affiliations>
+              <institution><institution_name>Center for Ecosystem Forecasting, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+              <institution><institution_name>Department of Biological Sciences, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3270-1330</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>R. Quinn</given_name>
+            <surname>Thomas</surname>
+            <affiliations>
+              <institution><institution_name>Center for Ecosystem Forecasting, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+              <institution><institution_name>Department of Biological Sciences, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+              <institution><institution_name>Department of Forest Resources and Environmental Conservation, Virginia Tech, Blacksburg, Virginia, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1282-7825</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>12</month>
+          <day>26</day>
+          <year>2024</year>
+        </publication_date>
+        <pages>
+          <first_page>259</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00259</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.14018090</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/259</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00259</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00259</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00259.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Olsson2023">
+            <article_title>OlssonF/NEON-forecast-challenge-workshop: EFI NEON Forecast Challenge Workshop</article_title>
+            <author>Olsson</author>
+            <doi>10.5281/zenodo.8316965</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Olsson, F., Thomas, R. Q., Boettiger, C., &amp; Lofton, M. E. (2024). OlssonF/NEON-forecast-challenge-workshop: EFI NEON Forecast Challenge Workshop. Zenodo. https://doi.org/10.5281/zenodo.8316965</unstructured_citation>
+          </citation>
+          <citation key="Thomas2023">
+            <article_title>The NEON Ecological Forecasting Challenge</article_title>
+            <author>Thomas</author>
+            <journal_title>Frontiers in Ecology and the Environment</journal_title>
+            <issue>3</issue>
+            <volume>21</volume>
+            <doi>10.1002/fee.2616</doi>
+            <issn>1540-9295</issn>
+            <cYear>2023</cYear>
+            <unstructured_citation>Thomas, R. Q., Boettiger, C., Carey, C. C., Dietze, M. C., Johnson, L. R., Kenney, M. A., McLachlan, J. S., Peters, J. A., Sokol, E. R., Weltzin, J. F., Willson, A., &amp; Woelmer, W. M. (2023). The NEON Ecological Forecasting Challenge. Frontiers in Ecology and the Environment, 21(3), 112–113. https://doi.org/10.1002/fee.2616</unstructured_citation>
+          </citation>
+          <citation key="Wickham2019">
+            <article_title>Welcome to the Tidyverse</article_title>
+            <author>Wickham</author>
+            <journal_title>Journal of Open Source Software</journal_title>
+            <issue>43</issue>
+            <volume>4</volume>
+            <doi>10.21105/joss.01686</doi>
+            <issn>2475-9066</issn>
+            <cYear>2019</cYear>
+            <unstructured_citation>Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T., Miller, E., Bache, S., Müller, K., Ooms, J., Robinson, D., Seidel, D., Spinu, V., … Yutani, H. (2019). Welcome to the Tidyverse. Journal of Open Source Software, 4(43), 1686. https://doi.org/10.21105/joss.01686</unstructured_citation>
+          </citation>
+          <citation key="Lewis2022">
+            <article_title>The power of forecasts to advance ecological theory</article_title>
+            <author>Lewis</author>
+            <journal_title>Methods in Ecology and Evolution</journal_title>
+            <issue>3</issue>
+            <volume>14</volume>
+            <doi>10.1111/2041-210X.13955</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Lewis, A. S. L., Rollinson, C. R., Allyn, A. J., Ashander, J., Brodie, S., Brookson, C. B., Collins, E., Dietze, M. C., Gallinat, A. S., Juvigny-Khenafou, N., Koren, G., McGlinn, D. J., Moustahfid, H., Peters, J. A., Record, N. R., Robbins, C. J., Tonkin, J., &amp; Wardle, G. M. (2023). The power of forecasts to advance ecological theory. Methods in Ecology and Evolution, 14(3), 746–756. https://doi.org/10.1111/2041-210X.13955</unstructured_citation>
+          </citation>
+          <citation key="Dietze2017">
+            <volume_title>Ecological Forecasting</volume_title>
+            <author>Dietze</author>
+            <doi>10.1515/9781400885459</doi>
+            <isbn>9781400885459</isbn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Dietze, M. C. (2017). Ecological Forecasting. Princeton University Press. https://doi.org/10.1515/9781400885459</unstructured_citation>
+          </citation>
+          <citation key="Ernest2023">
+            <article_title>Ecological Forecasting and Dynamics: A graduate course on the fundamentals of time series and forecasting in ecology</article_title>
+            <author>Ernest</author>
+            <journal_title>Journal of Open Source Education</journal_title>
+            <issue>66</issue>
+            <volume>6</volume>
+            <doi>10.21105/jose.00198</doi>
+            <issn>2577-3569</issn>
+            <cYear>2023</cYear>
+            <unstructured_citation>Ernest, S. K. M., Ye, H., &amp; White, E. P. (2023). Ecological Forecasting and Dynamics: A graduate course on the fundamentals of time series and forecasting in ecology. Journal of Open Source Education, 6(66), 198. https://doi.org/10.21105/jose.00198</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
