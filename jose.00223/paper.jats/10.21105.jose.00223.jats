@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">223</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00223</article-id>
+<title-group>
+<article-title>An R Companion for Introduction to Data
+Mining</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-2716-1405</contrib-id>
+<name>
+<surname>Hahsler</surname>
+<given-names>Michael</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Department of Computer Science, Southern Methodist
+University, USA</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-05-30">
+<day>30</day>
+<month>5</month>
+<year>2023</year>
+</pub-date>
+<volume>7</volume>
+<issue>82</issue>
+<fpage>223</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2024</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>R</kwd>
+<kwd>data mining</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>An R Companion for Introduction to Data Mining is an open-source
+  learning and teaching resource that covers how to implement data
+  mining concepts using R. It is designed to accompany the popular data
+  mining textbook <italic>Introduction to Data Mining</italic>
+  (<xref alt="Tan et al., 2017" rid="ref-Tan2018" ref-type="bibr">Tan et
+  al., 2017</xref>) to study the implementation of the basic data mining
+  concepts including data preparation, classification, clustering, and
+  association analysis. The resource uses complete, annotated examples
+  to demonstrate how data mining concepts can be translated into R
+  code.</p>
+  <p>The materials have been made publicly available at:
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/mhahsler/Introduction_to_Data_Mining_R_Examples">https://github.com/mhahsler/Introduction_to_Data_Mining_R_Examples</ext-link>
+  and licensed under the
+  <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">Creative
+  Commons Attribution 4.0 (CC BY 4.0) License</ext-link>.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>The textbook <italic>Introduction to Data Mining</italic>
+  (<xref alt="Tan et al., 2017" rid="ref-Tan2018" ref-type="bibr">Tan et
+  al., 2017</xref>) has been one of the most popular choices to learn
+  and teach data mining concepts. Several chapters have been made
+  available for free by the authors on the
+  <ext-link ext-link-type="uri" xlink:href="https://www-users.cse.umn.edu/~kumar001/dmbook/index.php">books’s
+  website</ext-link>. One of the authors also provides Python Jupyter
+  notebooks with examples, but complete R code examples were still
+  needed. Given the R community’s interest in data analysis, data
+  science, and machine learning, and the broad support of R packages for
+  data mining, there was a noticeable gap that was filled by this
+  learning resource. This resource targets advanced undergraduate and
+  graduate students and can be used as a component for a first
+  introduction to data mining.</p>
+</sec>
+<sec id="learning-objectives-and-content">
+  <title>Learning Objectives and Content</title>
+  <p>The resource assumes basic knowledge of programming and statistics.
+  The learning objectives are to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>prepare and understand data,</p>
+    </list-item>
+    <list-item>
+      <p>perform classification,</p>
+    </list-item>
+    <list-item>
+      <p>perform association analysis, and</p>
+    </list-item>
+    <list-item>
+      <p>perform cluster analysis.</p>
+    </list-item>
+  </list>
+  <p>The resource presents self-contained and annotated R code examples
+  that work with small datasets carefully chosen to show the learner
+  many important aspects of data mining. The learner can copy and paste
+  the examples into a new R markdown notebook to experiment with the
+  code and the provided example data. Small exercises encourage the
+  learner to modify the code by applying it to a different dataset. This
+  learning-by-doing approach has worked well in preparing students to
+  work with more complex real-world datasets by initially relieving them
+  from dealing with too many low-level implementation details while
+  exploring the concepts.</p>
+  <p>The resource mirrors the textbook’s structure so it can be used
+  along with it easily. After a short introduction, Chapter 2 discusses
+  data types in R, data quality concerns, and data preprocessing. Data
+  exploration and visualization examples are included. Chapters 3 and 4
+  cover classification methods, model selection, model evaluation,
+  different types of classifiers, and essential practical issues like
+  class imbalance. Chapter 5 introduces association analysis with a
+  strong emphasis on visualization. Chapter 7 presents examples of
+  cluster analysis, including popular algorithms, cluster evaluation,
+  and the effect of outliers.</p>
+</sec>
+<sec id="instructional-design">
+  <title>Instructional Design</title>
+  <p>This resource does not replace the <italic>Introduction to Data
+  Mining</italic> textbook or instruction by a teacher. It instead
+  provides supporting material for learning to implement data mining
+  concepts in R. The learner is expected to have some programming
+  experience and basic statistics knowledge.</p>
+  <p>The resource can be used for self-study by any interested person
+  together with reading the <italic>Introduction to Data Mining</italic>
+  textbook, but its main purpose is to be used as a component for
+  designing an introductory data mining course for advanced
+  undergraduate or graduate students. To support instructors, in
+  addition to the documented code examples, complete presentation slide
+  sets are provided on the book’s GitHub page in PDF and PowerPoint
+  format. The slides are organized in the same way as the resource. A
+  direct connection between the slides and the code examples is provided
+  by the R symbol on the slides where example code is available. The
+  code examples can be assigned to be studied by the students outside of
+  class or used by the instructor in class.</p>
+  <p>Designing assignments and assessments is left to the instructor
+  since they depend on the level and field of study of the students
+  (e.g., computer science, statistic, economics, or business). For
+  example, for undergraduates, we suggest to ask the students to apply
+  the data mining techniques to a small, clean instructional data set
+  (sample exercises are available in the resource at the end of each
+  chapter), while graduate students may be asked to analyze larger
+  real-world data sets, which may require a significant amount of
+  cleaning and preprocessing.</p>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the Project</title>
+  <p>Since starting to teach data mining with R in the Spring of 2013, I
+  have been developing the Companion for Introduction to Data Mining
+  resource mainly based on caret
+  (<xref alt="Kuhn, 2008" rid="ref-caret2008" ref-type="bibr">Kuhn,
+  2008</xref>), and a set of packages developed with students to better
+  support different data mining tasks (e.g., arules
+  (<xref alt="Hahsler et al., 2005" rid="ref-arules2005" ref-type="bibr">Hahsler
+  et al., 2005</xref>), seriation
+  (<xref alt="Hahsler et al., 2008" rid="ref-seriation2008" ref-type="bibr">Hahsler
+  et al., 2008</xref>) arulesViz
+  (<xref alt="Hahsler, 2017" rid="ref-arulesViz2017" ref-type="bibr">Hahsler,
+  2017</xref>), and dbscan
+  (<xref alt="Hahsler et al., 2019" rid="ref-dbscan2019" ref-type="bibr">Hahsler
+  et al., 2019</xref>)). The resource grew from a collection of short,
+  unconnected R scripts to a complete set of documented code examples
+  that walk the learner step-by-step through how to implement data
+  mining methods, and how to interpret the results. It went through an
+  update to incorporate the popular tidyverse package collection
+  (<xref alt="Wickham et al., 2019" rid="ref-tidyverse2019" ref-type="bibr">Wickham
+  et al., 2019</xref>) and a transition from the 1st edition of the
+  Introduction to Data Mining textbook to the second.</p>
+  <p>The companion resource has been used successfully in the department
+  of Computer Science at Southern Methodist University for many years
+  and by several instructors as a key component of an introductory data
+  mining course delivered in person and in a distance education setting.
+  It is also linked on the textbook website as an official resource.
+  Faculty at the department actively maintains the resource, and we will
+  update it with new R tools like tidymodels
+  (<xref alt="Kuhn &amp; Wickham, 2020" rid="ref-tidymodels2020" ref-type="bibr">Kuhn
+  &amp; Wickham, 2020</xref>) over time.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Tan2018">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Tan</surname><given-names>Pang-Ning</given-names></name>
+        <name><surname>Steinbach</surname><given-names>Michael S.</given-names></name>
+        <name><surname>Karpatne</surname><given-names>Anuj</given-names></name>
+        <name><surname>Kumar</surname><given-names>Vipin</given-names></name>
+      </person-group>
+      <source>Introduction to data mining</source>
+      <publisher-name>Pearson</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+      <edition>2nd Edition</edition>
+      <isbn>978-0133128901</isbn>
+      <uri>https://www-users.cs.umn.edu/~kumar001/dmbook</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-arules2005">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hahsler</surname><given-names>Michael</given-names></name>
+        <name><surname>Grün</surname><given-names>Bettina</given-names></name>
+        <name><surname>Hornik</surname><given-names>Kurt</given-names></name>
+      </person-group>
+      <article-title>arules – A computational environment for mining association rules and frequent item sets</article-title>
+      <source>Journal of Statistical Software</source>
+      <year iso-8601-date="2005">2005</year>
+      <volume>14</volume>
+      <issue>15</issue>
+      <issn>1548-7660</issn>
+      <pub-id pub-id-type="doi">10.18637/jss.v014.i15</pub-id>
+      <fpage>1</fpage>
+      <lpage>25</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tidyverse2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wickham</surname><given-names>Hadley</given-names></name>
+        <name><surname>Averick</surname><given-names>Mara</given-names></name>
+        <name><surname>Bryan</surname><given-names>Jennifer</given-names></name>
+        <name><surname>Chang</surname><given-names>Winston</given-names></name>
+        <name><surname>McGowan</surname><given-names>Lucy D’Agostino</given-names></name>
+        <name><surname>François</surname><given-names>Romain</given-names></name>
+        <name><surname>Grolemund</surname><given-names>Garrett</given-names></name>
+        <name><surname>Hayes</surname><given-names>Alex</given-names></name>
+        <name><surname>Henry</surname><given-names>Lionel</given-names></name>
+        <name><surname>Hester</surname><given-names>Jim</given-names></name>
+        <name><surname>Kuhn</surname><given-names>Max</given-names></name>
+        <name><surname>Pedersen</surname><given-names>Thomas Lin</given-names></name>
+        <name><surname>Miller</surname><given-names>Evan</given-names></name>
+        <name><surname>Bache</surname><given-names>Stephan Milton</given-names></name>
+        <name><surname>Müller</surname><given-names>Kirill</given-names></name>
+        <name><surname>Ooms</surname><given-names>Jeroen</given-names></name>
+        <name><surname>Robinson</surname><given-names>David</given-names></name>
+        <name><surname>Seidel</surname><given-names>Dana Paige</given-names></name>
+        <name><surname>Spinu</surname><given-names>Vitalie</given-names></name>
+        <name><surname>Takahashi</surname><given-names>Kohske</given-names></name>
+        <name><surname>Vaughan</surname><given-names>Davis</given-names></name>
+        <name><surname>Wilke</surname><given-names>Claus</given-names></name>
+        <name><surname>Woo</surname><given-names>Kara</given-names></name>
+        <name><surname>Yutani</surname><given-names>Hiroaki</given-names></name>
+      </person-group>
+      <article-title>Welcome to the tidyverse</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>4</volume>
+      <issue>43</issue>
+      <pub-id pub-id-type="doi">10.21105/joss.01686</pub-id>
+      <fpage>1686</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dbscan2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hahsler</surname><given-names>Michael</given-names></name>
+        <name><surname>Piekenbrock</surname><given-names>Matthew</given-names></name>
+        <name><surname>Doran</surname><given-names>Derek</given-names></name>
+      </person-group>
+      <article-title>dbscan: Fast density-based clustering with R</article-title>
+      <source>Journal of Statistical Software</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>91</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.18637/jss.v091.i01</pub-id>
+      <fpage>1</fpage>
+      <lpage>30</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-seriation2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hahsler</surname><given-names>Michael</given-names></name>
+        <name><surname>Hornik</surname><given-names>Kurt</given-names></name>
+        <name><surname>Buchta</surname><given-names>Christian</given-names></name>
+      </person-group>
+      <article-title>Getting things in order: An introduction to the R package seriation</article-title>
+      <source>Journal of Statistical Software</source>
+      <year iso-8601-date="2008">2008</year>
+      <volume>25</volume>
+      <issue>3</issue>
+      <issn>1548-7660</issn>
+      <pub-id pub-id-type="doi">10.18637/jss.v025.i03</pub-id>
+      <fpage>1</fpage>
+      <lpage>34</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-arulesViz2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hahsler</surname><given-names>Michael</given-names></name>
+      </person-group>
+      <article-title>arulesViz: Interactive visualization of association rules with R</article-title>
+      <source>R Journal</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>9</volume>
+      <issue>2</issue>
+      <issn>2073-4859</issn>
+      <uri>https://journal.r-project.org/archive/2017/RJ-2017-047/RJ-2017-047.pdf</uri>
+      <pub-id pub-id-type="doi">10.32614/RJ-2017-047</pub-id>
+      <fpage>163</fpage>
+      <lpage>175</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-caret2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kuhn</surname><given-names>Max</given-names></name>
+      </person-group>
+      <article-title>Building predictive models in R using the caret package</article-title>
+      <source>Journal of Statistical Software</source>
+      <year iso-8601-date="2008">2008</year>
+      <volume>28</volume>
+      <issue>5</issue>
+      <uri>https://www.jstatsoft.org/index.php/jss/article/view/v028i05</uri>
+      <pub-id pub-id-type="doi">10.18637/jss.v028.i05</pub-id>
+      <fpage>1</fpage>
+      <lpage>26</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tidymodels2020">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Kuhn</surname><given-names>Max</given-names></name>
+        <name><surname>Wickham</surname><given-names>Hadley</given-names></name>
+      </person-group>
+      <source>Tidymodels: A collection of packages for modeling and machine learning using tidyverse principles.</source>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://www.tidymodels.org</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.tidymodels</pub-id>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
