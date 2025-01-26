@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">261</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00261</article-id>
+<title-group>
+<article-title>AstronomyCalc: A python toolkit for teaching Astronomical
+Calculations and Data Analysis methods</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-2560-536X</contrib-id>
+<name>
+<surname>Giri</surname>
+<given-names>Sambit K.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Nordita, KTH Royal Institute of Technology and Stockholm
+University, Hannes Alfvéns väg 12, SE-106 91 Stockholm,
+Sweden</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-08-26">
+<day>26</day>
+<month>8</month>
+<year>2024</year>
+</pub-date>
+<volume>8</volume>
+<issue>83</issue>
+<fpage>261</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>astronomy</kwd>
+<kwd>cosmology</kwd>
+<kwd>teaching</kwd>
+<kwd>dark matter</kwd>
+<kwd>galaxies</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Understanding astrophysical and cosmological processes can be
+  challenging due to their complexity and the lack of simple, everyday
+  analogies. To address this, we present
+  <monospace>AstronomyCalc</monospace>, a user-friendly Python package
+  designed to facilitate the learning of these processes and help
+  develop insights based on the variation theory of learning
+  (<xref alt="Ling Lo, 2012" rid="ref-ling2012variation" ref-type="bibr">Ling
+  Lo, 2012</xref>;
+  <xref alt="Lo &amp; Marton, 2011" rid="ref-lo2011towards" ref-type="bibr">Lo
+  &amp; Marton, 2011</xref>).</p>
+  <p><monospace>AstronomyCalc</monospace> enables students and educators
+  to engage with key astrophysical and cosmological calculations, such
+  as solving the Friedmann equations, which are fundamental to modeling
+  the dynamics of the universe. The package allows users to construct
+  and explore various cosmological models, including the de Sitter and
+  Einstein-de Sitter universes (see
+  <xref alt="Ryden, 2017" rid="ref-ryden2017introduction" ref-type="bibr">Ryden,
+  2017</xref> for more examples), by adjusting key parameters such as
+  matter density and the Hubble constant. This interactive approach
+  helps users intuitively grasp how variations in these parameters
+  affect properties like expansion rates and cosmic time evolution.
+  Additionally, the package is designed to be easily expanded with
+  additional astronomical calculations as needed for a course.</p>
+  <p><monospace>AstronomyCalc</monospace> also includes modules for
+  generating synthetic astronomical data or accessing publicly available
+  datasets. In its current version, users can generate synthetic Type Ia
+  supernova measurements of cosmological distances
+  (<xref alt="VanderPlas et al., 2012" rid="ref-vanderplas2012introduction" ref-type="bibr">VanderPlas
+  et al., 2012</xref>) or utilize the publicly available Pantheon+
+  dataset
+  (<xref alt="Brout et al., 2022" rid="ref-brout2022pantheonplus" ref-type="bibr">Brout
+  et al., 2022</xref>). Additionally, the package supports the download
+  and analysis of the SPARC dataset, which contains galaxy rotation
+  curves for 175 disk galaxies
+  (<xref alt="Lelli et al., 2016" rid="ref-lelli2016sparc" ref-type="bibr">Lelli
+  et al., 2016</xref>).</p>
+  <p>The datasets provided in the package can be analyzed within the
+  package to test cosmological and astrophysical models, offering a
+  hands-on experience that mirrors the scientific research process in
+  astronomy. Simplified implementations of advanced data analysis
+  techniques, such as Importance Sampling
+  (<xref alt="Tokdar &amp; Kass, 2010" rid="ref-tokdar2010importance" ref-type="bibr">Tokdar
+  &amp; Kass, 2010</xref>) and the Metropolis-Hastings algorithm
+  (<xref alt="Robert &amp; Casella, 2004" rid="ref-robert2004metropolis" ref-type="bibr">Robert
+  &amp; Casella, 2004</xref>), are included to introduce users to Monte
+  Carlo Markov Chain sampling and statistical data interpretation. By
+  integrating theoretical concepts with observational data analysis,
+  <monospace>AstronomyCalc</monospace> not only aids in conceptual
+  learning but also provides insights into the empirical methods used in
+  the field.</p>
+  <p>The current version of <monospace>AstronomyCalc</monospace>
+  contains several Jupyter notebooks featuring tutorials on various
+  topics in astronomical and cosmological calculations and data
+  analysis. These notebooks are designed for effortless use, either
+  locally or through online Python environments such as
+  <ext-link ext-link-type="uri" xlink:href="https://binderhub.readthedocs.io/">BinderHub</ext-link>
+  and
+  <ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/">Google
+  Colab</ext-link>. This flexibility allows students to engage with the
+  tutorials in a manner that best suits their needs. Moreover, these
+  resources can be used as templates to create customized tutorials,
+  enabling educators to tailor content for specific courses, expand the
+  library of tutorials, and address diverse learning objectives.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>The field of astronomy and cosmology requires a deep understanding
+  of complex processes that are often difficult to visualize or grasp
+  through traditional learning methods.
+  <monospace>AstronomyCalc</monospace> addresses this challenge by
+  offering an interactive, user-friendly tool that bridges the gap
+  between theoretical knowledge and practical application.</p>
+  <p>Designed with the variation theory of learning in mind, this
+  package enables students and educators to experiment with and explore
+  key astrophysical and cosmological models in an intuitive manner. By
+  varying parameters and observing the resulting changes, users can
+  develop a more profound understanding of the underlying physical
+  processes.</p>
+  <p>Furthermore, <monospace>AstronomyCalc</monospace> equips users with
+  the tools needed to analyze real or simulated astronomical data,
+  thereby providing a comprehensive learning experience that reflects
+  the true nature of scientific inquiry in astronomy. This makes
+  <monospace>AstronomyCalc</monospace> an invaluable resource for
+  education in astronomy and cosmology, enhancing both the depth and
+  quality of learning in these fields.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We acknowledge the higher education teaching and learning courses
+  offered by Stockholm University. Nordita is supported in part by
+  NordForsk.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-lo2011towards">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lo</surname><given-names>Mun Ling</given-names></name>
+        <name><surname>Marton</surname><given-names>Ference</given-names></name>
+      </person-group>
+      <article-title>Towards a science of the art of teaching: Using variation theory as a guiding principle of pedagogical design</article-title>
+      <source>International journal for lesson and learning studies</source>
+      <publisher-name>Emerald Group Publishing Limited</publisher-name>
+      <year iso-8601-date="2011">2011</year>
+      <volume>1</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1108/20468251211179678</pub-id>
+      <fpage>7</fpage>
+      <lpage>22</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ling2012variation">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Ling Lo</surname><given-names>Mun</given-names></name>
+      </person-group>
+      <source>Variation theory and the improvement of teaching and learning</source>
+      <publisher-name>Göteborg: Acta Universitatis Gothoburgensis</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-vanderplas2012introduction">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>VanderPlas</surname><given-names>Jacob</given-names></name>
+        <name><surname>Connolly</surname><given-names>Andrew J</given-names></name>
+        <name><surname>Ivezić</surname><given-names>Željko</given-names></name>
+        <name><surname>Gray</surname><given-names>Alex</given-names></name>
+      </person-group>
+      <article-title>Introduction to astroML: Machine learning for astrophysics</article-title>
+      <source>2012 conference on intelligent data understanding</source>
+      <publisher-name>IEEE</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+      <pub-id pub-id-type="doi">10.1109/CIDU.2012.6382200</pub-id>
+      <fpage>47</fpage>
+      <lpage>54</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-brout2022pantheonplus">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Brout</surname><given-names>Dillon</given-names></name>
+        <name><surname>Scolnic</surname><given-names>Dan</given-names></name>
+        <name><surname>Popovic</surname><given-names>Brodie</given-names></name>
+        <name><surname>Riess</surname><given-names>Adam G</given-names></name>
+        <name><surname>Carr</surname><given-names>Anthony</given-names></name>
+        <name><surname>Zuntz</surname><given-names>Joe</given-names></name>
+        <name><surname>Kessler</surname><given-names>Rick</given-names></name>
+        <name><surname>Davis</surname><given-names>Tamara M</given-names></name>
+        <name><surname>Hinton</surname><given-names>Samuel</given-names></name>
+        <name><surname>Jones</surname><given-names>David</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>The pantheon+ analysis: Cosmological constraints</article-title>
+      <source>The Astrophysical Journal</source>
+      <publisher-name>IOP Publishing</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <volume>938</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.3847/1538-4357/ac8e04</pub-id>
+      <fpage>110</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lelli2016sparc">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lelli</surname><given-names>Federico</given-names></name>
+        <name><surname>McGaugh</surname><given-names>Stacy S</given-names></name>
+        <name><surname>Schombert</surname><given-names>James M</given-names></name>
+      </person-group>
+      <article-title>SPARC: Mass models for 175 disk galaxies with spitzer photometry and accurate rotation curves</article-title>
+      <source>The Astronomical Journal</source>
+      <publisher-name>IOP Publishing</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <volume>152</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.3847/0004-6256/152/6/157</pub-id>
+      <fpage>157</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-robert2004metropolis">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Robert</surname><suffix>Christian P.</suffix></name>
+        <name><surname>Casella</surname><given-names>George</given-names></name>
+      </person-group>
+      <article-title>The metropolis—hastings algorithm</article-title>
+      <source>Monte carlo statistical methods</source>
+      <publisher-name>Springer New York</publisher-name>
+      <publisher-loc>New York, NY</publisher-loc>
+      <year iso-8601-date="2004">2004</year>
+      <isbn>978-1-4757-4145-2</isbn>
+      <uri>https://doi.org/10.1007/978-1-4757-4145-2_7</uri>
+      <pub-id pub-id-type="doi">10.1007/978-1-4757-4145-2_7</pub-id>
+      <fpage>267</fpage>
+      <lpage>320</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tokdar2010importance">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tokdar</surname><given-names>Surya T</given-names></name>
+        <name><surname>Kass</surname><given-names>Robert E</given-names></name>
+      </person-group>
+      <article-title>Importance sampling: A review</article-title>
+      <source>Wiley Interdisciplinary Reviews: Computational Statistics</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2010">2010</year>
+      <volume>2</volume>
+      <issue>1</issue>
+      <fpage>54</fpage>
+      <lpage>60</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ryden2017introduction">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Ryden</surname><given-names>Barbara</given-names></name>
+      </person-group>
+      <source>Introduction to cosmology</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
