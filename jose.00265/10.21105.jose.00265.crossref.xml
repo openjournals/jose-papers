@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20250129194934-ab3cd723d995f1907baebe6b95ca94bfcec87ffd</doi_batch_id>
+    <timestamp>20250129194934</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>01</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>83</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>A course on the setup, running, and analysis of biomolecular simulations</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Matteo T.</given_name>
+            <surname>Degiacomi</surname>
+            <affiliations>
+              <institution><institution_name>School of Informatics, University of Edinburgh, Informatics Forum, 10 Crichton St, Edinburgh EH8 9AB, United Kingdom</institution_name></institution>
+              <institution><institution_name>EaStCHEM School of Chemistry, University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh, EH9 3FJ, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-4672-471X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Richard J.</given_name>
+            <surname>Gowers</surname>
+            <affiliations>
+              <institution><institution_name>CHARM Therapeutics Ltd, 7 Pancras Square, London, N1C 4AG</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-3241-1846</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Micaela</given_name>
+            <surname>Matta</surname>
+            <affiliations>
+              <institution><institution_name>Department of Chemistry, King’s College London, London, SE1 1DB, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-9852-3154</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Antonia S. J. S.</given_name>
+            <surname>Mey</surname>
+            <affiliations>
+              <institution><institution_name>EaStCHEM School of Chemistry, University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh, EH9 3FJ, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-7512-5252</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>01</month>
+          <day>29</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>265</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00265</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.14767012</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/265</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00265</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00265</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00265.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="jumper2021highly">
+            <article_title>Highly accurate protein structure prediction with AlphaFold</article_title>
+            <author>Jumper</author>
+            <journal_title>nature</journal_title>
+            <issue>7873</issue>
+            <volume>596</volume>
+            <doi>10.1038/s41586-021-03819-2</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tunyasuvunakool, K., Bates, R., Žı́dek, A., Potapenko, A., &amp; others. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596(7873), 583–589. https://doi.org/10.1038/s41586-021-03819-2</unstructured_citation>
+          </citation>
+          <citation key="oliver_beckstein-proc-scipy-2016">
+            <article_title>MDAnalysis: A Python Package for the Rapid Analysis of Molecular Dynamics Simulations</article_title>
+            <author>Gowers</author>
+            <journal_title>Proceedings of the 15th Python in Science Conference</journal_title>
+            <doi>10.25080/Majora-629e541a-00e</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Gowers, Richard J., Linke, Max, Barnoud, Jonathan, Reddy, Tyler J. E., Melo, Manuel N., Seyler, Sean L., Domański, Jan, Dotson, David L., Buchoux, Sébastien, Kenney, Ian M., &amp; Beckstein, Oliver. (2016). MDAnalysis: A Python Package for the Rapid Analysis of Molecular Dynamics Simulations. In Sebastian Benthall &amp; Scott Rostrup (Eds.), Proceedings of the 15th Python in Science Conference (pp. 98–105). https://doi.org/10.25080/Majora-629e541a-00e</unstructured_citation>
+          </citation>
+          <citation key="levitt1975computer">
+            <article_title>Computer simulation of protein folding</article_title>
+            <author>Levitt</author>
+            <journal_title>Nature</journal_title>
+            <issue>5494</issue>
+            <volume>253</volume>
+            <doi>10.1038/253694a0</doi>
+            <issn>1476-4687</issn>
+            <cYear>1975</cYear>
+            <unstructured_citation>Levitt, M., &amp; Warshel, A. (1975). Computer simulation of protein folding. Nature, 253(5494), 694–698. https://doi.org/10.1038/253694a0</unstructured_citation>
+          </citation>
+          <citation key="lindorff-larsen2011howa">
+            <article_title>How Fast-Folding Proteins Fold</article_title>
+            <author>Lindorff-Larsen</author>
+            <journal_title>Science</journal_title>
+            <issue>6055</issue>
+            <volume>334</volume>
+            <doi>10.1126/science.1208351</doi>
+            <cYear>2011</cYear>
+            <unstructured_citation>Lindorff-Larsen, K., Piana, S., Dror, R. O., &amp; Shaw, D. E. (2011). How Fast-Folding Proteins Fold. Science, 334(6055), 517–520. https://doi.org/10.1126/science.1208351</unstructured_citation>
+          </citation>
+          <citation key="ciccotti2022molecular">
+            <article_title>Molecular simulations: Past, present, and future (a Topical Issue in EPJB)</article_title>
+            <author>Ciccotti</author>
+            <journal_title>Eur. Phys. J. B</journal_title>
+            <issue>1</issue>
+            <volume>95</volume>
+            <doi>10.1140/epjb/s10051-021-00249-x</doi>
+            <issn>1434-6036</issn>
+            <cYear>2022</cYear>
+            <unstructured_citation>Ciccotti, G., Dellago, C., Ferrario, M., Hernández, E. R., &amp; Tuckerman, M. E. (2022). Molecular simulations: Past, present, and future (a Topical Issue in EPJB). Eur. Phys. J. B, 95(1), 3. https://doi.org/10.1140/epjb/s10051-021-00249-x</unstructured_citation>
+          </citation>
+          <citation key="hollingsworth2018molecular">
+            <article_title>Molecular Dynamics Simulation for All</article_title>
+            <author>Hollingsworth</author>
+            <journal_title>Neuron</journal_title>
+            <issue>6</issue>
+            <volume>99</volume>
+            <doi>10.1016/j.neuron.2018.08.011</doi>
+            <issn>0896-6273</issn>
+            <cYear>2018</cYear>
+            <unstructured_citation>Hollingsworth, S. A., &amp; Dror, R. O. (2018). Molecular Dynamics Simulation for All. Neuron, 99(6), 1129–1143. https://doi.org/10.1016/j.neuron.2018.08.011</unstructured_citation>
+          </citation>
+          <citation key="alibay2023building">
+            <article_title>Building a community-driven ecosystem for fast, reproducible, and reusable molecular simulation analysis using mdanalysis</article_title>
+            <author>Alibay</author>
+            <journal_title>Biophysical Journal</journal_title>
+            <issue>3</issue>
+            <volume>122</volume>
+            <doi>10.1016/j.bpj.2022.11.2277</doi>
+            <issn>0006-3495</issn>
+            <cYear>2023</cYear>
+            <unstructured_citation>Alibay, I., Barnoud, J., Beckstein, O., Gowers, R. J., Loche, P. R., MacDermott-Opeskin, H., Matta, M., Naughton, F. B., Reddy, T., &amp; Wang, L. (2023). Building a community-driven ecosystem for fast, reproducible, and reusable molecular simulation analysis using mdanalysis. Biophysical Journal, 122(3), 420a. https://doi.org/10.1016/j.bpj.2022.11.2277</unstructured_citation>
+          </citation>
+          <citation key="michaud-agrawal2011mdanalysis">
+            <article_title>MDAnalysis: A toolkit for the analysis of molecular dynamics simulations</article_title>
+            <author>Michaud-Agrawal</author>
+            <journal_title>Journal of Computational Chemistry</journal_title>
+            <issue>10</issue>
+            <volume>32</volume>
+            <doi>10.1002/jcc.21787</doi>
+            <issn>1096-987X</issn>
+            <cYear>2011</cYear>
+            <unstructured_citation>Michaud-Agrawal, N., Denning, E. J., Woolf, T. B., &amp; Beckstein, O. (2011). MDAnalysis: A toolkit for the analysis of molecular dynamics simulations. Journal of Computational Chemistry, 32(10), 2319–2327. https://doi.org/10.1002/jcc.21787</unstructured_citation>
+          </citation>
+          <citation key="pedregosa2011scikitlearn">
+            <article_title>Scikit-learn: Machine Learning in Python</article_title>
+            <author>Pedregosa</author>
+            <journal_title>Journal of Machine Learning Research</journal_title>
+            <issue>85</issue>
+            <volume>12</volume>
+            <issn>1533-7928</issn>
+            <cYear>2011</cYear>
+            <unstructured_citation>Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., &amp; Duchesnay, É. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12(85), 2825–2830.</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
