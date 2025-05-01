@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20250501175630-f98a7c9dbbed47d55e46f6fc25246b6986b92661</doi_batch_id>
+    <timestamp>20250501175630</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>05</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>87</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>ApplNumComp: An Open Access Introductory Course for Applied Numerical Computing</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Ashlee N.</given_name>
+            <surname>Ford Versypt</surname>
+            <affiliations>
+              <institution><institution_name>School of Chemical Engineering, Oklahoma State University</institution_name></institution>
+              <institution><institution_name>Department of Chemical and Biological Engineering, University at Buffalo, The State University of New York</institution_name></institution>
+              <institution><institution_name>Department of Engineering Education, University at Buffalo, The State University of New York</institution_name></institution>
+              <institution><institution_name>Institute for Artificial Intelligence and Data Science, University at Buffalo, The State University of New York</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-9059-5703</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Duncan H.</given_name>
+            <surname>Mullins</surname>
+            <affiliations>
+              <institution><institution_name>School of Chemical Engineering, Oklahoma State University</institution_name></institution>
+              <institution><institution_name>Department of Chemical and Biological Engineering, University at Buffalo, The State University of New York</institution_name></institution>
+              <institution><institution_name>Department of Engineering Education, University at Buffalo, The State University of New York</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-7173-9695</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>05</month>
+          <day>01</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>143</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00143</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.15313369</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/143</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00143</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00143</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00143.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="FordVersypt2019">
+            <article_title>An interdisciplinary elective course to build computational skills for mathematical modeling in science and engineering</article_title>
+            <author>Ford Versypt</author>
+            <journal_title>Proceedings of the ASEE Annual Conference</journal_title>
+            <doi>10.18260/1-2-{}-32072</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Ford Versypt, A. N. (2019). An interdisciplinary elective course to build computational skills for mathematical modeling in science and engineering. Proceedings of the ASEE Annual Conference. https://doi.org/10.18260/1-2-{}-32072</unstructured_citation>
+          </citation>
+          <citation key="Ruggiero2018">
+            <article_title>Building a MATLAB graphical user interface to solve ordinary differential equations as a final project for an interdisciplinary elective course on numerical computing</article_title>
+            <author>Ruggiero</author>
+            <journal_title>Journal of Computational Science Education</journal_title>
+            <issue>1</issue>
+            <volume>9</volume>
+            <doi>10.22369/issn.2153-4136/9/1/3</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Ruggiero, S. M., Zhao, J., &amp; Ford Versypt, A. N. (2018). Building a MATLAB graphical user interface to solve ordinary differential equations as a final project for an interdisciplinary elective course on numerical computing. Journal of Computational Science Education, 9(1), 19–28. https://doi.org/10.22369/issn.2153-4136/9/1/3</unstructured_citation>
+          </citation>
+          <citation key="Johns2023">
+            <article_title>Numerical problem solving across the curriculum with python and MATLAB using interactive coding templates: A workshop for chemical engineering faculty</article_title>
+            <author>Johns</author>
+            <journal_title>Proceedings of the ASEE Annual Conference</journal_title>
+            <doi>10.18260/1-2-{}-43749</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Johns, A. N., Hesketh, R. P., Stuber, M. D., &amp; Ford Versypt, A. N. (2023). Numerical problem solving across the curriculum with python and MATLAB using interactive coding templates: A workshop for chemical engineering faculty. Proceedings of the ASEE Annual Conference. https://doi.org/10.18260/1-2-{}-43749</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
