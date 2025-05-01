@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">143</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00143</article-id>
+<title-group>
+<article-title>ApplNumComp: An Open Access Introductory Course for
+Applied Numerical Computing</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9059-5703</contrib-id>
+<name>
+<surname>Ford Versypt</surname>
+<given-names>Ashlee N.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-3"/>
+<xref ref-type="aff" rid="aff-4"/>
+<xref ref-type="corresp" rid="cor-1"><sup>*</sup></xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7173-9695</contrib-id>
+<name>
+<surname>Mullins</surname>
+<given-names>Duncan H.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>School of Chemical Engineering, Oklahoma State
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Department of Chemical and Biological Engineering,
+University at Buffalo, The State University of New York</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Department of Engineering Education, University at Buffalo,
+The State University of New York</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Institute for Artificial Intelligence and Data Science,
+University at Buffalo, The State University of New York</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<author-notes>
+<corresp id="cor-1">* E-mail: <email></email></corresp>
+</author-notes>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2021-04-22">
+<day>22</day>
+<month>4</month>
+<year>2021</year>
+</pub-date>
+<volume>8</volume>
+<issue>87</issue>
+<fpage>143</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Git</kwd>
+<kwd>LaTeX</kwd>
+<kwd>MATLAB</kwd>
+<kwd>Python</kwd>
+<kwd>computational science and engineering</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>ApplNumComp is a repository of open educational resources
+  supporting an introductory course on Applied Numerical Computing.
+  Topics include Git for version control, LaTeX for typesetting,
+  reproducible research computing, and MATLAB and Python for high-level
+  programming and scientific computing applications of solving systems
+  of differential equations, estimating parameters for models using
+  regression, creating publication quality figures, and developing
+  graphical user interfaces. The lessons can be used collectively for a
+  similar course at another institution, for independent study by an
+  online learner, or for incorporation of individual lessons (modules or
+  examples) into other courses that involve related topics.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>An introductory course on Applied Numerical Computing was developed
+  for upper division undergraduate and graduate students interested in
+  research and industrial projects involving mathematical modeling using
+  computational tools. The class was designed to fill a gap distinct
+  from introductory programming and numerical methods courses and was
+  intended to be very practical. Graduate students new to computational
+  research were the primary student group targeted for the course
+  topics. We have previously detailed the course
+  (<xref alt="Ford Versypt, 2019" rid="ref-FordVersypt2019" ref-type="bibr">Ford
+  Versypt, 2019</xref>) and the final course project
+  (<xref alt="Ruggiero et al., 2018" rid="ref-Ruggiero2018" ref-type="bibr">Ruggiero
+  et al., 2018</xref>).</p>
+  <p>No single textbook covers all of the topics in the Applied
+  Numerical Computing course. As the course emphasized best practices
+  for reproducible research computing, we sought to apply the concept to
+  the course materials for a reproducible computing educational
+  experience. Here, we have curated a set of open educational resources
+  for others to engage with the course lessons outside of the
+  institution’s learning management system and outside of the formal
+  course. The main repository is organized into a set of lessons as
+  Markdown-formatted text-based open-source webpages that include code
+  snippets, explanatory text, reflection questions, sample solution
+  software files, links to supplemental videos, related references, and
+  other instructional materials. Each lesson can be considered as a
+  stand alone module on a particular computational topic; however, there
+  are conceptual links between some of the lessons. Many of the lessons
+  include detailed MATLAB or Python coding examples, or both as in the
+  case for Lesson 10: Python and MATLAB Plotting. For instance, Lesson
+  13: Parameter Estimation in Python provides a worked example for
+  fitting parameters to one differential equation and the solution .py
+  file followed by a second example for fitting parameters to multiple
+  differential equations. Related Lessons 11 and 12 provide supportive
+  general information and complimentary content with examples in MATLAB.
+  Documentation associated with MATLAB or Python often only shows much
+  simpler examples. Open-source worked examples are limited for even
+  just solving multiple differential equations simultaneously
+  independently from the parameter estimation. The full list of lessons
+  is available
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/ashleefv/ApplNumComp#lessons">here</ext-link>.
+  Other supporting materials include a list of
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/ashleefv/ApplNumComp/blob/master/RecommendedReading.md">suggested
+  readings</ext-link> with links to the sources, the full set of
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/ashleefv/ApplNumComp#computational-assignments">computational
+  assignments</ext-link>, and the course
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/ashleefv/ApplNumComp#course-learning-objectives">learning
+  objectives</ext-link>.</p>
+  <p>Our experiences with the course and materials have been positive.
+  Over the 5 course offerings, 63 graduate students and 27 undergraduate
+  students took the course. The students were majoring in the following
+  12 fields: chemical engineering, mechanical engineering, aerospace
+  engineering, civil engineering, environmental engineering, chemistry,
+  plant and soil sciences, mathematics, electrical and computer
+  engineering, petroleum engineering, physics, and industrial
+  engineering. Most similar electives for cross-listed
+  undergradaute/graduate credit averaged 10 students in a term, while
+  this course averaged 18 per term. Typically, similar electives were
+  offered only once in four semesters. This course was popular enough to
+  offer each fall semester. There was a drop in graduate enrollment in
+  the course in 2020, likely due to COVID-19 induced reductions in the
+  overall number of new graduate students in science and engineering
+  fields at the university. The course became highly recommended for
+  first year graduate students in computational research groups across
+  campus and for all first year mechanical and aerospace engineering
+  graduate students. Additionally, it was included in the
+  interdisciplinary Data Science minor available to undergraduate
+  students. The conference proceedings paper detailing the course
+  (<xref alt="Ford Versypt, 2019" rid="ref-FordVersypt2019" ref-type="bibr">Ford
+  Versypt, 2019</xref>) has been dowloaded from the
+  <ext-link ext-link-type="uri" xlink:href="https://peer.asee.org/an-interdisciplinary-elective-course-to-build-computational-skills-for-mathematical-modeling-in-science-and-engineering">American
+  Society for Engineering Educaion Papers on Engineering Education
+  Repository</ext-link> 698 times as of May 1, 2025. In January 2021,
+  the authors left the university where the course was developed, and
+  multiple faculty reached out to request access to the course materials
+  either for offering the course themselves in the future or for sharing
+  the materials with their students for self-paced learning. The
+  ApplNumComp GitHub repository is already filling that direct need.
+  Trainees in the Ford Versypt Lab continue to use the course materials
+  for training and examples. The repository has also been disseminated
+  through the
+  <ext-link ext-link-type="uri" xlink:href="https://cache.org/computational-tools-development">Computer
+  Aids for Chemical Engineering website</ext-link>. The authors and the
+  Computer Aids for Chemical Engineering Corporation trustees have
+  discussed how to further disseminate lessons in modular form from
+  ApplNumComp into a variety of chemical engineering courses across
+  other universities. The authors have already presented these materials
+  at conferences for the American Society for Engineering Education and
+  the American Institute for Chemical Engineers (AIChE) and a
+  <ext-link ext-link-type="uri" xlink:href="https://www.aiche.org/academy/webinars/teaching-computational-skills-chemical-engineers">webinar</ext-link>
+  for the AIChE. A workshop was developed for sharing the materials in
+  other venues including the 2022 Chemical Engineering Summer School,
+  held once every five year for junior faculty. The corresponding
+  conference proceedings paper on the workshop
+  (<xref alt="Johns et al., 2023" rid="ref-Johns2023" ref-type="bibr">Johns
+  et al., 2023</xref>) has been downloaded 581 times as of May 1,
+  2025.</p>
+</sec>
+<sec id="author-contributions">
+  <title>Author Contributions</title>
+  <p>Ashlee N. Ford Versypt developed the Applied Numerical Computing
+  course at Oklahoma State University and taught it annually 2016-2020.
+  The materials presented here were developed and delivered in a hybrid
+  of in-person, online synchronous, and online asynchronous formats in
+  Fall 2020. Duncan H. Mullins was a PhD student from Dr. Ford Versypt’s
+  lab, took the course in Fall 2019, served as a teaching assistant for
+  the course in 2020, and aided in conversion of the course to this
+  online open-access version.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>This material is based upon work supported by the National Science
+  Foundation under Grant No. 1845117 and a minigrant from Computer Aids
+  for Chemical Engineering Corp., both to Ashlee N. Ford Versypt.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-FordVersypt2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ford Versypt</surname><given-names>A. N.</given-names></name>
+      </person-group>
+      <article-title>An interdisciplinary elective course to build computational skills for mathematical modeling in science and engineering</article-title>
+      <source>Proceedings of the ASEE Annual Conference</source>
+      <year iso-8601-date="2019">2019</year>
+      <pub-id pub-id-type="doi">10.18260/1-2--32072</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Ruggiero2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ruggiero</surname><given-names>S. M.</given-names></name>
+        <name><surname>Zhao</surname><given-names>J.</given-names></name>
+        <name><surname>Ford Versypt</surname><given-names>A. N.</given-names></name>
+      </person-group>
+      <article-title>Building a MATLAB graphical user interface to solve ordinary differential equations as a final project for an interdisciplinary elective course on numerical computing</article-title>
+      <source>Journal of Computational Science Education</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>9</volume>
+      <issue>1</issue>
+      <uri>https://doi.org/10.22369/issn.2153-4136/9/1/3</uri>
+      <pub-id pub-id-type="doi">10.22369/issn.2153-4136/9/1/3</pub-id>
+      <fpage>19</fpage>
+      <lpage>28</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Johns2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Johns</surname><given-names>A. N.</given-names></name>
+        <name><surname>Hesketh</surname><given-names>R. P.</given-names></name>
+        <name><surname>Stuber</surname><given-names>M. D.</given-names></name>
+        <name><surname>Ford Versypt</surname><given-names>A. N.</given-names></name>
+      </person-group>
+      <article-title>Numerical problem solving across the curriculum with python and MATLAB using interactive coding templates: A workshop for chemical engineering faculty</article-title>
+      <source>Proceedings of the ASEE Annual Conference</source>
+      <year iso-8601-date="2023">2023</year>
+      <pub-id pub-id-type="doi">10.18260/1-2--43749</pub-id>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
