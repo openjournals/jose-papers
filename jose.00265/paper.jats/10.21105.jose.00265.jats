@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">265</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00265</article-id>
+<title-group>
+<article-title>A course on the setup, running, and analysis of
+biomolecular simulations</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-4672-471X</contrib-id>
+<name>
+<surname>Degiacomi</surname>
+<given-names>Matteo T.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3241-1846</contrib-id>
+<name>
+<surname>Gowers</surname>
+<given-names>Richard J.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9852-3154</contrib-id>
+<name>
+<surname>Matta</surname>
+<given-names>Micaela</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7512-5252</contrib-id>
+<name>
+<surname>Mey</surname>
+<given-names>Antonia S. J. S.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>School of Informatics, University of Edinburgh, Informatics
+Forum, 10 Crichton St, Edinburgh EH8 9AB, United Kingdom</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>EaStCHEM School of Chemistry, University of Edinburgh,
+Joseph Black Building, David Brewster Road, Edinburgh, EH9 3FJ, United
+Kingdom</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>CHARM Therapeutics Ltd, 7 Pancras Square, London, N1C
+4AG</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Department of Chemistry, King’s College London, London, SE1
+1DB, United Kingdom</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-11">
+<day>11</day>
+<month>11</month>
+<year>2024</year>
+</pub-date>
+<volume>8</volume>
+<issue>87</issue>
+<fpage>265</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>molecular simulation</kwd>
+<kwd>python</kwd>
+<kwd>graduate level</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>We present an open-source course on how to set-up and analyse
+  molecular dynamics (MD) simulations of biomolecules using proteins as
+  a use-case. The course consists of a blend of lectures and practical
+  sessions using Jupyter notebooks.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Biomolecular systems were among the first to be studied using
+  molecular dynamics (MD) simulations
+  (<xref alt="Levitt &amp; Warshel, 1975" rid="ref-levitt1975computer" ref-type="bibr">Levitt
+  &amp; Warshel, 1975</xref>). As a result, biomolecular simulations are
+  built on half a century of rich methodological development, embodied
+  in a wide range of specialized software. The improvement in physical
+  models dictating interatomic interactions coupled with an
+  ever-increasing availability of computational power have enabled MD
+  simulations to establish themselves as a technique complementary to
+  experimental data
+  (<xref alt="Hollingsworth &amp; Dror, 2018" rid="ref-hollingsworth2018molecular" ref-type="bibr">Hollingsworth
+  &amp; Dror, 2018</xref>)
+  (<xref alt="Ciccotti et al., 2022" rid="ref-ciccotti2022molecular" ref-type="bibr">Ciccotti
+  et al., 2022</xref>). Starting from the simulation of small proteins
+  for only a few nanoseconds
+  (<xref alt="Levitt &amp; Warshel, 1975" rid="ref-levitt1975computer" ref-type="bibr">Levitt
+  &amp; Warshel, 1975</xref>), nowadays large biomolecular complexes
+  featuring millions of atoms can be simulated for timescales orders of
+  magnitude longer
+  (<xref alt="Lindorff-Larsen et al., 2011" rid="ref-lindorff-larsen2011howa" ref-type="bibr">Lindorff-Larsen
+  et al., 2011</xref>). The data produced by MD simulations is noisy and
+  high-dimensional though, and its usefulness is directly dependent on
+  how faithfully the molecular system simulated recapitulates the
+  physiochemical conditions of its real-world counterpart. Since the
+  mid-1970s, significant progress has been made in automating the
+  preparation of biologically relevant atomistic models and the analysis
+  of simulation data. Nonetheless, modern computational scientists must
+  still make critical decisions on how to assemble and simulate the
+  system, as well as on which quantities to extract from the resulting
+  data to accurately explain or predict experimental outcomes.</p>
+  <p>The material presented in this course has been developed as
+  training material for the CCPBioSim consortium. Since 2022, it has
+  been delivered to three cohorts of 25–35 international postgraduates
+  attending the UK-based CCP5 Summer School on Molecular simulation. A
+  first key aspect of this course is that, under the same hood, it
+  provides information on both the set-up and the analysis of MD
+  simulations, typically presented separately. A second key aspect is
+  that it demonstrates how machine learning techniques can be integrated
+  in the analysis of MD simulations and used to extract relevant
+  information from an MD simulation.</p>
+</sec>
+<sec id="overview-content-and-structure">
+  <title>Overview, Content, and Structure</title>
+  <sec id="target-audience">
+    <title>Target Audience</title>
+    <p>This is a graduate-level course, aimed at beginners in
+    biomolecular simulation. It is expected that students are already
+    familiar with key concepts of molecular dynamics simulation theory,
+    and have a basic working knowledge of Python and its core scientific
+    packages (numpy, scipy, matplotlib).</p>
+  </sec>
+  <sec id="content">
+    <title>Content</title>
+    <p>The objective of this course is not to make students proficient
+    in one or a few specific software tools for MD simulation
+    preparation, execution, or analysis. Instead, it is aimed at
+    providing students with a general overview of the key
+    decision-making required to carry out MD simulations of biomolecules
+    and extracting quantitative data from them. In this context, the
+    course is divided into two Units featuring practical sessions and
+    lectures. Practical sessions demonstrate how key concepts in
+    molecular modelling are put into practice by exposing students to
+    authentic tasks leveraging on commonly used Python packages, such as
+    MDAnalysis Alibay et al.
+    (<xref alt="2023" rid="ref-alibay2023building" ref-type="bibr">2023</xref>)
+    and scikit-learn
+    (<xref alt="Pedregosa et al., 2011" rid="ref-pedregosa2011scikitlearn" ref-type="bibr">Pedregosa
+    et al., 2011</xref>). Lectures are software-agnostic and provide
+    additional material to the course. While each practical session can
+    be run by students on their own computer, these are also available
+    in Google Colab. This solution, requiring no local installation, is
+    especially suitable for those unfamiliar with setting up a Python
+    environment, or having limited access to computational
+    resources.</p>
+    <sec id="unit-1-simulation-preparation">
+      <title>Unit 1: Simulation Preparation</title>
+      <p>The first Unit is dedicated to providing background on protein
+      structure, and how to prepare a protein for biomolecular
+      simulation. In this Unit, students learn about how to critically
+      observe a protein structure, and make informed decisions required
+      to set-up a simulation that faithfully recapitulates a
+      biologically relevant system.</p>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="77%" />
+            <col width="23%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Session</th>
+              <th>Materials</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>L1: Introduction to Proteins</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/1_Introduction/Lecture_1_Introduction.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>L2: Understanding Protein Systems</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/2_Protein_Preparation/Lecture_2_Protein_Prep.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>L3: Protein-Ligand Docking</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/3_Docking/Lecture_3_Docking.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>P: Protein-Ligand Docking</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/CCPBioSim/BioSim-analysis-workshop/blob/main/3_Docking/3_Docking.ipynb">Notebook</ext-link></td>
+            </tr>
+            <tr>
+              <td>L4: Simulation Setup</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/4_Simulation_Setup/Lecture_4_Simulation_setup.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>P: Simulation Setup</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/CCPBioSim/BioSim-analysis-workshop/blob/main/4_Simulation_Setup/4_Simulation_Setup.ipynb">Notebook</ext-link></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </sec>
+    <sec id="unit-2-simulation-analysis">
+      <title>Unit 2: Simulation Analysis</title>
+      <p>The second Unit is dedicated to providing the students with
+      means to extract relevant quantitative information from a
+      molecular dynamics simulation trajectory. A key aspect of this
+      Unit lies in the demonstration of how machine learning techniques
+      (clustering, dimensionality reduction, classification) can be used
+      to extract meaningful information from noisty and high-dimensional
+      data associated with biomolecular MD simulations.</p>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="83%" />
+            <col width="17%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Session</th>
+              <th>Materials</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>L5: Simulation Basic Analyses</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/5_Analysis_MDAnalysis/Lecture_5_Analysis_MDAnalysis.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>P: Simulation Basic Analyses</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/CCPBioSim/BioSim-analysis-workshop/blob/main/5_Analysis_MDAnalysis/5_Analysis_MDAnalysis.ipynb">Notebook</ext-link></td>
+            </tr>
+            <tr>
+              <td>L6: Dimensionality Reduction</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/6_Analysis_DR/Lecture_6_DR.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>P: Dimensionality Reduction, part 1</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/CCPBioSim/BioSim-analysis-workshop/blob/main/6_Analysis_DR/6_Analysis_DR_part1.ipynb">Notebook</ext-link></td>
+            </tr>
+            <tr>
+              <td>P: Dimensionality Reduction, part 2</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/CCPBioSim/BioSim-analysis-workshop/blob/main/6_Analysis_DR/6_Analysis_DR_part2.ipynb">Notebook</ext-link></td>
+            </tr>
+            <tr>
+              <td>L7: Clustering</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/7_Analysis_clustering/Lecture_7_Clustering.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>P: Clustering</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/CCPBioSim/BioSim-analysis-workshop/blob/main/7_Analysis_clustering/7_Analysis_clustering.ipynb">Notebook</ext-link></td>
+            </tr>
+            <tr>
+              <td>L8: Data Classification</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop/blob/main/8_Analysis_classification/Lecture_8_classification.pdf">Lecture
+              Slides</ext-link></td>
+            </tr>
+            <tr>
+              <td>P: Data Classification</td>
+              <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/CCPBioSim/BioSim-analysis-workshop/blob/main/8_Analysis_classification/8_Analysis_classification.ipynb">Notebook</ext-link></td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </sec>
+  </sec>
+</sec>
+<sec id="assessment-and-feedback">
+  <title>Assessment and feedback</title>
+  <p>Each Jupyter notebook contains information on a specific topic, as
+  well as tasks the student is asked to carry out independently. The
+  tasks range from interpreting data previously produced, to running
+  presented code with different parameters, to solving a specific
+  problem by implementing a short Python code. Solutions to all
+  questions are provided in each notebook as drop-down cells, enabling
+  students to self-assess their understanding.</p>
+  <p>In our teaching practice, we provide students with post-its of two
+  different colours that can be displayed on their computer screen —
+  yellow indicating that everything is clear, pink indicating that help
+  is required. At the end of each practical session, students are asked
+  to use these same post-its to provide instructors with feedback on
+  something they liked (yellow post-it), and something that requires
+  improvement (pink post-it). In the three years we have delivered this
+  course, this approach has enabled us to gather comprehensive feedback,
+  which has helped us fine-tune both the teaching material and our
+  delivery style. A key observation is that students, when presented
+  with a new notebook, especially appreciate the instructors taking a
+  few minutes to describe the overall structure of the notebook and the
+  tasks it contains before beginning the practical work.</p>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>Thanks to the increasing availability of computational power and
+  software automating many of the processes associated with biomolecular
+  simulation and analysis, the palette of questions addressable with MD
+  is broadening. While this is positive, it remains crucial for
+  computational scientists to have a clear understanding of what is
+  being simulated and how. Indeed, to date many decisions associated
+  with system building and analysis cannot be delegated to a machine
+  without human verification. In this context, we see our course as a
+  first stepping-stone, detailing the key decisions that need to be
+  made, providing examples of how this can be done in practice, and
+  directing learners to relevant software and specialized analysis
+  techniques for further education.</p>
+  <p>Despite its long history, MD remains an evolving field. New
+  techniques that push the boundaries of what is possible keep emerging,
+  as exemplified by the current revolution associated with the
+  integration of modern machine learning techniques in molecular
+  modelling pipelines. While we expect the majority of the concepts
+  presented in this course to remain valid for many years, we are
+  striving to keep the course material up-to-date by highlighting
+  current methodological trends. For example, in the latest iteration of
+  this course, we have introduced a discussion on how to interpret and
+  use models produced by AlphaFold.
+  (<xref alt="Jumper et al., 2021" rid="ref-jumper2021highly" ref-type="bibr">Jumper
+  et al., 2021</xref>).</p>
+</sec>
+<sec id="contributions-to-the-course">
+  <title>Contributions to the course</title>
+  <p>MTD and ASJSM conceived the course with contributions from RJG and
+  MM.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>Parts of the material in this course have been adapted from other
+  sources with the agreement of respective authors. In this context, we
+  would like to acknowledge Matt Thompson, Jeff Wagner, and Josh
+  Mitchell for the material featured in the OpenFF tutorials, César
+  Ramírez-Sarmiento and collaborators for material featured in the
+  Autodock tutorial. We also wish to acknowledge Charlie Laughton for
+  inspiration on discussing RMSD in conjunction with equilibration, and
+  Irfan Alibay and Rohan Gorantla for help with setting up Colab
+  environments.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-jumper2021highly">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jumper</surname><given-names>John</given-names></name>
+        <name><surname>Evans</surname><given-names>Richard</given-names></name>
+        <name><surname>Pritzel</surname><given-names>Alexander</given-names></name>
+        <name><surname>Green</surname><given-names>Tim</given-names></name>
+        <name><surname>Figurnov</surname><given-names>Michael</given-names></name>
+        <name><surname>Ronneberger</surname><given-names>Olaf</given-names></name>
+        <name><surname>Tunyasuvunakool</surname><given-names>Kathryn</given-names></name>
+        <name><surname>Bates</surname><given-names>Russ</given-names></name>
+        <name><surname>Žı́dek</surname><given-names>Augustin</given-names></name>
+        <name><surname>Potapenko</surname><given-names>Anna</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Highly accurate protein structure prediction with AlphaFold</article-title>
+      <source>nature</source>
+      <publisher-name>Nature Publishing Group</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>596</volume>
+      <issue>7873</issue>
+      <pub-id pub-id-type="doi">10.1038/s41586-021-03819-2</pub-id>
+      <fpage>583</fpage>
+      <lpage>589</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-oliver_beckstein-proc-scipy-2016">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Gowers</surname></name>
+        <name><surname>Linke</surname></name>
+        <name><surname>Barnoud</surname></name>
+        <name><surname>Reddy</surname></name>
+        <name><surname>Melo</surname></name>
+        <name><surname>Seyler</surname></name>
+        <name><surname>Domański</surname></name>
+        <name><surname>Dotson</surname></name>
+        <name><surname>Buchoux</surname></name>
+        <name><surname>Kenney</surname></name>
+        <name><surname>Beckstein</surname></name>
+      </person-group>
+      <article-title>MDAnalysis: A Python Package for the Rapid Analysis of Molecular Dynamics Simulations</article-title>
+      <source>Proceedings of the 15th Python in Science Conference</source>
+      <person-group person-group-type="editor">
+        <name><surname>Benthall</surname></name>
+        <name><surname>Rostrup</surname></name>
+      </person-group>
+      <year iso-8601-date="2016">2016</year>
+      <pub-id pub-id-type="doi">10.25080/Majora-629e541a-00e</pub-id>
+      <fpage>98 </fpage>
+      <lpage> 105</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-levitt1975computer">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Levitt</surname><given-names>Michael</given-names></name>
+        <name><surname>Warshel</surname><given-names>Arieh</given-names></name>
+      </person-group>
+      <article-title>Computer simulation of protein folding</article-title>
+      <source>Nature</source>
+      <publisher-name>Nature Publishing Group</publisher-name>
+      <year iso-8601-date="1975-02">1975</year><month>02</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-22">2024</year><month>08</month><day>22</day></date-in-citation>
+      <volume>253</volume>
+      <issue>5494</issue>
+      <issn>1476-4687</issn>
+      <pub-id pub-id-type="doi">10.1038/253694a0</pub-id>
+      <fpage>694</fpage>
+      <lpage>698</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lindorff-larsen2011howa">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lindorff-Larsen</surname><given-names>Kresten</given-names></name>
+        <name><surname>Piana</surname><given-names>Stefano</given-names></name>
+        <name><surname>Dror</surname><given-names>Ron O.</given-names></name>
+        <name><surname>Shaw</surname><given-names>David E.</given-names></name>
+      </person-group>
+      <article-title>How Fast-Folding Proteins Fold</article-title>
+      <source>Science</source>
+      <publisher-name>American Association for the Advancement of Science</publisher-name>
+      <year iso-8601-date="2011-10">2011</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-22">2024</year><month>08</month><day>22</day></date-in-citation>
+      <volume>334</volume>
+      <issue>6055</issue>
+      <pub-id pub-id-type="doi">10.1126/science.1208351</pub-id>
+      <fpage>517</fpage>
+      <lpage>520</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ciccotti2022molecular">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ciccotti</surname><given-names>G.</given-names></name>
+        <name><surname>Dellago</surname><given-names>C.</given-names></name>
+        <name><surname>Ferrario</surname><given-names>M.</given-names></name>
+        <name><surname>Hernández</surname><given-names>E. R.</given-names></name>
+        <name><surname>Tuckerman</surname><given-names>M. E.</given-names></name>
+      </person-group>
+      <article-title>Molecular simulations: Past, present, and future (a Topical Issue in EPJB)</article-title>
+      <source>Eur. Phys. J. B</source>
+      <year iso-8601-date="2022-01">2022</year><month>01</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-22">2024</year><month>08</month><day>22</day></date-in-citation>
+      <volume>95</volume>
+      <issue>1</issue>
+      <issn>1434-6036</issn>
+      <pub-id pub-id-type="doi">10.1140/epjb/s10051-021-00249-x</pub-id>
+      <fpage>3</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hollingsworth2018molecular">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hollingsworth</surname><given-names>Scott A.</given-names></name>
+        <name><surname>Dror</surname><given-names>Ron O.</given-names></name>
+      </person-group>
+      <article-title>Molecular Dynamics Simulation for All</article-title>
+      <source>Neuron</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2018-09">2018</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-22">2024</year><month>08</month><day>22</day></date-in-citation>
+      <volume>99</volume>
+      <issue>6</issue>
+      <issn>0896-6273</issn>
+      <pub-id pub-id-type="doi">10.1016/j.neuron.2018.08.011</pub-id>
+      <pub-id pub-id-type="pmid">30236283</pub-id>
+      <fpage>1129</fpage>
+      <lpage>1143</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-alibay2023building">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Alibay</surname><given-names>Irfan</given-names></name>
+        <name><surname>Barnoud</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Beckstein</surname><given-names>Oliver</given-names></name>
+        <name><surname>Gowers</surname><given-names>Richard J.</given-names></name>
+        <name><surname>Loche</surname><given-names>Philip R.</given-names></name>
+        <name><surname>MacDermott-Opeskin</surname><given-names>Hugo</given-names></name>
+        <name><surname>Matta</surname><given-names>Micaela</given-names></name>
+        <name><surname>Naughton</surname><given-names>Fiona B.</given-names></name>
+        <name><surname>Reddy</surname><given-names>Tyler</given-names></name>
+        <name><surname>Wang</surname><given-names>Lily</given-names></name>
+      </person-group>
+      <article-title>Building a community-driven ecosystem for fast, reproducible, and reusable molecular simulation analysis using mdanalysis</article-title>
+      <source>Biophysical Journal</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2023-02">2023</year><month>02</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-22">2024</year><month>08</month><day>22</day></date-in-citation>
+      <volume>122</volume>
+      <issue>3</issue>
+      <issn>0006-3495</issn>
+      <pub-id pub-id-type="doi">10.1016/j.bpj.2022.11.2277</pub-id>
+      <fpage>420a</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-michaud-agrawal2011mdanalysis">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Michaud-Agrawal</surname><given-names>Naveen</given-names></name>
+        <name><surname>Denning</surname><given-names>Elizabeth J.</given-names></name>
+        <name><surname>Woolf</surname><given-names>Thomas B.</given-names></name>
+        <name><surname>Beckstein</surname><given-names>Oliver</given-names></name>
+      </person-group>
+      <article-title>MDAnalysis: A toolkit for the analysis of molecular dynamics simulations</article-title>
+      <source>Journal of Computational Chemistry</source>
+      <year iso-8601-date="2011">2011</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-22">2024</year><month>08</month><day>22</day></date-in-citation>
+      <volume>32</volume>
+      <issue>10</issue>
+      <issn>1096-987X</issn>
+      <pub-id pub-id-type="doi">10.1002/jcc.21787</pub-id>
+      <fpage>2319</fpage>
+      <lpage>2327</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-pedregosa2011scikitlearn">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pedregosa</surname><given-names>Fabian</given-names></name>
+        <name><surname>Varoquaux</surname><given-names>Gaël</given-names></name>
+        <name><surname>Gramfort</surname><given-names>Alexandre</given-names></name>
+        <name><surname>Michel</surname><given-names>Vincent</given-names></name>
+        <name><surname>Thirion</surname><given-names>Bertrand</given-names></name>
+        <name><surname>Grisel</surname><given-names>Olivier</given-names></name>
+        <name><surname>Blondel</surname><given-names>Mathieu</given-names></name>
+        <name><surname>Prettenhofer</surname><given-names>Peter</given-names></name>
+        <name><surname>Weiss</surname><given-names>Ron</given-names></name>
+        <name><surname>Dubourg</surname><given-names>Vincent</given-names></name>
+        <name><surname>Vanderplas</surname><given-names>Jake</given-names></name>
+        <name><surname>Passos</surname><given-names>Alexandre</given-names></name>
+        <name><surname>Cournapeau</surname><given-names>David</given-names></name>
+        <name><surname>Brucher</surname><given-names>Matthieu</given-names></name>
+        <name><surname>Perrot</surname><given-names>Matthieu</given-names></name>
+        <name><surname>Duchesnay</surname><given-names>Édouard</given-names></name>
+      </person-group>
+      <article-title>Scikit-learn: Machine Learning in Python</article-title>
+      <source>Journal of Machine Learning Research</source>
+      <year iso-8601-date="2011">2011</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-22">2024</year><month>08</month><day>22</day></date-in-citation>
+      <volume>12</volume>
+      <issue>85</issue>
+      <issn>1533-7928</issn>
+      <fpage>2825</fpage>
+      <lpage>2830</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
