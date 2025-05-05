@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">252</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00252</article-id>
+<title-group>
+<article-title>ARC4CFD: Learning how to leverage High-Performance
+Computing with Computational Fluid Dynamics</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" equal-contrib="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6944-3964</contrib-id>
+<name>
+<surname>Hickey</surname>
+<given-names>Jean-Pierre</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7254-4494</contrib-id>
+<name>
+<surname>Ambrogi</surname>
+<given-names>Francesco</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Hillcoat</surname>
+<given-names>Sophie</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Joseph</surname>
+<given-names>Jeswin</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Lokanathan</surname>
+<given-names>Nipin</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Department of Mechanical and Mechatronics Engineering,
+University of Waterloo, Canada</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-04-01">
+<day>1</day>
+<month>4</month>
+<year>2024</year>
+</pub-date>
+<volume>8</volume>
+<issue>87</issue>
+<fpage>252</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>High performance computing</kwd>
+<kwd>Computational fluid dynamics</kwd>
+<kwd>Advanced research computing</kwd>
+<kwd>Research data management</kwd>
+<kwd>Online learning</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Computational Fluid Dynamics (CFD) is a field of computational
+  physics that relies heavily on modern Advanced Research Computing
+  (ARC) resources
+  (<xref alt="Cant, 2002" rid="ref-CantU003A2002" ref-type="bibr">Cant,
+  2002</xref>). The spatial and temporal resolutions required to solve
+  modern CFD problems means that they can take advantage of the full
+  benefits of large-scale distributed-memory parallelization that is
+  available on high-performance computing (HPC) systems on ARC
+  infrastructure. The CFD user base is broad, diverse and
+  interdisciplinary. As CFD tools have progressed over the past decades,
+  the improved robustness, predictive capabilities, and
+  user-friendliness led them to be adopted by nontraditional HPC users
+  such as new graduate students, experimentalists, theoreticians, and
+  student design teams. Advanced Research Computing for Computational
+  Fluid Dynamics, or ARC4CFD, is an open source, asynchronous online
+  course
+  <ext-link ext-link-type="uri" xlink:href="https://arc4cfd.github.io">(https://arc4cfd.github.io)</ext-link>
+  that was developed to give users a basic understanding of fluid
+  dynamics and CFD to bridge the knowledge gap toward an effective use
+  of CFD on modern ARC resources.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>Most science and engineering university programs offer CFD courses,
+  which have become a standard part of the curriculum in mechanical,
+  civil, chemical, and aerospace engineering. These courses generally
+  focus on the fundamental understanding of the physics, modelling, and
+  numerics as well as the practical use of CFD tools. At the end of a
+  typical undergraduate CFD course, students have learned to use a CFD
+  tool to solve small-scale problems, understand the modelling
+  assumptions, quantify numerical errors, and visualize the results. The
+  CFD problems used in these courses are designed to run on students’
+  personal computers or local workstations. The jump from small-scale
+  CFD on a local workstation to the effective use of the same CFD tool
+  on a much larger problem size, on modern HPC systems, is nontrivial
+  and requires additional specific training. Although generic HPC and
+  parallel computing training is widely available, targeted training
+  material for CFD users on HPC systems is not readily found. Thus,
+  these learners must either: a) “translate” the knowledge from generic
+  HPC training material to the field of CFD, or b) rely on mentorship
+  and external help to effectively use these computational resources. As
+  CFD tools are continually improving, they are increasingly being
+  adopted to complement experimental campaigns, inform the design of
+  experiments, or help solve theoretical fluid dynamics problems. The
+  broad user base needs focused training materials for effectively using
+  CFD on HPC systems, as they may not have the mentorship opportunities
+  or access to expertise as graduate students. ARC4CFD was developed to
+  provide this CFD-specific training. The course uses an asynchronous
+  format for broad adoption, and integrates many hands-on problems to
+  help the learner further their understanding and learn independently.
+  We value the ability to freely share and exchange with the community,
+  and thus focused on an entirely open-source toolset, from meshing,
+  solving, and visualizing the results. Although this course is intended
+  for use on remote HPC systems, and more specifically on the Digital
+  Research Alliance of Canada clusters, it is possible to follow the
+  course on most other HPC systems that use a Linux-based environment
+  with a SLURM workload manager.</p>
+  <p>ARC4CFD is intended to be an introductory course that combines
+  concepts from CFD and computing with an <italic>end-user
+  focus</italic>. The course is built with the assumption that students
+  have: a) a undergraduate-level knowledge in fluid dynamics, b)
+  introductory knowledge in Computational Fluid Dynamics, and c)
+  familiarity with navigating terminal and bash commands on remote
+  systems. The target audience includes:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>New graduate students in computational physics or
+      engineering.</p>
+    </list-item>
+    <list-item>
+      <p>Experimentalists and theoreticians complementing their work
+      with numerical simulations on HPC.</p>
+    </list-item>
+    <list-item>
+      <p>Undergraduate students on student design teams interested in
+      leveraging CFD with HPC.</p>
+    </list-item>
+  </list>
+  <p>Given the prerequisite knowledge and target audience, the course
+  needs to provide both a theoretical understanding of parallel
+  computing and a systematic, hands-on approach to set up effective
+  workflows for CFD on HPC. The lessons first offer a conceptual
+  understanding and then apply that understanding to specific CFD
+  problems; a summative example is woven into the course which follows
+  the learner through the main CFD workflow.</p>
+</sec>
+<sec id="course-structure-and-learning-outcomes">
+  <title>Course structure and learning outcomes</title>
+  <p>The course is expected to take about 16 hours to complete and is
+  divided into three sections. Each section consists of several lessons
+  with individually-defined learning outcomes. The sections are
+  structured in a way that the learner can first develop a foundational
+  understanding of HPC
+  (<ext-link ext-link-type="uri" xlink:href="https://arc4cfd.github.io/section1/outline">Section
+  1</ext-link>), translate those concepts to specific challenges in CFD
+  and establish a systematic workflow
+  (<ext-link ext-link-type="uri" xlink:href="https://arc4cfd.github.io/section2/outline">Section
+  2</ext-link>), and then effectively manage the resulting research data
+  (<ext-link ext-link-type="uri" xlink:href="https://arc4cfd.github.io/section3/outline">Section
+  3</ext-link>). The course guides the learner through all the necessary
+  steps towards effective use of CFD on HPC, and is supplemented with
+  many practical examples and interactive quizzes. Section 2, the core
+  section of the course, includes most of the CFD-specific knowledge for
+  usage in HPC; for that reason, the lessons in this section directly
+  map onto a CFD workflow on HPC system. Each step in the CFD workflow
+  is an individual lesson, as follows:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>2.1 Definition of the CFD workflow.</p>
+    </list-item>
+    <list-item>
+      <p>2.2 Plan the large-scale CFD simulation.</p>
+    </list-item>
+    <list-item>
+      <p>2.3 Estimate the HPC requirements.</p>
+    </list-item>
+    <list-item>
+      <p>2.4 Preprocess the CFD simulation.</p>
+    </list-item>
+    <list-item>
+      <p>2.5 Optimize the CFD for HPC.</p>
+    </list-item>
+    <list-item>
+      <p>2.6 Running the CFD on HPC.</p>
+    </list-item>
+    <list-item>
+      <p>2.7 A posteriori analysis.</p>
+    </list-item>
+  </list>
+  <p>Section 2 offers a comprehensive overview of a standard workflow
+  for a CFD problem on HPC systems. It also includes a summative
+  example, the simulation of a backward-facing step, following the main
+  steps of the CFD workflow. This summative example highlights the
+  methodology to estimate the computational cost, setup the simulation,
+  mesh, run, and postprocess. Additional examples include boundary
+  layers (both laminar and turbulent), highlighting the near-wall
+  resolution requirements, and a cylinder in crossflow to illustrate a
+  sample mesh-generation process.</p>
+  <p>ARC4CFD has five learning outcomes. At the end of the course, the
+  learner should be able to:</p>
+  <list list-type="order">
+    <list-item>
+      <p>Define the main concepts of parallel and high-performance
+      computing.</p>
+    </list-item>
+    <list-item>
+      <p>Conduct an a priori estimate of the computational cost of a CFD
+      simulation.</p>
+    </list-item>
+    <list-item>
+      <p>Explain the impact of the modelling assumptions on HPC
+      cost.</p>
+    </list-item>
+    <list-item>
+      <p>Optimize the simulation parameters of a CFD problem for
+      HPC.</p>
+    </list-item>
+    <list-item>
+      <p>Develop a research data-management strategy for a CFD
+      workflow.</p>
+    </list-item>
+  </list>
+  <p>The learning outcomes for each lesson are presented and reinforced
+  with questions at the end of each lesson.</p>
+</sec>
+<sec id="philosophy-of-learning">
+  <title>Philosophy of learning</title>
+  <p>ARC4CFD is an asynchronous online course that accompanies the
+  learner in developing skills to effectively use Advanced Research
+  Computing for CFD. The course adopts an <italic>integrative
+  learning</italic> approach in which concepts from a range of
+  scientific disciplines are brought together (e.g., parallel computing,
+  programming, numerics, fluid dynamics, CFD) and put into practice
+  through hands-on examples and quizzes. The course uses an open-source
+  meshing, solution, and visualization toolset. This is a key feature of
+  the course that we hope will encourage broad adoption of the material.
+  The course is licensed under the Creative Commons BY-NC-SA license,
+  and all the original files (e.g., svg files or Python scripts) are
+  included in the repository.</p>
+  <p>The course aims to: 1) emphasize a systematic approach for the
+  effective use of CFD on ARC systems, 2) provide a high-level
+  theoretical understanding of the main concepts for using CFD on HPC,
+  and 3) provide hands-on examples for the learners to put these
+  concepts into practice. The multimodal course content includes written
+  content, videos, interactive quizzes, and hands-on examples that cover
+  various aspects of ARC.</p>
+</sec>
+<sec id="course-features">
+  <title>Course features</title>
+  <p>The asynchronous course is built on a GitHub Pages website
+  <ext-link ext-link-type="uri" xlink:href="http://arc4cfd.github.io">ARC4CFD</ext-link>
+  using the static site generator
+  <ext-link ext-link-type="uri" xlink:href="https://astro.build/">Astro</ext-link>
+  and the
+  <ext-link ext-link-type="uri" xlink:href="https://starlight.astro.build/">Astro
+  Starlight</ext-link> theme. This Astro template enables interactive
+  engagement through the use of self-correcting quizzes, copy-pasting of
+  code snippets, and visually appealing course navigation. The main
+  website is supplemented with a more traditional
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/ARC4CFD/arc4cfd">Git
+  repository</ext-link> that contains all the examples used in the
+  course. Many of the lessons feature a short introductory video to
+  guide the learners through the context. The main open-source toolkits
+  used include: Gmsh (meshing), SU2 (CFD solver), OpenFoam (CFD solver),
+  Paraview (visualization), and Python (postprocessing and analysis).
+  Gmsh is a widely used meshing tool that can be used to generate
+  structured and unstructured meshes for both solid and fluid mechanics
+  (<xref alt="Geuzaine et al., 2009" rid="ref-GeuzaineU003A2009" ref-type="bibr">Geuzaine
+  et al., 2009</xref>). The two different open-source CFD frameworks are
+  used for better reach to the various communities; both solvers rely on
+  a classical finite volume formulation. OpenFoam
+  (<xref alt="Weller et al., 1998" rid="ref-WellerU003A1998" ref-type="bibr">Weller
+  et al., 1998</xref>) is a toolbox to solve problems in continuum
+  mechanics and is one of the most used CFD solvers, due to its
+  versatility in developing complex numerical solvers. SU2, on the other
+  hand, has a stronger aerospace heritage with a growing user base
+  across various disciplines
+  (<xref alt="Palacios et al., 2013" rid="ref-palaciosU003A2013" ref-type="bibr">Palacios
+  et al., 2013</xref>). Finally, visualization of the results relies on
+  Paraview
+  (<xref alt="Ahrens et al., 2005" rid="ref-ahrensU003A2005" ref-type="bibr">Ahrens
+  et al., 2005</xref>).</p>
+  <p>A unique aspect of the training material is found in Section 3 on
+  Research Data Management (RDM). As RDM approaches are continually
+  being integrated into scientific disciplines, we opted to provide some
+  CFD-specific perspective to the RDM discussion. The content will
+  undoubtedly evolve with these concepts, but we hope that this training
+  material will be of assistance to CFD users that are increasingly
+  being asked to develop Data Management Plans (DMPs) as part of grant
+  proposals.</p>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the project</title>
+  <p>This course was conceived primarily from the need to train new
+  graduate students in the Multi-Physics Interaction Lab at the
+  University of Waterloo to bridge the gap between their undergraduate
+  CFD education and the effective use of these CFD tools on
+  high-performance computing. The typical undergraduate CFD coursework
+  focuses on numerical modelling and usage of CFD tools, whereas the
+  majority of HPC training material tends to emphasize the computer
+  science aspects of HPC. The effective use of modern Advanced Research
+  Computing facilities requires integrating knowledge from both CFD and
+  HPC. It was from the need to centralize the information on the usage
+  of CFD in ARC that the idea for this course was born. Previously, this
+  information was transmitted, piecemeal, to students as needed during
+  their graduate training. This led to inhomogeneous training, which
+  often left unresolved knowledge gaps for these otherwise highly
+  qualified graduate students.</p>
+  <p>A timely opportunity arose during a sabbatical through a call for
+  proposals from Compute Ontario for the development of training
+  materials for underserved HPC users. This opportunity provided the
+  means to build a team to centralize the necessary information and
+  build this course. The team built the course by focusing on three user
+  groups: 1) new graduate students that plan to use HPC resources to run
+  CFD simulations, 2) theoreticians and experimentalists that want to
+  use CFD on HPC to supplement their work, and 3) undergraduate design
+  team members who want to develop skills in HPC. Inspired by the
+  “12-steps to the Navier-Stokes” course
+  (<xref alt="Barba &amp; Forsyth, 2019" rid="ref-BarbaU003A2019" ref-type="bibr">Barba
+  &amp; Forsyth, 2019</xref>), which is a staple of our graduate student
+  training, we tried to recreate a systematic approach towards the usage
+  of CFD on HPC systems. The initial idea of building everything within
+  a Jupyter notebook eventually shifted to an interactive webpage with
+  video content due to the challenges of directly using HPC systems
+  through a Pythonic interface.</p>
+  <p>Looking ahead, this course will continue to evolve over the coming
+  year and will serve as the basis for a synchronous course that will be
+  offered as part of Compute Ontario’s summer school. As learners
+  benefit from the course and we continually adjust the course based on
+  user comments, we will be able to improve the content to meet the
+  changing needs of new graduate students in CFD, experimentalists and
+  theoreticians, and undergraduates that are interested to learn CFD on
+  HPC.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>This course was developed in the Multi-Physics Interaction Lab
+  (www.mpilab.ca) with financial support from Compute Ontario.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-BarbaU003A2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Barba</surname><given-names>Lorena</given-names></name>
+        <name><surname>Forsyth</surname><given-names>Gilbert</given-names></name>
+      </person-group>
+      <article-title>CFD Python: The 12 steps to Navier-Stokes equations</article-title>
+      <source>Journal of Open Source Education</source>
+      <publisher-name>The Open Journal</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>2</volume>
+      <issue>16</issue>
+      <uri>https://doi.org/10.21105/jose.00021</uri>
+      <pub-id pub-id-type="doi">10.21105/jose.00021</pub-id>
+      <fpage>21</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-CantU003A2002">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cant</surname><given-names>Stewart</given-names></name>
+      </person-group>
+      <article-title>High-performance computing in computational fluid dynamics: Progress and challenges</article-title>
+      <source>Philosophical Transactions of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences</source>
+      <publisher-name>The Royal Society</publisher-name>
+      <year iso-8601-date="2002">2002</year>
+      <volume>360</volume>
+      <issue>1795</issue>
+      <pub-id pub-id-type="doi">10.1098/rsta.2002.0990</pub-id>
+      <fpage>1211</fpage>
+      <lpage>1225</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-GeuzaineU003A2009">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Geuzaine</surname><given-names>Christophe</given-names></name>
+        <name><surname>Remacle</surname><given-names>Jean-François</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Gmsh: A three-dimensional finite element mesh generator with built-in pre-and post-processing facilities</article-title>
+      <source>International journal for numerical methods in engineering</source>
+      <year iso-8601-date="2009">2009</year>
+      <volume>79</volume>
+      <issue>11</issue>
+      <pub-id pub-id-type="doi">10.1002/nme.2579</pub-id>
+      <fpage>1309</fpage>
+      <lpage>1331</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-WellerU003A1998">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Weller</surname><given-names>Henry G</given-names></name>
+        <name><surname>Tabor</surname><given-names>Gavin</given-names></name>
+        <name><surname>Jasak</surname><given-names>Hrvoje</given-names></name>
+        <name><surname>Fureby</surname><given-names>Christer</given-names></name>
+      </person-group>
+      <article-title>A tensorial approach to computational continuum mechanics using object-oriented techniques</article-title>
+      <source>Computers in physics</source>
+      <publisher-name>American Institute of Physics</publisher-name>
+      <year iso-8601-date="1998">1998</year>
+      <volume>12</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1063/1.168744</pub-id>
+      <fpage>620</fpage>
+      <lpage>631</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-palaciosU003A2013">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Palacios</surname><given-names>Francisco</given-names></name>
+        <name><surname>Alonso</surname><given-names>Juan</given-names></name>
+        <name><surname>Duraisamy</surname><given-names>Karthikeyan</given-names></name>
+        <name><surname>Colonno</surname><given-names>Michael</given-names></name>
+        <name><surname>Hicken</surname><given-names>Jason</given-names></name>
+        <name><surname>Aranake</surname><given-names>Aniket</given-names></name>
+        <name><surname>Campos</surname><given-names>Alejandro</given-names></name>
+        <name><surname>Copeland</surname><given-names>Sean</given-names></name>
+        <name><surname>Economon</surname><given-names>Thomas</given-names></name>
+        <name><surname>Lonkar</surname><given-names>Amrita</given-names></name>
+        <name><surname>Lukaczyk</surname><given-names>Trent</given-names></name>
+        <name><surname>Taylor</surname><given-names>Thomas</given-names></name>
+      </person-group>
+      <article-title>Stanford University Unstructured (SU^2): An open-source integrated computational environment for multi-physics simulation and design</article-title>
+      <source>51st AIAA Aerospace Sciences Meeting including the New Horizons Forum and Aerospace Exposition</source>
+      <publisher-name>American Institute of Aeronautics; Astronautics</publisher-name>
+      <year iso-8601-date="2013">2013</year>
+      <uri>https://doi.org/10.2514/6.2013-287</uri>
+      <pub-id pub-id-type="doi">10.2514/6.2013-287</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-ahrensU003A2005">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ahrens</surname><given-names>James</given-names></name>
+        <name><surname>Geveci</surname><given-names>Berk</given-names></name>
+        <name><surname>Law</surname><given-names>Charles</given-names></name>
+        <name><surname>Hansen</surname><given-names>C</given-names></name>
+        <name><surname>Johnson</surname><given-names>C</given-names></name>
+      </person-group>
+      <article-title>Paraview: An end-user tool for large-data visualization</article-title>
+      <source>The visualization handbook</source>
+      <publisher-name>Citeseer</publisher-name>
+      <year iso-8601-date="2005">2005</year>
+      <volume>717</volume>
+      <pub-id pub-id-type="doi">10.1016/b978-012387582-2/50038-1</pub-id>
+      <fpage>50038</fpage>
+      <lpage>1</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
