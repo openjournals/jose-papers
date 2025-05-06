@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20250503153047-826b3d8afa1d00ddd94a6d5a8a144b04b97bc8a6</doi_batch_id>
+    <timestamp>20250503153047</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>05</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>87</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Good Enough Practices in Scientific Computing: A Learning Module for Researchers</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Tomasz</given_name>
+            <surname>Zieliński</surname>
+            <affiliations>
+              <institution><institution_name>School of Biological Sciences, The University of Edinburgh</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-0194-5706</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Andres</given_name>
+            <surname>Romanowski</surname>
+            <affiliations>
+              <institution><institution_name>School of Biological Sciences, The University of Edinburgh</institution_name></institution>
+              <institution><institution_name>Plant-Environment Signaling Group, Dept. of Biology, Faculty of Science, Utrecht University, Utrecht, 3584 CH, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0737-2408</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Emma</given_name>
+            <surname>Wilson</surname>
+            <affiliations>
+              <institution><institution_name>Centre for Clinical Brain Sciences, The University of Edinburgh</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-8100-7508</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Felicity</given_name>
+            <surname>Anderson</surname>
+            <affiliations>
+              <institution><institution_name>School of Biological Sciences, The University of Edinburgh</institution_name></institution>
+              <institution><institution_name>EPCC, The University of Edinburgh</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-8778-6779</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Elvina</given_name>
+            <surname>Gountouna</surname>
+            <affiliations>
+              <institution><institution_name>MRC Human Genetics Unit, MRC Institute of Genetics and Cancer, The University of Edinburgh</institution_name></institution>
+              <institution><institution_name>Usher Institute, The University of Edinburgh</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-7870-2780</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Matthias</given_name>
+            <surname>Mimault</surname>
+            <affiliations>
+              <institution><institution_name>The James Hutton Institute, Dundee</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1516-7332</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Alison</given_name>
+            <surname>Meynert</surname>
+            <affiliations>
+              <institution><institution_name>MRC Human Genetics Unit, MRC Institute of Genetics and Cancer, The University of Edinburgh</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-5839-1751</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Edward W. J.</given_name>
+            <surname>Wallace</surname>
+            <affiliations>
+              <institution><institution_name>School of Biological Sciences, The University of Edinburgh</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-8025-6361</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>05</month>
+          <day>03</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>279</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00279</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.15304808</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/279</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00279</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00279</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00279.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="wilson2017good">
+            <article_title>Good enough practices in scientific computing</article_title>
+            <author>Wilson</author>
+            <journal_title>PLoS computational biology</journal_title>
+            <issue>6</issue>
+            <volume>13</volume>
+            <doi>10.1371/journal.pcbi.1005510</doi>
+            <cYear>2017</cYear>
+            <unstructured_citation>Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., &amp; Teal, T. K. (2017). Good enough practices in scientific computing. PLoS Computational Biology, 13(6), e1005510. https://doi.org/10.1371/journal.pcbi.1005510</unstructured_citation>
+          </citation>
+          <citation key="jordan2017analysis">
+            <article_title>Analysis of the carpentries’ long-term feedback survey</article_title>
+            <author>Jordan</author>
+            <doi>10.5281/zenodo.1039944</doi>
+            <cYear>2017</cYear>
+            <unstructured_citation>Jordan, K. L., Marwick, B., Weaver, B., Zimmerman, N., Williams, J., Teal, T., Becker, E., Duckles, J., Duckles, B., &amp; Wickes, E. (2017). Analysis of the carpentries’ long-term feedback survey. https://doi.org/10.5281/zenodo.1039944</unstructured_citation>
+          </citation>
+          <citation key="becker2021carpentries">
+            <article_title>The carpentries curriculum development handbook</article_title>
+            <author>Becker</author>
+            <cYear>2021</cYear>
+            <unstructured_citation>Becker, E., &amp; Michonneau, F. (2021). The carpentries curriculum development handbook. https://cdh.carpentries.org</unstructured_citation>
+          </citation>
+          <citation key="carpentries2019git">
+            <article_title>Software carpentry: Version control with git</article_title>
+            <author>Gonzalez</author>
+            <cYear>2019</cYear>
+            <unstructured_citation>Gonzalez, I., Huang, D., Hejazi, N., Koziar, K., &amp; Munk, M. (2019). Software carpentry: Version control with git. https://github.com/swcarpentry/git-novice</unstructured_citation>
+          </citation>
+          <citation key="carpentries2023projectorg">
+            <article_title>Project organization and management for genomics</article_title>
+            <author>Hoyt</author>
+            <cYear>2023</cYear>
+            <unstructured_citation>Hoyt, P., Steiner, H., &amp; Szamosi, J. (2023). Project organization and management for genomics. https://datacarpentry.org/organization-genomics</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
