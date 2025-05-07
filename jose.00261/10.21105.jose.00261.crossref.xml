@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20250507153627-c5e922f2a87dfd6f5072041b0ede5d0c51be0f30</doi_batch_id>
+    <timestamp>20250507153627</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>05</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>87</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>AstronomyCalc: A python toolkit for teaching Astronomical Calculations and Data Analysis methods</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Sambit K.</given_name>
+            <surname>Giri</surname>
+            <affiliations>
+              <institution><institution_name>Nordita, KTH Royal Institute of Technology and Stockholm University, Hannes Alfvéns väg 12, SE-106 91 Stockholm, Sweden</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-2560-536X</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>05</month>
+          <day>07</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>261</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00261</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.14719952</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/261</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00261</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00261</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00261.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="lo2011towards">
+            <article_title>Towards a science of the art of teaching: Using variation theory as a guiding principle of pedagogical design</article_title>
+            <author>Lo</author>
+            <journal_title>International journal for lesson and learning studies</journal_title>
+            <issue>1</issue>
+            <volume>1</volume>
+            <doi>10.1108/20468251211179678</doi>
+            <cYear>2011</cYear>
+            <unstructured_citation>Lo, M. L., &amp; Marton, F. (2011). Towards a science of the art of teaching: Using variation theory as a guiding principle of pedagogical design. International Journal for Lesson and Learning Studies, 1(1), 7–22. https://doi.org/10.1108/20468251211179678</unstructured_citation>
+          </citation>
+          <citation key="ling2012variation">
+            <volume_title>Variation theory and the improvement of teaching and learning</volume_title>
+            <author>Ling Lo</author>
+            <cYear>2012</cYear>
+            <unstructured_citation>Ling Lo, M. (2012). Variation theory and the improvement of teaching and learning. Göteborg: Acta Universitatis Gothoburgensis.</unstructured_citation>
+          </citation>
+          <citation key="vanderplas2012introduction">
+            <article_title>Introduction to astroML: Machine learning for astrophysics</article_title>
+            <author>VanderPlas</author>
+            <journal_title>2012 conference on intelligent data understanding</journal_title>
+            <doi>10.1109/CIDU.2012.6382200</doi>
+            <cYear>2012</cYear>
+            <unstructured_citation>VanderPlas, J., Connolly, A. J., Ivezić, Ž., &amp; Gray, A. (2012). Introduction to astroML: Machine learning for astrophysics. 2012 Conference on Intelligent Data Understanding, 47–54. https://doi.org/10.1109/CIDU.2012.6382200</unstructured_citation>
+          </citation>
+          <citation key="brout2022pantheonplus">
+            <article_title>The Pantheon+ analysis: Cosmological constraints</article_title>
+            <author>Brout</author>
+            <journal_title>The Astrophysical Journal</journal_title>
+            <issue>2</issue>
+            <volume>938</volume>
+            <doi>10.3847/1538-4357/ac8e04</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Brout, D., Scolnic, D., Popovic, B., Riess, A. G., Carr, A., Zuntz, J., Kessler, R., Davis, T. M., Hinton, S., Jones, D., &amp; others. (2022). The Pantheon+ analysis: Cosmological constraints. The Astrophysical Journal, 938(2), 110. https://doi.org/10.3847/1538-4357/ac8e04</unstructured_citation>
+          </citation>
+          <citation key="lelli2016sparc">
+            <article_title>SPARC: Mass models for 175 disk galaxies with spitzer photometry and accurate rotation curves</article_title>
+            <author>Lelli</author>
+            <journal_title>The Astronomical Journal</journal_title>
+            <issue>6</issue>
+            <volume>152</volume>
+            <doi>10.3847/0004-6256/152/6/157</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Lelli, F., McGaugh, S. S., &amp; Schombert, J. M. (2016). SPARC: Mass models for 175 disk galaxies with spitzer photometry and accurate rotation curves. The Astronomical Journal, 152(6), 157. https://doi.org/10.3847/0004-6256/152/6/157</unstructured_citation>
+          </citation>
+          <citation key="robert2004metropolis">
+            <article_title>The Metropolis-Hastings algorithm</article_title>
+            <author>Robert</author>
+            <journal_title>Monte carlo statistical methods</journal_title>
+            <doi>10.1007/978-1-4757-4145-2_7</doi>
+            <isbn>978-1-4757-4145-2</isbn>
+            <cYear>2004</cYear>
+            <unstructured_citation>Robert, Christian P., &amp; Casella, G. (2004). The Metropolis-Hastings algorithm. In Monte carlo statistical methods (pp. 267–320). Springer New York. https://doi.org/10.1007/978-1-4757-4145-2_7</unstructured_citation>
+          </citation>
+          <citation key="tokdar2010importance">
+            <article_title>Importance sampling: A review</article_title>
+            <author>Tokdar</author>
+            <journal_title>Wiley Interdisciplinary Reviews: Computational Statistics</journal_title>
+            <issue>1</issue>
+            <volume>2</volume>
+            <cYear>2010</cYear>
+            <unstructured_citation>Tokdar, S. T., &amp; Kass, R. E. (2010). Importance sampling: A review. Wiley Interdisciplinary Reviews: Computational Statistics, 2(1), 54–60.</unstructured_citation>
+          </citation>
+          <citation key="ryden2017introduction">
+            <volume_title>Introduction to cosmology</volume_title>
+            <author>Ryden</author>
+            <cYear>2017</cYear>
+            <unstructured_citation>Ryden, B. (2017). Introduction to cosmology. Cambridge University Press.</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
