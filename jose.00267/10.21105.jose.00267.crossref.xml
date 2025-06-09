@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20250609185502-0cfc9a70e8beadcfce90bdd8600348904f7c0326</doi_batch_id>
+    <timestamp>20250609185502</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>06</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>88</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Educational resources to accelerate analysis of remote sensing data using cloud resources with Xarray</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Emma</given_name>
+            <surname>Marshall</surname>
+            <affiliations>
+              <institution><institution_name>Department of Geography, University of Utah, Salt Lake City, UT, U.S.A.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-6348-977X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Deepak</given_name>
+            <surname>Cherian</surname>
+            <affiliations>
+              <institution><institution_name>Earthmover PBC</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-6861-8734</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Scott</given_name>
+            <surname>Henderson</surname>
+            <affiliations>
+              <institution><institution_name>eScience Institute &amp; Department of Earth and Space Sciences, University of Washington, Seattle, WA, U.S.A.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0624-4965</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Jessica</given_name>
+            <surname>Scheick</surname>
+            <affiliations>
+              <institution><institution_name>Earth Systems Research Center, University of New Hampshire, Durham, NH, U.S.A.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-3421-4459</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Richard</given_name>
+            <surname>Forster</surname>
+            <affiliations>
+              <institution><institution_name>Department of Geography, University of Utah, Salt Lake City, UT, U.S.A.</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3945-5072</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>06</month>
+          <day>09</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>267</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00267</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.15594587</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/267</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00267</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00267</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00267.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="abernathey_2021_cloud">
+            <article_title>Cloud-native repositories for big scientific data</article_title>
+            <author>Abernathey</author>
+            <journal_title>Computing in Science &amp; Engineering</journal_title>
+            <issue>2</issue>
+            <volume>23</volume>
+            <doi>10.1109/MCSE.2021.3059437</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Abernathey, R. P., Augspurger, T., Banihirwe, A., Blackmon-Luca, C. C., Crone, T. J., Gentemann, C. L., Hamman, J. J., Henderson, N., Lepore, C., McCaie, T. A., Robinson, N. H., &amp; Signell, R. P. (2021). Cloud-native repositories for big scientific data. Computing in Science &amp; Engineering, 23(2), 26–35. https://doi.org/10.1109/MCSE.2021.3059437</unstructured_citation>
+          </citation>
+          <citation key="gentemann_2021_science">
+            <article_title>Science Storms the Cloud</article_title>
+            <author>Gentemann</author>
+            <journal_title>AGU Advances</journal_title>
+            <issue>2</issue>
+            <volume>2</volume>
+            <doi>10.1029/2020AV000354</doi>
+            <issn>2576-604X</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Gentemann, C. L., Holdgraf, C., Abernathey, R., Crichton, D., Colliander, J., Kearns, E. J., Panda, Y., &amp; Signell, R. P. (2021). Science Storms the Cloud. AGU Advances, 2(2), e2020AV000354. https://doi.org/10.1029/2020AV000354</unstructured_citation>
+          </citation>
+          <citation key="guo_2017_big">
+            <article_title>Big Earth data: A new frontier in Earth and information sciences</article_title>
+            <author>Guo</author>
+            <journal_title>Big Earth Data</journal_title>
+            <issue>1-2</issue>
+            <volume>1</volume>
+            <doi>10.1080/20964471.2017.1403062</doi>
+            <issn>2096-4471</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Guo, H. (2017). Big Earth data: A new frontier in Earth and information sciences. Big Earth Data, 1(1-2), 4–20. https://doi.org/10.1080/20964471.2017.1403062</unstructured_citation>
+          </citation>
+          <citation key="mathieu_2017_esas">
+            <article_title>The ESA’s Earth Observation Open Science Program [Space Agencies]</article_title>
+            <author>Mathieu</author>
+            <journal_title>IEEE Geoscience and Remote Sensing Magazine</journal_title>
+            <issue>2</issue>
+            <volume>5</volume>
+            <doi>10.1109/MGRS.2017.2688704</doi>
+            <issn>2168-6831</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Mathieu, P.-P., Borgeaud, M., Desnos, Y.-L., Rast, M., Brockmann, C., See, L., Kapur, R., Mahecha, M., Benz, U., &amp; Fritz, S. (2017). The ESA’s Earth Observation Open Science Program [Space Agencies]. IEEE Geoscience and Remote Sensing Magazine, 5(2), 86–96. https://doi.org/10.1109/MGRS.2017.2688704</unstructured_citation>
+          </citation>
+          <citation key="palumbo_2017_building">
+            <article_title>Building capacity in remote sensing for conservation: Present and future challenges</article_title>
+            <author>Palumbo</author>
+            <journal_title>Remote Sensing in Ecology and Conservation</journal_title>
+            <issue>1</issue>
+            <volume>3</volume>
+            <doi>10.1002/rse2.31</doi>
+            <issn>2056-3485</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Palumbo, I., Rose, R. A., Headley, R. M. K., Nackoney, J., Vodacek, A., &amp; Wegmann, M. (2017). Building capacity in remote sensing for conservation: Present and future challenges. Remote Sensing in Ecology and Conservation, 3(1), 21–29. https://doi.org/10.1002/rse2.31</unstructured_citation>
+          </citation>
+          <citation key="radocaj_2020_global">
+            <article_title>Global Open Data Remote Sensing Satellite Missions for Land Monitoring and Conservation: A Review</article_title>
+            <author>Radočaj</author>
+            <journal_title>Land</journal_title>
+            <issue>11</issue>
+            <volume>9</volume>
+            <doi>10.3390/land9110402</doi>
+            <issn>2073-445X</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Radočaj, D., Obhođaš, J., Jurišić, M., &amp; Gašparović, M. (2020). Global Open Data Remote Sensing Satellite Missions for Land Monitoring and Conservation: A Review. Land, 9(11), 402. https://doi.org/10.3390/land9110402</unstructured_citation>
+          </citation>
+          <citation key="ramachandran_2021_open">
+            <article_title>From Open Data to Open Science</article_title>
+            <author>Ramachandran</author>
+            <journal_title>Earth and Space Science</journal_title>
+            <issue>5</issue>
+            <volume>8</volume>
+            <doi>10.1029/2020EA001562</doi>
+            <issn>2333-5084</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Ramachandran, R., Bugbee, K., &amp; Murphy, K. (2021). From Open Data to Open Science. Earth and Space Science, 8(5). https://doi.org/10.1029/2020EA001562</unstructured_citation>
+          </citation>
+          <citation key="Sudmanns_2020_big">
+            <article_title>Big Earth data: Disruptive changes in Earth observation data management and analysis?</article_title>
+            <author>Martin Sudmanns</author>
+            <journal_title>International Journal of Digital Earth</journal_title>
+            <issue>7</issue>
+            <volume>13</volume>
+            <doi>10.1080/17538947.2019.1585976</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Martin Sudmanns, S. L., Dirk Tiede, &amp; Blaschke, T. (2020). Big Earth data: Disruptive changes in Earth observation data management and analysis? International Journal of Digital Earth, 13(7), 832–850. https://doi.org/10.1080/17538947.2019.1585976</unstructured_citation>
+          </citation>
+          <citation key="wagemann_2021_user">
+            <article_title>A user perspective on future cloud-based services for Big Earth data</article_title>
+            <author>Wagemann</author>
+            <journal_title>International Journal of Digital Earth</journal_title>
+            <issue>12</issue>
+            <volume>14</volume>
+            <doi>10.1080/17538947.2021.1982031</doi>
+            <issn>1753-8947</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Wagemann, J., Siemen, S., Seeger, B., &amp; Bendix, J. (2021). A user perspective on future cloud-based services for Big Earth data. International Journal of Digital Earth, 14(12), 1758–1774. https://doi.org/10.1080/17538947.2021.1982031</unstructured_citation>
+          </citation>
+          <citation key="wagemann_2022_FiveGuidingPrinciples">
+            <article_title>Five Guiding Principles to Make Jupyter Notebooks Fit for Earth Observation Data Education</article_title>
+            <author>Wagemann</author>
+            <journal_title>Remote Sensing</journal_title>
+            <issue>14</issue>
+            <volume>14</volume>
+            <doi>10.3390/rs14143359</doi>
+            <issn>2072-4292</issn>
+            <cYear>2022</cYear>
+            <unstructured_citation>Wagemann, J., Fierli, F., Mantovani, S., Siemen, S., Seeger, B., &amp; Bendix, J. (2022). Five Guiding Principles to Make Jupyter Notebooks Fit for Earth Observation Data Education. Remote Sensing, 14(14), 3359. https://doi.org/10.3390/rs14143359</unstructured_citation>
+          </citation>
+          <citation key="Procida_Diataxis_documentation_framework">
+            <article_title>Diátaxis documentation framework</article_title>
+            <author>Procida</author>
+            <doi>https://diataxis.fr/</doi>
+            <unstructured_citation>Procida, D. (n.d.). Diátaxis documentation framework. https://doi.org/https://diataxis.fr/</unstructured_citation>
+          </citation>
+          <citation key="Marshall_Cherian_Henderson_2023">
+            <article_title>Tidy geospatial data cubes</article_title>
+            <author>Marshall</author>
+            <doi>10.25080/gerudo-f2bc6f59-034</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Marshall, E., Cherian, D., &amp; Henderson, S. (2023). Tidy geospatial data cubes. Zenodo. https://doi.org/10.25080/gerudo-f2bc6f59-034</unstructured_citation>
+          </citation>
+          <citation key="Kluyver2016jupyter">
+            <article_title>Jupyter notebooks – a publishing format for reproducible computational workflows</article_title>
+            <author>Kluyver</author>
+            <doi>10.3233/978-1-61499-649-1-87</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., &amp; Willing, C. (2016). Jupyter notebooks – a publishing format for reproducible computational workflows. 87–90. https://doi.org/10.3233/978-1-61499-649-1-87</unstructured_citation>
+          </citation>
+          <citation key="JupyterBookCommunity_2021">
+            <article_title>Jupyter book</article_title>
+            <author>Executable Books Community</author>
+            <doi>10.5281/zenodo.4539666</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Executable Books Community. (2021). Jupyter book. Zenodo. https://doi.org/10.5281/zenodo.4539666</unstructured_citation>
+          </citation>
+          <citation key="Hoyer_Hamman_2017">
+            <article_title>Xarray: N-d labeled arrays and datasets in python</article_title>
+            <author>Hoyer</author>
+            <journal_title>Journal of Open Research Software</journal_title>
+            <issue>1</issue>
+            <volume>5</volume>
+            <doi>10.5334/jors.148</doi>
+            <issn>2049-9647</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Hoyer, S., &amp; Hamman, J. (2017). Xarray: N-d labeled arrays and datasets in python. Journal of Open Research Software, 5(1), 10. https://doi.org/10.5334/jors.148</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
