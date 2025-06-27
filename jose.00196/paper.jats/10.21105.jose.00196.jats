@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">196</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00196</article-id>
+<title-group>
+<article-title>Special relativity in R: the
+<monospace>lorentz</monospace> package</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5982-0415</contrib-id>
+<name>
+<surname>Hankin</surname>
+<given-names>Robin K. S.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Computing Science and Mathematics, University of
+Stirling</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<volume>8</volume>
+<issue>88</issue>
+<fpage>196</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>special relativity</kwd>
+<kwd>Lorentz transformation</kwd>
+<kwd>Lorentz boosts</kwd>
+<kwd>Three velocity</kwd>
+<kwd>Four velocity</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="introduction-the-lorentz-transformation-in-special-relativity">
+  <title>Introduction: the Lorentz transformation in special
+  relativity</title>
+  <p>In special relativity
+  (<xref alt="Einstein, 1905" rid="ref-einstein1905" ref-type="bibr">Einstein,
+  1905</xref>), the Lorentz transformations
+  (<xref alt="Lorentz, 1904" rid="ref-lorentz1904" ref-type="bibr">Lorentz,
+  1904</xref>) supersede their classical equivalent, the Galilean
+  transformations. Lorentz transformations operate on four-vectors such
+  as the four-velocity or four-potential and are usually operationalised
+  as multiplication by a <inline-formula><alternatives>
+  <tex-math><![CDATA[4\times 4]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mn>4</mml:mn><mml:mo>×</mml:mo><mml:mn>4</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+  matrix. A Lorentz transformation takes the components of an arbitrary
+  four-vector as observed in one coordinate system and returns the
+  components observed in another system which is moving at constant
+  velocity with respect to the first.</p>
+  <p>The materials have been made publicly available at:
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/RobinHankin/lorentz">https://github.com/RobinHankin/lorentz</ext-link>
+  and licensed under the
+  <ext-link ext-link-type="uri" xlink:href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3</ext-link>.
+  To install the package, type</p>
+  <preformat>install.packages(&quot;lorentz&quot;)
+library(&quot;lorentz&quot;)</preformat>
+  <p>at the <monospace>R</monospace>
+  (<xref alt="R Core Team, 2022" rid="ref-rcore2022" ref-type="bibr">R
+  Core Team, 2022</xref>) command line.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>Einstein’s theory of special relativity presents specific
+  difficulties for its teaching and learning
+  (<xref alt="Prado et al., 2020" rid="ref-prado2020" ref-type="bibr">Prado
+  et al., 2020</xref>). One particularly problematic concept is that of
+  four velocity, defined as the deriviative of an object’s
+  four-displacement with respect to its proper time
+  (<xref alt="Resnick, 1968" rid="ref-resnick1968" ref-type="bibr">Resnick,
+  1968</xref>). Students are often left puzzled as to why an object with
+  three degrees of freedom is described using an object with four
+  components. Observing (correctly) that the familiar classical velocity
+  addition law is incorrect for both three-velocities and
+  four-velocities in relativistic mechanics, students may reasonably ask
+  in what way four-velocities are preferable to three-velocities.</p>
+  <p>The <monospace>lorentz</monospace> package
+  (<xref alt="Hankin, 2022" rid="ref-hankin2022_lorentz" ref-type="bibr">Hankin,
+  2022</xref>) furnishes a consistent suite of computational
+  functionality to give numerical illustration of many concepts of
+  special relativity, including manipulation of three- and four-
+  velocities. It is accessible to undergraduates, being written in the
+  <monospace>R</monospace> programming language
+  (<xref alt="R Core Team, 2022" rid="ref-rcore2022" ref-type="bibr">R
+  Core Team, 2022</xref>) which will be familiar to many physics
+  students. The package allows the user to manipulate Lorentz boosts
+  using familiar matrix multiplication, and in addition incorporates an
+  efficient and consistent interface to deal with many aspects of
+  undergraduate-level relativity including active and passive
+  transformations, four-momentum of photons, and in particular the
+  difficult and nonintuitive behaviour of units in which
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[c\neq 1]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>c</mml:mi><mml:mo>≠</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+  [such as S. I.]. The classical limit of <inline-formula><alternatives>
+  <tex-math><![CDATA[c\longrightarrow\infty]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>c</mml:mi><mml:mo>→</mml:mo><mml:mi>∞</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+  is discussed explicitly and computationally. The package allows the
+  user to employ efficient and natural vectorised R idiom in the context
+  of relativistic kinematics.</p>
+  <p>The package was originally written to facilitate investigation into
+  the nonassociative and noncommutative structure of three-velocities
+  (<xref alt="Ungar, 1997" rid="ref-ungar1997" ref-type="bibr">Ungar,
+  1997</xref>); but the pedagogical impact of this is to reinforce the
+  primacy of four-vectors in relativity. One student, using the package,
+  succinctly offered the observation that ``three-velocities suck”:
+  surely a profound insight.</p>
+</sec>
+<sec id="previous-related-work">
+  <title>Previous related work</title>
+  <p>There are a few existing software tools for working with Lorentz
+  transformations, mostly developed in an educational context. Early
+  work would include that of Horwitz et al.
+  (<xref alt="1994" rid="ref-horwitz1992" ref-type="bibr">1994</xref>),
+  who describe <monospace>relLab</monospace>, a system for building a
+  range of <italic>gendanken</italic> experiments in an interactive
+  graphical environment. The author asserts that it runs on “any
+  Macintosh computer with one megabyte of RAM or more” but it is not
+  clear whether the software is still available. More modern
+  contributions would include the <monospace>OpenRelativity</monospace>
+  toolkit
+  (<xref alt="Sherin et al., 2016" rid="ref-sherin2016" ref-type="bibr">Sherin
+  et al., 2016</xref>) which simulates the effects of special relativity
+  in the <monospace>Unity</monospace> game engine. There are also many
+  excellent github repos that provide functionality to create simple
+  visual displays of Lorentz transformations of events (nick1627
+  (<xref alt="2019" rid="ref-nick2019" ref-type="bibr">2019</xref>) is a
+  good example), although these are generally restricted to a single
+  spatial dimension.</p>
+  <p>Educational models (in the sense of Pössel
+  (<xref alt="2018" rid="ref-possel2018" ref-type="bibr">2018</xref>))
+  for Einstein’s general theory of relativity
+  (<xref alt="Einstein, 1907" rid="ref-einstein1907" ref-type="bibr">Einstein,
+  1907</xref>) tend to be physical
+  (<xref alt="Pössel, 2018" rid="ref-possel2018" ref-type="bibr">Pössel,
+  2018</xref>); but software examples would include the present author’s
+  software
+  (<xref alt="Hankin, 2021" rid="ref-hankin2021" ref-type="bibr">Hankin,
+  2021</xref>) for visualizing black holes and gravitational
+  radiation.</p>
+</sec>
+<sec id="the-lorentz-package-summary-of-high-level-functionality">
+  <title>The <monospace>lorentz</monospace> package: summary of
+  high-level functionality</title>
+  <p>The <monospace>lorentz</monospace> package provides
+  <monospace>R</monospace>-centric functionality for Lorentz
+  transformations. It deals with formal Lorentz boosts and converts
+  between three-velocities and four-velocities. Computational support
+  for the nonassociative and noncommutative structure of relativistic
+  three-velocity addition is included. Some functionality for
+  relativistic transformation of tensors of order 2 such as the
+  stress-energy tensor is given, with examples. In the package, the
+  speed of light is 1 by default, but is user-settable and the classical
+  limit is recovered by setting <inline-formula><alternatives>
+  <tex-math><![CDATA[c=\infty]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>c</mml:mi><mml:mo>=</mml:mo><mml:mi>∞</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.
+  Both passive and active transformations are implemented. An extensive
+  heuristic vignette detailing package idiom is included; to view this,
+  type “<monospace>vignette(&quot;lorentz&quot;)</monospace>” at the
+  <monospace>R</monospace> command line. There does not seem to be a
+  known relativistic generalization of the classical distributive law
+  <inline-formula><tex-math><![CDATA[r\left({\bf u} + {\bf v}\right)=r{\bf u} + r{\bf v}]]></tex-math></inline-formula>
+  (<xref alt="Ungar, 1997" rid="ref-ungar1997" ref-type="bibr">Ungar,
+  1997</xref>). Ungar states that ``It is hoped that one day [such a
+  generalization] will be discovered. If exists, it is expected to be
+  the standard distributive law relaxed by Thomas gyration in some
+  unexpected way”. The package is used to execute a systematic sweep
+  through possible distributive laws consistent with Ungar’s suggestion,
+  unfortunately without success.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-ungar1997">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ungar</surname><given-names>A. A.</given-names></name>
+      </person-group>
+      <article-title>Thomas precession: Its underlying gyrogroup axioms and their use in hyperbolic geometry and relativistic physics</article-title>
+      <source>Foundations of Physics</source>
+      <year iso-8601-date="1997">1997</year>
+      <volume>27</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1007/bf02550347</pub-id>
+      <fpage>881</fpage>
+      <lpage>951</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-horwitz1992">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Horwitz</surname><given-names>P.</given-names></name>
+        <name><surname>Taylor</surname><given-names>E. F.</given-names></name>
+        <name><surname>Barowy</surname><given-names>W.</given-names></name>
+      </person-group>
+      <article-title>Teaching special relativity with a computer</article-title>
+      <source>Computers in Physics</source>
+      <year iso-8601-date="1994">1994</year>
+      <volume>8</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1063/1.168517</pub-id>
+      <fpage>92</fpage>
+      <lpage>97</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sherin2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sherin</surname><given-names>Z. W.</given-names></name>
+        <name><surname>Cheu</surname><given-names>R.</given-names></name>
+        <name><surname>Tan</surname><given-names>P.</given-names></name>
+        <name><surname>Kortemeyer</surname><given-names>G.</given-names></name>
+      </person-group>
+      <article-title>Visualizing relativity: The OpenRelativity project</article-title>
+      <source>American Journal of Physics</source>
+      <year iso-8601-date="2016-05">2016</year><month>05</month>
+      <volume>84</volume>
+      <issue>5</issue>
+      <uri>https://github.com/MITGameLab/ OpenRelativity/</uri>
+      <pub-id pub-id-type="doi">10.1119/1.4938057</pub-id>
+      <fpage>369</fpage>
+      <lpage>374</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-prado2020">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Prado</surname><given-names>Xabier</given-names></name>
+        <name><surname>Domínguez</surname><given-names>José Manuel</given-names></name>
+        <name><surname>Area</surname><given-names>Iván</given-names></name>
+        <name><surname>Edelstein</surname><given-names>José</given-names></name>
+        <name><surname>Mira</surname><given-names>Jorge</given-names></name>
+        <name><surname>Paredes</surname><given-names>Ángel</given-names></name>
+      </person-group>
+      <article-title>Learning and teaching Einstein’s theory of special relativity: State of the art</article-title>
+      <publisher-name>arXiv</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://arxiv.org/abs/2012.15149</uri>
+      <pub-id pub-id-type="doi">10.48550/ARXIV.2012.15149</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-resnick1968">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Resnick</surname><given-names>R.</given-names></name>
+      </person-group>
+      <source>Introduction to special relativity</source>
+      <publisher-name>John Wiley &amp; Sons, Inc.</publisher-name>
+      <year iso-8601-date="1968">1968</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-rcore2022">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <string-name>R Core Team</string-name>
+      </person-group>
+      <source>R: A language and environment for statistical computing</source>
+      <publisher-name>R Foundation for Statistical Computing</publisher-name>
+      <publisher-loc>Vienna, Austria</publisher-loc>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://www.R-project.org/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-hankin2022_lorentz">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Hankin</surname><given-names>Robin K. S.</given-names></name>
+      </person-group>
+      <article-title>A systematic search for a three-velocity gyrodistributive law in special relativity with the lorentz R package</article-title>
+      <publisher-name>arXiv</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://arxiv.org/abs/2212.07005</uri>
+      <pub-id pub-id-type="doi">10.48550/ARXIV.2212.07005</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-einstein1905">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Einstein</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt</article-title>
+      <source>Annalen der Physik</source>
+      <year iso-8601-date="1905">1905</year>
+      <volume>322</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1002/andp.19053220607</pub-id>
+      <fpage>132</fpage>
+      <lpage>148</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lorentz1904">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lorentz</surname><given-names>H. A.</given-names></name>
+      </person-group>
+      <article-title>Electromagnetic phenomena in a system moving with any velocity smaller than that of light</article-title>
+      <source>Proceedings of the Royal Netherlands Academy of Arts and Sciences</source>
+      <year iso-8601-date="1904">1904</year>
+      <volume>6</volume>
+      <pub-id pub-id-type="doi">10.1007/978-94-015-3445-1_5</pub-id>
+      <fpage>809</fpage>
+      <lpage>831</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-einstein1907">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Einstein</surname><given-names>A.</given-names></name>
+      </person-group>
+      <article-title>Kosmologische Betrachtungen zur allgemeinen Relativitätstheorie</article-title>
+      <source>Sitzungsberichte der Preußischen Akademie der Wissenschaften</source>
+      <year iso-8601-date="1907">1907</year>
+      <volume>142</volume>
+      <pub-id pub-id-type="doi">10.1007/978-3-663-19510-8_9</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-possel2018">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Pössel</surname><given-names>Markus</given-names></name>
+      </person-group>
+      <article-title>Relatively complicated? Using models to teach general relativity at different levels</article-title>
+      <publisher-name>arXiv</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <uri>https://arxiv.org/abs/1812.11589</uri>
+      <pub-id pub-id-type="doi">10.48550/ARXIV.1812.11589</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-hankin2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hankin</surname><given-names>Robin K. S.</given-names></name>
+      </person-group>
+      <article-title>General relativity in R: Visual representation of Schwarzschild space using different coordinate systems</article-title>
+      <source>Journal of Open Source Education</source>
+      <publisher-name>The Open Journal</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>4</volume>
+      <issue>39</issue>
+      <uri>https://doi.org/10.21105/jose.00091</uri>
+      <pub-id pub-id-type="doi">10.21105/jose.00091</pub-id>
+      <fpage>91</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-nick2019">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>nick1627</surname></name>
+      </person-group>
+      <article-title>Relativityvisualisation, GitHub repo</article-title>
+      <year iso-8601-date="2019">2019</year>
+      <uri>https://github.com/nick1627/RelativityVisualisation</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
