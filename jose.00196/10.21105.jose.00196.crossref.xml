@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20250627210902-529bf71f1f82d66921401e925b083b356ac8897f</doi_batch_id>
+    <timestamp>20250627210902</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>06</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>88</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Special relativity in R: the lorentz package</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Robin K. S.</given_name>
+            <surname>Hankin</surname>
+            <affiliations>
+              <institution><institution_name>Computing Science and Mathematics, University of Stirling</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-5982-0415</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>06</month>
+          <day>27</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>196</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00196</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.15731108</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/196</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00196</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00196</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00196.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ungar1997">
+            <article_title>Thomas precession: Its underlying gyrogroup axioms and their use in hyperbolic geometry and relativistic physics</article_title>
+            <author>Ungar</author>
+            <journal_title>Foundations of Physics</journal_title>
+            <issue>6</issue>
+            <volume>27</volume>
+            <doi>10.1007/bf02550347</doi>
+            <cYear>1997</cYear>
+            <unstructured_citation>Ungar, A. A. (1997). Thomas precession: Its underlying gyrogroup axioms and their use in hyperbolic geometry and relativistic physics. Foundations of Physics, 27(6), 881–951. https://doi.org/10.1007/bf02550347</unstructured_citation>
+          </citation>
+          <citation key="horwitz1992">
+            <article_title>Teaching special relativity with a computer</article_title>
+            <author>Horwitz</author>
+            <journal_title>Computers in Physics</journal_title>
+            <issue>1</issue>
+            <volume>8</volume>
+            <doi>10.1063/1.168517</doi>
+            <cYear>1994</cYear>
+            <unstructured_citation>Horwitz, P., Taylor, E. F., &amp; Barowy, W. (1994). Teaching special relativity with a computer. Computers in Physics, 8(1), 92–97. https://doi.org/10.1063/1.168517</unstructured_citation>
+          </citation>
+          <citation key="sherin2016">
+            <article_title>Visualizing relativity: The OpenRelativity project</article_title>
+            <author>Sherin</author>
+            <journal_title>American Journal of Physics</journal_title>
+            <issue>5</issue>
+            <volume>84</volume>
+            <doi>10.1119/1.4938057</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Sherin, Z. W., Cheu, R., Tan, P., &amp; Kortemeyer, G. (2016). Visualizing relativity: The OpenRelativity project. American Journal of Physics, 84(5), 369–374. https://doi.org/10.1119/1.4938057</unstructured_citation>
+          </citation>
+          <citation key="prado2020">
+            <article_title>Learning and teaching Einstein’s theory of special relativity: State of the art</article_title>
+            <author>Prado</author>
+            <doi>10.48550/ARXIV.2012.15149</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Prado, X., Domínguez, J. M., Area, I., Edelstein, J., Mira, J., &amp; Paredes, Á. (2020). Learning and teaching Einstein’s theory of special relativity: State of the art. arXiv. https://doi.org/10.48550/ARXIV.2012.15149</unstructured_citation>
+          </citation>
+          <citation key="resnick1968">
+            <volume_title>Introduction to special relativity</volume_title>
+            <author>Resnick</author>
+            <cYear>1968</cYear>
+            <unstructured_citation>Resnick, R. (1968). Introduction to special relativity. John Wiley &amp; Sons, Inc.</unstructured_citation>
+          </citation>
+          <citation key="rcore2022">
+            <volume_title>R: A language and environment for statistical computing</volume_title>
+            <author>R Core Team</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>R Core Team. (2022). R: A language and environment for statistical computing. R Foundation for Statistical Computing. https://www.R-project.org/</unstructured_citation>
+          </citation>
+          <citation key="hankin2022_lorentz">
+            <article_title>A systematic search for a three-velocity gyrodistributive law in special relativity with the lorentz R package</article_title>
+            <author>Hankin</author>
+            <doi>10.48550/ARXIV.2212.07005</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Hankin, R. K. S. (2022). A systematic search for a three-velocity gyrodistributive law in special relativity with the lorentz R package. arXiv. https://doi.org/10.48550/ARXIV.2212.07005</unstructured_citation>
+          </citation>
+          <citation key="einstein1905">
+            <article_title>Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt</article_title>
+            <author>Einstein</author>
+            <journal_title>Annalen der Physik</journal_title>
+            <issue>6</issue>
+            <volume>322</volume>
+            <doi>10.1002/andp.19053220607</doi>
+            <cYear>1905</cYear>
+            <unstructured_citation>Einstein, A. (1905). Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt. Annalen Der Physik, 322(6), 132–148. https://doi.org/10.1002/andp.19053220607</unstructured_citation>
+          </citation>
+          <citation key="lorentz1904">
+            <article_title>Electromagnetic phenomena in a system moving with any velocity smaller than that of light</article_title>
+            <author>Lorentz</author>
+            <journal_title>Proceedings of the Royal Netherlands Academy of Arts and Sciences</journal_title>
+            <volume>6</volume>
+            <doi>10.1007/978-94-015-3445-1_5</doi>
+            <cYear>1904</cYear>
+            <unstructured_citation>Lorentz, H. A. (1904). Electromagnetic phenomena in a system moving with any velocity smaller than that of light. Proceedings of the Royal Netherlands Academy of Arts and Sciences, 6, 809–831. https://doi.org/10.1007/978-94-015-3445-1_5</unstructured_citation>
+          </citation>
+          <citation key="einstein1907">
+            <article_title>Kosmologische Betrachtungen zur allgemeinen Relativitätstheorie</article_title>
+            <author>Einstein</author>
+            <journal_title>Sitzungsberichte der Preußischen Akademie der Wissenschaften</journal_title>
+            <volume>142</volume>
+            <doi>10.1007/978-3-663-19510-8_9</doi>
+            <cYear>1907</cYear>
+            <unstructured_citation>Einstein, A. (1907). Kosmologische Betrachtungen zur allgemeinen Relativitätstheorie. Sitzungsberichte Der Preußischen Akademie Der Wissenschaften, 142. https://doi.org/10.1007/978-3-663-19510-8_9</unstructured_citation>
+          </citation>
+          <citation key="possel2018">
+            <article_title>Relatively complicated? Using models to teach general relativity at different levels</article_title>
+            <author>Pössel</author>
+            <doi>10.48550/ARXIV.1812.11589</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Pössel, M. (2018). Relatively complicated? Using models to teach general relativity at different levels. arXiv. https://doi.org/10.48550/ARXIV.1812.11589</unstructured_citation>
+          </citation>
+          <citation key="hankin2021">
+            <article_title>General relativity in R: Visual representation of Schwarzschild space using different coordinate systems</article_title>
+            <author>Hankin</author>
+            <journal_title>Journal of Open Source Education</journal_title>
+            <issue>39</issue>
+            <volume>4</volume>
+            <doi>10.21105/jose.00091</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Hankin, R. K. S. (2021). General relativity in R: Visual representation of Schwarzschild space using different coordinate systems. Journal of Open Source Education, 4(39), 91. https://doi.org/10.21105/jose.00091</unstructured_citation>
+          </citation>
+          <citation key="nick2019">
+            <article_title>Relativityvisualisation, GitHub repo</article_title>
+            <author>nick1627</author>
+            <cYear>2019</cYear>
+            <unstructured_citation>nick1627. (2019). Relativityvisualisation, GitHub repo. https://github.com/nick1627/RelativityVisualisation</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
