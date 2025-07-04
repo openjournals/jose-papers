@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">267</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00267</article-id>
+<title-group>
+<article-title>Cloud-native geospatial data cube workflows with
+open-source tools</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-6348-977X</contrib-id>
+<name>
+<surname>Marshall</surname>
+<given-names>Emma</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6861-8734</contrib-id>
+<name>
+<surname>Cherian</surname>
+<given-names>Deepak</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0624-4965</contrib-id>
+<name>
+<surname>Henderson</surname>
+<given-names>Scott</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3421-4459</contrib-id>
+<name>
+<surname>Scheick</surname>
+<given-names>Jessica</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-3945-5072</contrib-id>
+<name>
+<surname>Forster</surname>
+<given-names>Richard</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>University of Utah</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Earthmover PBC</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>University of Washington, @uwescience</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>University of New Hampshire</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-03-14">
+<day>14</day>
+<month>3</month>
+<year>2025</year>
+</pub-date>
+<volume>8</volume>
+<issue>89</issue>
+<fpage>267</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>Remote Sensing</kwd>
+<kwd>Earth Science</kwd>
+<kwd>Geospatial data cubes</kwd>
+<kwd>Cryosphere</kwd>
+<kwd>Xarray</kwd>
+<kwd>Cloud-optimized data</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Advances in cloud computing, remote sensing, and engineering are
+  transforming earth system science into an increasingly data-intensive
+  field, requiring students and scientists to learn a broad range of new
+  skills related to scientific programming, data management, and cloud
+  infrastructure
+  (<xref alt="Abernathey et al., 2021" rid="ref-abernathey_2021_cloud" ref-type="bibr">Abernathey
+  et al., 2021</xref>;
+  <xref alt="Gentemann et al., 2021" rid="ref-gentemann_2021_science" ref-type="bibr">Gentemann
+  et al., 2021</xref>;
+  <xref alt="Guo, 2017" rid="ref-guo_2017_big" ref-type="bibr">Guo,
+  2017</xref>;
+  <xref alt="Mathieu et al., 2017" rid="ref-mathieu_2017_esas" ref-type="bibr">Mathieu
+  et al., 2017</xref>;
+  <xref alt="Ramachandran et al., 2021" rid="ref-ramachandran_2021_open" ref-type="bibr">Ramachandran
+  et al., 2021</xref>;
+  <xref alt="Wagemann et al., 2021" rid="ref-wagemann_2021_user" ref-type="bibr">Wagemann
+  et al., 2021</xref>;
+  <xref alt="Wagemann et al., 2022" rid="ref-wagemann_2022_FiveGuidingPrinciples" ref-type="bibr">Wagemann
+  et al., 2022</xref>). This work contains educational modules designed
+  to reduce barriers to interacting with large, complex, cloud-hosted
+  remote sensing datasets using open-source computational tools and
+  software. The goal of these materials is to demonstrate and promote
+  the rigorous investigation of n-dimensional multi-sensor satellite
+  imagery datasets through scientific programming. These tutorials
+  feature publicly available satellite imagery with global coverage and
+  commonly used sensors such as optical and synthetic aperture radar
+  data with different levels of processing. We include thorough
+  discussions of specific data formats and demonstrate access patterns
+  for two popular cloud infrastructure platforms (Amazon Web Services
+  and Microsoft Planetary Computer) as well as public cloud
+  computational resources for remote sensing data processing at Alaska
+  Satellite Facility (ASF).</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Research on the transition to data-intensive, cloud-based science
+  highlights the need for knowledge development to accompany
+  technological advances in order to realize the benefit of these
+  transformations
+  (<xref alt="Abernathey et al., 2021" rid="ref-abernathey_2021_cloud" ref-type="bibr">Abernathey
+  et al., 2021</xref>;
+  <xref alt="Gentemann et al., 2021" rid="ref-gentemann_2021_science" ref-type="bibr">Gentemann
+  et al., 2021</xref>;
+  <xref alt="Guo, 2017" rid="ref-guo_2017_big" ref-type="bibr">Guo,
+  2017</xref>;
+  <xref alt="Martin Sudmanns &amp; Blaschke, 2020" rid="ref-Sudmanns_2020_big" ref-type="bibr">Martin
+  Sudmanns &amp; Blaschke, 2020</xref>;
+  <xref alt="Mathieu et al., 2017" rid="ref-mathieu_2017_esas" ref-type="bibr">Mathieu
+  et al., 2017</xref>;
+  <xref alt="Palumbo et al., 2017" rid="ref-palumbo_2017_building" ref-type="bibr">Palumbo
+  et al., 2017</xref>;
+  <xref alt="Radočaj et al., 2020" rid="ref-radocaj_2020_global" ref-type="bibr">Radočaj
+  et al., 2020</xref>;
+  <xref alt="Ramachandran et al., 2021" rid="ref-ramachandran_2021_open" ref-type="bibr">Ramachandran
+  et al., 2021</xref>;
+  <xref alt="Wagemann et al., 2021" rid="ref-wagemann_2021_user" ref-type="bibr">Wagemann
+  et al., 2021</xref>;
+  <xref alt="Wagemann et al., 2022" rid="ref-wagemann_2022_FiveGuidingPrinciples" ref-type="bibr">Wagemann
+  et al., 2022</xref>).</p>
+  <p>These educational modules address this need and are guided by
+  principles identified in Diataxis
+  (<xref alt="Procida, n.d." rid="ref-Procida_Diataxis_documentation_framework" ref-type="bibr">Procida,
+  n.d.</xref>) in order to help analysts engage in data-driven
+  scientific discovery using cloud-based data and open-source tools.</p>
+</sec>
+<sec id="content">
+  <title>Content</title>
+  <p>We present two tutorials focusing on publicly available satellite
+  imagery datasets. Both types of satellite imagery featured in these
+  tutorials are 1) large in volume, 2) accessed as cloud-optimized data
+  types and making use of cloud computing resources, and 3) have
+  associated metadata that is crucial to data management and
+  interpretation but can be complicated to work with.</p>
+  <p>The tutorials discuss remote sensing principles and note
+  considerations when evaluating and interpreting data, such as
+  resolution, possible distortions, and noise. We also compare two
+  datasets derived from the same source data but created with slightly
+  different processing pipelines in order to illustrate the impact of
+  dataset selection and processing decisions on analytical outcomes.
+  Throughout both tutorials, we emphasize the steps and skills involved
+  with multi-dimensional data cube workflows and preparing data for
+  analysis.</p>
+</sec>
+<sec id="instructional-design">
+  <title>Instructional Design</title>
+  <p>We designed these tutorials to be accessible to users with various
+  experiences and backgrounds. Emphasis is placed on discussing how to
+  interact with and examine complex, cloud-optimized datasets rather
+  than simply providing example code snippets. To facilitate
+  skill-building, we include errors encountered during the development
+  of the material and illustrate their solutions. The code examples
+  contained within these tutorials highlight popular, robust, and
+  well-maintained open-source tools and software, with a strong focus on
+  the Python module Xarray, which is designed for working with
+  n-dimensional array objects and well-suited to geospatial applications
+  (<xref alt="Hoyer &amp; Hamman, 2017" rid="ref-Hoyer_Hamman_2017" ref-type="bibr">Hoyer
+  &amp; Hamman, 2017</xref>). In addition, we use technology such as
+  Jupyter Books, Jupyter Notebooks, and GitHub to make these tutorials
+  accessible, participatory, and flexible
+  (<xref alt="Executable Books Community, 2021" rid="ref-JupyterBookCommunity_2021" ref-type="bibr">Executable
+  Books Community, 2021</xref>;
+  <xref alt="Kluyver et al., 2016" rid="ref-Kluyver2016jupyter" ref-type="bibr">Kluyver
+  et al., 2016</xref>).</p>
+</sec>
+<sec id="experience-of-use-in-teaching-and-learning-situations">
+  <title>Experience of use in teaching and learning situations</title>
+  <p>We aim for these resources to benefit learners in a range of
+  settings. Anecdotally, we have been contacted by a number of
+  professors and supervisors who use the tutorials when working with
+  students. The ITS_LIVE tutorial has been successfully used as a lab
+  exercise for students in an undergraduate course on quantitative
+  methods in physical geography at the University of Utah. The
+  Sentinel-1 RTC tutorial was used in an active remote sensing course at
+  the University of Utah. At the same time, our goal is to reduce
+  barriers to engaging in the scientific process: the emphasis on
+  explanatory text and additional learning resources makes the tutorials
+  accessible to learners outside of the traditional academic setting
+  with the in-person guidance of an instructor. This includes imparting
+  the idea that it is the responsibility of the data user to understand
+  the nuances and limitations of different datasets. The modular nature
+  of the tutorials allows users to identify specific areas that may be
+  useful to them. Taken in full, the tutorials guide a novice user
+  through each step required for developing a scientific workflow, from
+  data access to exploratory analysis. We intentionally do not prescribe
+  specific conclusions, instead focusing on accessibility and giving
+  users the tools to guide their own exploration and analysis of complex
+  and exciting datasets.</p>
+  <p>A common sentiment of users learning to work with n-dimensional
+  array data, particularly in earth observation applications, is
+  difficulty experienced in the ‘data organizing’ steps of preparing a
+  dataset for analysis (usually, coercing observations segmented in time
+  and/or space into a data cube with x,y, and time dimensions)
+  (<xref alt="Marshall et al., 2023" rid="ref-Marshall_Cherian_Henderson_2023" ref-type="bibr">Marshall
+  et al., 2023</xref>). The submitted tutorials place significant focus
+  on these steps, explaining and demonstrating operations required to
+  organize data in a way that facilitates subsequent analysis.</p>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the Project</title>
+  <p>The tutorials were initially developed while Emma Marshall interned
+  with the Summer Internships in Parallel Computational Sciences
+  (SIParCS) program at the National Center for Atmospheric Research
+  (NCAR). Jessica Scheick, Scott Henderson, and Deepak Cherian were
+  internship supervisors for this project. The internship was also
+  supported by a NASA Open Source Tools, Frameworks, and Libraries
+  program (Award 80NSSC22K0345), with a specific focus on developing
+  educational resources for working with cloud-hosted data using Xarray.
+  Tutorial development continued after the conclusion of the SIParCS
+  internship and the authors have collaborated on this project in the
+  time since with Rick Forster, one of her Ph.D. supervisors, joining
+  the project. As a graduate student researcher, Emma Marshall has had
+  opportunities to incorporate the tutorials in teaching experiences as
+  well as to share them with interested students outside of classroom
+  settings.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>The NCAR SIParCS program for support during the initial development
+  of these tutorials. Professors in the Geography Department at the
+  University of Utah for tutorial feedback and the opportunity to
+  introduce the tutorials in classroom settings. Kevin Paul and Alan
+  Snow for consultation during tutorial development. Alex Gardner for
+  feedback on the use of ITS_LIVE data. Financial support from NASA Open
+  Source Tools, Frameworks, and Libraries program and Future
+  Investigators in Earth and Space System Science Fellowship program.
+  Students and Github users for their engagement with and feedback on
+  these resources.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-abernathey_2021_cloud">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Abernathey</surname><given-names>Ryan P.</given-names></name>
+        <name><surname>Augspurger</surname><given-names>Tom</given-names></name>
+        <name><surname>Banihirwe</surname><given-names>Anderson</given-names></name>
+        <name><surname>Blackmon-Luca</surname><given-names>Charles C.</given-names></name>
+        <name><surname>Crone</surname><given-names>Timothy J.</given-names></name>
+        <name><surname>Gentemann</surname><given-names>Chelle L.</given-names></name>
+        <name><surname>Hamman</surname><given-names>Joseph J.</given-names></name>
+        <name><surname>Henderson</surname><given-names>Naomi</given-names></name>
+        <name><surname>Lepore</surname><given-names>Chiara</given-names></name>
+        <name><surname>McCaie</surname><given-names>Theo A.</given-names></name>
+        <name><surname>Robinson</surname><given-names>Niall H.</given-names></name>
+        <name><surname>Signell</surname><given-names>Richard P.</given-names></name>
+      </person-group>
+      <article-title>Cloud-native repositories for big scientific data</article-title>
+      <source>Computing in Science &amp; Engineering</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>23</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.1109/MCSE.2021.3059437</pub-id>
+      <fpage>26</fpage>
+      <lpage>35</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-appel_2019_ondemand">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Appel</surname><given-names>Marius</given-names></name>
+        <name><surname>Pebesma</surname><given-names>Edzer</given-names></name>
+      </person-group>
+      <article-title>On-Demand Processing of Data Cubes from Satellite Image Collections with the gdalcubes Library</article-title>
+      <source>Data</source>
+      <year iso-8601-date="2019-06">2019</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-03-10">2025</year><month>03</month><day>10</day></date-in-citation>
+      <volume>4</volume>
+      <issue>3</issue>
+      <issn>2306-5729</issn>
+      <pub-id pub-id-type="doi">10.3390/data4030092</pub-id>
+      <fpage>92</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-baumann_2017_datacube">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Baumann</surname><given-names>Peter</given-names></name>
+      </person-group>
+      <article-title>The datacube manifesto</article-title>
+      <year iso-8601-date="2017">2017</year>
+      <uri>https://earthserver.eu/tech/datacube-manifesto/The-Datacube-Manifesto.pdf</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-gentemann_2021_science">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gentemann</surname><given-names>C. L.</given-names></name>
+        <name><surname>Holdgraf</surname><given-names>C.</given-names></name>
+        <name><surname>Abernathey</surname><given-names>R.</given-names></name>
+        <name><surname>Crichton</surname><given-names>D.</given-names></name>
+        <name><surname>Colliander</surname><given-names>J.</given-names></name>
+        <name><surname>Kearns</surname><given-names>E. J.</given-names></name>
+        <name><surname>Panda</surname><given-names>Y.</given-names></name>
+        <name><surname>Signell</surname><given-names>R. P.</given-names></name>
+      </person-group>
+      <article-title>Science Storms the Cloud</article-title>
+      <source>AGU Advances</source>
+      <year iso-8601-date="2021-06">2021</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-08-31">2023</year><month>08</month><day>31</day></date-in-citation>
+      <volume>2</volume>
+      <issue>2</issue>
+      <issn>2576-604X</issn>
+      <uri>https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020AV000354</uri>
+      <pub-id pub-id-type="doi">10.1029/2020AV000354</pub-id>
+      <fpage>e2020AV000354</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-giuliani_2019_EarthObservationOpen">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Giuliani</surname><given-names>Gregory</given-names></name>
+        <name><surname>Camara</surname><given-names>Gilberto</given-names></name>
+        <name><surname>Killough</surname><given-names>Brian</given-names></name>
+        <name><surname>Minchin</surname><given-names>Stuart</given-names></name>
+      </person-group>
+      <article-title>Earth Observation Open Science: Enhancing Reproducible Science Using Data Cubes</article-title>
+      <source>Data</source>
+      <year iso-8601-date="2019-11">2019</year><month>11</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-03-09">2025</year><month>03</month><day>09</day></date-in-citation>
+      <volume>4</volume>
+      <issue>4</issue>
+      <issn>2306-5729</issn>
+      <pub-id pub-id-type="doi">10.3390/data4040147</pub-id>
+      <fpage>147</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-guo_2017_big">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Guo</surname><given-names>Huadong</given-names></name>
+      </person-group>
+      <article-title>Big Earth data: A new frontier in Earth and information sciences</article-title>
+      <source>Big Earth Data</source>
+      <year iso-8601-date="2017-12">2017</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-03-22">2023</year><month>03</month><day>22</day></date-in-citation>
+      <volume>1</volume>
+      <issue>1-2</issue>
+      <issn>2096-4471</issn>
+      <uri>https://www.tandfonline.com/doi/full/10.1080/20964471.2017.1403062</uri>
+      <pub-id pub-id-type="doi">10.1080/20964471.2017.1403062</pub-id>
+      <fpage>4</fpage>
+      <lpage>20</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lewis_2018_CEOSAnalysisReady">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Lewis</surname><given-names>Adam</given-names></name>
+        <name><surname>Lacey</surname><given-names>Jennifer</given-names></name>
+        <name><surname>Mecklenburg</surname><given-names>Susanne</given-names></name>
+        <name><surname>Ross</surname><given-names>Jonathon</given-names></name>
+        <name><surname>Siqueira</surname><given-names>Andreia</given-names></name>
+        <name><surname>Killough</surname><given-names>Brian</given-names></name>
+        <name><surname>Szantoi</surname><given-names>Zoltan</given-names></name>
+        <name><surname>Tadono</surname><given-names>Takeo</given-names></name>
+        <name><surname>Rosenavist</surname><given-names>Ake</given-names></name>
+        <name><surname>Goryl</surname><given-names>Philippe</given-names></name>
+        <name><surname>Miranda</surname><given-names>Nuno</given-names></name>
+        <name><surname>Hosford</surname><given-names>Steven</given-names></name>
+      </person-group>
+      <article-title>CEOS Analysis Ready Data for Land (CARD4L) Overview</article-title>
+      <source>IGARSS 2018 - 2018 IEEE International Geoscience and Remote Sensing Symposium</source>
+      <publisher-name>IEEE</publisher-name>
+      <publisher-loc>Valencia</publisher-loc>
+      <year iso-8601-date="2018-07">2018</year><month>07</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-03-10">2025</year><month>03</month><day>10</day></date-in-citation>
+      <isbn>978-1-5386-7150-4</isbn>
+      <pub-id pub-id-type="doi">10.1109/IGARSS.2018.8519255</pub-id>
+      <fpage>7407</fpage>
+      <lpage>7410</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lund_2020_snowmelt">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lund</surname><given-names>Jewell</given-names></name>
+        <name><surname>Forster</surname><given-names>Richard R.</given-names></name>
+        <name><surname>Rupper</surname><given-names>Summer B.</given-names></name>
+        <name><surname>Deeb</surname><given-names>Elias J.</given-names></name>
+        <name><surname>Marshall</surname><given-names>H. P.</given-names></name>
+        <name><surname>Hashmi</surname><given-names>Muhammad Zia</given-names></name>
+        <name><surname>Burgess</surname><given-names>Evan</given-names></name>
+      </person-group>
+      <article-title>Mapping snowmelt progression in the upper indus basin with synthetic aperture radar</article-title>
+      <source>Frontiers in Earth Science</source>
+      <year iso-8601-date="2020">2020</year>
+      <volume>7</volume>
+      <issn>2296-6463</issn>
+      <pub-id pub-id-type="doi">10.3389/feart.2019.00318</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-mahecha_2020_EarthSystemData">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Mahecha</surname><given-names>Miguel D.</given-names></name>
+        <name><surname>Gans</surname><given-names>Fabian</given-names></name>
+        <name><surname>Brandt</surname><given-names>Gunnar</given-names></name>
+        <name><surname>Christiansen</surname><given-names>Rune</given-names></name>
+        <name><surname>Cornell</surname><given-names>Sarah E.</given-names></name>
+        <name><surname>Fomferra</surname><given-names>Normann</given-names></name>
+        <name><surname>Kraemer</surname><given-names>Guido</given-names></name>
+        <name><surname>Peters</surname><given-names>Jonas</given-names></name>
+        <name><surname>Bodesheim</surname><given-names>Paul</given-names></name>
+        <name><surname>Camps-Valls</surname><given-names>Gustau</given-names></name>
+        <name><surname>Donges</surname><given-names>Jonathan F.</given-names></name>
+        <name><surname>Dorigo</surname><given-names>Wouter</given-names></name>
+        <name><surname>Estupinan-Suarez</surname><given-names>Lina M.</given-names></name>
+        <name><surname>Gutierrez-Velez</surname><given-names>Victor H.</given-names></name>
+        <name><surname>Gutwin</surname><given-names>Martin</given-names></name>
+        <name><surname>Jung</surname><given-names>Martin</given-names></name>
+        <name><surname>Londoño</surname><given-names>Maria C.</given-names></name>
+        <name><surname>Miralles</surname><given-names>Diego G.</given-names></name>
+        <name><surname>Papastefanou</surname><given-names>Phillip</given-names></name>
+        <name><surname>Reichstein</surname><given-names>Markus</given-names></name>
+      </person-group>
+      <article-title>Earth system data cubes unravel global multivariate dynamics</article-title>
+      <source>Earth System Dynamics</source>
+      <year iso-8601-date="2020-02">2020</year><month>02</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-03-10">2025</year><month>03</month><day>10</day></date-in-citation>
+      <volume>11</volume>
+      <issue>1</issue>
+      <issn>2190-4987</issn>
+      <pub-id pub-id-type="doi">10.5194/esd-11-201-2020</pub-id>
+      <fpage>201</fpage>
+      <lpage>234</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-mathieu_2017_esas">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Mathieu</surname><given-names>Pierre-Philippe</given-names></name>
+        <name><surname>Borgeaud</surname><given-names>Maurice</given-names></name>
+        <name><surname>Desnos</surname><given-names>Yves-Louis</given-names></name>
+        <name><surname>Rast</surname><given-names>Michael</given-names></name>
+        <name><surname>Brockmann</surname><given-names>Carsten</given-names></name>
+        <name><surname>See</surname><given-names>Linda</given-names></name>
+        <name><surname>Kapur</surname><given-names>Ravi</given-names></name>
+        <name><surname>Mahecha</surname><given-names>Miguel</given-names></name>
+        <name><surname>Benz</surname><given-names>Ursula</given-names></name>
+        <name><surname>Fritz</surname><given-names>Steffen</given-names></name>
+      </person-group>
+      <article-title>The ESA’s Earth Observation Open Science Program [Space Agencies]</article-title>
+      <source>IEEE Geoscience and Remote Sensing Magazine</source>
+      <year iso-8601-date="2017-06">2017</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-19">2024</year><month>01</month><day>19</day></date-in-citation>
+      <volume>5</volume>
+      <issue>2</issue>
+      <issn>2168-6831</issn>
+      <uri>http://ieeexplore.ieee.org/document/7946222/</uri>
+      <pub-id pub-id-type="doi">10.1109/MGRS.2017.2688704</pub-id>
+      <fpage>86</fpage>
+      <lpage>96</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-montero_2024_EarthSystemData">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Montero</surname><given-names>David</given-names></name>
+        <name><surname>Kraemer</surname><given-names>Guido</given-names></name>
+        <name><surname>Anghelea</surname><given-names>Anca</given-names></name>
+        <name><surname>Aybar</surname><given-names>César</given-names></name>
+        <name><surname>Brandt</surname><given-names>Gunnar</given-names></name>
+        <name><surname>Camps-Valls</surname><given-names>Gustau</given-names></name>
+        <name><surname>Cremer</surname><given-names>Felix</given-names></name>
+        <name><surname>Flik</surname><given-names>Ida</given-names></name>
+        <name><surname>Gans</surname><given-names>Fabian</given-names></name>
+        <name><surname>Habershon</surname><given-names>Sarah</given-names></name>
+        <name><surname>Ji</surname><given-names>Chaonan</given-names></name>
+        <name><surname>Kattenborn</surname><given-names>Teja</given-names></name>
+        <name><surname>Martínez-Ferrer</surname><given-names>Laura</given-names></name>
+        <name><surname>Martinuzzi</surname><given-names>Francesco</given-names></name>
+        <name><surname>Reinhardt</surname><given-names>Martin</given-names></name>
+        <name><surname>Söchting</surname><given-names>Maximilian</given-names></name>
+        <name><surname>Teber</surname><given-names>Khalil</given-names></name>
+        <name><surname>Mahecha</surname><given-names>Miguel D.</given-names></name>
+      </person-group>
+      <article-title>Earth System Data Cubes: Avenues for advancing Earth system research</article-title>
+      <source>Environmental Data Science</source>
+      <year iso-8601-date="2024">2024</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-03-08">2025</year><month>03</month><day>08</day></date-in-citation>
+      <volume>3</volume>
+      <issn>2634-4602</issn>
+      <pub-id pub-id-type="doi">10.1017/eds.2024.22</pub-id>
+      <fpage>e27</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-palumbo_2017_building">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Palumbo</surname><given-names>Ilaria</given-names></name>
+        <name><surname>Rose</surname><given-names>Robert A.</given-names></name>
+        <name><surname>Headley</surname><given-names>Rachel M. K.</given-names></name>
+        <name><surname>Nackoney</surname><given-names>Janet</given-names></name>
+        <name><surname>Vodacek</surname><given-names>Anthony</given-names></name>
+        <name><surname>Wegmann</surname><given-names>Martin</given-names></name>
+      </person-group>
+      <article-title>Building capacity in remote sensing for conservation: Present and future challenges</article-title>
+      <source>Remote Sensing in Ecology and Conservation</source>
+      <person-group person-group-type="editor">
+        <name><surname>Nagendra</surname><given-names>Harini</given-names></name>
+        <name><surname>Rocchini</surname><given-names>Duccio</given-names></name>
+      </person-group>
+      <year iso-8601-date="2017-03">2017</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-19">2024</year><month>01</month><day>19</day></date-in-citation>
+      <volume>3</volume>
+      <issue>1</issue>
+      <issn>2056-3485</issn>
+      <uri>https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.31</uri>
+      <pub-id pub-id-type="doi">10.1002/rse2.31</pub-id>
+      <fpage>21</fpage>
+      <lpage>29</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-radocaj_2020_global">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Radočaj</surname><given-names>Dorijan</given-names></name>
+        <name><surname>Obhođaš</surname><given-names>Jasmina</given-names></name>
+        <name><surname>Jurišić</surname><given-names>Mladen</given-names></name>
+        <name><surname>Gašparović</surname><given-names>Mateo</given-names></name>
+      </person-group>
+      <article-title>Global Open Data Remote Sensing Satellite Missions for Land Monitoring and Conservation: A Review</article-title>
+      <source>Land</source>
+      <year iso-8601-date="2020-10">2020</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-19">2024</year><month>01</month><day>19</day></date-in-citation>
+      <volume>9</volume>
+      <issue>11</issue>
+      <issn>2073-445X</issn>
+      <uri>https://www.mdpi.com/2073-445X/9/11/402</uri>
+      <pub-id pub-id-type="doi">10.3390/land9110402</pub-id>
+      <fpage>402</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ramachandran_2021_open">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ramachandran</surname><given-names>Rahul</given-names></name>
+        <name><surname>Bugbee</surname><given-names>Kaylin</given-names></name>
+        <name><surname>Murphy</surname><given-names>Kevin</given-names></name>
+      </person-group>
+      <article-title>From Open Data to Open Science</article-title>
+      <source>Earth and Space Science</source>
+      <year iso-8601-date="2021-05">2021</year><month>05</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-03-22">2023</year><month>03</month><day>22</day></date-in-citation>
+      <volume>8</volume>
+      <issue>5</issue>
+      <issn>2333-5084</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1029/2020EA001562</uri>
+      <pub-id pub-id-type="doi">10.1029/2020EA001562</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Sudmanns_2020_big">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Martin Sudmanns</surname><given-names>Stefan Lang</given-names><suffix>Dirk Tiede</suffix></name>
+        <name><surname>Blaschke</surname><given-names>Thomas</given-names></name>
+      </person-group>
+      <article-title>Big Earth data: Disruptive changes in Earth observation data management and analysis?</article-title>
+      <source>International Journal of Digital Earth</source>
+      <publisher-name>Taylor &amp; Francis</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume>13</volume>
+      <issue>7</issue>
+      <pub-id pub-id-type="doi">10.1080/17538947.2019.1585976</pub-id>
+      <fpage>832</fpage>
+      <lpage>850</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-truckenbrodt_2019_Sentinel1ARD">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Truckenbrodt</surname><given-names>John</given-names></name>
+        <name><surname>Freemantle</surname><given-names>Terri</given-names></name>
+        <name><surname>Williams</surname><given-names>Chris</given-names></name>
+        <name><surname>Jones</surname><given-names>Tom</given-names></name>
+        <name><surname>Small</surname><given-names>David</given-names></name>
+        <name><surname>Dubois</surname><given-names>Clémence</given-names></name>
+        <name><surname>Thiel</surname><given-names>Christian</given-names></name>
+        <name><surname>Rossi</surname><given-names>Cristian</given-names></name>
+        <name><surname>Syriou</surname><given-names>Asimina</given-names></name>
+        <name><surname>Giuliani</surname><given-names>Gregory</given-names></name>
+      </person-group>
+      <article-title>Towards Sentinel-1 SAR Analysis-Ready Data: A Best Practices Assessment on Preparing Backscatter Data for the Cube</article-title>
+      <source>Data</source>
+      <year iso-8601-date="2019-07">2019</year><month>07</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-03-09">2025</year><month>03</month><day>09</day></date-in-citation>
+      <volume>4</volume>
+      <issue>3</issue>
+      <issn>2306-5729</issn>
+      <pub-id pub-id-type="doi">10.3390/data4030093</pub-id>
+      <fpage>93</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-wagemann_2021_user">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wagemann</surname><given-names>Julia</given-names></name>
+        <name><surname>Siemen</surname><given-names>Stephan</given-names></name>
+        <name><surname>Seeger</surname><given-names>Bernhard</given-names></name>
+        <name><surname>Bendix</surname><given-names>Jörg</given-names></name>
+      </person-group>
+      <article-title>A user perspective on future cloud-based services for Big Earth data</article-title>
+      <source>International Journal of Digital Earth</source>
+      <year iso-8601-date="2021-12">2021</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-01-19">2024</year><month>01</month><day>19</day></date-in-citation>
+      <volume>14</volume>
+      <issue>12</issue>
+      <issn>1753-8947</issn>
+      <uri>https://www.tandfonline.com/doi/full/10.1080/17538947.2021.1982031</uri>
+      <pub-id pub-id-type="doi">10.1080/17538947.2021.1982031</pub-id>
+      <fpage>1758</fpage>
+      <lpage>1774</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-wagemann_2022_FiveGuidingPrinciples">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wagemann</surname><given-names>Julia</given-names></name>
+        <name><surname>Fierli</surname><given-names>Federico</given-names></name>
+        <name><surname>Mantovani</surname><given-names>Simone</given-names></name>
+        <name><surname>Siemen</surname><given-names>Stephan</given-names></name>
+        <name><surname>Seeger</surname><given-names>Bernhard</given-names></name>
+        <name><surname>Bendix</surname><given-names>Jörg</given-names></name>
+      </person-group>
+      <article-title>Five Guiding Principles to Make Jupyter Notebooks Fit for Earth Observation Data Education</article-title>
+      <source>Remote Sensing</source>
+      <year iso-8601-date="2022-07">2022</year><month>07</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-04-28">2025</year><month>04</month><day>28</day></date-in-citation>
+      <volume>14</volume>
+      <issue>14</issue>
+      <issn>2072-4292</issn>
+      <pub-id pub-id-type="doi">10.3390/rs14143359</pub-id>
+      <fpage>3359</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Gardner_Scambos_2022">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Gardner</surname><given-names>M. Fahnestock</given-names><suffix>A.</suffix></name>
+        <name><surname>Scambos</surname><given-names>T.</given-names></name>
+      </person-group>
+      <article-title>MEaSUREs ITS_LIVE landsat image-pair glacier and ice sheet surface velocities, version 1</article-title>
+      <publisher-name>NASA National Snow; Ice Data Center Distributed Active Archive Center</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://nsidc.org/data/NSIDC-0775/versions/1</uri>
+      <pub-id pub-id-type="doi">10.5067/IMR9D3PEI28U</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-RGI_Consortium_2023">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>RGI Consortium</surname><given-names>.</given-names></name>
+      </person-group>
+      <article-title>Randolph glacier inventory - a dataset of global glacier outlines, version 7</article-title>
+      <publisher-name>National Snow; Ice Data Center</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://nsidc.org/data/NSIDC-0770/versions/7</uri>
+      <pub-id pub-id-type="doi">10.5067/F6JMOVY5NAVZ</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-ASF_Sentinel1">
+    <element-citation>
+      <article-title>Sentinel-1 sentinel-1 RTC product guide</article-title>
+      <publisher-name>Alaska Satellite Facility Distributed Active Archive Center</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://hyp3-docs.asf.alaska.edu/guides/rtc_product_guide/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Procida_Diataxis_documentation_framework">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Procida</surname><given-names>Daniele</given-names></name>
+      </person-group>
+      <article-title>Diátaxis documentation framework</article-title>
+      <uri>https://diataxis.fr/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Marshall_Cherian_Henderson_2023">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Marshall</surname><given-names>Emma</given-names></name>
+        <name><surname>Cherian</surname><given-names>Deepak</given-names></name>
+        <name><surname>Henderson</surname><given-names>Scott</given-names></name>
+      </person-group>
+      <article-title>Tidy geospatial data cubes</article-title>
+      <publisher-name>SciPy Conference 2023</publisher-name>
+      <year iso-8601-date="2023-08">2023</year><month>08</month>
+      <uri>https://doi.org/10.25080/gerudo-f2bc6f59-034</uri>
+      <pub-id pub-id-type="doi">10.25080/gerudo-f2bc6f59-034</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Kluyver2016jupyter">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kluyver</surname><given-names>Thomas</given-names></name>
+        <name><surname>Ragan-Kelley</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Pérez</surname><given-names>Fernando</given-names></name>
+        <name><surname>Granger</surname><given-names>Brian</given-names></name>
+        <name><surname>Bussonnier</surname><given-names>Matthias</given-names></name>
+        <name><surname>Frederic</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Kelley</surname><given-names>Kyle</given-names></name>
+        <name><surname>Hamrick</surname><given-names>Jessica</given-names></name>
+        <name><surname>Grout</surname><given-names>Jason</given-names></name>
+        <name><surname>Corlay</surname><given-names>Sylvain</given-names></name>
+        <name><surname>Ivanov</surname><given-names>Paul</given-names></name>
+        <name><surname>Avila</surname><given-names>Damián</given-names></name>
+        <name><surname>Abdalla</surname><given-names>Safia</given-names></name>
+        <name><surname>Willing</surname><given-names>Carol</given-names></name>
+      </person-group>
+      <article-title>Jupyter notebooks – a publishing format for reproducible computational workflows</article-title>
+      <person-group person-group-type="editor">
+        <name><surname>Loizides</surname><given-names>F.</given-names></name>
+        <name><surname>Schmidt</surname><given-names>B.</given-names></name>
+      </person-group>
+      <publisher-name>IOS Press</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <uri>https://ebooks.iospress.nl/publication/42900</uri>
+      <pub-id pub-id-type="doi">10.3233/978-1-61499-649-1-87</pub-id>
+      <fpage>87 </fpage>
+      <lpage> 90</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Caswell_Droettboom_Lee_Andrade_Hoffmann_Hunter_Klymak_Firing_Stansby_Varoquaux_etal_2021">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Caswell</surname><given-names>Thomas A.</given-names></name>
+        <name><surname>Droettboom</surname><given-names>Michael</given-names></name>
+        <name><surname>Lee</surname><given-names>Antony</given-names></name>
+        <name><surname>Andrade</surname><given-names>Elliott Sales de</given-names></name>
+        <name><surname>Hoffmann</surname><given-names>Tim</given-names></name>
+        <name><surname>Hunter</surname><given-names>John</given-names></name>
+        <name><surname>Klymak</surname><given-names>Jody</given-names></name>
+        <name><surname>Firing</surname><given-names>Eric</given-names></name>
+        <name><surname>Stansby</surname><given-names>David</given-names></name>
+        <name><surname>Varoquaux</surname><given-names>Nelle</given-names></name>
+        <name><surname>Nielsen</surname><given-names>Jens Hedegaard</given-names></name>
+        <name><surname>Root</surname><given-names>Benjamin</given-names></name>
+        <name><surname>May</surname><given-names>Ryan</given-names></name>
+        <name><surname>Elson</surname><given-names>Phil</given-names></name>
+        <name><surname>Seppänen</surname><given-names>Jouni K.</given-names></name>
+        <name><surname>Dale</surname><given-names>Darren</given-names></name>
+        <name><surname>Lee</surname><given-names>Jae-Joon</given-names></name>
+        <name><surname>McDougall</surname><given-names>Damon</given-names></name>
+        <name><surname>Straw</surname><given-names>Andrew</given-names></name>
+        <name><surname>Hobson</surname><given-names>Paul</given-names></name>
+        <name><surname>hannah</surname></name>
+        <name><surname>Gohlke</surname><given-names>Christoph</given-names></name>
+        <name><surname>Vincent</surname><given-names>Adrien F.</given-names></name>
+        <name><surname>Yu</surname><given-names>Tony S.</given-names></name>
+        <name><surname>Ma</surname><given-names>Eric</given-names></name>
+        <name><surname>Silvester</surname><given-names>Steven</given-names></name>
+        <name><surname>Moad</surname><given-names>Charlie</given-names></name>
+        <name><surname>Kniazev</surname><given-names>Nikita</given-names></name>
+        <name><surname>Ernest</surname><given-names>Elan</given-names></name>
+        <name><surname>Ivanov</surname><given-names>Paul</given-names></name>
+      </person-group>
+      <article-title>Matplotlib/matplotlib: REL: v3.5.1</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2021-12">2021</year><month>12</month>
+      <uri>https://doi.org/10.5281/zenodo.5773480</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.5773480</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-JupyterBookCommunity_2021">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>Executable Books Community</string-name>
+      </person-group>
+      <article-title>Jupyter book</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2021-02">2021</year><month>02</month>
+      <uri>https://doi.org/10.5281/zenodo.4539666</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.4539666</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Gillies_van_der_Wel_Van_den_Bossche_Taves_Arnott_Ward_others_2022">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Gillies</surname><given-names>Sean</given-names></name>
+        <name><surname>Wel</surname><given-names>Casper van der</given-names></name>
+        <name><surname>Van den Bossche</surname><given-names>Joris</given-names></name>
+        <name><surname>Taves</surname><given-names>Mike W.</given-names></name>
+        <name><surname>Arnott</surname><given-names>Joshua</given-names></name>
+        <name><surname>Ward</surname><given-names>Brendan C.</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Shapely</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2022-12">2022</year><month>12</month>
+      <uri>https://doi.org/10.5281/zenodo.7428463</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.7428463</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Hoyer_Hamman_2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hoyer</surname><given-names>Stephan</given-names></name>
+        <name><surname>Hamman</surname><given-names>Joe</given-names></name>
+      </person-group>
+      <article-title>Xarray: N-d labeled arrays and datasets in python</article-title>
+      <source>Journal of Open Research Software</source>
+      <year iso-8601-date="2017-04">2017</year><month>04</month>
+      <volume>5</volume>
+      <issue>1</issue>
+      <issn>2049-9647</issn>
+      <uri>https://openresearchsoftware.metajnl.com/article/10.5334/jors.148/</uri>
+      <pub-id pub-id-type="doi">10.5334/jors.148</pub-id>
+      <fpage>10</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Jordahl_Bossche_Fleischmann_McBride_Wasserman_Badaracco_Gerard_Snow_Tratner_Perry_etal_2021">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Jordahl</surname><given-names>Kelsey</given-names></name>
+        <name><surname>Bossche</surname><given-names>Joris Van den</given-names></name>
+        <name><surname>Fleischmann</surname><given-names>Martin</given-names></name>
+        <name><surname>McBride</surname><given-names>James</given-names></name>
+        <name><surname>Wasserman</surname><given-names>Jacob</given-names></name>
+        <name><surname>Badaracco</surname><given-names>Adrian Garcia</given-names></name>
+        <name><surname>Gerard</surname><given-names>Jeffrey</given-names></name>
+        <name><surname>Snow</surname><given-names>Alan D.</given-names></name>
+        <name><surname>Tratner</surname><given-names>Jeff</given-names></name>
+        <name><surname>Perry</surname><given-names>Matthew</given-names></name>
+        <name><surname>Farmer</surname><given-names>Carson</given-names></name>
+        <name><surname>Hjelle</surname><given-names>Geir Arne</given-names></name>
+        <name><surname>Cochran</surname><given-names>Micah</given-names></name>
+        <name><surname>Gillies</surname><given-names>Sean</given-names></name>
+        <name><surname>Culbertson</surname><given-names>Lucas</given-names></name>
+        <name><surname>Bartos</surname><given-names>Matt</given-names></name>
+        <name><surname>Ward</surname><given-names>Brendan</given-names></name>
+        <name><surname>Caria</surname><given-names>Giacomo</given-names></name>
+        <name><surname>Taves</surname><given-names>Mike</given-names></name>
+        <name><surname>Eubank</surname><given-names>Nick</given-names></name>
+        <name><surname>sangarshanan</surname></name>
+        <name><surname>Flavin</surname><given-names>John</given-names></name>
+        <name><surname>Richards</surname><given-names>Matt</given-names></name>
+        <name><surname>Rey</surname><given-names>Sergio</given-names></name>
+        <name><surname>maxalbert</surname></name>
+        <name><surname>Bilogur</surname><given-names>Aleksey</given-names></name>
+        <name><surname>Ren</surname><given-names>Christopher</given-names></name>
+        <name><surname>Arribas-Bel</surname><given-names>Dani</given-names></name>
+        <name><surname>Mesejo-León</surname><given-names>Daniel</given-names></name>
+        <name><surname>Wasser</surname><given-names>Leah</given-names></name>
+      </person-group>
+      <article-title>Geopandas/geopandas: v0.10.0</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2021-10">2021</year><month>10</month>
+      <uri>https://doi.org/10.5281/zenodo.5546558</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.5546558</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Miles_Kirkham_Durant_Bourbeau_Onalan_Hamman_Patel_shikharsg_Rocklin_dussin_etal_2020">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Miles</surname><given-names>Alistair</given-names></name>
+        <name><surname>Kirkham</surname><given-names>John</given-names></name>
+        <name><surname>Durant</surname><given-names>Martin</given-names></name>
+        <name><surname>Bourbeau</surname><given-names>James</given-names></name>
+        <name><surname>Onalan</surname><given-names>Tarik</given-names></name>
+        <name><surname>Hamman</surname><given-names>Joe</given-names></name>
+        <name><surname>Patel</surname><given-names>Zain</given-names></name>
+        <name><surname>shikharsg</surname></name>
+        <name><surname>Rocklin</surname><given-names>Matthew</given-names></name>
+        <name><surname>dussin</surname><given-names>raphael</given-names></name>
+        <name><surname>Schut</surname><given-names>Vincent</given-names></name>
+        <name><surname>Andrade</surname><given-names>Elliott Sales de</given-names></name>
+        <name><surname>Abernathey</surname><given-names>Ryan</given-names></name>
+        <name><surname>Noyes</surname><given-names>Charles</given-names></name>
+        <name><surname>sbalmer</surname></name>
+        <name><surname>bot</surname><given-names>pyup io</given-names></name>
+        <name><surname>Tran</surname><given-names>Tommy</given-names></name>
+        <name><surname>Saalfeld</surname><given-names>Stephan</given-names></name>
+        <name><surname>Swaney</surname><given-names>Justin</given-names></name>
+        <name><surname>Moore</surname><given-names>Josh</given-names></name>
+        <name><surname>Jevnik</surname><given-names>Joe</given-names></name>
+        <name><surname>Kelleher</surname><given-names>Jerome</given-names></name>
+        <name><surname>Funke</surname><given-names>Jan</given-names></name>
+        <name><surname>Sakkis</surname><given-names>George</given-names></name>
+        <name><surname>Barnes</surname><given-names>Chris</given-names></name>
+        <name><surname>Banihirwe</surname><given-names>Anderson</given-names></name>
+      </person-group>
+      <article-title>Zarr-developers/zarr-python: v2.4.0</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2020-04">2020</year><month>04</month>
+      <uri>https://doi.org/10.5281/zenodo.3773450</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.3773450</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Snow_Brochart_Raspaud_Taves_Bell_RichardScottOZ_Chegini_Amici_Braun_Annex_etal_2022">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Snow</surname><given-names>Alan D.</given-names></name>
+        <name><surname>Brochart</surname><given-names>David</given-names></name>
+        <name><surname>Raspaud</surname><given-names>Martin</given-names></name>
+        <name><surname>Taves</surname><given-names>Mike</given-names></name>
+        <name><surname>Bell</surname><given-names>Ray</given-names></name>
+        <name><surname>RichardScottOZ</surname></name>
+        <name><surname>Chegini</surname><given-names>Taher</given-names></name>
+        <name><surname>Amici</surname><given-names>Alessandro</given-names></name>
+        <name><surname>Braun</surname><given-names>Rémi</given-names></name>
+        <name><surname>Annex</surname><given-names>Andrew</given-names></name>
+        <name><surname>Brandt</surname><given-names>Carlos H.</given-names></name>
+        <name><surname>Hoese</surname><given-names>David</given-names></name>
+        <name><surname>Bunt</surname><given-names>Fred</given-names></name>
+        <name><surname>GBallesteros</surname></name>
+        <name><surname>Scheick</surname><given-names>Jessica</given-names></name>
+        <name><surname>Hamman</surname><given-names>Joe</given-names></name>
+        <name><surname>jonasViehweger</surname></name>
+        <name><surname>Zehner</surname><given-names>Markus</given-names></name>
+        <name><surname>Cordeiro</surname><given-names>Mauricio</given-names></name>
+        <name><surname>Henderson</surname><given-names>Scott</given-names></name>
+        <name><surname>Miller</surname><given-names>Seth</given-names></name>
+        <name><surname>Badger</surname><given-names>The Gitter</given-names></name>
+        <name><surname>Augspurger</surname><given-names>Tom</given-names></name>
+        <name><surname>apiwat-chantawibul</surname></name>
+        <name><surname>pmallas</surname></name>
+      </person-group>
+      <article-title>Corteva/rioxarray: 0.12.1</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2022-09">2022</year><month>09</month>
+      <uri>https://doi.org/10.5281/zenodo.7080195</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.7080195</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Source_McFarland_Emanuele_Morris_Augspurger_2022">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>Microsoft Open Source</string-name>
+        <name><surname>McFarland</surname><given-names>Matt</given-names></name>
+        <name><surname>Emanuele</surname><given-names>Rob</given-names></name>
+        <name><surname>Morris</surname><given-names>Dan</given-names></name>
+        <name><surname>Augspurger</surname><given-names>Tom</given-names></name>
+      </person-group>
+      <article-title>Microsoft/PlanetaryComputer: October 2022</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2022-10">2022</year><month>10</month>
+      <uri>https://doi.org/10.5281/zenodo.7261897</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.7261897</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pandasteam_2024">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>The pandas development team</string-name>
+      </person-group>
+      <article-title>Pandas-dev/pandas: Pandas</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2024-01">2024</year><month>01</month>
+      <pub-id pub-id-type="doi">10.5281/zenodo.10537285</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-mckinney-proc-scipy-2010">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>McKinney</surname></name>
+      </person-group>
+      <article-title>Data Structures for Statistical Computing in Python</article-title>
+      <source>Proceedings of the 9th Python in Science Conference</source>
+      <person-group person-group-type="editor">
+        <name><surname>Walt</surname></name>
+        <name><surname>Millman</surname></name>
+      </person-group>
+      <year iso-8601-date="2010">2010</year>
+      <pub-id pub-id-type="doi">10.25080/Majora-92bf1922-00a</pub-id>
+      <fpage>56 </fpage>
+      <lpage> 61</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-DaskLibrary">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Rocklin</surname></name>
+      </person-group>
+      <article-title>Dask: Parallel Computation with Blocked algorithms and Task Scheduling</article-title>
+      <source>Proceedings of the 14th Python in Science Conference</source>
+      <person-group person-group-type="editor">
+        <name><surname>Huff</surname></name>
+        <name><surname>Bergstra</surname></name>
+      </person-group>
+      <year iso-8601-date="2015">2015</year>
+      <pub-id pub-id-type="doi">10.25080/Majora-7b98e3ed-013</pub-id>
+      <fpage>126 </fpage>
+      <lpage> 132</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20250704112315-966325cf37e1827440d3f1f607acd9945699c4cd</doi_batch_id>
+    <timestamp>20250704112315</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>07</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>89</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Cloud-native geospatial data cube workflows with open-source tools</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Emma</given_name>
+            <surname>Marshall</surname>
+            <affiliations>
+              <institution><institution_name>University of Utah</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-6348-977X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Deepak</given_name>
+            <surname>Cherian</surname>
+            <affiliations>
+              <institution><institution_name>Earthmover PBC</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-6861-8734</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Scott</given_name>
+            <surname>Henderson</surname>
+            <affiliations>
+              <institution><institution_name>University of Washington, @uwescience</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0624-4965</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Jessica</given_name>
+            <surname>Scheick</surname>
+            <affiliations>
+              <institution><institution_name>University of New Hampshire</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-3421-4459</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Richard</given_name>
+            <surname>Forster</surname>
+            <affiliations>
+              <institution><institution_name>University of Utah</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3945-5072</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>07</month>
+          <day>04</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>267</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00267</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.15594587</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/267</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00267</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00267</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00267.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="abernathey_2021_cloud">
+            <article_title>Cloud-native repositories for big scientific data</article_title>
+            <author>Abernathey</author>
+            <journal_title>Computing in Science &amp; Engineering</journal_title>
+            <issue>2</issue>
+            <volume>23</volume>
+            <doi>10.1109/MCSE.2021.3059437</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Abernathey, R. P., Augspurger, T., Banihirwe, A., Blackmon-Luca, C. C., Crone, T. J., Gentemann, C. L., Hamman, J. J., Henderson, N., Lepore, C., McCaie, T. A., Robinson, N. H., &amp; Signell, R. P. (2021). Cloud-native repositories for big scientific data. Computing in Science &amp; Engineering, 23(2), 26–35. https://doi.org/10.1109/MCSE.2021.3059437</unstructured_citation>
+          </citation>
+          <citation key="appel_2019_ondemand">
+            <article_title>On-Demand Processing of Data Cubes from Satellite Image Collections with the gdalcubes Library</article_title>
+            <author>Appel</author>
+            <journal_title>Data</journal_title>
+            <issue>3</issue>
+            <volume>4</volume>
+            <doi>10.3390/data4030092</doi>
+            <issn>2306-5729</issn>
+            <cYear>2019</cYear>
+            <unstructured_citation>Appel, M., &amp; Pebesma, E. (2019). On-Demand Processing of Data Cubes from Satellite Image Collections with the gdalcubes Library. Data, 4(3), 92. https://doi.org/10.3390/data4030092</unstructured_citation>
+          </citation>
+          <citation key="baumann_2017_datacube">
+            <article_title>The datacube manifesto</article_title>
+            <author>Baumann</author>
+            <cYear>2017</cYear>
+            <unstructured_citation>Baumann, P. (2017). The datacube manifesto. https://earthserver.eu/tech/datacube-manifesto/The-Datacube-Manifesto.pdf</unstructured_citation>
+          </citation>
+          <citation key="gentemann_2021_science">
+            <article_title>Science Storms the Cloud</article_title>
+            <author>Gentemann</author>
+            <journal_title>AGU Advances</journal_title>
+            <issue>2</issue>
+            <volume>2</volume>
+            <doi>10.1029/2020AV000354</doi>
+            <issn>2576-604X</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Gentemann, C. L., Holdgraf, C., Abernathey, R., Crichton, D., Colliander, J., Kearns, E. J., Panda, Y., &amp; Signell, R. P. (2021). Science Storms the Cloud. AGU Advances, 2(2), e2020AV000354. https://doi.org/10.1029/2020AV000354</unstructured_citation>
+          </citation>
+          <citation key="giuliani_2019_EarthObservationOpen">
+            <article_title>Earth Observation Open Science: Enhancing Reproducible Science Using Data Cubes</article_title>
+            <author>Giuliani</author>
+            <journal_title>Data</journal_title>
+            <issue>4</issue>
+            <volume>4</volume>
+            <doi>10.3390/data4040147</doi>
+            <issn>2306-5729</issn>
+            <cYear>2019</cYear>
+            <unstructured_citation>Giuliani, G., Camara, G., Killough, B., &amp; Minchin, S. (2019). Earth Observation Open Science: Enhancing Reproducible Science Using Data Cubes. Data, 4(4), 147. https://doi.org/10.3390/data4040147</unstructured_citation>
+          </citation>
+          <citation key="guo_2017_big">
+            <article_title>Big Earth data: A new frontier in Earth and information sciences</article_title>
+            <author>Guo</author>
+            <journal_title>Big Earth Data</journal_title>
+            <issue>1-2</issue>
+            <volume>1</volume>
+            <doi>10.1080/20964471.2017.1403062</doi>
+            <issn>2096-4471</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Guo, H. (2017). Big Earth data: A new frontier in Earth and information sciences. Big Earth Data, 1(1-2), 4–20. https://doi.org/10.1080/20964471.2017.1403062</unstructured_citation>
+          </citation>
+          <citation key="lewis_2018_CEOSAnalysisReady">
+            <article_title>CEOS Analysis Ready Data for Land (CARD4L) Overview</article_title>
+            <author>Lewis</author>
+            <journal_title>IGARSS 2018 - 2018 IEEE International Geoscience and Remote Sensing Symposium</journal_title>
+            <doi>10.1109/IGARSS.2018.8519255</doi>
+            <isbn>978-1-5386-7150-4</isbn>
+            <cYear>2018</cYear>
+            <unstructured_citation>Lewis, A., Lacey, J., Mecklenburg, S., Ross, J., Siqueira, A., Killough, B., Szantoi, Z., Tadono, T., Rosenavist, A., Goryl, P., Miranda, N., &amp; Hosford, S. (2018). CEOS Analysis Ready Data for Land (CARD4L) Overview. IGARSS 2018 - 2018 IEEE International Geoscience and Remote Sensing Symposium, 7407–7410. https://doi.org/10.1109/IGARSS.2018.8519255</unstructured_citation>
+          </citation>
+          <citation key="lund_2020_snowmelt">
+            <article_title>Mapping snowmelt progression in the upper indus basin with synthetic aperture radar</article_title>
+            <author>Lund</author>
+            <journal_title>Frontiers in Earth Science</journal_title>
+            <volume>7</volume>
+            <doi>10.3389/feart.2019.00318</doi>
+            <issn>2296-6463</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Lund, J., Forster, R. R., Rupper, S. B., Deeb, E. J., Marshall, H. P., Hashmi, M. Z., &amp; Burgess, E. (2020). Mapping snowmelt progression in the upper indus basin with synthetic aperture radar. Frontiers in Earth Science, 7. https://doi.org/10.3389/feart.2019.00318</unstructured_citation>
+          </citation>
+          <citation key="mahecha_2020_EarthSystemData">
+            <article_title>Earth system data cubes unravel global multivariate dynamics</article_title>
+            <author>Mahecha</author>
+            <journal_title>Earth System Dynamics</journal_title>
+            <issue>1</issue>
+            <volume>11</volume>
+            <doi>10.5194/esd-11-201-2020</doi>
+            <issn>2190-4987</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Mahecha, M. D., Gans, F., Brandt, G., Christiansen, R., Cornell, S. E., Fomferra, N., Kraemer, G., Peters, J., Bodesheim, P., Camps-Valls, G., Donges, J. F., Dorigo, W., Estupinan-Suarez, L. M., Gutierrez-Velez, V. H., Gutwin, M., Jung, M., Londoño, M. C., Miralles, D. G., Papastefanou, P., &amp; Reichstein, M. (2020). Earth system data cubes unravel global multivariate dynamics. Earth System Dynamics, 11(1), 201–234. https://doi.org/10.5194/esd-11-201-2020</unstructured_citation>
+          </citation>
+          <citation key="mathieu_2017_esas">
+            <article_title>The ESA’s Earth Observation Open Science Program [Space Agencies]</article_title>
+            <author>Mathieu</author>
+            <journal_title>IEEE Geoscience and Remote Sensing Magazine</journal_title>
+            <issue>2</issue>
+            <volume>5</volume>
+            <doi>10.1109/MGRS.2017.2688704</doi>
+            <issn>2168-6831</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Mathieu, P.-P., Borgeaud, M., Desnos, Y.-L., Rast, M., Brockmann, C., See, L., Kapur, R., Mahecha, M., Benz, U., &amp; Fritz, S. (2017). The ESA’s Earth Observation Open Science Program [Space Agencies]. IEEE Geoscience and Remote Sensing Magazine, 5(2), 86–96. https://doi.org/10.1109/MGRS.2017.2688704</unstructured_citation>
+          </citation>
+          <citation key="montero_2024_EarthSystemData">
+            <article_title>Earth System Data Cubes: Avenues for advancing Earth system research</article_title>
+            <author>Montero</author>
+            <journal_title>Environmental Data Science</journal_title>
+            <volume>3</volume>
+            <doi>10.1017/eds.2024.22</doi>
+            <issn>2634-4602</issn>
+            <cYear>2024</cYear>
+            <unstructured_citation>Montero, D., Kraemer, G., Anghelea, A., Aybar, C., Brandt, G., Camps-Valls, G., Cremer, F., Flik, I., Gans, F., Habershon, S., Ji, C., Kattenborn, T., Martínez-Ferrer, L., Martinuzzi, F., Reinhardt, M., Söchting, M., Teber, K., &amp; Mahecha, M. D. (2024). Earth System Data Cubes: Avenues for advancing Earth system research. Environmental Data Science, 3, e27. https://doi.org/10.1017/eds.2024.22</unstructured_citation>
+          </citation>
+          <citation key="palumbo_2017_building">
+            <article_title>Building capacity in remote sensing for conservation: Present and future challenges</article_title>
+            <author>Palumbo</author>
+            <journal_title>Remote Sensing in Ecology and Conservation</journal_title>
+            <issue>1</issue>
+            <volume>3</volume>
+            <doi>10.1002/rse2.31</doi>
+            <issn>2056-3485</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Palumbo, I., Rose, R. A., Headley, R. M. K., Nackoney, J., Vodacek, A., &amp; Wegmann, M. (2017). Building capacity in remote sensing for conservation: Present and future challenges. Remote Sensing in Ecology and Conservation, 3(1), 21–29. https://doi.org/10.1002/rse2.31</unstructured_citation>
+          </citation>
+          <citation key="radocaj_2020_global">
+            <article_title>Global Open Data Remote Sensing Satellite Missions for Land Monitoring and Conservation: A Review</article_title>
+            <author>Radočaj</author>
+            <journal_title>Land</journal_title>
+            <issue>11</issue>
+            <volume>9</volume>
+            <doi>10.3390/land9110402</doi>
+            <issn>2073-445X</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Radočaj, D., Obhođaš, J., Jurišić, M., &amp; Gašparović, M. (2020). Global Open Data Remote Sensing Satellite Missions for Land Monitoring and Conservation: A Review. Land, 9(11), 402. https://doi.org/10.3390/land9110402</unstructured_citation>
+          </citation>
+          <citation key="ramachandran_2021_open">
+            <article_title>From Open Data to Open Science</article_title>
+            <author>Ramachandran</author>
+            <journal_title>Earth and Space Science</journal_title>
+            <issue>5</issue>
+            <volume>8</volume>
+            <doi>10.1029/2020EA001562</doi>
+            <issn>2333-5084</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Ramachandran, R., Bugbee, K., &amp; Murphy, K. (2021). From Open Data to Open Science. Earth and Space Science, 8(5). https://doi.org/10.1029/2020EA001562</unstructured_citation>
+          </citation>
+          <citation key="Sudmanns_2020_big">
+            <article_title>Big Earth data: Disruptive changes in Earth observation data management and analysis?</article_title>
+            <author>Martin Sudmanns</author>
+            <journal_title>International Journal of Digital Earth</journal_title>
+            <issue>7</issue>
+            <volume>13</volume>
+            <doi>10.1080/17538947.2019.1585976</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Martin Sudmanns, S. L., Dirk Tiede, &amp; Blaschke, T. (2020). Big Earth data: Disruptive changes in Earth observation data management and analysis? International Journal of Digital Earth, 13(7), 832–850. https://doi.org/10.1080/17538947.2019.1585976</unstructured_citation>
+          </citation>
+          <citation key="truckenbrodt_2019_Sentinel1ARD">
+            <article_title>Towards Sentinel-1 SAR Analysis-Ready Data: A Best Practices Assessment on Preparing Backscatter Data for the Cube</article_title>
+            <author>Truckenbrodt</author>
+            <journal_title>Data</journal_title>
+            <issue>3</issue>
+            <volume>4</volume>
+            <doi>10.3390/data4030093</doi>
+            <issn>2306-5729</issn>
+            <cYear>2019</cYear>
+            <unstructured_citation>Truckenbrodt, J., Freemantle, T., Williams, C., Jones, T., Small, D., Dubois, C., Thiel, C., Rossi, C., Syriou, A., &amp; Giuliani, G. (2019). Towards Sentinel-1 SAR Analysis-Ready Data: A Best Practices Assessment on Preparing Backscatter Data for the Cube. Data, 4(3), 93. https://doi.org/10.3390/data4030093</unstructured_citation>
+          </citation>
+          <citation key="wagemann_2021_user">
+            <article_title>A user perspective on future cloud-based services for Big Earth data</article_title>
+            <author>Wagemann</author>
+            <journal_title>International Journal of Digital Earth</journal_title>
+            <issue>12</issue>
+            <volume>14</volume>
+            <doi>10.1080/17538947.2021.1982031</doi>
+            <issn>1753-8947</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Wagemann, J., Siemen, S., Seeger, B., &amp; Bendix, J. (2021). A user perspective on future cloud-based services for Big Earth data. International Journal of Digital Earth, 14(12), 1758–1774. https://doi.org/10.1080/17538947.2021.1982031</unstructured_citation>
+          </citation>
+          <citation key="wagemann_2022_FiveGuidingPrinciples">
+            <article_title>Five Guiding Principles to Make Jupyter Notebooks Fit for Earth Observation Data Education</article_title>
+            <author>Wagemann</author>
+            <journal_title>Remote Sensing</journal_title>
+            <issue>14</issue>
+            <volume>14</volume>
+            <doi>10.3390/rs14143359</doi>
+            <issn>2072-4292</issn>
+            <cYear>2022</cYear>
+            <unstructured_citation>Wagemann, J., Fierli, F., Mantovani, S., Siemen, S., Seeger, B., &amp; Bendix, J. (2022). Five Guiding Principles to Make Jupyter Notebooks Fit for Earth Observation Data Education. Remote Sensing, 14(14), 3359. https://doi.org/10.3390/rs14143359</unstructured_citation>
+          </citation>
+          <citation key="Gardner_Scambos_2022">
+            <article_title>MEaSUREs ITS_LIVE landsat image-pair glacier and ice sheet surface velocities, version 1</article_title>
+            <author>Gardner</author>
+            <doi>10.5067/IMR9D3PEI28U</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Gardner, M. F., A., &amp; Scambos, T. (2022). MEaSUREs ITS_LIVE landsat image-pair glacier and ice sheet surface velocities, version 1. NASA National Snow; Ice Data Center Distributed Active Archive Center. https://doi.org/10.5067/IMR9D3PEI28U</unstructured_citation>
+          </citation>
+          <citation key="RGI_Consortium_2023">
+            <article_title>Randolph glacier inventory - a dataset of global glacier outlines, version 7</article_title>
+            <author>RGI Consortium</author>
+            <doi>10.5067/F6JMOVY5NAVZ</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>RGI Consortium. (2023). Randolph glacier inventory - a dataset of global glacier outlines, version 7. National Snow; Ice Data Center. https://doi.org/10.5067/F6JMOVY5NAVZ</unstructured_citation>
+          </citation>
+          <citation key="ASF_Sentinel1">
+            <article_title>Sentinel-1 sentinel-1 RTC product guide</article_title>
+            <cYear>2023</cYear>
+            <unstructured_citation>Sentinel-1 sentinel-1 RTC product guide. (2023). Alaska Satellite Facility Distributed Active Archive Center. https://hyp3-docs.asf.alaska.edu/guides/rtc_product_guide/</unstructured_citation>
+          </citation>
+          <citation key="Procida_Diataxis_documentation_framework">
+            <article_title>Diátaxis documentation framework</article_title>
+            <author>Procida</author>
+            <unstructured_citation>Procida, D. (n.d.). Diátaxis documentation framework. https://diataxis.fr/</unstructured_citation>
+          </citation>
+          <citation key="Marshall_Cherian_Henderson_2023">
+            <article_title>Tidy geospatial data cubes</article_title>
+            <author>Marshall</author>
+            <doi>10.25080/gerudo-f2bc6f59-034</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Marshall, E., Cherian, D., &amp; Henderson, S. (2023). Tidy geospatial data cubes. SciPy Conference 2023. https://doi.org/10.25080/gerudo-f2bc6f59-034</unstructured_citation>
+          </citation>
+          <citation key="Kluyver2016jupyter">
+            <article_title>Jupyter notebooks – a publishing format for reproducible computational workflows</article_title>
+            <author>Kluyver</author>
+            <doi>10.3233/978-1-61499-649-1-87</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., &amp; Willing, C. (2016). Jupyter notebooks – a publishing format for reproducible computational workflows. 87–90. https://doi.org/10.3233/978-1-61499-649-1-87</unstructured_citation>
+          </citation>
+          <citation key="Caswell_Droettboom_Lee_Andrade_Hoffmann_Hunter_Klymak_Firing_Stansby_Varoquaux_etal_2021">
+            <article_title>Matplotlib/matplotlib: REL: v3.5.1</article_title>
+            <author>Caswell</author>
+            <doi>10.5281/zenodo.5773480</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Caswell, T. A., Droettboom, M., Lee, A., Andrade, E. S. de, Hoffmann, T., Hunter, J., Klymak, J., Firing, E., Stansby, D., Varoquaux, N., Nielsen, J. H., Root, B., May, R., Elson, P., Seppänen, J. K., Dale, D., Lee, J.-J., McDougall, D., Straw, A., … Ivanov, P. (2021). Matplotlib/matplotlib: REL: v3.5.1. Zenodo. https://doi.org/10.5281/zenodo.5773480</unstructured_citation>
+          </citation>
+          <citation key="JupyterBookCommunity_2021">
+            <article_title>Jupyter book</article_title>
+            <author>Executable Books Community</author>
+            <doi>10.5281/zenodo.4539666</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Executable Books Community. (2021). Jupyter book. Zenodo. https://doi.org/10.5281/zenodo.4539666</unstructured_citation>
+          </citation>
+          <citation key="Gillies_van_der_Wel_Van_den_Bossche_Taves_Arnott_Ward_others_2022">
+            <article_title>Shapely</article_title>
+            <author>Gillies</author>
+            <doi>10.5281/zenodo.7428463</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Gillies, S., Wel, C. van der, Van den Bossche, J., Taves, M. W., Arnott, J., Ward, B. C., &amp; others. (2022). Shapely. Zenodo. https://doi.org/10.5281/zenodo.7428463</unstructured_citation>
+          </citation>
+          <citation key="Hoyer_Hamman_2017">
+            <article_title>Xarray: N-d labeled arrays and datasets in python</article_title>
+            <author>Hoyer</author>
+            <journal_title>Journal of Open Research Software</journal_title>
+            <issue>1</issue>
+            <volume>5</volume>
+            <doi>10.5334/jors.148</doi>
+            <issn>2049-9647</issn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Hoyer, S., &amp; Hamman, J. (2017). Xarray: N-d labeled arrays and datasets in python. Journal of Open Research Software, 5(1), 10. https://doi.org/10.5334/jors.148</unstructured_citation>
+          </citation>
+          <citation key="Jordahl_Bossche_Fleischmann_McBride_Wasserman_Badaracco_Gerard_Snow_Tratner_Perry_etal_2021">
+            <article_title>Geopandas/geopandas: v0.10.0</article_title>
+            <author>Jordahl</author>
+            <doi>10.5281/zenodo.5546558</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Jordahl, K., Bossche, J. V. den, Fleischmann, M., McBride, J., Wasserman, J., Badaracco, A. G., Gerard, J., Snow, A. D., Tratner, J., Perry, M., Farmer, C., Hjelle, G. A., Cochran, M., Gillies, S., Culbertson, L., Bartos, M., Ward, B., Caria, G., Taves, M., … Wasser, L. (2021). Geopandas/geopandas: v0.10.0. Zenodo. https://doi.org/10.5281/zenodo.5546558</unstructured_citation>
+          </citation>
+          <citation key="Miles_Kirkham_Durant_Bourbeau_Onalan_Hamman_Patel_shikharsg_Rocklin_dussin_etal_2020">
+            <article_title>Zarr-developers/zarr-python: v2.4.0</article_title>
+            <author>Miles</author>
+            <doi>10.5281/zenodo.3773450</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Miles, A., Kirkham, J., Durant, M., Bourbeau, J., Onalan, T., Hamman, J., Patel, Z., shikharsg, Rocklin, M., dussin, raphael, Schut, V., Andrade, E. S. de, Abernathey, R., Noyes, C., sbalmer, bot, pyup io, Tran, T., Saalfeld, S., Swaney, J., … Banihirwe, A. (2020). Zarr-developers/zarr-python: v2.4.0. Zenodo. https://doi.org/10.5281/zenodo.3773450</unstructured_citation>
+          </citation>
+          <citation key="Snow_Brochart_Raspaud_Taves_Bell_RichardScottOZ_Chegini_Amici_Braun_Annex_etal_2022">
+            <article_title>Corteva/rioxarray: 0.12.1</article_title>
+            <author>Snow</author>
+            <doi>10.5281/zenodo.7080195</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Snow, A. D., Brochart, D., Raspaud, M., Taves, M., Bell, R., RichardScottOZ, Chegini, T., Amici, A., Braun, R., Annex, A., Brandt, C. H., Hoese, D., Bunt, F., GBallesteros, Scheick, J., Hamman, J., jonasViehweger, Zehner, M., Cordeiro, M., … pmallas. (2022). Corteva/rioxarray: 0.12.1. Zenodo. https://doi.org/10.5281/zenodo.7080195</unstructured_citation>
+          </citation>
+          <citation key="Source_McFarland_Emanuele_Morris_Augspurger_2022">
+            <article_title>Microsoft/PlanetaryComputer: October 2022</article_title>
+            <author>Microsoft Open Source</author>
+            <doi>10.5281/zenodo.7261897</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Microsoft Open Source, McFarland, M., Emanuele, R., Morris, D., &amp; Augspurger, T. (2022). Microsoft/PlanetaryComputer: October 2022. Zenodo. https://doi.org/10.5281/zenodo.7261897</unstructured_citation>
+          </citation>
+          <citation key="Pandasteam_2024">
+            <article_title>Pandas-dev/pandas: Pandas</article_title>
+            <author>The pandas development team</author>
+            <doi>10.5281/zenodo.10537285</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>The pandas development team. (2024). Pandas-dev/pandas: Pandas (latest). Zenodo. https://doi.org/10.5281/zenodo.10537285</unstructured_citation>
+          </citation>
+          <citation key="mckinney-proc-scipy-2010">
+            <article_title>Data Structures for Statistical Computing in Python</article_title>
+            <author>McKinney</author>
+            <journal_title>Proceedings of the 9th Python in Science Conference</journal_title>
+            <doi>10.25080/Majora-92bf1922-00a</doi>
+            <cYear>2010</cYear>
+            <unstructured_citation>McKinney, Wes. (2010). Data Structures for Statistical Computing in Python. In Stéfan van der Walt &amp; Jarrod Millman (Eds.), Proceedings of the 9th Python in Science Conference (pp. 56–61). https://doi.org/10.25080/Majora-92bf1922-00a</unstructured_citation>
+          </citation>
+          <citation key="DaskLibrary">
+            <article_title>Dask: Parallel Computation with Blocked algorithms and Task Scheduling</article_title>
+            <author>Rocklin</author>
+            <journal_title>Proceedings of the 14th Python in Science Conference</journal_title>
+            <doi>10.25080/Majora-7b98e3ed-013</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>Rocklin, Matthew. (2015). Dask: Parallel Computation with Blocked algorithms and Task Scheduling. In Kathryn Huff &amp; James Bergstra (Eds.), Proceedings of the 14th Python in Science Conference (pp. 126–132). https://doi.org/10.25080/Majora-7b98e3ed-013</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
