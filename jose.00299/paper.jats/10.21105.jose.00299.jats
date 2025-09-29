@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">299</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00299</article-id>
+<title-group>
+<article-title>Course Materials for an Introduction to Computational
+Chemistry Techniques</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1663-5206</contrib-id>
+<name>
+<surname>Stewart</surname>
+<given-names>Sarah Victoria</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1011-8478</contrib-id>
+<name>
+<surname>Pollak</surname>
+<given-names>Hannah</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5123-7049</contrib-id>
+<name>
+<surname>Spankie</surname>
+<given-names>Timothy J.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-3"/>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1951-8742</contrib-id>
+<name>
+<surname>Ngambia</surname>
+<given-names>Audrey</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Chitzanidi</surname>
+<given-names>Angela</given-names>
+</name>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6747-3297</contrib-id>
+<name>
+<surname>Erastova</surname>
+<given-names>Valentina</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>School of Chemistry, University of Edinburgh, Joseph Black
+Building, David Brewster Road, Edinburgh EH9 3FJ, United
+Kingdom</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>UK Centre for Astrobiology, School of Physics and
+Astronomy, University of Edinburgh, James Clerk Maxwell Building, Peter
+Guthrie Tait Road, Edinburgh EH9 3FD, United Kingdom</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Computational Biology, School of Life Sciences, University
+of Dundee, Dow Street, Dundee DD1 5EH, United Kingdom</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Biological Chemistry and Drug Discovery, School of Life
+Sciences, University of Dundee, Dow Street, Dundee DD1 5EH, United
+Kingdom</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>Research Services, Information Services, University of
+Edinburgh, Argyle House, 3 Lady Lawson Street, Edinburgh EH3 9DR, United
+Kingdom</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-05-26">
+<day>26</day>
+<month>5</month>
+<year>2025</year>
+</pub-date>
+<volume>8</volume>
+<issue>91</issue>
+<fpage>299</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>chemistry</kwd>
+<kwd>molecular dynamics</kwd>
+<kwd>postgraduate</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p><italic>An Introduction to Computational Chemistry
+  Techniques</italic> is an open educational resource originally
+  developed for postgraduate taught masters chemistry students at the
+  University of Edinburgh to introduce practical aspects of molecular
+  dynamics simulations. Aimed at students with no prior experience in
+  programming or computational chemistry, this module is delivered over
+  a month as a series of three 3-hour workshops in a computer-lab
+  setting, and a final session dedicated to individual projects.</p>
+  <p>The module introduces foundational concepts in Unix command-line
+  navigation, setting up, running and analysing molecular simulations,
+  using high-performance computing systems. The material is provided to
+  the students through virtual machines with the content delivered via
+  HTML-based guides, opened on local web browsers, and open-source
+  tools. Students work through materials at their own pace, supported by
+  demonstrators. Hosted on
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/Edinburgh-Chemistry-Teaching/MD_ResearchTechniques">GitHub</ext-link>,
+  this resource promotes the reuse and adaptation of accessible,
+  computation-rich learning materials for chemistry education
+  worldwide.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Computational techniques are integral to modern chemical research,
+  enabling precise simulation of chemical systems and prediction of
+  molecular properties. Molecular dynamics (MD) simulations facilitate
+  the study of complex systems, such as protein complexes, biological
+  membranes, and material interfaces, accelerating advancements in
+  drugs, materials, and technologies. Despite its importance, many
+  chemistry curricula still lack hands-on computational training
+  (<xref alt="Grushow &amp; Reeves, 2019" rid="ref-dahl2020" ref-type="bibr">Grushow
+  &amp; Reeves, 2019</xref>). Without foundational skills in Linux,
+  high-performance computing (HPC), and simulation software,
+  postgraduate chemistry students may struggle to engage with
+  computational literature or methods. This module addresses this gap by
+  providing practical MD simulation training in an accessible format,
+  empowering students to perform computational research independently.
+  By sharing these resources openly, we aim to support global educators
+  in adopting or adapting computationally-enabled teaching in chemistry
+  and related fields. Feedback from students highlights that the
+  learners found the material engaging, recognised the importance of the
+  skills being taught, and felt they had gained valuable and sufficient
+  knowledge aligned with the learning objectives.</p>
+</sec>
+<sec id="content-and-instructional-design">
+  <title>Content and Instructional Design</title>
+  <p>The course comprises three 3-hour-long workshops, run weekly. Each
+  session begins with a short lecture to contextualise the material. The
+  remainder of the session is set for independent work using HTML guides
+  with demonstrators available. The students are also supported by
+  weekly drop-in sessions. A final workshop session is used to introduce
+  individual projects, assessment criteria and allow students to get
+  started. The students have two weeks to work on the project and submit
+  a summative report. (Note, we are unable to share the individual
+  project materials.) The course is designed for taught postgraduate
+  masters students taking degrees in ‘Materials Chemistry’, ‘Analytical
+  Chemistry’, and ‘Medicinal and Biological Chemistry’, and therefore
+  the content for the third workshop and individual projects is adjusted
+  to suit these diverse backgrounds.</p>
+  <sec id="module-goals">
+    <title>Module Goals</title>
+    <p>The module aims to equip students with the practical skills
+    necessary to perform meaningful molecular dynamics simulations,
+    including:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>Understand the practical aspects of molecular
+        simulations.</p>
+      </list-item>
+      <list-item>
+        <p>Use basic command-line interfaces and high-performance
+        computing resources.</p>
+      </list-item>
+      <list-item>
+        <p>Operate common computational chemistry packages to tackle
+        real chemical problems.</p>
+      </list-item>
+      <list-item>
+        <p>Prepare systems for molecular dynamics simulations and
+        troubleshoot the set-up, simulations and analysis steps.</p>
+      </list-item>
+      <list-item>
+        <p>Understand the limitations of the computational chemistry
+        techniques used.</p>
+      </list-item>
+      <list-item>
+        <p>Report the methodology and observations in a condensed
+        written format.</p>
+      </list-item>
+      <list-item>
+        <p>Perform group work, encouraged and developed through the
+        practicals.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="session-1">
+    <title>Session 1</title>
+    <p>The first session is an <italic>“Introduction to Linux and
+    command-line”</italic>. This workshop is primarily based on material
+    from Software Carpentry (“The Unix Shell”
+    (<xref alt="Wilson et al., 2019" rid="ref-unix_shell" ref-type="bibr">Wilson
+    et al., 2019</xref>), “Using Shell with HPC”
+    (<xref alt="HPC Carpentry development team, 2021" rid="ref-hpc_shell" ref-type="bibr">HPC
+    Carpentry development team, 2021</xref>), and “Introduction to HPC”
+    (<xref alt="Koch et al., 2025" rid="ref-hpc_intro" ref-type="bibr">Koch
+    et al., 2025</xref>)). At the start of the workshop, a lecture
+    introduces the course, the motivation, as well as explaining the
+    nature of independent learning and setting up the assessment
+    deadlines. The lecture also overviews computational techniques in
+    chemistry, detailing when each may be beneficial. This is followed
+    by a walkthrough on how to connect to the virtual machines used to
+    run the course (details in the Computational Resources section).</p>
+    <p>The hands-on portion of the workshop is divided into seven parts.
+    The exercises in six parts introduce the Unix shell and simple Bash
+    commands — such as navigating directories, manipulating files, and
+    writing scripts. Unlike the Software Carpentry model, we teach Vim
+    as the text editor due to its advanced functionality (such as
+    quickly navigating through files). The seventh part introduces
+    high-performance computing, focusing on how to interact with the
+    University of Edinburgh’s Eddie compute cluster
+    (<xref alt="University of Edinburgh, n.d." rid="ref-ecdf" ref-type="bibr">University
+    of Edinburgh, n.d.</xref>), which the students will use in
+    subsequent sessions. Only the first three parts (working with files
+    and directories and using HPC) are required to be completed, the
+    other parts are given for the more keen or advanced students.</p>
+  </sec>
+  <sec id="session-2">
+    <title>Session 2</title>
+    <p>The second session, <italic>“Introduction to molecular dynamics
+    simulations”</italic>, guides students through the process of
+    running simple MD simulations using GROMACS. This workshop is
+    adapted from a GROMACS tutorial by Bergh, Majdolhosseini and Villa
+    (<xref alt="Bergh et al., 2025" rid="ref-lysozyme" ref-type="bibr">Bergh
+    et al., 2025</xref>). A short lecture at the start of the session
+    introduces theoretical background on molecular simulations,
+    including the concepts of force fields, timesteps, thermodynamic
+    ensembles (e.g., isothermal-isobaric and canonical), periodic
+    boundary conditions, system preparation and resource requirements
+    for simulation.</p>
+    <p>The practical component uses a protein-in-water system (allowing
+    students to choose from a selection of small protein structures) to
+    introduce students to key stages of a simulation workflow:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>Pre-processing: Converting input files (e.g., PDB structures)
+        into GROMACS formats, generating topologies, defining the
+        simulation box, and adding water and ions.</p>
+      </list-item>
+      <list-item>
+        <p>Simulation Execution: Performing energy minimisation followed
+        by equilibration in the canonical (NVT) and isothermal-isobaric
+        (NPT) ensembles.</p>
+      </list-item>
+      <list-item>
+        <p>Post-processing and Analysis: Using built-in GROMACS tools to
+        extract thermodynamic quantities (e.g., temperature, pressure,
+        potential energy), trajectory information, and structural
+        properties, such as root-mean-square deviation (RMSD) and radius
+        of gyration.</p>
+      </list-item>
+    </list>
+    <p>Students visualise the structure and dynamics using VMD
+    (<xref alt="Humphrey et al., 1996" rid="ref-vmd" ref-type="bibr">Humphrey
+    et al., 1996</xref>) and plot analysed data using Xmgrace
+    (<xref alt="Turner, 2005" rid="ref-xmgrace" ref-type="bibr">Turner,
+    2005</xref>). Students are prompted to think critically about their
+    simulation results, discussing with demonstrators.</p>
+  </sec>
+  <sec id="session-3">
+    <title>Session 3</title>
+    <p>The third session builds upon the developed skills to perform
+    advanced simulations that are domain-specific to the three masters
+    programs.</p>
+    <p>For Medicinal and Biological Chemistry students, this session
+    applies molecular dynamics to a biologically relevant protein–ligand
+    system. A short lecture introduces protein structure and the
+    requirements for modelling them. Students prepare a dimer system as
+    before, with a focus on handling incomplete PDB files and selecting
+    suitable force fields. They perform energy minimisation,
+    equilibration, and production runs using GROMACS, with analysis
+    focusing on system stability and ligand binding through interpreting
+    RMSD and interaction metrics from trajectories. This session and
+    lecture materials have been partially adapted from
+    <ext-link ext-link-type="uri" xlink:href="https://github.com/CCPBioSim/BioSim-analysis-workshop">BioSim
+    Analysis Workshop</ext-link>
+    (<xref alt="Degiacomi et al., 2025" rid="ref-biosim" ref-type="bibr">Degiacomi
+    et al., 2025</xref>).</p>
+    <p>For Materials Chemistry and Analytical Chemistry students, the
+    focus of the session is on simulating a clay–organic interface,
+    relevant to materials and environmental sciences. A short lecture
+    introduces layered minerals, interfacial interactions, and their
+    applications in catalysis, environmental remediation, and
+    nanotechnology. Students prepare a hydrated clay system containing
+    organic guest molecules. Hands-on tasks include setting up a 2D
+    layered system across the periodic boundary, modifying topology
+    files, solvating and charge-balancing the system, running NPT
+    simulation in semi-isotropic ensemble to account for the layered
+    system and ensuring simulation stability. Students visualise
+    structures using VMD and analyse layer spacing, molecular diffusion,
+    and guest–host interactions with GROMACS tools.</p>
+  </sec>
+  <sec id="session-4">
+    <title>Session 4</title>
+    <p>The final session introduces the individual projects and guides
+    students in getting started on their independent simulations and
+    final reports. A short lecture gives tips for scientific writing,
+    provides an example report, highlights expectations for the project,
+    and provides templates and submission guidelines. Additionally,
+    students are introduced to
+    <ext-link ext-link-type="uri" xlink:href="https://www.overleaf.com">Overleaf</ext-link>
+    for scientific writing in LaTeX, and templates for the report are
+    provided. The remainder of the session is used for hands-on progress
+    toward simulation setup and report writing.</p>
+    <p>Please note that we are unable to share the materials for this
+    part of the module, since it is used in a summative assessment.
+    Instead, we are including a simplified HTML page linking the
+    templates and an example report.</p>
+  </sec>
+  <sec id="assessment">
+    <title>Assessment</title>
+    <p>The module was created as part of a Research Techniques course at
+    the University of Edinburgh (SCQF 11, 20 credits), which trains
+    postgraduate taught masters students in practical aspects of
+    chemistry research. This module contributes 40% of the total grade
+    for the course and is assessed in two ways. Overall comprehension of
+    the first two sessions is assessed based on multiple-choice quizzes,
+    each quiz being 5% of the module. The quizzes were run through
+    LEARN, the University’s Virtual Learning Environment. Students are
+    first provided a formative quiz to familiarise themselves with how
+    to operate the quiz and what type of knowledge is expected. When
+    scoring over 80%, students can access the summative quiz. The
+    summative quiz can only be attempted once. Both the formative and
+    summative quizzes were neither timed nor invigilated. We share the
+    formative quizzes within GitHub materials.</p>
+    <p>The largest part of the assessment (30% of the course mark) is
+    based upon individual projects. The projects build upon what
+    students have learned in Session 3, allowing them to set up their
+    individual simulation systems, analyse them and produce a short
+    report in the form of a mini-paper. The project assesses students’
+    ability to independently design, execute, and analyse an MD
+    simulation relevant to their degree program. The report is made to
+    be concise, and the marking scheme rewards the ability to condense
+    the information, create a quality methodology and produce appealing
+    visuals in the results section.</p>
+  </sec>
+  <sec id="computational-resources">
+    <title>Computational Resources</title>
+    <p>Each student was given access to an individual Linux virtual
+    machine, created using the University of Edinburgh’s Research Cloud
+    Computing Service, Eleanor, deployed on the OpenStack platform
+    (<xref alt="University of Edinburgh, n.d." rid="ref-ecdf" ref-type="bibr">University
+    of Edinburgh, n.d.</xref>). The machines were launched from an
+    Ubuntu 22.04.3 LTS with Xfce Desktop Environment image, which has
+    been saved to be re-used for future instances of the course. The
+    machines had GROMACS 2024.4
+    (<xref alt="Abraham et al., 2015" rid="ref-gromacs" ref-type="bibr">Abraham
+    et al., 2015</xref>), VMD 1.9.4
+    (<xref alt="Humphrey et al., 1996" rid="ref-vmd" ref-type="bibr">Humphrey
+    et al., 1996</xref>) and Xmgrace 5.1.25
+    (<xref alt="Turner, 2005" rid="ref-xmgrace" ref-type="bibr">Turner,
+    2005</xref>) software installed. Network storage was also mounted on
+    each machine to enable access to the course materials and the
+    transfer of outputs off the machine. Provisioned with 4 virtual CPU
+    cores, 8GB RAM, and 80GB disk, these resources can easily be
+    increased if required. Local accounts with randomly generated
+    passwords were created for the students on the machines. Each
+    student accessed their assigned machine through Remote Desktop using
+    their assigned username and password.</p>
+    <p>The resource-heavy simulations (i.e., equilibration and
+    production runs) were performed on NVIDIA A100 20GB Multi-Instance
+    GPUs (MIGs) on the University of Edinburgh’s Research Compute
+    Cluster, Eddie
+    (<xref alt="University of Edinburgh, n.d." rid="ref-ecdf" ref-type="bibr">University
+    of Edinburgh, n.d.</xref>). The Eddie compute cluster uses the
+    Altair Grid Engine Scheduler and the Rocky Linux 9 operating system.
+    To enable shorter queuing times for the students, 10 MIGs were
+    ringfenced for them for the duration of the course. The ringfenced
+    MIGs were on a single compute node with 64 CPU cores and 768GB of
+    system RAM. On Eddie, each student had access to a 2TB scratch area
+    where they could perform the simulations, and used GROMACS 2024.4
+    with GPU support and Xmgrace 5.1.25 software.</p>
+    <p>The course materials are written using HTML, as it offers a
+    portable and cross-browser-compatible framework for delivering
+    accessible content to users with diverse needs. Its semantic
+    structure supports screen readers and assistive technologies, while
+    its integration with CSS enables flexible, user-responsive design.
+    We have added a dyslexia-friendly font option, which can be toggled
+    by a button on each page. The font can be changed by placing the
+    desired font <monospace>.ttf</monospace> files in
+    <monospace>Notes/fonts/</monospace>, and altering the font-including
+    section of the relevant <monospace>.css</monospace> files.</p>
+  </sec>
+</sec>
+<sec id="reuse-implementation-and-modification">
+  <title>Reuse, implementation and modification</title>
+  <p>The complete course is available on
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/Edinburgh-Chemistry-Teaching/MD_ResearchTechniques">GitHub</ext-link>
+  under an open license - CC-BY-4.0. Course slides, shell scripts,
+  tutorials, and example data are all included. Implementation requires
+  a computer lab with Unix, GROMACS, and HPC access, though adaptations
+  for local desktops or cloud platforms (e.g., Google Colab) are
+  feasible. The materials have been successfully adapted for
+  undergraduate chemistry students joining our group to introduce MD
+  simulations.</p>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>This module equips postgraduate students with practical
+  computational chemistry skills, emphasising reproducibility and open
+  science. It is particularly suited to courses seeking to integrate
+  practical computational methods skills with experimental and
+  theoretical chemistry teaching.</p>
+  <p>For those interested in learning more about simulating clay
+  surfaces, we have also developed a
+  <ext-link ext-link-type="uri" xlink:href="https://github.%20com/Erastova-group/ClayCode-workshop">workshop</ext-link>
+  introducing the use of ClayCode
+  (<xref alt="Pollak et al., 2024" rid="ref-pollak2024" ref-type="bibr">Pollak
+  et al., 2024</xref>) software for set-up and simulation of realistic
+  clay mineral systems.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We thank the additional demonstrators, Finlay Clark, Chenfeng Zhang
+  and Ryan Zhu, who supported student learning and Rosa Brauer for
+  feedback on the instructional materials. We also thank Mike Wallis for
+  assistance with setting up the original computational resources, David
+  August for organising the course this module was part of, and Matteo
+  Degiacomi for providing protein lecture material for session 3. This
+  work builds on contributions from Software Carpentry and GROMACS
+  community tutorials. Student feedback mentioned here is based on
+  informal feedback collected as part of routine course delivery and not
+  as part of a formal research study.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-ecdf">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>University of Edinburgh</string-name>
+      </person-group>
+      <article-title>Edinburgh compute and data facility</article-title>
+      <publisher-name>https://www.ecdf.ed.ac.uk</publisher-name>
+    </element-citation>
+  </ref>
+  <ref id="ref-dahl2020">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Grushow</surname><given-names>Alexander</given-names></name>
+        <name><surname>Reeves</surname><given-names>Melissa S.</given-names></name>
+      </person-group>
+      <article-title>Using computational methods to teach chemical principles: overview</article-title>
+      <source>Using computational methods to teach chemical principles</source>
+      <publisher-name>American Chemical Society</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <uri>https://pubs.acs.org/doi/abs/10.1021/bk-2019-1312.ch001</uri>
+      <pub-id pub-id-type="doi">10.1021/bk-2019-1312.ch001</pub-id>
+      <fpage>1</fpage>
+      <lpage>10</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-pollak2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pollak</surname><given-names>Hannah</given-names></name>
+        <name><surname>Degiacomi</surname><given-names>Matteo T.</given-names></name>
+        <name><surname>Erastova</surname><given-names>Valentina</given-names></name>
+      </person-group>
+      <article-title>Modeling realistic clay systems with ClayCode</article-title>
+      <source>Journal of Chemical Theory and Computation</source>
+      <year iso-8601-date="2024">2024</year>
+      <volume>20</volume>
+      <uri>https://doi.org/10.1021/acs.jctc.4c00987</uri>
+      <pub-id pub-id-type="doi">10.1021/acs.jctc.4c00987</pub-id>
+      <fpage>9606</fpage>
+      <lpage>9617</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-unix_shell">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Wilson</surname><given-names>Greg</given-names></name>
+        <name><surname>Capes</surname><given-names>Gerard</given-names></name>
+        <name><surname>Devenyi</surname><given-names>Gabriel A.</given-names></name>
+        <name><surname>Koch</surname><given-names>Christina</given-names></name>
+        <name><surname>Silva</surname><given-names>Raniere</given-names></name>
+        <name><surname>Srinath</surname><given-names>Ashwin</given-names></name>
+        <name><surname>Morris</surname><given-names>Colin</given-names></name>
+        <name><surname>Jackson</surname><given-names>Mike</given-names></name>
+        <name><surname>Boughton</surname><given-names>Andrew</given-names></name>
+        <name><surname>Emonet</surname><given-names>Rémi</given-names></name>
+        <name><surname>Gacenga</surname><given-names>Francis</given-names></name>
+        <name><surname>Nederbragt</surname><given-names>Lex</given-names></name>
+        <name><surname>csqrs</surname></name>
+        <name><surname>Irving</surname><given-names>Damien</given-names></name>
+        <name><surname>Becker</surname><given-names>Erin Alison</given-names></name>
+        <name><surname>Deniz</surname><given-names>Fatma</given-names></name>
+        <name><surname>Stimberg</surname><given-names>Marcel</given-names></name>
+        <name><surname>Beagrie</surname><given-names>Robert A</given-names></name>
+        <name><surname>McCloy</surname><given-names>Daniel</given-names></name>
+        <name><surname>Soranzo</surname><given-names>Nicola</given-names></name>
+        <name><surname>Ross</surname><given-names>Noam</given-names></name>
+        <name><surname>Srinath</surname><given-names>Ashwin</given-names></name>
+        <name><surname>Sauze</surname><given-names>Colin</given-names></name>
+        <name><surname>Michonneau</surname><given-names>François</given-names></name>
+        <name><surname>Marwaha</surname><given-names>Kunal</given-names></name>
+        <name><surname>Guillou</surname><given-names>Stéphane</given-names></name>
+        <name><surname>Magle</surname><given-names>Tobin</given-names></name>
+        <name><surname>Jankowski</surname><given-names>Eric</given-names></name>
+        <name><surname>White</surname><given-names>Ethan P</given-names></name>
+        <name><surname>Blischak</surname><given-names>John</given-names></name>
+        <name><surname>Fernandes</surname><given-names>Filipe</given-names></name>
+        <name><surname>Bekolay</surname><given-names>Trevor</given-names></name>
+        <name><surname>Szamosi</surname><given-names>Jake Cowper</given-names></name>
+        <name><surname>Gray</surname><given-names>Norman</given-names></name>
+        <name><surname>Hagh</surname><given-names>Varda F.</given-names></name>
+        <name><surname>Baird</surname><given-names>Daniel</given-names></name>
+        <name><surname>Lang</surname><given-names>Dustin</given-names></name>
+        <name><surname>Belikov</surname><given-names>Evgenij</given-names></name>
+        <name><surname>Bryk</surname><given-names>Jarek</given-names></name>
+        <name><surname>Chung</surname><given-names>Kathy</given-names></name>
+        <name><surname>Sadjadi</surname><given-names>Mahdi</given-names></name>
+        <name><surname>Burle</surname><given-names>Marie-Helene</given-names></name>
+        <name><surname>Lim</surname><given-names>Marisa</given-names></name>
+        <name><surname>Barmby</surname><given-names>Pauline</given-names></name>
+        <name><surname>Leak</surname><given-names>Steve</given-names></name>
+        <name><surname>Mentzel</surname><given-names>Chris</given-names></name>
+        <name><surname>Standage</surname><given-names>Daniel</given-names></name>
+        <name><surname>Eyers</surname><given-names>David</given-names></name>
+        <name><surname>Attali</surname><given-names>Dean</given-names></name>
+        <name><surname>Nielsen</surname><given-names>Danielle M.</given-names></name>
+        <name><surname>Winston</surname><given-names>Donny</given-names></name>
+        <name><surname>Simpson</surname><given-names>John</given-names></name>
+        <name><surname>Duckles</surname><given-names>Jonah</given-names></name>
+        <name><surname>Madin</surname><given-names>Joshua</given-names></name>
+        <name><surname>Buckley</surname><given-names>Kevin M.</given-names></name>
+        <name><surname>Laurence</surname></name>
+        <name><surname>Robinson</surname><given-names>Martha</given-names></name>
+        <name><surname>Feller</surname><given-names>Martin</given-names></name>
+        <name><surname>Fritz</surname><given-names>Megan</given-names></name>
+        <name><surname>Gardner</surname><given-names>Paul</given-names></name>
+        <name><surname>Steinbach</surname><given-names>Peter</given-names></name>
+        <name><surname>Ullah</surname><given-names>Rafi</given-names></name>
+        <name><surname>Steltenpool</surname><given-names>Ruud</given-names></name>
+        <name><surname>s-boardman</surname></name>
+        <name><surname>Mey</surname><given-names>Yee</given-names></name>
+        <name><surname>Kassil</surname><given-names>Alex</given-names></name>
+        <name><surname>Mac</surname><given-names>Alex</given-names></name>
+        <name><surname>Morley</surname><given-names>Alexander</given-names></name>
+        <name><surname>Telenczuk</surname><given-names>Bartosz</given-names></name>
+        <name><surname>Brunson</surname><given-names>Dana</given-names></name>
+        <name><surname>Devinsuit</surname></name>
+        <name><surname>Denisenko</surname><given-names>Elena</given-names></name>
+        <name><surname>Dolson</surname><given-names>Emily</given-names></name>
+        <name><surname>Burns</surname><given-names>Halle</given-names></name>
+        <name><surname>Burkhardt</surname><given-names>Hannah</given-names></name>
+        <name><surname>Alexander</surname><given-names>Harriet</given-names></name>
+        <name><surname>Fontenelle</surname><given-names>Hugues</given-names></name>
+        <name><surname>Schyndel</surname><given-names>Jay van</given-names></name>
+        <name><surname>vdL</surname><given-names>Jens</given-names></name>
+        <name><surname>Williams</surname><given-names>Jonny</given-names></name>
+        <name><surname>Leinweber</surname><given-names>Katrin</given-names></name>
+        <name><surname>Zamparo</surname><given-names>Lee</given-names></name>
+        <name><surname>Macklin</surname><given-names>Jason</given-names></name>
+        <name><surname>Buske</surname><given-names>Orion</given-names></name>
+        <name><surname>shaikh</surname></name>
+        <name><surname>Brase</surname><given-names>Ry4an</given-names></name>
+        <name><surname>Mellan</surname><given-names>Thomas</given-names></name>
+        <name><surname>Huffman</surname><given-names>Adam</given-names></name>
+        <name><surname>Orr</surname><given-names>Adam James</given-names></name>
+        <name><surname>Richie-Halford</surname><given-names>Adam</given-names></name>
+        <name><surname>AidaMirsalehi</surname></name>
+        <name><surname>Konovalov</surname><given-names>Alexander</given-names></name>
+        <name><surname>Keener</surname><given-names>Alix</given-names></name>
+        <name><surname>Brown</surname><given-names>Amy</given-names></name>
+        <name><surname>Bedini</surname><given-names>Andrea</given-names></name>
+        <name><surname>Reid</surname><given-names>Andrew</given-names></name>
+        <name><surname>McRae</surname><given-names>Andrew T. T.</given-names></name>
+        <name><surname>Walker</surname><given-names>Andrew</given-names></name>
+        <name><surname>Rokem</surname><given-names>Ariel</given-names></name>
+        <name><surname>Sobhani</surname><given-names>Armin</given-names></name>
+        <name><surname>Atmaja</surname><given-names>Bagus Tris</given-names></name>
+        <name><surname>Bolker</surname><given-names>Ben</given-names></name>
+        <name><surname>Gabriel</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Seyffert</surname><given-names>Bertie</given-names></name>
+        <name><surname>Mills</surname><given-names>Bill</given-names></name>
+        <name><surname>Ballsun-Stanton</surname><given-names>Brian</given-names></name>
+        <name><surname>BrianBill</surname></name>
+        <name><surname>Marini</surname><given-names>Camille</given-names></name>
+        <name><surname>Jones</surname><given-names>Dan</given-names></name>
+        <name><surname>Bridges</surname><given-names>Dave</given-names></name>
+        <name><surname>McKain</surname><given-names>David</given-names></name>
+        <name><surname>Vollmer</surname><given-names>David</given-names></name>
+        <name><surname>Lituiev</surname><given-names>Dmytro</given-names></name>
+        <name><surname>Latornell</surname><given-names>Doug</given-names></name>
+        <name><surname>earkpr</surname></name>
+        <name><surname>ekaterinailin</surname></name>
+        <name><surname>McTavish</surname><given-names>Emily Jane</given-names></name>
+        <name><surname>Shamma</surname><given-names>Farah</given-names></name>
+        <name><surname>Profiti</surname><given-names>Giuseppe</given-names></name>
+        <name><surname>Linde</surname><given-names>Ian van der</given-names></name>
+        <name><surname>Mensa</surname><given-names>Inigo Aldazabal</given-names></name>
+        <name><surname>Rantaharju</surname><given-names>Jarno</given-names></name>
+        <name><surname>Milhans</surname><given-names>Jackie</given-names></name>
+        <name><surname>Guelfi</surname><given-names>James</given-names></name>
+        <name><surname>Kim</surname><given-names>Jan T.</given-names></name>
+        <name><surname>Pellman</surname><given-names>John</given-names></name>
+        <name><surname>Blin</surname><given-names>Kai</given-names></name>
+        <name><surname>Keipert</surname><given-names>Kristopher</given-names></name>
+        <name><surname>Palamartchouk</surname><given-names>Kirill</given-names></name>
+        <name><surname>Noga</surname><given-names>Klemens</given-names></name>
+        <name><surname>Carlise</surname><given-names>M</given-names></name>
+        <name><surname>Gouw</surname><given-names>Marc Rajeev</given-names></name>
+        <name><surname>Mandel</surname><given-names>Mark</given-names></name>
+        <name><surname>Gidden</surname><given-names>Matthew</given-names></name>
+        <name><surname>Peterson</surname><given-names>Matthew</given-names></name>
+        <name><surname>Doyle</surname><given-names>Maria</given-names></name>
+        <name><surname>Zingale</surname><given-names>Michael</given-names></name>
+        <name><surname>Henry</surname><given-names>Mike</given-names></name>
+        <name><surname>Oneka</surname><given-names>Morgan</given-names></name>
+        <name><surname>Hoggett</surname><given-names>Murray</given-names></name>
+        <name><surname>Barral</surname><given-names>Nicolas</given-names></name>
+        <name><surname>Brenowitz</surname><given-names>Noah D</given-names></name>
+        <name><surname>nther</surname></name>
+        <name><surname>Kaluza</surname><given-names>Owen</given-names></name>
+        <name><surname>McCann</surname><given-names>Patrick</given-names></name>
+        <name><surname>Doehle</surname><given-names>Phillip</given-names></name>
+        <name><surname>Hoyt</surname><given-names>Peter R.</given-names></name>
+        <name><surname>Lijnzaad</surname><given-names>Philip</given-names></name>
+        <name><surname>Banaszkiewicz</surname><given-names>Piotr</given-names></name>
+        <name><surname>Mount</surname><given-names>Sarah</given-names></name>
+        <name><surname>Simpkin</surname><given-names>Sarah</given-names></name>
+        <name><surname>Ritchie</surname><given-names>Scott</given-names></name>
+        <name><surname>sjnair</surname></name>
+        <name><surname>Schmeing</surname><given-names>Stephan</given-names></name>
+        <name><surname>Jones</surname><given-names>Stephen</given-names></name>
+        <name><surname>Turner</surname><given-names>Stephen</given-names></name>
+        <name><surname>Miller</surname><given-names>Susan</given-names></name>
+        <name><surname>Keighley</surname><given-names>Tim</given-names></name>
+        <name><surname>Keighley</surname><given-names>Tim</given-names></name>
+        <name><surname>Dowrick</surname><given-names>Tom</given-names></name>
+        <name><surname>Koppejan</surname><given-names>Victor</given-names></name>
+        <name><surname>Chhatre</surname><given-names>Vikram</given-names></name>
+      </person-group>
+      <article-title>Swcarpentry/shell-novice: Software carpentry: The UNIX shell, june 2019</article-title>
+      <person-group person-group-type="editor">
+        <name><surname>Devenyi</surname><given-names>Gabriel A.</given-names></name>
+        <name><surname>Capes</surname><given-names>Gerard</given-names></name>
+        <name><surname>Morris</surname><given-names>Colin</given-names></name>
+        <name><surname>Pitchers</surname><given-names>Will</given-names></name>
+      </person-group>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <pub-id pub-id-type="doi">10.5281/zenodo.3266823</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-hpc_shell">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>HPC Carpentry development team</string-name>
+      </person-group>
+      <article-title>Hpc-carpentry/hpc-shell: Introduction to using the shell in a high-performance computing context</article-title>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://hpc-carpentry.github.io/hpc-shell/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-hpc_intro">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Koch</surname><given-names>Christina</given-names></name>
+        <name><surname>Stafford</surname><given-names>Jeff</given-names></name>
+        <name><surname>Steinbach</surname><given-names>Peter</given-names></name>
+        <name><surname>Simpson</surname><given-names>John</given-names></name>
+        <name><surname>Keller</surname><given-names>Trevor</given-names></name>
+      </person-group>
+      <article-title>Carpentries-incubator/hpc-intro: An introduction to high performance computing</article-title>
+      <year iso-8601-date="2025">2025</year>
+      <uri>https://carpentries-incubator.github.io/hpc-intro/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-lysozyme">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Bergh</surname><given-names>Cathrine</given-names></name>
+        <name><surname>Majdolhosseini</surname><given-names>Maryam</given-names></name>
+        <name><surname>Villa</surname><given-names>Alessandra</given-names></name>
+      </person-group>
+      <article-title>GROMACS tutorial: Introduction to molecular dynamics</article-title>
+      <year iso-8601-date="2025">2025</year>
+      <pub-id pub-id-type="doi">10.5281/zenodo.14803238</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-vmd">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Humphrey</surname><given-names>William</given-names></name>
+        <name><surname>Dalke</surname><given-names>Andrew</given-names></name>
+        <name><surname>Schulten</surname><given-names>Klaus</given-names></name>
+      </person-group>
+      <article-title>VMD – Visual Molecular Dynamics</article-title>
+      <source>Journal of Molecular Graphics</source>
+      <year iso-8601-date="1996">1996</year>
+      <volume>14</volume>
+      <pub-id pub-id-type="doi">10.1016/0263-7855(96)00018-5</pub-id>
+      <fpage>33</fpage>
+      <lpage>38</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gromacs">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Abraham</surname><given-names>Mark James</given-names></name>
+        <name><surname>Murtola</surname><given-names>Teemu</given-names></name>
+        <name><surname>Schulz</surname><given-names>Roland</given-names></name>
+        <name><surname>Páll</surname><given-names>Szilárd</given-names></name>
+        <name><surname>Smith</surname><given-names>Jeremy C.</given-names></name>
+        <name><surname>Hess</surname><given-names>Berk</given-names></name>
+        <name><surname>Lindahl</surname><given-names>Erik</given-names></name>
+      </person-group>
+      <article-title>GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers</article-title>
+      <source>SoftwareX</source>
+      <year iso-8601-date="2015">2015</year>
+      <volume>1-2</volume>
+      <issn>2352-7110</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S2352711015000059</uri>
+      <pub-id pub-id-type="doi">10.1016/j.softx.2015.06.001</pub-id>
+      <fpage>19</fpage>
+      <lpage>25</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-xmgrace">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Turner</surname><given-names>Paul J.</given-names></name>
+      </person-group>
+      <article-title>Grace: A WYSIWYG 2D plotting tool for the x window system</article-title>
+      <year iso-8601-date="2005">2005</year>
+      <uri>https://plasma-gate.weizmann.ac.il/Grace/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-biosim">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Degiacomi</surname><given-names>Matteo T.</given-names></name>
+        <name><surname>Gowers</surname><given-names>Richard J.</given-names></name>
+        <name><surname>Micaela Matta</surname></name>
+        <name><surname>Mey</surname><given-names>Antonia S. J. S.</given-names></name>
+      </person-group>
+      <article-title>A course on the setup, running, and analysis of biomolecular simulations</article-title>
+      <source>Journal of Open Source Education</source>
+      <year iso-8601-date="2025">2025</year>
+      <volume>8</volume>
+      <pub-id pub-id-type="doi">10.21105/jose.00265</pub-id>
+      <fpage>265</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
