@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20251019183650-7a63e4a44161abcf603fe656021e57a7a0ed40a0</doi_batch_id>
+    <timestamp>20251019183650</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>92</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Introduction to deep learning: Carpentries-style hands-on lesson material for introducing researchers to deep learning</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Sven A.</given_name>
+            <surname>van der Burg</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1250-6968</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Pranav</given_name>
+            <surname>Chandramouli</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-7896-2969</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Anne</given_name>
+            <surname>Fouilloux</surname>
+            <affiliations>
+              <institution><institution_name>Simula Research Laboratory, Oslo, Norway</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-1784-2920</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Cunliang</given_name>
+            <surname>Geng</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-1409-8358</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Toby</given_name>
+            <surname>Hodges</surname>
+            <affiliations>
+              <institution><institution_name>The Carpentries, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1766-456X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Florian</given_name>
+            <surname>Huber</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+              <institution><institution_name>Düsseldorf University of Applied Sciences, Düsseldorf, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-3535-9406</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Dafne</given_name>
+            <surname>van Kuppevelt</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-2662-1994</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Ashwin Vishnu</given_name>
+            <surname>Mohanan</surname>
+            <affiliations>
+              <institution><institution_name>RISE Research Institutes of Sweden, Sweden</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-2979-6327</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Colin</given_name>
+            <surname>Sauze</surname>
+            <affiliations>
+              <institution><institution_name>National Oceanography Centre, Liverpool, Great-Britain</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-5368-9217</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Carsten</given_name>
+            <surname>Schnober</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-9139-1577</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Djura</given_name>
+            <surname>Smits</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-4096-0260</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Peter</given_name>
+            <surname>Steinbach</surname>
+            <affiliations>
+              <institution><institution_name>Helmholtz-Zentrum Dresden-Rossendorf, Dresden, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-4974-230X</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Berend</given_name>
+            <surname>Weel</surname>
+            <affiliations>
+              <institution><institution_name>Netherlands eScience Center, Amsterdam, The Netherlands</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-9693-9332</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Kjartan Thor</given_name>
+            <surname>Wikfeldt</surname>
+            <affiliations>
+              <institution><institution_name>RISE Research Institutes of Sweden, Sweden</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-1655-3676</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Samantha</given_name>
+            <surname>Wittke</surname>
+            <affiliations>
+              <institution><institution_name>CSC - IT center for Science, Espoo, Finland</institution_name></institution>
+              <institution><institution_name>Aalto University, Espoo, Finland</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-9625-7235</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>10</month>
+          <day>19</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>307</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00307</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.8308391</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/307</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00307</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00307</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00307.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="becker_carpentries_nodate">
+            <volume_title>The Carpentries Curriculum Development Handbook</volume_title>
+            <author>Becker</author>
+            <unstructured_citation>Becker, E., &amp; Michonneau, F. (n.d.). The Carpentries Curriculum Development Handbook. Retrieved September 1, 2023, from https://cdh.carpentries.org/</unstructured_citation>
+          </citation>
+          <citation key="noauthor_carpentries_nodate">
+            <article_title>The Carpentries Workbench</article_title>
+            <unstructured_citation>The Carpentries Workbench. (n.d.). Retrieved September 1, 2023, from https://carpentries.github.io/workbench/</unstructured_citation>
+          </citation>
+          <citation key="noauthor_fastai_nodate">
+            <article_title>Fast.ai - Practical Deep Learning for Coders</article_title>
+            <unstructured_citation>Fast.ai - Practical Deep Learning for Coders. (n.d.). Retrieved September 1, 2023, from https://course.fast.ai/</unstructured_citation>
+          </citation>
+          <citation key="noauthor_udemy_nodate">
+            <article_title>Udemy - Basics of Deep Learning</article_title>
+            <journal_title>Udemy</journal_title>
+            <unstructured_citation>Udemy - Basics of Deep Learning. (n.d.). In Udemy. Retrieved September 1, 2023, from https://www.udemy.com/course/basics-of-deep-learning/</unstructured_citation>
+          </citation>
+          <citation key="noauthor_udemy_nodate-1">
+            <article_title>Udemy - Tensorflow 2.0 Recurrent Neural Networks, LSTMs, GRUs</article_title>
+            <journal_title>Udemy</journal_title>
+            <unstructured_citation>Udemy - Tensorflow 2.0 Recurrent Neural Networks, LSTMs, GRUs. (n.d.). In Udemy. Retrieved September 1, 2023, from https://www.udemy.com/course/tensorflow-20-recurrent-neural-networks-lstms-grus/</unstructured_citation>
+          </citation>
+          <citation key="noauthor_udemy_nodate-2">
+            <article_title>Udemy - Data Science: Intro To Deep Learning With Python</article_title>
+            <journal_title>Udemy</journal_title>
+            <unstructured_citation>Udemy - Data Science: Intro To Deep Learning With Python. (n.d.). In Udemy. Retrieved September 1, 2023, from https://www.udemy.com/course/complete-deep-learning-course-with-python/</unstructured_citation>
+          </citation>
+          <citation key="noauthor_coursera_nodate">
+            <article_title>Coursera - Deep Learning</article_title>
+            <journal_title>Coursera</journal_title>
+            <unstructured_citation>Coursera - Deep Learning. (n.d.). In Coursera. Retrieved September 1, 2023, from https://www.coursera.org/specializations/deep-learning</unstructured_citation>
+          </citation>
+          <citation key="noauthor_freecodecamporg_2022">
+            <article_title>freeCodeCamp.org - Learn PyTorch for Deep Learning</article_title>
+            <journal_title>freeCodeCamp.org</journal_title>
+            <cYear>2022</cYear>
+            <unstructured_citation>freeCodeCamp.org - Learn PyTorch for Deep Learning. (2022). In freeCodeCamp.org. https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/</unstructured_citation>
+          </citation>
+          <citation key="noauthor_csc-_nodate">
+            <article_title>CSC- Practical Deep Learning</article_title>
+            <journal_title>Eventilla</journal_title>
+            <unstructured_citation>CSC- Practical Deep Learning. (n.d.). In Eventilla. Retrieved September 1, 2023, from https://ssl.eventilla.com/event/8aPek</unstructured_citation>
+          </citation>
+          <citation key="wilson_software_2006">
+            <article_title>Software Carpentry: Getting Scientists to Write Better Code by Making Them More Productive</article_title>
+            <author>Wilson</author>
+            <journal_title>Computing in Science &amp; Engineering</journal_title>
+            <issue>6</issue>
+            <volume>8</volume>
+            <doi>10.1109/MCSE.2006.122</doi>
+            <issn>1558-366X</issn>
+            <cYear>2006</cYear>
+            <unstructured_citation>Wilson, G. (2006). Software Carpentry: Getting Scientists to Write Better Code by Making Them More Productive. Computing in Science &amp; Engineering, 8(6), 66–69. https://doi.org/10.1109/MCSE.2006.122</unstructured_citation>
+          </citation>
+          <citation key="lang_small_2021">
+            <volume_title>Small Teaching: Everyday Lessons from the Science of Learning</volume_title>
+            <author>Lang</author>
+            <isbn>978-1-119-75554-8</isbn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Lang, J. M. (2021). Small Teaching: Everyday Lessons from the Science of Learning. John Wiley &amp; Sons. ISBN: 978-1-119-75554-8</unstructured_citation>
+          </citation>
+          <citation key="azalee_bostroem_software_2016">
+            <article_title>Software Carpentry: Programming with Python.</article_title>
+            <author>Azalee Bostroem</author>
+            <journal_title>GitHub</journal_title>
+            <cYear>2016</cYear>
+            <unstructured_citation>Azalee Bostroem, Trevor Bekolay, &amp; Valentina Staneva (eds). (2016). Software Carpentry: Programming with Python. In GitHub. https://github.com/swcarpentry/python-novice-inflammation, 10.5281/zenodo.57492</unstructured_citation>
+          </citation>
+          <citation key="noauthor_scikit-learn_2023">
+            <article_title>Scikit-learn course</article_title>
+            <cYear>2023</cYear>
+            <unstructured_citation>Scikit-learn course. (2023). Inria. https://github.com/INRIA/scikit-learn-mooc</unstructured_citation>
+          </citation>
+          <citation key="Pollard_Introduction_to_artificial_2022">
+            <article_title>Introduction to artificial neural networks in Python (Carpentries Incubator)</article_title>
+            <author>Pollard</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>Pollard, T., Peru, G., &amp; Pontes Reis, E. (2022). Introduction to artificial neural networks in Python (Carpentries Incubator) (Version 0.1.0). https://github.com/carpentries-incubator/machine-learning-neural-python</unstructured_citation>
+          </citation>
+          <citation key="horst_allisonhorstpalmerpenguins_2020">
+            <article_title>Allisonhorst/palmerpenguins: v0.1.0</article_title>
+            <author>Horst</author>
+            <doi>10.5281/zenodo.3960218</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>Horst, A. M., Hill, A. P., &amp; Gorman, K. B. (2020). Allisonhorst/palmerpenguins: v0.1.0. Zenodo. https://doi.org/10.5281/zenodo.3960218</unstructured_citation>
+          </citation>
+          <citation key="huber_weather_2022">
+            <article_title>Weather prediction dataset</article_title>
+            <author>Huber</author>
+            <doi>10.5281/ZENODO.4770936</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Huber, F., Kuppevelt, D. van, Steinbach, P., Sauze, C., Liu, Y., &amp; Weel, B. (2022). Weather prediction dataset. Zenodo. https://doi.org/10.5281/ZENODO.4770936</unstructured_citation>
+          </citation>
+          <citation key="gaviria_rojas_dollar_2022">
+            <article_title>The Dollar Street Dataset: Images Representing the Geographic and Socioeconomic Diversity of the World</article_title>
+            <author>Gaviria Rojas</author>
+            <journal_title>Advances in Neural Information Processing Systems</journal_title>
+            <volume>35</volume>
+            <cYear>2022</cYear>
+            <unstructured_citation>Gaviria Rojas, W., Diamos, S., Kini, K., Kanter, D., Janapa Reddi, V., &amp; Coleman, C. (2022). The Dollar Street Dataset: Images Representing the Geographic and Socioeconomic Diversity of the World. Advances in Neural Information Processing Systems, 35, 12979–12990. https://papers.nips.cc/paper_files/paper/2022/hash/5474d9d43c0519aa176276ff2c1ca528-Abstract-Datasets_and_Benchmarks.html</unstructured_citation>
+          </citation>
+          <citation key="huber_ms2deepscore_2021">
+            <article_title>MS2DeepScore: A novel deep learning similarity measure to compare tandem mass spectra</article_title>
+            <author>Huber</author>
+            <journal_title>Journal of Cheminformatics</journal_title>
+            <issue>1</issue>
+            <volume>13</volume>
+            <doi>10.1186/s13321-021-00558-4</doi>
+            <issn>1758-2946</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Huber, F., Burg, S. van der, Hooft, J. J. J. van der, &amp; Ridder, L. (2021). MS2DeepScore: A novel deep learning similarity measure to compare tandem mass spectra. Journal of Cheminformatics, 13(1), 84. https://doi.org/10.1186/s13321-021-00558-4</unstructured_citation>
+          </citation>
+          <citation key="van_der_burg_dollar_2024">
+            <article_title>Dollar street 10 - 64x64x3</article_title>
+            <author>burg</author>
+            <doi>10.5281/zenodo.10970014</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>burg, S. van der. (2024). Dollar street 10 - 64x64x3. Zenodo. https://doi.org/10.5281/zenodo.10970014</unstructured_citation>
+          </citation>
+          <citation key="noauthor_cifar-10_nodate">
+            <article_title>CIFAR-10 and CIFAR-100 datasets</article_title>
+            <unstructured_citation>CIFAR-10 and CIFAR-100 datasets. (n.d.). Retrieved February 11, 2025, from https://www.cs.toronto.edu/~kriz/cifar.html</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
