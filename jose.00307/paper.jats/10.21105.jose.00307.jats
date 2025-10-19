@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">307</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00307</article-id>
+<title-group>
+<article-title>Introduction to deep learning: Carpentries-style hands-on
+lesson material for introducing researchers to deep
+learning</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1250-6968</contrib-id>
+<name>
+<surname>van der Burg</surname>
+<given-names>Sven A.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-7896-2969</contrib-id>
+<name>
+<surname>Chandramouli</surname>
+<given-names>Pranav</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-1784-2920</contrib-id>
+<name>
+<surname>Fouilloux</surname>
+<given-names>Anne</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-1409-8358</contrib-id>
+<name>
+<surname>Geng</surname>
+<given-names>Cunliang</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1766-456X</contrib-id>
+<name>
+<surname>Hodges</surname>
+<given-names>Toby</given-names>
+</name>
+<xref ref-type="aff" rid="aff-8"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3535-9406</contrib-id>
+<name>
+<surname>Huber</surname>
+<given-names>Florian</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-2662-1994</contrib-id>
+<name>
+<surname>van Kuppevelt</surname>
+<given-names>Dafne</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-2979-6327</contrib-id>
+<name>
+<surname>Mohanan</surname>
+<given-names>Ashwin Vishnu</given-names>
+</name>
+<xref ref-type="aff" rid="aff-9"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5368-9217</contrib-id>
+<name>
+<surname>Sauze</surname>
+<given-names>Colin</given-names>
+</name>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9139-1577</contrib-id>
+<name>
+<surname>Schnober</surname>
+<given-names>Carsten</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-4096-0260</contrib-id>
+<name>
+<surname>Smits</surname>
+<given-names>Djura</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-4974-230X</contrib-id>
+<name>
+<surname>Steinbach</surname>
+<given-names>Peter</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9693-9332</contrib-id>
+<name>
+<surname>Weel</surname>
+<given-names>Berend</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-1655-3676</contrib-id>
+<name>
+<surname>Wikfeldt</surname>
+<given-names>Kjartan Thor</given-names>
+</name>
+<xref ref-type="aff" rid="aff-9"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9625-7235</contrib-id>
+<name>
+<surname>Wittke</surname>
+<given-names>Samantha</given-names>
+</name>
+<xref ref-type="aff" rid="aff-6"/>
+<xref ref-type="aff" rid="aff-7"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Netherlands eScience Center, Amsterdam, The
+Netherlands</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Simula Research Laboratory, Oslo, Norway</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Düsseldorf University of Applied Sciences, Düsseldorf,
+Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Helmholtz-Zentrum Dresden-Rossendorf, Dresden,
+Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>National Oceanography Centre, Liverpool,
+Great-Britain</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-6">
+<institution-wrap>
+<institution>CSC - IT center for Science, Espoo, Finland</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-7">
+<institution-wrap>
+<institution>Aalto University, Espoo, Finland</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-8">
+<institution-wrap>
+<institution>The Carpentries, USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-9">
+<institution-wrap>
+<institution>RISE Research Institutes of Sweden, Sweden</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-08-08">
+<day>8</day>
+<month>8</month>
+<year>2023</year>
+</pub-date>
+<volume>8</volume>
+<issue>92</issue>
+<fpage>307</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>deep learning</kwd>
+<kwd>machine learning</kwd>
+<kwd>Keras</kwd>
+<kwd>neural networks</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>This article describes a hands-on introduction to the first steps
+  in deep learning, intended for researchers who are familiar with
+  (non-deep) machine learning.</p>
+  <p>The use of deep learning has seen a sharp increase in popularity
+  and applicability over the last decade. While deep learning can be a
+  useful tool for researchers from a wide range of domains, taking the
+  first steps in the world of deep learning can be somewhat
+  intimidating. This introduction aims to cover the fundamentals of deep
+  learning in a practical and hands-on manner. By the end of the course,
+  students will be able to train their first neural network and
+  understand the subsequent steps needed to improve the model.</p>
+  <p>The lesson starts by explaining the basic concepts of neural
+  networks, and then guides learners through the different steps of a
+  deep learning workflow.
+  After following this lesson, learners will be able to prepare data for
+  deep learning, implement a basic deep learning model in Python with
+  Keras, and monitor and troubleshoot the training process. In addition,
+  they will be able to implement and understand different layer types,
+  such as convolutional layers and dropout layers, and apply transfer
+  learning.</p>
+  <p>We use data with permissive licenses and designed for real world
+  use cases:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>The Penguin dataset (Horst et al.
+      (<xref alt="2020" rid="ref-horst_allisonhorstpalmerpenguins_2020" ref-type="bibr">2020</xref>))</p>
+    </list-item>
+    <list-item>
+      <p>The Weather prediction dataset (Huber et al.
+      (<xref alt="2022" rid="ref-huber_weather_2022" ref-type="bibr">2022</xref>))</p>
+    </list-item>
+    <list-item>
+      <p>The Dollar Street Dataset (Gaviria Rojas et al.
+      (<xref alt="2022" rid="ref-gaviria_rojas_dollar_2022" ref-type="bibr">2022</xref>))
+      is representative and contains accurate demographic information to
+      ensure their robustness and fairness, especially for smaller
+      subpopulations.</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>This lesson addresses the need for an introductory lesson on deep
+  learning that is open-source, and can be used by instructors in a
+  workshop as well as for self-study. While generally usable, its target
+  audience are academic researchers.</p>
+  <p>There are many free online course materials on deep learning, see
+  for example: <italic>Fast.ai - Practical Deep Learning for
+  Coders</italic>
+  (<xref alt="n.d." rid="ref-noauthor_fastai_nodate" ref-type="bibr">n.d.</xref>);
+  “Udemy - Basics of Deep Learning”
+  (<xref alt="n.d." rid="ref-noauthor_udemy_nodate" ref-type="bibr">n.d.</xref>);
+  “Udemy - Tensorflow 2.0 Recurrent Neural Networks, LSTMs, GRUs”
+  (<xref alt="n.d." rid="ref-noauthor_udemy_nodate-1" ref-type="bibr">n.d.</xref>);
+  “Free Deep Learning Tutorial - Data Science”
+  (<xref alt="n.d." rid="ref-noauthor_udemy_nodate-2" ref-type="bibr">n.d.</xref>);
+  “Coursera - Deep Learning”
+  (<xref alt="n.d." rid="ref-noauthor_coursera_nodate" ref-type="bibr">n.d.</xref>);
+  “<named-content content-type="nocase">freeCodeCamp</named-content>.org
+  - Learn PyTorch for Deep Learning”
+  (<xref alt="2022" rid="ref-noauthor_freecodecamporg_2022" ref-type="bibr">2022</xref>).</p>
+  <p>Nonetheless, these resources are often not available open-source
+  and can thus not be easily adapted to the students’ needs. Also, these
+  resources are intended to use for self-study. Our material can be used
+  for self-study, but it is primarily developed for instructors to use
+  in a workshop. In addition, although a diverse range of online courses
+  already exists, few are targeted towards academic researchers.</p>
+  <p>There is another Carpentries lesson on deep learning: Introduction
+  to artificial neural networks in Python (Pollard et al.
+  (<xref alt="2022" rid="ref-Pollard_Introduction_to_artificial_2022" ref-type="bibr">2022</xref>)).
+  That lesson takes a different angle to deep learning, focusing on
+  computer vision with the application on medical images. Whereas this
+  lesson is a general introduction to applied deep learning showing
+  various applications and is more mature.</p>
+  <p>Many computing centers offer (local) deep learning courses, such as
+  “CSC- Practical Deep Learning”
+  (<xref alt="n.d." rid="ref-noauthor_csc-_nodate" ref-type="bibr">n.d.</xref>).
+  But the lesson material, if it is available, is not easily adopted
+  outside the course organisation.</p>
+  <p>The pedagogical approach of this lesson is both to make learners
+  familiar with the key concepts, and let them practice with how to
+  implement them – eventually resulting in an increase in confidence and
+  the conviction that ‘I can do this myself’. The key to getting there
+  is live coding: before the course, learners have to setup a working
+  environment on their own computer. During the course, learners type in
+  the commands that are explained by the instructor on their own
+  computer. This design is based on the Software Carpentry
+  (<xref alt="Wilson, 2006" rid="ref-wilson_software_2006" ref-type="bibr">Wilson,
+  2006</xref>) philosophy. Live coding ensures that learners master the
+  programmatic implementation of deep learning at the end of the course.
+  We believe that this makes our lesson a unique and crucial
+  resource.</p>
+  <p>Researchers can often only free a limited amount of time (maximum 5
+  consecutive days), since they are so involved in their daily work. To
+  accomplish this, we created a lesson that can be taught in 2
+  consecutive days or 4 half days.</p>
+  <p>Demand for our workshops and feedback gathered from students
+  demonstrated the need for a low-threshold lesson that lets researchers
+  take the first steps in the field of deep learning. This impression
+  was validated by other instructors who taught the lesson independently
+  to their own audiences and provided us with feedback on their
+  experience.</p>
+</sec>
+<sec id="lesson-development">
+  <title>Lesson Development</title>
+  <p>In 2018, the Netherlands eScience Center initiated the development
+  of this lesson to fill the gap identified above. Over the years, the
+  lesson has attracted a broad community of individuals and
+  organizations that have used the material for teaching workshops, and
+  contributed to the improvement of the lesson significantly.</p>
+  <p>The diversity of the involved parties has facilitated the
+  integration of various viewpoints on the lesson material. Apart from
+  the feedback gathered from students while teaching the workshop (see
+  below), the mix of contributors includes educators, data scientists,
+  and, most prominently, (research) software engineers. Some of them
+  have had years of experience in the deep learning domain, while others
+  have used the lesson as a first step into the field.</p>
+  <p>Development sprints of typically two full working days have
+  regularly facilitated focussed collaboration sessions that have
+  brought together various contributors to tackle specific issues
+  identified in the lesson material. These sessions have also provided a
+  fruitful ground for discussing the various experiences with and
+  insights about the material. They have facilitated the iterative
+  improvement of the material, resulting in a mature and well-tested set
+  of episodes.</p>
+</sec>
+<sec id="instructional-design">
+  <title>Instructional design</title>
+  <p>This lesson material was designed using the concepts from The
+  Carpentries Curriculum Development Handbook
+  (<xref alt="Becker &amp; Michonneau, n.d." rid="ref-becker_carpentries_nodate" ref-type="bibr">Becker
+  &amp; Michonneau, n.d.</xref>). Most importantly, we used ‘backward
+  design’: we started with identifying learning objectives, the core
+  skills and concepts that learners should acquire as a result of the
+  lesson. Next, exercises were designed to assess whether these
+  objectives are met. Eventually, the content is written to teach the
+  skills and concepts learners need to successfully complete the
+  exercises and, it follows, meet the learning objectives.</p>
+  <p>Live coding is central to this approach: the lesson is built up of
+  small blocks. In each block first the instructor demonstrates how to
+  do something, and students follow along on their own computer. Then,
+  the students work independently on exercises individually or in groups
+  to test their skills. This approach integrates opportunities for
+  guided practice throughout the lesson, promoting learning by helping
+  learners build up a functioning mental model of the domain and
+  transfer new knowledge from working memory to long-term memory. This
+  is in accordance with research-based successful teaching strategies
+  (<xref alt="Lang, 2021" rid="ref-lang_small_2021" ref-type="bibr">Lang,
+  2021</xref>).</p>
+  <p>The lesson material is built in the new lesson template:
+  Carpentries Workbench
+  (<xref alt="The Carpentries Workbench, n.d." rid="ref-noauthor_carpentries_nodate" ref-type="bibr"><italic>The
+  Carpentries Workbench</italic>, n.d.</xref>). This makes the lesson
+  material a complete self-study resource. But it also serves as lesson
+  material for the instructor teaching the lesson through live-coding,
+  in that case the lesson material is only shared with students after
+  the workshop as a reference. The lesson material can be toggled to the
+  ‘instructor view’. This allows to provide instructor notes on how to
+  approach teaching the lesson, and these can even be included at the
+  level of the lesson content. In addition, the Carpentries Workbench
+  prioritises accessibility of the content, for example by having
+  clearly visible figure captions and promoting alt-texts for
+  pictures.</p>
+  <p>The lesson is split into a general introduction, and 4 episodes
+  that cover 3 distinct increasingly more complex deep learning
+  problems. Each of the deep learning problems is approached using the
+  same 10-step deep learning workflow
+  (https://carpentries-lab.github.io/deep-learning-intro/1-introduction.html#deep-learning-workflow).</p>
+  <p>By going through the deep learning cycle three times with different
+  problems, learners become increasingly confident in applying this deep
+  learning workflow to their own projects. We end with an outlook
+  episode. Firstly, the outlook eposide discusses a real-world
+  application of deep learning in chemistry
+  (<xref alt="Huber et al., 2021" rid="ref-huber_ms2deepscore_2021" ref-type="bibr">Huber
+  et al., 2021</xref>). In addition, it discusses bias in datasets,
+  large language models, and good practices for organising deep learning
+  projects. Finally, we end with ideas for next steps after finishing
+  the lesson.</p>
+</sec>
+<sec id="feedback">
+  <title>Feedback</title>
+  <p>This course was taught 13 times over the course of 4 years, both
+  online and in-person, by the Netherlands eScience Center (Netherlands,
+  https://www.esciencecenter.nl/) and Helmholtz-Zentrum
+  Dresden-Rossendorf (Germany, https://www.hzdr.de/). Apart from the
+  core group of contributors, the workshop was also taught at at least 3
+  independent institutes, namely: University of Wisconson-Madison (US,
+  https://www.wisc.edu/), University of Auckland (New Zealand,
+  https://www.auckland.ac.nz/), and EMBL Heidelberg (Germany,
+  https://www.embl.org/sites/heidelberg/).</p>
+  <p>An up-to-date list of workshops that the authors are aware of
+  having using this lesson can be found in a
+  <monospace>workshops.md</monospace> file in the
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/carpentries-lab/deep-learning-intro/blob/main/workshops.md">GitHub
+  repository</ext-link>.</p>
+  <p>In general, adoption of the lesson material by the instructors not
+  involved in the project went well. The feedback gathered from our own
+  and others’ teachings was used to polish the lesson further.</p>
+  <sec id="student-responses">
+    <title>Student responses</title>
+    <p>The feedback we gathered from students is in general very
+    positive, with some responses from students to the question ‘What
+    was your favourite or most useful part of the workshop. Why?’
+    further confirming our statement of need:</p>
+    <disp-quote>
+      <p><italic>I enjoyed the live coding and playing with the models
+      to see how it would effect the results. It felt hands on and made
+      it easy for me to understand the concepts.</italic></p>
+    </disp-quote>
+    <disp-quote>
+      <p><italic>Well-defined steps to be followed in training a model
+      is very useful. Examples we worked on are quite nice.</italic></p>
+    </disp-quote>
+    <disp-quote>
+      <p><italic>The doing part, that really helps to get the theory
+      into practice.</italic></p>
+    </disp-quote>
+    <p>Below are two tables summarizing results from our post-workshop
+    survey. We use the students’ feedback to continuously improve the
+    lesson.</p>
+    <table-wrap>
+      <table>
+        <colgroup>
+          <col width="39%" />
+          <col width="13%" />
+          <col width="7%" />
+          <col width="8%" />
+          <col width="6%" />
+          <col width="10%" />
+          <col width="6%" />
+          <col width="11%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th>STRONGLY DISAGREE</th>
+            <th>DISAGREE</th>
+            <th>UNDECIDED</th>
+            <th>AGREE</th>
+            <th>STRONGLY AGREE</th>
+            <th>TOTAL</th>
+            <th>WEIGHTED AVERAGE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>I can immediately apply what I learned at this
+            workshop.</td>
+            <td>0</td>
+            <td>5</td>
+            <td>6</td>
+            <td>19</td>
+            <td>8</td>
+            <td>38</td>
+            <td>3,8</td>
+          </tr>
+          <tr>
+            <td>The setup and installation instructions for the lesson
+            were complete and easy to follow.</td>
+            <td>0</td>
+            <td>0</td>
+            <td>4</td>
+            <td>13</td>
+            <td>21</td>
+            <td>38</td>
+            <td>4,4</td>
+          </tr>
+          <tr>
+            <td>Examples and tasks in the lesson were relevant and
+            authentic</td>
+            <td>0</td>
+            <td>0</td>
+            <td>5</td>
+            <td>19</td>
+            <td>14</td>
+            <td>38</td>
+            <td>4,2</td>
+          </tr>
+        </tbody>
+      </table>
+    </table-wrap>
+    <p>Table 1: Agreement on statements by students from 2 workshops
+    taught at the Netherlands eScience Center. The results from these 2
+    workshops are a good representation of the general feedback we get
+    when teaching this workshop.</p>
+    <table-wrap>
+      <table>
+        <colgroup>
+          <col width="36%" />
+          <col width="9%" />
+          <col width="6%" />
+          <col width="6%" />
+          <col width="9%" />
+          <col width="9%" />
+          <col width="6%" />
+          <col width="7%" />
+          <col width="12%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th>POOR</th>
+            <th>FAIR</th>
+            <th>GOOD</th>
+            <th>VERY GOOD</th>
+            <th>EXCELLENT</th>
+            <th>N/A</th>
+            <th>TOTAL</th>
+            <th>WEIGHTED AVERAGE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Introduction into Deep Learning</td>
+            <td>0 (0%)</td>
+            <td>2 (5%)</td>
+            <td>10 (27%)</td>
+            <td>8 (22%)</td>
+            <td>17 (46%)</td>
+            <td>0 (0%)</td>
+            <td>37</td>
+            <td>4,1</td>
+          </tr>
+          <tr>
+            <td>Classification by a Neural Network using Keras (penguins
+            dataset)</td>
+            <td>0 (0%)</td>
+            <td>1 (3%)</td>
+            <td>5 (13%)</td>
+            <td>16 (42%)</td>
+            <td>16 (42%)</td>
+            <td>0 (0%)</td>
+            <td>38</td>
+            <td>4,2</td>
+          </tr>
+          <tr>
+            <td>Monitoring and Troubleshooting the learning process
+            (weather dataset)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>4 (11%)</td>
+            <td>18 (47%)</td>
+            <td>16 (42%)</td>
+            <td>0 (0%)</td>
+            <td>38</td>
+            <td>4,3</td>
+          </tr>
+          <tr>
+            <td>Advanced layer types (CIFAR-10 dataset)</td>
+            <td>0 (0%)</td>
+            <td>2 (5%)</td>
+            <td>5 (13%)</td>
+            <td>7 (18%)</td>
+            <td>16 (42%)</td>
+            <td>8 (21%)</td>
+            <td>38</td>
+            <td>4,2</td>
+          </tr>
+        </tbody>
+      </table>
+    </table-wrap>
+    <p>Table 2: Quality of the different episodes of the workshop as
+    rated by students from 2 workshops taught at the Netherlands
+    eScience Center. The results from these 2 workshops are a good
+    representation of the general feedback we get when teaching this
+    workshop.</p>
+  </sec>
+  <sec id="carpentries-lab-review-process">
+    <title>Carpentries Lab review process</title>
+    <p>Prior to submitting this paper the lesson went through the
+    substantial review in the process of becoming an official
+    Carpentries Lab (https://carpentries-lab.org/) lesson. This led to a
+    number of improvements to the lesson. In general the accessibility
+    and user-friendliness improved, for example by updating alt-texts
+    and using more beginner-friendly and clearer wording. Additionally,
+    the instructor notes were improved and many missing explanations of
+    important deep learning concepts were added to the lesson.</p>
+    <p>Most importantly, the reviewers pointed out that the CIFAR-10
+    (<xref alt="CIFAR-10 and CIFAR-100 Datasets, n.d." rid="ref-noauthor_cifar-10_nodate" ref-type="bibr"><italic>CIFAR-10
+    and CIFAR-100 Datasets</italic>, n.d.</xref>) dataset that we
+    initially used does not have a license. We were surprised to find
+    out that this dataset, that is one of the most widely used datasets
+    in the field of machine learning and deep learning, is actually
+    unethically scraped from the internet without permission from image
+    owners. As an alternative we now use ‘Dollar street 10’
+    (<xref alt="burg, 2024" rid="ref-van_der_burg_dollar_2024" ref-type="bibr">burg,
+    2024</xref>), a dataset that was adapted for this lesson from The
+    Dollar Street Dataset (Gaviria Rojas et al.
+    (<xref alt="2022" rid="ref-gaviria_rojas_dollar_2022" ref-type="bibr">2022</xref>)).
+    The Dollar Street Dataset is representative and contains accurate
+    demographic information to ensure their robustness and fairness,
+    especially for smaller subpopulations. In addition, it is a great
+    entry point to teach learners about ethical AI and bias in
+    datasets.</p>
+    <p>You can find all details of the review process on GitHub:
+    https://github.com/carpentries-lab/reviews/issues/25.</p>
+  </sec>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>This lesson can be taught as a stand-alone workshop to students
+  already familiar with machine learning and Python. It can also be
+  taught in a broader curriculum after an introduction to Python
+  programming (for example: Azalee Bostroem et al.
+  (<xref alt="2016" rid="ref-azalee_bostroem_software_2016" ref-type="bibr">2016</xref>))
+  and an introduction to machine learning (for example:
+  <italic>Scikit-Learn Course</italic>
+  (<xref alt="2023" rid="ref-noauthor_scikit-learn_2023" ref-type="bibr">2023</xref>)).
+  Concluding, the described lesson material is a unique and essential
+  resource aimed at researchers and designed specifically for a
+  live-coding teaching style. Hopefully, it will help many researchers
+  to set their first steps in a successful application of deep learning
+  to their own domain.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We would like to thank all instructors and helpers that taught the
+  course, and the community of people that left contributions to the
+  project, no matter how big or small. Also, we thank Chris Endemann
+  (University of Wisconson-Madison, US, https://www.wisc.edu/), Nidhi
+  Gowdra (University of Auckland, New Zealand,
+  https://www.auckland.ac.nz/), Renato Alves and Lisanna Paladin (EMBL
+  Heidelberg, Germany, https://www.embl.org/sites/heidelberg/), that
+  piloted this workshop at their institutes. We thank the Carpentries
+  for providing such a great framework for developing this lesson
+  material. We thank Sarah Brown, Johanna Bayer, and Mike Laverick for
+  giving us excellent feedback on the lesson during the Carpentries Lab
+  review process. We thank all students enrolled in the workshops that
+  were taught using this lesson material for providing us with
+  feedback.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-becker_carpentries_nodate">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Becker</surname><given-names>Erin</given-names></name>
+        <name><surname>Michonneau</surname><given-names>François</given-names></name>
+      </person-group>
+      <source>The Carpentries Curriculum Development Handbook</source>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://cdh.carpentries.org/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_carpentries_nodate">
+    <element-citation>
+      <article-title>The Carpentries Workbench</article-title>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://carpentries.github.io/workbench/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_fastai_nodate">
+    <element-citation>
+      <article-title>Fast.ai - Practical Deep Learning for Coders</article-title>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://course.fast.ai/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_udemy_nodate">
+    <element-citation>
+      <article-title>Udemy - Basics of Deep Learning</article-title>
+      <source>Udemy</source>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://www.udemy.com/course/basics-of-deep-learning/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_udemy_nodate-1">
+    <element-citation>
+      <article-title>Udemy - Tensorflow 2.0  Recurrent Neural Networks, LSTMs, GRUs</article-title>
+      <source>Udemy</source>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://www.udemy.com/course/tensorflow-20-recurrent-neural-networks-lstms-grus/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_udemy_nodate-2">
+    <element-citation>
+      <article-title>Udemy - Data Science: Intro To Deep Learning With Python</article-title>
+      <source>Udemy</source>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://www.udemy.com/course/complete-deep-learning-course-with-python/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_coursera_nodate">
+    <element-citation>
+      <article-title>Coursera - Deep Learning</article-title>
+      <source>Coursera</source>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://www.coursera.org/specializations/deep-learning</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_freecodecamporg_2022">
+    <element-citation>
+      <article-title>freeCodeCamp.org - Learn PyTorch for Deep Learning</article-title>
+      <source>freeCodeCamp.org</source>
+      <year iso-8601-date="2022-10">2022</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_csc-_nodate">
+    <element-citation>
+      <article-title>CSC- Practical Deep Learning</article-title>
+      <source>Eventilla</source>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://ssl.eventilla.com/event/8aPek</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-wilson_software_2006">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wilson</surname><given-names>G.</given-names></name>
+      </person-group>
+      <article-title>Software Carpentry: Getting Scientists to Write Better Code by Making Them More Productive</article-title>
+      <source>Computing in Science &amp; Engineering</source>
+      <year iso-8601-date="2006-11">2006</year><month>11</month>
+      <volume>8</volume>
+      <issue>6</issue>
+      <issn>1558-366X</issn>
+      <pub-id pub-id-type="doi">10.1109/MCSE.2006.122</pub-id>
+      <fpage>66</fpage>
+      <lpage>69</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lang_small_2021">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Lang</surname><given-names>James M.</given-names></name>
+      </person-group>
+      <source>Small Teaching: Everyday Lessons from the Science of Learning</source>
+      <publisher-name>John Wiley &amp; Sons</publisher-name>
+      <year iso-8601-date="2021-08">2021</year><month>08</month>
+      <isbn>978-1-119-75554-8</isbn>
+    </element-citation>
+  </ref>
+  <ref id="ref-azalee_bostroem_software_2016">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Azalee Bostroem</string-name>
+        <string-name>Trevor Bekolay</string-name>
+        <string-name>Valentina Staneva (eds)</string-name>
+      </person-group>
+      <article-title>Software Carpentry: Programming with Python.</article-title>
+      <source>GitHub</source>
+      <year iso-8601-date="2016-06">2016</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://github.com/swcarpentry/python-novice-inflammation, 10.5281/zenodo.57492</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_scikit-learn_2023">
+    <element-citation>
+      <article-title>Scikit-learn course</article-title>
+      <publisher-name>Inria</publisher-name>
+      <year iso-8601-date="2023-09">2023</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-09-01">2023</year><month>09</month><day>01</day></date-in-citation>
+      <uri>https://github.com/INRIA/scikit-learn-mooc</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pollard_Introduction_to_artificial_2022">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Pollard</surname><given-names>Tom</given-names></name>
+        <name><surname>Peru</surname><given-names>Giacomo</given-names></name>
+        <name><surname>Pontes Reis</surname><given-names>Eduardo</given-names></name>
+      </person-group>
+      <article-title>Introduction to artificial neural networks in Python (Carpentries Incubator)</article-title>
+      <year iso-8601-date="2022-05">2022</year><month>05</month>
+      <uri>https://github.com/carpentries-incubator/machine-learning-neural-python</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-horst_allisonhorstpalmerpenguins_2020">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Horst</surname><given-names>Allison M.</given-names></name>
+        <name><surname>Hill</surname><given-names>Alison Presmanes</given-names></name>
+        <name><surname>Gorman</surname><given-names>Kristen B.</given-names></name>
+      </person-group>
+      <article-title>Allisonhorst/palmerpenguins: v0.1.0</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2020-07">2020</year><month>07</month>
+      <uri>https://doi.org/10.5281/zenodo.3960218</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.3960218</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-huber_weather_2022">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Huber</surname><given-names>Florian</given-names></name>
+        <name><surname>Kuppevelt</surname><given-names>Dafne van</given-names></name>
+        <name><surname>Steinbach</surname><given-names>Peter</given-names></name>
+        <name><surname>Sauze</surname><given-names>Colin</given-names></name>
+        <name><surname>Liu</surname><given-names>Yang</given-names></name>
+        <name><surname>Weel</surname><given-names>Berend</given-names></name>
+      </person-group>
+      <article-title>Weather prediction dataset</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2022-09">2022</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-01-14">2025</year><month>01</month><day>14</day></date-in-citation>
+      <uri>https://zenodo.org/record/4770936</uri>
+      <pub-id pub-id-type="doi">10.5281/ZENODO.4770936</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-gaviria_rojas_dollar_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gaviria Rojas</surname><given-names>William</given-names></name>
+        <name><surname>Diamos</surname><given-names>Sudnya</given-names></name>
+        <name><surname>Kini</surname><given-names>Keertan</given-names></name>
+        <name><surname>Kanter</surname><given-names>David</given-names></name>
+        <name><surname>Janapa Reddi</surname><given-names>Vijay</given-names></name>
+        <name><surname>Coleman</surname><given-names>Cody</given-names></name>
+      </person-group>
+      <article-title>The Dollar Street Dataset: Images Representing the Geographic and Socioeconomic Diversity of the World</article-title>
+      <source>Advances in Neural Information Processing Systems</source>
+      <year iso-8601-date="2022-12">2022</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-01-14">2025</year><month>01</month><day>14</day></date-in-citation>
+      <volume>35</volume>
+      <uri>https://papers.nips.cc/paper_files/paper/2022/hash/5474d9d43c0519aa176276ff2c1ca528-Abstract-Datasets_and_Benchmarks.html</uri>
+      <fpage>12979</fpage>
+      <lpage>12990</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-huber_ms2deepscore_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Huber</surname><given-names>Florian</given-names></name>
+        <name><surname>Burg</surname><given-names>Sven van der</given-names></name>
+        <name><surname>Hooft</surname><given-names>Justin J. J. van der</given-names></name>
+        <name><surname>Ridder</surname><given-names>Lars</given-names></name>
+      </person-group>
+      <article-title>MS2DeepScore: A novel deep learning similarity measure to compare tandem mass spectra</article-title>
+      <source>Journal of Cheminformatics</source>
+      <year iso-8601-date="2021-10">2021</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-02-11">2025</year><month>02</month><day>11</day></date-in-citation>
+      <volume>13</volume>
+      <issue>1</issue>
+      <issn>1758-2946</issn>
+      <uri>https://doi.org/10.1186/s13321-021-00558-4</uri>
+      <pub-id pub-id-type="doi">10.1186/s13321-021-00558-4</pub-id>
+      <fpage>84</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-van_der_burg_dollar_2024">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>burg</surname><given-names>Sven van der</given-names></name>
+      </person-group>
+      <article-title>Dollar street 10 - 64x64x3</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2024-04">2024</year><month>04</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-02-11">2025</year><month>02</month><day>11</day></date-in-citation>
+      <uri>https://zenodo.org/records/10970014</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.10970014</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-noauthor_cifar-10_nodate">
+    <element-citation>
+      <article-title>CIFAR-10 and CIFAR-100 datasets</article-title>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-02-11">2025</year><month>02</month><day>11</day></date-in-citation>
+      <uri>https://www.cs.toronto.edu/~kriz/cifar.html</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
