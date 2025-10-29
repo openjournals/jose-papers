@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">306</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00306</article-id>
+<title-group>
+<article-title>Reinforcement Learning: A Comprehensive Open-Source
+Course</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0001-5853-5900</contrib-id>
+<name>
+<surname>Abdelwanis</surname>
+<given-names>Ali Hassan Ali</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0862-2069</contrib-id>
+<name>
+<surname>Haucke-Korber</surname>
+<given-names>Barnabas</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0002-1576-2465</contrib-id>
+<name>
+<surname>Jakobeit</surname>
+<given-names>Darius</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9490-1843</contrib-id>
+<name>
+<surname>Kirchgässner</surname>
+<given-names>Wilhelm</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0008-2879-7118</contrib-id>
+<name>
+<surname>Meyer</surname>
+<given-names>Marvin</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-5427-9527</contrib-id>
+<name>
+<surname>Schenke</surname>
+<given-names>Maximilian</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0005-0654-8741</contrib-id>
+<name>
+<surname>Vater</surname>
+<given-names>Hendrik</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-9362-8777</contrib-id>
+<name>
+<surname>Wallscheid</surname>
+<given-names>Oliver</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-3367-5998</contrib-id>
+<name>
+<surname>Weber</surname>
+<given-names>Daniel</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Department of Power Electronics and Electrical Drives,
+Paderborn University, Germany</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Department of Interconnected Automation Systems, University
+of Siegen, Germany</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-07-19">
+<day>19</day>
+<month>7</month>
+<year>2023</year>
+</pub-date>
+<volume>8</volume>
+<issue>92</issue>
+<fpage>306</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>data science</kwd>
+<kwd>Python</kwd>
+<kwd>TensorFlow</kwd>
+<kwd>PyTorch</kwd>
+<kwd>Jupyter notebook</kwd>
+<kwd>reproducible workflow</kwd>
+<kwd>open science</kwd>
+<kwd>reinforcement learning</kwd>
+<kwd>exploratory data analysis</kwd>
+<kwd>machine learning</kwd>
+<kwd>supervised learning</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>We present an open-source repository of an extensive course on
+  reinforcement learning. It is specifically designed for master
+  students in engineering and computer science. The course aims to
+  introduce beginners to the fundamentals of reinforcement learning and
+  progress towards advanced algorithms. This is done using examples
+  spanning many different classic control engineering tasks. It is
+  structured to be accessible to students with limited prior programming
+  experience by introducing the basics of Python.</p>
+  <p>The course spans 14 weeks, comprising 14 lectures and 12 exercises.
+  Accompanying video materials from real lectures and exercises are
+  provided to aid in understanding the course content. They are
+  available on a
+  <ext-link ext-link-type="uri" xlink:href="https://www.youtube.com/@uni_pb_lea/playlists">YouTube
+  channel</ext-link> under an Creative Commons license. The open-source
+  nature of the course allows other teachers to freely adapt the
+  materials for their own teaching purposes. The primary goal is to
+  equip learners with a solid theory of reinforcement learning
+  principles, as well as the practical tools to solve real-world
+  engineering problems from different domains, such as electrical
+  engineering.</p>
+  <p>The lecture follows Richard S. Sutton and Andrew G. Barto’s
+  fundamentals book on reinforcement learning
+  (<xref alt="Sutton &amp; Barto, 2005" rid="ref-Sutton2005ReinforcementLA" ref-type="bibr">Sutton
+  &amp; Barto, 2005</xref>) and takes inspiration from the reinforcement
+  learning lecture script delivered by David Silver
+  (<xref alt="Silver, 2015" rid="ref-silver2015" ref-type="bibr">Silver,
+  2015</xref>). The exercises are programmed in Python using Jupyter
+  notebooks
+  (<xref alt="Kluyver et al., 2016" rid="ref-Kluyver2016jupyter" ref-type="bibr">Kluyver
+  et al., 2016</xref>) for presentation. Important libraries for machine
+  and reinforcement learning are introduced, such as pandas
+  (<xref alt="McKinney, 2010" rid="ref-mckinney-proc-scipy-2010" ref-type="bibr">McKinney,
+  2010</xref>;
+  <xref alt="pandas, 2020" rid="ref-reback2020pandas" ref-type="bibr">pandas,
+  2020</xref>), gymnasium
+  (<xref alt="Towers et al., 2023" rid="ref-towers_gymnasium_2023" ref-type="bibr">Towers
+  et al., 2023</xref>), PyTorch
+  (<xref alt="Paszke et al., 2019" rid="ref-NEURIPS2019_9015" ref-type="bibr">Paszke
+  et al., 2019</xref>), scikit-learn
+  (<xref alt="Buitinck et al., 2013" rid="ref-sklearn_api" ref-type="bibr">Buitinck
+  et al., 2013</xref>), and stable-baselines3
+  (<xref alt="Raffin et al., 2021" rid="ref-stable-baselines3" ref-type="bibr">Raffin
+  et al., 2021</xref>).</p>
+  <p>The authors of this course have experience working with
+  reinforcement learning in the domain of electrical engineering, in
+  particular in electric drive
+  (<xref alt="Schenke &amp; Wallscheid, 2021" rid="ref-deep_q_torque" ref-type="bibr">Schenke
+  &amp; Wallscheid, 2021</xref>) and grid control
+  (<xref alt="Weber et al., 2023" rid="ref-10182718" ref-type="bibr">Weber
+  et al., 2023</xref>). The course has first been held under the
+  constraints of the COVID-19 pandemic in 2020, resorting to an online,
+  asynchronous learning experience. It has been extended with a session
+  on more contemporary algorithms in 2022. In subsequent years the
+  course has been revised to incorporate experience from teaching the
+  course and to align the structure of the exercises. All versions (for
+  each year’s revision) are available inside the publicly available
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/upb-lea/reinforcement_learning_course_materials">GitHub
+  repository</ext-link>.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Recent developments in (deep) reinforcement learning caused
+  considerable excitement in both academia and
+  <ext-link ext-link-type="uri" xlink:href="https://www.youtube.com/watch?v=WXuK6gekU1Y">popular
+  science media</ext-link>. Starting with beating champions in complex
+  board games such as chess
+  (<xref alt="Silver et al., 2017" rid="ref-chess" ref-type="bibr">Silver
+  et al., 2017</xref>) and Go
+  (<xref alt="Silver et al., 2016" rid="ref-SilverHuangEtAl16nature" ref-type="bibr">Silver
+  et al., 2016</xref>), breaking human records in a wide variety of
+  video games
+  (<xref alt="Mnih et al., 2013" rid="ref-atari-first" ref-type="bibr">Mnih
+  et al., 2013</xref>;
+  <xref alt="Vinyals et al., 2019" rid="ref-starcraft2" ref-type="bibr">Vinyals
+  et al., 2019</xref>), up to recent solutions in real-world (control)
+  applications
+  (<xref alt="Bai et al., 2022" rid="ref-rlhf" ref-type="bibr">Bai et
+  al., 2022</xref>;
+  <xref alt="Book et al., 2021" rid="ref-motors" ref-type="bibr">Book et
+  al., 2021</xref>;
+  <xref alt="Coronato et al., 2020" rid="ref-CORONATO2020101964" ref-type="bibr">Coronato
+  et al., 2020</xref>;
+  <xref alt="Kober et al., 2013" rid="ref-robotics" ref-type="bibr">Kober
+  et al., 2013</xref>;
+  <xref alt="Lin et al., 2018" rid="ref-traffic" ref-type="bibr">Lin et
+  al., 2018</xref>;
+  <xref alt="Zejnullahu et al., 2022" rid="ref-zejnullahu2022applications" ref-type="bibr">Zejnullahu
+  et al., 2022</xref>), reinforcement learning agents have been proven
+  to be a control or decision-making solution for a wide variety of
+  application domains. Reinforcement learning poses an elegant and
+  data-driven path to a control solution with minimal expert knowledge
+  involved, which makes it highly attractive for many different research
+  domains. A similar development has already been observed in recent
+  years with regard to deep supervised learning.</p>
+  <p>An increasing amount of educational resources is available due to
+  the traction RL has gained in recent years. However, most courses lack
+  either the continuity of topics ranging from the foundations up to the
+  advanced topics of deep reinforcement learning, practical programming
+  exercises accompanying each theoretical lecture, the testing at
+  university level, or free availability. Alternative courses often
+  focus on games
+  (<xref alt="Simonini &amp; Sanseviero, 2023" rid="ref-deep-rl-course" ref-type="bibr">Simonini
+  &amp; Sanseviero, 2023</xref>) or a mix of theoretical and practical
+  questions for their exercises
+  (<xref alt="Achiam, 2018" rid="ref-spinningup" ref-type="bibr">Achiam,
+  2018</xref>;
+  <xref alt="Brunskill, 2025" rid="ref-stanford" ref-type="bibr">Brunskill,
+  2025</xref>). In contrast, our course utilizes practical application
+  scenarios from a wide variety of domains with a strong focus on
+  classical control engineering tasks. This course can therefore help
+  accelerate establishing reinforcement learning solutions within
+  real-world applications.</p>
+</sec>
+<sec id="target-audience-and-learning-goals">
+  <title>Target Audience and Learning Goals</title>
+  <p>The target learner audience of this course are master students from
+  the subjects of engineering, computer science and anyone who is
+  interested in the concepts of reinforcement learning. Its exercises
+  are designed to be solvable by students without (strong) programming
+  background when done in the presented order. Students learn to utilize
+  reinforcement learning depending on the problem. They learn how to
+  incorporate expert knowledge into their reinforcement learning
+  solution, e.g., by designing the features or reward functions.
+  Exercises start with a very low-level introduction of the programming
+  language Python. Later exercises introduce advanced techniques that
+  can be utilized in more comprehensive environments, such as electric
+  drive states prediction or vehicle control. Students should have
+  experience with algorithm notation to be able to practically implement
+  the algorithms which are presented in the lectures. Some basic
+  understanding of stochastics is advised to understand mathematical
+  background. At the end of the course, students should have gained the
+  following skills:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Understand basic concepts and functionalities of reinforcement
+      learning methods.</p>
+    </list-item>
+    <list-item>
+      <p>Be able to understand and evaluate state-of-the-art
+      algorithms.</p>
+    </list-item>
+    <list-item>
+      <p>Have the ability to implement basic and advanced algorithms
+      using open-source libraries in Python.</p>
+    </list-item>
+    <list-item>
+      <p>Be able to select a fitting solution when presented with a new
+      task.</p>
+    </list-item>
+    <list-item>
+      <p>Can critically interpret and evaluate results and
+      performance.</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="content">
+  <title>Content</title>
+  <p>The course is structured as a one semester university-level course
+  with two sessions each week: one lecture and one exercise. The
+  contents of the latest iteration of the course (summer term 2025) are
+  presented in the following.</p>
+  <p>A summary of lectures and exercises can be found in table 1 and
+  table 2, respectively.</p>
+  <table-wrap>
+    <caption>
+      <p>Summary of course lectures.</p>
+    </caption>
+    <table>
+      <thead>
+        <tr>
+          <th align="right">Lecture</th>
+          <th>Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="right">01</td>
+          <td>Introduction to Reinforcement Learning</td>
+        </tr>
+        <tr>
+          <td align="right">02</td>
+          <td>Markov Decision Processes</td>
+        </tr>
+        <tr>
+          <td align="right">03</td>
+          <td>Dynamic Programming</td>
+        </tr>
+        <tr>
+          <td align="right">04</td>
+          <td>Monte Carlo Methods</td>
+        </tr>
+        <tr>
+          <td align="right">05</td>
+          <td>Temporal-Difference Learning</td>
+        </tr>
+        <tr>
+          <td align="right">06</td>
+          <td>Multi-Step Bootstrapping</td>
+        </tr>
+        <tr>
+          <td align="right">07</td>
+          <td>Planning and Learning with Tabular Methods</td>
+        </tr>
+        <tr>
+          <td align="right">08</td>
+          <td>Function Approximation with Supervised Learning</td>
+        </tr>
+        <tr>
+          <td align="right">09</td>
+          <td>On-Policy Prediction with Function Approximation</td>
+        </tr>
+        <tr>
+          <td align="right">10</td>
+          <td>Value-Based Control with Function Approximation</td>
+        </tr>
+        <tr>
+          <td align="right">11</td>
+          <td>Stochastic Policy Gradient Methods</td>
+        </tr>
+        <tr>
+          <td align="right">12</td>
+          <td>Deterministic Policy Gradient Methods</td>
+        </tr>
+        <tr>
+          <td align="right">13</td>
+          <td>Further Contemporary RL Algorithms (TRPO, PPO)</td>
+        </tr>
+        <tr>
+          <td align="right">14</td>
+          <td>Outlook and Research Insights</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+  <table-wrap>
+    <caption>
+      <p>Summary of course exercises.</p>
+    </caption>
+    <table>
+      <thead>
+        <tr>
+          <th align="right">Exercise</th>
+          <th>Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="right">01</td>
+          <td>Basics of Python for Scientific Computing</td>
+        </tr>
+        <tr>
+          <td align="right">02</td>
+          <td>Basic Markov Chain, Reward and Decision Problems</td>
+        </tr>
+        <tr>
+          <td align="right">03</td>
+          <td>Dynamic Programming</td>
+        </tr>
+        <tr>
+          <td align="right">04</td>
+          <td>Race Track with Monte Carlo Learning</td>
+        </tr>
+        <tr>
+          <td align="right">05</td>
+          <td>Race Track with Temporal-Difference Learning</td>
+        </tr>
+        <tr>
+          <td align="right">06</td>
+          <td>Inverted Pendulum with Tabular Multi-Step Methods</td>
+        </tr>
+        <tr>
+          <td align="right">07</td>
+          <td>Inverted Pendulum within Dyna Framework</td>
+        </tr>
+        <tr>
+          <td align="right">08</td>
+          <td>Predicting Electric Drive with Supervised Learning</td>
+        </tr>
+        <tr>
+          <td align="right">09</td>
+          <td>Evaluate Given Agents in Mountain Car Problem</td>
+        </tr>
+        <tr>
+          <td align="right">10</td>
+          <td>Mountain Car Valley Using Semi-Gradient Sarsa</td>
+        </tr>
+        <tr>
+          <td align="right">11</td>
+          <td>Moon Landing with Actor-Critic Methods</td>
+        </tr>
+        <tr>
+          <td align="right">12</td>
+          <td>Shoot for the moon with DDPG &amp; PPO</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+  <p>Lectures and exercises which share the same number also deal with
+  the same topics. Thus, theoretical basics are provided in the lecture,
+  which are to be implemented and evaluated in the exercises on the
+  basis of specific application examples which are taken from third
+  party open-source libraries
+  (<xref alt="Brockman et al., 2016" rid="ref-gym" ref-type="bibr">Brockman
+  et al., 2016</xref>;
+  <xref alt="Towers et al., 2023" rid="ref-towers_gymnasium_2023" ref-type="bibr">Towers
+  et al., 2023</xref>). This allows the learners to internalize learned
+  contents practically. However, the lecture can be studied
+  independently of the exercises and the exercises independently of the
+  lecture in case of self-learning.</p>
+  <p>The lecture slides were created in LaTex and published accordingly
+  to allow for consistent display and easy adaptation of the material by
+  other instructors. The practical exercises were implemented in Jupyter
+  notebooks
+  (<xref alt="Kluyver et al., 2016" rid="ref-Kluyver2016jupyter" ref-type="bibr">Kluyver
+  et al., 2016</xref>). These also allow a quick implementation of
+  further, or modification of existing, content.</p>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>The presented course provides a complete introduction to the
+  fundamentals and contemporary applications of reinforcement learning.
+  By combining theory and practice, the learner is enabled to analyze
+  and solve (even intricate control engineering) problems in the context
+  of reinforcement learning. Both the lecture content and the exercises
+  are open-source and designed to be easily adapted by other
+  instructors. Due to the recorded explanatory videos, this course can
+  easily be used by self-learners.</p>
+</sec>
+<sec id="authors-contribution">
+  <title>Author’s Contribution</title>
+  <p>Authors are listed in alphabetical order. Wilhelm Kirchgässner,
+  Maximilian Schenke, Oliver Wallscheid, and Daniel Weber have created
+  and held this course since the summer term of 2020. Barnabas
+  Haucke-Korber, Darius Jakobeit, and Marvin Meyer joined the University
+  of Paderborn at a later date and supported with revising and holding
+  the exercises in 2023. In 2024, Hendrik Vater contributed by aligning
+  the exercises to a common format. In 2025, Ali Hassan Ali Abdelwanis
+  supported updating the exercises to the newest libraries and
+  contributed to their revision.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We would like to thank all of the students who helped improving the
+  course by attending lectures, solving the exercises and giving
+  valuable feedback, as well as the open-source community for asking
+  questions and suggesting changes on GitHub.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Sutton2005ReinforcementLA">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sutton</surname><given-names>Richard S.</given-names></name>
+        <name><surname>Barto</surname><given-names>Andrew G.</given-names></name>
+      </person-group>
+      <article-title>Reinforcement learning: An introduction</article-title>
+      <source>IEEE Transactions on Neural Networks</source>
+      <year iso-8601-date="2005">2005</year>
+      <volume>16</volume>
+      <uri>https://api.semanticscholar.org/CorpusID:9166388</uri>
+      <fpage>285</fpage>
+      <lpage>286</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-silver2015">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Silver</surname><given-names>David</given-names></name>
+      </person-group>
+      <article-title>Lectures on reinforcement learning</article-title>
+      <publisher-name>url: https://www.davidsilver.uk/teaching/</publisher-name>
+      <year iso-8601-date="2015">2015</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-deep-rl-course">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Simonini</surname><given-names>Thomas</given-names></name>
+        <name><surname>Sanseviero</surname><given-names>Omar</given-names></name>
+      </person-group>
+      <article-title>The hugging face deep reinforcement learning class</article-title>
+      <source>GitHub repository</source>
+      <publisher-name>https://github.com/huggingface/deep-rl-class; GitHub</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-stanford">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Brunskill</surname><given-names>Emma</given-names></name>
+      </person-group>
+      <article-title>CS234: Reinforcement learning winter 2025</article-title>
+      <publisher-name>url: https://web.stanford.edu/class/cs234/</publisher-name>
+      <year iso-8601-date="2025">2025</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-spinningup">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Achiam</surname><given-names>Josh</given-names></name>
+      </person-group>
+      <article-title>Spinning up in deep reinforcement learning</article-title>
+      <publisher-name>url: https://spinningup.openai.com/</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-Kluyver2016jupyter">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Kluyver</surname><given-names>Thomas</given-names></name>
+        <name><surname>Ragan-Kelley</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Pérez</surname><given-names>Fernando et al</given-names></name>
+      </person-group>
+      <article-title>Jupyter notebooks – a publishing format for reproducible computational workflows</article-title>
+      <person-group person-group-type="editor">
+        <name><surname>Loizides</surname><given-names>F.</given-names></name>
+        <name><surname>Schmidt</surname><given-names>B.</given-names></name>
+      </person-group>
+      <publisher-name>IOS Press</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <fpage>87 </fpage>
+      <lpage> 90</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-reback2020pandas">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>pandas</surname></name>
+      </person-group>
+      <article-title>Pandas-dev/pandas: pandas</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2020-02">2020</year><month>02</month>
+      <uri>https://doi.org/10.5281/zenodo.3509134</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.3509134</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-mckinney-proc-scipy-2010">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>McKinney</surname></name>
+      </person-group>
+      <article-title>Data Structures for Statistical Computing in Python</article-title>
+      <source>Proceedings of the 9th Python in Science Conference</source>
+      <person-group person-group-type="editor">
+        <name><surname>Walt</surname></name>
+        <name><surname>Millman</surname></name>
+      </person-group>
+      <year iso-8601-date="2010">2010</year>
+      <pub-id pub-id-type="doi">10.25080/Majora-92bf1922-00a</pub-id>
+      <fpage>56 </fpage>
+      <lpage> 61</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-towers_gymnasium_2023">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Towers</surname><given-names>Mark</given-names></name>
+        <name><surname>Terry</surname><given-names>Jordan K.</given-names></name>
+        <name><surname>Kwiatkowski</surname><given-names>Ariel et al</given-names></name>
+      </person-group>
+      <article-title>Gymnasium</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2023-03">2023</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-07-08">2023</year><month>07</month><day>08</day></date-in-citation>
+      <uri>https://zenodo.org/record/8127025</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.8127026</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-NEURIPS2019_9015">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Paszke</surname><given-names>Adam</given-names></name>
+        <name><surname>Gross</surname><given-names>Sam</given-names></name>
+        <name><surname>Massa</surname><given-names>Francisco et al</given-names></name>
+      </person-group>
+      <article-title>PyTorch: An imperative style, high-performance deep learning library</article-title>
+      <source>Advances in neural information processing systems 32</source>
+      <publisher-name>Curran Associates, Inc.</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <uri>http://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library.pdf</uri>
+      <fpage>8024</fpage>
+      <lpage>8035</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gym">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Brockman</surname><given-names>Greg</given-names></name>
+        <name><surname>Cheung</surname><given-names>Vicki</given-names></name>
+        <name><surname>Pettersson</surname><given-names>Ludwig et al</given-names></name>
+      </person-group>
+      <article-title>OpenAI gym</article-title>
+      <year iso-8601-date="2016">2016</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-stable-baselines3">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Raffin</surname><given-names>Antonin</given-names></name>
+        <name><surname>Hill</surname><given-names>Ashley</given-names></name>
+        <name><surname>Gleave</surname><given-names>Adam et al</given-names></name>
+      </person-group>
+      <article-title>Stable-Baselines3: Reliable reinforcement learning implementations</article-title>
+      <source>Journal of Machine Learning Research</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>22</volume>
+      <issue>268</issue>
+      <uri>http://jmlr.org/papers/v22/20-1364.html</uri>
+      <fpage>1</fpage>
+      <lpage>8</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-SilverHuangEtAl16nature">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Silver</surname><given-names>David</given-names></name>
+        <name><surname>Huang</surname><given-names>Aja</given-names></name>
+        <name><surname>Maddison</surname><given-names>Chris J. et al</given-names></name>
+      </person-group>
+      <article-title>Mastering the game of Go with deep neural networks and tree search</article-title>
+      <source>Nature</source>
+      <year iso-8601-date="2016">2016</year>
+      <volume>529</volume>
+      <issue>7587</issue>
+      <issn>0028-0836</issn>
+      <pub-id pub-id-type="doi">10.1038/nature16961</pub-id>
+      <fpage>484</fpage>
+      <lpage>489</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-chess">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Silver</surname><given-names>David</given-names></name>
+        <name><surname>Hubert</surname><given-names>Thomas</given-names></name>
+        <name><surname>Schrittwieser</surname><given-names>Julian et al</given-names></name>
+      </person-group>
+      <article-title>Mastering chess and shogi by self-play with a general reinforcement learning algorithm</article-title>
+      <source>CoRR</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>abs/1712.01815</volume>
+      <uri>http://arxiv.org/abs/1712.01815</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-atari-first">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Mnih</surname><given-names>Volodymyr</given-names></name>
+        <name><surname>Kavukcuoglu</surname><given-names>Koray</given-names></name>
+        <name><surname>Silver</surname><given-names>David et al</given-names></name>
+      </person-group>
+      <article-title>Playing atari with deep reinforcement learning</article-title>
+      <source>CoRR</source>
+      <year iso-8601-date="2013">2013</year>
+      <volume>abs/1312.5602</volume>
+      <uri>http://arxiv.org/abs/1312.5602</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-starcraft2">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Vinyals</surname><given-names>Oriol</given-names></name>
+        <name><surname>Babuschkin</surname><given-names>Igor</given-names></name>
+        <name><surname>M. Czarnecki</surname><given-names>Wojciech et al</given-names></name>
+      </person-group>
+      <article-title>Grandmaster level in StarCraft II using multi-agent reinforcement learning</article-title>
+      <source>Nat.</source>
+      <year iso-8601-date="2019">2019</year>
+      <volume>575</volume>
+      <issue>7782</issue>
+      <uri>https://doi.org/10.1038/s41586-019-1724-z</uri>
+      <pub-id pub-id-type="doi">10.1038/s41586-019-1724-z</pub-id>
+      <fpage>350</fpage>
+      <lpage>354</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-motors">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Book</surname><given-names>Gerrit</given-names></name>
+        <name><surname>Traue</surname><given-names>Arne</given-names></name>
+        <name><surname>Balakrishna</surname><given-names>Praneeth et al</given-names></name>
+      </person-group>
+      <article-title>Transferring online reinforcement learning for electric motor control from simulation to real-world experiments</article-title>
+      <source>IEEE Open Journal of Power Electronics</source>
+      <year iso-8601-date="2021-03">2021</year><month>03</month>
+      <volume>2</volume>
+      <pub-id pub-id-type="doi">10.1109/OJPEL.2021.3065877</pub-id>
+      <fpage>187 </fpage>
+      <lpage> 201</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-robotics">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kober</surname><given-names>Jens</given-names></name>
+        <name><surname>Bagnell</surname><given-names>J. Andrew</given-names></name>
+        <name><surname>Peters</surname><given-names>Jan</given-names></name>
+      </person-group>
+      <article-title>Reinforcement learning in robotics: A survey</article-title>
+      <source>The International Journal of Robotics Research</source>
+      <year iso-8601-date="2013">2013</year>
+      <volume>32</volume>
+      <issue>11</issue>
+      <uri> https://doi.org/10.1177/0278364913495721</uri>
+      <pub-id pub-id-type="doi">10.1177/0278364913495721</pub-id>
+      <fpage>1238</fpage>
+      <lpage>1274</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-rlhf">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Bai</surname><given-names>Yuntao</given-names></name>
+        <name><surname>Jones</surname><given-names>Andy</given-names></name>
+        <name><surname>Ndousse</surname><given-names>Kamal et al</given-names></name>
+      </person-group>
+      <article-title>Training a helpful and harmless assistant with reinforcement learning from human feedback</article-title>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://arxiv.org/abs/2204.05862</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-zejnullahu2022applications">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Zejnullahu</surname><given-names>Frensi</given-names></name>
+        <name><surname>Moser</surname><given-names>Maurice</given-names></name>
+        <name><surname>Osterrieder</surname><given-names>Joerg</given-names></name>
+      </person-group>
+      <article-title>Applications of reinforcement learning in finance – trading with a double deep q-network</article-title>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://arxiv.org/abs/2206.14267</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-CORONATO2020101964">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Coronato</surname><given-names>Antonio</given-names></name>
+        <name><surname>Naeem</surname><given-names>Muddasar</given-names></name>
+        <name><surname>De Pietro</surname><given-names>Giuseppe</given-names></name>
+        <name><surname>Paragliola</surname><given-names>Giovanni</given-names></name>
+      </person-group>
+      <article-title>Reinforcement learning for intelligent healthcare applications: A survey</article-title>
+      <source>Artificial Intelligence in Medicine</source>
+      <year iso-8601-date="2020">2020</year>
+      <volume>109</volume>
+      <issn>0933-3657</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S093336572031229X</uri>
+      <pub-id pub-id-type="doi">10.1016/j.artmed.2020.101964</pub-id>
+      <fpage>101964</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-traffic">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lin</surname><given-names>Yilun</given-names></name>
+        <name><surname>Dai</surname><given-names>Xingyuan</given-names></name>
+        <name><surname>Li</surname><given-names>Li</given-names></name>
+        <name><surname>Wang</surname><given-names>Fei-Yue</given-names></name>
+      </person-group>
+      <article-title>An efficient deep reinforcement learning model for urban traffic control</article-title>
+      <source>CoRR</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>abs/1808.01876</volume>
+      <uri>http://arxiv.org/abs/1808.01876</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-sklearn_api">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Buitinck</surname><given-names>Lars</given-names></name>
+        <name><surname>Louppe</surname><given-names>Gilles</given-names></name>
+        <name><surname>Blondel</surname><given-names>Mathieu et al</given-names></name>
+      </person-group>
+      <article-title>API design for machine learning software: Experiences from the scikit-learn project</article-title>
+      <source>ECML PKDD workshop: Languages for data mining and machine learning</source>
+      <year iso-8601-date="2013">2013</year>
+      <fpage>108</fpage>
+      <lpage>122</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-10182718">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Weber</surname><given-names>Daniel</given-names></name>
+        <name><surname>Schenke</surname><given-names>Maximilian</given-names></name>
+        <name><surname>Wallscheid</surname><given-names>Oliver</given-names></name>
+      </person-group>
+      <article-title>Safe reinforcement learning-based control in power electronic systems</article-title>
+      <source>2023 international conference on future energy solutions (FES)</source>
+      <year iso-8601-date="2023">2023</year>
+      <volume></volume>
+      <pub-id pub-id-type="doi">10.1109/FES57669.2023.10182718</pub-id>
+      <fpage>1</fpage>
+      <lpage>6</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-deep_q_torque">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Schenke</surname><given-names>Maximilian</given-names></name>
+        <name><surname>Wallscheid</surname><given-names>Oliver</given-names></name>
+      </person-group>
+      <article-title>A deep q-learning direct torque controller for permanent magnet synchronous motors</article-title>
+      <source>IEEE Open Journal of the Industrial Electronics Society</source>
+      <year iso-8601-date="2021-04">2021</year><month>04</month>
+      <volume>2</volume>
+      <pub-id pub-id-type="doi">10.1109/OJIES.2021.3075521</pub-id>
+      <fpage>388</fpage>
+      <lpage>400</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
