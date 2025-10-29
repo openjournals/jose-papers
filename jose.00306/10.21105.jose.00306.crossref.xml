@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20251029140344-e3dfa4e41078c0a8e498df4eba0998a1024e19e9</doi_batch_id>
+    <timestamp>20251029140344</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>10</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>92</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Reinforcement Learning: A Comprehensive Open-Source Course</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Ali Hassan Ali</given_name>
+            <surname>Abdelwanis</surname>
+            <affiliations>
+              <institution><institution_name>Department of Interconnected Automation Systems, University of Siegen, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0001-5853-5900</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Barnabas</given_name>
+            <surname>Haucke-Korber</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0862-2069</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Darius</given_name>
+            <surname>Jakobeit</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0002-1576-2465</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Wilhelm</given_name>
+            <surname>Kirchgässner</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-9490-1843</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Marvin</given_name>
+            <surname>Meyer</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0008-2879-7118</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Maximilian</given_name>
+            <surname>Schenke</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-5427-9527</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Hendrik</given_name>
+            <surname>Vater</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0005-0654-8741</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Oliver</given_name>
+            <surname>Wallscheid</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-9362-8777</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Daniel</given_name>
+            <surname>Weber</surname>
+            <affiliations>
+              <institution><institution_name>Department of Power Electronics and Electrical Drives, Paderborn University, Germany</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3367-5998</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>10</month>
+          <day>29</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>306</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00306</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.17347442</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/306</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00306</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00306</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00306.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Sutton2005ReinforcementLA">
+            <article_title>Reinforcement learning: An introduction</article_title>
+            <author>Sutton</author>
+            <journal_title>IEEE Transactions on Neural Networks</journal_title>
+            <volume>16</volume>
+            <cYear>2005</cYear>
+            <unstructured_citation>Sutton, R. S., &amp; Barto, A. G. (2005). Reinforcement learning: An introduction. IEEE Transactions on Neural Networks, 16, 285–286. https://api.semanticscholar.org/CorpusID:9166388</unstructured_citation>
+          </citation>
+          <citation key="silver2015">
+            <article_title>Lectures on reinforcement learning</article_title>
+            <author>Silver</author>
+            <cYear>2015</cYear>
+            <unstructured_citation>Silver, D. (2015). Lectures on reinforcement learning. url: https://www.davidsilver.uk/teaching/.</unstructured_citation>
+          </citation>
+          <citation key="deep-rl-course">
+            <article_title>The hugging face deep reinforcement learning class</article_title>
+            <author>Simonini</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2023</cYear>
+            <unstructured_citation>Simonini, T., &amp; Sanseviero, O. (2023). The hugging face deep reinforcement learning class. In GitHub repository. https://github.com/huggingface/deep-rl-class; GitHub.</unstructured_citation>
+          </citation>
+          <citation key="stanford">
+            <article_title>CS234: Reinforcement learning winter 2025</article_title>
+            <author>Brunskill</author>
+            <cYear>2025</cYear>
+            <unstructured_citation>Brunskill, E. (2025). CS234: Reinforcement learning winter 2025. url: https://web.stanford.edu/class/cs234/.</unstructured_citation>
+          </citation>
+          <citation key="spinningup">
+            <article_title>Spinning up in deep reinforcement learning</article_title>
+            <author>Achiam</author>
+            <cYear>2018</cYear>
+            <unstructured_citation>Achiam, J. (2018). Spinning up in deep reinforcement learning. url: https://spinningup.openai.com/.</unstructured_citation>
+          </citation>
+          <citation key="Kluyver2016jupyter">
+            <article_title>Jupyter notebooks – a publishing format for reproducible computational workflows</article_title>
+            <author>Kluyver</author>
+            <cYear>2016</cYear>
+            <unstructured_citation>Kluyver, T., Ragan-Kelley, B., &amp; Pérez, F. et al. (2016). Jupyter notebooks – a publishing format for reproducible computational workflows (F. Loizides &amp; B. Schmidt, Eds.; pp. 87–90). IOS Press.</unstructured_citation>
+          </citation>
+          <citation key="reback2020pandas">
+            <article_title>Pandas-dev/pandas: pandas</article_title>
+            <author>pandas</author>
+            <doi>10.5281/zenodo.3509134</doi>
+            <cYear>2020</cYear>
+            <unstructured_citation>pandas. (2020). Pandas-dev/pandas: pandas (latest). Zenodo. https://doi.org/10.5281/zenodo.3509134</unstructured_citation>
+          </citation>
+          <citation key="mckinney-proc-scipy-2010">
+            <article_title>Data Structures for Statistical Computing in Python</article_title>
+            <author>McKinney</author>
+            <journal_title>Proceedings of the 9th Python in Science Conference</journal_title>
+            <doi>10.25080/Majora-92bf1922-00a</doi>
+            <cYear>2010</cYear>
+            <unstructured_citation>McKinney, Wes. (2010). Data Structures for Statistical Computing in Python. In Stéfan van der Walt &amp; Jarrod Millman (Eds.), Proceedings of the 9th Python in Science Conference (pp. 56–61). https://doi.org/10.25080/Majora-92bf1922-00a</unstructured_citation>
+          </citation>
+          <citation key="towers_gymnasium_2023">
+            <article_title>Gymnasium</article_title>
+            <author>Towers</author>
+            <doi>10.5281/zenodo.8127026</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Towers, M., Terry, J. K., &amp; Kwiatkowski, A. et al. (2023). Gymnasium. Zenodo. https://doi.org/10.5281/zenodo.8127026</unstructured_citation>
+          </citation>
+          <citation key="NEURIPS2019_9015">
+            <article_title>PyTorch: An imperative style, high-performance deep learning library</article_title>
+            <author>Paszke</author>
+            <journal_title>Advances in neural information processing systems 32</journal_title>
+            <cYear>2019</cYear>
+            <unstructured_citation>Paszke, A., Gross, S., &amp; Massa, F. et al. (2019). PyTorch: An imperative style, high-performance deep learning library. In Advances in neural information processing systems 32 (pp. 8024–8035). Curran Associates, Inc. http://papers.neurips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library.pdf</unstructured_citation>
+          </citation>
+          <citation key="gym">
+            <article_title>OpenAI gym</article_title>
+            <author>Brockman</author>
+            <cYear>2016</cYear>
+            <unstructured_citation>Brockman, G., Cheung, V., &amp; Pettersson, L. et al. (2016). OpenAI gym.</unstructured_citation>
+          </citation>
+          <citation key="stable-baselines3">
+            <article_title>Stable-Baselines3: Reliable reinforcement learning implementations</article_title>
+            <author>Raffin</author>
+            <journal_title>Journal of Machine Learning Research</journal_title>
+            <issue>268</issue>
+            <volume>22</volume>
+            <cYear>2021</cYear>
+            <unstructured_citation>Raffin, A., Hill, A., &amp; Gleave, A. et al. (2021). Stable-Baselines3: Reliable reinforcement learning implementations. Journal of Machine Learning Research, 22(268), 1–8. http://jmlr.org/papers/v22/20-1364.html</unstructured_citation>
+          </citation>
+          <citation key="SilverHuangEtAl16nature">
+            <article_title>Mastering the game of Go with deep neural networks and tree search</article_title>
+            <author>Silver</author>
+            <journal_title>Nature</journal_title>
+            <issue>7587</issue>
+            <volume>529</volume>
+            <doi>10.1038/nature16961</doi>
+            <issn>0028-0836</issn>
+            <cYear>2016</cYear>
+            <unstructured_citation>Silver, D., Huang, A., &amp; Maddison, C. J. et al. (2016). Mastering the game of Go with deep neural networks and tree search. Nature, 529(7587), 484–489. https://doi.org/10.1038/nature16961</unstructured_citation>
+          </citation>
+          <citation key="chess">
+            <article_title>Mastering chess and shogi by self-play with a general reinforcement learning algorithm</article_title>
+            <author>Silver</author>
+            <journal_title>CoRR</journal_title>
+            <volume>abs/1712.01815</volume>
+            <cYear>2017</cYear>
+            <unstructured_citation>Silver, D., Hubert, T., &amp; Schrittwieser, J. et al. (2017). Mastering chess and shogi by self-play with a general reinforcement learning algorithm. CoRR, abs/1712.01815. http://arxiv.org/abs/1712.01815</unstructured_citation>
+          </citation>
+          <citation key="atari-first">
+            <article_title>Playing atari with deep reinforcement learning</article_title>
+            <author>Mnih</author>
+            <journal_title>CoRR</journal_title>
+            <volume>abs/1312.5602</volume>
+            <cYear>2013</cYear>
+            <unstructured_citation>Mnih, V., Kavukcuoglu, K., &amp; Silver, D. et al. (2013). Playing atari with deep reinforcement learning. CoRR, abs/1312.5602. http://arxiv.org/abs/1312.5602</unstructured_citation>
+          </citation>
+          <citation key="starcraft2">
+            <article_title>Grandmaster level in StarCraft II using multi-agent reinforcement learning</article_title>
+            <author>Vinyals</author>
+            <journal_title>Nat.</journal_title>
+            <issue>7782</issue>
+            <volume>575</volume>
+            <doi>10.1038/s41586-019-1724-z</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Vinyals, O., Babuschkin, I., &amp; M. Czarnecki, W. et al. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. Nat., 575(7782), 350–354. https://doi.org/10.1038/s41586-019-1724-z</unstructured_citation>
+          </citation>
+          <citation key="motors">
+            <article_title>Transferring online reinforcement learning for electric motor control from simulation to real-world experiments</article_title>
+            <author>Book</author>
+            <journal_title>IEEE Open Journal of Power Electronics</journal_title>
+            <volume>2</volume>
+            <doi>10.1109/OJPEL.2021.3065877</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Book, G., Traue, A., &amp; Balakrishna, P. et al. (2021). Transferring online reinforcement learning for electric motor control from simulation to real-world experiments. IEEE Open Journal of Power Electronics, 2, 187–201. https://doi.org/10.1109/OJPEL.2021.3065877</unstructured_citation>
+          </citation>
+          <citation key="robotics">
+            <article_title>Reinforcement learning in robotics: A survey</article_title>
+            <author>Kober</author>
+            <journal_title>The International Journal of Robotics Research</journal_title>
+            <issue>11</issue>
+            <volume>32</volume>
+            <doi>10.1177/0278364913495721</doi>
+            <cYear>2013</cYear>
+            <unstructured_citation>Kober, J., Bagnell, J. A., &amp; Peters, J. (2013). Reinforcement learning in robotics: A survey. The International Journal of Robotics Research, 32(11), 1238–1274. https://doi.org/10.1177/0278364913495721</unstructured_citation>
+          </citation>
+          <citation key="rlhf">
+            <article_title>Training a helpful and harmless assistant with reinforcement learning from human feedback</article_title>
+            <author>Bai</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>Bai, Y., Jones, A., &amp; Ndousse, K. et al. (2022). Training a helpful and harmless assistant with reinforcement learning from human feedback. https://arxiv.org/abs/2204.05862</unstructured_citation>
+          </citation>
+          <citation key="zejnullahu2022applications">
+            <article_title>Applications of reinforcement learning in finance – trading with a double deep q-network</article_title>
+            <author>Zejnullahu</author>
+            <cYear>2022</cYear>
+            <unstructured_citation>Zejnullahu, F., Moser, M., &amp; Osterrieder, J. (2022). Applications of reinforcement learning in finance – trading with a double deep q-network. https://arxiv.org/abs/2206.14267</unstructured_citation>
+          </citation>
+          <citation key="CORONATO2020101964">
+            <article_title>Reinforcement learning for intelligent healthcare applications: A survey</article_title>
+            <author>Coronato</author>
+            <journal_title>Artificial Intelligence in Medicine</journal_title>
+            <volume>109</volume>
+            <doi>10.1016/j.artmed.2020.101964</doi>
+            <issn>0933-3657</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Coronato, A., Naeem, M., De Pietro, G., &amp; Paragliola, G. (2020). Reinforcement learning for intelligent healthcare applications: A survey. Artificial Intelligence in Medicine, 109, 101964. https://doi.org/10.1016/j.artmed.2020.101964</unstructured_citation>
+          </citation>
+          <citation key="traffic">
+            <article_title>An efficient deep reinforcement learning model for urban traffic control</article_title>
+            <author>Lin</author>
+            <journal_title>CoRR</journal_title>
+            <volume>abs/1808.01876</volume>
+            <cYear>2018</cYear>
+            <unstructured_citation>Lin, Y., Dai, X., Li, L., &amp; Wang, F.-Y. (2018). An efficient deep reinforcement learning model for urban traffic control. CoRR, abs/1808.01876. http://arxiv.org/abs/1808.01876</unstructured_citation>
+          </citation>
+          <citation key="sklearn_api">
+            <article_title>API design for machine learning software: Experiences from the scikit-learn project</article_title>
+            <author>Buitinck</author>
+            <journal_title>ECML PKDD workshop: Languages for data mining and machine learning</journal_title>
+            <cYear>2013</cYear>
+            <unstructured_citation>Buitinck, L., Louppe, G., &amp; Blondel, M. et al. (2013). API design for machine learning software: Experiences from the scikit-learn project. ECML PKDD Workshop: Languages for Data Mining and Machine Learning, 108–122.</unstructured_citation>
+          </citation>
+          <citation key="10182718">
+            <article_title>Safe reinforcement learning-based control in power electronic systems</article_title>
+            <author>Weber</author>
+            <journal_title>2023 international conference on future energy solutions (FES)</journal_title>
+            <doi>10.1109/FES57669.2023.10182718</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Weber, D., Schenke, M., &amp; Wallscheid, O. (2023). Safe reinforcement learning-based control in power electronic systems. 2023 International Conference on Future Energy Solutions (FES), 1–6. https://doi.org/10.1109/FES57669.2023.10182718</unstructured_citation>
+          </citation>
+          <citation key="deep_q_torque">
+            <article_title>A deep q-learning direct torque controller for permanent magnet synchronous motors</article_title>
+            <author>Schenke</author>
+            <journal_title>IEEE Open Journal of the Industrial Electronics Society</journal_title>
+            <volume>2</volume>
+            <doi>10.1109/OJIES.2021.3075521</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Schenke, M., &amp; Wallscheid, O. (2021). A deep q-learning direct torque controller for permanent magnet synchronous motors. IEEE Open Journal of the Industrial Electronics Society, 2, 388–400. https://doi.org/10.1109/OJIES.2021.3075521</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
