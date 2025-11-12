@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20251112192546-5da367f4bdd3a7160a519a430c37046f388f0609</doi_batch_id>
+    <timestamp>20251112192546</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>11</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>93</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>nwb4edu: an Online Textbook for Teaching and Learning with NWB Datasets</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Ashley L.</given_name>
+            <surname>Juavinett</surname>
+            <affiliations>
+              <institution><institution_name>UC San Diego, Neurobiology</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0872-7098</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Victor</given_name>
+            <surname>Magdaleno-Garcia</surname>
+            <affiliations>
+              <institution><institution_name>UC San Diego, Cognitive Science</institution_name></institution>
+            </affiliations>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>11</month>
+          <day>12</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>309</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00309</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.17575041</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/309</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00309</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00309</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00309.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="rubel_neurodata_2022">
+            <article_title>The Neurodata Without Borders ecosystem for neurophysiological data science</article_title>
+            <author>Rübel</author>
+            <journal_title>eLife</journal_title>
+            <volume>11</volume>
+            <doi>10.7554/eLife.78362</doi>
+            <issn>2050-084X</issn>
+            <cYear>2022</cYear>
+            <unstructured_citation>Rübel, O., Tritt, A., Ly, R., Dichter, B. K., Ghosh, S., Niu, L., Baker, P., Soltesz, I., Ng, L., Svoboda, K., Frank, L., &amp; Bouchard, K. E. (2022). The Neurodata Without Borders ecosystem for neurophysiological data science. eLife, 11, e78362. https://doi.org/10.7554/eLife.78362</unstructured_citation>
+          </citation>
+          <citation key="teeters_neurodata_2015">
+            <article_title>Neurodata Without Borders: Creating a Common Data Format for Neurophysiology</article_title>
+            <author>Teeters</author>
+            <journal_title>Neuron</journal_title>
+            <issue>4</issue>
+            <volume>88</volume>
+            <doi>10.1016/j.neuron.2015.10.025</doi>
+            <issn>0896-6273</issn>
+            <cYear>2015</cYear>
+            <unstructured_citation>Teeters, J. L., Godfrey, K., Young, R., Dang, C., Friedsam, C., Wark, B., Asari, H., Peron, S., Li, N., Peyrache, A., Denisov, G., Siegle, J. H., Olsen, S. R., Martin, C., Chun, M., Tripathy, S., Blanche, T. J., Harris, K., Buzsáki, G., … Sommer, F. T. (2015). Neurodata Without Borders: Creating a Common Data Format for Neurophysiology. Neuron, 88(4), 629–634. https://doi.org/10.1016/j.neuron.2015.10.025</unstructured_citation>
+          </citation>
+          <citation key="executable_books_project_2021_4539666">
+            <article_title>Jupyter book</article_title>
+            <author>Executable Books Project</author>
+            <doi>10.5281/zenodo.4539666</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Executable Books Project. (2021). Jupyter book (Version v0.10.0). Zenodo. https://doi.org/10.5281/zenodo.4539666</unstructured_citation>
+          </citation>
+          <citation key="de_vries_sharing_2023">
+            <article_title>Sharing neurophysiology data from the Allen Brain Observatory</article_title>
+            <author>Vries</author>
+            <journal_title>eLife</journal_title>
+            <volume>12</volume>
+            <doi>10.7554/eLife.85550</doi>
+            <issn>2050-084X</issn>
+            <cYear>2023</cYear>
+            <unstructured_citation>Vries, S. E. de, Siegle, J. H., &amp; Koch, C. (2023). Sharing neurophysiology data from the Allen Brain Observatory. eLife, 12, e85550. https://doi.org/10.7554/eLife.85550</unstructured_citation>
+          </citation>
+          <citation key="de_vries_large-scale_2020">
+            <article_title>A large-scale standardized physiological survey reveals functional organization of the mouse visual cortex</article_title>
+            <author>Vries</author>
+            <journal_title>Nature Neuroscience</journal_title>
+            <issue>1</issue>
+            <volume>23</volume>
+            <doi>10.1038/s41593-019-0550-9</doi>
+            <issn>1546-1726</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Vries, S. E. J. de, Lecoq, J. A., Buice, M. A., Groblewski, P. A., Ocker, G. K., Oliver, M., Feng, D., Cain, N., Ledochowitsch, P., Millman, D., Roll, K., Garrett, M., Keenan, T., Kuan, L., Mihalas, S., Olsen, S., Thompson, C., Wakeman, W., Waters, J., … Koch, C. (2020). A large-scale standardized physiological survey reveals functional organization of the mouse visual cortex. Nature Neuroscience, 23(1), 138–151. https://doi.org/10.1038/s41593-019-0550-9</unstructured_citation>
+          </citation>
+          <citation key="sargolini_conjunctive_2006">
+            <article_title>Conjunctive Representation of Position, Direction, and Velocity in Entorhinal Cortex</article_title>
+            <author>Sargolini</author>
+            <journal_title>Science</journal_title>
+            <issue>5774</issue>
+            <volume>312</volume>
+            <doi>10.1126/science.1125572</doi>
+            <cYear>2006</cYear>
+            <unstructured_citation>Sargolini, F., Fyhn, M., Hafting, T., McNaughton, B. L., Witter, M. P., Moser, M.-B., &amp; Moser, E. I. (2006). Conjunctive Representation of Position, Direction, and Velocity in Entorhinal Cortex. Science, 312(5774), 758–762. https://doi.org/10.1126/science.1125572</unstructured_citation>
+          </citation>
+          <citation key="churchland_neural_2012">
+            <article_title>Neural population dynamics during reaching</article_title>
+            <author>Churchland</author>
+            <journal_title>Nature</journal_title>
+            <issue>7405</issue>
+            <volume>487</volume>
+            <doi>10.1038/nature11129</doi>
+            <issn>1476-4687</issn>
+            <cYear>2012</cYear>
+            <unstructured_citation>Churchland, M. M., Cunningham, J. P., Kaufman, M. T., Foster, J. D., Nuyujukian, P., Ryu, S. I., &amp; Shenoy, K. V. (2012). Neural population dynamics during reaching. Nature, 487(7405), 51–56. https://doi.org/10.1038/nature11129</unstructured_citation>
+          </citation>
+          <citation key="campbell2021distance">
+            <article_title>Distance-tuned neurons drive specialized path integration calculations in medial entorhinal cortex</article_title>
+            <author>Campbell</author>
+            <journal_title>Cell Reports</journal_title>
+            <issue>10</issue>
+            <volume>36</volume>
+            <doi>10.1016/j.celrep.2021.109669</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Campbell, M. G., Attinger, A., Ocko, S. A., Ganguli, S., &amp; Giocomo, L. M. (2021). Distance-tuned neurons drive specialized path integration calculations in medial entorhinal cortex. Cell Reports, 36(10), 109669. https://doi.org/10.1016/j.celrep.2021.109669</unstructured_citation>
+          </citation>
+          <citation key="campbell2021mec_neuropixels">
+            <article_title>VR Data Neuropixel supporting "Distance-tuned neurons drive specialized path integration calculations in medial entorhinal cortex"</article_title>
+            <author>Campbell</author>
+            <doi>10.48324/dandi.000053/0.210819.0345</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Campbell, M. G., Attinger, A., Ocko, S. A., Ganguli, S., &amp; Giocomo, L. M. (2021). VR Data Neuropixel supporting "Distance-tuned neurons drive specialized path integration calculations in medial entorhinal cortex" (Version 0.210819.0345). DANDI archive; DANDI Archive. https://doi.org/10.48324/dandi.000053/0.210819.0345</unstructured_citation>
+          </citation>
+          <citation key="economo2018distinct">
+            <article_title>Distinct descending motor cortex pathways and their roles in movement</article_title>
+            <author>Economo</author>
+            <journal_title>Nature</journal_title>
+            <issue>7729</issue>
+            <volume>563</volume>
+            <doi>10.1038/s41586-018-0642-9</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Economo, M. N., Viswanathan, S., Tasic, B., Bas, E., Winnubst, J., Menon, V., Graybuck, L. T., Nguyen, T. N., Smith, K. A., Yao, Z., Wang, L., Gerfen, C. R., Chandrashekar, J., Zeng, H., Looger, L. L., &amp; Svoboda, K. (2018). Distinct descending motor cortex pathways and their roles in movement. Nature, 563(7729), 79–84. https://doi.org/10.1038/s41586-018-0642-9</unstructured_citation>
+          </citation>
+          <citation key="economo2018alm">
+            <article_title>Mouse anterior lateral motor cortex (ALM) in delay response task</article_title>
+            <author>Economo</author>
+            <cYear>2018</cYear>
+            <unstructured_citation>Economo, M. N., Viswanathan, S., Tasic, B., Bas, E., Winnubst, J., Menon, V., Graybuck, L. T., Nguyen, T. N., Smith, K. A., Yao, Z., Wang, L., Gerfen, C. R., Chandrashekar, J., Zeng, H., Looger, L. L., &amp; Svoboda, K. (2018). Mouse anterior lateral motor cortex (ALM) in delay response task. DANDI archive; DANDI Archive. https://dandiarchive.org/dandiset/000006</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
