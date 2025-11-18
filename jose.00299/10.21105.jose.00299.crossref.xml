@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20251118173341-00579658c11c45a667a4611363b31d45a06ab460</doi_batch_id>
+    <timestamp>20251118173341</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>11</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>93</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Course Materials for an Introduction to Computational Chemistry Techniques</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Sarah Victoria</given_name>
+            <surname>Stewart</surname>
+            <affiliations>
+              <institution><institution_name>School of Chemistry, University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh EH9 3FJ, United Kingdom</institution_name></institution>
+              <institution><institution_name>UK Centre for Astrobiology, School of Physics and Astronomy, University of Edinburgh, James Clerk Maxwell Building, Peter Guthrie Tait Road, Edinburgh EH9 3FD, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1663-5206</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Hannah</given_name>
+            <surname>Pollak</surname>
+            <affiliations>
+              <institution><institution_name>School of Chemistry, University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh EH9 3FJ, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1011-8478</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Timothy J.</given_name>
+            <surname>Spankie</surname>
+            <affiliations>
+              <institution><institution_name>School of Chemistry, University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh EH9 3FJ, United Kingdom</institution_name></institution>
+              <institution><institution_name>Computational Biology, School of Life Sciences, University of Dundee, Dow Street, Dundee DD1 5EH, United Kingdom</institution_name></institution>
+              <institution><institution_name>Biological Chemistry and Drug Discovery, School of Life Sciences, University of Dundee, Dow Street, Dundee DD1 5EH, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-5123-7049</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Audrey</given_name>
+            <surname>Ngambia</surname>
+            <affiliations>
+              <institution><institution_name>School of Chemistry, University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh EH9 3FJ, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-1951-8742</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Angela</given_name>
+            <surname>Chitzanidi</surname>
+            <affiliations>
+              <institution><institution_name>Research Services, Information Services, University of Edinburgh, Argyle House, 3 Lady Lawson Street, Edinburgh EH3 9DR, United Kingdom</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Valentina</given_name>
+            <surname>Erastova</surname>
+            <affiliations>
+              <institution><institution_name>School of Chemistry, University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh EH9 3FJ, United Kingdom</institution_name></institution>
+              <institution><institution_name>UK Centre for Astrobiology, School of Physics and Astronomy, University of Edinburgh, James Clerk Maxwell Building, Peter Guthrie Tait Road, Edinburgh EH9 3FD, United Kingdom</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-6747-3297</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>11</month>
+          <day>18</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>299</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00299</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.17226164</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/299</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00299</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00299</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00299.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="ecdf">
+            <article_title>Edinburgh compute and data facility</article_title>
+            <author>University of Edinburgh</author>
+            <unstructured_citation>University of Edinburgh. (n.d.). Edinburgh compute and data facility. https://www.ecdf.ed.ac.uk.</unstructured_citation>
+          </citation>
+          <citation key="dahl2020">
+            <article_title>Using computational methods to teach chemical principles: overview</article_title>
+            <author>Grushow</author>
+            <journal_title>Using computational methods to teach chemical principles</journal_title>
+            <doi>10.1021/bk-2019-1312.ch001</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Grushow, A., &amp; Reeves, M. S. (2019). Using computational methods to teach chemical principles: overview. In Using computational methods to teach chemical principles (pp. 1–10). American Chemical Society. https://doi.org/10.1021/bk-2019-1312.ch001</unstructured_citation>
+          </citation>
+          <citation key="pollak2024">
+            <article_title>Modeling realistic clay systems with ClayCode</article_title>
+            <author>Pollak</author>
+            <journal_title>Journal of Chemical Theory and Computation</journal_title>
+            <volume>20</volume>
+            <doi>10.1021/acs.jctc.4c00987</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Pollak, H., Degiacomi, M. T., &amp; Erastova, V. (2024). Modeling realistic clay systems with ClayCode. Journal of Chemical Theory and Computation, 20, 9606–9617. https://doi.org/10.1021/acs.jctc.4c00987</unstructured_citation>
+          </citation>
+          <citation key="unix_shell">
+            <article_title>Swcarpentry/shell-novice: Software carpentry: The UNIX shell, june 2019</article_title>
+            <author>Wilson</author>
+            <doi>10.5281/zenodo.3266823</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Wilson, G., Capes, G., Devenyi, G. A., Koch, C., Silva, R., Srinath, A., Morris, C., Jackson, M., Boughton, A., Emonet, R., Gacenga, F., Nederbragt, L., csqrs, Irving, D., Becker, E. A., Deniz, F., Stimberg, M., Beagrie, R. A., McCloy, D., … Chhatre, V. (2019). Swcarpentry/shell-novice: Software carpentry: The UNIX shell, june 2019 (G. A. Devenyi, G. Capes, C. Morris, &amp; W. Pitchers, Eds.; Version v2019.06.1). Zenodo. https://doi.org/10.5281/zenodo.3266823</unstructured_citation>
+          </citation>
+          <citation key="hpc_shell">
+            <article_title>Hpc-carpentry/hpc-shell: Introduction to using the shell in a high-performance computing context</article_title>
+            <author>HPC Carpentry development team</author>
+            <cYear>2021</cYear>
+            <unstructured_citation>HPC Carpentry development team. (2021). Hpc-carpentry/hpc-shell: Introduction to using the shell in a high-performance computing context. https://hpc-carpentry.github.io/hpc-shell/</unstructured_citation>
+          </citation>
+          <citation key="hpc_intro">
+            <article_title>Carpentries-incubator/hpc-intro: An introduction to high performance computing</article_title>
+            <author>Koch</author>
+            <cYear>2025</cYear>
+            <unstructured_citation>Koch, C., Stafford, J., Steinbach, P., Simpson, J., &amp; Keller, T. (2025). Carpentries-incubator/hpc-intro: An introduction to high performance computing. https://carpentries-incubator.github.io/hpc-intro/</unstructured_citation>
+          </citation>
+          <citation key="lysozyme">
+            <article_title>GROMACS tutorial: Introduction to molecular dynamics</article_title>
+            <author>Bergh</author>
+            <doi>10.5281/zenodo.14803238</doi>
+            <cYear>2025</cYear>
+            <unstructured_citation>Bergh, C., Majdolhosseini, M., &amp; Villa, A. (2025). GROMACS tutorial: Introduction to molecular dynamics. https://doi.org/10.5281/zenodo.14803238</unstructured_citation>
+          </citation>
+          <citation key="vmd">
+            <article_title>VMD – Visual Molecular Dynamics</article_title>
+            <author>Humphrey</author>
+            <journal_title>Journal of Molecular Graphics</journal_title>
+            <volume>14</volume>
+            <doi>10.1016/0263-7855(96)00018-5</doi>
+            <cYear>1996</cYear>
+            <unstructured_citation>Humphrey, W., Dalke, A., &amp; Schulten, K. (1996). VMD – Visual Molecular Dynamics. Journal of Molecular Graphics, 14, 33–38. https://doi.org/10.1016/0263-7855(96)00018-5</unstructured_citation>
+          </citation>
+          <citation key="gromacs">
+            <article_title>GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers</article_title>
+            <author>Abraham</author>
+            <journal_title>SoftwareX</journal_title>
+            <volume>1-2</volume>
+            <doi>10.1016/j.softx.2015.06.001</doi>
+            <issn>2352-7110</issn>
+            <cYear>2015</cYear>
+            <unstructured_citation>Abraham, M. J., Murtola, T., Schulz, R., Páll, S., Smith, J. C., Hess, B., &amp; Lindahl, E. (2015). GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers. SoftwareX, 1-2, 19–25. https://doi.org/10.1016/j.softx.2015.06.001</unstructured_citation>
+          </citation>
+          <citation key="xmgrace">
+            <article_title>Grace: A WYSIWYG 2D plotting tool for the x window system</article_title>
+            <author>Turner</author>
+            <cYear>2005</cYear>
+            <unstructured_citation>Turner, P. J. (2005). Grace: A WYSIWYG 2D plotting tool for the x window system. https://plasma-gate.weizmann.ac.il/Grace/</unstructured_citation>
+          </citation>
+          <citation key="biosim">
+            <article_title>A course on the setup, running, and analysis of biomolecular simulations</article_title>
+            <author>Degiacomi</author>
+            <journal_title>Journal of Open Source Education</journal_title>
+            <volume>8</volume>
+            <doi>10.21105/jose.00265</doi>
+            <cYear>2025</cYear>
+            <unstructured_citation>Degiacomi, M. T., Gowers, R. J., Micaela Matta, &amp; Mey, A. S. J. S. (2025). A course on the setup, running, and analysis of biomolecular simulations. Journal of Open Source Education, 8, 265. https://doi.org/10.21105/jose.00265</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
