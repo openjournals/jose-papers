@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20251119234759-bcaa46184a0ff45d2a24214a1f34f9069c22fea4</doi_batch_id>
+    <timestamp>20251119234759</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>11</month>
+          <year>2025</year>
+        </publication_date>
+        <journal_volume>
+          <volume>8</volume>
+        </journal_volume>
+        <issue>93</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>NemoGB: An R Package for Calculating Course Grades</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Nikita</given_name>
+            <surname>Jayaprakash</surname>
+            <affiliations>
+              <institution><institution_name>UC Berkeley, Department of Statistics</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0001-2708-0210</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Monika</given_name>
+            <surname>Voutov</surname>
+            <affiliations>
+              <institution><institution_name>UC Berkeley, Department of Statistics</institution_name></institution>
+              <institution><institution_name>UC Berkeley, College of Engineering</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0000-9923-0954</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Zach</given_name>
+            <surname>Turner</surname>
+            <affiliations>
+              <institution><institution_name>UC Berkeley, Department of Statistics</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0005-1829-2325</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Andrew</given_name>
+            <surname>Bray</surname>
+            <affiliations>
+              <institution><institution_name>UC Berkeley, Department of Statistics</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-4037-7414</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>11</month>
+          <day>19</day>
+          <year>2025</year>
+        </publication_date>
+        <pages>
+          <first_page>303</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00303</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.17546946</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/303</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00303</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00303</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00303.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="10.1145/3051457.3051466">
+            <article_title>Gradescope: A fast, flexible, and fair system for scalable assessment of handwritten work</article_title>
+            <author>Singh</author>
+            <journal_title>Proceedings of the fourth (2017) ACM conference on learning @ scale</journal_title>
+            <doi>10.1145/3051457.3051466</doi>
+            <isbn>9781450344500</isbn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Singh, A., Karayev, S., Gutowski, K., &amp; Abbeel, P. (2017). Gradescope: A fast, flexible, and fair system for scalable assessment of handwritten work. Proceedings of the Fourth (2017) ACM Conference on Learning @ Scale, 81–88. https://doi.org/10.1145/3051457.3051466</unstructured_citation>
+          </citation>
+          <citation key="NemoGB-App">
+            <article_title>NemoGB web app</article_title>
+            <author>Voutov*</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2024</cYear>
+            <unstructured_citation>Voutov*, M., Jayaprakash*, N., &amp; Bray, A. (2024). NemoGB web app. In GitHub repository. https://github.com/nemogb-dev/nemogb-app.git; GitHub.</unstructured_citation>
+          </citation>
+          <citation key="NemoGB-Package">
+            <article_title>NemoGB package</article_title>
+            <author>Jayaprakash*</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2024</cYear>
+            <unstructured_citation>Jayaprakash*, N., Voutov*, M., Turner, Z., &amp; Bray, A. (2024). NemoGB package. In GitHub repository. https://github.com/nemogb-dev/nemogb-r.git; GitHub.</unstructured_citation>
+          </citation>
+          <citation key="canvas_gradebook_guide">
+            <article_title>How do i use the gradebook?</article_title>
+            <author>Canvas Community</author>
+            <cYear>2024</cYear>
+            <unstructured_citation>Canvas Community. (2024). How do i use the gradebook? https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-use-the-Gradebook/ta-p/701</unstructured_citation>
+          </citation>
+          <citation key="moodle_grade_calculations">
+            <article_title>Grade calculations</article_title>
+            <author>Moodle Docs</author>
+            <cYear>2024</cYear>
+            <unstructured_citation>Moodle Docs. (2024). Grade calculations. https://docs.moodle.org/404/en/Grade_calculations</unstructured_citation>
+          </citation>
+          <citation key="blackboard_calculate_grades">
+            <article_title>Calculate grades</article_title>
+            <author>Blackboard Help</author>
+            <cYear>2024</cYear>
+            <unstructured_citation>Blackboard Help. (2024). Calculate grades. https://help.blackboard.com/Learn/Instructor/Ultra/Grade/Grading_Tasks/Calculate_Grades</unstructured_citation>
+          </citation>
+          <citation key="d2l_about_grades">
+            <article_title>About grades</article_title>
+            <author>D2L Brightspace Community</author>
+            <cYear>2024</cYear>
+            <unstructured_citation>D2L Brightspace Community. (2024). About grades. https://community.d2l.com/brightspace/kb/articles/3305-about-grades</unstructured_citation>
+          </citation>
+          <citation key="GradeR">
+            <article_title>gradeR: Helps grade assignment submissions that are r scripts</article_title>
+            <author>Brown</author>
+            <journal_title>GitHub repository</journal_title>
+            <cYear>2021</cYear>
+            <unstructured_citation>Brown, T. (2021). gradeR: Helps grade assignment submissions that are r scripts. In GitHub repository. https://github.com/tbrown122387/gradeR.git; GitHub.</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
