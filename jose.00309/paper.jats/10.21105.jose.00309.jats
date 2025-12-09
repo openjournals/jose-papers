@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">309</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00309</article-id>
+<title-group>
+<article-title>nwb4edu: an Online Textbook for Teaching and Learning
+with NWB Datasets</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0872-7098</contrib-id>
+<name>
+<surname>Juavinett</surname>
+<given-names>Ashley L.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Magdaleno-Garcia</surname>
+<given-names>Victor</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>UC San Diego, Neurobiology</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>UC San Diego, Cognitive Science</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-10">
+<day>10</day>
+<month>10</month>
+<year>2024</year>
+</pub-date>
+<volume>8</volume>
+<issue>94</issue>
+<fpage>309</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>neuroscience</kwd>
+<kwd>open data</kwd>
+<kwd>Neurodata Without Borders</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The <monospace>nwb4edu</monospace> online textbook provides an
+  interactive set of lessons for educators, students, and self-guided
+  learners who would like to use open neuroscience datasets for research
+  and/or teaching. Specifically, it introduces users to Neurodata
+  Without Borders (NWB), a relatively new data format for
+  neurophysiology data
+  (<xref alt="Rübel et al., 2022" rid="ref-rubel_neurodata_2022" ref-type="bibr">Rübel
+  et al., 2022</xref>;
+  <xref alt="Teeters et al., 2015" rid="ref-teeters_neurodata_2015" ref-type="bibr">Teeters
+  et al., 2015</xref>) which can be accessed via
+  <ext-link ext-link-type="uri" xlink:href="https://about.dandiarchive.org/">DANDI
+  (Distributed Archives for Neurophysiology Data
+  Integration)</ext-link>. The <monospace>nwb4edu</monospace> textbook
+  contains tutorials within an interactive JupyterBook
+  (<xref alt="Executable Books Project, 2021" rid="ref-executable_books_project_2021_4539666" ref-type="bibr">Executable
+  Books Project, 2021</xref>) that enable users to wrangle, analyze, and
+  visualize NWB datasets. The datasets featured in this resource
+  currently include rodent behavioral data, single-cell and
+  extracellular electrophysiological recordings, and two-photon imaging
+  experiments. Importantly, it also provides users with the necessary
+  conceptual background to understand how the data were collected and
+  how they can be analyzed. The broad understanding of how a dataset is
+  structured and how to navigate a dataset can be applied to other data
+  standards, while the in-depth understanding of NWB datasets can
+  empower students and researchers to conduct their own research using
+  these data.</p>
+  <p>Each lesson contains learning objectives, tasks, and a problem set
+  so that students can test and extend their skills. Executable
+  notebooks can be launched on a pre-configured JupyterHub, making these
+  easily accessible to anyone with an internet connection. All of the
+  materials are covered by a CC-BY-SA-4.0 and are available at
+  http://nwb4edu.github.io.</p>
+  <p>In its current form, there are four complete lessons, which contain
+  multiple notebooks. Each lesson contains specific learning objectives,
+  such as:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Identify and implement multiple ways to obtain a NWB dataset
+      via DANDI</p>
+    </list-item>
+    <list-item>
+      <p>Explore the metadata contained in a typical Dandiset
+      (<xref alt="Economo et al., 2018a" rid="ref-economo2018alm" ref-type="bibr">Economo
+      et al., 2018a</xref>,
+      <xref alt="2018b" rid="ref-economo2018distinct" ref-type="bibr">2018b</xref>)
+      and explain the three common features of datasets: metadata, raw
+      data, and processed data</p>
+    </list-item>
+    <list-item>
+      <p>Implement spike sorting on extracellular recording data in mice
+      (<xref alt="Campbell et al., 2021a" rid="ref-campbell2021mec_neuropixels" ref-type="bibr">Campbell
+      et al., 2021a</xref>,
+      <xref alt="2021b" rid="ref-campbell2021distance" ref-type="bibr">2021b</xref>)</p>
+    </list-item>
+    <list-item>
+      <p>Generate and interpret common visualizations of extracellular
+      recording data</p>
+    </list-item>
+    <list-item>
+      <p>Access and visualize single-cell electrophysiology and
+      two-photon imaging data
+      (<xref alt="S. E. de Vries et al., 2023" rid="ref-de_vries_sharing_2023" ref-type="bibr">S.
+      E. de Vries et al., 2023</xref>;
+      <xref alt="S. E. J. de Vries et al., 2020" rid="ref-de_vries_large-scale_2020" ref-type="bibr">S.
+      E. J. de Vries et al., 2020</xref>) from the Allen Institute</p>
+    </list-item>
+  </list>
+  <p>Furthermore, there are a growing set of single notebook lessons
+  (“Greatest Hits in Neuroscience”) in which users can re-create figures
+  from published scientific papers
+  (<xref alt="Churchland et al., 2012" rid="ref-churchland_neural_2012" ref-type="bibr">Churchland
+  et al., 2012</xref>;
+  <xref alt="Sargolini et al., 2006" rid="ref-sargolini_conjunctive_2006" ref-type="bibr">Sargolini
+  et al., 2006</xref>) using their NWB-formatted data. These lessons
+  transform foundational papers in neuroscience into living lessons,
+  breathing new life into old data and inviting all students in to
+  conduct authentic research.</p>
+  <sec id="statement-of-need">
+    <title>Statement of Need</title>
+    <p>There is an ongoing and enthusiastic movement in neuroscience to
+    standardize data formats as a means of improving reproducibility and
+    encouraging data reuse. NWB is one of these formats, and has proved
+    itself to be an effective data standard to share, store, and build
+    analysis tools for neuroscience data. The next generation of
+    neuroscience researchers needs skills to work with data standards
+    like NWB to perform data analyses, visualize neural data, and
+    ultimately address pressing scientific questions. A standardized and
+    accessible data format like NWB also opens possibilities for more
+    easily integrating these cutting-edge datasets into the
+    undergraduate or graduate classroom and can empower student-guided
+    exploration.</p>
+    <p>While many researchers have acknowledged the expanding
+    intersection of data science and neuroscience, there are very few
+    educational resources to help students and educators grow these
+    skill sets. There are a multitude of introductory programming
+    resources and several notable modules for learning how to code
+    alongside neural data, but fewer advanced resources for neural data
+    science. To meet this need, the <monospace>nwb4edu</monospace>
+    online workbook provides a set of exercises – for anyone from an
+    advanced undergraduate to an early career researcher – who wishes to
+    learn how to access, manipulate, and visualize NWB datasets. If we
+    want open science and data standardization to be the future, we need
+    to train our students accordingly and provide researchers with open
+    access tools so that they can easily adapt data into their
+    pipelines.</p>
+    <p>These materials are designed to be adapted as individual modules,
+    so that instructors or self-guided learners may choose what best
+    suits their learning needs. The project is entirely open access and
+    can be tailored for different experience levels or modified to
+    address specific learning objectives.</p>
+  </sec>
+  <sec id="instructional-design">
+    <title>Instructional Design</title>
+    <p>The creation of this book was supported and motivated by a Kavli
+    Foundation Seed Grant which supported the senior author (A.L.J.) to
+    create a learner-facing resource for NWB datasets. Two of the lesson
+    plans within, involving the Allen Institute data, were created and
+    tested with undergraduate students in various neurobiology courses
+    at UC San Diego. These were the first lessons in the new
+    <monospace>nwb4edu</monospace> book. We then built two lessons
+    focusing on native NWB format, with the goal of introducing students
+    to the mechanics of a standardized data format as well as conducting
+    very common neural data analyses and visualizations with the data.
+    These native NWB lessons were used in a Neural Data Science course
+    for undergraduate and graduate students at UC San Diego. Finally, in
+    collaboration with the NWB team, we integrated two additional
+    “Greatest Hits” lessons. These lessons had not yet not been used by
+    any of the authors in a course setting.</p>
+  </sec>
+  <sec id="acknowledgements">
+    <title>Acknowledgements</title>
+    <p>We would like to thank the Kavli Foundation, specifically program
+    officer Stephanie Albin, for supporting this project. We would also
+    like to thank Ben Dichter, Oliver Rübel, and Ryan Ly for feedback
+    and technical support.</p>
+  </sec>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-rubel_neurodata_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rübel</surname><given-names>Oliver</given-names></name>
+        <name><surname>Tritt</surname><given-names>Andrew</given-names></name>
+        <name><surname>Ly</surname><given-names>Ryan</given-names></name>
+        <name><surname>Dichter</surname><given-names>Benjamin K</given-names></name>
+        <name><surname>Ghosh</surname><given-names>Satrajit</given-names></name>
+        <name><surname>Niu</surname><given-names>Lawrence</given-names></name>
+        <name><surname>Baker</surname><given-names>Pamela</given-names></name>
+        <name><surname>Soltesz</surname><given-names>Ivan</given-names></name>
+        <name><surname>Ng</surname><given-names>Lydia</given-names></name>
+        <name><surname>Svoboda</surname><given-names>Karel</given-names></name>
+        <name><surname>Frank</surname><given-names>Loren</given-names></name>
+        <name><surname>Bouchard</surname><given-names>Kristofer E</given-names></name>
+      </person-group>
+      <article-title>The Neurodata Without Borders ecosystem for neurophysiological data science</article-title>
+      <source>eLife</source>
+      <person-group person-group-type="editor">
+        <name><surname>Colgin</surname><given-names>Laura L</given-names></name>
+        <name><surname>Jadhav</surname><given-names>Shantanu P</given-names></name>
+      </person-group>
+      <year iso-8601-date="2022-10">2022</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2022-10-06">2022</year><month>10</month><day>06</day></date-in-citation>
+      <volume>11</volume>
+      <issn>2050-084X</issn>
+      <uri>https://doi.org/10.7554/eLife.78362</uri>
+      <pub-id pub-id-type="doi">10.7554/eLife.78362</pub-id>
+      <fpage>e78362</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-teeters_neurodata_2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Teeters</surname><given-names>Jeffery L.</given-names></name>
+        <name><surname>Godfrey</surname><given-names>Keith</given-names></name>
+        <name><surname>Young</surname><given-names>Rob</given-names></name>
+        <name><surname>Dang</surname><given-names>Chinh</given-names></name>
+        <name><surname>Friedsam</surname><given-names>Claudia</given-names></name>
+        <name><surname>Wark</surname><given-names>Barry</given-names></name>
+        <name><surname>Asari</surname><given-names>Hiroki</given-names></name>
+        <name><surname>Peron</surname><given-names>Simon</given-names></name>
+        <name><surname>Li</surname><given-names>Nuo</given-names></name>
+        <name><surname>Peyrache</surname><given-names>Adrien</given-names></name>
+        <name><surname>Denisov</surname><given-names>Gennady</given-names></name>
+        <name><surname>Siegle</surname><given-names>Joshua H.</given-names></name>
+        <name><surname>Olsen</surname><given-names>Shawn R.</given-names></name>
+        <name><surname>Martin</surname><given-names>Christopher</given-names></name>
+        <name><surname>Chun</surname><given-names>Miyoung</given-names></name>
+        <name><surname>Tripathy</surname><given-names>Shreejoy</given-names></name>
+        <name><surname>Blanche</surname><given-names>Timothy J.</given-names></name>
+        <name><surname>Harris</surname><given-names>Kenneth</given-names></name>
+        <name><surname>Buzsáki</surname><given-names>György</given-names></name>
+        <name><surname>Koch</surname><given-names>Christof</given-names></name>
+        <name><surname>Meister</surname><given-names>Markus</given-names></name>
+        <name><surname>Svoboda</surname><given-names>Karel</given-names></name>
+        <name><surname>Sommer</surname><given-names>Friedrich T.</given-names></name>
+      </person-group>
+      <article-title>Neurodata Without Borders: Creating a Common Data Format for Neurophysiology</article-title>
+      <source>Neuron</source>
+      <year iso-8601-date="2015-11">2015</year><month>11</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2022-10-06">2022</year><month>10</month><day>06</day></date-in-citation>
+      <volume>88</volume>
+      <issue>4</issue>
+      <issn>0896-6273</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0896627315009198</uri>
+      <pub-id pub-id-type="doi">10.1016/j.neuron.2015.10.025</pub-id>
+      <fpage>629</fpage>
+      <lpage>634</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-executable_books_project_2021_4539666">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Executable Books Project</surname></name>
+      </person-group>
+      <article-title>Jupyter book</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2021-02">2021</year><month>02</month>
+      <uri>https://doi.org/10.5281/zenodo.4539666</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.4539666</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-de_vries_sharing_2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Vries</surname><given-names>Saskia EJ de</given-names></name>
+        <name><surname>Siegle</surname><given-names>Joshua H</given-names></name>
+        <name><surname>Koch</surname><given-names>Christof</given-names></name>
+      </person-group>
+      <article-title>Sharing neurophysiology data from the Allen Brain Observatory</article-title>
+      <source>eLife</source>
+      <person-group person-group-type="editor">
+        <name><surname>Meister</surname><given-names>Markus</given-names></name>
+        <name><surname>Gold</surname><given-names>Joshua I</given-names></name>
+        <name><surname>Meister</surname><given-names>Markus</given-names></name>
+        <name><surname>Chen</surname><given-names>Jerry L</given-names></name>
+      </person-group>
+      <year iso-8601-date="2023-07">2023</year><month>07</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-10-06">2025</year><month>10</month><day>06</day></date-in-citation>
+      <volume>12</volume>
+      <issn>2050-084X</issn>
+      <uri>https://doi.org/10.7554/eLife.85550</uri>
+      <pub-id pub-id-type="doi">10.7554/eLife.85550</pub-id>
+      <fpage>e85550</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-de_vries_large-scale_2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Vries</surname><given-names>Saskia E. J. de</given-names></name>
+        <name><surname>Lecoq</surname><given-names>Jerome A.</given-names></name>
+        <name><surname>Buice</surname><given-names>Michael A.</given-names></name>
+        <name><surname>Groblewski</surname><given-names>Peter A.</given-names></name>
+        <name><surname>Ocker</surname><given-names>Gabriel K.</given-names></name>
+        <name><surname>Oliver</surname><given-names>Michael</given-names></name>
+        <name><surname>Feng</surname><given-names>David</given-names></name>
+        <name><surname>Cain</surname><given-names>Nicholas</given-names></name>
+        <name><surname>Ledochowitsch</surname><given-names>Peter</given-names></name>
+        <name><surname>Millman</surname><given-names>Daniel</given-names></name>
+        <name><surname>Roll</surname><given-names>Kate</given-names></name>
+        <name><surname>Garrett</surname><given-names>Marina</given-names></name>
+        <name><surname>Keenan</surname><given-names>Tom</given-names></name>
+        <name><surname>Kuan</surname><given-names>Leonard</given-names></name>
+        <name><surname>Mihalas</surname><given-names>Stefan</given-names></name>
+        <name><surname>Olsen</surname><given-names>Shawn</given-names></name>
+        <name><surname>Thompson</surname><given-names>Carol</given-names></name>
+        <name><surname>Wakeman</surname><given-names>Wayne</given-names></name>
+        <name><surname>Waters</surname><given-names>Jack</given-names></name>
+        <name><surname>Williams</surname><given-names>Derric</given-names></name>
+        <name><surname>Barber</surname><given-names>Chris</given-names></name>
+        <name><surname>Berbesque</surname><given-names>Nathan</given-names></name>
+        <name><surname>Blanchard</surname><given-names>Brandon</given-names></name>
+        <name><surname>Bowles</surname><given-names>Nicholas</given-names></name>
+        <name><surname>Caldejon</surname><given-names>Shiella D.</given-names></name>
+        <name><surname>Casal</surname><given-names>Linzy</given-names></name>
+        <name><surname>Cho</surname><given-names>Andrew</given-names></name>
+        <name><surname>Cross</surname><given-names>Sissy</given-names></name>
+        <name><surname>Dang</surname><given-names>Chinh</given-names></name>
+        <name><surname>Dolbeare</surname><given-names>Tim</given-names></name>
+        <name><surname>Edwards</surname><given-names>Melise</given-names></name>
+        <name><surname>Galbraith</surname><given-names>John</given-names></name>
+        <name><surname>Gaudreault</surname><given-names>Nathalie</given-names></name>
+        <name><surname>Gilbert</surname><given-names>Terri L.</given-names></name>
+        <name><surname>Griffin</surname><given-names>Fiona</given-names></name>
+        <name><surname>Hargrave</surname><given-names>Perry</given-names></name>
+        <name><surname>Howard</surname><given-names>Robert</given-names></name>
+        <name><surname>Huang</surname><given-names>Lawrence</given-names></name>
+        <name><surname>Jewell</surname><given-names>Sean</given-names></name>
+        <name><surname>Keller</surname><given-names>Nika</given-names></name>
+        <name><surname>Knoblich</surname><given-names>Ulf</given-names></name>
+        <name><surname>Larkin</surname><given-names>Josh D.</given-names></name>
+        <name><surname>Larsen</surname><given-names>Rachael</given-names></name>
+        <name><surname>Lau</surname><given-names>Chris</given-names></name>
+        <name><surname>Lee</surname><given-names>Eric</given-names></name>
+        <name><surname>Lee</surname><given-names>Felix</given-names></name>
+        <name><surname>Leon</surname><given-names>Arielle</given-names></name>
+        <name><surname>Li</surname><given-names>Lu</given-names></name>
+        <name><surname>Long</surname><given-names>Fuhui</given-names></name>
+        <name><surname>Luviano</surname><given-names>Jennifer</given-names></name>
+        <name><surname>Mace</surname><given-names>Kyla</given-names></name>
+        <name><surname>Nguyen</surname><given-names>Thuyanh</given-names></name>
+        <name><surname>Perkins</surname><given-names>Jed</given-names></name>
+        <name><surname>Robertson</surname><given-names>Miranda</given-names></name>
+        <name><surname>Seid</surname><given-names>Sam</given-names></name>
+        <name><surname>Shea-Brown</surname><given-names>Eric</given-names></name>
+        <name><surname>Shi</surname><given-names>Jianghong</given-names></name>
+        <name><surname>Sjoquist</surname><given-names>Nathan</given-names></name>
+        <name><surname>Slaughterbeck</surname><given-names>Cliff</given-names></name>
+        <name><surname>Sullivan</surname><given-names>David</given-names></name>
+        <name><surname>Valenza</surname><given-names>Ryan</given-names></name>
+        <name><surname>White</surname><given-names>Casey</given-names></name>
+        <name><surname>Williford</surname><given-names>Ali</given-names></name>
+        <name><surname>Witten</surname><given-names>Daniela M.</given-names></name>
+        <name><surname>Zhuang</surname><given-names>Jun</given-names></name>
+        <name><surname>Zeng</surname><given-names>Hongkui</given-names></name>
+        <name><surname>Farrell</surname><given-names>Colin</given-names></name>
+        <name><surname>Ng</surname><given-names>Lydia</given-names></name>
+        <name><surname>Bernard</surname><given-names>Amy</given-names></name>
+        <name><surname>Phillips</surname><given-names>John W.</given-names></name>
+        <name><surname>Reid</surname><given-names>R. Clay</given-names></name>
+        <name><surname>Koch</surname><given-names>Christof</given-names></name>
+      </person-group>
+      <article-title>A large-scale standardized physiological survey reveals functional organization of the mouse visual cortex</article-title>
+      <source>Nature Neuroscience</source>
+      <year iso-8601-date="2020-01">2020</year><month>01</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-11-22">2024</year><month>11</month><day>22</day></date-in-citation>
+      <volume>23</volume>
+      <issue>1</issue>
+      <issn>1546-1726</issn>
+      <uri>https://www.nature.com/articles/s41593-019-0550-9</uri>
+      <pub-id pub-id-type="doi">10.1038/s41593-019-0550-9</pub-id>
+      <fpage>138</fpage>
+      <lpage>151</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sargolini_conjunctive_2006">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sargolini</surname><given-names>Francesca</given-names></name>
+        <name><surname>Fyhn</surname><given-names>Marianne</given-names></name>
+        <name><surname>Hafting</surname><given-names>Torkel</given-names></name>
+        <name><surname>McNaughton</surname><given-names>Bruce L.</given-names></name>
+        <name><surname>Witter</surname><given-names>Menno P.</given-names></name>
+        <name><surname>Moser</surname><given-names>May-Britt</given-names></name>
+        <name><surname>Moser</surname><given-names>Edvard I.</given-names></name>
+      </person-group>
+      <article-title>Conjunctive Representation of Position, Direction, and Velocity in Entorhinal Cortex</article-title>
+      <source>Science</source>
+      <year iso-8601-date="2006-05">2006</year><month>05</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-10-06">2025</year><month>10</month><day>06</day></date-in-citation>
+      <volume>312</volume>
+      <issue>5774</issue>
+      <uri>https://www.science.org/doi/10.1126/science.1125572</uri>
+      <pub-id pub-id-type="doi">10.1126/science.1125572</pub-id>
+      <fpage>758</fpage>
+      <lpage>762</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-churchland_neural_2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Churchland</surname><given-names>Mark M.</given-names></name>
+        <name><surname>Cunningham</surname><given-names>John P.</given-names></name>
+        <name><surname>Kaufman</surname><given-names>Matthew T.</given-names></name>
+        <name><surname>Foster</surname><given-names>Justin D.</given-names></name>
+        <name><surname>Nuyujukian</surname><given-names>Paul</given-names></name>
+        <name><surname>Ryu</surname><given-names>Stephen I.</given-names></name>
+        <name><surname>Shenoy</surname><given-names>Krishna V.</given-names></name>
+      </person-group>
+      <article-title>Neural population dynamics during reaching</article-title>
+      <source>Nature</source>
+      <year iso-8601-date="2012-07">2012</year><month>07</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-10-06">2025</year><month>10</month><day>06</day></date-in-citation>
+      <volume>487</volume>
+      <issue>7405</issue>
+      <issn>1476-4687</issn>
+      <uri>https://www.nature.com/articles/nature11129</uri>
+      <pub-id pub-id-type="doi">10.1038/nature11129</pub-id>
+      <fpage>51</fpage>
+      <lpage>56</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-campbell2021distance">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Campbell</surname><given-names>Malcolm G.</given-names></name>
+        <name><surname>Attinger</surname><given-names>Alexander</given-names></name>
+        <name><surname>Ocko</surname><given-names>Samuel A.</given-names></name>
+        <name><surname>Ganguli</surname><given-names>Surya</given-names></name>
+        <name><surname>Giocomo</surname><given-names>Lisa M.</given-names></name>
+      </person-group>
+      <article-title>Distance-tuned neurons drive specialized path integration calculations in medial entorhinal cortex</article-title>
+      <source>Cell Reports</source>
+      <year iso-8601-date="2021-09">2021</year><month>09</month>
+      <volume>36</volume>
+      <issue>10</issue>
+      <uri>https://doi.org/10.1016/j.celrep.2021.109669</uri>
+      <pub-id pub-id-type="doi">10.1016/j.celrep.2021.109669</pub-id>
+      <pub-id pub-id-type="pmid">34496249</pub-id>
+      <fpage>109669</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-campbell2021mec_neuropixels">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Campbell</surname><given-names>Malcolm G.</given-names></name>
+        <name><surname>Attinger</surname><given-names>Alexander</given-names></name>
+        <name><surname>Ocko</surname><given-names>Samuel A.</given-names></name>
+        <name><surname>Ganguli</surname><given-names>Surya</given-names></name>
+        <name><surname>Giocomo</surname><given-names>Lisa M.</given-names></name>
+      </person-group>
+      <article-title>VR Data Neuropixel supporting &quot;Distance-tuned neurons drive specialized path integration calculations in medial entorhinal cortex&quot;</article-title>
+      <publisher-name>DANDI archive; DANDI Archive</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://dandiarchive.org/dandiset/000053/0.210819.0345</uri>
+      <pub-id pub-id-type="doi">10.48324/dandi.000053/0.210819.0345</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-economo2018distinct">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Economo</surname><given-names>Michael N.</given-names></name>
+        <name><surname>Viswanathan</surname><given-names>Sarada</given-names></name>
+        <name><surname>Tasic</surname><given-names>Bosiljka</given-names></name>
+        <name><surname>Bas</surname><given-names>Erhan</given-names></name>
+        <name><surname>Winnubst</surname><given-names>Johan</given-names></name>
+        <name><surname>Menon</surname><given-names>Vilas</given-names></name>
+        <name><surname>Graybuck</surname><given-names>Lucas T.</given-names></name>
+        <name><surname>Nguyen</surname><given-names>Thuc Nghi</given-names></name>
+        <name><surname>Smith</surname><given-names>Kimberly A.</given-names></name>
+        <name><surname>Yao</surname><given-names>Zizhen</given-names></name>
+        <name><surname>Wang</surname><given-names>Lihua</given-names></name>
+        <name><surname>Gerfen</surname><given-names>Charles R.</given-names></name>
+        <name><surname>Chandrashekar</surname><given-names>Jayaram</given-names></name>
+        <name><surname>Zeng</surname><given-names>Hongkui</given-names></name>
+        <name><surname>Looger</surname><given-names>Loren L.</given-names></name>
+        <name><surname>Svoboda</surname><given-names>Karel</given-names></name>
+      </person-group>
+      <article-title>Distinct descending motor cortex pathways and their roles in movement</article-title>
+      <source>Nature</source>
+      <year iso-8601-date="2018-11">2018</year><month>11</month>
+      <volume>563</volume>
+      <issue>7729</issue>
+      <uri>https://doi.org/10.1038/s41586-018-0642-9</uri>
+      <pub-id pub-id-type="doi">10.1038/s41586-018-0642-9</pub-id>
+      <pub-id pub-id-type="pmid">30382200</pub-id>
+      <fpage>79</fpage>
+      <lpage>84</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-economo2018alm">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Economo</surname><given-names>Michael N.</given-names></name>
+        <name><surname>Viswanathan</surname><given-names>Sarada</given-names></name>
+        <name><surname>Tasic</surname><given-names>Bosiljka</given-names></name>
+        <name><surname>Bas</surname><given-names>Erhan</given-names></name>
+        <name><surname>Winnubst</surname><given-names>Johan</given-names></name>
+        <name><surname>Menon</surname><given-names>Vilas</given-names></name>
+        <name><surname>Graybuck</surname><given-names>Lucas T.</given-names></name>
+        <name><surname>Nguyen</surname><given-names>Thuc Nghi</given-names></name>
+        <name><surname>Smith</surname><given-names>Kimberly A.</given-names></name>
+        <name><surname>Yao</surname><given-names>Zizhen</given-names></name>
+        <name><surname>Wang</surname><given-names>Lihua</given-names></name>
+        <name><surname>Gerfen</surname><given-names>Charles R.</given-names></name>
+        <name><surname>Chandrashekar</surname><given-names>Jayaram</given-names></name>
+        <name><surname>Zeng</surname><given-names>Hongkui</given-names></name>
+        <name><surname>Looger</surname><given-names>Loren L.</given-names></name>
+        <name><surname>Svoboda</surname><given-names>Karel</given-names></name>
+      </person-group>
+      <article-title>Mouse anterior lateral motor cortex (ALM) in delay response task</article-title>
+      <publisher-name>DANDI archive; DANDI Archive</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <uri>https://dandiarchive.org/dandiset/000006</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
