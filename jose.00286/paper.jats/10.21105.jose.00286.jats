@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">286</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00286</article-id>
+<title-group>
+<article-title>PyQInt: A Teaching-Oriented Hartree–Fock Implementation
+in Python</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1403-8379</contrib-id>
+<name>
+<surname>Filot</surname>
+<given-names>I. A. W.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="corresp" rid="cor-1"><sup>*</sup></xref>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Inorganic Materials and Catalysis, Department of Chemical
+Engineering and Chemistry, Eindhoven University of
+Technology</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<author-notes>
+<corresp id="cor-1">* E-mail: <email></email></corresp>
+</author-notes>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-09-03">
+<day>3</day>
+<month>9</month>
+<year>2023</year>
+</pub-date>
+<volume>8</volume>
+<issue>94</issue>
+<fpage>286</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Quantum chemistry</kwd>
+<kwd>Electronic structure theory</kwd>
+<kwd>Hartree-Fock</kwd>
+<kwd>Gaussian basis functions</kwd>
+<kwd>Molecular integrals</kwd>
+<kwd>SCF method</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p><monospace>PyQInt</monospace> is a modular Python package for
+  learning and prototyping quantum chemistry methods, with a particular
+  focus on the Hartree-Fock formalism
+  (<xref alt="Roothaan, 1951" rid="ref-roothaanU003A1951" ref-type="bibr">Roothaan,
+  1951</xref>) using Gaussian-type orbitals
+  (<xref alt="Pople et al., 1995" rid="ref-popleU003A1995" ref-type="bibr">Pople
+  et al., 1995</xref>). Designed to prioritize educational transparency,
+  <monospace>PyQInt</monospace> exposes all computational building
+  blocks—integrals, matrices, Hamiltonians, SCF procedures, and
+  gradients—through a clean, inspectable API.</p>
+  <p>Users can evaluate molecular integrals
+  (<xref alt="Taketa et al., 1966" rid="ref-huzinagaU003A1966" ref-type="bibr">Taketa
+  et al., 1966</xref>), perform self-consistent field calculations with
+  direct inversion of iterative subspace (DIIS)
+  (<xref alt="Pulay, 1980" rid="ref-pulayU003A1980" ref-type="bibr">Pulay,
+  1980</xref>), construct and localize orbitals, compute crystal orbital
+  Hamilton population (COHP) coefficients
+  (<xref alt="Dronskowski &amp; Bloechl, 1993" rid="ref-dronskowskiU003A1993" ref-type="bibr">Dronskowski
+  &amp; Bloechl, 1993</xref>), and optimize molecular geometries.
+  <monospace>PyQInt</monospace> is especially well suited for students
+  and researchers who want to interact with and understand the
+  underlying steps of electronic structure theory, offering full access
+  to intermediate data structures and algorithmic pathways.</p>
+  <p>While numerical efficiency is not the primary goal,
+  <monospace>PyQInt</monospace> connects to a C++ backend for integral
+  evaluation, enabling practical computations on small molecules. The
+  package is fully documented and tested, and is ideal for use in
+  courses, tutorials, or prototyping new electronic structure ideas.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>Electronic structure theory plays a foundational role in modern
+  computational chemistry, with widespread applications in materials
+  discovery, catalyst design, drug development, and the prediction of
+  molecular properties. As simulation tools become increasingly powerful
+  and accessible, they are now integral to both academic research and
+  industrial workflows
+  (<xref alt="Gordon &amp; Windus, 2020" rid="ref-gordonU003A2020" ref-type="bibr">Gordon
+  &amp; Windus, 2020</xref>).</p>
+  <p>However, many students and early-career researchers engage with
+  these tools as users—relying on established software packages—without
+  gaining a clear understanding of the underlying theoretical models,
+  numerical procedures, or methodological limitations. This lack of
+  transparency can lead to misinterpretation of results, inappropriate
+  method selection, and an underappreciation of the approximations
+  involved in electronic structure calculations
+  (<xref alt="Hulyadi et al., 2023" rid="ref-hulyadiU003A2023" ref-type="bibr">Hulyadi
+  et al., 2023</xref>;
+  <xref alt="Stefani &amp; Tsaparlis, 2009" rid="ref-stefaniU003A2009" ref-type="bibr">Stefani
+  &amp; Tsaparlis, 2009</xref>).</p>
+  <p>Although the Hartree-Fock (HF) method is rarely used in isolation
+  for practical applications, it remains a critical pedagogical
+  foundation for understanding more advanced approaches such as Density
+  Functional Theory (DFT) and post-Hartree-Fock correlation methods
+  (<xref alt="Szabo &amp; Ostlund, 1996" rid="ref-szabo" ref-type="bibr">Szabo
+  &amp; Ostlund, 1996</xref>). In particular, the explicit evaluation of
+  the exchange energy in Hartree-Fock forms the conceptual and
+  mathematical basis for hybrid functionals like B3LYP
+  (<xref alt="Becke, 1993" rid="ref-beckeU003A1993" ref-type="bibr">Becke,
+  1993</xref>;
+  <xref alt="Lee et al., 1988" rid="ref-leeU003A1988" ref-type="bibr">Lee
+  et al., 1988</xref>), which are among the most widely used methods in
+  applied quantum chemistry
+  (<xref alt="Sousa et al., 2007" rid="ref-sousaU003A2007" ref-type="bibr">Sousa
+  et al., 2007</xref>).</p>
+  <p><monospace>PyQInt</monospace> is designed to support education and
+  exploration in electronic structure theory through a modular and
+  transparent implementation of Hartree–Fock methodology using
+  Gaussian-type orbitals. In contrast to software packages that abstract
+  away computational details, PyQInt provides access to individual steps
+  such as integral evaluation, matrix construction, SCF procedures, and
+  orbital manipulation. This structure makes the program suitable for
+  instructional use as well as for prototyping and method
+  development.</p>
+  <fig>
+    <caption><p>Visualization of the coefficient matrix from a
+    Hartree–Fock calculation of the CO molecule using an STO-3g basis
+    set, obtained using <monospace>PyQInt</monospace>. The numeric
+    values shown along the x-axis correspond to orbital energies.
+    <styled-content id="figU003Aco-coefficient"></styled-content></p></caption>
+    <graphic mimetype="application" mime-subtype="pdf" xlink:href="figure1-co-coefficient-matrix.pdf" />
+  </fig>
+</sec>
+<sec id="features">
+  <title>Features</title>
+  <p><monospace>PyQInt</monospace> is a Python-based software package
+  developed to support instruction and exploration in electronic
+  structure theory. It implements the Hartree–Fock method using
+  Gaussian-type orbitals, with a particular emphasis on clarity,
+  inspectability, and modularity. Designed as both a pedagogical tool
+  and a platform for method prototyping, <monospace>PyQInt</monospace>
+  exposes the underlying components of electronic structure calculations
+  in a form that facilitates learning and experimentation. In addition
+  to its modular structure, the source code is richly commented
+  throughout, with the explicit intention that students and early-stage
+  researchers can read and understand the implementation details. This
+  transparency allows users not only to use the code but also to study
+  it as an educational resource, reinforcing theoretical concepts
+  through hands-on engagement with working algorithms.</p>
+  <p>The package provides functionality for constructing and
+  manipulating Gaussian basis functions, along with the evaluation of
+  the corresponding one- and two-electron integrals. These integrals are
+  computed using a C++ backend with OpenMP parallelization, which
+  ensures efficient performance suitable for small to medium-sized
+  systems. This low-level access supports detailed exploration of
+  integral evaluation and basis set structure. In addition, PyQInt
+  includes higher-level capabilities such as self-consistent field (SCF)
+  Hartree–Fock calculations with DIIS acceleration, orbital localization
+  using the Foster–Boys method
+  (<xref alt="Boys, 1960" rid="ref-boysU003A1960" ref-type="bibr">Boys,
+  1960</xref>), Crystal Orbital Hamilton Population (COHP) analysis
+  (<xref alt="Dronskowski &amp; Bloechl, 1993" rid="ref-dronskowskiU003A1993" ref-type="bibr">Dronskowski
+  &amp; Bloechl, 1993</xref>), and geometry optimization based on
+  analytic energy gradients.</p>
+  <p>A key design feature is that all calculations return structured
+  Python dictionary objects, which expose the internal matrices and
+  multidimensional arrays used during computation. These include, for
+  example, the overlap, kinetic energy, Coulomb, coefficient (see
+  <xref alt="[fig:co-coefficient]" rid="figU003Aco-coefficient">[fig:co-coefficient]</xref>),
+  and Fock matrices, as well as the four-dimensional array representing
+  the two-electron repulsion integrals. By providing this level of
+  access, the program allows users to inspect, manipulate, and recompute
+  quantities such as electronic energy and orbital-specific
+  contributions using standard tools such as NumPy. This design supports
+  a more detailed understanding of the theoretical framework and
+  computational procedures that underpin quantum chemical models.</p>
+  <p><monospace>PyQInt</monospace> also supports molecular orbital
+  visualization through both two-dimensional contour plots
+  (<xref alt="[fig:co-contour]" rid="figU003Aco-contour">[fig:co-contour]</xref>)
+  via Matplotlib
+  (<xref alt="Hunter, 2007" rid="ref-hunterU003A2007" ref-type="bibr">Hunter,
+  2007</xref>) and three-dimensional isosurface rendering
+  (<xref alt="[fig:co-isosurface]" rid="figU003Aco-isosurface">[fig:co-isosurface]</xref>).
+  These features aid in connecting computational results to chemical
+  concepts and spatial representations.</p>
+  <fig>
+    <caption><p>Two-dimensional contour plots of selected molecular
+    orbitals of the CO molecule, visualized using
+    <monospace>PyQInt</monospace>. The titles of the subplots indicate
+    the corresponding orbital
+    energies.<styled-content id="figU003Aco-contour"></styled-content></p></caption>
+    <graphic mimetype="application" mime-subtype="pdf" xlink:href="figure2-orbitals-co-contour.pdf" />
+  </fig>
+  <fig>
+    <caption><p>Three-dimensional isosurface representations of selected
+    molecular orbitals of the CO molecule, generated with PyQInt and
+    rendered using
+    Blender.<styled-content id="figU003Aco-isosurface"></styled-content></p></caption>
+    <graphic mimetype="image" mime-subtype="jpeg" xlink:href="orbitals-co-isosurface.jpg" />
+  </fig>
+  <p>All features of PyQInt are accompanied by comprehensive
+  documentation, which includes numerous examples and explanatory
+  materials. The documentation is designed to guide users through both
+  basic and advanced functionality, with an emphasis on clarity and
+  reproducibility. Many of the examples are presented as richly
+  commented Python code snippets, illustrating typical use cases and
+  highlighting key computational steps. This approach allows users to
+  connect theoretical concepts with practical implementation and lowers
+  the barrier to entry for students and early-stage researchers engaging
+  with electronic structure theory through programming.</p>
+</sec>
+<sec id="use-in-teaching-and-curriculum">
+  <title>Use in Teaching and Curriculum</title>
+  <p><monospace>PyQInt</monospace> is one of two computational tools
+  used throughout the open-access textbook <italic>Elements of
+  Electronic Structure Theory</italic>
+  (<xref alt="Filot, 2025a" rid="ref-eoesbook" ref-type="bibr">Filot,
+  2025a</xref>), which is freely available online. The textbook combines
+  theoretical instruction with practical Python-based exercises, aiming
+  to provide students with both a conceptual foundation and a working
+  familiarity with electronic structure methods.
+  <monospace>PyQInt</monospace> is introduced as a lightweight and
+  readable implementation of Hartree–Fock theory, enabling learners to
+  explore the mathematical and computational framework of quantum
+  chemistry from first principles.</p>
+  <p>The software supports exercises focused on basis function
+  construction, integral evaluation, self-consistent field procedures,
+  and orbital analysis. These activities are intended to promote active
+  engagement with the subject matter by encouraging students to
+  investigate and manipulate the internal components of electronic
+  structure calculations, rather than relying exclusively on
+  preconfigured, black-box software. The modular architecture of
+  <monospace>PyQInt</monospace> is consistent with the pedagogical
+  progression adopted in the accompanying textbook, facilitating
+  incremental learning and conceptual reinforcement through hands-on,
+  code-based experimentation.</p>
+  <p><monospace>PyQInt</monospace> has been used in four iterations of
+  the course <italic>Theoretical and Computational Chemistry</italic> at
+  <italic>Eindhoven University of Technology</italic>, where it was
+  integrated into lectures and assignments. Student feedback collected
+  through course evaluations indicates a high level of appreciation for
+  the tool, with many students identifying it as instrumental in
+  developing their understanding of electronic structure calculations.
+  The transparency of the code and the accessibility of key
+  computational elements have been noted as particularly valuable for
+  clarifying how abstract theoretical concepts are translated into
+  numerical procedures.</p>
+  <p>This integration highlights the effectiveness of
+  <monospace>PyQInt</monospace> as an educational resource, particularly
+  in settings where algorithmic transparency and practical skill
+  development are prioritized. By facilitating direct interaction with
+  core matrices, energy terms, and orbital visualizations, the software
+  supports deeper insight into both the theory and implementation of
+  electronic structure methods. It is well suited for use in
+  introductory courses, flipped classroom environments, and independent
+  study contexts.</p>
+</sec>
+<sec id="availability-and-deployment">
+  <title>Availability and Deployment</title>
+  <p>In addition to its educational utility,
+  <monospace>PyQInt</monospace> is distributed through widely used
+  package managers, including PyPI and Anaconda, which simplifies
+  installation and integration across a range of computing environments.
+  This accessibility ensures that students and instructors can easily
+  incorporate the software into classroom exercises, Jupyter Notebooks,
+  or larger Python-based projects without the need for complex setup
+  procedures. The ability to install <monospace>PyQInt</monospace> with
+  a single command facilitates its use in teaching environments where
+  consistency and ease of deployment are critical, while also making it
+  suitable for use in virtual labs, remote instruction, and open science
+  workflows. Detailed documentation, including the installation
+  procedure, are available online
+  (<xref alt="Filot, 2025b" rid="ref-documentation" ref-type="bibr">Filot,
+  2025b</xref>).</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-roothaanU003A1951">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Roothaan</surname><given-names>C. C. J.</given-names></name>
+      </person-group>
+      <article-title>New developments in molecular orbital theory</article-title>
+      <source>Reviews of Modern Physics</source>
+      <publisher-name>American Physical Society</publisher-name>
+      <year iso-8601-date="1951-04">1951</year><month>04</month>
+      <volume>23</volume>
+      <uri>https://link.aps.org/doi/10.1103/RevModPhys.23.69</uri>
+      <pub-id pub-id-type="doi">10.1103/RevModPhys.23.69</pub-id>
+      <fpage>69</fpage>
+      <lpage>89</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-popleU003A1995">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pople</surname><given-names>John A.</given-names></name>
+        <name><surname>Gill</surname><given-names>Peter M. W.</given-names></name>
+        <name><surname>Handy</surname><given-names>Nicholas C.</given-names></name>
+      </person-group>
+      <article-title>Spin-unrestricted character of Kohn-Sham orbitals for open-shell systems</article-title>
+      <source>International Journal of Quantum Chemistry</source>
+      <year iso-8601-date="1995">1995</year>
+      <volume>56</volume>
+      <issue>4</issue>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.560560414</uri>
+      <pub-id pub-id-type="doi">10.1002/qua.560560414</pub-id>
+      <fpage>303</fpage>
+      <lpage>305</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-pulayU003A1980">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pulay</surname><given-names>Péter</given-names></name>
+      </person-group>
+      <article-title>Convergence acceleration of iterative sequences. The case of scf iteration</article-title>
+      <source>Chemical Physics Letters</source>
+      <year iso-8601-date="1980">1980</year>
+      <volume>73</volume>
+      <issue>2</issue>
+      <issn>0009-2614</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/0009261480803964</uri>
+      <pub-id pub-id-type="doi">10.1016/0009-2614(80)80396-4</pub-id>
+      <fpage>393</fpage>
+      <lpage>398</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-huzinagaU003A1966">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Taketa</surname><given-names>Hiroshi</given-names></name>
+        <name><surname>Huzinaga</surname><given-names>Sigeru</given-names></name>
+        <name><surname>O-ohata</surname><given-names>Kiyosi</given-names></name>
+      </person-group>
+      <article-title>Gaussian-expansion methods for molecular integrals</article-title>
+      <source>Journal of the Physical Society of Japan</source>
+      <year iso-8601-date="1966">1966</year>
+      <volume>21</volume>
+      <issue>11</issue>
+      <uri>https://doi.org/10.1143/JPSJ.21.2313</uri>
+      <pub-id pub-id-type="doi">10.1143/JPSJ.21.2313</pub-id>
+      <fpage>2313</fpage>
+      <lpage>2324</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dronskowskiU003A1993">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dronskowski</surname><given-names>Richard</given-names></name>
+        <name><surname>Bloechl</surname><given-names>Peter E.</given-names></name>
+      </person-group>
+      <article-title>Crystal orbital Hamilton populations (COHP): Energy-resolved visualization of chemical bonding in solids based on density-functional calculations</article-title>
+      <source>The Journal of Physical Chemistry</source>
+      <year iso-8601-date="1993">1993</year>
+      <volume>97</volume>
+      <issue>33</issue>
+      <pub-id pub-id-type="doi">10.1021/j100135a014</pub-id>
+      <fpage>8617</fpage>
+      <lpage>8624</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-stefaniU003A2009">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Stefani</surname><given-names>Christina</given-names></name>
+        <name><surname>Tsaparlis</surname><given-names>Georgios</given-names></name>
+      </person-group>
+      <article-title>Students’ levels of explanations, models, and misconceptions in basic quantum chemistry: A phenomenographic study</article-title>
+      <source>Journal of Research in Science Teaching</source>
+      <year iso-8601-date="2009-05">2009</year><month>05</month>
+      <volume>46</volume>
+      <pub-id pub-id-type="doi">10.1002/tea.20279</pub-id>
+      <fpage>520 </fpage>
+      <lpage> 536</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hulyadiU003A2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hulyadi</surname><given-names>Hulyadi</given-names></name>
+        <name><surname>Muhali</surname><given-names>Muhali</given-names></name>
+        <name><surname>Gargazi</surname><given-names>Gargazi</given-names></name>
+      </person-group>
+      <article-title>Reducing student misconceptions through problem-based learning with a computational chemistry-assisted question map approach</article-title>
+      <source>Jurnal Penelitian Pendidikan IPA</source>
+      <year iso-8601-date="2023-12">2023</year><month>12</month>
+      <volume>09</volume>
+      <uri>https://jppipa.unram.ac.id/index.php/jppipa/article/view/5936</uri>
+      <fpage>11207</fpage>
+      <lpage>11217</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-beckeU003A1993">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Becke</surname><given-names>Axel D.</given-names></name>
+      </person-group>
+      <article-title>Density-functional thermochemistry. III. The role of exact exchange</article-title>
+      <source>The Journal of Chemical Physics</source>
+      <year iso-8601-date="1993-04">1993</year><month>04</month>
+      <volume>98</volume>
+      <issue>7</issue>
+      <issn>0021-9606</issn>
+      <pub-id pub-id-type="doi">10.1063/1.464913</pub-id>
+      <fpage>5648</fpage>
+      <lpage>5652</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-leeU003A1988">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lee</surname><given-names>Chengteh</given-names></name>
+        <name><surname>Yang</surname><given-names>Weitao</given-names></name>
+        <name><surname>Parr</surname><given-names>Robert G.</given-names></name>
+      </person-group>
+      <article-title>Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density</article-title>
+      <source>Physical Review B</source>
+      <publisher-name>American Physical Society</publisher-name>
+      <year iso-8601-date="1988-01">1988</year><month>01</month>
+      <volume>37</volume>
+      <uri>https://link.aps.org/doi/10.1103/PhysRevB.37.785</uri>
+      <pub-id pub-id-type="doi">10.1103/PhysRevB.37.785</pub-id>
+      <fpage>785</fpage>
+      <lpage>789</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sousaU003A2007">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sousa</surname><given-names>Sérgio Filipe</given-names></name>
+        <name><surname>Fernandes</surname><given-names>Pedro Alexandrino</given-names></name>
+        <name><surname>Ramos</surname><given-names>Maria João</given-names></name>
+      </person-group>
+      <article-title>General performance of density functionals</article-title>
+      <source>The Journal of Physical Chemistry A</source>
+      <year iso-8601-date="2007">2007</year>
+      <volume>111</volume>
+      <issue>42</issue>
+      <uri>https://doi.org/10.1021/jp0734474</uri>
+      <pub-id pub-id-type="doi">10.1021/jp0734474</pub-id>
+      <fpage>10439</fpage>
+      <lpage>10452</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-boysU003A1960">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Boys</surname><given-names>S. F.</given-names></name>
+      </person-group>
+      <article-title>Construction of some molecular orbitals to be approximately invariant for changes from one molecule to another</article-title>
+      <source>Reviews of Modern Physics</source>
+      <publisher-name>American Physical Society</publisher-name>
+      <year iso-8601-date="1960-04">1960</year><month>04</month>
+      <volume>32</volume>
+      <uri>https://link.aps.org/doi/10.1103/RevModPhys.32.296</uri>
+      <pub-id pub-id-type="doi">10.1103/RevModPhys.32.296</pub-id>
+      <fpage>296</fpage>
+      <lpage>299</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gordonU003A2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gordon</surname><given-names>Mark S.</given-names></name>
+        <name><surname>Windus</surname><given-names>Theresa L.</given-names></name>
+      </person-group>
+      <article-title>Editorial: Modern architectures and their impact on electronic structure theory</article-title>
+      <source>Chemical Reviews</source>
+      <year iso-8601-date="2020">2020</year>
+      <volume>120</volume>
+      <issue>17</issue>
+      <uri>https://doi.org/10.1021/acs.chemrev.0c00700</uri>
+      <pub-id pub-id-type="doi">10.1021/acs.chemrev.0c00700</pub-id>
+      <fpage>9015</fpage>
+      <lpage>9020</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-szabo">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Szabo</surname><given-names>Attila</given-names></name>
+        <name><surname>Ostlund</surname><given-names>Neil S.</given-names></name>
+      </person-group>
+      <source>Modern quantum chemistry: Introduction to advanced electronic structure theory</source>
+      <publisher-name>Dover</publisher-name>
+      <publisher-loc>Mineola, New York</publisher-loc>
+      <year iso-8601-date="1996">1996</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-eoesbook">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Filot</surname><given-names>Ivo A. W.</given-names></name>
+      </person-group>
+      <source>Elements of electronic structure theory</source>
+      <publisher-name>Eindhoven University of Technology Library</publisher-name>
+      <publisher-loc>Eindhoven, The Netherlands</publisher-loc>
+      <year iso-8601-date="2025">2025</year>
+      <isbn>978-90-386-6477-4</isbn>
+    </element-citation>
+  </ref>
+  <ref id="ref-documentation">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>Filot</surname><given-names>Ivo A. W.</given-names></name>
+      </person-group>
+      <article-title>PyQInt documentation</article-title>
+      <year iso-8601-date="2025">2025</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-08-18">2025</year><month>08</month><day>18</day></date-in-citation>
+      <uri>https://ifilot.github.io/pyqint/index.html</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-hunterU003A2007">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hunter</surname><given-names>J. D.</given-names></name>
+      </person-group>
+      <article-title>Matplotlib: A 2D graphics environment</article-title>
+      <source>Computing in Science &amp; Engineering</source>
+      <publisher-name>IEEE COMPUTER SOC</publisher-name>
+      <year iso-8601-date="2007">2007</year>
+      <volume>9</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1109/MCSE.2007.55</pub-id>
+      <fpage>90</fpage>
+      <lpage>95</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
