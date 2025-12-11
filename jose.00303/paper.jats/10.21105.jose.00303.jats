@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">303</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00303</article-id>
+<title-group>
+<article-title>NemoGB: An R Package for Calculating Course
+Grades</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" equal-contrib="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0001-2708-0210</contrib-id>
+<name>
+<surname>Jayaprakash</surname>
+<given-names>Nikita</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0000-9923-0954</contrib-id>
+<name>
+<surname>Voutov</surname>
+<given-names>Monika</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0005-1829-2325</contrib-id>
+<name>
+<surname>Turner</surname>
+<given-names>Zach</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-4037-7414</contrib-id>
+<name>
+<surname>Bray</surname>
+<given-names>Andrew</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>UC Berkeley, Department of Statistics</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>UC Berkeley, College of Engineering</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-05">
+<day>5</day>
+<month>11</month>
+<year>2024</year>
+</pub-date>
+<volume>8</volume>
+<issue>94</issue>
+<fpage>303</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2025</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>R</kwd>
+<kwd>education</kwd>
+<kwd>data science</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p><monospace>NemoGB</monospace> allows for accurate and systematic
+  computations of the final course letter grades. These computations
+  require two inputs: a specifically structured YAML file representing
+  the grading policy from the class syllabus and the assignment grades
+  in CSV (comma-separated value) format from Gradescope
+  (<xref alt="Singh et al., 2017" rid="ref-10.1145U002F3051457.3051466" ref-type="bibr">Singh
+  et al., 2017</xref>) or other similar learning management systems,
+  like Canvas
+  (<xref alt="Canvas Community, 2024" rid="ref-canvas_gradebook_guide" ref-type="bibr">Canvas
+  Community, 2024</xref>). The package uses these two inputs to break
+  down any complex syllabi into methodical computations that can be
+  documented and tested.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>While the final grade at the end of a course is an elementary part
+  of most college courses, the computations for these grades quickly
+  become deceptively intricate, especially with larger STEM classes that
+  use various complexities to accommodate a diverse student body. Even
+  though most classes use slight variations of the same policies, many
+  learning management systems (LMS) cannot sustain these complex
+  computations. In response, instructors may turn to hard-coded scripts.
+  These scripts can quickly accumulate hundreds of lines of code, and
+  there is no clear method to assess accuracy of the final
+  computation.</p>
+  <p><monospace>NemoGB</monospace> is an R package that maintains the
+  structure and complexity of a course grade while guaranteeing accuracy
+  through comprehensive unit-testing. The challenges of consistency and
+  precision in grading systems are addressed by applying the practices
+  of data analysis and the principles of software development. The
+  rigorous unit-testing in the package minimizes computational error and
+  reduces the manual inputs, significantly lowering the risks of
+  typographic and logical errors in scripts. Because of this, course
+  grades can be computed accurately and quickly: the accuracy allows
+  course instructors to have reliable grade computations, and the speed
+  allows them to compute grades throughout the semester in order to
+  monitor student progress. The structure of the package – and the
+  open-source nature of it – allows for instructors to contribute
+  functionality that is unique to their course. This R package also
+  functions as the backend of the NemoGB Shiny app
+  (<xref alt="Voutov* et al., 2024" rid="ref-NemoGB-App" ref-type="bibr">Voutov*
+  et al., 2024</xref>), which lets the user create their grading policy
+  file in a straightforward way.</p>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="50%" />
+        <col width="50%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th align="center">Grading Workflow WITH NemoGB</th>
+          <th align="center">Grading Workflow WITHOUT NemoGB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><inline-graphic mimetype="image" mime-subtype="png" xlink:href="with_nemogb_workflow.png" /></td>
+          <td align="center"><inline-graphic mimetype="image" mime-subtype="png" xlink:href="without_nemogb_workflow.png" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the Project</title>
+  <p>As students, we understand the importance of having an informed
+  instructor who understands how we stand in their course. This began as
+  an independent study centered around using R Shiny in order to create
+  a web-based grading tool that allowed for the computation of course
+  grades for diverse course and assessment structures. We wanted to
+  develop a tool that allowed for flexibility in course structure and
+  precision in computations. This led to the development of this
+  package, which operates as the backend of the NemoGB app but can also
+  be used independently to compute course grades.</p>
+</sec>
+<sec id="underlying-principle">
+  <title>Underlying Principle</title>
+  <p><monospace>NemoGB</monospace> breaks down the calculation of a
+  course grade into a series of nested aggregations. It accommodates the
+  generic policies included in most syllabi: applying lateness
+  penalties, dropping the <italic>n</italic> lowest scores in a
+  category, and using averages or weighted averages to aggregate
+  assignment scores into overarching category scores. As previously
+  mentioned, the structure of this package also allows for outside
+  contribution of unique policies in order for any course structure to
+  be computed with this package.</p>
+  <p>The details of the course grading structure – usually detailed in
+  the syllabus or on the class website – can be articulated in YAML
+  format using a series of accepted keys
+  (e.g. <monospace>score</monospace>,
+  <monospace>aggregation</monospace>, <monospace>lateness</monospace>,
+  <monospace>drop_n_lowest</monospace>, etc.). More direction about
+  creating a policy file is provided in the
+  <monospace>Building a Policy File</monospace> vignette. The nested
+  structure of this policy file reflects the nested structure of the
+  course grade. The assignment scores come directly from Gradescope or
+  Canvas in a .csv file. These two files (the YAML policy file and the
+  LMS grade data) function as the two inputs for
+  <monospace>NemoGB</monospace>’s primary and overarching function:
+  <monospace>get_grades()</monospace>. After reading in the assignment
+  data from Gradescope or Canvas using
+  <monospace>read_gs()</monospace>and reading in the YAML policy file
+  (that reflects grading policies from the syllabus) using
+  <monospace>read_policy()</monospace>, this singular function computes
+  the entirety of the final course grade computation.</p>
+  <p>While <monospace>get_grades()</monospace> encapsulates the entire
+  computational functionality of the R package, it is comprised of four
+  sequential functions:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p><monospace>process_gs()</monospace> ensures the correct format
+      of the .csv file from Gradescope or Canvas.</p>
+    </list-item>
+    <list-item>
+      <p><monospace>process_policy()</monospace> similarly ensures the
+      correct format of the policy file.</p>
+    </list-item>
+    <list-item>
+      <p><monospace>reconcile_policy_with_gs()</monospace> checks the
+      compatibility of the policy file and .csv file.</p>
+    </list-item>
+    <list-item>
+      <p><monospace>calculate_grades()</monospace> computes the course
+      grades and returns the final grade (and the scores for every
+      intermediate category) appended to the original data.</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="comparison-to-other-packages">
+  <title>Comparison to Other Packages</title>
+  <p>Most other commonly-used packages – particularly for R packages –
+  are used for grading on an assignment-level basis. For example, the
+  <monospace>gradeR</monospace> package “helps grade your students’s
+  assignment submissions that are R Scripts”
+  (<xref alt="Brown, 2021" rid="ref-GradeR" ref-type="bibr">Brown,
+  2021</xref>) whereas <monospace>NemoGB</monospace> is used for the
+  computations of the final, overall course grade. The software that has
+  the most similar computational purpose as
+  <monospace>NemoGB</monospace> are popular LMS used in higher
+  education. These include Canvas, Moodle
+  (<xref alt="Moodle Docs, 2024" rid="ref-moodle_grade_calculations" ref-type="bibr">Moodle
+  Docs, 2024</xref>), Blackboard Learn
+  (<xref alt="Blackboard Help, 2024" rid="ref-blackboard_calculate_grades" ref-type="bibr">Blackboard
+  Help, 2024</xref>), and D2L Brightspace
+  (<xref alt="D2L Brightspace Community, 2024" rid="ref-d2l_about_grades" ref-type="bibr">D2L
+  Brightspace Community, 2024</xref>), all of which provide an
+  integrated gradebook that allow the instructor to specify the manner
+  in which assessment scores are used to calculate a final course grade.
+  What makes <monospace>NemoGB</monospace> unique is its flexibility of
+  functionality and its capacity for instructor collaboration and
+  contribution: the flexible YAML structure allows for the former and
+  the open-source nature of the project allows for the latter.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>The authors would like to thank Iain Carmichael and Calvin Carter
+  for helpful ideas and discussions throughout the development of this
+  project.</p>
+  <p>As of summer 2024, this project was funded by an Instructional
+  Technology and Innovation Micro Grant Program through the University
+  of California, Berkeley.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-10.1145U002F3051457.3051466">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Singh</surname><given-names>Arjun</given-names></name>
+        <name><surname>Karayev</surname><given-names>Sergey</given-names></name>
+        <name><surname>Gutowski</surname><given-names>Kevin</given-names></name>
+        <name><surname>Abbeel</surname><given-names>Pieter</given-names></name>
+      </person-group>
+      <article-title>Gradescope: A fast, flexible, and fair system for scalable assessment of handwritten work</article-title>
+      <source>Proceedings of the fourth (2017) ACM conference on learning @ scale</source>
+      <publisher-name>Association for Computing Machinery</publisher-name>
+      <publisher-loc>New York, NY, USA</publisher-loc>
+      <year iso-8601-date="2017">2017</year>
+      <isbn>9781450344500</isbn>
+      <uri>https://doi.org/10.1145/3051457.3051466</uri>
+      <pub-id pub-id-type="doi">10.1145/3051457.3051466</pub-id>
+      <fpage>81</fpage>
+      <lpage>88</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-NemoGB-App">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Voutov*</surname><given-names>Monika</given-names></name>
+        <name><surname>Jayaprakash*</surname><given-names>Nikita</given-names></name>
+        <name><surname>Bray</surname><given-names>Andrew</given-names></name>
+      </person-group>
+      <article-title>NemoGB web app</article-title>
+      <source>GitHub repository</source>
+      <publisher-name>https://github.com/nemogb-dev/nemogb-app.git; GitHub</publisher-name>
+      <year iso-8601-date="2024">2024</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-canvas_gradebook_guide">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Canvas Community</string-name>
+      </person-group>
+      <article-title>How do I use the gradebook?</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-use-the-Gradebook/ta-p/701</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-moodle_grade_calculations">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Moodle Docs</string-name>
+      </person-group>
+      <article-title>Grade calculations</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://docs.moodle.org/404/en/Grade_calculations</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-blackboard_calculate_grades">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Blackboard Help</string-name>
+      </person-group>
+      <article-title>Calculate grades</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://help.blackboard.com/Learn/Instructor/Ultra/Grade/Grading_Tasks/Calculate_Grades</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-d2l_about_grades">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>D2L Brightspace Community</string-name>
+      </person-group>
+      <article-title>About grades</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://community.d2l.com/brightspace/kb/articles/3305-about-grades</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-GradeR">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Brown</surname><given-names>Taylor</given-names></name>
+      </person-group>
+      <article-title>gradeR: Helps grade assignment submissions that are R scripts</article-title>
+      <source>GitHub repository</source>
+      <publisher-name>https://github.com/tbrown122387/gradeR.git; GitHub</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
