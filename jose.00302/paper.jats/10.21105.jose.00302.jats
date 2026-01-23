@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">302</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00302</article-id>
+<title-group>
+<article-title>ReliaLearnR: Learning Modules for Reliability
+Analysis</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-1821-8492</contrib-id>
+<name>
+<surname>Govan</surname>
+<given-names>Paul B.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Senior Reliability Engineer, Safety and Reliability, GE
+Aerospace</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2026-01-07">
+<day>7</day>
+<month>1</month>
+<year>2026</year>
+</pub-date>
+<volume>9</volume>
+<issue>95</issue>
+<fpage>302</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>R</kwd>
+<kwd>life data analysis</kwd>
+<kwd>Weibull analysis</kwd>
+<kwd>reliability engineering</kwd>
+<kwd>availability</kwd>
+<kwd>maintainability</kwd>
+<kwd>reliability testing</kwd>
+<kwd>accelerated life testing</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Reliability analysis is an important aspect of engineering that
+  focuses on ensuring systems perform as expected over time. Key
+  components of reliability analysis include life data analysis,
+  reliability, availability, and maintainability (RAM) analysis, and
+  reliability testing. These concepts are essential for engineers and
+  professionals involved in product design, manufacturing, and
+  maintenance. However, many learning resources for these topics rely on
+  proprietary software, which can be expensive and inaccessible to
+  students and early-career professionals.</p>
+  <p><monospace>ReliaLearnR</monospace>
+  (<xref alt="Govan, 2025" rid="ref-ReliaLearnR" ref-type="bibr">Govan,
+  2025</xref>) addresses this gap by providing an open-source framework
+  for learning reliability analysis using R
+  (<xref alt="R Core Team, 2023" rid="ref-R" ref-type="bibr">R Core
+  Team, 2023</xref>), a widely-used programming language for statistical
+  computing and data analysis. The primary objective of this project is
+  to introduce fundamental concepts of reliability analysis while
+  providing an open-source alternative for analyzing reliability data.
+  The target audience for this project includes engineering students and
+  professionals who are interested in learning the fundamentals of
+  reliability analysis.</p>
+</sec>
+<sec id="design">
+  <title>Design</title>
+  <p><monospace>ReliaLearnR</monospace> is written in R
+  (<xref alt="R Core Team, 2023" rid="ref-R" ref-type="bibr">R Core
+  Team, 2023</xref>) and utilizes <monospace>WeibullR</monospace>
+  (<xref alt="Silkworth &amp; Symynck, 2022" rid="ref-WeibullR" ref-type="bibr">Silkworth
+  &amp; Symynck, 2022</xref>) for Life Data Analysis
+  (<xref alt="Abernethy, 1993" rid="ref-Weibull" ref-type="bibr">Abernethy,
+  1993</xref>), <monospace>WeibullR.alt</monospace>
+  (<xref alt="Silkworth, 2022" rid="ref-WeibullRalt" ref-type="bibr">Silkworth,
+  2022</xref>) for Accelerated Life Testing
+  (<xref alt="Silkworth, 2022" rid="ref-WeibullRalt" ref-type="bibr">Silkworth,
+  2022</xref>), <monospace>ReliaGrowR</monospace>
+  (<xref alt="Govan, 2024" rid="ref-ReliaGrowR" ref-type="bibr">Govan,
+  2024</xref>) for Reliability Growth Analysis, and
+  <monospace>learnr</monospace>
+  (<xref alt="Aden-Buie et al., 2023" rid="ref-learnr" ref-type="bibr">Aden-Buie
+  et al., 2023</xref>), a framework for building interactive learning
+  modules.</p>
+  <p>The learning modules are designed to be interactive and engaging,
+  with a focus on practical applications. Each module includes a mix of
+  instructional content, code examples, and exercises to reinforce
+  learning. The modules are self-paced, allowing learners to progress at
+  their own speed.</p>
+  <p>The original learning modules were provided in a series of
+  workshops, where each workshop covered a specific module over a 1-2
+  hour period. These workshops were designed to be completed in a
+  classroom setting with an instructor. The current version of the
+  modules has been adapted for self-paced learning, but they can still
+  be used in a classroom setting with an instructor.</p>
+  <p>To adopt the modules for classroom use, instructors can either
+  access them via the project website or install the package and use the
+  functions directly. Instructors can also modify the modules to fit
+  their specific needs, as the source code is available on the project
+  repository.</p>
+</sec>
+<sec id="usage">
+  <title>Usage</title>
+  <p>The package includes three interactive learning modules, which can
+  be run locally or hosted on a web server. Users can run the modules in
+  any R environment by calling the <monospace>ram()</monospace>,
+  <monospace>lda()</monospace>, or <monospace>rt()</monospace>
+  functions.</p>
+  <p><monospace>ram()</monospace> is a quick reference for common
+  Reliability, Availability, and Maintainability (RAM) concepts. The
+  learning objectives include defining key reliability metrics,
+  including reliability, availability, and failure rate, Describing the
+  significance of MTTR, MTTF, and MTBF in reliability engineering,
+  calculating probability of failure using given reliability data,
+  interpreting <inline-formula><alternatives>
+  <tex-math><![CDATA[B_n]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>B</mml:mi><mml:mi>n</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+  or <inline-formula><alternatives>
+  <tex-math><![CDATA[L_n]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>L</mml:mi><mml:mi>n</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+  life values in the context of product reliability, differentiating
+  between different reliability measures.</p>
+  <p><monospace>lda()</monospace> provides an introduction to Life Data
+  Analysis. The learning objectives include describing the purpose of
+  Weibull analysis in reliability engineering, differentiating between
+  types of data censoring, including right-censored and
+  interval-censored data, differentiating between different Weibull
+  models (2-parameter Weibull, 3-parameter Weibull, and Weibayes,
+  applying Median Rank Regression (MRR) and Maximum Likelihood
+  Estimation (MLE) estimation methods to sample datasets, interpreting
+  results using plotting methods, including probability plots and
+  contour plots.</p>
+  <p><monospace>rt()</monospace> provides an introduction to Reliability
+  Testing. The learning objectives include defining key reliability
+  growth concepts, including Crow-AMSAA and Duane models, fitting a
+  reliability growth model to real-world data using R, interpreting
+  reliability growth plots and identifying trends, applying the
+  Crow-AMSAA model to assess reliability growth, explaining fundamental
+  concepts of accelerated life testing, including the use of Arrhenius
+  and Power Law Models, conducting an accelerated life test with
+  real-world datasets, utilizing R for analysis, analyzing plots that
+  illustrate the relationships in accelerated life testing, identifying
+  key patterns and data trends, and utilizing Arrhenius and Power Law
+  models to evaluate the impact of stress factors on product
+  reliability.</p>
+  <p>The modules can also be accessed in a browser at
+  <ext-link ext-link-type="uri" xlink:href="https://paulgovan.shinyapps.io/RAMAnalysis/">paulgovan.shinyapps.io/RAMAnalysis/</ext-link>,
+  <ext-link ext-link-type="uri" xlink:href="https://paulgovan.shinyapps.io/LifeDataAnalysis/">paulgovan.shinyapps.io/LifeDataAnalysis/</ext-link>,
+  and
+  <ext-link ext-link-type="uri" xlink:href="https://paulgovan.shinyapps.io/ReliabilityTesting/">paulgovan.shinyapps.io/ReliabilityTesting/</ext-link>.</p>
+  <p><inline-graphic mimetype="image" mime-subtype="" xlink:href="https://github.com/paulgovan/ReliaLearnR/blob/master/inst/paper/ReliaLearnR.png?raw=true" /></p>
+  <p>The package also includes several helper functions for common RAM
+  calculations. These functions make it easy to apply the concepts
+  covered in the RAM module.</p>
+  <list list-type="bullet">
+    <list-item>
+      <p><monospace>rel()</monospace> - reliability function</p>
+    </list-item>
+    <list-item>
+      <p><monospace>avail()</monospace> - availability function</p>
+    </list-item>
+    <list-item>
+      <p><monospace>mttf()</monospace> - mean time to failure</p>
+    </list-item>
+    <list-item>
+      <p><monospace>mtbf()</monospace> - mean time between failure</p>
+    </list-item>
+    <list-item>
+      <p><monospace>fr()</monospace> - failure rate</p>
+    </list-item>
+  </list>
+  <p>The project documentation includes installation instructions for
+  <monospace>ReliaLearnR</monospace> and the required dependencies,
+  examples of running the programs, and references to previous work used
+  to build the modules. The documentation also references more resources
+  for users interested in learning more. These resources include
+  <monospace>ReliaPlotR</monospace>
+  (<xref alt="Govan, 2023a" rid="ref-ReliaPlotR" ref-type="bibr">Govan,
+  2023a</xref>), an R package for interactive reliability analysis
+  plots, and <monospace>ReliaShiny</monospace>
+  (<xref alt="Govan, 2023b" rid="ref-ReliaShiny" ref-type="bibr">Govan,
+  2023b</xref>), a shiny
+  (<xref alt="Chang et al., 2022" rid="ref-shiny" ref-type="bibr">Chang
+  et al., 2022</xref>) web application for reliability analysis.</p>
+  <p>Contributions are welcome from the community. Users can submit pull
+  requests, report issues, or suggest enhancements through the
+  repository, which includes contributing guidelines.</p>
+</sec>
+<sec id="motivation">
+  <title>Motivation</title>
+  <p>This project began as an effort to build upon a reliability program
+  developed at a major technology company. The original program proved
+  to provide a strong foundation, providing a structured learning
+  opportunity that helped many early-career professionals understand and
+  apply the fundamental concepts of reliability engineering. Over time,
+  however, the proprietary nature of the program limited accessibility
+  and adaptability.</p>
+  <p>Recognizing the importance of keeping reliability learning both
+  relevant and accessible, this project was initiated to create an
+  open-source framework for teaching reliability analysis. By leveraging
+  this framework, this project aims to reach a broader audience,
+  encourage collaboration, and ensure that learning resources can evolve
+  as needs and priorities change.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>The author wishes to thank the creators of the original Reliability
+  Program that inspired this project. Thanks also to the reviewers and
+  JOSE editor for their valuable feedback and suggestions that helped
+  improve this paper and overall project.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-learnr">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Aden-Buie</surname><given-names>Garrick</given-names></name>
+        <name><surname>Schloerke</surname><given-names>Barret</given-names></name>
+        <name><surname>Allaire</surname><given-names>JJ</given-names></name>
+        <name><surname>Rossell Hayes</surname><given-names>Alexander</given-names></name>
+      </person-group>
+      <source>Learnr: Interactive tutorials for r</source>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://CRAN.R-project.org/package=learnr</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.learnr</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-R">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <string-name>R Core Team</string-name>
+      </person-group>
+      <source>R: A language and environment for statistical computing</source>
+      <publisher-name>R Foundation for Statistical Computing</publisher-name>
+      <publisher-loc>Vienna, Austria</publisher-loc>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://www.R-project.org/</uri>
+      <pub-id pub-id-type="doi">10.32614/r.manuals</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-shiny">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Chang</surname><given-names>Winston</given-names></name>
+        <name><surname>Cheng</surname><given-names>Joe</given-names></name>
+        <name><surname>Allaire</surname><given-names>JJ</given-names></name>
+        <name><surname>Sievert</surname><given-names>Carson</given-names></name>
+        <name><surname>Schloerke</surname><given-names>Barret</given-names></name>
+        <name><surname>Xie</surname><given-names>Yihui</given-names></name>
+        <name><surname>Allen</surname><given-names>Jeff</given-names></name>
+        <name><surname>McPherson</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Dipert</surname><given-names>Alan</given-names></name>
+        <name><surname>Borges</surname><given-names>Barbara</given-names></name>
+      </person-group>
+      <source>Shiny: Web application framework for r</source>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://CRAN.R-project.org/package=shiny</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.shiny</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-WeibullR">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Silkworth</surname><given-names>David</given-names></name>
+        <name><surname>Symynck</surname><given-names>Jurgen</given-names></name>
+      </person-group>
+      <source>WeibullR: Weibull analysis for reliability engineering</source>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://CRAN.R-project.org/package=WeibullR</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.WeibullR</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-WeibullRalt">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Silkworth</surname><given-names>David</given-names></name>
+      </person-group>
+      <source>WeibullR.ALT: Accelerated life testing using ’WeibullR’</source>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://CRAN.R-project.org/package=WeibullR.ALT</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.WeibullR.ALT</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-ReliaLearnR">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Govan</surname><given-names>Paul</given-names></name>
+      </person-group>
+      <source>ReliaLearnR: Learning modules for reliability analysis</source>
+      <year iso-8601-date="2025">2025</year>
+      <uri>https://CRAN.R-project.org/package=ReliaLearnR</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.ReliaLearnR</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-ReliaGrowR">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Govan</surname><given-names>Paul</given-names></name>
+      </person-group>
+      <source>ReliaGrowR: Reliability growth analysis</source>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://cran.r-project.org/package=ReliaGrowR</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.ReliaGrowR</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-ReliaPlotR">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Govan</surname><given-names>Paul</given-names></name>
+      </person-group>
+      <source>ReliaPlotR: Interactive reliability analysis plots</source>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://CRAN.R-project.org/package=ReliaPlotR</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.ReliaPlotR</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-ReliaShiny">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Govan</surname><given-names>Paul</given-names></name>
+      </person-group>
+      <source>ReliaShiny: A ’shiny’ app for reliability analysis</source>
+      <year iso-8601-date="2023">2023</year>
+      <uri>https://CRAN.R-project.org/package=ReliaShiny</uri>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.ReliaShiny</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Weibull">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Abernethy</surname><given-names>Robert B.</given-names></name>
+      </person-group>
+      <source>The new weibull handbook</source>
+      <publisher-name>R.B. Abernethy; Distributed by GULF Pub. Co.</publisher-name>
+      <year iso-8601-date="1993">1993</year>
+      <uri>https://cir.nii.ac.jp/crid/1130282270976797824</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>

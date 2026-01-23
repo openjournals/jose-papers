@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20260123195011-f3715596f141ecce2a6514cb4672df125c410876</doi_batch_id>
+    <timestamp>20260123195011</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>01</month>
+          <year>2026</year>
+        </publication_date>
+        <journal_volume>
+          <volume>9</volume>
+        </journal_volume>
+        <issue>95</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>ReliaLearnR: Learning Modules for Reliability Analysis</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Paul B.</given_name>
+            <surname>Govan</surname>
+            <affiliations>
+              <institution><institution_name>Senior Reliability Engineer, Safety and Reliability, GE Aerospace</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-1821-8492</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>01</month>
+          <day>23</day>
+          <year>2026</year>
+        </publication_date>
+        <pages>
+          <first_page>302</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00302</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.18176398</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/302</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00302</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00302</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00302.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="learnr">
+            <volume_title>Learnr: Interactive tutorials for r</volume_title>
+            <author>Aden-Buie</author>
+            <doi>10.32614/CRAN.package.learnr</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Aden-Buie, G., Schloerke, B., Allaire, J., &amp; Rossell Hayes, A. (2023). Learnr: Interactive tutorials for r. https://doi.org/10.32614/CRAN.package.learnr</unstructured_citation>
+          </citation>
+          <citation key="R">
+            <volume_title>R: A language and environment for statistical computing</volume_title>
+            <author>R Core Team</author>
+            <doi>10.32614/r.manuals</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>R Core Team. (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing. https://doi.org/10.32614/r.manuals</unstructured_citation>
+          </citation>
+          <citation key="shiny">
+            <volume_title>Shiny: Web application framework for r</volume_title>
+            <author>Chang</author>
+            <doi>10.32614/CRAN.package.shiny</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Chang, W., Cheng, J., Allaire, J., Sievert, C., Schloerke, B., Xie, Y., Allen, J., McPherson, J., Dipert, A., &amp; Borges, B. (2022). Shiny: Web application framework for r. https://doi.org/10.32614/CRAN.package.shiny</unstructured_citation>
+          </citation>
+          <citation key="WeibullR">
+            <volume_title>WeibullR: Weibull analysis for reliability engineering</volume_title>
+            <author>Silkworth</author>
+            <doi>10.32614/CRAN.package.WeibullR</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Silkworth, D., &amp; Symynck, J. (2022). WeibullR: Weibull analysis for reliability engineering. https://doi.org/10.32614/CRAN.package.WeibullR</unstructured_citation>
+          </citation>
+          <citation key="WeibullRalt">
+            <volume_title>WeibullR.ALT: Accelerated life testing using ’WeibullR’</volume_title>
+            <author>Silkworth</author>
+            <doi>10.32614/CRAN.package.WeibullR.ALT</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Silkworth, D. (2022). WeibullR.ALT: Accelerated life testing using ’WeibullR’. https://doi.org/10.32614/CRAN.package.WeibullR.ALT</unstructured_citation>
+          </citation>
+          <citation key="ReliaLearnR">
+            <volume_title>ReliaLearnR: Learning modules for reliability analysis</volume_title>
+            <author>Govan</author>
+            <doi>10.32614/CRAN.package.ReliaLearnR</doi>
+            <cYear>2025</cYear>
+            <unstructured_citation>Govan, P. (2025). ReliaLearnR: Learning modules for reliability analysis. https://doi.org/10.32614/CRAN.package.ReliaLearnR</unstructured_citation>
+          </citation>
+          <citation key="ReliaGrowR">
+            <volume_title>ReliaGrowR: Reliability growth analysis</volume_title>
+            <author>Govan</author>
+            <doi>10.32614/CRAN.package.ReliaGrowR</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Govan, P. (2024). ReliaGrowR: Reliability growth analysis. https://doi.org/10.32614/CRAN.package.ReliaGrowR</unstructured_citation>
+          </citation>
+          <citation key="ReliaPlotR">
+            <volume_title>ReliaPlotR: Interactive reliability analysis plots</volume_title>
+            <author>Govan</author>
+            <doi>10.32614/CRAN.package.ReliaPlotR</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Govan, P. (2023). ReliaPlotR: Interactive reliability analysis plots. https://doi.org/10.32614/CRAN.package.ReliaPlotR</unstructured_citation>
+          </citation>
+          <citation key="ReliaShiny">
+            <volume_title>ReliaShiny: A ’shiny’ app for reliability analysis</volume_title>
+            <author>Govan</author>
+            <doi>10.32614/CRAN.package.ReliaShiny</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Govan, P. (2023). ReliaShiny: A ’shiny’ app for reliability analysis. https://doi.org/10.32614/CRAN.package.ReliaShiny</unstructured_citation>
+          </citation>
+          <citation key="Weibull">
+            <volume_title>The new weibull handbook</volume_title>
+            <author>Abernethy</author>
+            <cYear>1993</cYear>
+            <unstructured_citation>Abernethy, R. B. (1993). The new weibull handbook. R.B. Abernethy; Distributed by GULF Pub. Co. https://cir.nii.ac.jp/crid/1130282270976797824</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
