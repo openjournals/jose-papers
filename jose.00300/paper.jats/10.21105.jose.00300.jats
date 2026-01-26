@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">300</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00300</article-id>
+<title-group>
+<article-title>evolved: open software for teaching evolutionary biology
+through virtual inquiries</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-6480-7095</contrib-id>
+<name>
+<surname>Januario</surname>
+<given-names>Matheus</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-7576-9058</contrib-id>
+<name>
+<surname>Auler</surname>
+<given-names>Jennifer P.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0004-2558-8389</contrib-id>
+<name>
+<surname>Viol</surname>
+<given-names>Andressa L.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-7499-8251</contrib-id>
+<name>
+<surname>Rabosky</surname>
+<given-names>Daniel L.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Museum of Zoology, University of Michigan, Ann Arbor, MI,
+USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Department of Ecology and Evolutionary Biology, University
+of Michigan, Ann Arbor, MI, USA</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Programa de Pós-Graduação em Ecologia, Universidade de São
+Paulo, Rua do Matão, 321, Travessa 14, São Paulo, SP,
+Brazil</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-12-19">
+<day>19</day>
+<month>12</month>
+<year>2024</year>
+</pub-date>
+<volume>9</volume>
+<issue>95</issue>
+<fpage>300</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>R</kwd>
+<kwd>Ecology</kwd>
+<kwd>Evolution</kwd>
+<kwd>Inquiry-based learning</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p><monospace>evolved</monospace> (<bold>EVOL</bold>utionary
+  <bold>V</bold>irtual <bold>ED</bold>ucation) is an open-source R
+  package
+  (<xref alt="R Core Team, 2024" rid="ref-RU003A2024" ref-type="bibr">R
+  Core Team, 2024</xref>) designed for graduate or advanced
+  undergraduate courses in evolutionary biology. It provides tools for
+  inquiry-based learning, where students engage in scientific practices
+  to actively build knowledge
+  (<xref alt="Pedaste et al., 2015" rid="ref-PedasteU003A2015" ref-type="bibr">Pedaste
+  et al., 2015</xref>). The package includes vignettes (tutorials) to
+  facilitate classroom investigations (<bold>Tables 1</bold> &amp;
+  <bold>2</bold>). However, educators are encouraged to develop their
+  own content modules depending on class context and/or learning
+  objectives. Most of evolved’s core functions are oriented towards
+  either (i) developing student intuition for classic models in
+  evolutionary biology using simulations, or (ii) analyzing (parameter
+  estimation, hypothesis testing, visualization) datasets associated
+  with key questions in evolutionary biology (<bold>Tables 1</bold>
+  &amp; <bold>2</bold>). Importantly, these datasets correspond
+  structurally (e.g., organization and data types) to real datasets used
+  by scientists, and they are compatible with widely-used software for
+  evolutionary analysis (e.g., <monospace>ape</monospace>
+  (<xref alt="Paradis &amp; Schliep, 2019" rid="ref-ParadisU003A2019" ref-type="bibr">Paradis
+  &amp; Schliep, 2019</xref>)).</p>
+  <p><monospace>evolved</monospace>’s functions can be loosely
+  classified into “high level” and “low level” (<bold>Table 1</bold>),
+  thus providing tools for inquiries that assume different levels of
+  student independence (e.g., as categorized by Banchi &amp; Bell
+  (<xref alt="2008" rid="ref-BanchiBellU003A2008" ref-type="bibr">2008</xref>)
+  - see <bold>Table 2</bold>). High-level functions execute complex
+  sequences of operations while hiding many details, thus making minimal
+  assumptions of R proficiency and allowing users to focus on results.
+  They are either optimized for performance, or work as a simplified
+  interface (“wrappers”) of simulators from standard scientific packages
+  (e.g., functions from packages <monospace>ape</monospace>
+  (<xref alt="Paradis &amp; Schliep, 2019" rid="ref-ParadisU003A2019" ref-type="bibr">Paradis
+  &amp; Schliep, 2019</xref>), <monospace>diversitree</monospace>
+  (<xref alt="FitzJohn, 2012" rid="ref-FitzjohnU003A2012" ref-type="bibr">FitzJohn,
+  2012</xref>), or <monospace>phytools</monospace>
+  (<xref alt="Revell, 2024" rid="ref-RevellU003A2024" ref-type="bibr">Revell,
+  2024</xref>)). These functions will likely work better in inquiries
+  with more student freedom and a greater focus on analyzing data
+  (<bold>Table 2</bold>). In contrast, “low level” functions focus on
+  making explicit connections between every sequential operation and are
+  thus more easily applicable to structured inquiries
+  (<xref alt="Banchi &amp; Bell, 2008" rid="ref-BanchiBellU003A2008" ref-type="bibr">Banchi
+  &amp; Bell, 2008</xref>). They are also internally designed to be
+  readable by students with intermediate skills in R, allowing further
+  engagement with simulation parameters and outcomes.</p>
+  <p>The package is designed to reduce barriers to data- and
+  simulation-driven inquiries and one vignette
+  (<monospace>intro_r</monospace>) aims to introduce students/educators
+  to R and its pedagogical capabilities. We do not provide answers to
+  the investigation prompts in the vignettes, but educators can request
+  answer keys from the corresponding author (MJ).</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>Evolutionary biology is a complex discipline that affords many
+  opportunities for students to practice interrogating, analyzing, and
+  discussing data, but advanced classes still need effective educational
+  resources. <monospace>evolved</monospace> addresses this need by
+  focusing on core evidence used to study evolution: molecular/fossil
+  data, simulations, and sound mathematical principles in evolutionary
+  biology. The package helps teach programming, analytical, and
+  reasoning skills through interactive, hands-on activities, and its
+  open-source design allows direct engagement with algorithms and
+  methods.</p>
+  <p><monospace>evolved</monospace> began in 2022 as a set of standalone
+  functions used in an advanced evolutionary biology course at the
+  University of Michigan, originally designed for use in hands-on
+  classes of 2 hours per topic module. However, valuable class time was
+  lost on data setup and formatting, reducing student engagement with
+  core material. In 2023, the functions were consolidated into an R
+  package to free up class time by simplifying data loading, now made
+  with a simple command: data(<monospace>dataset name</monospace>).</p>
+</sec>
+<sec id="software-installation-and-use">
+  <title>Software installation and use</title>
+  <p><monospace>evolved</monospace>‘s stable version is
+  <ext-link ext-link-type="uri" xlink:href="https://cran.r-project.org/web/packages/evolved/index.html">available
+  on the Comprehensive R Archive Network (CRAN)</ext-link>. The
+  available vignettes draw inspiration from the authors’ teaching
+  experiences, but they are not essential for the software to function
+  and should be interpreted as suggestions. Instructors should feel free
+  to adapt evolved’s functionalities as they see fit.</p>
+  <p>To access a vignette, type
+  <monospace>vignette(&quot;vignette_name&quot;)</monospace> in R,
+  replacing “<monospace>vignette_name</monospace>” with the vignette
+  name (see <bold>Table 2</bold>). The development version, more
+  detailed information on the package/vignettes, and instructions for
+  installing and using R/RStudio/RMarkdown are provided at
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/mjanuario/evolved">https://github.com/mjanuario/evolved</ext-link>.
+  This information as well as the vignettes can also be acessed in
+  <ext-link ext-link-type="uri" xlink:href="https://mjanuario.github.io/evolved/">https://mjanuario.github.io/evolved/</ext-link>.
+  Questions should be sent to MJ (correspondence author).</p>
+  <p><bold>Table 1.</bold> Selected functions illustrating the range of
+  topics covered, with notes on their level (low = intended to be opened
+  by students, high = wrapper function). A full list and descriptions of
+  all functions, including helper and plotting functions, are available
+  in the package manual
+  (<xref alt="Januario et al., 2024" rid="ref-JanuarioU003A2024" ref-type="bibr">Januario
+  et al., 2024</xref>). </p>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="11%" />
+        <col width="23%" />
+        <col width="46%" />
+        <col width="7%" />
+        <col width="12%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Function name</th>
+          <th>Associated subfield</th>
+          <th>Function purpose</th>
+          <th>Function Level</th>
+          <th>Vignette name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><monospace>calcFossilDivTT()</monospace></td>
+          <td>Paleobiology</td>
+          <td>Estimate diversity through time from fossil
+          occurrences</td>
+          <td>Low</td>
+          <td><monospace>deeptime_rocks</monospace></td>
+        </tr>
+        <tr>
+          <td><monospace>countSeqDiffs()</monospace></td>
+          <td>Comparative molecular evolution and Phylogenetics</td>
+          <td>Calculates the number of different sites between two
+          protein sequences</td>
+          <td>Low</td>
+          <td><monospace>deeptime_clocks</monospace></td>
+        </tr>
+        <tr>
+          <td><monospace>NatSelSim()</monospace></td>
+          <td>Population genetics</td>
+          <td>Compute allele frequency dynamics under natural
+          selection</td>
+          <td>Low</td>
+          <td><monospace>pongen_selection</monospace></td>
+        </tr>
+        <tr>
+          <td><monospace>OneGenHWSim()</monospace></td>
+          <td>Population genetics</td>
+          <td>Simulates independent assortment of gametes under
+          Hardy-Weinberg equilibrium in a finite population</td>
+          <td>Low</td>
+          <td><monospace>pongen_intro</monospace></td>
+        </tr>
+        <tr>
+          <td><monospace>WEDriftSim()</monospace></td>
+          <td>Population genetics</td>
+          <td>Simulates allele frequency change through time under
+          genetic drift</td>
+          <td>Low</td>
+          <td><monospace>pongen_drift</monospace></td>
+        </tr>
+        <tr>
+          <td><monospace>simulateBirthDeath()</monospace></td>
+          <td>Macroevolution</td>
+          <td>Simulates the number of species following a birth-death
+          model</td>
+          <td>High</td>
+          <td><monospace>birthdeath_deeptime</monospace></td>
+        </tr>
+        <tr>
+          <td><monospace>SimulateTree()</monospace></td>
+          <td>Macroevolution</td>
+          <td>Simulates a phylogenetic tree following a birth-death
+          model</td>
+          <td>High</td>
+          <td><monospace>birthdeath_phylogenies</monospace></td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+  <p><bold>Table 2.</bold> Different datasets and their suggested
+  applications. The inquiry level follows the terminology and
+  definitions of Banchi &amp; Bell
+  (<xref alt="2008" rid="ref-BanchiBellU003A2008" ref-type="bibr">2008</xref>).
+  Legend: occs. = Occurrences; Ver. = Version of the package (stable =
+  hosted on CRAN, Devel. = development version hosted on github). </p>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="10%" />
+        <col width="22%" />
+        <col width="10%" />
+        <col width="24%" />
+        <col width="16%" />
+        <col width="13%" />
+        <col width="5%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Dataset name</th>
+          <th>Short description</th>
+          <th>Suggested inquiry level</th>
+          <th>Possible topic in inquiry</th>
+          <th>Name of vignette with example activity</th>
+          <th>Data source</th>
+          <th>Ver.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><monospace>data_whales</monospace></td>
+          <td>Cetacean body size and speciation rates</td>
+          <td>Structured inquiry</td>
+          <td>Statistical non-independence among closely related
+          species</td>
+          <td><monospace>birthdeath_phylogenies</monospace></td>
+          <td>(<xref alt="Jones et al., 2009" rid="ref-JonesU003A2009" ref-type="bibr">Jones
+          et al., 2009</xref>;
+          <xref alt="Rabosky et al., 2014" rid="ref-RaboskyU003A2014" ref-type="bibr">Rabosky
+          et al., 2014</xref>)</td>
+          <td>Stable</td>
+        </tr>
+        <tr>
+          <td><monospace>whale_nbvlo</monospace></td>
+          <td>Cetacean molecular phylogeny</td>
+          <td>Structured inquiry</td>
+          <td>Handling of phylogenies in analysis software</td>
+          <td><monospace>birthdeath_phylogenies</monospace></td>
+          <td>(<xref alt="Steeman et al., 2009" rid="ref-SteemanU003A2009" ref-type="bibr">Steeman
+          et al., 2009</xref>)</td>
+          <td>Stable</td>
+        </tr>
+        <tr>
+          <td><monospace>cvtOxidase</monospace></td>
+          <td>Metazoan (homologous) protein sequence</td>
+          <td>Open inquiry</td>
+          <td>Comparative analysis of molecular data</td>
+          <td><monospace>deeptime_clocks</monospace></td>
+          <td>(<xref alt="Benson et al., 2012" rid="ref-BensonU003A2012" ref-type="bibr">Benson
+          et al., 2012</xref>)</td>
+          <td>Stable</td>
+        </tr>
+        <tr>
+          <td><monospace>birds_spp</monospace></td>
+          <td>Extant species list of birds</td>
+          <td>Structured inquiry</td>
+          <td>Richness differences among clades</td>
+          <td><monospace>deeptime_rocks</monospace></td>
+          <td>(<xref alt="Jetz et al., 2012" rid="ref-JetzU003A2012" ref-type="bibr">Jetz
+          et al., 2012</xref>)</td>
+          <td>Stable</td>
+        </tr>
+        <tr>
+          <td><monospace>mammals_spp</monospace></td>
+          <td>Extant species list of mammals</td>
+          <td>Structured inquiry</td>
+          <td>Richness differences among clades</td>
+          <td><monospace>deeptime_rocks</monospace></td>
+          <td>(<xref alt="Upham et al., 2019" rid="ref-UphamU003A2019" ref-type="bibr">Upham
+          et al., 2019</xref>)</td>
+          <td>Devel.</td>
+        </tr>
+        <tr>
+          <td><monospace>ammonoidea_fossil</monospace></td>
+          <td>Ammonoid fossil occs.</td>
+          <td>Open inquiry</td>
+          <td>Large-scale biodiversity patterns in the fossil
+          record</td>
+          <td><monospace>deeptime_rocks</monospace></td>
+          <td><ext-link ext-link-type="uri" xlink:href="https://paleobiodb.org">https://paleobiodb.org</ext-link></td>
+          <td>Devel.</td>
+        </tr>
+        <tr>
+          <td><monospace>mammals_fossil</monospace></td>
+          <td>Mammal fossil occs.</td>
+          <td>Open inquiry</td>
+          <td>Large-scale biodiversity patterns in the fossil
+          record</td>
+          <td><monospace>deeptime_rocks</monospace></td>
+          <td><ext-link ext-link-type="uri" xlink:href="https://paleobiodb.org">https://paleobiodb.org</ext-link></td>
+          <td>Devel.</td>
+        </tr>
+        <tr>
+          <td><monospace>dinos_fossil</monospace></td>
+          <td>Dinosaur fossil occs.</td>
+          <td>Open inquiry</td>
+          <td>Large-scale biodiversity patterns in the fossil
+          record</td>
+          <td><monospace>deeptime_rocks</monospace></td>
+          <td><ext-link ext-link-type="uri" xlink:href="https://paleobiodb.org">https://paleobiodb.org</ext-link></td>
+          <td>Stable</td>
+        </tr>
+        <tr>
+          <td><monospace>trilob_fossil</monospace></td>
+          <td>Trilobite fossil occs.</td>
+          <td>Open inquiry</td>
+          <td>Large-scale biodiversity patterns in the fossil
+          record</td>
+          <td><monospace>deeptime_rocks</monospace></td>
+          <td><ext-link ext-link-type="uri" xlink:href="https://paleobiodb.org">https://paleobiodb.org</ext-link></td>
+          <td>Devel.</td>
+        </tr>
+        <tr>
+          <td><monospace>timeseries_fossil</monospace></td>
+          <td>Timeseries of fossil species numbers for many clades</td>
+          <td>Guided inquiry</td>
+          <td>Large-scale biodiversity patterns in the fossil
+          record</td>
+          <td><monospace>birthdeath_deeptime</monospace></td>
+          <td>(<xref alt="Rabosky &amp; Benson, 2021" rid="ref-RaboskyU003A2021" ref-type="bibr">Rabosky
+          &amp; Benson, 2021</xref>)</td>
+          <td>Stable</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</sec>
+<sec id="author-contributions">
+  <title>Author contributions:</title>
+  <p>MJ and DLR designed most of the code, internal functions, and
+  educational components. JPA joined later, contributing to
+  visualization functions, documentation, implementation improvements,
+  and preparing the package for CRAN standards. MJ, DLR, and ALV
+  developed the vignettes. MJ wrote the first drafts of the paper, help
+  pages, and vignettes, with all authors reviewing the material
+  afterward.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We thank Theodore Matel, Tristan Schramer, and Yu Kai Tan for their
+  suggestions. Matheus Januario and his work related to this publication
+  are supported by the National Science Foundation under Grant
+  No. 1754398 and the Rackham Predoctoral Fellowship from the University
+  of Michigan.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-BanchiBellU003A2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Banchi</surname><given-names>Heather</given-names></name>
+        <name><surname>Bell</surname><given-names>Randy</given-names></name>
+      </person-group>
+      <article-title>The many levels of inquiry</article-title>
+      <source>Science &amp; Children</source>
+      <year iso-8601-date="2008">2008</year>
+      <volume>46</volume>
+      <issue>2</issue>
+      <uri>http://www.jstor.org/stable/43174976.</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-BensonU003A2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Benson</surname><given-names>Dennis A</given-names></name>
+        <name><surname>Cavanaugh</surname><given-names>Mark</given-names></name>
+        <name><surname>Clark</surname><given-names>Karen</given-names></name>
+        <name><surname>Karsch-Mizrachi</surname><given-names>Ilene</given-names></name>
+        <name><surname>Lipman</surname><given-names>David J</given-names></name>
+        <name><surname>Ostell</surname><given-names>James</given-names></name>
+        <name><surname>Sayers</surname><given-names>Eric W</given-names></name>
+      </person-group>
+      <article-title>GenBank</article-title>
+      <source>Nucleic acids research</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+      <volume>41</volume>
+      <issue>D1</issue>
+      <pub-id pub-id-type="doi">10.1093/nar/gkw1070</pub-id>
+      <fpage>D36</fpage>
+      <lpage>D42</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-FitzjohnU003A2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>FitzJohn</surname><given-names>Richard G</given-names></name>
+      </person-group>
+      <article-title>Diversitree: Comparative phylogenetic analyses of diversification in R</article-title>
+      <source>Methods in Ecology and Evolution</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+      <volume>3</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1111/j.2041-210X.2012.00234.x</pub-id>
+      <fpage>1084</fpage>
+      <lpage>1092</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-JanuarioU003A2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Januario</surname><given-names>Matheus</given-names></name>
+        <name><surname>Auler</surname><given-names>Jennifer</given-names></name>
+        <name><surname>Viol</surname><given-names>Andressa</given-names></name>
+        <name><surname>Rabosky</surname><given-names>Daniel</given-names></name>
+      </person-group>
+      <article-title>Package ’evolved’</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <pub-id pub-id-type="doi">10.32614/CRAN.package.evolved</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-JetzU003A2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jetz</surname><given-names>Walter</given-names></name>
+        <name><surname>Thomas</surname><given-names>Gavin H</given-names></name>
+        <name><surname>Joy</surname><given-names>Jeffery B</given-names></name>
+        <name><surname>Hartmann</surname><given-names>Klaas</given-names></name>
+        <name><surname>Mooers</surname><given-names>Arne O</given-names></name>
+      </person-group>
+      <article-title>The global diversity of birds in space and time</article-title>
+      <source>Nature</source>
+      <publisher-name>Nature Publishing Group UK London</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+      <volume>491</volume>
+      <issue>7424</issue>
+      <pub-id pub-id-type="doi">10.1038/nature11631</pub-id>
+      <fpage>444</fpage>
+      <lpage>448</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-JonesU003A2009">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jones</surname><given-names>Kate E</given-names></name>
+        <name><surname>Bielby</surname><given-names>Jon</given-names></name>
+        <name><surname>Cardillo</surname><given-names>Marcel</given-names></name>
+        <name><surname>Fritz</surname><given-names>Susanne A</given-names></name>
+        <name><surname>O’Dell</surname><given-names>Justin</given-names></name>
+        <name><surname>Orme</surname><given-names>C David L</given-names></name>
+        <name><surname>Safi</surname><given-names>Kamran</given-names></name>
+        <name><surname>Sechrest</surname><given-names>Wes</given-names></name>
+        <name><surname>Boakes</surname><given-names>Elizabeth H</given-names></name>
+        <name><surname>Carbone</surname><given-names>Chris</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>PanTHERIA: A species-level database of life history, ecology, and geography of extant and recently extinct mammals: Ecological archives E090-184</article-title>
+      <source>Ecology</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <volume>90</volume>
+      <issue>9</issue>
+      <pub-id pub-id-type="doi">10.1890/08-1494.1</pub-id>
+      <fpage>2648</fpage>
+      <lpage>2648</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ParadisU003A2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Paradis</surname><given-names>Emmanuel</given-names></name>
+        <name><surname>Schliep</surname><given-names>Klaus</given-names></name>
+      </person-group>
+      <article-title>Ape 5.0: An environment for modern phylogenetics and evolutionary analyses in R</article-title>
+      <source>Bioinformatics</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>35</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1093/bioinformatics/bty633</pub-id>
+      <fpage>526</fpage>
+      <lpage>528</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-PedasteU003A2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pedaste</surname><given-names>Margus</given-names></name>
+        <name><surname>Mäeots</surname><given-names>Mario</given-names></name>
+        <name><surname>Siiman</surname><given-names>Leo A</given-names></name>
+        <name><surname>De Jong</surname><given-names>Ton</given-names></name>
+        <name><surname>Van Riesen</surname><given-names>Siswa AN</given-names></name>
+        <name><surname>Kamp</surname><given-names>Ellen T</given-names></name>
+        <name><surname>Manoli</surname><given-names>Constantinos C</given-names></name>
+        <name><surname>Zacharia</surname><given-names>Zacharias C</given-names></name>
+        <name><surname>Tsourlidaki</surname><given-names>Eleftheria</given-names></name>
+      </person-group>
+      <article-title>Phases of inquiry-based learning: Definitions and the inquiry cycle</article-title>
+      <source>Educational research review</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2015">2015</year>
+      <volume>14</volume>
+      <pub-id pub-id-type="doi">10.1016/j.edurev.2015.02.003</pub-id>
+      <fpage>47</fpage>
+      <lpage>61</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-RU003A2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <string-name>R Core Team</string-name>
+      </person-group>
+      <article-title>R: A language and environment for statistical computing</article-title>
+      <source>Foundation for Statistical Computing, Vienna, Austria</source>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://www.R-project.org/</uri>
+      <pub-id pub-id-type="doi">10.32614/r.manuals</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-RaboskyU003A2014">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rabosky</surname><given-names>Daniel L</given-names></name>
+        <name><surname>Grundler</surname><given-names>Michael</given-names></name>
+        <name><surname>Anderson</surname><given-names>Carlos</given-names></name>
+        <name><surname>Title</surname><given-names>Pascal</given-names></name>
+        <name><surname>Shi</surname><given-names>Jeff J</given-names></name>
+        <name><surname>Brown</surname><given-names>Joseph W</given-names></name>
+        <name><surname>Huang</surname><given-names>Huateng</given-names></name>
+        <name><surname>Larson</surname><given-names>Joanna G</given-names></name>
+      </person-group>
+      <article-title>BAMM tools: An R package for the analysis of evolutionary dynamics on phylogenetic trees</article-title>
+      <source>Methods in Ecology and Evolution</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <volume>5</volume>
+      <issue>7</issue>
+      <pub-id pub-id-type="doi">10.1111/2041-210X.12199</pub-id>
+      <fpage>701</fpage>
+      <lpage>707</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-RaboskyU003A2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rabosky</surname><given-names>Daniel L</given-names></name>
+        <name><surname>Benson</surname><given-names>Roger BJ</given-names></name>
+      </person-group>
+      <article-title>Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data</article-title>
+      <source>Nature Communications</source>
+      <publisher-name>Nature Publishing Group UK London</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>12</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1038/s41467-021-23307-5</pub-id>
+      <fpage>2945</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-RevellU003A2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Revell</surname><given-names>Liam J</given-names></name>
+      </person-group>
+      <article-title>Phytools 2.0: An updated R ecosystem for phylogenetic comparative methods (and other things)</article-title>
+      <source>PeerJ</source>
+      <publisher-name>PeerJ Inc.</publisher-name>
+      <year iso-8601-date="2024">2024</year>
+      <volume>12</volume>
+      <pub-id pub-id-type="doi">10.7717/peerj.16505</pub-id>
+      <fpage>e16505</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-SteemanU003A2009">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Steeman</surname><given-names>Mette E</given-names></name>
+        <name><surname>Hebsgaard</surname><given-names>Martin B</given-names></name>
+        <name><surname>Fordyce</surname><given-names>R Ewan</given-names></name>
+        <name><surname>Ho</surname><given-names>Simon YW</given-names></name>
+        <name><surname>Rabosky</surname><given-names>Daniel L</given-names></name>
+        <name><surname>Nielsen</surname><given-names>Rasmus</given-names></name>
+        <name><surname>Rahbek</surname><given-names>Carsten</given-names></name>
+        <name><surname>Glenner</surname><given-names>Henrik</given-names></name>
+        <name><surname>Sørensen</surname><given-names>Martin V</given-names></name>
+        <name><surname>Willerslev</surname><given-names>Eske</given-names></name>
+      </person-group>
+      <article-title>Radiation of extant cetaceans driven by restructuring of the oceans</article-title>
+      <source>Systematic biology</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <volume>58</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1093/sysbio/syp060</pub-id>
+      <fpage>573</fpage>
+      <lpage>585</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-UphamU003A2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Upham</surname><given-names>Nathan S</given-names></name>
+        <name><surname>Esselstyn</surname><given-names>Jacob A</given-names></name>
+        <name><surname>Jetz</surname><given-names>Walter</given-names></name>
+      </person-group>
+      <article-title>Inferring the mammal tree: Species-level sets of phylogenies for questions in ecology, evolution, and conservation</article-title>
+      <source>PLoS biology</source>
+      <publisher-name>Public Library of Science San Francisco, CA USA</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>17</volume>
+      <issue>12</issue>
+      <pub-id pub-id-type="doi">10.1371/journal.pbio.3000494</pub-id>
+      <fpage>e3000494</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
