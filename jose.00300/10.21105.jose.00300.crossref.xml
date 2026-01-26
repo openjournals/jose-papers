@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20260126210935-b64bbdb1bf446bd114fb7ce3d7a55881c3e593a7</doi_batch_id>
+    <timestamp>20260126210935</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>01</month>
+          <year>2026</year>
+        </publication_date>
+        <journal_volume>
+          <volume>9</volume>
+        </journal_volume>
+        <issue>95</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>evolved: open software for teaching evolutionary biology through virtual inquiries</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Matheus</given_name>
+            <surname>Januario</surname>
+            <affiliations>
+              <institution><institution_name>Museum of Zoology, University of Michigan, Ann Arbor, MI, USA</institution_name></institution>
+              <institution><institution_name>Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-6480-7095</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Jennifer P.</given_name>
+            <surname>Auler</surname>
+            <affiliations>
+              <institution><institution_name>Programa de Pós-Graduação em Ecologia, Universidade de São Paulo, Rua do Matão, 321, Travessa 14, São Paulo, SP, Brazil</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-7576-9058</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Andressa L.</given_name>
+            <surname>Viol</surname>
+            <affiliations>
+              <institution><institution_name>Museum of Zoology, University of Michigan, Ann Arbor, MI, USA</institution_name></institution>
+              <institution><institution_name>Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0004-2558-8389</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Daniel L.</given_name>
+            <surname>Rabosky</surname>
+            <affiliations>
+              <institution><institution_name>Museum of Zoology, University of Michigan, Ann Arbor, MI, USA</institution_name></institution>
+              <institution><institution_name>Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0002-7499-8251</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>01</month>
+          <day>26</day>
+          <year>2026</year>
+        </publication_date>
+        <pages>
+          <first_page>300</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00300</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.18203397</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/300</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00300</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00300</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00300.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="BanchiBell:2008">
+            <article_title>The many levels of inquiry</article_title>
+            <author>Banchi</author>
+            <journal_title>Science &amp; Children</journal_title>
+            <issue>2</issue>
+            <volume>46</volume>
+            <cYear>2008</cYear>
+            <unstructured_citation>Banchi, H., &amp; Bell, R. (2008). The many levels of inquiry. Science &amp; Children, 46(2). http://www.jstor.org/stable/43174976.</unstructured_citation>
+          </citation>
+          <citation key="Benson:2012">
+            <article_title>GenBank</article_title>
+            <author>Benson</author>
+            <journal_title>Nucleic acids research</journal_title>
+            <issue>D1</issue>
+            <volume>41</volume>
+            <doi>10.1093/nar/gkw1070</doi>
+            <cYear>2012</cYear>
+            <unstructured_citation>Benson, D. A., Cavanaugh, M., Clark, K., Karsch-Mizrachi, I., Lipman, D. J., Ostell, J., &amp; Sayers, E. W. (2012). GenBank. Nucleic Acids Research, 41(D1), D36–D42. https://doi.org/10.1093/nar/gkw1070</unstructured_citation>
+          </citation>
+          <citation key="Fitzjohn:2012">
+            <article_title>Diversitree: Comparative phylogenetic analyses of diversification in R</article_title>
+            <author>FitzJohn</author>
+            <journal_title>Methods in Ecology and Evolution</journal_title>
+            <issue>6</issue>
+            <volume>3</volume>
+            <doi>10.1111/j.2041-210X.2012.00234.x</doi>
+            <cYear>2012</cYear>
+            <unstructured_citation>FitzJohn, R. G. (2012). Diversitree: Comparative phylogenetic analyses of diversification in R. Methods in Ecology and Evolution, 3(6), 1084–1092. https://doi.org/10.1111/j.2041-210X.2012.00234.x</unstructured_citation>
+          </citation>
+          <citation key="Januario:2024">
+            <article_title>Package ’evolved’</article_title>
+            <author>Januario</author>
+            <doi>10.32614/CRAN.package.evolved</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Januario, M., Auler, J., Viol, A., &amp; Rabosky, D. (2024). Package ’evolved’. https://doi.org/10.32614/CRAN.package.evolved</unstructured_citation>
+          </citation>
+          <citation key="Jetz:2012">
+            <article_title>The global diversity of birds in space and time</article_title>
+            <author>Jetz</author>
+            <journal_title>Nature</journal_title>
+            <issue>7424</issue>
+            <volume>491</volume>
+            <doi>10.1038/nature11631</doi>
+            <cYear>2012</cYear>
+            <unstructured_citation>Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K., &amp; Mooers, A. O. (2012). The global diversity of birds in space and time. Nature, 491(7424), 444–448. https://doi.org/10.1038/nature11631</unstructured_citation>
+          </citation>
+          <citation key="Jones:2009">
+            <article_title>PanTHERIA: A species-level database of life history, ecology, and geography of extant and recently extinct mammals: Ecological archives E090-184</article_title>
+            <author>Jones</author>
+            <journal_title>Ecology</journal_title>
+            <issue>9</issue>
+            <volume>90</volume>
+            <doi>10.1890/08-1494.1</doi>
+            <cYear>2009</cYear>
+            <unstructured_citation>Jones, K. E., Bielby, J., Cardillo, M., Fritz, S. A., O’Dell, J., Orme, C. D. L., Safi, K., Sechrest, W., Boakes, E. H., Carbone, C., &amp; others. (2009). PanTHERIA: A species-level database of life history, ecology, and geography of extant and recently extinct mammals: Ecological archives E090-184. Ecology, 90(9), 2648–2648. https://doi.org/10.1890/08-1494.1</unstructured_citation>
+          </citation>
+          <citation key="Paradis:2019">
+            <article_title>Ape 5.0: An environment for modern phylogenetics and evolutionary analyses in R</article_title>
+            <author>Paradis</author>
+            <journal_title>Bioinformatics</journal_title>
+            <issue>3</issue>
+            <volume>35</volume>
+            <doi>10.1093/bioinformatics/bty633</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Paradis, E., &amp; Schliep, K. (2019). Ape 5.0: An environment for modern phylogenetics and evolutionary analyses in R. Bioinformatics, 35(3), 526–528. https://doi.org/10.1093/bioinformatics/bty633</unstructured_citation>
+          </citation>
+          <citation key="Pedaste:2015">
+            <article_title>Phases of inquiry-based learning: Definitions and the inquiry cycle</article_title>
+            <author>Pedaste</author>
+            <journal_title>Educational research review</journal_title>
+            <volume>14</volume>
+            <doi>10.1016/j.edurev.2015.02.003</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>Pedaste, M., Mäeots, M., Siiman, L. A., De Jong, T., Van Riesen, S. A., Kamp, E. T., Manoli, C. C., Zacharia, Z. C., &amp; Tsourlidaki, E. (2015). Phases of inquiry-based learning: Definitions and the inquiry cycle. Educational Research Review, 14, 47–61. https://doi.org/10.1016/j.edurev.2015.02.003</unstructured_citation>
+          </citation>
+          <citation key="R:2024">
+            <article_title>R: A language and environment for statistical computing</article_title>
+            <author>R Core Team</author>
+            <journal_title>Foundation for Statistical Computing, Vienna, Austria</journal_title>
+            <doi>10.32614/r.manuals</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>R Core Team. (2024). R: A language and environment for statistical computing. Foundation for Statistical Computing, Vienna, Austria. https://doi.org/10.32614/r.manuals</unstructured_citation>
+          </citation>
+          <citation key="Rabosky:2014">
+            <article_title>BAMM tools: An R package for the analysis of evolutionary dynamics on phylogenetic trees</article_title>
+            <author>Rabosky</author>
+            <journal_title>Methods in Ecology and Evolution</journal_title>
+            <issue>7</issue>
+            <volume>5</volume>
+            <doi>10.1111/2041-210X.12199</doi>
+            <cYear>2014</cYear>
+            <unstructured_citation>Rabosky, D. L., Grundler, M., Anderson, C., Title, P., Shi, J. J., Brown, J. W., Huang, H., &amp; Larson, J. G. (2014). BAMM tools: An R package for the analysis of evolutionary dynamics on phylogenetic trees. Methods in Ecology and Evolution, 5(7), 701–707. https://doi.org/10.1111/2041-210X.12199</unstructured_citation>
+          </citation>
+          <citation key="Rabosky:2021">
+            <article_title>Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data</article_title>
+            <author>Rabosky</author>
+            <journal_title>Nature Communications</journal_title>
+            <issue>1</issue>
+            <volume>12</volume>
+            <doi>10.1038/s41467-021-23307-5</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Rabosky, D. L., &amp; Benson, R. B. (2021). Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data. Nature Communications, 12(1), 2945. https://doi.org/10.1038/s41467-021-23307-5</unstructured_citation>
+          </citation>
+          <citation key="Revell:2024">
+            <article_title>Phytools 2.0: An updated R ecosystem for phylogenetic comparative methods (and other things)</article_title>
+            <author>Revell</author>
+            <journal_title>PeerJ</journal_title>
+            <volume>12</volume>
+            <doi>10.7717/peerj.16505</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Revell, L. J. (2024). Phytools 2.0: An updated R ecosystem for phylogenetic comparative methods (and other things). PeerJ, 12, e16505. https://doi.org/10.7717/peerj.16505</unstructured_citation>
+          </citation>
+          <citation key="Steeman:2009">
+            <article_title>Radiation of extant cetaceans driven by restructuring of the oceans</article_title>
+            <author>Steeman</author>
+            <journal_title>Systematic biology</journal_title>
+            <issue>6</issue>
+            <volume>58</volume>
+            <doi>10.1093/sysbio/syp060</doi>
+            <cYear>2009</cYear>
+            <unstructured_citation>Steeman, M. E., Hebsgaard, M. B., Fordyce, R. E., Ho, S. Y., Rabosky, D. L., Nielsen, R., Rahbek, C., Glenner, H., Sørensen, M. V., &amp; Willerslev, E. (2009). Radiation of extant cetaceans driven by restructuring of the oceans. Systematic Biology, 58(6), 573–585. https://doi.org/10.1093/sysbio/syp060</unstructured_citation>
+          </citation>
+          <citation key="Upham:2019">
+            <article_title>Inferring the mammal tree: Species-level sets of phylogenies for questions in ecology, evolution, and conservation</article_title>
+            <author>Upham</author>
+            <journal_title>PLoS biology</journal_title>
+            <issue>12</issue>
+            <volume>17</volume>
+            <doi>10.1371/journal.pbio.3000494</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Upham, N. S., Esselstyn, J. A., &amp; Jetz, W. (2019). Inferring the mammal tree: Species-level sets of phylogenies for questions in ecology, evolution, and conservation. PLoS Biology, 17(12), e3000494. https://doi.org/10.1371/journal.pbio.3000494</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
