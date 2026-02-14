@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20260214010005-adf0b76b9953cd1aa64c2aa5d1b0b6fe33139364</doi_batch_id>
+    <timestamp>20260214010005</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>02</month>
+          <year>2026</year>
+        </publication_date>
+        <journal_volume>
+          <volume>9</volume>
+        </journal_volume>
+        <issue>96</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Static Equilibrium in Remote Alaska</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Rebecca</given_name>
+            <surname>Napolitano</surname>
+            <affiliations>
+              <institution><institution_name>Architectural Engineering Department, Penn State University</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0872-7098</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Theresa</given_name>
+            <surname>Napolitano</surname>
+            <affiliations>
+              <institution><institution_name>Academy of Our Lady of Mercy Lauralton Hall</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Davin</given_name>
+            <surname>Holen</surname>
+            <affiliations>
+              <institution><institution_name>Coastal Community Resilience Specialist for Alaska Sea Grant at the University of Alaska Fairbanks</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0872-7098</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Megan</given_name>
+            <surname>Mucioki</surname>
+            <affiliations>
+              <institution><institution_name>Department of Agricultural Economics, Sociology, and Education, Population Research Institute, and Social Science Research Institute, Penn State University</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0872-7098</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Heather</given_name>
+            <surname>Randell</surname>
+            <affiliations>
+              <institution><institution_name>Humphrey School of Public Affairs, University of Minnesota-Twin Cities</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0872-7098</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Guanqing</given_name>
+            <surname>Chi</surname>
+            <affiliations>
+              <institution><institution_name>Department of Agricultural Economics, Sociology, and Education, Population Research Institute, and Social Science Research Institute, Penn State University</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-0872-7098</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>02</month>
+          <day>14</day>
+          <year>2026</year>
+        </publication_date>
+        <pages>
+          <first_page>301</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00301</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.18632834</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/301</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00301</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00301</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00301.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="jardim2021history">
+            <article_title>History of science in physics teaching: Possibilities for contextualized teaching?</article_title>
+            <author>Jardim</author>
+            <journal_title>Science &amp; Education</journal_title>
+            <issue>3</issue>
+            <volume>30</volume>
+            <doi>10.1007/S11191-020-00191-X</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Jardim, W. T., Guerra, A., &amp; Schiffer, H. (2021). History of science in physics teaching: Possibilities for contextualized teaching? Science &amp; Education, 30(3), 609–638. https://doi.org/10.1007/S11191-020-00191-X</unstructured_citation>
+          </citation>
+          <citation key="marzan2018contextualized">
+            <article_title>Contextualized modules in physics for junior high school students</article_title>
+            <author>Marzan</author>
+            <journal_title>The Vector: International Journal of Emerging Science, Technology and Management (IJESTM)</journal_title>
+            <issue>1</issue>
+            <volume>27</volume>
+            <doi>10.69566/ijestm.v27i1.37</doi>
+            <cYear>2018</cYear>
+            <unstructured_citation>Marzan, J.-N. T. (2018). Contextualized modules in physics for junior high school students. The Vector: International Journal of Emerging Science, Technology and Management (IJESTM), 27(1). https://doi.org/10.69566/ijestm.v27i1.37</unstructured_citation>
+          </citation>
+          <citation key="cid2005contextualized">
+            <article_title>Contextualized magnetism in secondary school: Learning from the LHC (CERN)</article_title>
+            <author>Cid</author>
+            <journal_title>Physics education</journal_title>
+            <issue>4</issue>
+            <volume>40</volume>
+            <doi>10.1088/0031-9120/40/4/002</doi>
+            <cYear>2005</cYear>
+            <unstructured_citation>Cid, R. (2005). Contextualized magnetism in secondary school: Learning from the LHC (CERN). Physics Education, 40(4), 332. https://doi.org/10.1088/0031-9120/40/4/002</unstructured_citation>
+          </citation>
+          <citation key="cech2014education">
+            <article_title>Education: Embed social awareness in science curricula</article_title>
+            <author>Cech</author>
+            <journal_title>Nature</journal_title>
+            <issue>7484</issue>
+            <volume>505</volume>
+            <doi>10.1038/505477a</doi>
+            <cYear>2014</cYear>
+            <unstructured_citation>Cech, E. A. (2014). Education: Embed social awareness in science curricula. Nature, 505(7484), 477–478. https://doi.org/10.1038/505477a</unstructured_citation>
+          </citation>
+          <citation key="fila2014people">
+            <article_title>The people part of engineering: Engineering for, with, and as people</article_title>
+            <author>Fila</author>
+            <journal_title>2014 IEEE frontiers in education conference (FIE) proceedings</journal_title>
+            <doi>10.1109/FIE.2014.7044106</doi>
+            <cYear>2014</cYear>
+            <unstructured_citation>Fila, N. D., Hess, J., Hira, A., Joslyn, C. H., Tolbert, D., &amp; Hynes, M. M. (2014). The people part of engineering: Engineering for, with, and as people. 2014 IEEE Frontiers in Education Conference (FIE) Proceedings, 1–9. https://doi.org/10.1109/FIE.2014.7044106</unstructured_citation>
+          </citation>
+          <citation key="upegui2022integration">
+            <article_title>Integration of the topic of social justice into high school biology curricula</article_title>
+            <author>Upegui</author>
+            <journal_title>Science &amp; Education</journal_title>
+            <issue>4</issue>
+            <volume>31</volume>
+            <doi>10.1007/s11191-021-00287-y</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Upegui, D., Coiro, J., Battle, S., Kraus, R., &amp; Fastovsky, D. (2022). Integration of the topic of social justice into high school biology curricula. Science &amp; Education, 31(4), 923–941. https://doi.org/10.1007/s11191-021-00287-y</unstructured_citation>
+          </citation>
+          <citation key="us_census_bureau_2010">
+            <article_title>Profile of General Population and Housing Characteristics: 2010 Demographic Profile Data</article_title>
+            <cYear>2010</cYear>
+            <unstructured_citation>Profile of General Population and Housing Characteristics: 2010 Demographic Profile Data. (2010). United States Census Bureau, American FactFinder; [Original URL].</unstructured_citation>
+          </citation>
+          <citation key="veltre1996paugvik">
+            <author>Veltre</author>
+            <journal_title>American Antiquity</journal_title>
+            <issue>3</issue>
+            <volume>61</volume>
+            <doi>10.2307/281872</doi>
+            <cYear>1996</cYear>
+            <unstructured_citation>Veltre, D. W. (1996). American Antiquity, 61(3), 633–633. https://doi.org/10.2307/281872</unstructured_citation>
+          </citation>
+          <citation key="holen2012subsistence">
+            <article_title>Subsistence harvests and uses of wild resources in aleknagik, clark’s point, and manokotak, alaska</article_title>
+            <author>Holen</author>
+            <cYear>2012</cYear>
+            <unstructured_citation>Holen, D., Stariwat, J., Krieg, T. M., &amp; Lemons, T. (2012). Subsistence harvests and uses of wild resources in aleknagik, clark’s point, and manokotak, alaska.</unstructured_citation>
+          </citation>
+          <citation key="alaska_dept_labor_2021">
+            <article_title>Dept of Labor Research &amp; Analysis - State of Alaska</article_title>
+            <cYear>2021</cYear>
+            <unstructured_citation>Dept of Labor Research &amp; Analysis - State of Alaska. (2021). Alaska Department of Labor Research &amp; Analysis. https://live.laborstats.alaska.gov/</unstructured_citation>
+          </citation>
+          <citation key="alaska_dfg_2010">
+            <article_title>Harvests and Uses of Wild Resources in Dillingham, Alaska, 2010</article_title>
+            <cYear>2010</cYear>
+            <unstructured_citation>Harvests and Uses of Wild Resources in Dillingham, Alaska, 2010. (2010). Alaska Department of Fish; Game; Library of Congress, Washington, D.C. 20540 USA. https://lccn.loc.gov/2013433108</unstructured_citation>
+          </citation>
+          <citation key="bendinger_dischner_2021">
+            <article_title>Bridge connects aleknagik</article_title>
+            <author>Dischner</author>
+            <cYear>2021</cYear>
+            <unstructured_citation>Dischner, M., &amp; Bendinger, D. (2021). Bridge connects aleknagik. https://www.kdlg.org/post/bridge-connects-aleknagik</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
