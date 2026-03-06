@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">292</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00292</article-id>
+<title-group>
+<article-title>Teaching Python package development: A structured course
+with learning resources and an instructor’s guide</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-3926-7717</contrib-id>
+<name>
+<surname>Wagner</surname>
+<given-names>Gerit</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0000-5716-5816</contrib-id>
+<name>
+<surname>Thurner</surname>
+<given-names>Laureen</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0009-3168-4859</contrib-id>
+<name>
+<surname>Tang</surname>
+<given-names>Carlo</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0002-5191-1237</contrib-id>
+<name>
+<surname>Ott</surname>
+<given-names>Stella</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Frankfurt School of Finance &amp; Management</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Otto-Friedrich-Universität Bamberg</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-09-10">
+<day>10</day>
+<month>9</month>
+<year>2024</year>
+</pub-date>
+<volume>9</volume>
+<issue>97</issue>
+<fpage>292</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>Packages and libraries</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Although there are many open online courses aimed at teaching
+  Python programming, few educational resources focus on the specific
+  skills required for understanding and developing Python packages.
+  Existing materials typically emphasize programming basics, but the
+  development of Python packages, an essential skill for contributing to
+  the open source community requires deeper knowledge of packaging
+  infrastructure, dependency management, development environments, and
+  best coding practices. This gap leaves learners unprepared for the
+  practicalities of structuring packages, managing dependencies,
+  implementing version control, and ensuring code quality.</p>
+  <p>To address this, we present educational resources designed to teach
+  Python package development. Our materials include a course plan,
+  detailed syllabus, slides, and practice notebooks that cover
+  introductory sessions on Git and Python, an initial session on
+  identifying project topics, a session on best practices, and a code
+  review session. Additionally, we provide a detailed playbook for
+  instructors to guide course delivery. In the course project, students
+  develop Python packages that extend an existing open source system
+  through a plugin architecture. This approach allows them to implement
+  a standalone package from scratch while integrating their work into a
+  functioning ecosystem.</p>
+  <p>The course materials were developed as part of the “Open Source
+  Project” offered by the Digital Work Lab at Otto-Friedrich-Universität
+  Bamberg. Informed by iterations and refinements over four semesters,
+  these resources provide a well-structured and engaging learning
+  experience. The
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/digital-work-lab/open-source-project">course
+  repository</ext-link> consists of a landing page, featuring course
+  pages, instructor notes, slides, and practice notebooks. A
+  preconfigured development setup is offered for GitHub Codespaces,
+  ensuring that the required development environment is preinstalled.
+  The course materials are hosted on GitHub and available for reuse and
+  adaptation.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>A broad range of Python learning resources is accessible online,
+  reflecting its prominence as a programming language across industries.
+  Massive Open Online Courses (MOOCs), such as those offered by Coursera
+  and edX, cater to vast audiences with substantial enrollment figures.
+  For instance, Harvard’s CS50’s Introduction to Programming with Python
+  and IBM’s Python for Data Science, AI and Development highlight
+  beginner-friendly content, emphasizing foundational skills like using
+  libraries. These courses are frequently structured around paid
+  certificates and follow conventional formats, making them popular
+  among learners seeking basic programming knowledge or career-oriented
+  credentials. However, these MOOCs rarely delve into more advanced
+  topics like Python package development, leaving a noticeable gap for
+  learners aiming to contribute to the open source ecosystem.</p>
+  <p>In contrast, resources available for teaching Python package
+  development primarily target self-learners. Materials like those
+  offered by
+  <ext-link ext-link-type="uri" xlink:href="https://www.pyopensci.org/">PyOpenSci</ext-link>
+  or the book of Beuzen &amp; Timbers
+  (<xref alt="2020" rid="ref-BeuzenTimbers2020" ref-type="bibr">2020</xref>)
+  provide valuable insights into creating reusable, distributable Python
+  libraries. However, these materials often lack the structured,
+  interactive learning experience offered by formal courses.
+  Consequently, while existing resources equip individual learners with
+  practical tools for package development, they do not cater to a
+  broader audience. Addressing this gap requires tailored educational
+  materials that combine accessibility with the depth necessary to teach
+  Python package development.</p>
+  <boxed-text id="tblU003Aoverview_courses">
+    <table-wrap>
+      <caption>
+        <p>Overview of selected Python courses </p>
+      </caption>
+      <table>
+        <thead>
+          <tr>
+            <th align="left"><bold>Course title (provider)</bold></th>
+            <th align="left"><bold>Target</bold></th>
+            <th align="left"><bold>Duration</bold></th>
+            <th align="right"><bold>Enrollment</bold></th>
+            <th align="left"><bold>Libraries</bold></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="left">Python for Data Science, AI and Development
+            (IBM, Coursera)</td>
+            <td align="left">Beginner</td>
+            <td align="left">25h</td>
+            <td align="right">37,000</td>
+            <td align="left">Using libraries</td>
+          </tr>
+          <tr>
+            <td align="left">Python for Everybody Specialization
+            (University of Michigan, Coursera)</td>
+            <td align="left">Beginner</td>
+            <td align="left">2 months at 10h/week</td>
+            <td align="right">212,000</td>
+            <td align="left"></td>
+          </tr>
+          <tr>
+            <td align="left">CS50’s Introduction to Programming with
+            Python (Harvard University, edX)</td>
+            <td align="left">Beginner</td>
+            <td align="left">10 weeks</td>
+            <td align="right">1,086,875</td>
+            <td align="left">Using libraries</td>
+          </tr>
+          <tr>
+            <td align="left">Introduction to Computer Science and
+            Programming Using Python (MIT, edX)</td>
+            <td align="left">Beginner</td>
+            <td align="left">9 weeks</td>
+            <td align="right">1,718,898</td>
+            <td align="left"></td>
+          </tr>
+          <tr>
+            <td align="left">CS50’s Introduction to Artificial
+            Intelligence with Python (Harvard University, edX)</td>
+            <td align="left">Beginner</td>
+            <td align="left">7 weeks</td>
+            <td align="right">1,132,411</td>
+            <td align="left">Using libraries</td>
+          </tr>
+          <tr>
+            <td align="left">Machine Learning with Python: A Practical
+            Introduction (IBM, edX)</td>
+            <td align="left">Beginner</td>
+            <td align="left">5 weeks</td>
+            <td align="right">178,346</td>
+            <td align="left">Using libraries</td>
+          </tr>
+          <tr>
+            <td align="left">Programming for Everybody: Getting Started
+            with Python (University of Michigan, edX)</td>
+            <td align="left">Beginner</td>
+            <td align="left">7 weeks</td>
+            <td align="right">581,247</td>
+            <td align="left"></td>
+          </tr>
+          <tr>
+            <td align="left">Applied Data Science with Python
+            Specialization (University of Michigan, Coursera)</td>
+            <td align="left">Intermediate</td>
+            <td align="left">4 months at 10h/week</td>
+            <td align="right">26,000</td>
+            <td align="left">Using libraries</td>
+          </tr>
+          <tr>
+            <td align="left">CS50’s Web Programming with Python and
+            JavaScript (Harvard University, edX)</td>
+            <td align="left">Intermediate</td>
+            <td align="left">12 weeks</td>
+            <td align="right">1,482,100</td>
+            <td align="left"></td>
+          </tr>
+        </tbody>
+      </table>
+    </table-wrap>
+  </boxed-text>
+  <p>The overview of selected Python courses in Table 1 illustrates the
+  popularity and scope of beginner-friendly MOOCs, and highlights the
+  gap in resources for advanced Python package development.</p>
+  <p>Generally, Python package development can be helpful for a range of
+  purposes:</p>
+  <list list-type="order">
+    <list-item>
+      <p><bold>Reusability</bold> Writing Python code from scratch is
+      time-consuming and error-prone. Many tasks, especially in fields
+      like data science, web development, and automation, have
+      well-established solutions in existing Python packages. Learning
+      how to develop packages enables students to make existing code
+      available for reuse, and it also develops understanding and skills
+      related to the use of existing packages.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Access to specialized functionality</bold> Considering
+      that the Python core only includes general-purpose built-in
+      functionality, packages are often required to provide specialized
+      functionality. For instance, this includes tasks like machine
+      learning (TensorFlow, Scikit-learn), scientific computing (SciPy),
+      or web development (Flask, Django). Understanding these packages
+      allows students to access to a wide range of tools and resources
+      that extend Python’s functionality for specific purposes.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Dependency management</bold> Python packages often rely
+      on external libraries that are updated over time to introduce new
+      features or address security vulnerabilities. Managing these
+      dependencies effectively is an important skill, as different
+      packages may require specific versions of the same library,
+      leading to potential conflicts. Tools like pip and virtual
+      environments provide mechanisms for isolating dependencies, but
+      ensuring stability and reproducibility requires a more
+      comprehensive approach. One element are cross-platform and
+      cross-Python-version testing strategies to verify that a Python
+      package functions consistently across different environments.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Version control, collaborative development, and open
+      source contribution</bold> Version control systems, such as Git,
+      are used to manage changes in Python package development, allowing
+      developers to track modifications, revert to previous states, and
+      maintain a clear project history. Git also supports collaborative
+      development by enabling multiple contributors to work on the same
+      codebase while managing conflicts and integrating changes.
+      Platforms such as GitHub or GitLab facilitate these workflows
+      through practices like pull requests, code reviews, and issue
+      tracking. By participating in such environments, students gain
+      experience contributing to shared projects and engaging in open
+      source communities, where their work can be reused, improved, and
+      extended by others. Ideally, this exposure may foster an
+      appreciation for collaborative coding and emphasizes the
+      importance of building packages that are maintainable, accessible,
+      and aligned with community standards.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Scalability and maintainability of projects</bold> As a
+      project grows in complexity, managing code becomes difficult
+      without proper structure. Packages help modularize code,
+      separating it into manageable units, and using continuous
+      integration tools to maintain code quality. Understanding package
+      development ensures that code is scalable and maintainable. This
+      is essential when building large-scale applications where
+      different parts of the software can be independently developed,
+      tested, and maintained.</p>
+    </list-item>
+  </list>
+  <p>Our target audience consists of Bachelor’s students with
+  foundational programming skills.</p>
+</sec>
+<sec id="learning-objectives-and-outline">
+  <title>Learning objectives and outline</title>
+  <p>The specific learning objectives for the capstone project are:</p>
+  <list list-type="order">
+    <list-item>
+      <p><bold>Understand the structure and distribution of Python
+      packages</bold>
+      Students will learn how to design, organize, and structure a
+      Python package according to best practices, including creating
+      modular code, setting up essential files (e.g.,
+      <monospace>pyproject.toml</monospace>), and distributing the
+      package using PyPI.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Apply version control and manage dependencies</bold>
+      Students will develop skills in managing package dependencies and
+      versioning, using tools like virtualenv and poetry for isolated
+      environments, and ensuring compatibility across various project
+      setups. This includes understanding the role of code quality
+      tools, the importance of semantic versioning, and maintaining
+      stable software releases.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Collaboratively develop a Python package</bold>
+      Students will gain hands-on experience contributing to open source
+      Python projects by collaborating on GitHub, creating pull
+      requests, resolving issues, and following community-driven
+      development standards. They will also learn how to write
+      documentation and test their packages to ensure quality and
+      usability.</p>
+    </list-item>
+  </list>
+  <p>These learning objectives are achieved through the development of
+  small Python packages that extend an existing open source Package
+  through a plugin architecture.</p>
+  <p>Figure 1 provides an overview of the course timeline, showcasing
+  sessions and group work activities that facilitate a step-by-step
+  progression through Python package development concepts. The timeline
+  emphasizes iterative learning, with early sessions focused on
+  foundational skills, followed by group work phases that foster
+  collaboration and practical application. During this time, students
+  are encouraged to iterate between individual coding, group sessions,
+  and hacking sessions with the instructor to discuss current challenges
+  and next steps.</p>
+  <p>In addition, a <italic>Best Practices</italic> session is offered
+  at the beginning of the group work phase. Toward the end of the
+  course, students will open a pull request with their work and
+  participate in a code review session in which they adopt the
+  perspective of a maintainer and evaluate the code of another group.
+  Code improvements are implemented within a week, and student
+  reflections are discussed at the end. When merging the contributions,
+  we include students as contributors of the package.</p>
+  <fig>
+    <caption><p>Course timeline with sessions and group work
+    activities</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="agenda.png" />
+  </fig>
+</sec>
+<sec id="teaching-materials">
+  <title>Teaching materials</title>
+  <p>The delivery of the course is designed to foster active learning
+  through a blend of in-person sessions, individual group work, and
+  interactive hacking sessions, all facilitated by the instructor. This
+  approach emphasizes collaboration and hands-on practice, enabling
+  students to engage deeply with Python package development in a
+  supportive environment. The materials are structured for complex and
+  integrated learning activities, with a strong focus on Git-based
+  collaboration. Students work together on shared repositories,
+  navigating real-world workflows such as branching, merging, and
+  resolving conflicts, which mirror professional development
+  environments. The Git component of the course builds on the work of
+  Wagner &amp; Thurner
+  (<xref alt="2025" rid="ref-WagnerThurner2025" ref-type="bibr">2025</xref>)
+  to ensure a robust foundation in version control while emphasizing
+  practical applications that enhance both technical skills and
+  teamwork.</p>
+  <boxed-text id="tblU003Amaterials">
+    <table-wrap>
+      <caption>
+        <p>Materials </p>
+      </caption>
+      <table>
+        <thead>
+          <tr>
+            <th align="left"><bold>Resource</bold></th>
+            <th align="left"><bold>Description and focus</bold></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="left"><ext-link ext-link-type="uri" xlink:href="https://digital-work-lab.github.io/open-source-project/">Landing
+            page</ext-link></td>
+            <td align="left">Provides an accessible overview of the
+            course, aimed to engage students.</td>
+          </tr>
+          <tr>
+            <td align="left"><ext-link ext-link-type="uri" xlink:href="https://digital-work-lab.github.io/open-source-project/docs/syllabus.html">Syllabus</ext-link></td>
+            <td align="left">Offers a structured, detailed overview of
+            course objectives, content, and pedagogical approach,
+            complementing the landing page with broader course
+            context.</td>
+          </tr>
+          <tr>
+            <td align="left"><ext-link ext-link-type="uri" xlink:href="https://digital-work-lab.github.io/open-source-project/docs/syllabus.html#materials">Slides</ext-link></td>
+            <td align="left">Slides in Markdown (Marp) format.</td>
+          </tr>
+          <tr>
+            <td align="left"><ext-link ext-link-type="uri" xlink:href="https://digital-work-lab.github.io/open-source-project/docs/syllabus.html#materials">Notebooks</ext-link></td>
+            <td align="left">Designed to engage directly with the Python
+            package, using <monospace>git reset</monospace> to access
+            solutions, supporting a smooth, practical learning
+            flow.</td>
+          </tr>
+          <tr>
+            <td align="left"><ext-link ext-link-type="uri" xlink:href="https://digital-work-lab.github.io/open-source-project/docs/teaching_notes.html">Teaching
+            notes</ext-link></td>
+            <td align="left">The teaching notes contain preparation
+            checklists, scheduled mailings, session readers, and a
+            concept.</td>
+          </tr>
+        </tbody>
+      </table>
+    </table-wrap>
+  </boxed-text>
+</sec>
+<sec id="pedagogical-considerations">
+  <title>Pedagogical considerations</title>
+  <p>There are distinct benefits to focusing on the development of
+  Python packages that serve as plugins to a preexisting
+  project<xref ref-type="fn" rid="fn1">1</xref>. It allows students to
+  understand how packages are built from scratch while simultaneously
+  appreciating the features of a fully developed Python package.
+  Developing a plugin requires students to implement the essential
+  elements of a Python package—such as creating a project structure,
+  configuring the <monospace>pyproject.toml</monospace>, and managing
+  dependencies—while integrating the package into an existing project
+  that already provides meaningful functionality. This helps students
+  connect packaging fundamentals with a working application and see how
+  their code interacts with a larger package. At the same time, plugin
+  development introduces architectural concepts that are central to
+  realistic Python packages and modern software ecosystems, including
+  modularity, interfaces, and extensibility. Finally, by extending an
+  existing project, students engage in a realistic development
+  environment that provides a scaffold of best practices related to
+  documentation, version control workflows, and issue discussions. This
+  creates a more authentic development experience than building isolated
+  examples from scratch and increases the likelihood that
+  student-developed extensions could eventually be shared or reused
+  within the ecosystem.</p>
+  <p>Teaching Python package development requires a structured approach
+  that balances simplicity with depth, ensuring students build a solid
+  foundation before progressing to more advanced topics. The course
+  design is informed by key pedagogical principles:</p>
+  <list list-type="order">
+    <list-item>
+      <p><bold>Select and simplify</bold>
+      To reduce cognitive overload, we prioritize simplicity in tools
+      and workflows. For example, we use GitHub Codespaces to
+      standardize setups, eliminating issues related to different
+      operating systems and environment configurations. A focused
+      approach aligns with cognitive load theory
+      (<xref alt="Sweller, 1994" rid="ref-Sweller1988" ref-type="bibr">Sweller,
+      1994</xref>), helping students concentrate on core concepts.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Gradually progress in complexity</bold>
+      Starting with basic Python and Git skills, the material builds
+      incrementally, introducing concepts like dependency management and
+      package distribution after students have developed sufficient
+      familiarity with foundational skills. This approach reduces the
+      risk of overwhelming learners
+      (<xref alt="Anderson et al., 2001" rid="ref-Anderson2001" ref-type="bibr">Anderson
+      et al., 2001</xref>).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Learn interactively and in groups</bold>
+      Interactive and collaborative learning plays a crucial role in
+      student engagement and knowledge retention
+      (<xref alt="Guzdial, 2001" rid="ref-Guzdial1998" ref-type="bibr">Guzdial,
+      2001</xref>). The course incorporates live coding sessions, and
+      group-based exercises to make practices as accessible as possible
+      and encourage active participation
+      (<xref alt="Vial &amp; Negoita, 2018" rid="ref-VialNegoita2018" ref-type="bibr">Vial
+      &amp; Negoita, 2018</xref>). We build on the principles of active
+      learning to promote deeper understanding through hands-on practice
+      and peer collaboration. In particular, group problem-solving can
+      foster a collaborative environment where learners can exchange
+      ideas, learn from one another, and build confidence in their
+      coding skills
+      (<xref alt="Freeman et al., 2014" rid="ref-Freeman2014" ref-type="bibr">Freeman
+      et al., 2014</xref>).</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="development-environment">
+  <title>Development environment</title>
+  <p>Our recommended setup for Python package development is GitHub
+  Codespaces, a cloud-based development solution featuring a graphical
+  interface of VisualStudio Code as well as a full Python environment
+  with preinstalled dependencies and
+  configuration<xref ref-type="fn" rid="fn2">2</xref>. With Codespaces,
+  students can start their work directly from a browser, where all
+  necessary dependencies are automatically configured. GitHub Codespaces
+  offers several key advantages for Python package development.
+  Offloading all computational tasks to remote servers eliminates the
+  performance issues that often arise when running development
+  environments on local machines. Additionally, the environment is fully
+  standardized, meaning every student works with the same configuration,
+  reducing the variability and potential issues seen in local setups.
+  The Codespaces startup scripts effectively allow us to set up the
+  development environment automatically and without user interaction.
+  This approach not only saves time but also mirrors the benefits
+  described by Malan
+  (<xref alt="2024" rid="ref-Malan2024" ref-type="bibr">2024</xref>),
+  where containerization minimized technical challenges and enhanced the
+  learning experience.</p>
+  <p>For students who prefer a local development setup, we also offer
+  options like Windows Subsystem for Linux (WSL) for Windows users,
+  ensuring they can work with a Linux-like environment while still on
+  their native operating system. This provides flexibility while
+  maintaining the core benefits of a standardized development
+  environment. By enabling students to work in a consistent environment
+  regardless of their operating system, we ensure that everyone has
+  access to the same tools, configurations, and workflows. It also
+  ensures equal opportunities, regardless of students’ choice of
+  operating system and enables them to collaborate effectively without
+  technical barriers.</p>
+</sec>
+<sec id="reuse-and-modification-of-materials">
+  <title>Reuse and modification of materials</title>
+  <p>The materials provided in this course are designed for easy reuse
+  and modification by other instructors. While the course uses the
+  CoLRev Python package
+  (<xref alt="Wagner &amp; Prester, 2024" rid="ref-WagnerPrester2024" ref-type="bibr">Wagner
+  &amp; Prester, 2024</xref>) as the example context, the materials
+  allow instructors to adapt the content to focus on different Python
+  packages. The learning environment, hosted on GitHub and built with
+  the Just-the-Docs framework, can be cloned, enabling instructors to
+  replicate the entire setup. All instructional content, including
+  slides and practice notebooks, are automatically generated and updated
+  via GitHub Actions, ensuring the materials remain up-to-date.</p>
+</sec>
+<sec id="story-of-the-project">
+  <title>Story of the project</title>
+  <p>This project was developed at Otto-Friedrich-Universität Bamberg,
+  where Gerit offered a team-based course to provide students with
+  hands-on experiences in programming and software development. While
+  other courses in the program had a stronger focus on management
+  topics, this project was designed to help students engage with
+  realistic open source software engineering practices. The goal was to
+  move beyond short, standalone Python scripts, and contribute
+  collaboratively to public, functional, maintainable, and open source
+  software packages.</p>
+  <p>Building on Gerit’s role as lead developer of the CoLRev open
+  source environment, the course adopted CoLRev as a reference project.
+  Students developed small standalone Python packages that extend the
+  system through a plugin architecture, allowing them to reuse existing
+  functionality (e.g., for loading bibliographic data or interacting
+  with APIs) and extend it by implementing new features such as API
+  wrappers or automation tools. This setup provided an authentic context
+  for learning how to organize projects in teams using Git and GitHub,
+  manage dependencies, write tests, and produce corresponding
+  documentation.</p>
+  <p>Over time, the course evolved substantially through iterative
+  refinement based on student feedback. Early cohorts found the
+  technical scope demanding, prompting the integration of more
+  scaffolding, structured guidance, and formative feedback. Since then,
+  the course has grown into a well-established project with high student
+  satisfaction and recommendation rates. Five cohorts of students have
+  contributed to CoLRev and related open source packages, many
+  continuing their engagement through bachelor’s theses on extensions
+  such as the search-query
+  (<xref alt="Eckhardt et al., 2026" rid="ref-EckhardtEtAl2026" ref-type="bibr">Eckhardt
+  et al., 2026</xref>) or BibDedupe
+  (<xref alt="Wagner, 2024" rid="ref-Wagner2024" ref-type="bibr">Wagner,
+  2024</xref>) packages.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Anderson2001">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Anderson</surname><given-names>Lorin W</given-names></name>
+        <name><surname>Krathwohl</surname><given-names>David R</given-names></name>
+        <name><surname>Airasian</surname><given-names>Peter W</given-names></name>
+        <name><surname>Cruikshank</surname><given-names>Kathleen A</given-names></name>
+        <name><surname>Mayer</surname><given-names>Richard E</given-names></name>
+        <name><surname>Pintrich</surname><given-names>Paul R</given-names></name>
+        <name><surname>Raths</surname><given-names>James</given-names></name>
+        <name><surname>Wittrock</surname><given-names>Merlin C</given-names></name>
+      </person-group>
+      <source>A taxonomy for learning, teaching, and assessing: A revision of bloom’s taxonomy of educational objectives, complete edition</source>
+      <publisher-name>Longman Publishing Group</publisher-name>
+      <year iso-8601-date="2001">2001</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-Freeman2014">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Freeman</surname><given-names>Scott</given-names></name>
+        <name><surname>Eddy</surname><given-names>Sarah L.</given-names></name>
+        <name><surname>McDonough</surname><given-names>Miles</given-names></name>
+        <name><surname>Smith</surname><given-names>Michelle K.</given-names></name>
+        <name><surname>Okoroafor</surname><given-names>Nnadozie</given-names></name>
+        <name><surname>Jordt</surname><given-names>Hannah</given-names></name>
+        <name><surname>Wenderoth</surname><given-names>Mary Pat</given-names></name>
+      </person-group>
+      <article-title>Active learning increases student performance in science, engineering, and mathematics</article-title>
+      <source>Proceedings of the National Academy of Sciences</source>
+      <publisher-name>National Academy of Sciences</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <volume>111</volume>
+      <issue>23</issue>
+      <pub-id pub-id-type="doi">10.1073/PNAS.1319030111</pub-id>
+      <fpage>8410</fpage>
+      <lpage>8415</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Guzdial1998">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Guzdial</surname><given-names>Mark</given-names></name>
+      </person-group>
+      <article-title>Use of collaborative multimedia in computer science classes</article-title>
+      <source>ACM SIGCSE Bulletin</source>
+      <publisher-name>ACM</publisher-name>
+      <year iso-8601-date="2001">2001</year>
+      <volume>33</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1145/507758.377452</pub-id>
+      <fpage>17</fpage>
+      <lpage>20</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Malan2024">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Malan</surname><given-names>David J</given-names></name>
+      </person-group>
+      <article-title>Containerizing CS50: Standardizing students’ programming environments</article-title>
+      <source>Proceedings of the 2024 on innovation and technology in computer science education v. 1</source>
+      <year iso-8601-date="2024">2024</year>
+      <pub-id pub-id-type="doi">10.1145/3649217.3653567</pub-id>
+      <fpage>534</fpage>
+      <lpage>540</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Sweller1988">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sweller</surname><given-names>John</given-names></name>
+      </person-group>
+      <article-title>Cognitive load theory, learning difficulty, and instructional design</article-title>
+      <source>Learning and Instruction</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="1994">1994</year>
+      <volume>4</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1016/0959-4752(94)90003-5</pub-id>
+      <fpage>295</fpage>
+      <lpage>312</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-VialNegoita2018">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Vial</surname><given-names>Gregory</given-names></name>
+        <name><surname>Negoita</surname><given-names>Bogdan</given-names></name>
+      </person-group>
+      <article-title>Teaching programming to non-programmers - the case of Python and Jupyter Notebooks</article-title>
+      <source>Proceedings of the international conference on information systems</source>
+      <year iso-8601-date="2018">2018</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-WagnerPrester2024">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Wagner</surname><given-names>Gerit</given-names></name>
+        <name><surname>Prester</surname><given-names>Julian</given-names></name>
+      </person-group>
+      <article-title>CoLRev: An open-source environment for collaborative reviews</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <uri>https://github.com/CoLRev-Environment/colrev</uri>
+      <pub-id pub-id-type="doi">10.5281/ZENODO.11668338</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-WagnerThurner2025">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wagner</surname><given-names>Gerit</given-names></name>
+        <name><surname>Thurner</surname><given-names>Laureen</given-names></name>
+      </person-group>
+      <article-title>Teaching tip rethinking how we teach Git: Pedagogical recommendations and practical strategies for the information systems curriculum</article-title>
+      <source>Journal of Information Systems Education</source>
+      <year iso-8601-date="2025">2025</year>
+      <volume>36</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.62273/BTKM5634</pub-id>
+      <fpage>1</fpage>
+      <lpage>12</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-BeuzenTimbers2020">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Beuzen</surname><given-names>Tomas</given-names></name>
+        <name><surname>Timbers</surname><given-names>Tiffany</given-names></name>
+      </person-group>
+      <source>Python packages</source>
+      <publisher-name>Chapman &amp; Hall/CRC The Python Series</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <edition>1st</edition>
+      <isbn>9781138332250</isbn>
+      <uri>https://py-pkgs.org/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-EckhardtEtAl2026">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Eckhardt</surname><given-names>Peter</given-names></name>
+        <name><surname>Ernst</surname><given-names>Katharina Maria</given-names></name>
+        <name><surname>Fleischmann</surname><given-names>Thomas</given-names></name>
+        <name><surname>Geßler</surname><given-names>Anna</given-names></name>
+        <name><surname>Schnickmann</surname><given-names>Karl</given-names></name>
+        <name><surname>Thurner</surname><given-names>Laureen</given-names></name>
+        <name><surname>Wagner</surname><given-names>Gerit</given-names></name>
+      </person-group>
+      <article-title>search-query: An open source python library for academic search queries</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2026">2026</year>
+      <volume>11</volume>
+      <issue>118</issue>
+      <pub-id pub-id-type="doi">10.21105/JOSS.08775</pub-id>
+      <fpage>8775</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Wagner2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wagner</surname><given-names>Gerit</given-names></name>
+      </person-group>
+      <article-title>BibDedupe: An open-source python library for deduplication of bibliographic records</article-title>
+      <source>Journal of Open Source Software</source>
+      <year iso-8601-date="2024">2024</year>
+      <volume>9</volume>
+      <issue>97</issue>
+      <uri>https://github.com/CoLRev-Environment/bib-dedupe</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.06318</pub-id>
+      <fpage>6318</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+<fn-group>
+  <fn id="fn1">
+    <label>1</label><p>We thank
+    <ext-link ext-link-type="uri" xlink:href="https://github.com/NickleDave">@NickleDave</ext-link>
+    for raising this point during the review process and encouraging us
+    to reflect more carefully on the benefits of this particular
+    setting.</p>
+  </fn>
+  <fn id="fn2">
+    <label>2</label><p>Local VirtualBox images were too slow on most
+    student machines, and resources for self-hosted virtual machines
+    were not available.</p>
+  </fn>
+</fn-group>
+</back>
+</article>
