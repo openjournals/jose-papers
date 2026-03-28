@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20260328194208-ea73a57c02aeeb7998cf569b6e200bcf19035b3f</doi_batch_id>
+    <timestamp>20260328194208</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>03</month>
+          <year>2026</year>
+        </publication_date>
+        <journal_volume>
+          <volume>9</volume>
+        </journal_volume>
+        <issue>97</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Teaching Python package development: A structured course with learning resources and an instructor’s guide</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Gerit</given_name>
+            <surname>Wagner</surname>
+            <affiliations>
+              <institution><institution_name>Frankfurt School of Finance &amp; Management</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-3926-7717</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Laureen</given_name>
+            <surname>Thurner</surname>
+            <affiliations>
+              <institution><institution_name>Otto-Friedrich-Universität Bamberg</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0000-5716-5816</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Carlo</given_name>
+            <surname>Tang</surname>
+            <affiliations>
+              <institution><institution_name>Otto-Friedrich-Universität Bamberg</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0009-3168-4859</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Stella</given_name>
+            <surname>Ott</surname>
+            <affiliations>
+              <institution><institution_name>Otto-Friedrich-Universität Bamberg</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0009-0002-5191-1237</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>03</month>
+          <day>28</day>
+          <year>2026</year>
+        </publication_date>
+        <pages>
+          <first_page>292</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00292</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.19225336</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/292</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00292</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00292</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00292.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="Anderson2001">
+            <volume_title>A taxonomy for learning, teaching, and assessing: A revision of Bloom’s taxonomy of educational objectives, complete edition</volume_title>
+            <author>Anderson</author>
+            <cYear>2001</cYear>
+            <unstructured_citation>Anderson, L. W., Krathwohl, D. R., Airasian, P. W., Cruikshank, K. A., Mayer, R. E., Pintrich, P. R., Raths, J., &amp; Wittrock, M. C. (2001). A taxonomy for learning, teaching, and assessing: A revision of Bloom’s taxonomy of educational objectives, complete edition. Longman Publishing Group.</unstructured_citation>
+          </citation>
+          <citation key="Freeman2014">
+            <article_title>Active learning increases student performance in science, engineering, and mathematics</article_title>
+            <author>Freeman</author>
+            <journal_title>Proceedings of the National Academy of Sciences</journal_title>
+            <issue>23</issue>
+            <volume>111</volume>
+            <doi>10.1073/PNAS.1319030111</doi>
+            <cYear>2014</cYear>
+            <unstructured_citation>Freeman, S., Eddy, S. L., McDonough, M., Smith, M. K., Okoroafor, N., Jordt, H., &amp; Wenderoth, M. P. (2014). Active learning increases student performance in science, engineering, and mathematics. Proceedings of the National Academy of Sciences, 111(23), 8410–8415. https://doi.org/10.1073/PNAS.1319030111</unstructured_citation>
+          </citation>
+          <citation key="Guzdial1998">
+            <article_title>Use of collaborative multimedia in computer science classes</article_title>
+            <author>Guzdial</author>
+            <journal_title>ACM SIGCSE Bulletin</journal_title>
+            <issue>3</issue>
+            <volume>33</volume>
+            <doi>10.1145/507758.377452</doi>
+            <cYear>2001</cYear>
+            <unstructured_citation>Guzdial, M. (2001). Use of collaborative multimedia in computer science classes. ACM SIGCSE Bulletin, 33(3), 17–20. https://doi.org/10.1145/507758.377452</unstructured_citation>
+          </citation>
+          <citation key="Malan2024">
+            <article_title>Containerizing CS50: Standardizing students’ programming environments</article_title>
+            <author>Malan</author>
+            <journal_title>Proceedings of the 2024 on Innovation and Technology in Computer Science Education V. 1</journal_title>
+            <doi>10.1145/3649217.3653567</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Malan, D. J. (2024). Containerizing CS50: Standardizing students’ programming environments. In Proceedings of the 2024 on Innovation and Technology in Computer Science Education V. 1 (pp. 534–540). https://doi.org/10.1145/3649217.3653567</unstructured_citation>
+          </citation>
+          <citation key="Sweller1988">
+            <article_title>Cognitive load theory, learning difficulty, and instructional design</article_title>
+            <author>Sweller</author>
+            <journal_title>Learning and Instruction</journal_title>
+            <issue>4</issue>
+            <volume>4</volume>
+            <doi>10.1016/0959-4752(94)90003-5</doi>
+            <cYear>1994</cYear>
+            <unstructured_citation>Sweller, J. (1994). Cognitive load theory, learning difficulty, and instructional design. Learning and Instruction, 4(4), 295–312. https://doi.org/10.1016/0959-4752(94)90003-5</unstructured_citation>
+          </citation>
+          <citation key="VialNegoita2018">
+            <article_title>Teaching programming to non-programmers - the case of Python and Jupyter Notebooks</article_title>
+            <author>Vial</author>
+            <journal_title>Proceedings of the international conference on information systems</journal_title>
+            <cYear>2018</cYear>
+            <unstructured_citation>Vial, G., &amp; Negoita, B. (2018). Teaching programming to non-programmers - the case of Python and Jupyter Notebooks. Proceedings of the International Conference on Information Systems.</unstructured_citation>
+          </citation>
+          <citation key="WagnerPrester2024">
+            <article_title>CoLRev: An open-source environment for collaborative reviews</article_title>
+            <author>Wagner</author>
+            <doi>10.5281/ZENODO.11668338</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Wagner, G., &amp; Prester, J. (2024). CoLRev: An open-source environment for collaborative reviews (Version 0.16.2). https://doi.org/10.5281/ZENODO.11668338</unstructured_citation>
+          </citation>
+          <citation key="WagnerThurner2025">
+            <article_title>Teaching tip rethinking how we teach Git: Pedagogical recommendations and practical strategies for the information systems curriculum</article_title>
+            <author>Wagner</author>
+            <journal_title>Journal of Information Systems Education</journal_title>
+            <issue>1</issue>
+            <volume>36</volume>
+            <doi>10.62273/BTKM5634</doi>
+            <cYear>2025</cYear>
+            <unstructured_citation>Wagner, G., &amp; Thurner, L. (2025). Teaching tip rethinking how we teach Git: Pedagogical recommendations and practical strategies for the information systems curriculum. Journal of Information Systems Education, 36(1), 1–12. https://doi.org/10.62273/BTKM5634</unstructured_citation>
+          </citation>
+          <citation key="BeuzenTimbers2020">
+            <volume_title>Python packages</volume_title>
+            <author>Beuzen</author>
+            <isbn>9781138332250</isbn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Beuzen, T., &amp; Timbers, T. (2020). Python packages (1st ed.). Chapman &amp; Hall/CRC The Python Series. ISBN: 9781138332250</unstructured_citation>
+          </citation>
+          <citation key="EckhardtEtAl2026">
+            <article_title>search-query: An open source Python library for academic search queries</article_title>
+            <author>Eckhardt</author>
+            <journal_title>Journal of Open Source Software</journal_title>
+            <issue>118</issue>
+            <volume>11</volume>
+            <doi>10.21105/JOSS.08775</doi>
+            <cYear>2026</cYear>
+            <unstructured_citation>Eckhardt, P., Ernst, K. M., Fleischmann, T., Geßler, A., Schnickmann, K., Thurner, L., &amp; Wagner, G. (2026). search-query: An open source Python library for academic search queries. Journal of Open Source Software, 11(118), 8775. https://doi.org/10.21105/JOSS.08775</unstructured_citation>
+          </citation>
+          <citation key="Wagner2024">
+            <article_title>BibDedupe: An open-source Python library for deduplication of bibliographic records</article_title>
+            <author>Wagner</author>
+            <journal_title>Journal of Open Source Software</journal_title>
+            <issue>97</issue>
+            <volume>9</volume>
+            <doi>10.21105/joss.06318</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Wagner, G. (2024). BibDedupe: An open-source Python library for deduplication of bibliographic records. Journal of Open Source Software, 9(97), 6318. https://doi.org/10.21105/joss.06318</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
