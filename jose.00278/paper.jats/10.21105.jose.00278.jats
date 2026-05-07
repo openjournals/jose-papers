@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">278</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00278</article-id>
+<title-group>
+<article-title>DIVAnd training: producing ocean climatologies with
+Jupyter notebooks</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-0265-1021</contrib-id>
+<name>
+<surname>Troupin</surname>
+<given-names>Charles</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-2952-5997</contrib-id>
+<name>
+<surname>Barth</surname>
+<given-names>Alexander</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-7045-2470</contrib-id>
+<name>
+<surname>Beckers</surname>
+<given-names>Jean-Marie</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>GHER, Freshwater and Oceanic sCiences Unit of reSearch,
+University of Liège, Belgium</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-01-13">
+<day>13</day>
+<month>1</month>
+<year>2025</year>
+</pub-date>
+<volume>9</volume>
+<issue>99</issue>
+<fpage>278</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>oceanography</kwd>
+<kwd>data analysis</kwd>
+<kwd>spatial interpolation</kwd>
+<kwd>Julia</kwd>
+<kwd>Jupyter</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>The DIVA-workshops project consists of a set of Jupyter notebooks,
+  focused on the creation of gridded fields from in-situ observations
+  using <monospace>DIVAnd</monospace>. <monospace>DIVAnd</monospace> is
+  a software tool, written in Julia, which performs interpolation in an
+  arbitrary number of dimensions.</p>
+  <p>The notebooks address the different stages of oceanographic
+  climatology generation: data reading and preparation, extraction of
+  the topography and creation of a land-sea mask, setting of the spatial
+  resolution and the time periods, estimation of the analysis
+  parameters, analysis and creation of the metadata.</p>
+  <p>The target audience is broad as it includes: data analysts, who
+  wish to create climatologies; physical oceanographers, who want to
+  grid their observations for visualisation and potentially for quality
+  control, and programmers, who want to include DIVAnd interpolation in
+  a larger workflow involving other processing steps.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>The gridding of in-situ measurements is a common task in
+  oceanography. It consists of the generation of one or several fields
+  on a regular grid, using the information contained in a set of
+  observations, generally sparsely distributed. The combination of such
+  fields, produced at different depths and for different time periods,
+  is often referred to as a climatology.</p>
+  <p>This gridding problem is not new and many methods have been
+  developed in recent decades. One of the most widespread methods is
+  Optimal Interpolation
+  (<xref alt="Bretherton et al., 1976" rid="ref-BrethertonU003A1976" ref-type="bibr">Bretherton
+  et al., 1976</xref>;
+  <xref alt="Gandin, 1966" rid="ref-gandinU003A1965" ref-type="bibr">Gandin,
+  1966</xref>), where analytical functions are used to specify a first
+  guess error covariance. Since then, the method has been adapted and
+  improved, yet it cannot easily address the decoupling of water masses
+  separated by a physical obstacle.</p>
+  <p>DIVA (Data-Interpolating Variational Analysis; Troupin et al.
+  (<xref alt="2012" rid="ref-troupinU003A2012" ref-type="bibr">2012</xref>))
+  is comparable to optimal interpolation, but it takes coastlines,
+  sub-basins and advection into account. Mathematically, the method is
+  based on the minimization of a cost function which includes different
+  constraints, typically the closeness to observations and the
+  regularity (or smoothness) of the gridded field. DIVA, written in
+  Fortran, was based on a finite-element solver and limited to
+  two-dimensional applications. Climatologies were obtained by
+  assembling 2D fields produced at specified depths and time
+  periods.</p>
+  <fig>
+    <caption><p>Example of salinity measurements and the corresponding
+    analysed field.</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="salinity_gridded.png" />
+  </fig>
+  <p><monospace>DIVAnd</monospace> (DIVA in n dimensions) is based on
+  the same mathematical idea (the minimization of a cost function) but
+  extended to an arbitrary number of dimensions, typically longitude,
+  latitude, depth and time
+  (<xref alt="Barth et al., 2014" rid="ref-barthU003A2014" ref-type="bibr">Barth
+  et al., 2014</xref>). The code was first rewritten so that it could
+  run on MATLAB and GNU Octave. Its performance was further improved
+  thanks to the transition to the Julia language
+  (<xref alt="Bezanson et al., 2017" rid="ref-bezansonU003A2017" ref-type="bibr">Bezanson
+  et al., 2017</xref>).</p>
+  <p>Without reviewing the full development history of the gridding and
+  interpolation algorithms, we highlight two specific aspects that are
+  adequately addressed by DIVAnd (and DIVA) with respect to existing
+  techniques:
+  1. The management of large datasets: the computation time is almost
+  independent of the number of observations, making it possible to
+  perform gridding with millions of data points.
+  2. The consideration of natural boundaries (coastlines, bottom
+  topography) during the interpolation: the artificial mixing of water
+  masses that are geographically close but separated by a physical
+  obstacle is avoided.</p>
+  <p>The
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/gher-uliege/DIVAnd.jl/"><monospace>DIVAnd</monospace></ext-link>
+  code is published on GitHub along with its documentation and examples,
+  and the underlying theory has been published in Barth et al.
+  (<xref alt="2014" rid="ref-barthU003A2014" ref-type="bibr">2014</xref>).
+  However, in order to ensure that users are able to create their own
+  climatologies, with a relatively new programming language, additional
+  teaching resources were necessary. This is the main motivation behind
+  the creation and the maintenance of the
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/gher-uliege/Diva-Workshops">Diva-Workshops</ext-link>
+  repository.</p>
+</sec>
+<sec id="the-divand-learning-module">
+  <title>The DIVAnd learning module</title>
+  <sec id="the-story">
+    <title>The story</title>
+    <p>The first DIVA workshop was organized in Liège, Belgium, in 2006,
+    as part of the European project
+    <ext-link ext-link-type="uri" xlink:href="https://www.seadatanet.org/">Seadatanet</ext-link>
+    (<xref alt="Schaap &amp; Lowry, 2010" rid="ref-SchaapU003A2010" ref-type="bibr">Schaap
+    &amp; Lowry, 2010</xref>). The goal was to teach users how to create
+    climatologies by applying the DIVA (the two-dimensional, Fortran
+    version) on their own dataset. Those training sessions were
+    organized yearly until 2016 and allowed for the creation of regional
+    climatologies, published as part of European initiatives such as
+    SeaDataNet or EMODnet
+    (<xref alt="Martín Míguez et al., 2019" rid="ref-MartinMiguezU003A2019" ref-type="bibr">Martín
+    Míguez et al., 2019</xref>).</p>
+    <p>Taking advantage of the Jupyter interface
+    (<xref alt="Kluyver et al., 2016" rid="ref-kluyverU003A2016" ref-type="bibr">Kluyver
+    et al., 2016</xref>) and the transition to Julia for the new version
+    of DIVAnd, a set of notebooks was created as the primary resource
+    for the user training. The first <monospace>DIVAnd</monospace>
+    workshop took place in April 2018 in Liège. Since then, other
+    training events were organised and the training material is
+    regularly used as the basis for the creation of gridded products for
+    EMODnet Chemistry
+    (<xref alt="Giorgetti et al., 2018" rid="ref-giorgettiU003A2018" ref-type="bibr">Giorgetti
+    et al., 2018</xref>). The choice of the Jupyter notebooks format was
+    motivated by the interactivity and the step-by-step, documented
+    approach.</p>
+    <p>Participant feedback is particularly valuable. It not only guides
+    the development of new functionalities in the
+    <monospace>DIVAnd</monospace> source code, but also the creation of
+    new notebooks describing specific workflows (for instance the
+    consideration of geostrophy) or the use of particular functions (for
+    instance the use of an advection constrain in the
+    interpolation).</p>
+  </sec>
+  <sec id="goal-of-the-module">
+    <title>Goal of the module</title>
+    <p>The goal of the training material module is twofold:
+    1. to provide users with a basic knowledge of Julia, meaning they
+    are not only capable of reading the code presented in the notebooks,
+    but also able install new modules, write basic functions for
+    processing or create basic plots.
+    2. to ensure that users are to able to create their own products
+    (i.e. climatologies) by combining their own datasets with those from
+    other sources (for instance the World Ocean Database) and setting
+    the analysis parameters according to their region of interest.</p>
+    <p>Julia syntax is similar to other widespread languages, for
+    instance MATLAB, yet some peculiarities have to be explained to make
+    sure users can take advantage of its full functionality.</p>
+  </sec>
+  <sec id="instructional-design">
+    <title>Instructional design</title>
+    <p>The notebooks have been organized by sub-folders according to
+    their objectives:
+    1. Introduction: brief introduction to the Julia language and to the
+    Jupyter notebooks, how to deal with netCDF files (reading and
+    writing) and how to generate figures (maps, sections, …).
+    2. Pre-processing: preparation of the input required by
+    <monospace>DIVAnd</monospace> (grid, time periods, bathymetry,
+    observations) and estimation of the main analysis parameters
+    (correlation length and noise-to-signal ratio). Code fragments
+    dealing with various file formats (CSV, netCDF, TIFF, …) are also
+    provided to help users work with the most frequent types of data.
+    3. Analysis: creating of gridded fields with DIVAnd, the influence
+    of the analysis parameters, and interpolation with different
+    coordinate systems.
+    4. Advanced topics: this folder contains less frequently used
+    notebooks, dealing with the generation of density maps, relative
+    correlation length, background fields, and advection
+    constraints.</p>
+    <p>Since the notebooks require input data files (mainly bathymetry
+    and observations) to be executed, we ensure that those files are
+    available from a public file server and can be downloaded locally
+    whenever necessary.</p>
+    <p>Following our experience with users, for the creation of plots,
+    the <monospace>Makie</monospace> module
+    (<xref alt="Danisch &amp; Krumbiegel, 2021" rid="ref-danischU003A2021" ref-type="bibr">Danisch
+    &amp; Krumbiegel, 2021</xref>) (along with
+    <monospace>GeoMakie</monospace> for the maps) was selected to
+    replace <monospace>PyPlot</monospace> along with
+    <monospace>Cartopy</monospace>
+    (<xref alt="Met Office, 2010 - 2015" rid="ref-CartopyU003A2010" ref-type="bibr">Met
+    Office, 2010 - 2015</xref>) for the maps, which is based on the
+    Python <monospace>Matplotlib</monospace> module
+    (<xref alt="Hunter, 2007" rid="ref-hunterU003A2007" ref-type="bibr">Hunter,
+    2007</xref>). Indeed, the import of PyPlot in the notebooks often
+    generated errors on user machines, due to the sensitivity to the
+    operating system and the pre-existing Python installation(s).</p>
+  </sec>
+  <sec id="users-and-applications">
+    <title>Users and applications</title>
+    <p>The user community mainly consists of scientists, data analysts
+    and experts. This diversity implies that the content has to be
+    comprehensive and tailored to ensure users without any prior
+    experience with Julia or Jupyter are able to run and modify the
+    notebooks.</p>
+    <p>Among the applications, we highlight de EMODnet products
+    (<xref alt="Webb et al., 2025" rid="ref-WebbU003A2025" ref-type="bibr">Webb
+    et al., 2025</xref>). Other recent applications include the creation
+    of climatologies and gridded fields for sea surface height
+    (<xref alt="Doglioni et al., 2023" rid="ref-DoglioniU003A2023" ref-type="bibr">Doglioni
+    et al., 2023</xref>) temperature and salinity
+    (<xref alt="Shahzadi et al., 2021" rid="ref-ShahzadiU003A2021" ref-type="bibr">Shahzadi
+    et al., 2021</xref>) and nutrients
+    (<xref alt="Belgacem et al., 2021" rid="ref-BelgacemU003A2021" ref-type="bibr">Belgacem
+    et al., 2021</xref>).</p>
+  </sec>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We acknowledge contributions from European Union’s Horizon 2020
+  SeaDataCloud project (grant agreement No. 730960), from Horizon Europe
+  research and innovation FAIR-EASE project (grant agreement
+  No. 101058785, DOI:
+  <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3030/101058785">10.3030/101058785</ext-link>),
+  Blue-Cloud 2026 (grant agreement No. 101094227, DOI:
+  <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3030/101094227">10.3030/101094227</ext-link>),
+  IRISCC (grant agreement No. 101131261, DOI:
+  <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3030/101131261">10.3030/101131261</ext-link>)
+  and AQUARIUS (grant agreement No. 101130915, DOI:
+  <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3030/101130915">10.3030/101130915</ext-link>).</p>
+  <p>We wish to acknowledge the participants of the different offerings
+  of the DIVA workshops, as their feedback was essential to build and
+  improve the content of the training sessions.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-barthU003A2014">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Barth</surname><given-names>A.</given-names></name>
+        <name><surname>Beckers</surname><given-names>J.-M.</given-names></name>
+        <name><surname>Troupin</surname><given-names>C.</given-names></name>
+        <name><surname>Alvera-Azcárate</surname><given-names>A.</given-names></name>
+        <name><surname>Vandenbulcke</surname><given-names>L.</given-names></name>
+      </person-group>
+      <article-title>Divand-1.0: N-dimensional variational data analysis for ocean observations</article-title>
+      <source>Geoscientific Model Development</source>
+      <year iso-8601-date="2014">2014</year>
+      <volume>7</volume>
+      <issue>1</issue>
+      <uri>https://gmd.copernicus.org/articles/7/225/2014/</uri>
+      <pub-id pub-id-type="doi">10.5194/gmd-7-225-2014</pub-id>
+      <fpage>225</fpage>
+      <lpage>241</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-troupinU003A2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Troupin</surname><given-names>C.</given-names></name>
+        <name><surname>Barth</surname><given-names>A.</given-names></name>
+        <name><surname>Sirjacobs</surname><given-names>D.</given-names></name>
+        <name><surname>Ouberdous</surname><given-names>M.</given-names></name>
+        <name><surname>Brankart</surname><given-names>J.-M.</given-names></name>
+        <name><surname>Brasseur</surname><given-names>P.</given-names></name>
+        <name><surname>Rixen</surname><given-names>M.</given-names></name>
+        <name><surname>Alvera-Azcárate</surname><given-names>A.</given-names></name>
+        <name><surname>Belounis</surname><given-names>M.</given-names></name>
+        <name><surname>Capet</surname><given-names>A.</given-names></name>
+        <name><surname>Lenartz</surname><given-names>F.</given-names></name>
+        <name><surname>Toussaint</surname><given-names>M.-E.</given-names></name>
+        <name><surname>Beckers</surname><given-names>J.-M.</given-names></name>
+      </person-group>
+      <article-title>Generation of analysis and consistent error fields using the data interpolating variational analysis (DIVA)</article-title>
+      <source>Ocean Modelling</source>
+      <year iso-8601-date="2012">2012</year>
+      <volume>52-53</volume>
+      <issn>1463-5003</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S1463500312000790</uri>
+      <pub-id pub-id-type="doi">10.1016/j.ocemod.2012.05.002</pub-id>
+      <fpage>90</fpage>
+      <lpage>101</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-kluyverU003A2016">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Kluyver</surname><given-names>Thomas</given-names></name>
+        <name><surname>Ragan-Kelley</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Pérez</surname><given-names>Fernando</given-names></name>
+        <name><surname>Granger</surname><given-names>Brian</given-names></name>
+        <name><surname>Bussonnier</surname><given-names>Matthias</given-names></name>
+        <name><surname>Frederic</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Kelley</surname><given-names>Kyle</given-names></name>
+        <name><surname>Hamrick</surname><given-names>Jessica</given-names></name>
+        <name><surname>Grout</surname><given-names>Jason</given-names></name>
+        <name><surname>Corlay</surname><given-names>Sylvain</given-names></name>
+        <name><surname>Ivanov</surname><given-names>Paul</given-names></name>
+        <name><surname>Avila</surname><given-names>Damián</given-names></name>
+        <name><surname>Abdalla</surname><given-names>Safia</given-names></name>
+        <name><surname>Willing</surname><given-names>Carol</given-names></name>
+        <name><surname>team</surname><given-names>Jupyter development</given-names></name>
+      </person-group>
+      <article-title>Jupyter notebooks - a publishing format for reproducible computational workflows</article-title>
+      <source>Positioning and power in academic publishing: Players, agents and agendas</source>
+      <person-group person-group-type="editor">
+        <name><surname>Loizides</surname><given-names>Fernando</given-names></name>
+        <name><surname>Scmidt</surname><given-names>Birgit</given-names></name>
+      </person-group>
+      <publisher-name>IOS Press</publisher-name>
+      <publisher-loc>Netherlands</publisher-loc>
+      <year iso-8601-date="2016">2016</year>
+      <uri>https://eprints.soton.ac.uk/403913/</uri>
+      <pub-id pub-id-type="doi">10.3233/978-1-61499-649-1-87</pub-id>
+      <fpage>87</fpage>
+      <lpage>90</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-bezansonU003A2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bezanson</surname><given-names>Jeff</given-names></name>
+        <name><surname>Edelman</surname><given-names>Alan</given-names></name>
+        <name><surname>Karpinski</surname><given-names>Stefan</given-names></name>
+        <name><surname>Shah</surname><given-names>Viral B</given-names></name>
+      </person-group>
+      <article-title>Julia: A fresh approach to numerical computing</article-title>
+      <source>SIAM Review</source>
+      <publisher-name>SIAM</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+      <volume>59</volume>
+      <issue>1</issue>
+      <uri>https://epubs.siam.org/doi/10.1137/141000671</uri>
+      <pub-id pub-id-type="doi">10.1137/141000671</pub-id>
+      <fpage>65</fpage>
+      <lpage>98</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-giorgettiU003A2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Giorgetti</surname><given-names>A.</given-names></name>
+        <name><surname>Partescano</surname><given-names>E.</given-names></name>
+        <name><surname>Barth</surname><given-names>A.</given-names></name>
+        <name><surname>Buga</surname><given-names>L.</given-names></name>
+        <name><surname>Gatti</surname><given-names>J.</given-names></name>
+        <name><surname>Giorgi</surname><given-names>G.</given-names></name>
+        <name><surname>Iona</surname><given-names>A.</given-names></name>
+        <name><surname>Lipizer</surname><given-names>M.</given-names></name>
+        <name><surname>Holdsworth</surname><given-names>N.</given-names></name>
+        <name><surname>Larsen</surname><given-names>M. M.</given-names></name>
+        <name><surname>Schaap</surname><given-names>D.</given-names></name>
+        <name><surname>Vinci</surname><given-names>M.</given-names></name>
+        <name><surname>Wenzer</surname><given-names>M.</given-names></name>
+      </person-group>
+      <article-title>EMODnet chemistry spatial data infrastructure for marine observations and related information</article-title>
+      <source>Ocean &amp; Coastal Management</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2018-12">2018</year><month>12</month>
+      <volume>166</volume>
+      <issn>0964-5691</issn>
+      <uri>http://dx.doi.org/10.1016/j.ocecoaman.2018.03.016</uri>
+      <pub-id pub-id-type="doi">10.1016/j.ocecoaman.2018.03.016</pub-id>
+      <fpage>9</fpage>
+      <lpage>17</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-danischU003A2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Danisch</surname><given-names>Simon</given-names></name>
+        <name><surname>Krumbiegel</surname><given-names>Julius</given-names></name>
+      </person-group>
+      <article-title>Makie.jl: Flexible high-performance data visualization for julia</article-title>
+      <source>Journal of Open Source Software</source>
+      <publisher-name>The Open Journal</publisher-name>
+      <year iso-8601-date="2021-09">2021</year><month>09</month>
+      <volume>6</volume>
+      <issue>65</issue>
+      <issn>2475-9066</issn>
+      <uri>http://dx.doi.org/10.21105/joss.03349</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.03349</pub-id>
+      <fpage>3349</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hunterU003A2007">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hunter</surname><given-names>J. D.</given-names></name>
+      </person-group>
+      <article-title>Matplotlib: A 2D graphics environment</article-title>
+      <source>Computing in Science &amp; Engineering</source>
+      <publisher-name>IEEE COMPUTER SOC</publisher-name>
+      <year iso-8601-date="2007">2007</year>
+      <volume>9</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1109/MCSE.2007.55</pub-id>
+      <fpage>90</fpage>
+      <lpage>95</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-CartopyU003A2010">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <string-name>Met Office</string-name>
+      </person-group>
+      <source>Cartopy: A cartographic python library with a matplotlib interface</source>
+      <publisher-loc>Exeter, Devon</publisher-loc>
+      <uri>https://scitools.org.uk/cartopy</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.1182735</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-BelgacemU003A2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Belgacem</surname><given-names>Malek</given-names></name>
+        <name><surname>Schroeder</surname><given-names>Katrin</given-names></name>
+        <name><surname>Barth</surname><given-names>Alexander</given-names></name>
+        <name><surname>Troupin</surname><given-names>Charles</given-names></name>
+        <name><surname>Pavoni</surname><given-names>Bruno</given-names></name>
+        <name><surname>Raimbault</surname><given-names>Patrick</given-names></name>
+        <name><surname>Garcia</surname><given-names>Nicole</given-names></name>
+        <name><surname>Borghini</surname><given-names>Mireno</given-names></name>
+        <name><surname>Chiggiato</surname><given-names>Jacopo</given-names></name>
+      </person-group>
+      <article-title>Climatological distribution of dissolved inorganic nutrients in the western Mediterranean Sea (1981–2017)</article-title>
+      <source>Earth System Science Data</source>
+      <publisher-name>Copernicus GmbH</publisher-name>
+      <year iso-8601-date="2021-12">2021</year><month>12</month>
+      <volume>13</volume>
+      <issue>12</issue>
+      <issn>1866-3516</issn>
+      <uri>http://dx.doi.org/10.5194/essd-13-5915-2021</uri>
+      <pub-id pub-id-type="doi">10.5194/essd-13-5915-2021</pub-id>
+      <fpage>5915</fpage>
+      <lpage>5949</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ShahzadiU003A2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Shahzadi</surname><given-names>Kanwal</given-names></name>
+        <name><surname>Pinardi</surname><given-names>Nadia</given-names></name>
+        <name><surname>Barth</surname><given-names>Alexander</given-names></name>
+        <name><surname>Troupin</surname><given-names>Charles</given-names></name>
+        <name><surname>Lyubartsev</surname><given-names>Vladyslav</given-names></name>
+        <name><surname>Simoncelli</surname><given-names>Simona</given-names></name>
+      </person-group>
+      <article-title>A new global ocean climatology</article-title>
+      <source>Frontiers in Environmental Science</source>
+      <publisher-name>Frontiers Media SA</publisher-name>
+      <year iso-8601-date="2021-08">2021</year><month>08</month>
+      <volume>9</volume>
+      <issn>2296-665X</issn>
+      <uri>http://dx.doi.org/10.3389/fenvs.2021.711363</uri>
+      <pub-id pub-id-type="doi">10.3389/fenvs.2021.711363</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-DoglioniU003A2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Doglioni</surname><given-names>Francesca</given-names></name>
+        <name><surname>Ricker</surname><given-names>Robert</given-names></name>
+        <name><surname>Rabe</surname><given-names>Benjamin</given-names></name>
+        <name><surname>Barth</surname><given-names>Alexander</given-names></name>
+        <name><surname>Troupin</surname><given-names>Charles</given-names></name>
+        <name><surname>Kanzow</surname><given-names>Torsten</given-names></name>
+      </person-group>
+      <article-title>Sea surface height anomaly and geostrophic current velocity from altimetry measurements over the arctic ocean (2011–2020)</article-title>
+      <source>Earth System Science Data</source>
+      <publisher-name>Copernicus GmbH</publisher-name>
+      <year iso-8601-date="2023-01">2023</year><month>01</month>
+      <volume>15</volume>
+      <issue>1</issue>
+      <issn>1866-3516</issn>
+      <uri>http://dx.doi.org/10.5194/essd-15-225-2023</uri>
+      <pub-id pub-id-type="doi">10.5194/essd-15-225-2023</pub-id>
+      <fpage>225</fpage>
+      <lpage>263</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-WebbU003A2025">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Webb</surname><given-names>Thomas J.</given-names></name>
+        <name><surname>Beja</surname><given-names>Joana</given-names></name>
+        <name><surname>Bejarano</surname><given-names>Salvador Jesús Fernández</given-names></name>
+        <name><surname>Ramos</surname><given-names>Elvira</given-names></name>
+        <name><surname>Sainz-Villegas</surname><given-names>Samuel</given-names></name>
+        <name><surname>Soetaert</surname><given-names>Karline</given-names></name>
+        <name><surname>Stolte</surname><given-names>Willem</given-names></name>
+        <name><surname>Troupin</surname><given-names>Charles</given-names></name>
+        <name><surname>Weigel</surname><given-names>Benjamin</given-names></name>
+      </person-group>
+      <article-title>Realising the potential of interoperable data products to improve the outlook for marine biodiversity: Lessons from the european marine observation and data network</article-title>
+      <source>Marine Policy</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2025-03">2025</year><month>03</month>
+      <volume>173</volume>
+      <issn>0308-597X</issn>
+      <uri>http://dx.doi.org/10.1016/j.marpol.2024.106578</uri>
+      <pub-id pub-id-type="doi">10.1016/j.marpol.2024.106578</pub-id>
+      <fpage>106578</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-SchaapU003A2010">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Schaap</surname><given-names>Dick M. A.</given-names></name>
+        <name><surname>Lowry</surname><given-names>Roy K.</given-names></name>
+      </person-group>
+      <article-title>SeaDataNet – pan-european infrastructure for marine and ocean data management: Unified access to distributed data sets</article-title>
+      <source>International Journal of Digital Earth</source>
+      <publisher-name>Informa UK Limited</publisher-name>
+      <year iso-8601-date="2010-04">2010</year><month>04</month>
+      <volume>3</volume>
+      <issue>sup1</issue>
+      <issn>1753-8955</issn>
+      <uri>http://dx.doi.org/10.1080/17538941003660974</uri>
+      <pub-id pub-id-type="doi">10.1080/17538941003660974</pub-id>
+      <fpage>50</fpage>
+      <lpage>69</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-MartinMiguezU003A2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Martín Míguez</surname><given-names>Belén</given-names></name>
+        <name><surname>Novellino</surname><given-names>Antonio</given-names></name>
+        <name><surname>Vinci</surname><given-names>Matteo</given-names></name>
+        <name><surname>Claus</surname><given-names>Simon</given-names></name>
+        <name><surname>Calewaert</surname><given-names>Jan-Bart</given-names></name>
+        <name><surname>Vallius</surname><given-names>Henry</given-names></name>
+        <name><surname>Schmitt</surname><given-names>Thierry</given-names></name>
+        <name><surname>Pititto</surname><given-names>Alessandro</given-names></name>
+        <name><surname>Giorgetti</surname><given-names>Alessandra</given-names></name>
+        <name><surname>Askew</surname><given-names>Natalie</given-names></name>
+        <name><surname>Iona</surname><given-names>Sissy</given-names></name>
+        <name><surname>Schaap</surname><given-names>Dick</given-names></name>
+        <name><surname>Pinardi</surname><given-names>Nadia</given-names></name>
+        <name><surname>Harpham</surname><given-names>Quillon</given-names></name>
+        <name><surname>Kater</surname><given-names>Belinda J.</given-names></name>
+        <name><surname>Populus</surname><given-names>Jacques</given-names></name>
+        <name><surname>She</surname><given-names>Jun</given-names></name>
+        <name><surname>Palazov</surname><given-names>Atanas Vasilev</given-names></name>
+        <name><surname>McMeel</surname><given-names>Oonagh</given-names></name>
+        <name><surname>Oset</surname><given-names>Paula</given-names></name>
+        <name><surname>Lear</surname><given-names>Dan</given-names></name>
+        <name><surname>Manzella</surname><given-names>Giuseppe M. R.</given-names></name>
+        <name><surname>Gorringe</surname><given-names>Patrick</given-names></name>
+        <name><surname>Simoncelli</surname><given-names>Simona</given-names></name>
+        <name><surname>Larkin</surname><given-names>Kate</given-names></name>
+        <name><surname>Holdsworth</surname><given-names>Neil</given-names></name>
+        <name><surname>Arvanitidis</surname><given-names>Christos Dimitrios</given-names></name>
+        <name><surname>Molina Jack</surname><given-names>Maria Eugenia</given-names></name>
+        <name><surname>Chaves Montero</surname><given-names>Maria del Mar</given-names></name>
+        <name><surname>Herman</surname><given-names>Peter M. J.</given-names></name>
+        <name><surname>Hernandez</surname><given-names>Francisco</given-names></name>
+      </person-group>
+      <article-title>The european marine observation and data network (EMODnet): Visions and roles of the gateway to marine data in europe</article-title>
+      <source>Frontiers in Marine Science</source>
+      <publisher-name>Frontiers Media SA</publisher-name>
+      <year iso-8601-date="2019-07">2019</year><month>07</month>
+      <volume>6</volume>
+      <issn>2296-7745</issn>
+      <uri>http://dx.doi.org/10.3389/fmars.2019.00313</uri>
+      <pub-id pub-id-type="doi">10.3389/fmars.2019.00313</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-gandinU003A1965">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gandin</surname><given-names>L. S.</given-names></name>
+      </person-group>
+      <article-title>Objective analysis of meteorological fields. By L. S. Gandin. Translated from the Russian. Jerusalem (Israel Program for Scientific Translations), 1965. Pp. vi, 242: 53 Figures; 28 Tables</article-title>
+      <source>Quarterly Journal of the Royal Meteorological Society</source>
+      <year iso-8601-date="1966">1966</year>
+      <volume>92</volume>
+      <issue>393</issue>
+      <uri>https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/qj.49709239320</uri>
+      <pub-id pub-id-type="doi">10.1002/qj.49709239320</pub-id>
+      <fpage>447</fpage>
+      <lpage>447</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-BrethertonU003A1976">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bretherton</surname><given-names>Francis P.</given-names></name>
+        <name><surname>Davis</surname><given-names>Russ E.</given-names></name>
+        <name><surname>Fandry</surname><given-names>C. B.</given-names></name>
+      </person-group>
+      <article-title>A technique for objective analysis and design of oceanographic experiments applied to MODE-73</article-title>
+      <source>Deep Sea Research and Oceanographic Abstracts</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="1976-07">1976</year><month>07</month>
+      <volume>23</volume>
+      <issue>7</issue>
+      <issn>0011-7471</issn>
+      <uri>http://dx.doi.org/10.1016/0011-7471(76)90001-2</uri>
+      <pub-id pub-id-type="doi">10.1016/0011-7471(76)90001-2</pub-id>
+      <fpage>559</fpage>
+      <lpage>582</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
