@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">301</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00301</article-id>
+<title-group>
+<article-title>Static Equilibrium in Remote Alaska</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0872-7098</contrib-id>
+<name>
+<surname>Napolitano</surname>
+<given-names>Rebecca</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Napolitano</surname>
+<given-names>Theresa</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0872-7098</contrib-id>
+<name>
+<surname>Holen</surname>
+<given-names>Davin</given-names>
+</name>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0872-7098</contrib-id>
+<name>
+<surname>Mucioki</surname>
+<given-names>Megan</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0872-7098</contrib-id>
+<name>
+<surname>Randell</surname>
+<given-names>Heather</given-names>
+</name>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-0872-7098</contrib-id>
+<name>
+<surname>Chi</surname>
+<given-names>Guanqing</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Architectural Engineering Department, Penn State
+University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Academy of Our Lady of Mercy Lauralton Hall</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Coastal Community Resilience Specialist for Alaska Sea
+Grant at the University of Alaska Fairbanks</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Department of Agricultural Economics, Sociology, and
+Education, Population Research Institute, and Social Science Research
+Institute, Penn State University</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>Humphrey School of Public Affairs, University of
+Minnesota-Twin Cities</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-06">
+<day>6</day>
+<month>2</month>
+<year>2024</year>
+</pub-date>
+<volume>9</volume>
+<issue>98</issue>
+<fpage>301</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>high school physics</kwd>
+<kwd>equilibrium mechanics</kwd>
+<kwd>physics</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>This course module intertwines physics education with the unique
+  challenges faced by Alaska’s remote communities. It begins with
+  fundamental statics concepts, emphasizing forces in equilibrium and
+  vector problem-solving. Progressing through equilibrium in structures
+  and torque, it culminates in practical applications like bridge
+  construction in Alaska. The course, aimed at first-year high school
+  students, introduces Python programming for physics applications. It’s
+  structured for in-person and self-guided learning on CoLab. The Alaska
+  context adds depth, exploring social, ecological, and engineering
+  challenges in these communities, emphasizing the necessity of
+  interdisciplinary collaboration for sustainable solutions.</p>
+  <p>This course module, designed for first-year high school students
+  with no prior knowledge of static equilibrium and programmatic data
+  analysis, serves as an introductory bridge to programming through high
+  school physics. It is structured as a multi-week course that
+  introduces Python programming and its application in physics. The
+  module comprises five units tailored for an in-person learning
+  environment, featuring live coding sessions and explanations, followed
+  by independent or pair coding activities. Hosted on CoLab, it supports
+  both self-guided and classroom-based learning, extending educational
+  opportunities beyond the traditional classroom setting.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Engineering statics is a foundational course for civil and
+  mechanical engineering students, yet many struggle to connect abstract
+  mathematical concepts with physical reality. Traditional teaching
+  methods often rely on static diagrams and manual calculations, which
+  can obscure the dynamic relationship between forces, geometry, and
+  equilibrium. <monospace>AK_statics</monospace> addresses this gap by
+  providing an interactive, computational approach to learning statics.
+  By using Python and Jupyter Notebooks, students can visualize forces
+  in real-time and experiment with parameters to see immediate effects
+  on stability. This module is designed for undergraduate engineering
+  students and educators looking for open-source active learning
+  resources.</p>
+  <sec id="contextualized-stem-content">
+    <title>Contextualized STEM Content</title>
+    <p>The benefits of contextualized science, technology, engineering,
+    and mathematics (STEM) teaching are well known. “Contextualized
+    Modules in Physics for Junior High School Students” by Marzan
+    indicated that contextualized modules in physics enabled students to
+    outperform the traditional lecture group in post-test evaluations
+    (<xref alt="Marzan, 2018" rid="ref-marzan2018contextualized" ref-type="bibr">Marzan,
+    2018</xref>). Similar results were seen by Cid in “Contextualized
+    magnetism in secondary school: learning from the LHC (CERN)”
+    (<xref alt="Cid, 2005" rid="ref-cid2005contextualized" ref-type="bibr">Cid,
+    2005</xref>). That article discussed the introduction of simple
+    physical calculations related to magnetic phenomena in old
+    accelerators and the Large Hadron Collider. They discussed how these
+    calculations can be used in classrooms to spark students’ curiosity,
+    aid their understanding of physical concepts, and illustrate the
+    connection between theoretical physics (“cold equations”) and the
+    dynamic world of scientific research. Furthering the discussion
+    about contextualized education, Cech’s article in Nature, titled
+    “Education: Embed social awareness in science curricula,” emphasizes
+    the need for a more integrated approach to teaching socially
+    responsible students science, technology, engineering, and
+    mathematics (STEM) in general
+    (<xref alt="Cech, 2014" rid="ref-cech2014education" ref-type="bibr">Cech,
+    2014</xref>). The study conducted by Cech showed that engineering
+    students often leave university less interested in public welfare
+    than when they started, which is contrary to what should be
+    happening. The article suggests that STEM education should
+    incorporate social issues throughout its curricula, not just in
+    separate ethics courses. This is based on the premise that STEM
+    practitioners who understand the role of their profession in society
+    are better equipped to solve real-world problems. The article
+    concludes that addressing public-welfare concerns should be a
+    fundamental part of STEM education, suggesting that even a small
+    proportion of homework and exam questions focusing on the social
+    implications of scientific work could help reverse the trend of
+    disengagement from these crucial issues. This approach is vital for
+    producing well-rounded professionals capable of addressing the
+    complex challenges of our time.</p>
+    <p>Cech was not alone in this sentiment and the idea has been echoed
+    in works such as “The people part of engineering: Engineering for,
+    with, and as people” by Fila et al
+    (<xref alt="Fila et al., 2014" rid="ref-fila2014people" ref-type="bibr">Fila
+    et al., 2014</xref>). This was also seen in “History of Science in
+    Physics Teaching Possibilities for Contextualized Teaching?” by
+    Jardim et al which discusses the use of a historical approach in
+    science education, particularly in physics, to provide a more
+    contextualized understanding of the development of scientific
+    knowledge
+    (<xref alt="Jardim et al., 2021" rid="ref-jardim2021history" ref-type="bibr">Jardim
+    et al., 2021</xref>). The primary aim is to explore how lessons
+    incorporating a Cultural History of Science approach can enable
+    activities that encourage students to consider their socio-cultural
+    context, with a specific reference to Brazilian scientific
+    production. It also investigates how students can develop a deeper
+    understanding of scientific practices through classroom discussions
+    inspired by this approach, focusing on both historical contexts and
+    students’ own social environments. The approach allows students to
+    recognize that science is developed by various social actors, in
+    different settings beyond the laboratory and involves diverse
+    actions. The findings suggest that this method of teaching science
+    is effective in historically contextualizing science development
+    while also enabling students to reflect on scientific production
+    within their social context. Furthermore, this was discussed in the
+    context of high school education in Upegui et al’s , “Integration of
+    the Topic of Social Justice into High School Biology Curricula”
+    (<xref alt="Upegui et al., 2022" rid="ref-upegui2022integration" ref-type="bibr">Upegui
+    et al., 2022</xref>). That study found that this more contextualized
+    approach not only enhances students’ understanding of STEM concepts
+    but also prepares them for comprehensive participation in society by
+    making them aware of and sensitive to social inequities.</p>
+  </sec>
+  <sec id="examining-our-case-study">
+    <title>Examining our case study</title>
+    <p>In rural Alaska, the importance of contextualizing STEM decisions
+    with social considerations is a clear need. Pathways are vital
+    between remote communities to essential services, traditional
+    hunting grounds, and educational facilities. These pathways, often
+    dependent on frozen rivers and lakes during the colder months, have
+    been the lifeblood of subsistence farming, hunting, and gathering
+    traditions for generations. However, as the impacts of climate
+    change intensify, the once reliable pathways face a series of
+    unprecedented challenges that threaten to unravel the fabric of
+    community life. Rising temperatures lead to delayed freezing and
+    early thawing of rivers and lakes, resulting in thinner, less
+    predictable ice. What was once a reliable and sturdy path across
+    frozen rivers and lakes has become increasingly treacherous, posing
+    significant dangers to those relying on these natural highways.
+    Remote communities now grapple with the uncertainty of if and when
+    their vital connections will be safe to traverse. As climate change
+    disrupts the delicate balance of Alaska’s ecosystem, storms have
+    also grown in frequency and intensity. The once-familiar natural
+    rhythm of seasonal changes has been upended, leaving communities
+    vulnerable to unpredictable weather patterns. Fierce winds, heavy
+    precipitation, and intense storms wreak havoc on the pathways,
+    jeopardizing mobility and making travel arduous and dangerous.</p>
+    <p>In response to these challenges, building bridges has emerged as
+    a promising solution to ensure reliable connections between remote
+    communities. Bridges can offer year-round access, providing a
+    lifeline during the warming months when traditional pathways are
+    impassable in winter. The benefits of bridges are apparent, enabling
+    greater access to essential services, healthcare facilities, and
+    educational opportunities. They can foster economic growth by
+    facilitating trade and commerce, uplifting these communities through
+    improved connectivity. While building bridges can bring numerous
+    benefits to remote communities, some drawbacks can significantly
+    impact local culture and subsistence farming lifestyles. These
+    drawbacks stem from changes in access, mobility, and cultural
+    dynamics that can alter the traditional way of life in these
+    communities. In this perspective piece, we shed light on the
+    intricate relationship between social science and engineering
+    challenges faced in building and maintaining bridges in remote
+    Alaska. The course highlights the social, cultural, and ecological
+    challenges of Alaska, fostering critical thinking and
+    problem-solving skills. This comprehensive approach ensures students
+    are not only academically prepared but also socially and
+    environmentally aware, addressing the urgent need for
+    interdisciplinary education in today’s rapidly changing world.</p>
+    <fig>
+      <caption><p>Description of Image</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="https://imgur.com/ueyEHlM.png" />
+    </fig>
+    <p>The community of Aleknagik (pop. 197) is located on both the
+    north and south shores at the outlet of Aleknagik Lake where it
+    flows into the Wood River
+    (<xref alt="Profile of General Population and Housing Characteristics: 2010 Demographic Profile Data, 2010" rid="ref-us_census_bureau_2010" ref-type="bibr"><italic><named-content content-type="nocase">Profile
+    of General Population and Housing Characteristics: 2010 Demographic
+    Profile Data</named-content></italic>, 2010</xref>). Residents of
+    Aleknagik are predominantly Alaska Native (91%) and are
+    Yup’ik-speaking peoples called the Kiatagmiut, whose traditional
+    territory included the Nushagak River drainage to the east into the
+    Wood River lakes, including Aleknagik Lake
+    (<xref alt="Veltre, 1996" rid="ref-veltre1996paugvik" ref-type="bibr">Veltre,
+    1996</xref>). A school was established in 1933 that brought together
+    several communities to the present location. In 1959, a road was
+    constructed to connect the south shore with the regional hub of
+    Dillingham. The road was upgraded in the 1980s and paved in the
+    mid-2000s.The Wood River Bridge was constructed in 2015, connecting
+    the two sides of the community. Until then, the north shore, where
+    the school as well as city and tribal government offices are
+    located, was accessible only via boat in the summer or snow machine
+    in the winter, or via small aircraft that can land on the
+    state-maintained runway
+    (<xref alt="Holen et al., 2012" rid="ref-holen2012subsistence" ref-type="bibr">Holen
+    et al., 2012</xref>). The bridge now allows frequent travel to
+    Dillingham (pop. 2,226), a regional hub and one of two main harbors
+    for the Bristol Bay fishery, the largest sockeye salmon fishery in
+    the world
+    (<xref alt="Dept of Labor Research &amp; Analysis - State of Alaska, 2021" rid="ref-alaska_dept_labor_2021" ref-type="bibr"><italic><named-content content-type="nocase">Dept
+    of Labor Research &amp; Analysis - State of
+    Alaska</named-content></italic>, 2021</xref>). Dillingham has a
+    paved runway that can handle large jet aircraft, and it has two
+    grocery stores, a bulk food store, a bank, a middle and high school,
+    the University of Alaska Fairbanks (UAF) Bristol Bay campus, a
+    hospital, and other services provided by a small city
+    (<xref alt="Harvests and Uses of Wild Resources in Dillingham, Alaska, 2010, 2010" rid="ref-alaska_dfg_2010" ref-type="bibr"><italic><named-content content-type="nocase">Harvests
+    and Uses of Wild Resources in Dillingham, Alaska,
+    2010</named-content></italic>, 2010</xref>).</p>
+    <p>The Wood River Bridge was a long-sought infrastructure project.
+    Studies for the bridge began in the early 2000s after an earmark
+    from Senator Ted Stevens. Two longtime state legislators from the
+    region, Rep. Bryce Edgmon of Dillingham and Sen. Lyman Hoffman of
+    Bethel, pushed the project forward with local support that led to an
+    appropriation from the Alaska Legislature of $20 million in 2008. A
+    long line of mayors from Aleknagik kept the bridge momentum going
+    with legislative support as well as support from AKDOT
+    (<xref alt="Dischner &amp; Bendinger, 2021" rid="ref-bendinger_dischner_2021" ref-type="bibr">Dischner
+    &amp; Bendinger, 2021</xref>). The Wood River Bridge was a
+    successful project with broad support. In order to understand the
+    impacts of the Wood River Bridge on the wellbeing of Aleknagik
+    residents, we conducted both questionnaire surveys and in-depth
+    interviews from 2022 to 2024. The results suggest that the bridge
+    has reduced travel fatalities across the river substantially; has
+    improved accessibility to shopping, healthcare, education, and
+    hunting on the south side of the lake; and has increased social
+    interactions between the two sides of Aleknagik. The residents,
+    however, are also concerned with the growing number of tourists and
+    with people from outside of the village more easily accessing their
+    natural resources (e.g., berry picking and salmon fishing).</p>
+  </sec>
+</sec>
+<sec id="overview-content-and-structure">
+  <title>Overview, Content, and Structure</title>
+  <sec id="target-audience">
+    <title>Target audience</title>
+    <p>The target audience is primarily high school students who are new
+    to the concepts of static equilibrium and programmatic data
+    analysis. This course is designed to introduce these students to the
+    fundamentals of physics through a practical and interactive
+    approach, incorporating Python programming as a tool for learning
+    and problem-solving. The content is tailored to engage young
+    learners who have an interest in physics and computational analysis,
+    and who are keen on understanding real-world applications,
+    particularly in the unique environmental and social context of
+    Alaska’s remote communities. By the end of the module, students
+    should be able to:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>Understand and apply basic principles of statics and forces
+        in equilibrium.</p>
+      </list-item>
+      <list-item>
+        <p>Analyze structural equilibrium in various scenarios,
+        particularly in bridge construction.</p>
+      </list-item>
+      <list-item>
+        <p>Utilize Python programming for data analysis and
+        problem-solving in physics.</p>
+      </list-item>
+      <list-item>
+        <p>Integrate social, ecological, and engineering perspectives to
+        address challenges in Alaska’s remote communities.</p>
+      </list-item>
+      <list-item>
+        <p>Develop critical thinking and interdisciplinary
+        problem-solving skills relevant to real-world issues.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="content">
+    <title>Content</title>
+    <p>The content of this course focuses on introducing high school
+    students to statics in physics, emphasizing real-world applications
+    in the context of Alaska’s remote communities. It covers fundamental
+    concepts like forces in equilibrium, structural equilibrium, and the
+    principles of torque, while intertwining these lessons with Python
+    programming for data analysis. The course also addresses the social,
+    ecological, and engineering challenges specific to Alaska, aiming to
+    foster a deeper understanding of interdisciplinary approaches in
+    problem-solving and the importance of sustainable, community-focused
+    solutions. A summary of each unit can be found in Table 1 below:</p>
+    <table-wrap>
+      <caption>
+        <p>Summary of course material. ## Course Content:</p>
+      </caption>
+      <table>
+        <colgroup>
+          <col width="13%" />
+          <col width="73%" />
+          <col width="13%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Lesson</th>
+            <th>Content Summary</th>
+            <th>Google CoLab</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>This lesson introduces the fundamental concepts of
+            statics, focusing on the principles of forces in
+            equilibrium. It provides an understanding of how to solve
+            problems involving force vectors, both through graphical and
+            analytical methods. The lesson emphasizes the importance of
+            understanding the conditions for equilibrium in various
+            physical scenarios, and it guides students in applying these
+            principles to practical, real-world problems.</td>
+            <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/rkn2/AK_statics/blob/main/Statics_Lesson1.ipynb">Unit_01</ext-link></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>The lesson covers concepts like support forces and net
+            force, and teaches students how to apply the principles of
+            vertical and horizontal equilibrium. It emphasizes
+            visualizing parametric relationships and includes practical
+            examples like evaluating the stability of a person standing
+            on ice.</td>
+            <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/rkn2/AK_statics/blob/main/Statics_Lesson2%20(1).ipynb">Unit_02</ext-link></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>This lesson introduces the concepts of torque and
+            rotational equilibrium. This lesson teaches students how to
+            calculate torque and understand its role in physical
+            systems, particularly focusing on its application in various
+            equilibrium scenarios</td>
+            <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/rkn2/AK_statics/blob/main/Statics_Lesson3.ipynb">Unit_03</ext-link></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>This lesson reinforces understanding of forces and
+            equilibrium in physics and engineering, with a focus on
+            practical problem-solving.</td>
+            <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/rkn2/AK_statics/blob/main/Statics_Lesson4.ipynb">Unit_04</ext-link></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>This lesson focuses on understanding conditions for
+            static equilibrium in bridges, including balancing forces
+            and torques. Students learn about internal forces like shear
+            forces and moments that contribute to equilibrium.</td>
+            <td><ext-link ext-link-type="uri" xlink:href="https://colab.research.google.com/github/rkn2/AK_statics/blob/main/Statics_Lesson5.ipynb">Unit_05</ext-link></td>
+          </tr>
+        </tbody>
+      </table>
+    </table-wrap>
+  </sec>
+  <sec id="experience-of-use">
+    <title>Experience of Use</title>
+    <p>The high school physics teacher who implemented this curriculum
+    expressed a positive and engaging experience with the course
+    material. According to her comments, students were actively engaged
+    as they worked through the background information on the challenges
+    faced by Alaska’s remote communities and followed along with the
+    Python code. They particularly appreciated the practical application
+    of the curriculum, where they explored how the thickness of ice
+    impacts its load-bearing capacity. The students also weighed in on
+    their experience with the curriculum. They found the walkthrough on
+    writing and running the code to be very detailed, however they
+    believed the information could be condensed for members with some
+    prior background in Python. In conversations with the high school
+    teacher, it was discussed to leave the curriculum in its current
+    form but to encourage those who might use it to critically evaluate
+    the level of coding experience in their students and potentially
+    provide two versions, one with all the python explanation and one
+    without for those who already have a coding background. Overall the
+    students were enthusiastic about the curriculum’s ability to bridge
+    the gap between coding skills and real-life applications; the high
+    school teacher found that this curriculum successfully fostered a
+    meaningful connection between programming, physics, and real-world
+    challenges.</p>
+  </sec>
+  <sec id="instructor-guidance">
+    <title>Instructor Guidance</title>
+    <p>This module is designed to be flexible for various teaching
+    environments. - <bold>Prerequisites</bold>: Students should have a
+    basic understanding of algebra and trigonometry. No prior
+    programming experience is required, as the module introduces Python
+    concepts from scratch. - <bold>Workflow</bold>: 1.
+    <bold>In-Class</bold>: Instructors can lead the “Background
+    Information” and “Think Before You Calculate” sections to spark
+    discussion. 2. <bold>Live Coding</bold>: The “Getting Started with
+    Python” sections are best delivered as live coding sessions where
+    the instructor types along with students. 3. <bold>Independent
+    Practice</bold>: The “Coding Practice: Three Levels” and
+    “Exploration Tasks” are designed for individual or pair work. -
+    <bold>Assessment</bold>: The module includes conceptual questions,
+    coding challenges, and reflection prompts that can be used for
+    formative assessment. - <bold>Adaptability</bold>: While the context
+    is specific to Alaska, the physics principles (equilibrium, torque,
+    load) are universal. Instructors can adapt the “Real-World
+    Application” sections to their local context if desired.</p>
+  </sec>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>This course module serves as an example of the transformative
+  potential of contextualized STEM education. By intertwining physics
+  education with the unique challenges faced by Alaska’s remote
+  communities, this curriculum not only equips high school students with
+  a solid foundation in statics and Python programming but also instills
+  in them a profound understanding of the real-world implications of
+  their learning. The curriculum’s ability to bridge the gap between
+  theoretical knowledge and practical application, while addressing
+  social, ecological, and engineering challenges, underscores the need
+  for interdisciplinary collaboration in today’s rapidly changing world.
+  As climate change intensifies and communities grapple with
+  unprecedented challenges, the importance of preparing the next
+  generation of STEM practitioners who are not only academically
+  proficient but also socially and environmentally aware cannot be
+  overstated. This curriculum showcases the potential of education
+  modules to inspire critical thinking, problem-solving skills, and a
+  sense of social responsibility in young minds. It provides a model
+  that can be adapted and expanded to empower students across diverse
+  contexts and communities.</p>
+</sec>
+<sec id="authors-contributions">
+  <title>Author’s Contributions</title>
+  <p>TN has been teaching high school physics at the Academy of Our Lady
+  of Mercy Lauralton Hall since 1993. RN and TN created the physics
+  materials. HR, MM, GQ, and DH provided social science context. DH
+  provided context about rural Alaska.</p>
+</sec>
+<sec id="acknowlegements">
+  <title>Acknowlegements</title>
+  <p>This material is based upon work supported by the National Science
+  Foundation under Grant BCS-2121909, IIS-2123343, and ​​ICER-1927827. Any
+  opinions, findings, conclusions or recommendations expressed in this
+  material are those of the author(s) and do not necessarily reflect the
+  views of the National Science Foundation. The authors want to
+  acknowledge the high school students eager to try out the materials.
+  Ayse Akyildiz, the PhD student in Rural Sociology, and Rakeh Saleem,
+  the PhD student in Architectural Engineering, provided great
+  assistance with the field work conducted as part of the data for this
+  project. Dr. Thomas Boothby provided invaluable empirical knowledge
+  about bridges and bridge design. Steve Colligan flew the drone to get
+  the images of the Wood River Bridge. Joe Kallas, PhD student, made the
+  3D photogrammetry model of the bridge.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-jardim2021history">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jardim</surname><given-names>Wagner Tadeu</given-names></name>
+        <name><surname>Guerra</surname><given-names>Andreia</given-names></name>
+        <name><surname>Schiffer</surname><given-names>Hermann</given-names></name>
+      </person-group>
+      <article-title>History of science in physics teaching: Possibilities for contextualized teaching?</article-title>
+      <source>Science &amp; Education</source>
+      <publisher-name>Springer</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>30</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1007/S11191-020-00191-X</pub-id>
+      <fpage>609</fpage>
+      <lpage>638</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-marzan2018contextualized">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Marzan</surname><given-names>Joey-Nell T</given-names></name>
+      </person-group>
+      <article-title>Contextualized modules in physics for junior high school students</article-title>
+      <source>The Vector: International Journal of Emerging Science, Technology and Management (IJESTM)</source>
+      <year iso-8601-date="2018">2018</year>
+      <volume>27</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.69566/ijestm.v27i1.37</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-cid2005contextualized">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cid</surname><given-names>Ramón</given-names></name>
+      </person-group>
+      <article-title>Contextualized magnetism in secondary school: Learning from the LHC (CERN)</article-title>
+      <source>Physics education</source>
+      <publisher-name>IOP Publishing</publisher-name>
+      <year iso-8601-date="2005">2005</year>
+      <volume>40</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1088/0031-9120/40/4/002</pub-id>
+      <fpage>332</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-cech2014education">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cech</surname><given-names>Erin A</given-names></name>
+      </person-group>
+      <article-title>Education: Embed social awareness in science curricula</article-title>
+      <source>Nature</source>
+      <publisher-name>Nature Publishing Group UK London</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <volume>505</volume>
+      <issue>7484</issue>
+      <pub-id pub-id-type="doi">10.1038/505477a</pub-id>
+      <fpage>477</fpage>
+      <lpage>478</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-fila2014people">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Fila</surname><given-names>Nicholas D</given-names></name>
+        <name><surname>Hess</surname><given-names>Justin</given-names></name>
+        <name><surname>Hira</surname><given-names>Avneet</given-names></name>
+        <name><surname>Joslyn</surname><given-names>Cole H</given-names></name>
+        <name><surname>Tolbert</surname><given-names>DeLean</given-names></name>
+        <name><surname>Hynes</surname><given-names>Morgan M</given-names></name>
+      </person-group>
+      <article-title>The people part of engineering: Engineering for, with, and as people</article-title>
+      <source>2014 IEEE frontiers in education conference (FIE) proceedings</source>
+      <publisher-name>IEEE</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <pub-id pub-id-type="doi">10.1109/FIE.2014.7044106</pub-id>
+      <fpage>1</fpage>
+      <lpage>9</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-upegui2022integration">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Upegui</surname><given-names>David</given-names></name>
+        <name><surname>Coiro</surname><given-names>Julie</given-names></name>
+        <name><surname>Battle</surname><given-names>Stefan</given-names></name>
+        <name><surname>Kraus</surname><given-names>Rudolf</given-names></name>
+        <name><surname>Fastovsky</surname><given-names>David</given-names></name>
+      </person-group>
+      <article-title>Integration of the topic of social justice into high school biology curricula</article-title>
+      <source>Science &amp; Education</source>
+      <publisher-name>Springer</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <volume>31</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1007/s11191-021-00287-y</pub-id>
+      <fpage>923</fpage>
+      <lpage>941</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-us_census_bureau_2010">
+    <element-citation>
+      <article-title>Profile of General Population and Housing Characteristics: 2010 Demographic Profile Data</article-title>
+      <publisher-name>United States Census Bureau, American FactFinder; [Original URL]</publisher-name>
+      <year iso-8601-date="2010">2010</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-veltre1996paugvik">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Veltre</surname><given-names>Douglas W</given-names></name>
+      </person-group>
+      <source>American Antiquity</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <year iso-8601-date="1996">1996</year>
+      <volume>61</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.2307/281872</pub-id>
+      <fpage>633</fpage>
+      <lpage>633</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-holen2012subsistence">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Holen</surname><given-names>Davin</given-names></name>
+        <name><surname>Stariwat</surname><given-names>Jory</given-names></name>
+        <name><surname>Krieg</surname><given-names>Theodore M</given-names></name>
+        <name><surname>Lemons</surname><given-names>Terri</given-names></name>
+      </person-group>
+      <article-title>Subsistence harvests and uses of wild resources in aleknagik, clark’s point, and manokotak, alaska</article-title>
+      <year iso-8601-date="2012">2012</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-alaska_dept_labor_2021">
+    <element-citation>
+      <article-title>Dept of Labor Research &amp; Analysis - State of Alaska</article-title>
+      <publisher-name>Alaska Department of Labor Research &amp; Analysis</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://live.laborstats.alaska.gov/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-alaska_dfg_2010">
+    <element-citation>
+      <article-title>Harvests and Uses of Wild Resources in Dillingham, Alaska, 2010</article-title>
+      <publisher-name>Alaska Department of Fish; Game; Library of Congress, Washington, D.C. 20540 USA</publisher-name>
+      <year iso-8601-date="2010">2010</year>
+      <uri>https://lccn.loc.gov/2013433108</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-bendinger_dischner_2021">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>Dischner</surname><given-names>Molly</given-names></name>
+        <name><surname>Bendinger</surname><given-names>Dave</given-names></name>
+      </person-group>
+      <article-title>Bridge connects aleknagik</article-title>
+      <year iso-8601-date="2021">2021</year>
+      <uri>https://www.kdlg.org/post/bridge-connects-aleknagik</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
