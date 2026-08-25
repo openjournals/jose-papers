@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">379</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00379</article-id>
+<title-group>
+<article-title>XAI-MICROPYTHON: Explainable Artificial Intelligence with
+MicroPython</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-1011-5517</contrib-id>
+<name>
+<surname>Klinkhammer</surname>
+<given-names>Dennis</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Statistical Thinking (Germany),
+www.statistical-thinking.de, info (at)
+statistical-thinking.de</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-06-10">
+<day>10</day>
+<month>6</month>
+<year>2025</year>
+</pub-date>
+<volume>9</volume>
+<issue>102</issue>
+<fpage>379</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Explainable Artificial Intelligence</kwd>
+<kwd>Statistics</kwd>
+<kwd>Machine Learning</kwd>
+<kwd>Deep Learning</kwd>
+<kwd>MicroPython</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>XAI-MICROPYTHON is a MicroPython based framework which emphasizes
+  the fundamentals of statistics, machine learning and deep learning,
+  since they are increasingly driving innovation across various fields
+  (<xref alt="LeCun et al., 2015" rid="ref-LeCun2015-hn" ref-type="bibr">LeCun
+  et al., 2015</xref>). These fundamentals can also be transferred on
+  microcontrollers
+  (<xref alt="Ray, 2022" rid="ref-Ray2022-oq" ref-type="bibr">Ray,
+  2022</xref>), for educational purpose or e.g. in order to process
+  sensor data
+  (<xref alt="Cioffi et al., 2020" rid="ref-Cioffi2020-lq" ref-type="bibr">Cioffi
+  et al., 2020</xref>). Since microcontrollers have limited
+  computational resources, a particularly efficient implementation of
+  these methods is required
+  (<xref alt="Delnevo et al., 2023" rid="ref-Delnevo2023-ux" ref-type="bibr">Delnevo
+  et al., 2023</xref>;
+  <xref alt="Wulfert et al., 2024" rid="ref-Wulfert2024-qf" ref-type="bibr">Wulfert
+  et al., 2024</xref>). However, it is the efficient implementation that
+  provides insights into the fundamentals of statistics, machine
+  learning and deep learning in terms of explainable artificial
+  intelligence that makes this approach also relevant for educational
+  purpose
+  (<xref alt="Haque et al., 2023" rid="ref-Haque2023-du" ref-type="bibr">Haque
+  et al., 2023</xref>;
+  <xref alt="Meske et al., 2022" rid="ref-Meske2022-ke" ref-type="bibr">Meske
+  et al., 2022</xref>). Coding from scratch in MicroPython allows for a
+  streamlined and tailored approach
+  (<xref alt="Delnevo et al., 2023" rid="ref-Delnevo2023-ux" ref-type="bibr">Delnevo
+  et al., 2023</xref>) and provides users with transparent insights into
+  underlying principles and the resulting code, which makes
+  XAI-MICROPYTHON suitable for didactic application
+  (<xref alt="Collier &amp; Powell, 2024" rid="ref-Collier2024-ld" ref-type="bibr">Collier
+  &amp; Powell, 2024</xref>;
+  <xref alt="Scherer, 2016" rid="ref-Scherer2016-fy" ref-type="bibr">Scherer,
+  2016</xref>;
+  <xref alt="Verma et al., 2022" rid="ref-Verma2022-ie" ref-type="bibr">Verma
+  et al., 2022</xref>).</p>
+</sec>
+<sec id="target-group">
+  <title>Target group</title>
+  <p>XAI-MICROPYTHON draws on well-known exercise data sets and common
+  methods to give (academic) teachers a quick start in designing their
+  own teaching materials
+  (<xref alt="Collier &amp; Powell, 2024" rid="ref-Collier2024-ld" ref-type="bibr">Collier
+  &amp; Powell, 2024</xref>;
+  <xref alt="Haque et al., 2023" rid="ref-Haque2023-du" ref-type="bibr">Haque
+  et al., 2023</xref>). In addition, XAI-MICROPYTHON can of course also
+  be used by self-learners. In higher education teaching,
+  XAI-MICROPYTHON has been used for assignments in which students extend
+  the provided implementations, for example by translating additional
+  clustering algorithms from their mathematical formulation into
+  MicroPython code, modifying the architecture of neural networks, or
+  implementing additional activation functions. Educators can adopt the
+  framework as a complete learning sequence or select individual
+  examples according to their teaching objectives
+  (<xref alt="Verma et al., 2022" rid="ref-Verma2022-ie" ref-type="bibr">Verma
+  et al., 2022</xref>), using either the browser-based environment or
+  MicroPython-compatible microcontrollers.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>The methods presented with XAI-MICROPYTHON can actually be easily
+  implemented in Python using libraries such as SciKit-Learn. However,
+  the aim of XAI-MICROPYTHON is not only to call up and apply already
+  existing functions, but also to understand their methodological
+  foundations via programming from scratch in MicroPython and without
+  recourse to previous libraries
+  (<xref alt="Kong et al., 2022" rid="ref-Kong2022-sk" ref-type="bibr">Kong
+  et al., 2022</xref>). A previous investigation of skill requirements
+  in artificial intelligence and machine learning job advertisements
+  (<xref alt="Verma et al., 2022" rid="ref-Verma2022-ie" ref-type="bibr">Verma
+  et al., 2022</xref>) served as a guide for the development of
+  XAI-MICROPYTHON. It is intended to provide insights into basic
+  statistical principles, some machine learning algorithms as well as
+  the structure and functioning of neural networks as basis for
+  artificial intelligence
+  (<xref alt="Frank et al., 2020" rid="ref-Frank2020-rw" ref-type="bibr">Frank
+  et al., 2020</xref>;
+  <xref alt="Scherer, 2016" rid="ref-Scherer2016-fy" ref-type="bibr">Scherer,
+  2016</xref>;
+  <xref alt="Schmidt et al., 2020" rid="ref-Schmidt2020-ak" ref-type="bibr">Schmidt
+  et al., 2020</xref>). Accordingly, the learning objectives are to
+  enable learners to understand the mathematical and statistical
+  foundations of artificial intelligence, to translate these foundations
+  into transparent MicroPython implementations, and to independently
+  modify and extend the implemented algorithms and models. Since
+  XAI-MICROPYTHON is based on the MicroPython programming language, it
+  can be used on microcontrollers like the Raspberry Pi Pico 2
+  (<xref alt="Sakr et al., 2021" rid="ref-Sakr2021-mc" ref-type="bibr">Sakr
+  et al., 2021</xref>) or it can be called up directly via JupyterLite
+  as a live demo in the browser. Especially the step-by-step visibility
+  in MicroPython helps users to identify and understand the mathematical
+  and statistical foundations of artificial intelligence
+  (<xref alt="Kong et al., 2022" rid="ref-Kong2022-sk" ref-type="bibr">Kong
+  et al., 2022</xref>). This is in accordance with the primary goals of
+  explainable artificial intelligence
+  (<xref alt="Haque et al., 2023" rid="ref-Haque2023-du" ref-type="bibr">Haque
+  et al., 2023</xref>;
+  <xref alt="Schmidt et al., 2020" rid="ref-Schmidt2020-ak" ref-type="bibr">Schmidt
+  et al., 2020</xref>) and provides insights into artificial
+  intelligence related responsibilities
+  (<xref alt="Collier &amp; Powell, 2024" rid="ref-Collier2024-ld" ref-type="bibr">Collier
+  &amp; Powell, 2024</xref>;
+  <xref alt="Frank et al., 2020" rid="ref-Frank2020-rw" ref-type="bibr">Frank
+  et al., 2020</xref>) as well as practical experiences
+  (<xref alt="Li et al., 2021" rid="ref-Li2021-bn" ref-type="bibr">Li et
+  al., 2021</xref>). Therefore, XAI-MICROPYTHON shall promote necessary
+  innovation and problem-solving skills in accordance with the
+  scientific discourse
+  (<xref alt="Verma et al., 2022" rid="ref-Verma2022-ie" ref-type="bibr">Verma
+  et al., 2022</xref>).</p>
+</sec>
+<sec id="basic-elements">
+  <title>Basic elements</title>
+  <p>XAI-MICROPYTHON introduces to mean, variance, standard deviation,
+  covariance and correlation as elements of univariate and bivariate
+  statistics, which are necessary for the implementation of machine
+  learning algorithms like single and multiple linear regressions
+  (<xref alt="Kong et al., 2022" rid="ref-Kong2022-sk" ref-type="bibr">Kong
+  et al., 2022</xref>;
+  <xref alt="Verma et al., 2022" rid="ref-Verma2022-ie" ref-type="bibr">Verma
+  et al., 2022</xref>). Simple classification tasks will be highlighted
+  via multiple logistic regression, followed by k-Means as algorithm, as
+  well as the concept of the within cluster sum of squares, for the
+  demonstration of clustering
+  (<xref alt="Kong et al., 2022" rid="ref-Kong2022-sk" ref-type="bibr">Kong
+  et al., 2022</xref>;
+  <xref alt="Verma et al., 2022" rid="ref-Verma2022-ie" ref-type="bibr">Verma
+  et al., 2022</xref>). Furthermore, factor analysis will be implemented
+  in MicroPython in order to demonstrate dimensionality reduction
+  (<xref alt="Kong et al., 2022" rid="ref-Kong2022-sk" ref-type="bibr">Kong
+  et al., 2022</xref>;
+  <xref alt="Verma et al., 2022" rid="ref-Verma2022-ie" ref-type="bibr">Verma
+  et al., 2022</xref>). In particular, the division into four different
+  machine learning application areas is based on the classification of
+  SciKit-Learn (regression, classification, clustering and
+  dimensionality reduction). Finally, a pre-trained neural network and a
+  self-learning neural network will be implemented in MicroPython in
+  order to highlight some common activation functions as well as the
+  underlying principles of layers and neurons
+  (<xref alt="LeCun et al., 2015" rid="ref-LeCun2015-hn" ref-type="bibr">LeCun
+  et al., 2015</xref>). Therefore, XAI-MICROPYTHON is an underlying
+  framework, which can be extended independently by (academic) teachers
+  with further algorithms and methods and is intended to grow via the
+  community guidelines provided.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Cioffi2020-lq">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cioffi</surname><given-names>Raffaele</given-names></name>
+        <name><surname>Travaglioni</surname><given-names>Marta</given-names></name>
+        <name><surname>Piscitelli</surname><given-names>Giuseppina</given-names></name>
+        <name><surname>Petrillo</surname><given-names>Antonella</given-names></name>
+        <name><surname>De Felice</surname><given-names>Fabio</given-names></name>
+      </person-group>
+      <article-title>Artificial intelligence and machine learning applications in smart production: Progress, trends, and directions</article-title>
+      <source>Sustainability</source>
+      <publisher-name>MDPI AG</publisher-name>
+      <year iso-8601-date="2020-01">2020</year><month>01</month>
+      <volume>12</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.3390/su12020492</pub-id>
+      <fpage>492</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Collier2024-ld">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Collier</surname><given-names>Cassandra</given-names></name>
+        <name><surname>Powell</surname><given-names>Anne</given-names></name>
+      </person-group>
+      <article-title>Data analyst competencies: A theory-driven investigation of industry requirements in the field of data analytics</article-title>
+      <source>J. Inf. Syst. Educ.</source>
+      <publisher-name>Information Systems &amp; Computing Academic Professionals Education Special Interest Group</publisher-name>
+      <year iso-8601-date="2024">2024</year>
+      <volume>35</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.62273/spyc4248</pub-id>
+      <fpage>325</fpage>
+      <lpage>376</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Delnevo2023-ux">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Delnevo</surname><given-names>Giovanni</given-names></name>
+        <name><surname>Mirri</surname><given-names>Silvia</given-names></name>
+        <name><surname>Prandi</surname><given-names>Catia</given-names></name>
+        <name><surname>Manzoni</surname><given-names>Pietro</given-names></name>
+      </person-group>
+      <article-title>An evaluation methodology to determine the actual limitations of a TinyML-based solution</article-title>
+      <source>Internet of Things</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2023-07">2023</year><month>07</month>
+      <volume>22</volume>
+      <issue>100729</issue>
+      <pub-id pub-id-type="doi">10.1016/j.iot.2023.100729</pub-id>
+      <fpage>100729</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Haque2023-du">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Haque</surname><given-names>Akm Bahalul</given-names></name>
+        <name><surname>Islam</surname><given-names>A K M Najmul</given-names></name>
+        <name><surname>Mikalef</surname><given-names>Patrick</given-names></name>
+      </person-group>
+      <article-title>Explainable artificial intelligence (XAI) from a user perspective: A synthesis of prior literature and problematizing avenues for future research</article-title>
+      <source>Technol. Forecast. Soc. Change</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2023-01">2023</year><month>01</month>
+      <volume>186</volume>
+      <issue>122120</issue>
+      <pub-id pub-id-type="doi">10.1016/j.techfore.2022.122120</pub-id>
+      <fpage>122120</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Kong2022-sk">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kong</surname><given-names>Siu-Cheung</given-names></name>
+        <name><surname>Cheung</surname><given-names>William Man-Yin</given-names></name>
+        <name><surname>Zhang</surname><given-names>Guo</given-names></name>
+      </person-group>
+      <article-title>Evaluating artificial intelligence literacy courses for fostering conceptual learning, literacy and empowerment in university students: Refocusing to conceptual building</article-title>
+      <source>Comput. Hum. Behav. Rep.</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2022-08">2022</year><month>08</month>
+      <volume>7</volume>
+      <issue>100223</issue>
+      <pub-id pub-id-type="doi">10.1016/j.chbr.2022.100223</pub-id>
+      <fpage>100223</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-LeCun2015-hn">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>LeCun</surname><given-names>Yann</given-names></name>
+        <name><surname>Bengio</surname><given-names>Yoshua</given-names></name>
+        <name><surname>Hinton</surname><given-names>Geoffrey</given-names></name>
+      </person-group>
+      <article-title>Deep learning</article-title>
+      <source>Nature</source>
+      <publisher-name>Springer Science; Business Media LLC</publisher-name>
+      <year iso-8601-date="2015-05">2015</year><month>05</month>
+      <volume>521</volume>
+      <issue>7553</issue>
+      <pub-id pub-id-type="doi">10.1038/nature14539</pub-id>
+      <fpage>436</fpage>
+      <lpage>444</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Li2021-bn">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Li</surname><given-names>Guoyan</given-names></name>
+        <name><surname>Yuan</surname><given-names>Chenxi</given-names></name>
+        <name><surname>Kamarthi</surname><given-names>Sagar</given-names></name>
+        <name><surname>Moghaddam</surname><given-names>Mohsen</given-names></name>
+        <name><surname>Jin</surname><given-names>Xiaoning</given-names></name>
+      </person-group>
+      <article-title>Data science skills and domain knowledge requirements in the manufacturing industry: A gap analysis</article-title>
+      <source>J. Manuf. Syst.</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2021-07">2021</year><month>07</month>
+      <volume>60</volume>
+      <pub-id pub-id-type="doi">10.1016/j.jmsy.2021.07.007</pub-id>
+      <fpage>692</fpage>
+      <lpage>706</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Meske2022-ke">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Meske</surname><given-names>Christian</given-names></name>
+        <name><surname>Bunde</surname><given-names>Enrico</given-names></name>
+        <name><surname>Schneider</surname><given-names>Johannes</given-names></name>
+        <name><surname>Gersch</surname><given-names>Martin</given-names></name>
+      </person-group>
+      <article-title>Explainable artificial intelligence: Objectives, stakeholders, and future research opportunities</article-title>
+      <source>Inf. Syst. Manag.</source>
+      <publisher-name>Informa UK Limited</publisher-name>
+      <year iso-8601-date="2022-01">2022</year><month>01</month>
+      <volume>39</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1080/10580530.2020.1849465</pub-id>
+      <fpage>53</fpage>
+      <lpage>63</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Ray2022-oq">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ray</surname><given-names>Partha Pratim</given-names></name>
+      </person-group>
+      <article-title>A review on TinyML: State-of-the-art and prospects</article-title>
+      <source>J. King Saud Univ. - Comput. Inf. Sci.</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2022-04">2022</year><month>04</month>
+      <volume>34</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1016/j.jksuci.2021.11.019</pub-id>
+      <fpage>1595</fpage>
+      <lpage>1623</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Sakr2021-mc">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sakr</surname><given-names>Fouad</given-names></name>
+        <name><surname>Berta</surname><given-names>Riccardo</given-names></name>
+        <name><surname>Doyle</surname><given-names>Joseph</given-names></name>
+        <name><surname>De Gloria</surname><given-names>Alessandro</given-names></name>
+        <name><surname>Bellotti</surname><given-names>Francesco</given-names></name>
+      </person-group>
+      <article-title>Self-learning pipeline for low-energy resource-constrained devices</article-title>
+      <source>Energies</source>
+      <publisher-name>MDPI AG</publisher-name>
+      <year iso-8601-date="2021-10">2021</year><month>10</month>
+      <volume>14</volume>
+      <issue>20</issue>
+      <pub-id pub-id-type="doi">10.3390/en14206636</pub-id>
+      <fpage>6636</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Scherer2016-fy">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Scherer</surname><given-names>Ronny</given-names></name>
+      </person-group>
+      <article-title>Learning from the past-the need for empirical evidence on the transfer effects of computer programming skills</article-title>
+      <source>Front. Psychol.</source>
+      <publisher-name>Frontiers Media SA</publisher-name>
+      <year iso-8601-date="2016-09">2016</year><month>09</month>
+      <volume>7</volume>
+      <pub-id pub-id-type="doi">10.3389/fpsyg.2016.01390</pub-id>
+      <fpage>1390</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Schmidt2020-ak">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Schmidt</surname><given-names>Philipp</given-names></name>
+        <name><surname>Biessmann</surname><given-names>Felix</given-names></name>
+        <name><surname>Teubner</surname><given-names>Timm</given-names></name>
+      </person-group>
+      <article-title>Transparency and trust in artificial intelligence systems</article-title>
+      <source>J. Decis. Syst.</source>
+      <publisher-name>Informa UK Limited</publisher-name>
+      <year iso-8601-date="2020-10">2020</year><month>10</month>
+      <volume>29</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1080/12460125.2020.1819094</pub-id>
+      <fpage>260</fpage>
+      <lpage>278</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Wulfert2024-qf">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wulfert</surname><given-names>Lars</given-names></name>
+        <name><surname>Kuhnel</surname><given-names>Johannes</given-names></name>
+        <name><surname>Krupp</surname><given-names>Lukas</given-names></name>
+        <name><surname>Viga</surname><given-names>Justus</given-names></name>
+        <name><surname>Wiede</surname><given-names>Christian</given-names></name>
+        <name><surname>Gembaczka</surname><given-names>Pierre</given-names></name>
+        <name><surname>Grabmaier</surname><given-names>Anton</given-names></name>
+      </person-group>
+      <article-title>AIfES: A next-generation edge AI framework</article-title>
+      <source>IEEE Trans. Pattern Anal. Mach. Intell.</source>
+      <publisher-name>Institute of Electrical; Electronics Engineers (IEEE)</publisher-name>
+      <year iso-8601-date="2024-06">2024</year><month>06</month>
+      <volume>46</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1109/tpami.2024.3355495</pub-id>
+      <fpage>4519</fpage>
+      <lpage>4533</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Verma2022-ie">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Verma</surname><given-names>Amit</given-names></name>
+        <name><surname>Lamsal</surname><given-names>Kamal</given-names></name>
+        <name><surname>Verma</surname><given-names>Payal</given-names></name>
+      </person-group>
+      <article-title>An investigation of skill requirements in artificial intelligence and machine learning job advertisements</article-title>
+      <source>Ind. High. Educ.</source>
+      <publisher-name>SAGE Publications</publisher-name>
+      <year iso-8601-date="2022-02">2022</year><month>02</month>
+      <volume>36</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1177/0950422221990990</pub-id>
+      <fpage>63</fpage>
+      <lpage>73</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Frank2020-rw">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Frank</surname><given-names>Michael</given-names></name>
+        <name><surname>Drikakis</surname><given-names>Dimitris</given-names></name>
+        <name><surname>Charissis</surname><given-names>Vassilis</given-names></name>
+      </person-group>
+      <article-title>Machine-learning methods for computational science and engineering</article-title>
+      <source>Computation (Basel)</source>
+      <publisher-name>MDPI AG</publisher-name>
+      <year iso-8601-date="2020-03">2020</year><month>03</month>
+      <volume>8</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.3390/computation8010015</pub-id>
+      <fpage>15</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
