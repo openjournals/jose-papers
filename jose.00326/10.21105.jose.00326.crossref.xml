@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20261105110617-285d0a1c3f25851105ba4ccbce70da5477c8cf88</doi_batch_id>
+    <timestamp>20261105110617</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>11</month>
+          <year>2026</year>
+        </publication_date>
+        <journal_volume>
+          <volume>9</volume>
+        </journal_volume>
+        <issue>105</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>scicode-widgets: Bringing Computational Experiments to the Classroom with Jupyter Widgets</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Alexander</given_name>
+            <surname>Goscinski</surname>
+            <affiliations>
+              <institution><institution_name>PSI Center for Scientific Computing, Theory and Data, 5232 Villigen PSI, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Taylor J.</given_name>
+            <surname>Baird</surname>
+            <affiliations>
+              <institution><institution_name>Centre Européen de Calcul Atomique et Moléculaire (CECAM), École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Dou</given_name>
+            <surname>Du</surname>
+            <affiliations>
+              <institution><institution_name>Centre Européen de Calcul Atomique et Moléculaire (CECAM), École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+              <institution><institution_name>Theory and Simulation of Materials (THEOS), École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>João</given_name>
+            <surname>Prado</surname>
+            <affiliations>
+              <institution><institution_name>Laboratory of Computational Science and Modeling, École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Divya</given_name>
+            <surname>Suman</surname>
+            <affiliations>
+              <institution><institution_name>Laboratory of Computational Science and Modeling, École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Tulga-Erdene</given_name>
+            <surname>Sodjargal</surname>
+            <affiliations>
+              <institution><institution_name>Laboratory of Computational Science and Modeling, École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Sara</given_name>
+            <surname>Bonella</surname>
+            <affiliations>
+              <institution><institution_name>Centre Européen de Calcul Atomique et Moléculaire (CECAM), École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Giovanni</given_name>
+            <surname>Pizzi</surname>
+            <affiliations>
+              <institution><institution_name>PSI Center for Scientific Computing, Theory and Data, 5232 Villigen PSI, Switzerland</institution_name></institution>
+              <institution><institution_name>National Centre for Computational Design and Discovery of Novel Materials (MARVEL), 5232 Villigen PSI, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Michele</given_name>
+            <surname>Ceriotti</surname>
+            <affiliations>
+              <institution><institution_name>Laboratory of Computational Science and Modeling, École Polytechnique Fédérale de Lausanne, 1015 Lausanne, Switzerland</institution_name></institution>
+            </affiliations>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>11</month>
+          <day>05</day>
+          <year>2026</year>
+        </publication_date>
+        <pages>
+          <first_page>326</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00326</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.23947379</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/326</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00326</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00326</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00326.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="notebooks-in-chemistry">
+            <article_title>How faculty with minimal programming experience implemented jupyter notebooks in physical and general chemistry courses</article_title>
+            <author>Stokes</author>
+            <journal_title>Teaching programming across the chemistry curriculum</journal_title>
+            <doi>10.1021/bk-2021-1387.ch002</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Stokes, G. Y. (2021). How faculty with minimal programming experience implemented jupyter notebooks in physical and general chemistry courses. In Teaching programming across the chemistry curriculum (pp. 13–27). American Chemical Society. https://doi.org/10.1021/bk-2021-1387.ch002</unstructured_citation>
+          </citation>
+          <citation key="notebooks-in-physics">
+            <article_title>Integrating programming to reinforce quantum mechanical principles in physical chemistry</article_title>
+            <author>Hu</author>
+            <volume>1387</volume>
+            <doi>10.1021/bk-2021-1387.ch007</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Hu, D., Ahn, J. N., Lakatos, A., Bello, J., McTague, J., &amp; Foley, J. J. I. (2021). Integrating programming to reinforce quantum mechanical principles in physical chemistry (Vol. 1387, pp. 89–105). American Chemical Society. https://doi.org/10.1021/bk-2021-1387.ch007</unstructured_citation>
+          </citation>
+          <citation key="notebooks-in-mathematics">
+            <article_title>Mathematics in the digital age: The case of simulation-based proofs</article_title>
+            <author>Sümmermann</author>
+            <journal_title>International Journal of Research in Undergraduate Mathematics Education</journal_title>
+            <issue>3</issue>
+            <volume>7</volume>
+            <doi>10.1007/s40753-020-00125-6</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Sümmermann, M. L., Sommerhoff, D., &amp; Rott, B. (2021). Mathematics in the digital age: The case of simulation-based proofs. International Journal of Research in Undergraduate Mathematics Education, 7(3), 438–465. https://doi.org/10.1007/s40753-020-00125-6</unstructured_citation>
+          </citation>
+          <citation key="vrl-survey">
+            <article_title>Virtual and remote labs in control education: A survey</article_title>
+            <author>Heradio</author>
+            <journal_title>Computers &amp; Education</journal_title>
+            <volume>98</volume>
+            <doi>10.1016/j.arcontrol.2016.08.001</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Heradio, R., Torre, L. de la, &amp; Dormido, S. (2016). Virtual and remote labs in control education: A survey. Computers &amp; Education, 98, 14–38. https://doi.org/10.1016/j.arcontrol.2016.08.001</unstructured_citation>
+          </citation>
+          <citation key="jupyter">
+            <article_title>Jupyter notebooks – a publishing format for reproducible computational workflows</article_title>
+            <author>Thomas</author>
+            <journal_title>Positioning and power in academic publishing: Players, agents and agendas</journal_title>
+            <doi>10.3233/978-1-61499-649-1-87</doi>
+            <cYear>2016</cYear>
+            <unstructured_citation>Thomas, K., Benjamin, R.-K., Fernando, P., Brian, G., Matthias, B., Jonathan, F., Kyle, K., Jessica, H., Jason, G., Sylvain, C., Paul, I., Damián, A., Safia, A., Carol, W., &amp; Team, J. D. (2016). Jupyter notebooks – a publishing format for reproducible computational workflows. In Positioning and power in academic publishing: Players, agents and agendas (pp. 87–90). IOS Press. https://doi.org/10.3233/978-1-61499-649-1-87</unstructured_citation>
+          </citation>
+          <citation key="jupyter-narrative">
+            <article_title>Jupyter: Thinking and storytelling with code and data</article_title>
+            <author>Granger</author>
+            <journal_title>Computing in Science &amp; Engineering</journal_title>
+            <issue>2</issue>
+            <volume>23</volume>
+            <doi>10.1109/mcse.2021.3059263</doi>
+            <issn>1558-366X</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Granger, B. E., &amp; Perez, F. (2021). Jupyter: Thinking and storytelling with code and data. Computing in Science &amp; Engineering, 23(2), 7–14. https://doi.org/10.1109/mcse.2021.3059263</unstructured_citation>
+          </citation>
+          <citation key="sutchenkov2020active">
+            <article_title>Active investigation and publishing of calculation web based applications for studying process</article_title>
+            <author>Sutchenkov</author>
+            <journal_title>Journal of Physics: Conference Series</journal_title>
+            <issue>1</issue>
+            <volume>1691</volume>
+            <doi>10.1088/1742-6596/1691/1/012096</doi>
+            <issn>1742-6596</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Sutchenkov, A. A., &amp; Tikhonov, A. I. (2020). Active investigation and publishing of calculation web based applications for studying process. Journal of Physics: Conference Series, 1691(1), 012096. https://doi.org/10.1088/1742-6596/1691/1/012096</unstructured_citation>
+          </citation>
+          <citation key="du2023osscar">
+            <article_title>OSSCAR, an open platform for collaborative development of computational tools for education in science</article_title>
+            <author>Du</author>
+            <journal_title>Computer Physics Communications</journal_title>
+            <volume>282</volume>
+            <doi>10.1016/j.cpc.2022.108546</doi>
+            <cYear>2023</cYear>
+            <unstructured_citation>Du, D., Baird, T. J., Bonella, S., &amp; Pizzi, G. (2023). OSSCAR, an open platform for collaborative development of computational tools for education in science. Computer Physics Communications, 282, 108546. https://doi.org/10.1016/j.cpc.2022.108546</unstructured_citation>
+          </citation>
+          <citation key="du2024widget">
+            <article_title>Jupyter widgets and extensions for education and research in computational physics and chemistry</article_title>
+            <author>Du</author>
+            <journal_title>Computer Physics Communications</journal_title>
+            <volume>305</volume>
+            <doi>10.1016/j.cpc.2024.109353</doi>
+            <cYear>2024</cYear>
+            <unstructured_citation>Du, D., Baird, T. J., Eimre, K., Bonella, S., &amp; Pizzi, G. (2024). Jupyter widgets and extensions for education and research in computational physics and chemistry. Computer Physics Communications, 305, 109353. https://doi.org/10.1016/j.cpc.2024.109353</unstructured_citation>
+          </citation>
+          <citation key="appmode">
+            <article_title>Appmode: A jupyter extension that turns notebooks into web applications</article_title>
+            <author>Ole Schuett</author>
+            <unstructured_citation>Ole Schuett. (n.d.). Appmode: A jupyter extension that turns notebooks into web applications. GitHub repository: https://github.com/oschuett/appmode.</unstructured_citation>
+          </citation>
+          <citation key="traitlets">
+            <article_title>Traitlets: Lightweight eventful properties for python</article_title>
+            <author>IPython Development Team</author>
+            <unstructured_citation>IPython Development Team. (n.d.). Traitlets: Lightweight eventful properties for python. GitHub repository: https://github.com/ipython/traitlets.</unstructured_citation>
+          </citation>
+          <citation key="aiidalab">
+            <article_title>AiiDAlab – an ecosystem for developing, executing, and sharing scientific workflows</article_title>
+            <author>Yakutovich</author>
+            <journal_title>Computational Materials Science</journal_title>
+            <volume>188</volume>
+            <doi>10.1016/j.commatsci.2020.110165</doi>
+            <issn>0927-0256</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Yakutovich, A. V., Eimre, K., Schütt, O., Talirz, L., Adorf, C. S., Andersen, C. W., Ditler, E., Du, D., Passerone, D., Smit, B., Marzari, N., Pizzi, G., &amp; Pignedoli, C. A. (2021). AiiDAlab – an ecosystem for developing, executing, and sharing scientific workflows. Computational Materials Science, 188, 110165. https://doi.org/10.1016/j.commatsci.2020.110165</unstructured_citation>
+          </citation>
+          <citation key="supplementary-code">
+            <article_title>Scicode-widgets: Supplementary code for figures</article_title>
+            <author>Goscinski</author>
+            <journal_title>Zenodo</journal_title>
+            <unstructured_citation>Goscinski, A., Baird, T. J., Du, D., Prado, J., Suman, D., Sodjargal, T.-E., Bonella, S., Pizzi, G., &amp; Ceriotti, M. (n.d.). Scicode-widgets: Supplementary code for figures. In Zenodo. https://doi.org/10.5281/zenodo.15783260.</unstructured_citation>
+          </citation>
+          <citation key="iam-notebooks">
+            <article_title>Introduction to atomistic modeling, course notebooks</article_title>
+            <unstructured_citation>Introduction to atomistic modeling, course notebooks. (n.d.). GitHub repository: https://github.com/ceriottm/iam-notebooks.</unstructured_citation>
+          </citation>
+          <citation key="urcelay-olabarria_jupyter_2017">
+            <article_title>Jupyter notebook as the physics experimental laboratory’s logbook - first approach:</article_title>
+            <author>Urcelay-Olabarria</author>
+            <journal_title>Proceedings of the 9th international conference on computer supported education</journal_title>
+            <doi>10.5220/0006352104580463</doi>
+            <isbn>978-989-758-240-0</isbn>
+            <cYear>2017</cYear>
+            <unstructured_citation>Urcelay-Olabarria, I., Lazkoz, R., Urrestilla, J., Leonardo, A., &amp; Igartua, J. M. (2017). Jupyter notebook as the physics experimental laboratory’s logbook - first approach: Proceedings of the 9th International Conference on Computer Supported Education, 458–463. https://doi.org/10.5220/0006352104580463</unstructured_citation>
+          </citation>
+          <citation key="tufino_using_2025">
+            <article_title>Using jupyter notebooks to foster computational skills and professional practice in an introductory physics lab course</article_title>
+            <author>Tufino</author>
+            <journal_title>Journal of Physics: Conference Series</journal_title>
+            <issue>1</issue>
+            <volume>2950</volume>
+            <doi>10.1088/1742-6596/2950/1/012022</doi>
+            <issn>1742-6588</issn>
+            <cYear>2025</cYear>
+            <unstructured_citation>Tufino, E., Oss, S., &amp; Alemani, M. (2025). Using jupyter notebooks to foster computational skills and professional practice in an introductory physics lab course. Journal of Physics: Conference Series, 2950(1), 012022. https://doi.org/10.1088/1742-6596/2950/1/012022</unstructured_citation>
+          </citation>
+          <citation key="bishop">
+            <volume_title>Pattern recognition and machine learning (information science and statistics)</volume_title>
+            <author>Bishop</author>
+            <isbn>0387310738</isbn>
+            <cYear>2006</cYear>
+            <unstructured_citation>Bishop, C. M. (2006). Pattern recognition and machine learning (information science and statistics) (pp. 144–146). Springer-Verlag. ISBN: 0387310738</unstructured_citation>
+          </citation>
+          <citation key="selenium">
+            <article_title>Selenium browser automation project</article_title>
+            <author>Selenium Development Team</author>
+            <unstructured_citation>Selenium Development Team. (n.d.). Selenium browser automation project. https://www.selenium.dev.</unstructured_citation>
+          </citation>
+          <citation key="jupyterlab">
+            <article_title>JupyterLab computational environment</article_title>
+            <author>Jupyter Development Team</author>
+            <unstructured_citation>Jupyter Development Team. (n.d.). JupyterLab computational environment. GitHub repository: https://github.com/jupyterlab/jupyterlab.</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
