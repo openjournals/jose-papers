@@ -20,6 +20,10 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
       GH_REPO: openjournals/jose-reviews
     steps:
+      - name: Install development tools
+        shell: bash
+        run: |
+          sudo apt install libicu-dev
       - name: Compile Paper
         id: generate-files
         uses: xuanxu/paper-action@main
