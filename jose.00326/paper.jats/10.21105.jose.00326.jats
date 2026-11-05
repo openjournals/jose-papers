@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">326</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00326</article-id>
+<title-group>
+<article-title><monospace>scicode-widgets</monospace>: Bringing
+Computational Experiments to the Classroom with Jupyter
+Widgets</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Goscinski</surname>
+<given-names>Alexander</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Baird</surname>
+<given-names>Taylor J.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Du</surname>
+<given-names>Dou</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Prado</surname>
+<given-names>João</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Suman</surname>
+<given-names>Divya</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Sodjargal</surname>
+<given-names>Tulga-Erdene</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Bonella</surname>
+<given-names>Sara</given-names>
+</name>
+<xref ref-type="aff" rid="aff-2"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Pizzi</surname>
+<given-names>Giovanni</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-5"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Ceriotti</surname>
+<given-names>Michele</given-names>
+</name>
+<xref ref-type="aff" rid="aff-4"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>PSI Center for Scientific Computing, Theory and Data, 5232
+Villigen PSI, Switzerland</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Centre Européen de Calcul Atomique et Moléculaire (CECAM),
+École Polytechnique Fédérale de Lausanne, 1015 Lausanne,
+Switzerland</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Theory and Simulation of Materials (THEOS), École
+Polytechnique Fédérale de Lausanne, 1015 Lausanne,
+Switzerland</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Laboratory of Computational Science and Modeling, École
+Polytechnique Fédérale de Lausanne, 1015 Lausanne,
+Switzerland</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>National Centre for Computational Design and Discovery of
+Novel Materials (MARVEL), 5232 Villigen PSI, Switzerland</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-09-02">
+<day>2</day>
+<month>9</month>
+<year>2025</year>
+</pub-date>
+<volume>9</volume>
+<issue>105</issue>
+<fpage>326</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Python</kwd>
+<kwd>Jupyter</kwd>
+<kwd>ipywidgets</kwd>
+<kwd>widgets</kwd>
+<kwd>interactive visualization</kwd>
+<kwd>computational experiments</kwd>
+<kwd>computational thinking</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>“Computational experiments” use code and interactive visualizations
+  to convey mathematical and physical concepts in an intuitive way, and
+  are increasingly used to support <italic>ex cathedra</italic>
+  lecturing in scientific and engineering disciplines. Jupyter notebooks
+  are particularly well-suited to implement them, but involve large
+  amounts of ancillary code to process data and generate illustrations,
+  which can distract students from the core learning outcomes. For a
+  more engaging learning experience that only exposes relevant code to
+  students—allowing them to focus on the interplay between code, theory
+  and physical insights—we developed
+  <monospace>scicode-widgets</monospace> (released as scwidgets), a
+  Python package to build Jupyter-based applications. The package
+  facilitates the creation of interactive exercises and demonstrations
+  for students in any discipline in science, technology and engineering.
+  Students are asked to provide pedagogically meaningful contributions
+  in terms of theoretical understanding, coding ability, and analytical
+  skills. The library provides the tools to connect custom pre- and
+  post-processing of students’ code, which runs seamlessly “behind the
+  scenes”, with the ability to test and verify the solution, as well as
+  to convert it into live interactive visualizations driven by Jupyter
+  widgets.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of need</title>
+  <p>This work introduces scicode-widgets, an open-source Python library
+  that transforms Jupyter notebooks into interactive, self-contained
+  learning applications. By hiding boilerplate code behind a clean
+  widget interface, it allows students to focus on core physics
+  concepts, algorithms, and data analysis with instant visual feedback.
+  The widget configuration is fully implemented in Python, enabling
+  flexible creation of diverse teaching exercises—particularly valuable
+  for the research community, given Python’s widespread use in academic,
+  educational, and research settings.</p>
+  <p>We demonstrate its educational value through a ridge regression
+  exercise that combines interactive code input, real-time controls, and
+  automated visual feedback supported by a color-coded cue system. Used
+  in one undergraduate course at EPFL (MSE-305), the tool has already
+  supported nearly 100 students and received highly positive
+  feedback.</p>
+</sec>
+<sec id="state-of-the-field">
+  <title>State of the field</title>
+  <p>Jupyter
+  notebooks (<xref alt="Thomas et al., 2016" rid="ref-jupyter" ref-type="bibr">Thomas
+  et al., 2016</xref>) have been used extensively for the creation of
+  educational contents, with applications in
+  chemistry (<xref alt="Stokes, 2021" rid="ref-notebooks-in-chemistry" ref-type="bibr">Stokes,
+  2021</xref>),
+  physics (<xref alt="Hu et al., 2021" rid="ref-notebooks-in-physics" ref-type="bibr">Hu
+  et al., 2021</xref>;
+  <xref alt="Tufino et al., 2025" rid="ref-tufino_using_2025" ref-type="bibr">Tufino
+  et al., 2025</xref>;
+  <xref alt="Urcelay-Olabarria et al., 2017" rid="ref-urcelay-olabarria_jupyter_2017" ref-type="bibr">Urcelay-Olabarria
+  et al., 2017</xref>) and
+  mathematics (<xref alt="Sümmermann et al., 2021" rid="ref-notebooks-in-mathematics" ref-type="bibr">Sümmermann
+  et al., 2021</xref>). The cell-based structure of the notebook
+  supports conveying the teaching material in smaller units that can be
+  connected in a sequential coherent narrative, thereby facilitating
+  learning (<xref alt="Granger &amp; Perez, 2021" rid="ref-jupyter-narrative" ref-type="bibr">Granger
+  &amp; Perez, 2021</xref>). In addition to bare notebooks, custom
+  Jupyter widgets have been developed both in research
+  contexts (<xref alt="Yakutovich et al., 2021" rid="ref-aiidalab" ref-type="bibr">Yakutovich
+  et al., 2021</xref>) and in educational contexts to create virtual lab
+  applications, e.g., allowing students to explore the experimental
+  parameter space
+  interactively (<xref alt="Du et al., 2023" rid="ref-du2023osscar" ref-type="bibr">Du
+  et al., 2023</xref>,
+  <xref alt="2024" rid="ref-du2024widget" ref-type="bibr">2024</xref>;
+  <xref alt="Sutchenkov &amp; Tikhonov, 2020" rid="ref-sutchenkov2020active" ref-type="bibr">Sutchenkov
+  &amp; Tikhonov, 2020</xref>) or simply serving as a replacement for a
+  hands-on lab
+  experience (<xref alt="Heradio et al., 2016" rid="ref-vrl-survey" ref-type="bibr">Heradio
+  et al., 2016</xref>). Indeed, studies in control education have
+  observed that these learning experiences can reach a similar
+  effectiveness as their hands-on
+  counterparts (<xref alt="Heradio et al., 2016" rid="ref-vrl-survey" ref-type="bibr">Heradio
+  et al., 2016</xref>). These examples usually focus on conveying the
+  interaction between theory and experimental results to students.
+  However, they do not teach how to create and design these
+  computational experiments, a skill that is becoming more essential for
+  all fields of computational science. Although related skills are
+  taught in separate courses, the interplay of theoretical
+  understanding, algorithmic design, and interpretation of the results
+  is typically only taught in more advanced courses. A crucial
+  contributing factor to its late introduction in the curriculum is the
+  amount of boilerplate code that needs to be written to process and
+  visualize the data, together with the amount of time needed to get
+  acquainted with the domain-specific tools that help with this kind of
+  processing. While the code for data processing can be provided by the
+  teacher, it still dilutes students’ focus if the notebook is populated
+  by ancillary code that does not contribute to the core learning
+  outcomes. In addition, for an interactive experience, computational
+  experiments need to be rerun frequently to assess the results under
+  different conditions. While parameters in a notebook cell can be
+  changed and rerun, it still adds friction to the experience of
+  students if multiple actions are required to rerun an experiment (such
+  as changing values in several cells and rerunning them in a specific
+  order). Due to these aspects, learning is hindered by having to
+  perform repetitive actions. To address these challenges, we developed
+  the Python library <monospace>scicode-widgets</monospace> (released as
+  <monospace>scwidgets</monospace>) that facilitates the implementation
+  of Jupyter-based web applications, providing a seamlessly interactive
+  learning experience of computational experiments to students.
+  <monospace>scicode-widgets</monospace> allows teachers to expose only
+  the essential code, parameters, and results (such as interactive
+  plots) to students, while hiding the unnecessary details in the
+  background, thus helping them focus first on the core scientific and
+  computational concepts.</p>
+  <fig id="figU003Aexercise-code">
+    <caption><p>An example of how the coding environment, the parameter
+    panel and the visualization of an interactive exercise widget are
+    defined by the teacher (top) and how they are visualized by the
+    corresponding widgets (bottom).</p></caption>
+    <graphic mimetype="application" mime-subtype="pdf" xlink:href="fig1.pdf" />
+  </fig>
+</sec>
+<sec id="computational-experiments">
+  <title>Computational Experiments</title>
+  <p>The main use case of <monospace>scicode-widgets</monospace> is the
+  creation of flexible code exercises or demonstrations for students in
+  the form of an interactive application built by combining several
+  Jupyter widgets. This application can be divided into three parts that
+  are marked with different colors in the bottom part of
+  Fig. <xref alt="1" rid="figU003Aexercise-code">1</xref>: A coding
+  environment (red) in which students can implement the algorithm
+  derived from the provided theory, a panel of parameters (purple) where
+  students can manipulate the experimental settings, and a visualization
+  (green) that is generated from the code of the students utilizing the
+  experimental settings specified in the parameter panel. To provide
+  full flexibility in the creation of an exercise, the teacher
+  implements a function (orange box in the upper panel of
+  Fig. <xref alt="1" rid="figU003Aexercise-code">1</xref>) that defines
+  the logic to process the parameters specified in the parameters panel,
+  and to input these as arguments to the code supplied by the students,
+  along with functionality to visualize the results of the code
+  execution, e.g. in
+  Fig. <xref alt="1" rid="figU003Aexercise-code">1</xref> in the form of
+  a plot. This process function is then executed by a click of the “Run
+  code” button (marked in orange in the bottom panel of
+  Fig. <xref alt="1" rid="figU003Aexercise-code">1</xref>).
+  Alternatively, the code exercise can be configured to run such process
+  function upon the change of any of the parameters in the panel of
+  parameters. This simple example shows how the interactive view of a
+  notebook based on <monospace>scicode-widgets</monospace> hides away
+  plotting and data processing code, generating a clean interface that
+  helps the student focus on pedagogically meaningful elements.</p>
+  <fig id="figU003Acheck-code">
+    <caption><p>Examples of the check functionality. Each check is
+    framed with the same color as its corresponding output. The purple
+    check verifies the built-in Python type, shape and value closeness
+    between the output of the students’ code and some reference output
+    provided by the teacher. The blue check verifies the periodicity of
+    the function provided by the students, i.e.,
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\sin(0) = \sin(2\pi)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>sin</mml:mi><mml:mo>&#8289;</mml:mo><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>=</mml:mo><mml:mi>sin</mml:mi><mml:mo>&#8289;</mml:mo><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>2</mml:mn><mml:mi>π</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    The yellow-green check uses a fingerprint function, demonstrating
+    how to prevent disclosing the reference output to the students. For
+    instance, in this example only the sum of the values of the function
+    on a specified grid of <inline-formula><alternatives>
+    <tex-math><![CDATA[x]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
+    values (here only composed of three points for illustrative
+    purposes) is checked against a reference value.</p></caption>
+    <graphic mimetype="application" mime-subtype="pdf" xlink:href="fig2.pdf" />
+  </fig>
+  <sec id="check-solutions">
+    <title>Check solutions</title>
+    <p>The instructor can also define checks for the code provided by
+    the students, to support them with a quick feedback on the
+    correctness of their answer, thus facilitating approaching the
+    correct solution. An example is provided in
+    Fig.  <xref alt="2" rid="figU003Acheck-code">2</xref>. A variety of
+    checks typically used in scientific environments are already
+    implemented, including type and equality checks, as well as shape
+    and numerical closeness checks for <monospace>numpy</monospace>
+    arrays. These checks work as unit tests, validating the output of
+    the code of the students for a set of input and reference values
+    provided by the teacher. The instructor can also create checks that
+    validate specific functional behavior, e.g. periodicity for
+    trigonometric functions (for an example, see the check framed by a
+    blue box in Fig. <xref alt="2" rid="figU003Acheck-code">2</xref>).
+    One noteworthy point is that, for certain exercises, the reference
+    values can contain hints of the solution, which can be exploited by
+    students to solve the exercise. As the reference values need to be
+    part of the notebook, they cannot be safely hidden from the
+    students. The library therefore provides an option to pass a one-way
+    function, analogous to a hashing or fingerprint function, that
+    post-processes the output before the check is run. Since no
+    inference can be made once the output is processed through a one-way
+    function, the reference values of the checks do not reveal any
+    information about the actual solution of the exercise. This
+    fingerprint function depends highly on the domain and therefore
+    needs to be provided by the instructor. Nevertheless, the library
+    exposes a simple interface to facilitate providing such checks. An
+    example of a check using the fingerprint functionality can be seen
+    in Fig. <xref alt="2" rid="figU003Acheck-code">2</xref>, framed by a
+    yellow-green box.</p>
+    <fig id="figU003Acue-system">
+      <caption><p>An example of how the cue system works, showing a
+      sequence of widget interactions. Panel a) shows both blue and red
+      cues active, resulting for instance from a previous change by the
+      student of both the code and the value of the
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[x]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
+      parameter, without yet having rerun neither the code (to update
+      the visualization) nor the checks. From a) to b) the “Check Code”
+      button is pressed, removing the blue cues from the button and the
+      code input (but keeping the red cues, as the code has not been
+      rerun yet, and thus any related visualization are not yet
+      updated). From a) to c) the “Run Code” button is pressed, removing
+      the red cues from the code input, the parameter panel and the
+      button (but keeping the blue cues, as the checks have not been run
+      yet). From c) to d) the parameter <inline-formula><alternatives>
+      <tex-math><![CDATA[x]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
+      is changed, resulting in a new red cue both on the parameter panel
+      and the button.</p></caption>
+      <graphic mimetype="application" mime-subtype="pdf" xlink:href="fig3.pdf" />
+    </fig>
+  </sec>
+  <sec id="cues-for-readability">
+    <title>Cues for readability</title>
+    <p>While students work with <monospace>scicode-widgets</monospace>,
+    they might often change their provided answer without immediately
+    rerunning the code (to update the visualizations) or performing the
+    related checks. This might leave the student unaware of which parts
+    of the widget application are outdated, i.e., which parts need to be
+    rerun to update the outputs. We therefore implemented a cue system
+    that highlights the parts of the widget application that were
+    modified since the last update and thus need to be rerun. When a
+    student modifies an input in the widget, the system highlights the
+    affected part with vertical bars of different colors – referred to
+    as a “cues” – depending on the corresponding needed action: blue for
+    checking, and red for running the code. This indicates that the
+    corresponding output is outdated and immediately visualizes which
+    inputs have been changed. An example of several interactions and
+    their effect on the cues can be seen in
+    Fig. <xref alt="3" rid="figU003Acue-system">3</xref>. This real-time
+    feedback ensures that students are always aware of the current state
+    of the outputs and can understand more easily the effect of their
+    modifications, resulting in a more dynamic learning process.</p>
+  </sec>
+</sec>
+<sec id="learning-ridge-regression-through-an-interactive-notebook">
+  <title>Learning ridge regression through an interactive
+  notebook</title>
+  <fig id="figU003Aridge">
+    <caption><p>An example notebook covering the topic of ridge
+    regression, divided into exercises demanding mathematical coding and
+    analytical skills. It includes both our exercise widget and
+    free-text boxes for answering questions. Even just generating this
+    simple plot requires more than <inline-formula><alternatives>
+    <tex-math><![CDATA[30]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>30</mml:mn></mml:math></alternatives></inline-formula>
+    lines of Python code. Thanks to
+    <monospace>scicode-widgets</monospace>, this code is hidden from
+    students, so that they can instead focus on understanding the core
+    concepts of ridge regression and only implement the core functions
+    (in this case, they only need to provide the body of the
+    <monospace>compute_weights</monospace> Python
+    function).</p></caption>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="fig4.png" />
+  </fig>
+  <p>In this section, we showcase the use of
+  <monospace>scicode-widgets</monospace> for an exercise aimed at
+  explaining ridge
+  regression (<xref alt="Bishop, 2006" rid="ref-bishop" ref-type="bibr">Bishop,
+  2006</xref>) to students. A notebook that implements such an exercise
+  is shown in Fig. <xref alt="4" rid="figU003Aridge">4</xref>. In the
+  following subsections we briefly discuss ways in which the code
+  exercise creates a more engaging learning experience with respect to
+  more traditional learning approaches.</p>
+  <sec id="validate-solutions-and-identify-mistakes">
+    <title>Validate solutions and identify mistakes</title>
+    <p>An interesting approach to use the application is to first ask
+    students to derive a solution for the weights from the optimization
+    problem defining ridge regression, and then to implement it in the
+    code environment widget. If the students make a mistake in the
+    mathematical derivation or in the code implementation, they need to
+    identify where the problem lies. While the instructor could provide
+    explicit checks so that students can validate their solution, a more
+    engaging learning experience is created by providing hints on how to
+    use the visualization for validation. Students could then for
+    instance reason that, when the noise and regularization strength are
+    very small, the solution of ridge regression approaches the exact
+    solution, which is clearly illustrated in the plot produced by the
+    widget app. The instructor could help focus students’ attention by
+    hinting at this fact with a question of the form “For which
+    parameters can a nearly exact solution be reproduced? Can you
+    observe this with your code?”, thereby provoking the train of
+    thought to use this as a validation. Such an experience teaches
+    students to find mistakes in complex processes, requiring them to
+    systematically exclude parts by validating their correctness and
+    identify the parts that are relevant for investigation.</p>
+  </sec>
+  <sec id="observe-relationships-through-interactivity">
+    <title>Observe relationships through interactivity</title>
+    <p>After implementing the code, students can directly proceed with
+    experimental observations. The plot in
+    Fig. <xref alt="4" rid="figU003Aridge">4</xref> shows the ground
+    truth function <inline-formula><alternatives>
+    <tex-math><![CDATA[f]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>f</mml:mi></mml:math></alternatives></inline-formula>,
+    the data points with noise <inline-formula><alternatives>
+    <tex-math><![CDATA[f(x_i) + \epsilon_i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>f</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mi>ϵ</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+    and the predicted function <inline-formula><alternatives>
+    <tex-math><![CDATA[\hat{f}(x)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mover><mml:mi>f</mml:mi><mml:mo accent="true">̂</mml:mo></mml:mover><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.
+    First, the possibility to manipulate every parameter (via the
+    sliders above the plot) effectively communicates to students the
+    impact of each parameter on a visual level. Second, through the
+    manipulation of the parameters, students can analyze their
+    relationship, e.g., how the regularization strength
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\lambda]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
+    and the number of data points <inline-formula><alternatives>
+    <tex-math><![CDATA[n_\text{samples}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>n</mml:mi><mml:mtext mathvariant="normal">samples</mml:mtext></mml:msub></mml:math></alternatives></inline-formula>
+    affect the test error for different degrees of the polynomial
+    function <inline-formula><alternatives>
+    <tex-math><![CDATA[d_\text{max}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>d</mml:mi><mml:mtext mathvariant="normal">max</mml:mtext></mml:msub></mml:math></alternatives></inline-formula>
+    used for fitting. While this is typically a challenging task, as it
+    requires exploring the interplay of four parameters, the
+    corresponding plot provides students with direct feedback (and the
+    instructor can further hint at certain relationships in subsequent
+    questions).</p>
+  </sec>
+</sec>
+<sec id="software-design">
+  <title>Software design</title>
+  <p><monospace>scicode-widgets</monospace> depends on several external
+  libraries that implement the widgets used as components in the
+  applications. In addition to the package
+  <monospace>ipywidgets</monospace>, that provides most of the standard
+  widgets used for the applications, the coding environment relies on
+  our package <monospace>widget-code-input</monospace>, providing the
+  editable text box where students can input their code, where the
+  function signature (and possibly function documentation in the format
+  of a standard Python &quot;docstring&quot;) are hardcoded and
+  read-only (see its appearance in
+  Figs. <xref alt="1" rid="figU003Aexercise-code">1</xref>,
+  <xref alt="2" rid="figU003Acheck-code">2</xref>,
+  <xref alt="3" rid="figU003Acue-system">3</xref> and
+  <xref alt="4" rid="figU003Aridge">4</xref>). While this widget might
+  seem redundant, as notebook cells already allow students to edit code,
+  it becomes essential when our widgets are combined with
+  appmode (<xref alt="Ole Schuett, n.d." rid="ref-appmode" ref-type="bibr">Ole
+  Schuett, n.d.</xref>) or similar Jupyter extensions that run a
+  complete notebook hiding all input cells, thus providing an “app-like”
+  appearance to the notebook. Indeed, even if
+  <monospace>scicode-widgets</monospace> reduces to a minimum the need
+  for boilerplate code (see the top part of
+  Fig. <xref alt="1" rid="figU003Aexercise-code">1</xref>), hiding
+  completely all code and showing only the resulting widgets further
+  helps students in focusing only on the learning goal (see bottom of
+  Fig. <xref alt="1" rid="figU003Aexercise-code">1</xref>). Apart from
+  some custom style sheets (CSS) code for styling,
+  <monospace>scicode-widgets</monospace> does not include any JavaScript
+  code and builds its widget applications from the building blocks
+  provided by its dependencies. In comparison to a two-language solution
+  that would use JavaScript for the frontend combined with a Python
+  interface for the code, this design choice has the advantage that the
+  library is easier to maintain, as well as being accessible to a
+  broader range of teaching instructors for code adaption, given
+  Python’s position as one of the most commonly used languages in an
+  academic, education and research setting. In the following, we further
+  discuss in more detail some of the technical challenges that we
+  encountered during the development and the solutions we
+  implemented.</p>
+  <sec id="cued-widgets">
+    <title>Cued widgets</title>
+    <p>The exercise widget app is modular, allowing flexible
+    initialization with only the components needed for a given use case.
+    For example, the parameter box can be disabled in fixed experimental
+    settings. The initialization process needs to handle several cases,
+    which complicates the logic. To reduce the code redundancy, the
+    logic for the system is handled in dedicated “cue widgets”, that
+    activate the appropriate visual cue when it observes a change in one
+    of the
+    traits (<xref alt="IPython Development Team, n.d." rid="ref-traitlets" ref-type="bibr">IPython
+    Development Team, n.d.</xref>) in a list of widgets provided on
+    initialization (i.e., in any of the other widgets that it observes
+    for change). For the majority of the cueing, we use a
+    <monospace>cue box</monospace> that wraps around an existing widget
+    to highlight it around the edges. The behavioral change when a
+    widget is cued is defined in a CSS file to allow for customization
+    by the teaching instructor (e.g., color or line thickness).
+    Furthermore, for resetting the cue, we implement a
+    <monospace>reset cue</monospace> button that only resets the cue on
+    a successful action. Moving this code logic into the individual
+    components simplified handling of the logic in the exercise widget
+    application and testing their functionality and correctness.</p>
+  </sec>
+  <sec id="saving-mechanism">
+    <title>Saving mechanism</title>
+    <p>Since the target of our package is creating exercises for
+    students, who then typically need to hand in their solution for
+    grading, we need a mechanism to save the student solutions and
+    transfer them to the teaching instructor. Jupyter environments can
+    store widget states, including the HTML and JavaScript part of the
+    widget. The execution of the code widget, however, requires
+    communication with a Python kernel that runs the functions required
+    for the data processing. We therefore need to re-execute the
+    initialization of the widgets to recreate the corresponding Python
+    objects, which would result in overwriting the static widget state,
+    including the solutions provided by the students. To solve this
+    issue, we implemented a custom saving mechanism for the exercise
+    widgets, which stores both the code and the parameter values in a
+    JavaScript Object Notation (JSON) file. The logic responsible for
+    storing and loading the answers is in the exercise manager Python
+    class, which retrieves the answer of an exercise widget.</p>
+  </sec>
+  <sec id="testing-of-the-user-interface">
+    <title>Testing of the user interface</title>
+    <p>For an effective teaching experience, the robustness of the
+    exercise application is essential. Indeed, the students are already
+    required to consider errors in their understanding of the theory,
+    the code, and interpretation of results. Adding failure of the
+    widgets on top of these hurdles would affect very negatively the
+    teaching experience. We therefore test the user interface of the
+    exercise application extensively within a unit test framework, using
+    the package
+    <monospace>selenium</monospace> (<xref alt="Selenium Development Team, n.d." rid="ref-selenium" ref-type="bibr">Selenium
+    Development Team, n.d.</xref>), which allows us to simulate
+    realistic user interactions (e.g. typing on the keyboard or clicking
+    with the mouse) via the web browser, and test the graphical output
+    of the application.</p>
+  </sec>
+</sec>
+<sec id="research-impact-statement">
+  <title>Research impact statement</title>
+  <p>In this work, we presented how an interactive widget application
+  that combines a coding environment and visualization can be used to
+  provide an engaging learning experience for students. The creation of
+  the widget application leaves enough room for flexibility to implement
+  arbitrary logic for processing the student code, while taking care of
+  the widget logic for the teaching instructor. This allows the teaching
+  instructor to let arbitrary pre- and postprocessing of the student
+  code happen “behind the scenes”, so that students can fully focus on
+  the main learning goal. We demonstrated the usage of
+  <monospace>scicode-widgets</monospace> for teaching ridge regression,
+  showing how the interactivity of the widgets enables seamless
+  transitions between theory, code and analysis, resulting in
+  interactions that would not occur as easily without them.
+  <monospace>scicode-widgets</monospace> supports the most recent
+  JupyterLab
+  (<xref alt="Jupyter Development Team, n.d." rid="ref-jupyterlab" ref-type="bibr">Jupyter
+  Development Team, n.d.</xref>) version (version 4 at the point of
+  writing) and can be easily installed with a <monospace>pip</monospace>
+  command. We therefore expect it to be straightforward to deploy and
+  integrate into any local or cloud-based Jupyter deployment. These
+  widgets have already been used to prepare a course at EPFL (MSE-305,
+  Introduction to Atomic-Scale Modeling), and were refined based on the
+  feedback from the students.</p>
+</sec>
+<sec id="data-availability">
+  <title>Data Availability</title>
+  <p>The code producing the <monospace>scicode-widgets</monospace>
+  applications underlying each figure is available on
+  Zenodo (<xref alt="Goscinski et al., n.d." rid="ref-supplementary-code" ref-type="bibr">Goscinski
+  et al., n.d.</xref>). The notebooks used in the MSE-305 course are
+  distributed in a dedicated
+  repository (<xref alt="Introduction to Atomistic Modeling, Course Notebooks, n.d." rid="ref-iam-notebooks" ref-type="bibr"><italic>Introduction
+  to Atomistic Modeling, Course Notebooks</italic>, n.d.</xref>).</p>
+</sec>
+<sec id="ai-usage-disclosure">
+  <title>AI usage disclosure</title>
+  <p>No AI tools were used for the development of the package
+  <monospace>scicode-widgets</monospace> or to write this
+  manuscript.</p>
+</sec>
+<sec id="acknowledgements">
+  <title>Acknowledgements</title>
+  <p>We acknowledge financial support from the EPFL Open Science Fund
+  via the OSSCAR project, from the EPFL DRIL fund titled “Jupyter web
+  applications for quantum simulations”, and from the NCCR MARVEL, a
+  National Centre of Competence in Research, funded by the Swiss
+  National Science Foundation (grant number 205602). We acknowledge
+  CECAM for dedicated OSSCAR dissemination activities. A.G. and G.P.
+  acknowledge funding by the SwissTwins project, funded by the Swiss
+  State Secretariat for Education, Research and Innovation (SERI). M.C.
+  and D.S. acknowledge funding from the European Research Council (ERC)
+  under the research and innovation program (Grant Agreement
+  No. 101001890-FIAMMA). We acknowledge useful discussions and feedback
+  from Cécile Hardebolle and the students of the EPFL MSE-305 course –
+  especially those of the academic year 2021-2022.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-notebooks-in-chemistry">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Stokes</surname><given-names>Grace Yin</given-names></name>
+      </person-group>
+      <article-title>How faculty with minimal programming experience implemented jupyter notebooks in physical and general chemistry courses</article-title>
+      <source>Teaching programming across the chemistry curriculum</source>
+      <publisher-name>American Chemical Society</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <pub-id pub-id-type="doi">10.1021/bk-2021-1387.ch002</pub-id>
+      <fpage>13</fpage>
+      <lpage>27</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-notebooks-in-physics">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Hu</surname><given-names>Danfei</given-names></name>
+        <name><surname>Ahn</surname><given-names>Janet N.</given-names></name>
+        <name><surname>Lakatos</surname><given-names>Alyssa</given-names></name>
+        <name><surname>Bello</surname><given-names>Jose</given-names></name>
+        <name><surname>McTague</surname><given-names>Jonathan</given-names></name>
+        <name><surname>Foley</surname><given-names>Jonathan J. IV</given-names></name>
+      </person-group>
+      <article-title>Integrating programming to reinforce quantum mechanical principles in physical chemistry</article-title>
+      <publisher-name>American Chemical Society</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>1387</volume>
+      <pub-id pub-id-type="doi">10.1021/bk-2021-1387.ch007</pub-id>
+      <fpage>89</fpage>
+      <lpage>105</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-notebooks-in-mathematics">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sümmermann</surname><given-names>M. L.</given-names></name>
+        <name><surname>Sommerhoff</surname><given-names>D.</given-names></name>
+        <name><surname>Rott</surname><given-names>B.</given-names></name>
+      </person-group>
+      <article-title>Mathematics in the digital age: The case of simulation-based proofs</article-title>
+      <source>International Journal of Research in Undergraduate Mathematics Education</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>7</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1007/s40753-020-00125-6</pub-id>
+      <fpage>438</fpage>
+      <lpage>465</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-vrl-survey">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Heradio</surname><given-names>Ruben</given-names></name>
+        <name><surname>Torre</surname><given-names>Luis de la</given-names></name>
+        <name><surname>Dormido</surname><given-names>Sebastian</given-names></name>
+      </person-group>
+      <article-title>Virtual and remote labs in control education: A survey</article-title>
+      <source>Computers &amp; Education</source>
+      <year iso-8601-date="2016">2016</year>
+      <volume>98</volume>
+      <pub-id pub-id-type="doi">10.1016/j.arcontrol.2016.08.001</pub-id>
+      <fpage>14</fpage>
+      <lpage>38</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-jupyter">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Thomas</surname><given-names>Kluyver</given-names></name>
+        <name><surname>Benjamin</surname><given-names>Ragan-Kelley</given-names></name>
+        <name><surname>Fernando</surname><given-names>Pérez</given-names></name>
+        <name><surname>Brian</surname><given-names>Granger</given-names></name>
+        <name><surname>Matthias</surname><given-names>Bussonnier</given-names></name>
+        <name><surname>Jonathan</surname><given-names>Frederic</given-names></name>
+        <name><surname>Kyle</surname><given-names>Kelley</given-names></name>
+        <name><surname>Jessica</surname><given-names>Hamrick</given-names></name>
+        <name><surname>Jason</surname><given-names>Grout</given-names></name>
+        <name><surname>Sylvain</surname><given-names>Corlay</given-names></name>
+        <name><surname>Paul</surname><given-names>Ivanov</given-names></name>
+        <name><surname>Damián</surname><given-names>Avila</given-names></name>
+        <name><surname>Safia</surname><given-names>Abdalla</given-names></name>
+        <name><surname>Carol</surname><given-names>Willing</given-names></name>
+        <name><surname>Team</surname><given-names>Jupyter Development</given-names></name>
+      </person-group>
+      <article-title>Jupyter notebooks – a publishing format for reproducible computational workflows</article-title>
+      <source>Positioning and power in academic publishing: Players, agents and agendas</source>
+      <publisher-name>IOS Press</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <uri>http://dx.doi.org/10.3233/978-1-61499-649-1-87</uri>
+      <pub-id pub-id-type="doi">10.3233/978-1-61499-649-1-87</pub-id>
+      <fpage>87</fpage>
+      <lpage>90</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-jupyter-narrative">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Granger</surname><given-names>Brian E.</given-names></name>
+        <name><surname>Perez</surname><given-names>Fernando</given-names></name>
+      </person-group>
+      <article-title>Jupyter: Thinking and storytelling with code and data</article-title>
+      <source>Computing in Science &amp; Engineering</source>
+      <publisher-name>Institute of Electrical; Electronics Engineers (IEEE)</publisher-name>
+      <year iso-8601-date="2021-03">2021</year><month>03</month>
+      <volume>23</volume>
+      <issue>2</issue>
+      <issn>1558-366X</issn>
+      <uri>http://dx.doi.org/10.1109/MCSE.2021.3059263</uri>
+      <pub-id pub-id-type="doi">10.1109/mcse.2021.3059263</pub-id>
+      <fpage>7</fpage>
+      <lpage>14</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sutchenkov2020active">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sutchenkov</surname><given-names>A A</given-names></name>
+        <name><surname>Tikhonov</surname><given-names>A I</given-names></name>
+      </person-group>
+      <article-title>Active investigation and publishing of calculation web based applications for studying process</article-title>
+      <source>Journal of Physics: Conference Series</source>
+      <publisher-name>IOP Publishing</publisher-name>
+      <year iso-8601-date="2020-11">2020</year><month>11</month>
+      <volume>1691</volume>
+      <issue>1</issue>
+      <issn>1742-6596</issn>
+      <uri>http://dx.doi.org/10.1088/1742-6596/1691/1/012096</uri>
+      <pub-id pub-id-type="doi">10.1088/1742-6596/1691/1/012096</pub-id>
+      <fpage>012096</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-du2023osscar">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Du</surname><given-names>Dou</given-names></name>
+        <name><surname>Baird</surname><given-names>Taylor J.</given-names></name>
+        <name><surname>Bonella</surname><given-names>Sara</given-names></name>
+        <name><surname>Pizzi</surname><given-names>Giovanni</given-names></name>
+      </person-group>
+      <article-title>OSSCAR, an open platform for collaborative development of computational tools for education in science</article-title>
+      <source>Computer Physics Communications</source>
+      <year iso-8601-date="2023">2023</year>
+      <volume>282</volume>
+      <uri>https://doi.org/10.1016/j.cpc.2022.108546</uri>
+      <pub-id pub-id-type="doi">10.1016/j.cpc.2022.108546</pub-id>
+      <fpage>108546</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-du2024widget">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Du</surname><given-names>Dou</given-names></name>
+        <name><surname>Baird</surname><given-names>Taylor J.</given-names></name>
+        <name><surname>Eimre</surname><given-names>Kristjan</given-names></name>
+        <name><surname>Bonella</surname><given-names>Sara</given-names></name>
+        <name><surname>Pizzi</surname><given-names>Giovanni</given-names></name>
+      </person-group>
+      <article-title>Jupyter widgets and extensions for education and research in computational physics and chemistry</article-title>
+      <source>Computer Physics Communications</source>
+      <year iso-8601-date="2024">2024</year>
+      <volume>305</volume>
+      <uri>https://doi.org/10.1016/j.cpc.2024.109353</uri>
+      <pub-id pub-id-type="doi">10.1016/j.cpc.2024.109353</pub-id>
+      <fpage>109353</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-appmode">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Ole Schuett</string-name>
+      </person-group>
+      <article-title>Appmode: A jupyter extension that turns notebooks into web applications</article-title>
+      <publisher-name>GitHub repository: https://github.com/oschuett/appmode</publisher-name>
+    </element-citation>
+  </ref>
+  <ref id="ref-traitlets">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>IPython Development Team</string-name>
+      </person-group>
+      <article-title>Traitlets: Lightweight eventful properties for python</article-title>
+      <publisher-name>GitHub repository: https://github.com/ipython/traitlets</publisher-name>
+    </element-citation>
+  </ref>
+  <ref id="ref-aiidalab">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Yakutovich</surname><given-names>Aliaksandr V.</given-names></name>
+        <name><surname>Eimre</surname><given-names>Kristjan</given-names></name>
+        <name><surname>Schütt</surname><given-names>Ole</given-names></name>
+        <name><surname>Talirz</surname><given-names>Leopold</given-names></name>
+        <name><surname>Adorf</surname><given-names>Carl S.</given-names></name>
+        <name><surname>Andersen</surname><given-names>Casper W.</given-names></name>
+        <name><surname>Ditler</surname><given-names>Edward</given-names></name>
+        <name><surname>Du</surname><given-names>Dou</given-names></name>
+        <name><surname>Passerone</surname><given-names>Daniele</given-names></name>
+        <name><surname>Smit</surname><given-names>Berend</given-names></name>
+        <name><surname>Marzari</surname><given-names>Nicola</given-names></name>
+        <name><surname>Pizzi</surname><given-names>Giovanni</given-names></name>
+        <name><surname>Pignedoli</surname><given-names>Carlo A.</given-names></name>
+      </person-group>
+      <article-title>AiiDAlab – an ecosystem for developing, executing, and sharing scientific workflows</article-title>
+      <source>Computational Materials Science</source>
+      <publisher-name>Elsevier BV</publisher-name>
+      <year iso-8601-date="2021-02">2021</year><month>02</month>
+      <volume>188</volume>
+      <issn>0927-0256</issn>
+      <uri>http://dx.doi.org/10.1016/j.commatsci.2020.110165</uri>
+      <pub-id pub-id-type="doi">10.1016/j.commatsci.2020.110165</pub-id>
+      <fpage>110165</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-supplementary-code">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Goscinski</surname><given-names>Alexander</given-names></name>
+        <name><surname>Baird</surname><given-names>Taylor James</given-names></name>
+        <name><surname>Du</surname><given-names>Dou</given-names></name>
+        <name><surname>Prado</surname><given-names>João</given-names></name>
+        <name><surname>Suman</surname><given-names>Divya</given-names></name>
+        <name><surname>Sodjargal</surname><given-names>Tulga-Erdene</given-names></name>
+        <name><surname>Bonella</surname><given-names>Sara</given-names></name>
+        <name><surname>Pizzi</surname><given-names>Giovanni</given-names></name>
+        <name><surname>Ceriotti</surname><given-names>Michele</given-names></name>
+      </person-group>
+      <article-title>Scicode-widgets: Supplementary code for figures</article-title>
+      <source>Zenodo</source>
+      <publisher-name>https://doi.org/10.5281/zenodo.15783260</publisher-name>
+    </element-citation>
+  </ref>
+  <ref id="ref-iam-notebooks">
+    <element-citation>
+      <article-title>Introduction to atomistic modeling, course notebooks</article-title>
+      <publisher-name>GitHub repository: https://github.com/ceriottm/iam-notebooks</publisher-name>
+    </element-citation>
+  </ref>
+  <ref id="ref-urcelay-olabarria_jupyter_2017">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Urcelay-Olabarria</surname><given-names>Irene</given-names></name>
+        <name><surname>Lazkoz</surname><given-names>Ruth</given-names></name>
+        <name><surname>Urrestilla</surname><given-names>Jon</given-names></name>
+        <name><surname>Leonardo</surname><given-names>Aritz</given-names></name>
+        <name><surname>Igartua</surname><given-names>Josu M.</given-names></name>
+      </person-group>
+      <article-title>Jupyter notebook as the physics experimental laboratory’s logbook - first approach:</article-title>
+      <source>Proceedings of the 9th international conference on computer supported education</source>
+      <publisher-name>SCITEPRESS - Science; Technology Publications</publisher-name>
+      <publisher-loc>Porto, Portugal</publisher-loc>
+      <year iso-8601-date="2017">2017</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-07-04">2025</year><month>07</month><day>04</day></date-in-citation>
+      <isbn>978-989-758-240-0</isbn>
+      <uri>http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0006352104580463</uri>
+      <pub-id pub-id-type="doi">10.5220/0006352104580463</pub-id>
+      <fpage>458</fpage>
+      <lpage>463</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tufino_using_2025">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tufino</surname><given-names>Eugenio</given-names></name>
+        <name><surname>Oss</surname><given-names>Stefano</given-names></name>
+        <name><surname>Alemani</surname><given-names>Micol</given-names></name>
+      </person-group>
+      <article-title>Using jupyter notebooks to foster computational skills and professional practice in an introductory physics lab course</article-title>
+      <source>Journal of Physics: Conference Series</source>
+      <year iso-8601-date="2025-02-01">2025</year><month>02</month><day>01</day>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-07-04">2025</year><month>07</month><day>04</day></date-in-citation>
+      <volume>2950</volume>
+      <issue>1</issue>
+      <issn>1742-6588</issn>
+      <uri>https://iopscience.iop.org/article/10.1088/1742-6596/2950/1/012022</uri>
+      <pub-id pub-id-type="doi">10.1088/1742-6596/2950/1/012022</pub-id>
+      <fpage>012022</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-bishop">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Bishop</surname><given-names>Christopher M.</given-names></name>
+      </person-group>
+      <source>Pattern recognition and machine learning (information science and statistics)</source>
+      <publisher-name>Springer-Verlag</publisher-name>
+      <publisher-loc>Berlin, Heidelberg</publisher-loc>
+      <year iso-8601-date="2006">2006</year>
+      <isbn>0387310738</isbn>
+      <fpage>144</fpage>
+      <lpage>146</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-selenium">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Selenium Development Team</string-name>
+      </person-group>
+      <article-title>Selenium browser automation project</article-title>
+      <publisher-name>https://www.selenium.dev</publisher-name>
+    </element-citation>
+  </ref>
+  <ref id="ref-jupyterlab">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Jupyter Development Team</string-name>
+      </person-group>
+      <article-title>JupyterLab computational environment</article-title>
+      <publisher-name>GitHub repository: https://github.com/jupyterlab/jupyterlab</publisher-name>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
