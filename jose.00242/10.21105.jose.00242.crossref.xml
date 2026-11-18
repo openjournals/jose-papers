@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20260610075656-6f4fcedf9b2db497bbae85de1b5ae6a63663f4aa</doi_batch_id>
+    <timestamp>20260610075656</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>06</month>
+          <year>2026</year>
+        </publication_date>
+        <journal_volume>
+          <volume>9</volume>
+        </journal_volume>
+        <issue>100</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Scientific programming in Julia - An introductory course</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Andreas</given_name>
+            <surname>Kuhn</surname>
+            <affiliations>
+              <institution><institution_name>Center for Computational and Theoretical Biology , University of Würzburg</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0001-8146-2095</ORCID>
+          </person_name>
+          <person_name sequence="additional"
+                       contributor_role="author">
+            <given_name>Sabine C.</given_name>
+            <surname>Fischer</surname>
+            <affiliations>
+              <institution><institution_name>Center for Computational and Theoretical Biology , University of Würzburg</institution_name></institution>
+            </affiliations>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>06</month>
+          <day>10</day>
+          <year>2026</year>
+        </publication_date>
+        <pages>
+          <first_page>242</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00242</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.20613017</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/242</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00242</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00242</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00242.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="andreaskuhn_how_2022">
+            <article_title>How to solve the same numerical Problem in 7 different Programming Languages</article_title>
+            <author>Kuhn</author>
+            <journal_title>Medium</journal_title>
+            <cYear>2022</cYear>
+            <unstructured_citation>Kuhn, A. (2022). How to solve the same numerical Problem in 7 different Programming Languages. In Medium. https://medium.com/@andreaskuhn92/ how-to-solve-the-same-numerical-problem-in-7-different-programming-languages-a64daac3ed64</unstructured_citation>
+          </citation>
+          <citation key="perkel_julia_2019">
+            <article_title>Julia: Come for the syntax, stay for the speed</article_title>
+            <author>Perkel</author>
+            <journal_title>Nature</journal_title>
+            <issue>7767</issue>
+            <volume>572</volume>
+            <doi>10.1038/d41586-019-02310-3</doi>
+            <cYear>2019</cYear>
+            <unstructured_citation>Perkel, J. M. (2019). Julia: Come for the syntax, stay for the speed. Nature, 572(7767), 141–142. https://doi.org/10.1038/d41586-019-02310-3</unstructured_citation>
+          </citation>
+          <citation key="bezanson_julia_2012">
+            <article_title>Julia: A Fast Dynamic Language for Technical Computing</article_title>
+            <author>Bezanson</author>
+            <doi>10.48550/arXiv.1209.5145</doi>
+            <cYear>2012</cYear>
+            <unstructured_citation>Bezanson, J., Karpinski, S., Shah, V. B., &amp; Edelman, A. (2012). Julia: A Fast Dynamic Language for Technical Computing. arXiv. https://doi.org/10.48550/arXiv.1209.5145</unstructured_citation>
+          </citation>
+          <citation key="gao_julia_2020">
+            <article_title>Julia language in machine learning: Algorithms, applications, and open issues</article_title>
+            <author>Gao</author>
+            <journal_title>Computer Science Review</journal_title>
+            <volume>37</volume>
+            <doi>10.1016/j.cosrev.2020.100254</doi>
+            <issn>1574-0137</issn>
+            <cYear>2020</cYear>
+            <unstructured_citation>Gao, K., Mei, G., Piccialli, F., Cuomo, S., Tu, J., &amp; Huo, Z. (2020). Julia language in machine learning: Algorithms, applications, and open issues. Computer Science Review, 37, 100254. https://doi.org/10.1016/j.cosrev.2020.100254</unstructured_citation>
+          </citation>
+          <citation key="roesch_julia_2021">
+            <article_title>Julia for Biologists</article_title>
+            <author>Roesch</author>
+            <doi>10.48550/arXiv.2109.09973</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Roesch, E., Greener, J. G., MacLean, A. L., Nassar, H., Rackauckas, C., Holy, T. E., &amp; Stumpf, M. P. H. (2021). Julia for Biologists. arXiv. https://doi.org/10.48550/arXiv.2109.09973</unstructured_citation>
+          </citation>
+          <citation key="kramer_quantumopticsjl_2018">
+            <article_title>QuantumOptics.jl: A Julia framework for simulating open quantum systems</article_title>
+            <author>Krämer</author>
+            <journal_title>Computer Physics Communications</journal_title>
+            <volume>227</volume>
+            <doi>10.1016/j.cpc.2018.02.004</doi>
+            <issn>0010-4655</issn>
+            <cYear>2018</cYear>
+            <unstructured_citation>Krämer, S., Plankensteiner, D., Ostermann, L., &amp; Ritsch, H. (2018). QuantumOptics.jl: A Julia framework for simulating open quantum systems. Computer Physics Communications, 227, 109–116. https://doi.org/10.1016/j.cpc.2018.02.004</unstructured_citation>
+          </citation>
+          <citation key="knopp_mrirecojl_2021">
+            <article_title>MRIReco.jl: An MRI reconstruction framework written in Julia</article_title>
+            <author>Knopp</author>
+            <journal_title>Magnetic Resonance in Medicine</journal_title>
+            <issue>3</issue>
+            <volume>86</volume>
+            <doi>10.1002/mrm.28792</doi>
+            <issn>1522-2594</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Knopp, T., &amp; Grosser, M. (2021). MRIReco.jl: An MRI reconstruction framework written in Julia. Magnetic Resonance in Medicine, 86(3), 1633–1646. https://doi.org/10.1002/mrm.28792</unstructured_citation>
+          </citation>
+          <citation key="coleman_matlab_2021">
+            <article_title>Matlab, Python, Julia: What to Choose in Economics?</article_title>
+            <author>Coleman</author>
+            <journal_title>Computational Economics</journal_title>
+            <issue>4</issue>
+            <volume>58</volume>
+            <doi>10.1007/s10614-020-09983-3</doi>
+            <issn>1572-9974</issn>
+            <cYear>2021</cYear>
+            <unstructured_citation>Coleman, C., Lyon, S., Maliar, L., &amp; Maliar, S. (2021). Matlab, Python, Julia: What to Choose in Economics? Computational Economics, 58(4), 1263–1288. https://doi.org/10.1007/s10614-020-09983-3</unstructured_citation>
+          </citation>
+          <citation key="gawron_quantuminformationjljulia_2018">
+            <article_title>QuantumInformation.jl—A Julia package for numerical computation in quantum information theory</article_title>
+            <author>Gawron</author>
+            <journal_title>PLOS ONE</journal_title>
+            <issue>12</issue>
+            <volume>13</volume>
+            <doi>10.1371/journal.pone.0209358</doi>
+            <issn>1932-6203</issn>
+            <cYear>2018</cYear>
+            <unstructured_citation>Gawron, P., Kurzyk, D., &amp; Pawela, Ł. (2018). QuantumInformation.jl—A Julia package for numerical computation in quantum information theory. PLOS ONE, 13(12), e0209358. https://doi.org/10.1371/journal.pone.0209358</unstructured_citation>
+          </citation>
+          <citation key="churavy_bridging_2022">
+            <article_title>Bridging HPC Communities through the Julia Programming Language</article_title>
+            <author>Churavy</author>
+            <doi>10.48550/arXiv.2211.02740</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Churavy, V., Godoy, W. F., Bauer, C., Ranocha, H., Schlottke-Lakemper, M., Räss, L., Blaschke, J., Giordano, M., Schnetter, E., Omlin, S., Vetter, J. S., &amp; Edelman, A. (2022). Bridging HPC Communities through the Julia Programming Language. arXiv. https://doi.org/10.48550/arXiv.2211.02740</unstructured_citation>
+          </citation>
+          <citation key="fernandes_new_2022">
+            <article_title>A new approach and code for spinning black holes in modified gravity</article_title>
+            <author>Fernandes</author>
+            <doi>10.48550/arXiv.2212.07293</doi>
+            <cYear>2022</cYear>
+            <unstructured_citation>Fernandes, P. G. S., &amp; Mulryne, D. J. (2022). A new approach and code for spinning black holes in modified gravity. arXiv. https://doi.org/10.48550/arXiv.2212.07293</unstructured_citation>
+          </citation>
+          <citation key="al_julia_nodate">
+            <article_title>Julia Micro-Benchmarks</article_title>
+            <author>Jeff Bezanson</author>
+            <cYear>2021</cYear>
+            <unstructured_citation>Jeff Bezanson, V. S., Stefan Karpinski. (2021). Julia Micro-Benchmarks. https://julialang.org/benchmarks/</unstructured_citation>
+          </citation>
+          <citation key="DanischKrumbiegel2021">
+            <article_title>Makie.jl: Flexible high-performance data visualization for julia</article_title>
+            <author>Danisch</author>
+            <journal_title>Journal of Open Source Software</journal_title>
+            <issue>65</issue>
+            <volume>6</volume>
+            <doi>10.21105/joss.03349</doi>
+            <cYear>2021</cYear>
+            <unstructured_citation>Danisch, S., &amp; Krumbiegel, J. (2021). Makie.jl: Flexible high-performance data visualization for julia. Journal of Open Source Software, 6(65), 3349. https://doi.org/10.21105/joss.03349</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>

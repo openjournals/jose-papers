@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">242</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00242</article-id>
+<title-group>
+<article-title>Scientific programming in Julia - An introductory
+course</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0001-8146-2095</contrib-id>
+<name>
+<surname>Kuhn</surname>
+<given-names>Andreas</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Fischer</surname>
+<given-names>Sabine C.</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>Center for Computational and Theoretical Biology ,
+University of Würzburg</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<volume>9</volume>
+<issue>100</issue>
+<fpage>242</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Julia</kwd>
+<kwd>course</kwd>
+<kwd>beginners</kwd>
+<kwd>plotting</kwd>
+<kwd>data analysis</kwd>
+<kwd>agent based model</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>This course provides an introduction into the scientific
+  programming language <monospace>Julia</monospace>. No previous
+  knowledge is necessary to follow the nine course lectures. Every
+  lecture is presented in Jupyter Notebooks. Code examples are shown
+  together with markdown cells explaining and elaborating on the code.
+  Additionally, general concepts about programming in
+  <monospace>Julia</monospace> are introduced. The lectures build on
+  each other and should be finished in numerical order. The first five
+  lectures cover the basic language syntax of
+  <monospace>Julia</monospace> (e.g. data types, operators, package
+  installation, functions, …). The last four lectures are more
+  specifically targeted towards scientific applications and cover the
+  following topics: plotting, import/export of numerical data, data
+  analysis and a simple agent-based simulation. Each lecture ends with
+  exercises, where the students directly apply the concepts that have
+  been introduced. Sample solutions for all exercises are provided.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>The <monospace>Julia</monospace> programming language first
+  appeared in 2012
+  (<xref alt="Bezanson et al., 2012" rid="ref-bezanson_julia_2012" ref-type="bibr">Bezanson
+  et al., 2012</xref>) and had been specifically designed for numerical
+  computation and data science. Since then, the combination of speed and
+  interactivity distinguishes <monospace>Julia</monospace> from other
+  languages in that realm. Over the years, it has undergone a rapidly
+  growing adaptation to various fields of science, ranging from black
+  holes
+  (<xref alt="Fernandes &amp; Mulryne, 2022" rid="ref-fernandes_new_2022" ref-type="bibr">Fernandes
+  &amp; Mulryne, 2022</xref>) to quantum systems
+  (<xref alt="Gawron et al., 2018" rid="ref-gawron_quantuminformationjljulia_2018" ref-type="bibr">Gawron
+  et al., 2018</xref>;
+  <xref alt="Krämer et al., 2018" rid="ref-kramer_quantumopticsjl_2018" ref-type="bibr">Krämer
+  et al., 2018</xref>) in physics to applications in biology
+  (<xref alt="Knopp &amp; Grosser, 2021" rid="ref-knopp_mrirecojl_2021" ref-type="bibr">Knopp
+  &amp; Grosser, 2021</xref>;
+  <xref alt="Roesch et al., 2021" rid="ref-roesch_julia_2021" ref-type="bibr">Roesch
+  et al., 2021</xref>), economics
+  (<xref alt="Coleman et al., 2021" rid="ref-coleman_matlab_2021" ref-type="bibr">Coleman
+  et al., 2021</xref>), machine learning
+  (<xref alt="Gao et al., 2020" rid="ref-gao_julia_2020" ref-type="bibr">Gao
+  et al., 2020</xref>) and many more. This fast acceptance of a new
+  programming language is quite remarkable, as programming languages are
+  a field that is historically known to be very slow at pivoting
+  (e.g. <monospace>Python</monospace> and <monospace>C++</monospace> are
+  both over 30 years old).</p>
+  <p>One reason for this is that <monospace>Julia</monospace> solves the
+  two language problem
+  (<xref alt="Perkel, 2019" rid="ref-perkel_julia_2019" ref-type="bibr">Perkel,
+  2019</xref>) that has been tormenting many researchers for decades. It
+  essentially means, that different specialized languages are used for
+  different tasks in the same project. To give an example,
+  <monospace>Python</monospace> or <monospace>Matlab</monospace> are
+  often used for plotting and fast prototyping, <monospace>R</monospace>
+  for statistical analyses and compiled languages like
+  <monospace>C/++</monospace> or <monospace>Fortran</monospace> for the
+  computationally heavy parts. Using two or more languages in one
+  project creates a lot of unnecessary overhead: Firstly, researcher
+  have to spend more time learning to code in two languages (especially
+  true for low level languages like <monospace>C/++</monospace> or
+  <monospace>Fortran</monospace>), and secondly, exchanging data and
+  logic between languages can be very tedious and time-consuming.</p>
+  <p>Julia solves this problem, as all the mentioned tasks can be
+  accomplished in Julia alone. Its simple syntax is heavily inspired by
+  Python, which allows equally fast prototyping
+  (<xref alt="Kuhn, 2022" rid="ref-andreaskuhn_how_2022" ref-type="bibr">Kuhn,
+  2022</xref>). The plotting package <monospace>Makie</monospace>
+  (<xref alt="Danisch &amp; Krumbiegel, 2021" rid="ref-DanischKrumbiegel2021" ref-type="bibr">Danisch
+  &amp; Krumbiegel, 2021</xref>) provides similar capabilities as
+  <monospace>matplotlib</monospace> in <monospace>Python</monospace> or
+  <monospace>ggplot2</monospace> in <monospace>R</monospace>. The meta
+  package <monospace>StatsKit</monospace> includes all necessary tools
+  to do sophisticated statistical analysis. And most importantly,
+  <monospace>Julia</monospace> is fast. Depending on the benchmark,
+  <monospace>Julia</monospace> is on pair or within a factor of 2 to
+  <monospace>C</monospace>
+  (<xref alt="Churavy et al., 2022" rid="ref-churavy_bridging_2022" ref-type="bibr">Churavy
+  et al., 2022</xref>;
+  <xref alt="Jeff Bezanson, 2021" rid="ref-al_julia_nodate" ref-type="bibr">Jeff
+  Bezanson, 2021</xref>).</p>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="Julia_all_new.png" />
+  <sec id="target-audience">
+    <title>Target audience</title>
+    <p>The main target audience of this course is scientists/students
+    who want to use or already use programming in their work. However,
+    no prerequisites apart from basic algebra and statistics (high
+    school level) are needed. Anybody with that requirement should be
+    able to follow the course without problems.</p>
+    <p>Intermediate Programmers who already have experience in other
+    languages should be able to finish the first five lessons quite
+    fast, as a lot of general programming concepts are introduced there
+    as well. But the last four more <monospace>Julia</monospace>
+    specific lessons should be very useful for them, too.</p>
+    <p>Advanced Programmers who are interested in
+    <monospace>Julia</monospace> should solely focus on the parts of the
+    last four <monospace>Julia</monospace> specific lessons that are of
+    interest to them.</p>
+    <p>Even though there are already free Julia courses available online
+    (<ext-link ext-link-type="uri" xlink:href="https://carpentries-incubator.github.io/julia-novice/">1</ext-link>,<ext-link ext-link-type="uri" xlink:href="https://www.datacamp.com/courses/introduction-to-julia">2</ext-link>,<ext-link ext-link-type="uri" xlink:href="https://juliaacademy.com/courses">3</ext-link>),
+    we believe, that this course offers great additional value for (new)
+    scientific programmers, as it does not require any prior knowledge,
+    is self-contained with chapters that build up on one another,
+    introduces many relevant topics for scientific applications and
+    offers exercises together with solutions to each chapter.</p>
+    <p>Therefore, we invite everybody to either use the course materials
+    in independent self study to learn <monospace>Julia</monospace> or
+    to use the course materials to teach Julia to others.</p>
+  </sec>
+</sec>
+<sec id="details-of-the-course">
+  <title>Details of the course</title>
+  <sec id="learning-objectives">
+    <title>Learning objectives</title>
+    <p>The learning resource aims to enable learners to:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p>use interactive notebooks</p>
+      </list-item>
+      <list-item>
+        <p>understand the basic structure of the
+        <monospace>Julia</monospace> programming language</p>
+      </list-item>
+      <list-item>
+        <p>use Julia in a scientifc context:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>import/export data</p>
+          </list-item>
+          <list-item>
+            <p>analyse data</p>
+          </list-item>
+          <list-item>
+            <p>plot data</p>
+          </list-item>
+          <list-item>
+            <p>write a simple simulation</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="content">
+    <title>Content</title>
+    <list list-type="order">
+      <list-item>
+        <p>Jupyter Notebooks</p>
+      </list-item>
+      <list-item>
+        <p>Package Installation</p>
+      </list-item>
+      <list-item>
+        <p>Datatypes</p>
+      </list-item>
+      <list-item>
+        <p>Conditional Iterators</p>
+      </list-item>
+      <list-item>
+        <p>Functions</p>
+      </list-item>
+      <list-item>
+        <p>Plotting</p>
+      </list-item>
+      <list-item>
+        <p>Import/Export</p>
+      </list-item>
+      <list-item>
+        <p>Data Analysis</p>
+      </list-item>
+      <list-item>
+        <p>Application: Simple Random Walk Simulation</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="instructional-design">
+    <title>Instructional design</title>
+    <p>The Jupyter notebooks contain four different types of cells: -
+    General explanations - Executable code examples - Exercises - Meta
+    comments/hints/notes</p>
+    <p>The first three cell types are essential in understanding the
+    contents of the course. The exercises are divided into three
+    difficulties: easy, medium and hard. Easy and medium exercises can
+    be solved using the content of the course alone, whereas some hard
+    exercises require additional research to transfer the acquired
+    knowledge to new problems. The “meta” cells offer additional but
+    non-essential information. This can be comments about the
+    differences of <monospace>Julia</monospace> compared to other
+    languages, advice on good coding practices, etc. While first time
+    programmers can skip these cells if they want to, we expect the meta
+    cells to be particularly useful for already experienced programmers
+    switching to <monospace>Julia</monospace>.</p>
+  </sec>
+</sec>
+<sec id="experience-of-use">
+  <title>Experience of use</title>
+  <p>We started using <monospace>Julia</monospace> in our own work out
+  of frustration with the execution speed of raw Python. The choice of
+  <monospace>Julia</monospace> over other compiled and fast languages
+  like C/++, FORTRAN or Rust was easy for us because
+  <monospace>Julia</monospace> allowed us to keep the familiar and
+  convenient interactive development workflow that Python
+  established.</p>
+  <p>During the transition, we also had to learn
+  <monospace>Julia</monospace> from scratch. And what is the best way to
+  learn something new? Right, teaching it. Therefore, we developed this
+  course to educate ourselves and new members of our group on
+  <monospace>Julia</monospace>. Since the beginning of 2022, fifteen
+  undergrad and master students have completed the material as a
+  self-study course. Furthermore, we have been providing the course
+  material on our website as a free download since March 2022. The
+  feedback was used to iteratively improve the course.</p>
+  <p>We believe that the course has reached a level of maturity so that
+  it offers great value to everybody who wants to learn or teach
+  <monospace>Julia</monospace>. We are convinced that the course could
+  be readily taught as part of an undergraduate or graduate program. A
+  suitable format would be a block course where, in the morning, there
+  is a teaching block of one or two lessons (depending on the size), and
+  in the afternoon, students work alone or in groups on the exercises.
+  In the evening or the next day, there could be a session where the
+  solutions to the exercises are presented, and any questions regarding
+  the exercises are answered.</p>
+  <p>Therefore, we invite everybody to either use the course materials
+  in independent self study to learn <monospace>Julia</monospace> or to
+  use the course materials to teach <monospace>Julia</monospace> to
+  others.</p>
+  <sec id="acknowledgements">
+    <title>Acknowledgements</title>
+    <p>We acknowledge the contributions from Simon Schardt, Christopher
+    Nauroth-Kreß, Alexander Leipold, Kilan Volmer and the various other
+    students who served as beta testers and proof readers for this
+    course.</p>
+  </sec>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-andreaskuhn_how_2022">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Kuhn</surname><given-names>Andreas</given-names></name>
+      </person-group>
+      <article-title>How to solve the same numerical Problem in 7 different Programming Languages</article-title>
+      <source>Medium</source>
+      <year iso-8601-date="2022-06">2022</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <uri>https://medium.com/@andreaskuhn92/
+      	how-to-solve-the-same-numerical-problem-in-7-different-programming-languages-a64daac3ed64</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-perkel_julia_2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Perkel</surname><given-names>Jeffrey M.</given-names></name>
+      </person-group>
+      <article-title>Julia: Come for the syntax, stay for the speed</article-title>
+      <source>Nature</source>
+      <year iso-8601-date="2019-07">2019</year><month>07</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <volume>572</volume>
+      <issue>7767</issue>
+      <uri>https://www.nature.com/articles/d41586-019-02310-3</uri>
+      <pub-id pub-id-type="doi">10.1038/d41586-019-02310-3</pub-id>
+      <fpage>141</fpage>
+      <lpage>142</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-bezanson_julia_2012">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Bezanson</surname><given-names>Jeff</given-names></name>
+        <name><surname>Karpinski</surname><given-names>Stefan</given-names></name>
+        <name><surname>Shah</surname><given-names>Viral B.</given-names></name>
+        <name><surname>Edelman</surname><given-names>Alan</given-names></name>
+      </person-group>
+      <article-title>Julia: A Fast Dynamic Language for Technical Computing</article-title>
+      <publisher-name>arXiv</publisher-name>
+      <year iso-8601-date="2012-09">2012</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <uri>http://arxiv.org/abs/1209.5145</uri>
+      <pub-id pub-id-type="doi">10.48550/arXiv.1209.5145</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-gao_julia_2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gao</surname><given-names>Kaifeng</given-names></name>
+        <name><surname>Mei</surname><given-names>Gang</given-names></name>
+        <name><surname>Piccialli</surname><given-names>Francesco</given-names></name>
+        <name><surname>Cuomo</surname><given-names>Salvatore</given-names></name>
+        <name><surname>Tu</surname><given-names>Jingzhi</given-names></name>
+        <name><surname>Huo</surname><given-names>Zenan</given-names></name>
+      </person-group>
+      <article-title>Julia language in machine learning: Algorithms, applications, and open issues</article-title>
+      <source>Computer Science Review</source>
+      <year iso-8601-date="2020-08">2020</year><month>08</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <volume>37</volume>
+      <issn>1574-0137</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S157401372030071X</uri>
+      <pub-id pub-id-type="doi">10.1016/j.cosrev.2020.100254</pub-id>
+      <fpage>100254</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-roesch_julia_2021">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Roesch</surname><given-names>Elisabeth</given-names></name>
+        <name><surname>Greener</surname><given-names>Joe G.</given-names></name>
+        <name><surname>MacLean</surname><given-names>Adam L.</given-names></name>
+        <name><surname>Nassar</surname><given-names>Huda</given-names></name>
+        <name><surname>Rackauckas</surname><given-names>Christopher</given-names></name>
+        <name><surname>Holy</surname><given-names>Timothy E.</given-names></name>
+        <name><surname>Stumpf</surname><given-names>Michael P. H.</given-names></name>
+      </person-group>
+      <article-title>Julia for Biologists</article-title>
+      <publisher-name>arXiv</publisher-name>
+      <year iso-8601-date="2021-09">2021</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <uri>http://arxiv.org/abs/2109.09973</uri>
+      <pub-id pub-id-type="doi">10.48550/arXiv.2109.09973</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-kramer_quantumopticsjl_2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Krämer</surname><given-names>Sebastian</given-names></name>
+        <name><surname>Plankensteiner</surname><given-names>David</given-names></name>
+        <name><surname>Ostermann</surname><given-names>Laurin</given-names></name>
+        <name><surname>Ritsch</surname><given-names>Helmut</given-names></name>
+      </person-group>
+      <article-title>QuantumOptics.jl: A Julia framework for simulating open quantum systems</article-title>
+      <source>Computer Physics Communications</source>
+      <year iso-8601-date="2018-06">2018</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <volume>227</volume>
+      <issn>0010-4655</issn>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0010465518300328</uri>
+      <pub-id pub-id-type="doi">10.1016/j.cpc.2018.02.004</pub-id>
+      <fpage>109</fpage>
+      <lpage>116</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-knopp_mrirecojl_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Knopp</surname><given-names>Tobias</given-names></name>
+        <name><surname>Grosser</surname><given-names>Mirco</given-names></name>
+      </person-group>
+      <article-title>MRIReco.jl: An MRI reconstruction framework written in Julia</article-title>
+      <source>Magnetic Resonance in Medicine</source>
+      <year iso-8601-date="2021">2021</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <volume>86</volume>
+      <issue>3</issue>
+      <issn>1522-2594</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.28792</uri>
+      <pub-id pub-id-type="doi">10.1002/mrm.28792</pub-id>
+      <fpage>1633</fpage>
+      <lpage>1646</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-coleman_matlab_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Coleman</surname><given-names>Chase</given-names></name>
+        <name><surname>Lyon</surname><given-names>Spencer</given-names></name>
+        <name><surname>Maliar</surname><given-names>Lilia</given-names></name>
+        <name><surname>Maliar</surname><given-names>Serguei</given-names></name>
+      </person-group>
+      <article-title>Matlab, Python, Julia: What to Choose in Economics?</article-title>
+      <source>Computational Economics</source>
+      <year iso-8601-date="2021-12">2021</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <volume>58</volume>
+      <issue>4</issue>
+      <issn>1572-9974</issn>
+      <uri>https://doi.org/10.1007/s10614-020-09983-3</uri>
+      <pub-id pub-id-type="doi">10.1007/s10614-020-09983-3</pub-id>
+      <fpage>1263</fpage>
+      <lpage>1288</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-gawron_quantuminformationjljulia_2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gawron</surname><given-names>Piotr</given-names></name>
+        <name><surname>Kurzyk</surname><given-names>Dariusz</given-names></name>
+        <name><surname>Pawela</surname><given-names>Łukasz</given-names></name>
+      </person-group>
+      <article-title>QuantumInformation.jl—A Julia package for numerical computation in quantum information theory</article-title>
+      <source>PLOS ONE</source>
+      <year iso-8601-date="2018-12">2018</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <volume>13</volume>
+      <issue>12</issue>
+      <issn>1932-6203</issn>
+      <uri>https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0209358</uri>
+      <pub-id pub-id-type="doi">10.1371/journal.pone.0209358</pub-id>
+      <fpage>e0209358</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-churavy_bridging_2022">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Churavy</surname><given-names>Valentin</given-names></name>
+        <name><surname>Godoy</surname><given-names>William F.</given-names></name>
+        <name><surname>Bauer</surname><given-names>Carsten</given-names></name>
+        <name><surname>Ranocha</surname><given-names>Hendrik</given-names></name>
+        <name><surname>Schlottke-Lakemper</surname><given-names>Michael</given-names></name>
+        <name><surname>Räss</surname><given-names>Ludovic</given-names></name>
+        <name><surname>Blaschke</surname><given-names>Johannes</given-names></name>
+        <name><surname>Giordano</surname><given-names>Mosè</given-names></name>
+        <name><surname>Schnetter</surname><given-names>Erik</given-names></name>
+        <name><surname>Omlin</surname><given-names>Samuel</given-names></name>
+        <name><surname>Vetter</surname><given-names>Jeffrey S.</given-names></name>
+        <name><surname>Edelman</surname><given-names>Alan</given-names></name>
+      </person-group>
+      <article-title>Bridging HPC Communities through the Julia Programming Language</article-title>
+      <publisher-name>arXiv</publisher-name>
+      <year iso-8601-date="2022-11">2022</year><month>11</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <uri>http://arxiv.org/abs/2211.02740</uri>
+      <pub-id pub-id-type="doi">10.48550/arXiv.2211.02740</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-fernandes_new_2022">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Fernandes</surname><given-names>Pedro G. S.</given-names></name>
+        <name><surname>Mulryne</surname><given-names>David J.</given-names></name>
+      </person-group>
+      <article-title>A new approach and code for spinning black holes in modified gravity</article-title>
+      <publisher-name>arXiv</publisher-name>
+      <year iso-8601-date="2022-12">2022</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-23">2023</year><month>01</month><day>23</day></date-in-citation>
+      <uri>http://arxiv.org/abs/2212.07293</uri>
+      <pub-id pub-id-type="doi">10.48550/arXiv.2212.07293</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-al_julia_nodate">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Jeff Bezanson</surname><given-names>Viral Shah</given-names><suffix>Stefan Karpinski</suffix></name>
+      </person-group>
+      <article-title>Julia Micro-Benchmarks</article-title>
+      <year iso-8601-date="2021-12">2021</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2023-01-24">2023</year><month>01</month><day>24</day></date-in-citation>
+      <uri>https://julialang.org/benchmarks/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-DanischKrumbiegel2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Danisch</surname><given-names>Simon</given-names></name>
+        <name><surname>Krumbiegel</surname><given-names>Julius</given-names></name>
+      </person-group>
+      <article-title>Makie.jl: Flexible high-performance data visualization for julia</article-title>
+      <source>Journal of Open Source Software</source>
+      <publisher-name>The Open Journal</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>6</volume>
+      <issue>65</issue>
+      <uri>https://doi.org/10.21105/joss.03349</uri>
+      <pub-id pub-id-type="doi">10.21105/joss.03349</pub-id>
+      <fpage>3349</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
