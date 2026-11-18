@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">376</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00376</article-id>
+<title-group>
+<article-title>BayesCog: A freely available course in Bayesian
+statistics and hierarchical Bayesian modeling for psychological
+science</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9586-595X</contrib-id>
+<name>
+<surname>Zhang</surname>
+<given-names>Lei</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-3"/>
+<xref ref-type="aff" rid="aff-4"/>
+<xref ref-type="aff" rid="aff-5"/>
+<xref ref-type="aff" rid="aff-6"/>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0009-0000-6584-4579</contrib-id>
+<name>
+<surname>Sohail</surname>
+<given-names>Aamir</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+<xref ref-type="aff" rid="aff-2"/>
+<xref ref-type="aff" rid="aff-3"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>School of Psychology, University of Birmingham, Birmingham,
+B15 2TT, UK</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Centre for Human Brain Health, University of Birmingham,
+Birmingham, B15 2TT, UK</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Institute for Mental Health, University of Birmingham,
+Birmingham, B15 2TT, UK</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-4">
+<institution-wrap>
+<institution>Centre for Developmental Science, University of Birmingham,
+B15 2TT, Birmingham, UK</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-5">
+<institution-wrap>
+<institution>Social, Cognitive and Affective Neuroscience Unit,
+Department of Cognition, Emotion, and Methods, Faculty of Psychology,
+University of Vienna, Vienna, 1010, Austria</institution>
+</institution-wrap>
+</aff>
+<aff id="aff-6">
+<institution-wrap>
+<institution>Institute of Systems Neuroscience, University Medical
+Center Hamburg-Eppendorf, Hamburg, 20246, Germany</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-07-12">
+<day>12</day>
+<month>7</month>
+<year>2025</year>
+</pub-date>
+<volume>9</volume>
+<issue>102</issue>
+<fpage>376</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>Computational Modeling</kwd>
+<kwd>Cognitive Modeling</kwd>
+<kwd>Model Comparison</kwd>
+<kwd>Reinforcement Learning</kwd>
+<kwd>Behavioral Science</kwd>
+<kwd>Cognitive Science</kwd>
+<kwd>Data Science</kwd>
+<kwd>Cognitive Neuroscience</kwd>
+<kwd>Bayesian Statistics</kwd>
+<kwd>Hierarchical Models</kwd>
+<kwd>R</kwd>
+<kwd>Stan</kwd>
+<kwd>RStan</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>We present
+  <ext-link ext-link-type="uri" xlink:href="https://alpn-lab.github.io/BayesCog/">BayesCog</ext-link>,
+  an openly-available online course for the computational modeling of
+  human behavior (i.e., cognitive modeling) using Bayesian inference,
+  with reinforcement learning as a core example throughout the course.
+  Assuming little to no prior experience, users of this course will be
+  formally grounded in key concepts including Bayesian statistics and
+  reinforcement learning, and practically, will build, assess, compare,
+  and validate models using the R interface to the Stan programming
+  language, RStan. Starting with binary choice models, users will learn
+  to estimate parameters representing latent components of behavior by
+  fitting reinforcement learning models, both at the individual and
+  group-level, and eventually with hierarchical structures.</p>
+  <p>The course is generally suitable for those interested in developing
+  models of human cognition at any level of experience. In making the
+  course openly available, we aim for computational modeling under the
+  Bayesian approach to be more strongly represented in the psychological
+  sciences.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Computational modeling is a general framework that uses
+  mathematical equations to infer unobserved latent processes,
+  variables, and parameters from observed data. Whilst implemented in
+  other disciplines (e.g., physics, chemistry, and, astronomy) for
+  centuries, its application specifically towards understanding the
+  human mind (i.e., learning, memory, decision-making, language)
+  (<xref alt="Farrell &amp; Lewandowsky, 2018" rid="ref-Farrell2018" ref-type="bibr">Farrell
+  &amp; Lewandowsky, 2018</xref>) is a relatively recent approach (known
+  as cognitive modeling), but one increasing in popularity
+  (<xref alt="Palminteri et al., 2017" rid="ref-Palminteri2017" ref-type="bibr">Palminteri
+  et al., 2017</xref>). By formalising cognitive processes as
+  mathematical operations and free parameters, cognitive models generate
+  specific, testable hypotheses about observable behavior, which can be
+  objectively compared, verified, and falsified
+  (<xref alt="Guest &amp; Martin, 2021" rid="ref-Guest2021" ref-type="bibr">Guest
+  &amp; Martin, 2021</xref>;
+  <xref alt="Palminteri et al., 2017" rid="ref-Palminteri2017" ref-type="bibr">Palminteri
+  et al., 2017</xref>;
+  <xref alt="W. Pan et al., 2025" rid="ref-Pan2022" ref-type="bibr">W.
+  Pan et al., 2025</xref>;
+  <xref alt="Rocca &amp; Yarkoni, 2021" rid="ref-Rocca2021" ref-type="bibr">Rocca
+  &amp; Yarkoni, 2021</xref>;
+  <xref alt="Zhang et al., 2020" rid="ref-Zhang2020" ref-type="bibr">Zhang
+  et al., 2020</xref>). When combined with other modalities of
+  measurement, such as functional magnetic resonance imaging (fMRI),
+  cognitive models present a key framework for understanding how the
+  brain implements cognitive processes such as decision making and
+  (social) learning
+  (<xref alt="Eckstein et al., 2021" rid="ref-Eckstein2021" ref-type="bibr">Eckstein
+  et al., 2021</xref>;
+  <xref alt="FeldmanHall &amp; Nassar, 2021" rid="ref-FeldmanHall2021" ref-type="bibr">FeldmanHall
+  &amp; Nassar, 2021</xref>) and their aberration in mental health
+  disorders
+  (<xref alt="Hauser et al., 2022" rid="ref-Hauser2022" ref-type="bibr">Hauser
+  et al., 2022</xref>;
+  <xref alt="Huys et al., 2016" rid="ref-Huys2016" ref-type="bibr">Huys
+  et al., 2016</xref>;
+  <xref alt="Sohail &amp; Zhang, 2024" rid="ref-Sohail2024" ref-type="bibr">Sohail
+  &amp; Zhang, 2024</xref>).</p>
+  <p>Complementing this approach is the application of Bayesian methods
+  for parameter estimation
+  (<xref alt="Annis &amp; Palmeri, 2018" rid="ref-Annis2018" ref-type="bibr">Annis
+  &amp; Palmeri, 2018</xref>), which applies the Bayes rule to obtain
+  the posterior distribution of model parameters given the observed data
+  (1):</p>
+  <p><disp-formula><alternatives>
+  <tex-math><![CDATA[P(\theta|D) = \frac{P(D|\theta) \cdot P(\theta)}{P(D)}]]></tex-math>
+  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>θ</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>D</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>D</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>θ</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>⋅</mml:mo><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>θ</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>D</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></disp-formula></p>
+  <p>where <inline-formula><alternatives>
+  <tex-math><![CDATA[P(\theta|D)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>θ</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>D</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+  is the posterior distribution, <inline-formula><alternatives>
+  <tex-math><![CDATA[P(D|\theta)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>D</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>θ</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+  is the likelihood, <inline-formula><alternatives>
+  <tex-math><![CDATA[P(\theta)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>θ</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+  is the prior distribution, and <inline-formula><alternatives>
+  <tex-math><![CDATA[P(D)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>P</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>D</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+  is the marginal likelihood.</p>
+  <p>Bayesian methods confer advantages over frequentist approaches
+  (e.g., Maximum Likelihood Estimation, MLE), by quantifying the
+  uncertainty, and when implemented hierarchically, permit simultaneous
+  estimation of individual and group-level parameters while
+  appropriately pooling information across participants
+  (<xref alt="M. D. Lee, 2011" rid="ref-Lee2011" ref-type="bibr">M. D.
+  Lee, 2011</xref>). Historically restrictive due to their computational
+  burden, these methods are now more accessible though the development
+  of multiple programming languages and software such as JAGS
+  (<xref alt="Plummer, 2003" rid="ref-Plummer2003" ref-type="bibr">Plummer,
+  2003</xref>) and Stan
+  (<xref alt="Carpenter et al., 2017" rid="ref-Carpenter2017" ref-type="bibr">Carpenter
+  et al., 2017</xref>) which optimize the sampling process used for
+  parameter estimation using approaches such as Markov chain Monte Carlo
+  (MCMC).</p>
+  <p>Using Bayesian models of cognition in one’s own research requires a
+  conceptual understanding of both Bayesian statistics and cognitive
+  modeling, as well as the practical skills to translate these models
+  into computer code. Textbooks
+  (<xref alt="Kruschke, 2014" rid="ref-Kruschke2014" ref-type="bibr">Kruschke,
+  2014</xref>;
+  <xref alt="Lambert, 2018" rid="ref-Lambert2018" ref-type="bibr">Lambert,
+  2018</xref>;
+  <xref alt="M. D. Lee &amp; Wagenmakers, 2014" rid="ref-Lee2014" ref-type="bibr">M.
+  D. Lee &amp; Wagenmakers, 2014</xref>;
+  <xref alt="McElreath, 2018" rid="ref-McElreath2018" ref-type="bibr">McElreath,
+  2018</xref>) and tutorial papers
+  (<xref alt="Baribault &amp; Collins, 2025" rid="ref-Baribault2023" ref-type="bibr">Baribault
+  &amp; Collins, 2025</xref>;
+  <xref alt="Lockwood &amp; Klein-Flügge, 2021" rid="ref-Lockwood2021" ref-type="bibr">Lockwood
+  &amp; Klein-Flügge, 2021</xref>;
+  <xref alt="Wilson &amp; Collins, 2019" rid="ref-Wilson2019" ref-type="bibr">Wilson
+  &amp; Collins, 2019</xref>;
+  <xref alt="Zhang et al., 2020" rid="ref-Zhang2020" ref-type="bibr">Zhang
+  et al., 2020</xref>) have made learning these skills more accessible,
+  but are often not freely available, and challenging for researchers,
+  especially early career researchers with little to no prior
+  experience. Additionally, whilst free, online courses for the
+  computational modeling of cognition currently exist, these are few and
+  far between, and exclusively cover non-Bayesian implementations in
+  Python
+  (<xref alt="Rhoads &amp; Gan, 2022" rid="ref-Rhoads2022" ref-type="bibr">Rhoads
+  &amp; Gan, 2022</xref>) and MATLAB
+  (<xref alt="O’Reilly &amp; Ouden, 2015" rid="ref-OReilly2015" ref-type="bibr">O’Reilly
+  &amp; Ouden, 2015</xref>), as well as Bayesian approaches in Python
+  (<xref alt="Niv Lab, 2021" rid="ref-NivLab2021" ref-type="bibr">Niv
+  Lab, 2021</xref>). A full course implementing Bayesian models of
+  cognition through the open source R programming language is therefore
+  a valuable yet currently non-existent resource.</p>
+  <p>To this end, BayesCog was originally developed by Lei Zhang (L.Z.)
+  at UKE Hamburg as a short course in Bayesian statistics and cognitive
+  modeling for PhD students. The course was subsequently expanded by
+  L.Z. at the University of Vienna, where the course received a
+  Commendation Award from the Society for the Improvement of
+  Psychological Science (SIPS), as well as an Early Career Teaching
+  Award by the University. To make these materials more widely and
+  openly available, Aamir Sohail, a PhD student working with L.Z. at the
+  University of Birmingham, subsequently converted, edited, and expanded
+  the source material into the present online course. Both authors are
+  active researchers in computational modeling and cognitive
+  neuroscience who have applied these Bayesian methods in their own
+  empirical work which investigates the cognitive processes of learning
+  and decision making in social contexts
+  (<xref alt="Crawley et al., 2020" rid="ref-Crawley2020" ref-type="bibr">Crawley
+  et al., 2020</xref>;
+  <xref alt="Sohail et al., 2026" rid="ref-Sohail2026" ref-type="bibr">Sohail
+  et al., 2026</xref>;
+  <xref alt="Zhang et al., 2020" rid="ref-Zhang2020" ref-type="bibr">Zhang
+  et al., 2020</xref>;
+  <xref alt="Zhang &amp; Gläscher, 2020" rid="ref-ZhangGlascher2020" ref-type="bibr">Zhang
+  &amp; Gläscher, 2020</xref>).</p>
+</sec>
+<sec id="learning-objectives">
+  <title>Learning Objectives</title>
+  <p>In the course, students will:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Build a foundational knowledge of Bayesian statistics and
+      inference, and how it differs from frequentist definitions of
+      probability</p>
+    </list-item>
+    <list-item>
+      <p>Understand Bayesian parameter estimation and the conceptual
+      basis of sampling techniques including Markov chain Monte Carlo
+      (MCMC)</p>
+    </list-item>
+    <list-item>
+      <p>Understand how Bayesian statistics can be applied to uncover
+      latent processes and parameters of cognition through cognitive
+      modeling</p>
+    </list-item>
+    <list-item>
+      <p>Learn basic reinforcement learning (RL) concepts and build a
+      simple RL model (Rescorla-Wagner) using RStan</p>
+    </list-item>
+    <list-item>
+      <p>Be able to evaluate model performance through model comparison,
+      parameter recovery and posterior predictive checks</p>
+    </list-item>
+  </list>
+  <p>The course is roughly split into two sections, where students
+  firstly learn Bayesian statistics and gain a basic familiarity with
+  programming in Workshops 1-3 (Table 1). Subsequently, in Workshops 4-9
+  these skills are practically applied by building and fitting cognitive
+  models in Stan (Table 2). Additionally, prior to the first workshop,
+  the course begins by summarizing the broader philosophy in which the
+  techniques and methods are implemented. Specifically, this concerns
+  Marr’s influential three levels of analysis
+  (<xref alt="Marr, 1982" rid="ref-Marr1982" ref-type="bibr">Marr,
+  1982</xref>), which describe how algorithmic-level (as opposed to
+  computational and implementation levels) models can help understand
+  behavior. Doing so shapes the course material within this framework,
+  demonstrating the necessity for building strong theories in psychology
+  (<xref alt="Press et al., 2022" rid="ref-Press2022" ref-type="bibr">Press
+  et al., 2022</xref>). Assuming no prior experience with programming,
+  the course properly (Workshop 01) begins with a basic introduction to
+  the R programming language and the RStudio interface
+  (<xref alt="RStudio Team, 2020" rid="ref-RStudio2020" ref-type="bibr">RStudio
+  Team, 2020</xref>). This introductory workshop first provides a
+  general introduction to data structures, variables, and packages,
+  after which students will work with simulated data from a reversal
+  learning task, performing basic summary statistics including
+  correlation and regression, and visualizing the results using the
+  <monospace>ggplot2</monospace> package
+  (<xref alt="Wickham, 2016" rid="ref-Wickham2016" ref-type="bibr">Wickham,
+  2016</xref>).</p>
+  <p>In Workshop 02, students will be introduced to Bayesian statistics,
+  learning the differences between Bayesian and frequentist definitions
+  of probability. These concepts are put into practical use in Workshop
+  03, where the Bayesian approach is transformed from a purely
+  mathematical concept to a system where one can determine the values of
+  unknown parameters from data. The goal of Bayesian inference -
+  computing the probability distribution of model parameters given the
+  observed data – is also introduced, together with sampling procedures
+  which approximate the posterior distribution e.g., Markov chain Monte
+  Carlo (MCMC). Workshop 04 subsequently introduces students to the Stan
+  programming language
+  (<xref alt="Carpenter et al., 2017" rid="ref-Carpenter2017" ref-type="bibr">Carpenter
+  et al., 2017</xref>) and it’s R interface RStan
+  (<xref alt="Stan Development Team, 2024" rid="ref-StanTeam2024" ref-type="bibr">Stan
+  Development Team, 2024</xref>). Following an overview of Stan syntax,
+  students will construct a simple binomial model for a coin flipping
+  experiment. Workshop 5 builds upon this introductory workshop by
+  introducing some specific properties and advantageous features of Stan
+  (as opposed to other packages like JAGs), including vectorization and
+  variable declaration, and introduces two more models: the Bernoulli
+  model and linear regression.</p>
+  <p>Having built a solid foundation of understanding Bayesian
+  statistics in Workshops 1-5, in Workshops 6-8, students will learn how
+  these methods can be used to infer latent cognitive processes. In
+  Workshop 6, a basic overview to the principles of cognitive modeling
+  is followed by an introduction to reinforcement learning, a popular
+  theory of human behavior that has been widely used in the last decades
+  (<xref alt="Daw et al., 2011" rid="ref-Daw2011" ref-type="bibr">Daw et
+  al., 2011</xref>;
+  <xref alt="Dayan &amp; Niv, 2008" rid="ref-Dayan2008" ref-type="bibr">Dayan
+  &amp; Niv, 2008</xref>;
+  <xref alt="D. Lee et al., 2012" rid="ref-Lee2012" ref-type="bibr">D.
+  Lee et al., 2012</xref>;
+  <xref alt="Niv, 2009" rid="ref-Niv2009" ref-type="bibr">Niv,
+  2009</xref>). To this end, we introduce a simple reinforcement
+  learning algorithm consisting of the Rescorla-Wagner model
+  (<xref alt="Rescorla &amp; Wagner, 1972" rid="ref-Rescorla1972" ref-type="bibr">Rescorla
+  &amp; Wagner, 1972</xref>) that uses an error-driven rule (e.g.,
+  through reward prediction error) to update value computation, and a
+  softmax choice rule quantifies the stochasticity and randomness in
+  human action. Students will then practically implement this model in
+  Stan, for simulated choice data for a single subject, before fitting
+  multiple subjects. Workshop 7 directly builds upon this topic by
+  introducing hierarchical Bayesian models
+  (<xref alt="D. Lee et al., 2012" rid="ref-Lee2012" ref-type="bibr">D.
+  Lee et al., 2012</xref>) for simultaneously estimating both group and
+  individual level parameters. Given that Bayesian cognitive models
+  often require troubleshooting for parameter estimation
+  (<xref alt="Baribault &amp; Collins, 2025" rid="ref-Baribault2023" ref-type="bibr">Baribault
+  &amp; Collins, 2025</xref>), optimization strategies are also
+  introduced in this workshop. Specifically, this covers Stan’s sampling
+  parameters and reparameterization; the latter being particularly
+  relevant for hierarchical models. Model comparison is introduced in
+  Workshop 8, with the basis behind model fitting, predictive accuracy
+  and information criterion firstly described. Students will
+  subsequently compare two RL models using the
+  <monospace>loo</monospace> package
+  (<xref alt="Vehtari et al., 2015" rid="ref-Vehtari2015" ref-type="bibr">Vehtari
+  et al., 2015</xref>) in R, and plot posterior predictive checks as a
+  measure of model validation. The final workshop (Workshop 9) describes
+  key strategies for code writing styles and code debugging in Stan,
+  using a purposely error-laden delay-discounting model
+  (<xref alt="M. D. Lee &amp; Wagenmakers, 2014" rid="ref-Lee2014" ref-type="bibr">M.
+  D. Lee &amp; Wagenmakers, 2014</xref>) for students to interactively
+  troubleshoot problematic code. To conclude, a published study
+  (<xref alt="Crawley et al., 2020" rid="ref-Crawley2020" ref-type="bibr">Crawley
+  et al., 2020</xref>) where computational models were implemented to
+  uncover learning differences is described, providing real-case
+  examples of model and parameter recovery.</p>
+  <p>All course workshops are accompanied by example data and scripts,
+  the latter provided in both uncompleted and completed versions where
+  appropriate. All software required for the course are open-source and
+  easy to install; instructions are provided in the ‘Course overview’
+  page. Whilst specific R packages (<monospace>rstan</monospace>,
+  <monospace>loo</monospace>, <monospace>ggplot2</monospace>) are
+  required, the course uses <monospace>renv</monospace>
+  (<xref alt="Ushey &amp; Wickham, 2023" rid="ref-Ushey2023" ref-type="bibr">Ushey
+  &amp; Wickham, 2023</xref>) to simplify the installation process.
+  Users simply run a single command which installs the required packages
+  for all successive R sessions. However, <monospace>renv</monospace>
+  only provides a simplified solution to reproducibility and can be
+  mired by system dependencies and versions of RStudio. Therefore, users
+  can alternatively, pull a pre-made Docker image building a container
+  locally to host the RStudio environment. This does not necessitate
+  users to have R or RStudio installed - only Docker Desktop -
+  maintaining a more consistent and reproducible development environment
+  across different systems and platforms. In either case, generating the
+  working environment requires minimal effort (Figure 1.). Detailed
+  guidance on how to recreate the working environment in both cases are
+  provided on the course website.</p>
+  <p><inline-graphic mimetype="image" mime-subtype="png" xlink:href="fig1.png">
+    <alt-text>Figure 1.</alt-text>
+  </inline-graphic> <bold>Figure 1.</bold> The course materials are
+  hosted on GitHub and can be downloaded locally using the
+  <monospace>git clone</monospace> command. Users have two options if
+  wanting to replicate the working environment for the course materials.
+  For working on one’s own installation and version of RStudio,
+  <monospace>renv</monospace> manages all required packages and
+  dependencies. Conversely, if users would like to work on a specific
+  RStudio version, they can pull the provided Docker image, which
+  installs the required R packages on an RStudio server. In either case,
+  the required dependencies are minimal (R/RStudio or Docker), and
+  recreating the environment only involves running one or two simple
+  commands. Icons from
+  <ext-link ext-link-type="uri" xlink:href="https://icons8.com/">icons8.com</ext-link></p>
+  <p>The course is designed to be delivered over the span of a semester,
+  with each workshop comprising approximately two to three hours. In
+  principle the course can accommodate a class of any size; however, as
+  students typically work through the materials hands-on, smaller
+  cohorts of around 10 to 20 students are likely to be best suited,
+  since debugging code and resolving individual technical issues can be
+  time-consuming. We recommend that the instructor is proficient in R
+  and Stan programming and has a strong understanding of Bayesian
+  statistics. Familiarity with concepts in experimental psychology and
+  neuroscience research is advantageous, to contextualize the example
+  tasks and models, but not necessary. Subsequently, the course may be
+  instructed by those experienced with Bayesian statistics and modeling
+  who are interested in the modeling of behavior. As the first workshop
+  introduces core programming concepts at a relatively brisk pace,
+  instructors teaching a programming-naive audience may wish to adapt
+  this portion of the course—for example, by allocating additional time
+  or directing students to supplementary resources—to ensure a solid
+  foundation is built before progressing.</p>
+  <p><bold>Table 1.</bold> Conceptual workshops (Weeks 1–3).</p>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Workshop</th>
+          <th>Topic</th>
+          <th>Focus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Workshop 1</td>
+          <td>Introduction to R and RStudio</td>
+          <td>Foundational programming in R: data structures, packages,
+          summary statistics and visualization</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Workshop 2</td>
+          <td>Introduction to Bayesian statistics</td>
+          <td>Bayesian versus frequentist definitions of
+          probability</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Workshop 3</td>
+          <td>Bayesian inference and parameter estimation</td>
+          <td>Posterior estimation and Markov chain Monte Carlo
+          sampling</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+  <p><bold>Table 2.</bold> Practical modeling workshops (Weeks 4–9).</p>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Workshop</th>
+          <th>Topic</th>
+          <th>Example task and model</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>Workshop 4</td>
+          <td>Introduction to Stan and RStan</td>
+          <td>Coin-flipping experiment; binomial model</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Workshop 5</td>
+          <td>Stan features, Bernoulli and regression</td>
+          <td>Coin flip and weight–height data; Bernoulli and linear
+          regression models</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Workshop 6</td>
+          <td>Reinforcement learning</td>
+          <td>Two-armed bandit task; Rescorla-Wagner RL model (single-
+          and multi-subject)</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Workshop 7</td>
+          <td>Hierarchical Bayesian modeling and optimization</td>
+          <td>Two-armed bandit task; hierarchical RL model</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Workshop 8</td>
+          <td>Model comparison and validation</td>
+          <td>Probabilistic reversal-learning task; simple and
+          fictitious-update RL models</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Workshop 9</td>
+          <td>Debugging in Stan</td>
+          <td>Memory-retention task; exponential-decay model</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</sec>
+<sec id="future-directions">
+  <title>Future Directions</title>
+  <p>The BayesCog course provides a general introduction to Bayesian
+  statistics and computational modeling within the context of
+  psychological research. Subsequently, the materials and topics could
+  easily be developed further. This includes using computational methods
+  with neuroimaging data
+  (<xref alt="Gläscher &amp; O’Doherty, 2010" rid="ref-Glascher2010" ref-type="bibr">Gläscher
+  &amp; O’Doherty, 2010</xref>;
+  <xref alt="Hollander et al., 2016" rid="ref-deHollander2016" ref-type="bibr">Hollander
+  et al., 2016</xref>), understanding behaviors in the social world
+  (<xref alt="Kutlikova et al., 2023" rid="ref-Kutlikova2023" ref-type="bibr">Kutlikova
+  et al., 2023</xref>;
+  <xref alt="Y. Pan et al., 2023" rid="ref-Pan2023" ref-type="bibr">Y.
+  Pan et al., 2023</xref>), and the theory-based modeling of psychiatric
+  disorders
+  (<xref alt="Maia et al., 2017" rid="ref-Maia2017" ref-type="bibr">Maia
+  et al., 2017</xref>;
+  <xref alt="Sohail &amp; Zhang, 2024" rid="ref-Sohail2024" ref-type="bibr">Sohail
+  &amp; Zhang, 2024</xref>;
+  <xref alt="Suter et al., 2025" rid="ref-Suter2025" ref-type="bibr">Suter
+  et al., 2025</xref>). Furthermore, the Stan programming language
+  remains technically challenging, leading to the development of
+  user-friendly packages for computational modeling
+  (<xref alt="Ahn et al., 2017" rid="ref-Ahn2017" ref-type="bibr">Ahn et
+  al., 2017</xref>). Tutorials on how to implement these packages could
+  further broaden the use of computational methods within the
+  psychological sciences. In the era of large language models (LLMs) and
+  generative AI, the audience are also encouraged to combine this course
+  with LLM tools such as ChatGPT to explore a more tailored learning
+  experience
+  (<xref alt="Lin &amp; Sohail, 2026" rid="ref-Lin2026" ref-type="bibr">Lin
+  &amp; Sohail, 2026</xref>;
+  <xref alt="Sohail &amp; Zhang, 2025" rid="ref-Sohail2025a" ref-type="bibr">Sohail
+  &amp; Zhang, 2025</xref>).</p>
+  <p>To this end, we openly receive feedback and suggestions from the
+  wider community. Any tutorial can be adopted, transformed, or built
+  upon for other educational purposes (e.g., courses, single class
+  sessions, workshops); the entire repository, comprising both the
+  course content and the accompanying code (the R scripts and Stan
+  models), is released under the MIT License. Broader comments can be
+  communicated on the
+  <ext-link ext-link-type="uri" xlink:href="https://github.com/Alpn-Lab/BayesCog/issues">GitHub
+  repository</ext-link> by either reporting an issue or requesting an
+  enhancement. On-the-other-hand, we recommend major changes to be made
+  communicated beforehand and – if appropriate - made directly by
+  forking the repository and pushing changes to the main branch. A
+  member of the contributing team will then review the changes. Accepted
+  contributions will be credited and acknowledged in the Contributors
+  section of the repository README.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p><ext-link ext-link-type="uri" xlink:href="https://sohaamir.github.io/">A.S.</ext-link>
+  would like to thank Lei Zhang for developing the initial version of
+  these materials, including slides, code, and GitHub repositories. A.S.
+  and
+  <ext-link ext-link-type="uri" xlink:href="https://lei-zhang.net/">L.Z</ext-link>
+  would also like to acknowledge existing open-source materials,
+  including Shawn Rhoads’ ‘Computational Models of Human Social Behavior
+  and Neuroscience’
+  (<xref alt="Rhoads &amp; Gan, 2022" rid="ref-Rhoads2022" ref-type="bibr">Rhoads
+  &amp; Gan, 2022</xref>), Luke Chang’s ‘DartBrains: An online open
+  access resource for learning functional neuroimaging analysis methods
+  in Python’
+  (<xref alt="Chang et al., 2020" rid="ref-Chang2020" ref-type="bibr">Chang
+  et al., 2020</xref>) and Magdalena Chechlacz’s ‘MRI on BEAR’
+  (<xref alt="Sohail et al., 2025" rid="ref-Sohail2025b" ref-type="bibr">Sohail
+  et al., 2025</xref>), who influenced the development of these
+  materials.</p>
+  <p>L.Z. is supported by the Wellcome Trust (228268/Z/23/Z) and Royal
+  Society Royal Society (IES\R3\243253). A.S. is supported by an MRC AIM
+  iCASE DTP Studentship (Ref: MR/W007002/1).</p>
+</sec>
+<sec id="author-contributions">
+  <title>Author Contributions</title>
+  <p>L.Z. created, designed and taught the original course materials by
+  developing the syllabus, writing the Stan and R code and creating and
+  interpreting the datasets. A.S. created the website, adding the
+  content by converting, editing and expanding the source material
+  written by L.Z. Both L.Z. and A.S. revised the course materials and
+  wrote the manuscript.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-Ahn2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ahn</surname><given-names>Woo-Young</given-names></name>
+        <name><surname>Haines</surname><given-names>Nathaniel</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+      </person-group>
+      <article-title>Revealing Neurocomputational Mechanisms of Reinforcement Learning and Decision-Making With the hBayesDM Package</article-title>
+      <source>Computational Psychiatry (Cambridge, Mass.)</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>1</volume>
+      <pub-id pub-id-type="doi">10.1162/cpsy_a_00002</pub-id>
+      <fpage>24</fpage>
+      <lpage>57</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Annis2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Annis</surname><given-names>Jeffrey</given-names></name>
+        <name><surname>Palmeri</surname><given-names>Thomas J.</given-names></name>
+      </person-group>
+      <article-title>Bayesian statistical approaches to evaluating cognitive models</article-title>
+      <source>Wiley Interdisciplinary Reviews: Cognitive Science</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <volume>9</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.1002/wcs.1458</pub-id>
+      <fpage>e1458</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Baribault2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Baribault</surname><given-names>Beth</given-names></name>
+        <name><surname>Collins</surname><given-names>Anne G. E.</given-names></name>
+      </person-group>
+      <article-title>Troubleshooting Bayesian cognitive models</article-title>
+      <source>Psychological Methods</source>
+      <year iso-8601-date="2025">2025</year>
+      <volume>30</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1037/met0000554</pub-id>
+      <fpage>128</fpage>
+      <lpage>154</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Carpenter2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Carpenter</surname><given-names>Bob</given-names></name>
+        <name><surname>Gelman</surname><given-names>Andrew</given-names></name>
+        <name><surname>Hoffman</surname><given-names>Matthew D.</given-names></name>
+        <name><surname>Lee</surname><given-names>Daniel</given-names></name>
+        <name><surname>Goodrich</surname><given-names>Ben</given-names></name>
+        <name><surname>Betancourt</surname><given-names>Michael</given-names></name>
+        <name><surname>Brubaker</surname><given-names>Marcus A.</given-names></name>
+        <name><surname>Guo</surname><given-names>Jiqiang</given-names></name>
+        <name><surname>Li</surname><given-names>Peter</given-names></name>
+        <name><surname>Riddell</surname><given-names>Allen</given-names></name>
+      </person-group>
+      <article-title>Stan: A Probabilistic Programming Language</article-title>
+      <source>Journal of Statistical Software</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>76</volume>
+      <pub-id pub-id-type="doi">10.18637/jss.v076.i01</pub-id>
+      <fpage>1</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Chang2020">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Chang</surname><given-names>Luke J.</given-names></name>
+        <name><surname>Huckins</surname><given-names>Jeremy</given-names></name>
+        <name><surname>Cheong</surname><given-names>Jin Hyun</given-names></name>
+        <name><surname>Brietzke</surname><given-names>Sasha</given-names></name>
+        <name><surname>Lindquist</surname><given-names>Martin A.</given-names></name>
+        <name><surname>Wager</surname><given-names>Tor D.</given-names></name>
+      </person-group>
+      <article-title>DartBrains: An online open access resource for learning functional neuroimaging analysis methods in python</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://doi.org/10.5281/zenodo.3909717</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.3909717</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Crawley2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Crawley</surname><given-names>Daisy</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+        <name><surname>Jones</surname><given-names>Emily J. H.</given-names></name>
+        <name><surname>Ahmad</surname><given-names>Jumana</given-names></name>
+        <name><surname>Oakley</surname><given-names>Bethany</given-names></name>
+        <name><surname>San José Cáceres</surname><given-names>Antonia</given-names></name>
+        <name><surname>Charman</surname><given-names>Tony</given-names></name>
+        <name><surname>Buitelaar</surname><given-names>Jan K.</given-names></name>
+        <name><surname>Murphy</surname><given-names>Declan G. M.</given-names></name>
+        <name><surname>Chatham</surname><given-names>Christopher</given-names></name>
+        <name><surname>others</surname></name>
+      </person-group>
+      <article-title>Modeling flexible behavior in childhood to adulthood shows age-dependent learning mechanisms and less optimal learning in autism in each age group</article-title>
+      <source>PLoS Biology</source>
+      <publisher-name>Public Library of Science</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume>18</volume>
+      <issue>10</issue>
+      <pub-id pub-id-type="doi">10.1371/journal.pbio.3000908</pub-id>
+      <fpage>e3000908</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Daw2011">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Daw</surname><given-names>Nathaniel D.</given-names></name>
+        <name><surname>Gershman</surname><given-names>Samuel J.</given-names></name>
+        <name><surname>Seymour</surname><given-names>Ben</given-names></name>
+        <name><surname>Dayan</surname><given-names>Peter</given-names></name>
+        <name><surname>Dolan</surname><given-names>Raymond J.</given-names></name>
+      </person-group>
+      <article-title>Model-based influences on humans’ choices and striatal prediction errors</article-title>
+      <source>Neuron</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2011">2011</year>
+      <volume>69</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1016/j.neuron.2011.02.027</pub-id>
+      <fpage>1204</fpage>
+      <lpage>1215</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Dayan2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dayan</surname><given-names>Peter</given-names></name>
+        <name><surname>Niv</surname><given-names>Yael</given-names></name>
+      </person-group>
+      <article-title>Reinforcement learning: The good, the bad and the ugly</article-title>
+      <source>Current Opinion in Neurobiology</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2008">2008</year>
+      <volume>18</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.1016/j.conb.2008.08.003</pub-id>
+      <fpage>185</fpage>
+      <lpage>196</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-deHollander2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hollander</surname><given-names>Gilles de</given-names></name>
+        <name><surname>Forstmann</surname><given-names>Birte U.</given-names></name>
+        <name><surname>Brown</surname><given-names>Scott D.</given-names></name>
+      </person-group>
+      <article-title>Different Ways of Linking Behavioral and Neural Data via Computational Cognitive Models</article-title>
+      <source>Biological Psychiatry: Cognitive Neuroscience and Neuroimaging</source>
+      <year iso-8601-date="2016">2016</year>
+      <volume>1</volume>
+      <issue>2</issue>
+      <pub-id pub-id-type="doi">10.1016/j.bpsc.2015.11.004</pub-id>
+      <fpage>101</fpage>
+      <lpage>109</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Eckstein2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Eckstein</surname><given-names>Maria K.</given-names></name>
+        <name><surname>Wilbrecht</surname><given-names>Linda</given-names></name>
+        <name><surname>Collins</surname><given-names>Anne G. E.</given-names></name>
+      </person-group>
+      <article-title>What do reinforcement learning models measure? Interpreting model parameters in cognition and neuroscience</article-title>
+      <source>Current Opinion in Behavioral Sciences</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>41</volume>
+      <pub-id pub-id-type="doi">10.1016/j.cobeha.2021.06.004</pub-id>
+      <fpage>128</fpage>
+      <lpage>137</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Farrell2018">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Farrell</surname><given-names>Simon</given-names></name>
+        <name><surname>Lewandowsky</surname><given-names>Stephan</given-names></name>
+      </person-group>
+      <source>Computational Modeling of Cognition and Behavior</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <pub-id pub-id-type="doi">10.1017/cbo9781316272503</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-FeldmanHall2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>FeldmanHall</surname><given-names>Oriel</given-names></name>
+        <name><surname>Nassar</surname><given-names>Matthew R.</given-names></name>
+      </person-group>
+      <article-title>The computational challenge of social learning</article-title>
+      <source>Trends in Cognitive Sciences</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>25</volume>
+      <issue>12</issue>
+      <pub-id pub-id-type="doi">10.1016/j.tics.2021.09.002</pub-id>
+      <fpage>1045</fpage>
+      <lpage>1057</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Glascher2010">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gläscher</surname><given-names>Jan P.</given-names></name>
+        <name><surname>O’Doherty</surname><given-names>John P.</given-names></name>
+      </person-group>
+      <article-title>Model-based approaches to neuroimaging: Combining reinforcement learning theory with fMRI data</article-title>
+      <source>WIREs Cognitive Science</source>
+      <year iso-8601-date="2010">2010</year>
+      <volume>1</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1002/wcs.57</pub-id>
+      <fpage>501</fpage>
+      <lpage>510</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Guest2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Guest</surname><given-names>Olivia</given-names></name>
+        <name><surname>Martin</surname><given-names>Andrea E.</given-names></name>
+      </person-group>
+      <article-title>How Computational Modeling Can Force Theory Building in Psychological Science</article-title>
+      <source>Perspectives on Psychological Science</source>
+      <publisher-name>SAGE Publications Inc</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>16</volume>
+      <issue>4</issue>
+      <pub-id pub-id-type="doi">10.1177/1745691620970585</pub-id>
+      <fpage>789</fpage>
+      <lpage>802</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Hauser2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hauser</surname><given-names>Tobias U.</given-names></name>
+        <name><surname>Skvortsova</surname><given-names>Vasilisa</given-names></name>
+        <name><surname>De Choudhury</surname><given-names>Munmun</given-names></name>
+        <name><surname>Koutsouleris</surname><given-names>Nikolaos</given-names></name>
+      </person-group>
+      <article-title>The promise of a model-based psychiatry: Building computational models of mental ill health</article-title>
+      <source>The Lancet Digital Health</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <volume>4</volume>
+      <issue>11</issue>
+      <pub-id pub-id-type="doi">10.1016/s2589-7500(22)00152-2</pub-id>
+      <fpage>e816</fpage>
+      <lpage>e828</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Huys2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Huys</surname><given-names>Quentin J. M.</given-names></name>
+        <name><surname>Maia</surname><given-names>Tiago V.</given-names></name>
+        <name><surname>Frank</surname><given-names>Michael J.</given-names></name>
+      </person-group>
+      <article-title>Computational psychiatry as a bridge from neuroscience to clinical applications</article-title>
+      <source>Nature Neuroscience</source>
+      <publisher-name>Nature Publishing Group</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <volume>19</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1038/nn.4238</pub-id>
+      <fpage>404</fpage>
+      <lpage>413</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Kruschke2014">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Kruschke</surname><given-names>John K.</given-names></name>
+      </person-group>
+      <source>Doing Bayesian Data Analysis: A Tutorial with R, JAGS, and Stan</source>
+      <publisher-name>Academic Press</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <pub-id pub-id-type="doi">10.1016/c2012-0-00477-2</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Kutlikova2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kutlikova</surname><given-names>Hana H.</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+        <name><surname>Eisenegger</surname><given-names>Christoph</given-names></name>
+        <name><surname>Honk</surname><given-names>Jack van</given-names></name>
+        <name><surname>Lamm</surname><given-names>Claus</given-names></name>
+      </person-group>
+      <article-title>Testosterone eliminates strategic prosocial behavior through impacting choice consistency in healthy males</article-title>
+      <source>Neuropsychopharmacology</source>
+      <publisher-name>Springer International Publishing</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <volume>48</volume>
+      <issue>10</issue>
+      <pub-id pub-id-type="doi">10.1038/s41386-023-01570-y</pub-id>
+      <fpage>1541</fpage>
+      <lpage>1550</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lambert2018">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Lambert</surname><given-names>Ben</given-names></name>
+      </person-group>
+      <source>A Student’s Guide to Bayesian Statistics</source>
+      <publisher-name>SAGE</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <pub-id pub-id-type="doi">10.4135/9781036234546</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lee2011">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lee</surname><given-names>Michael D.</given-names></name>
+      </person-group>
+      <article-title>How cognitive modeling can benefit from hierarchical Bayesian models</article-title>
+      <source>Journal of Mathematical Psychology</source>
+      <year iso-8601-date="2011">2011</year>
+      <volume>55</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1016/j.jmp.2010.08.013</pub-id>
+      <fpage>1</fpage>
+      <lpage>7</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lee2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lee</surname><given-names>Daeyeol</given-names></name>
+        <name><surname>Seo</surname><given-names>Hyojung</given-names></name>
+        <name><surname>Jung</surname><given-names>Min Whan</given-names></name>
+      </person-group>
+      <article-title>Neural basis of reinforcement learning and decision making</article-title>
+      <source>Annual Review of Neuroscience</source>
+      <publisher-name>Annual Reviews</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+      <volume>35</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1146/annurev-neuro-062111-150512</pub-id>
+      <fpage>287</fpage>
+      <lpage>308</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lee2014">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Lee</surname><given-names>Michael D.</given-names></name>
+        <name><surname>Wagenmakers</surname><given-names>Eric-Jan</given-names></name>
+      </person-group>
+      <source>Bayesian Cognitive Modeling: A Practical Course</source>
+      <publisher-name>Cambridge University Press</publisher-name>
+      <year iso-8601-date="2014">2014</year>
+      <pub-id pub-id-type="doi">10.1017/cbo9781139087759</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lockwood2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lockwood</surname><given-names>Patricia L.</given-names></name>
+        <name><surname>Klein-Flügge</surname><given-names>Miriam C.</given-names></name>
+      </person-group>
+      <article-title>Computational modelling of social cognition and behaviour—a reinforcement learning primer</article-title>
+      <source>Social Cognitive and Affective Neuroscience</source>
+      <year iso-8601-date="2021">2021</year>
+      <volume>16</volume>
+      <issue>8</issue>
+      <pub-id pub-id-type="doi">10.1093/scan/nsaa040</pub-id>
+      <fpage>761</fpage>
+      <lpage>771</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Maia2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Maia</surname><given-names>Tiago V.</given-names></name>
+        <name><surname>Huys</surname><given-names>Quentin J. M.</given-names></name>
+        <name><surname>Frank</surname><given-names>Michael J.</given-names></name>
+      </person-group>
+      <article-title>Theory-Based Computational Psychiatry</article-title>
+      <source>Biological Psychiatry</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+      <volume>82</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1016/j.biopsych.2017.07.016</pub-id>
+      <fpage>382</fpage>
+      <lpage>384</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Marr1982">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Marr</surname><given-names>David</given-names></name>
+      </person-group>
+      <source>Vision: A computational investigation into the human representation and processing of visual information</source>
+      <publisher-name>W. H. Freeman; Company</publisher-name>
+      <year iso-8601-date="1982">1982</year>
+      <pub-id pub-id-type="doi">10.7551/mitpress/9780262514620.001.0001</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-McElreath2018">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>McElreath</surname><given-names>Richard</given-names></name>
+      </person-group>
+      <source>Statistical Rethinking: A Bayesian Course with Examples in R and Stan</source>
+      <publisher-name>Chapman; Hall/CRC</publisher-name>
+      <year iso-8601-date="2018">2018</year>
+      <pub-id pub-id-type="doi">10.1201/9781315372495</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Niv2009">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Niv</surname><given-names>Yael</given-names></name>
+      </person-group>
+      <article-title>Reinforcement learning in the brain</article-title>
+      <source>Journal of Mathematical Psychology</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2009">2009</year>
+      <volume>53</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1016/j.jmp.2008.12.005</pub-id>
+      <fpage>139</fpage>
+      <lpage>154</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-NivLab2021">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <string-name>Niv Lab</string-name>
+      </person-group>
+      <article-title>NivStan</article-title>
+      <year iso-8601-date="2021">2021</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2025-07-12">2025</year><month>07</month><day>12</day></date-in-citation>
+      <uri>https://nivlab.github.io/nivstan/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-OReilly2015">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>O’Reilly</surname><given-names>Jill X.</given-names></name>
+        <name><surname>Ouden</surname><given-names>Hanneke E. M. den</given-names></name>
+      </person-group>
+      <article-title>Models of learning</article-title>
+      <year iso-8601-date="2015">2015</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-Palminteri2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Palminteri</surname><given-names>Stefano</given-names></name>
+        <name><surname>Wyart</surname><given-names>Valentin</given-names></name>
+        <name><surname>Koechlin</surname><given-names>Etienne</given-names></name>
+      </person-group>
+      <article-title>The Importance of Falsification in Computational Cognitive Modeling</article-title>
+      <source>Trends in Cognitive Sciences</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2017">2017</year>
+      <volume>21</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1016/j.tics.2017.03.011</pub-id>
+      <fpage>425</fpage>
+      <lpage>433</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pan2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pan</surname><given-names>Wanke</given-names></name>
+        <name><surname>Geng</surname><given-names>Haiyang</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+        <name><surname>Fengler</surname><given-names>Alexander</given-names></name>
+        <name><surname>Frank</surname><given-names>Michael J.</given-names></name>
+        <name><surname>Zhang</surname><given-names>Ru-Yuan</given-names></name>
+        <name><surname>Chuan-Peng</surname><given-names>Hu</given-names></name>
+      </person-group>
+      <article-title>dockerHDDM: A user-friendly environment for bayesian hierarchical drift-diffusion modeling</article-title>
+      <source>Advances in Methods and Practices in Psychological Science</source>
+      <publisher-name>SAGE Publications Inc</publisher-name>
+      <year iso-8601-date="2025">2025</year>
+      <volume>8</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1177/25152459241298700</pub-id>
+      <fpage>25152459241298700</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Pan2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Pan</surname><given-names>Yafeng</given-names></name>
+        <name><surname>Vinding</surname><given-names>Mikkel C.</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+        <name><surname>Lundqvist</surname><given-names>Daniel</given-names></name>
+        <name><surname>Olsson</surname><given-names>Andreas</given-names></name>
+      </person-group>
+      <article-title>A brain-to-brain mechanism for social transmission of threat learning</article-title>
+      <source>Advanced Science</source>
+      <publisher-name>Wiley Online Library</publisher-name>
+      <year iso-8601-date="2023">2023</year>
+      <volume>10</volume>
+      <issue>28</issue>
+      <pub-id pub-id-type="doi">10.1002/advs.202304037</pub-id>
+      <fpage>2304037</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Plummer2003">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Plummer</surname><given-names>Martyn</given-names></name>
+      </person-group>
+      <article-title>JAGS: A program for analysis of bayesian graphical models using gibbs sampling</article-title>
+      <source>Proceedings of the 3rd international workshop on distributed statistical computing</source>
+      <person-group person-group-type="editor">
+        <name><surname>Hornik</surname><given-names>Kurt</given-names></name>
+        <name><surname>Leisch</surname><given-names>Friedrich</given-names></name>
+        <name><surname>Zeileis</surname><given-names>Achim</given-names></name>
+      </person-group>
+      <publisher-loc>Vienna, Austria</publisher-loc>
+      <year iso-8601-date="2003">2003</year>
+      <fpage>1</fpage>
+      <lpage>10</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Press2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Press</surname><given-names>Clare</given-names></name>
+        <name><surname>Yon</surname><given-names>Daniel</given-names></name>
+        <name><surname>Heyes</surname><given-names>Cecilia</given-names></name>
+      </person-group>
+      <article-title>Building better theories</article-title>
+      <source>Current Biology</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2022">2022</year>
+      <volume>32</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1016/j.cub.2021.11.027</pub-id>
+      <fpage>R13</fpage>
+      <lpage>R17</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Rescorla1972">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Rescorla</surname><given-names>Robert A.</given-names></name>
+        <name><surname>Wagner</surname><given-names>Allan R.</given-names></name>
+      </person-group>
+      <article-title>A theory of pavlovian conditioning: Variations in the effectiveness of reinforcement and nonreinforcement</article-title>
+      <publisher-name>Appleton-Century-Crofts</publisher-name>
+      <year iso-8601-date="1972">1972</year>
+      <fpage>64</fpage>
+      <lpage>99</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Rhoads2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rhoads</surname><given-names>Shawn A.</given-names></name>
+        <name><surname>Gan</surname><given-names>Lin</given-names></name>
+      </person-group>
+      <article-title>Computational models of human social behavior and neuroscience: An open educational course and jupyter book to advance computational training</article-title>
+      <source>Journal of Open Source Education</source>
+      <year iso-8601-date="2022">2022</year>
+      <volume>5</volume>
+      <issue>47</issue>
+      <pub-id pub-id-type="doi">10.21105/jose.00146</pub-id>
+      <fpage>146</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Rocca2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Rocca</surname><given-names>Roberta</given-names></name>
+        <name><surname>Yarkoni</surname><given-names>Tal</given-names></name>
+      </person-group>
+      <article-title>Putting Psychology to the Test: Rethinking Model Evaluation Through Benchmarking and Prediction</article-title>
+      <source>Advances in Methods and Practices in Psychological Science</source>
+      <publisher-name>SAGE Publications Inc</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <volume>4</volume>
+      <issue>3</issue>
+      <pub-id pub-id-type="doi">10.1177/25152459211026864</pub-id>
+      <fpage>25152459211026864</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-RStudio2020">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <string-name>RStudio Team</string-name>
+      </person-group>
+      <source>RStudio: Integrated development environment for r</source>
+      <year iso-8601-date="2020">2020</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-Sohail2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sohail</surname><given-names>Aamir</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+      </person-group>
+      <article-title>Informing the treatment of social anxiety disorder with computational and neuroimaging data</article-title>
+      <source>Psychoradiology</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2024">2024</year>
+      <volume>4</volume>
+      <pub-id pub-id-type="doi">10.1093/psyrad/kkae010</pub-id>
+      <fpage>kkae010</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Sohail2025a">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sohail</surname><given-names>Aamir</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+      </person-group>
+      <article-title>Using large language models to facilitate academic work in the psychological sciences</article-title>
+      <source>Current Psychology</source>
+      <publisher-name>Springer</publisher-name>
+      <year iso-8601-date="2025">2025</year>
+      <volume>44</volume>
+      <issue>9</issue>
+      <pub-id pub-id-type="doi">10.1007/s12144-025-07438-2</pub-id>
+      <fpage>7910</fpage>
+      <lpage>7918</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Lin2026">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lin</surname><given-names>Zhicheng</given-names></name>
+        <name><surname>Sohail</surname><given-names>Aamir</given-names></name>
+      </person-group>
+      <article-title>Recalibrating academic expertise in the age of generative AI</article-title>
+      <source>Patterns</source>
+      <publisher-name>Elsevier</publisher-name>
+      <year iso-8601-date="2026">2026</year>
+      <volume>7</volume>
+      <issue>1</issue>
+      <pub-id pub-id-type="doi">10.1016/j.patter.2025.101473</pub-id>
+      <fpage>101473</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Sohail2026">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Sohail</surname><given-names>Aamir</given-names></name>
+        <name><surname>Magda</surname><given-names>Aleksandra</given-names></name>
+        <name><surname>Said</surname><given-names>Muna</given-names></name>
+        <name><surname>Phillips</surname><given-names>Laura</given-names></name>
+        <name><surname>Lu</surname><given-names>Yifei</given-names></name>
+        <name><surname>Reynolds</surname><given-names>Georgina</given-names></name>
+        <name><surname>Comer-Fenn</surname><given-names>Alice</given-names></name>
+        <name><surname>Russell</surname><given-names>Jessie</given-names></name>
+        <name><surname>Lu</surname><given-names>Huafeng</given-names></name>
+        <name><surname>Sims</surname><given-names>Tally</given-names></name>
+        <name><surname>Saulin</surname><given-names>Anne</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+      </person-group>
+      <article-title>Transdiagnostic factors differentially shape choices and reaction times in social evaluative learning</article-title>
+      <publisher-name>PsyArXiv</publisher-name>
+      <year iso-8601-date="2026">2026</year>
+      <pub-id pub-id-type="doi">10.31234/osf.io/svbfw_v1</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Sohail2025b">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Sohail</surname><given-names>Aamir</given-names></name>
+        <name><surname>Quinn</surname><given-names>Andrew J.</given-names></name>
+        <name><surname>Carpenter</surname><given-names>James J.</given-names></name>
+        <name><surname>Hansen</surname><given-names>Peter C.</given-names></name>
+        <name><surname>Chechlacz</surname><given-names>Magdalena</given-names></name>
+      </person-group>
+      <article-title>MRI on BEAR (Birmingham Environment for Academic Research): Magnetic Resonance Imaging in Cognitive Neuroscience at the Centre for Human Brain Health</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2025">2025</year>
+      <uri>https://doi.org/10.5281/zenodo.15804715</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.15804715</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-StanTeam2024">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Stan Development Team</string-name>
+      </person-group>
+      <article-title>RStan: The R interface to Stan</article-title>
+      <year iso-8601-date="2024">2024</year>
+      <pub-id pub-id-type="doi">10.32614/cran.package.rstan</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Suter2025">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Suter</surname><given-names>Gwynnevere</given-names></name>
+        <name><surname>Černis</surname><given-names>Emma</given-names></name>
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+      </person-group>
+      <article-title>Interpersonal computational modelling of social synchrony in schizophrenia and beyond</article-title>
+      <source>Psychoradiology</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2025">2025</year>
+      <volume>5</volume>
+      <pub-id pub-id-type="doi">10.1093/psyrad/kkaf011</pub-id>
+      <fpage>kkaf011</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Ushey2023">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Ushey</surname><given-names>Kevin</given-names></name>
+        <name><surname>Wickham</surname><given-names>Hadley</given-names></name>
+      </person-group>
+      <source>Renv: Project environments</source>
+      <year iso-8601-date="2023">2023</year>
+      <pub-id pub-id-type="doi">10.32614/cran.package.renv</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Vehtari2015">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Vehtari</surname><given-names>Aki</given-names></name>
+        <name><surname>Gabry</surname><given-names>Jonah</given-names></name>
+        <name><surname>Magnusson</surname><given-names>Måns</given-names></name>
+        <name><surname>Yao</surname><given-names>Yuling</given-names></name>
+        <name><surname>Bürkner</surname><given-names>Paul-Christian</given-names></name>
+        <name><surname>Paananen</surname><given-names>Topi</given-names></name>
+        <name><surname>Gelman</surname><given-names>Andrew</given-names></name>
+      </person-group>
+      <source>Loo: Efficient leave-one-out cross-validation and WAIC for bayesian models</source>
+      <year iso-8601-date="2015">2015</year>
+      <pub-id pub-id-type="doi">10.32614/cran.package.loo</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Wickham2016">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Wickham</surname><given-names>Hadley</given-names></name>
+      </person-group>
+      <source>ggplot2: Elegant graphics for data analysis</source>
+      <publisher-name>Springer-Verlag New York</publisher-name>
+      <year iso-8601-date="2016">2016</year>
+      <pub-id pub-id-type="doi">10.1007/978-3-319-24277-4</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-Wilson2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wilson</surname><given-names>Robert C.</given-names></name>
+        <name><surname>Collins</surname><given-names>Anne G. E.</given-names></name>
+      </person-group>
+      <article-title>Ten simple rules for the computational modeling of behavioral data</article-title>
+      <source>eLife</source>
+      <publisher-name>eLife Sciences Publications, Ltd</publisher-name>
+      <year iso-8601-date="2019">2019</year>
+      <volume>8</volume>
+      <pub-id pub-id-type="doi">10.7554/elife.49547</pub-id>
+      <fpage>e49547</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ZhangGlascher2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+        <name><surname>Gläscher</surname><given-names>Jan</given-names></name>
+      </person-group>
+      <article-title>A brain network supporting social influences in human decision-making</article-title>
+      <source>Science Advances</source>
+      <publisher-name>American Association for the Advancement of Science</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume>6</volume>
+      <issue>34</issue>
+      <pub-id pub-id-type="doi">10.1126/sciadv.abb4159</pub-id>
+      <fpage>eabb4159</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-Zhang2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Zhang</surname><given-names>Lei</given-names></name>
+        <name><surname>Lengersdorff</surname><given-names>Lukas</given-names></name>
+        <name><surname>Mikus</surname><given-names>Nace</given-names></name>
+        <name><surname>Gläscher</surname><given-names>Jan</given-names></name>
+        <name><surname>Lamm</surname><given-names>Claus</given-names></name>
+      </person-group>
+      <article-title>Using reinforcement learning models in social neuroscience: Frameworks, pitfalls and suggestions of best practices</article-title>
+      <source>Social Cognitive and Affective Neuroscience</source>
+      <publisher-name>Oxford University Press</publisher-name>
+      <year iso-8601-date="2020">2020</year>
+      <volume>15</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1093/scan/nsaa089</pub-id>
+      <fpage>695</fpage>
+      <lpage>707</lpage>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
