@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN"
+                  "JATS-publishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+<journal-title>Journal of Open Source Education</journal-title>
+<abbrev-journal-title>JOSE</abbrev-journal-title>
+</journal-title-group>
+<issn publication-format="electronic">2577-3569</issn>
+<publisher>
+<publisher-name>Open Journals</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="publisher-id">378</article-id>
+<article-id pub-id-type="doi">10.21105/jose.00378</article-id>
+<title-group>
+<article-title>Reproducible Machine Learning Workflows for Scientists: A
+short course in best practices</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0003-4124-7862</contrib-id>
+<name>
+<surname>Feickert</surname>
+<given-names>Matthew</given-names>
+</name>
+<xref ref-type="aff" rid="aff-1"/>
+</contrib>
+<aff id="aff-1">
+<institution-wrap>
+<institution>University of Wisconsin–Madison</institution>
+</institution-wrap>
+</aff>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2025-11-14">
+<day>14</day>
+<month>11</month>
+<year>2025</year>
+</pub-date>
+<volume>9</volume>
+<issue>105</issue>
+<fpage>378</fpage>
+<permissions>
+<copyright-statement>Authors of papers retain copyright and release the
+work under a Creative Commons Attribution 4.0 International License (CC
+BY 4.0)</copyright-statement>
+<copyright-year>2026</copyright-year>
+<copyright-holder>The article authors</copyright-holder>
+<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+<license-p>Authors of papers retain copyright and release the work under
+a Creative Commons Attribution 4.0 International License (CC BY
+4.0)</license-p>
+</license>
+</permissions>
+<kwd-group kwd-group-type="author">
+<kwd>reproducible science</kwd>
+<kwd>pixi</kwd>
+<kwd>cuda</kwd>
+<kwd>machine learning</kwd>
+<kwd>carpentry</kwd>
+</kwd-group>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>A critical component of research software sustainability is the
+  reproducibility of the software and computing environments software is
+  executed in. Researchers need reproducible computing environments for
+  research software applications that may be run across multiple
+  computing platforms — e.g. scientific analyses, visualization tools,
+  data transformation pipelines, and artificial intelligence (AI) and
+  machine learning (ML) applications on hardware accelerator platforms
+  (e.g. GPUs). Modern open source multi-platform environment management
+  tools, e.g. Pixi
+  (<xref alt="Arts et al., 2026" rid="ref-pixi" ref-type="bibr">Arts et
+  al., 2026</xref>;
+  <xref alt="Fischer et al., 2025" rid="ref-fischer_pixiU003A2025" ref-type="bibr">Fischer
+  et al., 2025</xref>), provide automatic multi-platform digest-level
+  lock file support for all dependencies — down to the compiler level —
+  of software on public package indexes while still providing a
+  high-level interface well suited for researchers. Combined with the
+  arrival of the full CUDA
+  (<xref alt="Nickolls et al., 2008" rid="ref-CUDA_paper" ref-type="bibr">Nickolls
+  et al., 2008</xref>) stack on conda-forge
+  (<xref alt="conda-forge community, 2015" rid="ref-conda-forge_community" ref-type="bibr">conda-forge
+  community, 2015</xref>), it is now possible to declaratively specify a
+  full CUDA-accelerated software environment.</p>
+  <p>This work contains educational resources on applying these aspects
+  of software reproducibility to hardware-accelerated machine learning
+  workflows. The resources are presented as a short course, or “lesson”,
+  in The Carpentries
+  (<xref alt="The Carpentries, 2026" rid="ref-the_carpentries_org" ref-type="bibr"><italic>The
+  Carpentries</italic>, 2026</xref>) format designed to be taught to
+  scientific researchers over the course of a three-day workshop. The
+  open source materials are hosted on GitHub by The Carpentries
+  Incubator GitHub organization
+  (<xref alt="Feickert, 2026" rid="ref-feickert_2026_17537698" ref-type="bibr">Feickert,
+  2026</xref>). The course website is publicly accessible at
+  <ext-link ext-link-type="uri" xlink:href="https://carpentries-incubator.github.io/reproducible-ml-workflows/">carpentries-incubator.github.io/reproducible-ml-workflows/</ext-link>.</p>
+</sec>
+<sec id="statement-of-need">
+  <title>Statement of Need</title>
+  <p>Education and training for the broader scientific software
+  community around robust best practices and standards for
+  reproducibility in scientific software is rare, and is practically
+  non-existent for reproducible hardware-accelerated software. This
+  educational material provides tested and validated best practices for
+  creating digest-level reproducible CUDA-accelerated software
+  environments and provides actionable recommendations for adopting
+  computational reproducibility tools. Given the recent advances in
+  enabling technologies, the methods and techniques to support the
+  described best practices and workflows were first made possible in
+  late 2023. As a result, this material is one of the first open source
+  resources available on the topic.</p>
+</sec>
+<sec id="instructional-design">
+  <title>Instructional Design</title>
+  <p>The course has been designed to be taught over a three-day
+  workshop, with each day divided into a half-day of instruction from
+  the course material, and then a second half-day focusing on applying
+  the course content to real-world research applications to
+  participants’ research projects through interactive work sessions with
+  the instructor team. Each “episode” of the workshop course contains
+  interactive “challenge” questions that require participants to put
+  into practice concepts and tools they have just learned, and
+  synthesize information from previous episodes to accomplish tasks.
+  After each challenge question, the instructor team discusses possible
+  solutions with the participants and “live codes” a demonstration of a
+  solution.</p>
+</sec>
+<sec id="learning-objectives">
+  <title>Learning Objectives</title>
+  <p>By the end of the first day of instruction, participants will be
+  able to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Describe the terms “reproducibility” and “reuse” as they relate
+      to research computing.</p>
+    </list-item>
+    <list-item>
+      <p>Describe what is needed for a computational environment to be
+      reproducible.</p>
+    </list-item>
+    <list-item>
+      <p>Describe what Pixi is, as well as its main features and
+      benefits to reproducible software environments.</p>
+    </list-item>
+    <list-item>
+      <p>Describe the content and purpose of a lock file.</p>
+    </list-item>
+    <list-item>
+      <p>Use Pixi’s command line interface (CLI) to create a
+      reproducible software environment.</p>
+    </list-item>
+    <list-item>
+      <p>Describe the structure and functionality of the Pixi manifest
+      file.</p>
+    </list-item>
+    <list-item>
+      <p>Create and use tasks defined using Pixi’s task runner
+      system.</p>
+    </list-item>
+    <list-item>
+      <p>Create a multi-platform Pixi workspace.</p>
+    </list-item>
+  </list>
+  <p>By the end of the second day of instruction, participants will be
+  able to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Describe the structure of a conda package in both its
+      <monospace>.conda</monospace> archive format and its installed
+      form on disk.</p>
+    </list-item>
+    <list-item>
+      <p>Describe the purpose of a conda virtual package.</p>
+    </list-item>
+    <list-item>
+      <p>Describe how Pixi platforms that declare a minimum CUDA version
+      enable resolution of CUDA-enabled conda packages.</p>
+    </list-item>
+    <list-item>
+      <p>Create Pixi software environments that use CUDA-enabled conda
+      packages of machine learning libraries for CUDA-compatible
+      computing platforms.</p>
+    </list-item>
+    <list-item>
+      <p>Use CUDA-enabled Pixi software environments to train machine
+      learning models on NVIDIA GPUs.</p>
+    </list-item>
+  </list>
+  <p>By the end of the third day of instruction, participants will be
+  able to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Describe the use of Linux containers for deployment of software
+      environments to remote machines.</p>
+    </list-item>
+    <list-item>
+      <p>Write a templated Dockerfile that uses Pixi software
+      environments.</p>
+    </list-item>
+    <list-item>
+      <p>Write a templated Apptainer container image definition that
+      uses Pixi software environments.</p>
+    </list-item>
+    <list-item>
+      <p>Build a Docker container image that contains a CUDA-accelerated
+      Pixi software environment.</p>
+    </list-item>
+    <list-item>
+      <p>Build an Apptainer container image that contains a
+      CUDA-accelerated Pixi software environment.</p>
+    </list-item>
+    <list-item>
+      <p>Write a continuous integration and continuous delivery (CI/CD)
+      configuration file to build and deploy container images to
+      container registries.</p>
+    </list-item>
+    <list-item>
+      <p>Describe the benefits to the research process of using fully
+      reproducible hardware-accelerated software environments.</p>
+    </list-item>
+  </list>
+  <p>If participants are working with access to a high-throughput
+  computing (HTC) facility, they will additionally be able to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Write simple HTCondor execution scripts and submit description
+      files that request Linux container and GPU resources.</p>
+    </list-item>
+    <list-item>
+      <p>Submit distributed machine learning training workflows to
+      HTCondor that run in Linux containers with CUDA-accelerated Pixi
+      software environments.</p>
+    </list-item>
+  </list>
+  <p>Similarly, if participants are working with access to a
+  high-performance computing (HPC) facility, they will additionally be
+  able to:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Write simple Slurm execution scripts and batch scripts that
+      request GPU resources.</p>
+    </list-item>
+    <list-item>
+      <p>Submit distributed machine learning training workflows to Slurm
+      that run in CUDA-accelerated Pixi software environments.</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="content">
+  <title>Content</title>
+  <p>The course is aimed at professional researchers who already have
+  experience with scientific software development and a working
+  understanding of the goals of machine learning. Participants should be
+  familiar with file system structures (e.g. the Filesystem Hierarchy
+  Standard of Unix-like systems), version control software (e.g. Git),
+  and at least one programming language (e.g. Python or C++). Experience
+  with Linux containers and CI/CD systems is not strictly required, but
+  is strongly recommended to gain the most benefit from participation in
+  the course. The focus of the course is on applications using
+  CUDA-enabled Python machine learning libraries, as well as deploying
+  these software environments to production settings on HTC and HPC
+  systems. This course does not teach machine learning concepts, but
+  instead focuses on the methodologies and tools to make existing
+  machine learning workflows reproducible.</p>
+</sec>
+<sec id="experience-of-use">
+  <title>Experience of Use</title>
+  <p>As of 2025, the Reproducible Machine Learning Workflows for
+  Scientists course has been taught to over 70 participants — ranging
+  from university students, to tenured faculty, to industry machine
+  learning researchers from universities, national laboratories,
+  professional organizations, and companies. As the full course content
+  covers multiple concepts and technologies, individual episodes have
+  also been selected to be taught as standalone 4-hour tutorials on
+  targeted topics. Long-term follow-up surveys, querying participants on
+  changes to their scientific workflows three months after participating
+  in a workshop, have shown evidence that participants find Pixi as a
+  technology easy to learn and beneficial enough for researchers that it
+  has changed their normal scientific software workflow habits, becoming
+  a common tool in their regular work. Additional experience teaching
+  the course in different workshop settings is needed to expand the
+  scope of responses to form a more complete understanding of long-term
+  impact on participants.</p>
+</sec>
+<sec id="how-the-project-came-to-be">
+  <title>How the Project Came to Be</title>
+  <p>This course was motivated by experience and difficulty in creating
+  CUDA-accelerated software environments for machine learning research
+  studies in experimental physics. The challenge was to create
+  environments that could resolve quickly enough to allow for rapid
+  experimentation on local compute resources and then be deployed to
+  remote resources, while also being robust to temporal drift of
+  software versions and compute platform hardware-level system
+  requirements. Work on this multi-year challenge took a new direction
+  in September 2023
+  (<xref alt="Feickert, 2025" rid="ref-feickert_odslU003A2023" ref-type="bibr">Feickert,
+  2025</xref>) with first experiments in using Pixi and CUDA-enabled
+  PyTorch builds from conda-forge, which led to questions of distributed
+  computing applications for real-world research problems. Further
+  motivation came from conversations with Pixi developers Ruben Arts and
+  Wolf Vollprecht at the 2024 SciPy conference in July 2024. The course
+  content was able to be researched, created, and taught at multiple
+  workshops through support from an Early-Career Fellowship from the US
+  Research Software Sustainability Institute.</p>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>This work was supported by the US Research Software Sustainability
+  Institute (URSSI) via grant G-2022-19347 from the Alfred P. Sloan
+  Foundation. This work benefited from resources and services provided
+  by the University of Wisconsin–Madison
+  <ext-link ext-link-type="uri" xlink:href="https://chtc.cs.wisc.edu/">Center
+  for High Throughput Computing</ext-link>
+  (<xref alt="Center for High Throughput Computing, 2006" rid="ref-CHTC" ref-type="bibr">Center
+  for High Throughput Computing, 2006</xref>), as well as services
+  provided by the
+  <ext-link ext-link-type="uri" xlink:href="https://osg-htc.org/">OSG
+  Consortium</ext-link>
+  (<xref alt="OSG, 2006" rid="ref-OSPool" ref-type="bibr">OSG,
+  2006</xref>,
+  <xref alt="2015" rid="ref-OSDF" ref-type="bibr">2015</xref>;
+  <xref alt="Pordes et al., 2007" rid="ref-osg07" ref-type="bibr">Pordes
+  et al., 2007</xref>;
+  <xref alt="Sfiligoi et al., 2009" rid="ref-osg09" ref-type="bibr">Sfiligoi
+  et al., 2009</xref>), which is supported by the National Science
+  Foundation awards #2030508 and #2323298.</p>
+</sec>
+</body>
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-feickert_2026_17537698">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Feickert</surname><given-names>Matthew</given-names></name>
+      </person-group>
+      <article-title>Reproducible machine learning workflows for scientists</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2026-11">2026</year><month>11</month>
+      <uri>https://doi.org/10.5281/zenodo.17537698</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.17537698</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-pixi">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Arts</surname><given-names>Ruben</given-names></name>
+        <name><surname>Zalmstra</surname><given-names>Bas</given-names></name>
+        <name><surname>Vollprecht</surname><given-names>Wolf</given-names></name>
+        <name><surname>Jager</surname><given-names>Tim de</given-names></name>
+        <name><surname>Morcotilo</surname><given-names>Nichita</given-names></name>
+        <name><surname>Hofer</surname><given-names>Julian</given-names></name>
+        <name><surname>Colley</surname><given-names>Lucas</given-names></name>
+      </person-group>
+      <article-title>Pixi</article-title>
+      <year iso-8601-date="2026">2026</year>
+      <uri>https://github.com/prefix-dev/pixi/releases/tag/v0.84.1</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-fischer_pixiU003A2025">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Fischer</surname><given-names>Tobias</given-names></name>
+        <name><surname>Vollprecht</surname><given-names>Wolf</given-names></name>
+        <name><surname>Zalmstra</surname><given-names>Bas</given-names></name>
+        <name><surname>Arts</surname><given-names>Ruben</given-names></name>
+        <name><surname>Jager</surname><given-names>Tim de</given-names></name>
+        <name><surname>Fontan</surname><given-names>Alejandro</given-names></name>
+        <name><surname>Hines</surname><given-names>Adam D</given-names></name>
+        <name><surname>Milford</surname><given-names>Michael</given-names></name>
+        <name><surname>Traversaro</surname><given-names>Silvio</given-names></name>
+        <name><surname>Claes</surname><given-names>Daniel</given-names></name>
+        <name><surname>Raine</surname><given-names>Scarlett</given-names></name>
+      </person-group>
+      <article-title>Pixi: Unified software development and distribution for robotics and AI</article-title>
+      <year iso-8601-date="2025">2025</year>
+      <uri>https://arxiv.org/abs/2511.04827</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-conda-forge_community">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>conda-forge community</string-name>
+      </person-group>
+      <article-title>The conda-forge Project: Community-based Software Distribution Built on the conda Package Format and Ecosystem</article-title>
+      <year iso-8601-date="2015-07">2015</year><month>07</month>
+      <uri>https://doi.org/10.5281/zenodo.4774216</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.4774216</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-CUDA_paper">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Nickolls</surname><given-names>John</given-names></name>
+        <name><surname>Buck</surname><given-names>Ian</given-names></name>
+        <name><surname>Garland</surname><given-names>Michael</given-names></name>
+        <name><surname>Skadron</surname><given-names>Kevin</given-names></name>
+      </person-group>
+      <article-title>Scalable parallel programming with CUDA</article-title>
+      <source>ACM SIGGRAPH 2008 classes</source>
+      <publisher-name>Association for Computing Machinery</publisher-name>
+      <publisher-loc>New York, NY, USA</publisher-loc>
+      <year iso-8601-date="2008">2008</year>
+      <isbn>9781450378451</isbn>
+      <uri>https://doi.org/10.1145/1401132.1401152</uri>
+      <pub-id pub-id-type="doi">10.1145/1401132.1401152</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-the_carpentries_org">
+    <element-citation>
+      <article-title>The Carpentries</article-title>
+      <publisher-name>https://carpentries.org/</publisher-name>
+      <year iso-8601-date="2026">2026</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-feickert_odslU003A2023">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Feickert</surname><given-names>Matthew</given-names></name>
+      </person-group>
+      <article-title>Distributing your science: Turning analyses into scientific tools</article-title>
+      <publisher-name>Zenodo</publisher-name>
+      <year iso-8601-date="2025-11">2025</year><month>11</month>
+      <uri>https://doi.org/10.5281/zenodo.17606840</uri>
+      <pub-id pub-id-type="doi">10.5281/zenodo.17606840</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-CHTC">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>Center for High Throughput Computing</string-name>
+      </person-group>
+      <article-title>Center for high throughput computing</article-title>
+      <publisher-name>Center for High Throughput Computing</publisher-name>
+      <year iso-8601-date="2006">2006</year>
+      <uri>https://chtc.cs.wisc.edu/</uri>
+      <pub-id pub-id-type="doi">10.21231/GNT1-HW21</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-osg07">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Pordes</surname><given-names>Ruth</given-names></name>
+        <name><surname>Petravick</surname><given-names>Don</given-names></name>
+        <name><surname>Kramer</surname><given-names>Bill</given-names></name>
+        <name><surname>Olson</surname><given-names>Doug</given-names></name>
+        <name><surname>Livny</surname><given-names>Miron</given-names></name>
+        <name><surname>Roy</surname><given-names>Alain</given-names></name>
+        <name><surname>Avery</surname><given-names>Paul</given-names></name>
+        <name><surname>Blackburn</surname><given-names>Kent</given-names></name>
+        <name><surname>Wenaus</surname><given-names>Torre</given-names></name>
+        <name><surname>Würthwein</surname><given-names>Frank</given-names></name>
+        <name><surname>Foster</surname><given-names>Ian</given-names></name>
+        <name><surname>Gardner</surname><given-names>Rob</given-names></name>
+        <name><surname>Wilde</surname><given-names>Mike</given-names></name>
+        <name><surname>Blatecky</surname><given-names>Alan</given-names></name>
+        <name><surname>McGee</surname><given-names>John</given-names></name>
+        <name><surname>Quick</surname><given-names>Rob</given-names></name>
+      </person-group>
+      <article-title>The open science grid</article-title>
+      <source>J. Phys. Conf. ser.</source>
+      <year iso-8601-date="2007">2007</year>
+      <volume>78</volume>
+      <pub-id pub-id-type="doi">10.1088/1742-6596/78/1/012057</pub-id>
+      <fpage>012057</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-osg09">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Sfiligoi</surname><given-names>Igor</given-names></name>
+        <name><surname>Bradley</surname><given-names>Daniel C</given-names></name>
+        <name><surname>Holzman</surname><given-names>Burt</given-names></name>
+        <name><surname>Mhashilkar</surname><given-names>Parag</given-names></name>
+        <name><surname>Padhi</surname><given-names>Sanjay</given-names></name>
+        <name><surname>Wurthwein</surname><given-names>Frank</given-names></name>
+      </person-group>
+      <article-title>The pilot way to grid resources using glideinWMS</article-title>
+      <source>2009 WRI world congress on computer science and information engineering</source>
+      <year iso-8601-date="2009">2009</year>
+      <volume>2</volume>
+      <pub-id pub-id-type="doi">10.1109/CSIE.2009.950</pub-id>
+      <fpage>428</fpage>
+      <lpage>432</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-OSPool">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>OSG</string-name>
+      </person-group>
+      <article-title>OSPool</article-title>
+      <publisher-name>OSG</publisher-name>
+      <year iso-8601-date="2006">2006</year>
+      <uri>https://osg-htc.org/services/open_science_pool.html</uri>
+      <pub-id pub-id-type="doi">10.21231/906P-4D78</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-OSDF">
+    <element-citation>
+      <person-group person-group-type="author">
+        <string-name>OSG</string-name>
+      </person-group>
+      <article-title>Open science data federation</article-title>
+      <publisher-name>OSG</publisher-name>
+      <year iso-8601-date="2015">2015</year>
+      <uri>https://osdf.osg-htc.org/</uri>
+      <pub-id pub-id-type="doi">10.21231/0KVZ-VE57</pub-id>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
