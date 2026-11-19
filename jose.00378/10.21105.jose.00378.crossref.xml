@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd">
+  <head>
+    <doi_batch_id>20261119190647-66a82568de99ec028eb2b36db0ee6b3c2ed89700</doi_batch_id>
+    <timestamp>20261119190647</timestamp>
+    <depositor>
+      <depositor_name>JOSS Admin</depositor_name>
+      <email_address>admin@theoj.org</email_address>
+    </depositor>
+    <registrant>The Open Journal</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>Journal of Open Source Education</full_title>
+        <abbrev_title>JOSE</abbrev_title>
+        <issn media_type="electronic">2577-3569</issn>
+        <doi_data>
+          <doi>10.21105/jose</doi>
+          <resource>https://jose.theoj.org</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>11</month>
+          <year>2026</year>
+        </publication_date>
+        <journal_volume>
+          <volume>9</volume>
+        </journal_volume>
+        <issue>105</issue>
+      </journal_issue>
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Reproducible Machine Learning Workflows for Scientists: A short course in best practices</title>
+        </titles>
+        <contributors>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>Matthew</given_name>
+            <surname>Feickert</surname>
+            <affiliations>
+              <institution><institution_name>University of Wisconsin–Madison</institution_name></institution>
+            </affiliations>
+            <ORCID>https://orcid.org/0000-0003-4124-7862</ORCID>
+          </person_name>
+        </contributors>
+        <publication_date>
+          <month>11</month>
+          <day>19</day>
+          <year>2026</year>
+        </publication_date>
+        <pages>
+          <first_page>378</first_page>
+        </pages>
+        <publisher_item>
+          <identifier id_type="doi">10.21105/jose.00378</identifier>
+        </publisher_item>
+        <ai:program name="AccessIndicators">
+          <ai:license_ref applies_to="vor">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="am">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+          <ai:license_ref applies_to="tdm">http://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+        </ai:program>
+        <rel:program>
+          <rel:related_item>
+            <rel:description>Software archive</rel:description>
+            <rel:inter_work_relation relationship-type="references" identifier-type="doi">10.5281/zenodo.24092913</rel:inter_work_relation>
+          </rel:related_item>
+          <rel:related_item>
+            <rel:description>GitHub review issue</rel:description>
+            <rel:inter_work_relation relationship-type="hasReview" identifier-type="uri">https://github.com/openjournals/jose-reviews/issues/378</rel:inter_work_relation>
+          </rel:related_item>
+        </rel:program>
+        <doi_data>
+          <doi>10.21105/jose.00378</doi>
+          <resource>https://jose.theoj.org/papers/10.21105/jose.00378</resource>
+          <collection property="text-mining">
+            <item>
+              <resource mime_type="application/pdf">https://jose.theoj.org/papers/10.21105/jose.00378.pdf</resource>
+            </item>
+          </collection>
+        </doi_data>
+        <citation_list>
+          <citation key="feickert_2026_17537698">
+            <article_title>Reproducible machine learning workflows for scientists</article_title>
+            <author>Feickert</author>
+            <doi>10.5281/zenodo.17537698</doi>
+            <cYear>2026</cYear>
+            <unstructured_citation>Feickert, M. (2026). Reproducible machine learning workflows for scientists. Zenodo. https://doi.org/10.5281/zenodo.17537698</unstructured_citation>
+          </citation>
+          <citation key="pixi">
+            <article_title>Pixi</article_title>
+            <author>Arts</author>
+            <cYear>2026</cYear>
+            <unstructured_citation>Arts, R., Zalmstra, B., Vollprecht, W., Jager, T. de, Morcotilo, N., Hofer, J., &amp; Colley, L. (2026). Pixi. https://github.com/prefix-dev/pixi/releases/tag/v0.84.1</unstructured_citation>
+          </citation>
+          <citation key="fischer_pixi:2025">
+            <article_title>Pixi: Unified software development and distribution for robotics and AI</article_title>
+            <author>Fischer</author>
+            <cYear>2025</cYear>
+            <unstructured_citation>Fischer, T., Vollprecht, W., Zalmstra, B., Arts, R., Jager, T. de, Fontan, A., Hines, A. D., Milford, M., Traversaro, S., Claes, D., &amp; Raine, S. (2025). Pixi: Unified software development and distribution for robotics and AI. https://arxiv.org/abs/2511.04827</unstructured_citation>
+          </citation>
+          <citation key="conda-forge_community">
+            <article_title>The conda-forge Project: Community-based Software Distribution Built on the conda Package Format and Ecosystem</article_title>
+            <author>conda-forge community</author>
+            <doi>10.5281/zenodo.4774216</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>conda-forge community. (2015). The conda-forge Project: Community-based Software Distribution Built on the conda Package Format and Ecosystem. https://doi.org/10.5281/zenodo.4774216</unstructured_citation>
+          </citation>
+          <citation key="CUDA_paper">
+            <article_title>Scalable parallel programming with CUDA</article_title>
+            <author>Nickolls</author>
+            <journal_title>ACM SIGGRAPH 2008 classes</journal_title>
+            <doi>10.1145/1401132.1401152</doi>
+            <isbn>9781450378451</isbn>
+            <cYear>2008</cYear>
+            <unstructured_citation>Nickolls, J., Buck, I., Garland, M., &amp; Skadron, K. (2008). Scalable parallel programming with CUDA. ACM SIGGRAPH 2008 Classes. https://doi.org/10.1145/1401132.1401152</unstructured_citation>
+          </citation>
+          <citation key="the_carpentries_org">
+            <article_title>The Carpentries</article_title>
+            <cYear>2026</cYear>
+            <unstructured_citation>The Carpentries. (2026). https://carpentries.org/.</unstructured_citation>
+          </citation>
+          <citation key="feickert_odsl:2023">
+            <article_title>Distributing your science: Turning analyses into scientific tools</article_title>
+            <author>Feickert</author>
+            <doi>10.5281/zenodo.17606840</doi>
+            <cYear>2025</cYear>
+            <unstructured_citation>Feickert, M. (2025). Distributing your science: Turning analyses into scientific tools (Version v0.0.2). Zenodo. https://doi.org/10.5281/zenodo.17606840</unstructured_citation>
+          </citation>
+          <citation key="CHTC">
+            <article_title>Center for high throughput computing</article_title>
+            <author>Center for High Throughput Computing</author>
+            <doi>10.21231/GNT1-HW21</doi>
+            <cYear>2006</cYear>
+            <unstructured_citation>Center for High Throughput Computing. (2006). Center for high throughput computing. Center for High Throughput Computing. https://doi.org/10.21231/GNT1-HW21</unstructured_citation>
+          </citation>
+          <citation key="osg07">
+            <article_title>The open science grid</article_title>
+            <author>Pordes</author>
+            <journal_title>J. Phys. Conf. ser.</journal_title>
+            <volume>78</volume>
+            <doi>10.1088/1742-6596/78/1/012057</doi>
+            <cYear>2007</cYear>
+            <unstructured_citation>Pordes, R., Petravick, D., Kramer, B., Olson, D., Livny, M., Roy, A., Avery, P., Blackburn, K., Wenaus, T., Würthwein, F., Foster, I., Gardner, R., Wilde, M., Blatecky, A., McGee, J., &amp; Quick, R. (2007). The open science grid. J. Phys. Conf. Ser., 78, 012057. https://doi.org/10.1088/1742-6596/78/1/012057</unstructured_citation>
+          </citation>
+          <citation key="osg09">
+            <article_title>The pilot way to grid resources using glideinWMS</article_title>
+            <author>Sfiligoi</author>
+            <journal_title>2009 WRI world congress on computer science and information engineering</journal_title>
+            <volume>2</volume>
+            <doi>10.1109/CSIE.2009.950</doi>
+            <cYear>2009</cYear>
+            <unstructured_citation>Sfiligoi, I., Bradley, D. C., Holzman, B., Mhashilkar, P., Padhi, S., &amp; Wurthwein, F. (2009). The pilot way to grid resources using glideinWMS. 2009 WRI World Congress on Computer Science and Information Engineering, 2, 428–432. https://doi.org/10.1109/CSIE.2009.950</unstructured_citation>
+          </citation>
+          <citation key="OSPool">
+            <article_title>OSPool</article_title>
+            <author>OSG</author>
+            <doi>10.21231/906P-4D78</doi>
+            <cYear>2006</cYear>
+            <unstructured_citation>OSG. (2006). OSPool. OSG. https://doi.org/10.21231/906P-4D78</unstructured_citation>
+          </citation>
+          <citation key="OSDF">
+            <article_title>Open science data federation</article_title>
+            <author>OSG</author>
+            <doi>10.21231/0KVZ-VE57</doi>
+            <cYear>2015</cYear>
+            <unstructured_citation>OSG. (2015). Open science data federation. OSG. https://doi.org/10.21231/0KVZ-VE57</unstructured_citation>
+          </citation>
+        </citation_list>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>
